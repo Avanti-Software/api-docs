@@ -6,7 +6,7 @@ All endpoints in the Avanti API are based on Representational State Transfer (RE
 
 The Avanti API is continuously being updated, as new features are added to Avanti applications related endpoints will be added to the API. Visit our [Updates](/updates) page for more information on new and upcoming API changes.
 
-If you none of our existing endpoints currently meet your needs you can try creating your own endpoints using Avanti’s Reporting tools, the raw data of any custom report can be accessed via the Reporter endpoint. See the [Reporter API reference]() for more details.
+If you none of our existing endpoints currently meet your needs you can try creating your own endpoints using Avanti’s Reporting tools, the raw data of any custom report can be accessed via the Reporter endpoint. See the [Reporter API reference](/reporter/get-report-data) for more details.
 
 ## Early Access
 
