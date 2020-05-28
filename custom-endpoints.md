@@ -1,6 +1,6 @@
 # Custom Endpoints
 
-If none of our standard endpoints provide the required data, you can build custom endpoints using Avanti's reporting tools. Avanti's reporting tools provides access to most employee-centric information and is available via the [Reporter](/avanti-api/reporter/get-report-data) endpoint.
+If none of our standard endpoints provide the required data, you can build custom endpoints using Avanti's reporting tools. Report Designer provides access to most employee-centric information and is available via the [Reporter](/avanti-api/reporter/get-report-data) endpoint.
 
 To get started, open Report Definitions in the Avanti Desktop Application and select Insert to create a new report. Give the report a name (also known as the Report ID) and title. Now add the information you want in your endpoint as columns in the report.
 
