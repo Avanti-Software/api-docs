@@ -38,4 +38,5 @@
   - Vacation Groups
   - Vacation Options
   - WCB Groups
-  - Web Punch \* Work Groups
+  - Web Punch
+  - Work Groups
