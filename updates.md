@@ -3,7 +3,6 @@
 ## Version 0.9.0 (Early Access) - May 1, 2019
 
 - New Endpoints:
-  - Pay Codes
   - Attendance Codes
   - Banks
   - Benefits Groups
@@ -22,6 +21,7 @@
   - Notification Settings
   - Notifications
   - Bank Transit
+  - Pay Codes
   - Pay Groups
   - Pay Statements
   - Personal Info
