@@ -6,7 +6,7 @@ All endpoints in the Avanti API are based on Representational State Transfer (RE
 
 Avanti is continuously updating our API! We will add new endpoints to the API as we add new features in the Avanti applications. Visit [Updates](/updates) for more information on our new API endpoints and the latest changes.
 
-If none of our existing endpoints meet your needs, you can create endpoints using Avanti’s Reporting tools. The Reporter endpoint can access the contents of any report created in Report Designer. [Custom Endpoints](/custom-endpoints) will walk you through setting up the report, and [Reporter API Reference](/reporter/get-report-data) provides details on the endpoints. 
+If none of our existing endpoints meet your needs, you can create endpoints using Avanti’s Reporting tools. The Reporter endpoint can access the contents of any report created in Report Designer. [Custom Endpoints](/custom-endpoints) will walk you through setting up the report, and [Reporter](/avanti-api/reporter/get-report-data) provides details on the endpoints. 
 
 ## Early Access
 
