@@ -4,7 +4,7 @@ You can try out our API without leaving the documentation. Each API endpoint has
 
 ## Request an Access Token
 
-Before you can make a request to the Avanti API, you will need an access token from the [Authentication API](/avanti-auth-api) section. Access tokens are required to make authenticated requests against the Avanti API. 
+Before you can make a request to the Avanti API, you will need an access token from the [Authentication API](/avanti-auth-api/token/access-token) section. Access tokens are required to make authenticated requests against the Avanti API. 
 
 To create an Access Token, select Send in **Send a Test Request** at the bottom of the Access Token screen. The client credentials and a test user are pre-populated for your convenience. 
 
