@@ -12,7 +12,7 @@ You may notice that there is  **-api** after the Organization ID in the URL. Thi
 
 3. Read and agree to the Terms and Conditions, if required.
 
-![Terms and conditions example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fterms-conditions.png?alt=media&token=ed1abfd7-e898-4edf-b7a7-14a5f79b22a0)
+![Terms and conditions example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fterms-conditions.png?alt=media&token=c558e359-8a26-4b55-b161-f8ce30ee45f2)
 
 4. Click the **Generate Client** button to create a new client.
 
