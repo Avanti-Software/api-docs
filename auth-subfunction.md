@@ -25,6 +25,8 @@ We recommend copying endpoints directly from this documentation to avoid mistake
 ## Grant Access to All Endpoints
 To grant access to all endpoints, insert a subfunction access rule in the Avanti Desktop Application. Enter api/* into function, then set the subfunction access security. 
 
+For increased security, we recommend that you do not use this option and set up subfunction access for each endpoint. 
+
 Note: * cannot be used in the method name of any other endpoint.
 
 ![Insert catch all subfunction access rule example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fcatch-all-subfunction-rule.png?alt=media&token=4da92d68-757e-4cbb-983a-6ceed28f61df)
