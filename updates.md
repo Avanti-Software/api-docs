@@ -5,6 +5,7 @@
 - New Endpoints:
   - Attendance Codes
   - Banks
+  - Bank Transit
   - Benefits Groups
   - Default Groups
   - Dependents
@@ -15,7 +16,6 @@
   - Employment Status
   - GL
   - Grid Codes
-  - Info
   - Job Status
   - Locations
   - Notification Settings
