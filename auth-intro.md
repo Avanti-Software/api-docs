@@ -4,6 +4,6 @@ Avanti API Authentication follows the [Open ID Connect](https://openid.net/conne
 
 Before you can request an [Access Token](/auth/tokens) and make authenticated requests you will need to:
 
-- Generate unique [Client Credentials](/auth/client/credentials), a Client Id and Client Secret.
+- Generate unique [Client Credentials](/auth/client-credentials), a Client Id and Client Secret.
 - Create the [Avanti User](/auth/users), a Class A (Administrator) or Class B (Manager) with the required company access and employee permissions. 
 - Setup [Subfunction Access](/auth/subfunction) to the API endpoints you want accessible. 
