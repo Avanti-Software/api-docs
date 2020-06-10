@@ -1,4 +1,4 @@
-# Trying Avanti APIs
+# Testing Avanti APIs
 
 You can try out our API without leaving the documentation. Each API endpoint has a **Send a Test Request** section that you can use to send requests. This process is streamlined so you can familiarize yourself with the API quickly. 
 
