@@ -1,0 +1,170 @@
+{
+  "title": "Avanti API Documentation",
+  "header": {
+    "nav": {
+      "left": [],
+      "center": [],
+      "right": []
+    }
+  },
+  "pages": {
+    "/": {
+      "title": "Home",
+      "config": {},
+      "data": {
+        "blocks": [
+          {
+            "type": "image",
+            "data": "//s3.amazonaws.com/user-content.stoplight.io/16939/1589237552211",
+            "config": {
+              "maxWidth": "400",
+              "centered": true
+            }
+          },
+          {
+            "type": "text",
+            "data": "## Welcome to the Avanti API Developer Docs\n* **Version:** 1.0.0 (Early Access)\n* **Terms of Use:** [https://www.avanti.ca/api-terms-of-use](https://www.avanti.ca/api-terms-of-use)\n* **Privacy Policy:** [https://www.avanti.ca/privacy-policy/](https://www.avanti.ca/privacy-policy/)\n\nContinue to the [Introduction](/introduction) page to get started."
+          }
+        ],
+        "children": [
+          {
+            "title": "Introduction",
+            "route": {
+              "path": "/introduction"
+            },
+            "data": {
+              "$ref": "./intro.md"
+            }
+          },
+          {
+            "title": "Error Handling",
+            "route": {
+              "path": "/error-handling"
+            },
+            "data": {
+              "$ref": "./error-handling.md"
+            }
+          },
+          {
+            "title": "Versioning",
+            "route": {
+              "path": "/versioning"
+            },
+            "data": {
+              "$ref": "./versioning.md"
+            }
+          },
+          {
+            "title": "Custom Endpoints",
+            "route": {
+              "path": "/custom-endpoints"
+            },
+            "data": {
+              "$ref": "./custom-endpoints.md"
+            }
+          },
+          {
+            "title": "Testing Avanti APIs",
+            "route": {
+              "path": "/testing"
+            },
+            "data": {
+              "$ref": "./testing.md"
+            }
+          },
+          {
+            "title": "Updates",
+            "route": {
+              "path": "/updates"
+            },
+            "data": {
+              "$ref": "./updates.md"
+            }
+          },
+          {
+            "title": "Authentication",
+            "route": {
+              "path": "/auth"
+            },
+            "data": {
+              "blocks": [],
+              "children": [
+                {
+                  "title": "Getting Started",
+                  "route": {
+                    "path": "/getting-started"
+                  },
+                  "data": {
+                    "$ref": "./auth-intro.md"
+                  }
+                },
+                {
+                  "title": "Client Credentials",
+                  "route": {
+                    "path": "/client-credentials"
+                  },
+                  "data": {
+                    "$ref": "./auth-client-credentials.md"
+                  }
+                },
+                {
+                  "title": "User Accounts",
+                  "route": {
+                    "path": "/users"
+                  },
+                  "data": {
+                    "$ref": "./auth-users.md"
+                  }
+                },
+                {
+                  "title": "Subfunction Access",
+                  "route": {
+                    "path": "/subfunction"
+                  },
+                  "data": {
+                    "$ref": "./auth-subfunction.md"
+                  }
+                },
+                {
+                  "title": "Access Tokens",
+                  "route": {
+                    "path": "/tokens"
+                  },
+                  "data": {
+                    "$ref": "./auth-tokens.md"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": "Authentication API",
+            "route": {
+              "path": "/avanti-auth-api"
+            },
+            "data": {
+              "$ref": "./auth.oas3.yml"
+            }
+          },
+          {
+            "title": "Avanti API",
+            "route": {
+              "path": "/avanti-api"
+            },
+            "data": {
+              "$ref": "./main.oas3.yml"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "logo": "https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Favanti-logo-black.svg?alt=media&token=30e81a4f-e69f-4770-aabb-b1099031febc",
+  "meta": {
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Ffavicon.ico?alt=media&token=db7cc0d5-72fe-4df3-8995-f658f0563afe"
+  },
+  "theme": {
+    "primary": "#659cc5",
+    "secondary": "#659cc5"
+  }
+}
