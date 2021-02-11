@@ -22,7 +22,7 @@
           "Attendance Codes"
         ],
         "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
-        "operationId": "Get Attendance Codes",
+        "operationId": "Get Attendance Codes!!!!",
         "responses": {
           "200": {
             "description": "Success",
