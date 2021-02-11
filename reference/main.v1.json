@@ -18,7 +18,9 @@
   "paths": {
     "/v1/AttendanceCodes": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Attendance Codes"
+        ],
         "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
         "operationId": "Get Attendance Codes",
         "responses": {
