@@ -21,9 +21,30 @@
         "tags": [
           "Attendance Codes"
         ],
+        "summary": "Get Attendance Codes",
         "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
-        "operationId": "Get Attendance Codes!!!!",
+        "operationId": "Get Attendance Codes",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -73,7 +94,18 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/BankTransits": {
+      "get": {
+        "tags": [
+          "Bank Transit"
+        ],
+        "summary": "List Bank Transits",
+        "operationId": "List Bank Transits",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -93,19 +125,7 @@
                 }
               }
             }
-          }
-        },
-        "summary": "Get Attendance Codes"
-      },
-      "parameters": []
-    },
-    "/v1/BankTransits": {
-      "get": {
-        "tags": [
-          "Bank Transit"
-        ],
-        "operationId": "List Bank Transits",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -154,7 +174,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/Banks": {
+      "get": {
+        "tags": [
+          "Banks"
+        ],
+        "summary": "List Banks",
+        "description": "Returns a list of banks and their financial institution numbers. The format of Text in the response depends on the company web setting Lookup.Banks.",
+        "operationId": "List Banks",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -174,18 +206,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/Banks": {
-      "get": {
-        "tags": [
-          "Banks"
-        ],
-        "description": "Returns a list of banks and their financial institution numbers. The format of Text in the response depends on the company web setting Lookup.Banks.",
-        "operationId": "List Banks",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -235,7 +256,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/BenefitGroups": {
+      "get": {
+        "tags": [
+          "Benefit Groups"
+        ],
+        "summary": "List Benefit Groups",
+        "description": "Returns a list of Benefit Groups used in Benefits Administration. The format of Text in the response depends on the company web setting Lookup.BenefitGroups.\n\nIn Avanti, Benefit Groups are the different groupings of employee benefit coverage and the applicable benefit codes for each group.",
+        "operationId": "List Benefit Groups",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -255,18 +288,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/BenefitGroups": {
-      "get": {
-        "tags": [
-          "Benefit Groups"
-        ],
-        "description": "Returns a list of Benefit Groups used in Benefits Administration. The format of Text in the response depends on the company web setting Lookup.BenefitGroups.\n\nIn Avanti, Benefit Groups are the different groupings of employee benefit coverage and the applicable benefit codes for each group.",
-        "operationId": "List Benefit Groups",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -316,26 +338,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -345,6 +347,7 @@
         "tags": [
           "Codes"
         ],
+        "summary": "Get Codes",
         "operationId": "Get Codes",
         "requestBody": {
           "content": {
@@ -366,6 +369,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -425,26 +448,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -454,6 +457,7 @@
         "tags": [
           "Codes"
         ],
+        "summary": "Save Code",
         "operationId": "Save Code",
         "parameters": [
           {
@@ -521,6 +525,7 @@
         "tags": [
           "Codes"
         ],
+        "summary": "Delete Codes",
         "operationId": "Delete Codes",
         "parameters": [
           {
@@ -554,6 +559,7 @@
         "tags": [
           "Codes"
         ],
+        "summary": "Codes Setup",
         "operationId": "Codes Setup",
         "parameters": [
           {
@@ -566,6 +572,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -605,7 +631,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/DefaultGroups": {
+      "get": {
+        "tags": [
+          "Default Groups"
+        ],
+        "summary": "List Default Groups",
+        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group.",
+        "operationId": "List Default Groups",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -625,18 +663,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/DefaultGroups": {
-      "get": {
-        "tags": [
-          "Default Groups"
-        ],
-        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group.",
-        "operationId": "List Default Groups",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -686,7 +713,28 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/DefaultGroup/{defaultGroupCode}": {
+      "get": {
+        "tags": [
+          "Default Groups"
+        ],
+        "summary": "Get Default Group Values",
+        "operationId": "Get Default Group Values",
+        "parameters": [
+          {
+            "name": "defaultGroupCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -706,27 +754,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/DefaultGroup/{defaultGroupCode}": {
-      "get": {
-        "tags": [
-          "Default Groups"
-        ],
-        "operationId": "Get Default Group Values",
-        "parameters": [
-          {
-            "name": "defaultGroupCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -749,26 +777,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -795,6 +803,7 @@
         "tags": [
           "Dependents"
         ],
+        "summary": "List Dependents",
         "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
         "operationId": "List Dependents",
         "parameters": [
@@ -810,6 +819,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -858,26 +887,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -887,6 +896,7 @@
         "tags": [
           "Dependents"
         ],
+        "summary": "Create a Dependent",
         "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
         "operationId": "Create a Dependent",
         "requestBody": {
@@ -918,6 +928,7 @@
         "tags": [
           "Dependents"
         ],
+        "summary": "Update a Dependent",
         "description": "Update an existing dependent for an employee. ",
         "operationId": "Update a Dependent",
         "requestBody": {
@@ -940,6 +951,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success"
           },
@@ -965,26 +996,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -992,6 +1003,7 @@
         "tags": [
           "Dependents"
         ],
+        "summary": "Delete a Dependent",
         "description": "Deletes the employee's dependent.",
         "operationId": "Delete a Dependent",
         "parameters": [
@@ -1026,6 +1038,7 @@
         "tags": [
           "Dependents"
         ],
+        "summary": "Dependents Setup",
         "description": "Returns the dependents setup data.",
         "operationId": "Dependents Setup",
         "parameters": [
@@ -1052,6 +1065,7 @@
         "tags": [
           "Emergency Contacts"
         ],
+        "summary": "List Emergency Contacts",
         "description": "Returns a list of the employee's emergency contacts. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "List Emergency Contacts",
         "parameters": [
@@ -1066,6 +1080,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -1114,26 +1148,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -1141,6 +1155,7 @@
         "tags": [
           "Emergency Contacts"
         ],
+        "summary": "Create Emergency Contact",
         "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Create Emergency Contact",
         "requestBody": {
@@ -1192,6 +1207,7 @@
         "tags": [
           "Emergency Contacts"
         ],
+        "summary": "Update Emergency Contact",
         "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Update Emergency Contact",
         "requestBody": {
@@ -1214,6 +1230,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success"
           },
@@ -1239,26 +1275,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -1266,6 +1282,7 @@
         "tags": [
           "Emergency Contacts"
         ],
+        "summary": "Delete Emergency Contact",
         "description": "Deletes the employee's emergency contact.",
         "operationId": "Delete Emergency Contact",
         "parameters": [
@@ -1299,6 +1316,7 @@
         "tags": [
           "Emergency Contacts"
         ],
+        "summary": "Emergency Contacts Setup",
         "description": "Returns the emergency contacts setup data.",
         "operationId": "Emergency Contacts Setup",
         "parameters": [
@@ -1342,6 +1360,7 @@
         "tags": [
           "Employee Address"
         ],
+        "summary": "Update Employee Address",
         "description": "Updates the home address of an employee. ",
         "operationId": "Update Employee Address",
         "requestBody": {
@@ -1375,6 +1394,7 @@
         "tags": [
           "Employee Basic Info"
         ],
+        "summary": "Update Employee Basic Info",
         "description": "Returns the basic information for the employee, such as full name, birth date, language and SIN information.",
         "operationId": "Update Employee Basic Info",
         "requestBody": {
@@ -1397,14 +1417,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -1423,8 +1437,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -1451,6 +1471,7 @@
         "tags": [
           "Employee Basic Info"
         ],
+        "summary": "Updates Employee Photo",
         "operationId": "Updates Employee Photo",
         "parameters": [
           {
@@ -1488,6 +1509,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success"
           },
@@ -1513,26 +1554,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -1540,6 +1561,7 @@
         "tags": [
           "Employee Basic Info"
         ],
+        "summary": "Deletes Employee Photo",
         "operationId": "Deletes Employee Photo",
         "parameters": [
           {
@@ -1565,6 +1587,7 @@
         "tags": [
           "Employee Benefit Group"
         ],
+        "summary": "Get Employee Benefit Information",
         "operationId": "Get Employee Benefit Information",
         "parameters": [
           {
@@ -1579,6 +1602,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -1601,26 +1644,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -1647,6 +1670,7 @@
         "tags": [
           "Employee Defaults Group"
         ],
+        "summary": "Get Employee Defaults Group",
         "operationId": "Get Employee Defaults Group",
         "parameters": [
           {
@@ -1661,6 +1685,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -1700,7 +1744,31 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/EmployeeEarningCodes/{empNo}": {
+      "get": {
+        "tags": [
+          "Employee Earning Codes"
+        ],
+        "summary": "Get Employee Earning Codes",
+        "description": "This returns a list of all the earning codes for the employee. The format of Text in the response depends on the company web setting Lookup.EarnDeductCode.",
+        "operationId": "Get Employee Earning Codes",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "default": "000001005"
+          }
+        ],
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -1720,30 +1788,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/EmployeeEarningCodes/{empNo}": {
-      "get": {
-        "tags": [
-          "Employee Earning Codes"
-        ],
-        "description": "This returns a list of all the earning codes for the employee. The format of Text in the response depends on the company web setting Lookup.EarnDeductCode.",
-        "operationId": "Get Employee Earning Codes",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "default": "000001005"
-          }
-        ],
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -1793,26 +1838,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -1822,6 +1847,7 @@
         "tags": [
           "Employee Emails"
         ],
+        "summary": "Update Employee Email",
         "operationId": "Update Employee Email",
         "parameters": [
           {
@@ -1875,6 +1901,7 @@
         "tags": [
           "Employee Job Info"
         ],
+        "summary": "Get Job Information",
         "operationId": "Get Job Information",
         "parameters": [
           {
@@ -1889,6 +1916,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -1911,26 +1958,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -1957,6 +1984,7 @@
         "tags": [
           "Employee Pay Info"
         ],
+        "summary": "Get Employee Pay Info",
         "operationId": "Get Employee Pay Info",
         "parameters": [
           {
@@ -1971,6 +1999,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2010,26 +2058,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -2039,6 +2067,7 @@
         "tags": [
           "Employee Phone Number"
         ],
+        "summary": "Update Employee Phone Number",
         "operationId": "Update Employee Phone Number",
         "parameters": [
           {
@@ -2081,6 +2110,7 @@
         "tags": [
           "Employee Phone Number"
         ],
+        "summary": "Delete Employee Phone Number",
         "operationId": "Delete Employee Phone Number",
         "parameters": [
           {
@@ -2125,6 +2155,7 @@
         "tags": [
           "Employee Vacation Info"
         ],
+        "summary": "Get Employee Vacation Info",
         "operationId": "Get Employee Vacation Info",
         "parameters": [
           {
@@ -2139,6 +2170,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2161,26 +2212,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -2207,6 +2238,7 @@
         "tags": [
           "EmployeeGL Info"
         ],
+        "summary": "Get Employee GL Infomation",
         "operationId": "Get Employee GL Infomation",
         "parameters": [
           {
@@ -2221,6 +2253,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2260,26 +2312,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -2289,6 +2321,7 @@
         "tags": [
           "Employees"
         ],
+        "summary": "List Employees",
         "operationId": "List Employees",
         "requestBody": {
           "content": {
@@ -2310,6 +2343,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2369,26 +2422,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -2398,6 +2431,7 @@
         "tags": [
           "Employees"
         ],
+        "summary": "Get Employee Raw Photo",
         "operationId": "Get Employee Raw Photo",
         "parameters": [
           {
@@ -2432,11 +2466,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -2455,8 +2486,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -2483,6 +2517,7 @@
         "tags": [
           "Employees"
         ],
+        "summary": "Get Employee Details",
         "operationId": "Get Employee Details",
         "parameters": [
           {
@@ -2497,6 +2532,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2536,26 +2591,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -2565,6 +2600,7 @@
         "tags": [
           "Employment History"
         ],
+        "summary": "Add Employment History",
         "operationId": "Add Employment History",
         "requestBody": {
           "content": {
@@ -2586,14 +2622,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -2612,8 +2642,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -2640,9 +2676,30 @@
         "tags": [
           "Employment Status"
         ],
+        "summary": "List Employment Statuses",
         "description": "Returns a list of the defined Employment Status codes. The format of Text in the response depends on the company web setting Lookup.EmploymentStatus.\n\nIn Avanti, these are used to manage and classify employees. For example, an employment status code may be used to indicate that an employee is on leave.",
         "operationId": "List Employment Statuses",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2692,7 +2749,18 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/GLBenefitGroups": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "List GL Benefit Groups",
+        "operationId": "List GL Benefit Groups",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -2712,17 +2780,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/GLBenefitGroups": {
-      "get": {
-        "tags": [
-          "GLs"
-        ],
-        "operationId": "List GL Benefit Groups",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2754,26 +2812,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -2800,9 +2838,30 @@
         "tags": [
           "GLs"
         ],
+        "summary": "List GL Groups",
         "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
         "operationId": "List GL Groups",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2851,26 +2910,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -2880,6 +2919,7 @@
         "tags": [
           "GLs"
         ],
+        "summary": "List GL Accounts",
         "operationId": "List GL Accounts",
         "parameters": [
           {
@@ -2942,6 +2982,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -2973,26 +3033,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3019,8 +3059,29 @@
         "tags": [
           "GLs"
         ],
+        "summary": "Get GL Setup",
         "operationId": "Get GL Setup",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3043,26 +3104,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3089,6 +3130,7 @@
         "tags": [
           "GLs"
         ],
+        "summary": "Get GL Full Account Description",
         "operationId": "Get GL Full Account Description",
         "parameters": [
           {
@@ -3103,6 +3145,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3125,26 +3187,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3171,9 +3213,30 @@
         "tags": [
           "Grid Codes"
         ],
+        "summary": "List Grid Codes",
         "description": "Returns a list of the Rate Grid Codes. The format of Text in the response depends on the company web setting Lookup.GridCodes.\n\nRate Grids are defined rate structures that can be applied to employees based on position or earnings, such a shift premiums and travel rates. Additionally, future rates can be defined for each rate grid.",
         "operationId": "List Grid Codes",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3222,26 +3285,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -3251,13 +3294,11 @@
         "tags": [
           "Info"
         ],
+        "summary": "Get API Info",
         "operationId": "Get API Info",
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3276,8 +3317,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3304,9 +3348,30 @@
         "tags": [
           "Job Status"
         ],
+        "summary": "List Job Statuses",
         "description": "Returns a list of Job Status. The format of Text in the response depends on the company web setting Lookup.JobStatus.\n\nThese are used to classify employees on their job status, such as Casual vs Contract workers.",
         "operationId": "List Job Statuses",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3356,7 +3421,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/Locations": {
+      "get": {
+        "tags": [
+          "Locations"
+        ],
+        "summary": "List Locations",
+        "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
+        "operationId": "List Locations",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -3376,18 +3453,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/Locations": {
-      "get": {
-        "tags": [
-          "Locations"
-        ],
-        "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
-        "operationId": "List Locations",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3436,26 +3502,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -3465,6 +3511,7 @@
         "tags": [
           "New Hire"
         ],
+        "summary": "Add New Hire",
         "operationId": "Add New Hire",
         "requestBody": {
           "content": {
@@ -3486,6 +3533,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3545,26 +3612,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -3574,6 +3621,7 @@
         "tags": [
           "New Hire"
         ],
+        "summary": "New Hire Setup",
         "operationId": "New Hire Setup",
         "responses": {
           "200": {
@@ -3604,6 +3652,7 @@
         "tags": [
           "New Hire"
         ],
+        "summary": "Get Default Group Values and Setup",
         "operationId": "Get Default Group Values and Setup",
         "parameters": [
           {
@@ -3643,8 +3692,29 @@
         "tags": [
           "Notification Settings"
         ],
+        "summary": "List Notification Settings",
         "operationId": "List Notification Settings",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3693,26 +3763,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -3720,6 +3770,7 @@
         "tags": [
           "Notification Settings"
         ],
+        "summary": "Update Notification Settings",
         "operationId": "Update Notification Settings",
         "requestBody": {
           "content": {
@@ -3750,14 +3801,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3776,8 +3821,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3804,6 +3855,7 @@
         "tags": [
           "Notifications"
         ],
+        "summary": "Get a Notification",
         "operationId": "Get a Notification",
         "parameters": [
           {
@@ -3819,6 +3871,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3858,26 +3930,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -3887,6 +3939,7 @@
         "tags": [
           "Notifications"
         ],
+        "summary": "List Notifications",
         "operationId": "List Notifications",
         "parameters": [
           {
@@ -3952,6 +4005,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -3991,26 +4064,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -4018,6 +4071,7 @@
         "tags": [
           "Notifications"
         ],
+        "summary": "Mark Notifications as Read",
         "operationId": "Mark Notifications as Read",
         "requestBody": {
           "content": {
@@ -4039,14 +4093,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -4065,8 +4113,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -4093,6 +4147,7 @@
         "tags": [
           "Notifications"
         ],
+        "summary": "Mark all Notifications as Read",
         "operationId": "Mark all Notifications as Read",
         "requestBody": {
           "content": {
@@ -4125,8 +4180,29 @@
         "tags": [
           "Notifications"
         ],
+        "summary": "Get Unread Notification Count",
         "operationId": "Get Unread Notification Count",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4152,26 +4228,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -4198,8 +4254,29 @@
         "tags": [
           "Notifications"
         ],
+        "summary": "List Unpushed Notifications",
         "operationId": "List Unpushed Notifications",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4248,26 +4325,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -4277,6 +4334,7 @@
         "tags": [
           "Notifications"
         ],
+        "summary": "Register Push Notification Channel",
         "operationId": "Register Push Notification Channel",
         "requestBody": {
           "content": {
@@ -4309,9 +4367,30 @@
         "tags": [
           "Pay Codes"
         ],
+        "summary": "List Pay Codes",
         "description": "Returns a list of the pay codes. The format of Text in the response depends on the company web setting Lookup.PayCode.\n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time.",
         "operationId": "List Pay Codes",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4361,7 +4440,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/PayGroups": {
+      "get": {
+        "tags": [
+          "Pay Groups"
+        ],
+        "summary": "List Pay Groups",
+        "description": "Returns a list of pay groups. The format of Text in the response depends on the company web setting Lookup.PayGroups.\n\nIn Avanti, pay groups determine many of the pay and tax calculations factors, such as EI rates, CPP rates, the CRA business number, Quebec Employer ID, etc. They are assigned to employees that are paid at the same time and share the same pay period factors.",
+        "operationId": "List Pay Groups",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -4381,18 +4472,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/PayGroups": {
-      "get": {
-        "tags": [
-          "Pay Groups"
-        ],
-        "description": "Returns a list of pay groups. The format of Text in the response depends on the company web setting Lookup.PayGroups.\n\nIn Avanti, pay groups determine many of the pay and tax calculations factors, such as EI rates, CPP rates, the CRA business number, Quebec Employer ID, etc. They are assigned to employees that are paid at the same time and share the same pay period factors.",
-        "operationId": "List Pay Groups",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4442,26 +4522,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -4471,6 +4531,7 @@
         "tags": [
           "Pay Statements"
         ],
+        "summary": "List Pay Statements",
         "description": "Returns a list of pay statements, with the pay totals,  for the employee assigned to the user.",
         "operationId": "List Pay Statements",
         "parameters": [
@@ -4545,6 +4606,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4594,26 +4675,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -4623,6 +4684,7 @@
         "tags": [
           "Pay Statements"
         ],
+        "summary": "List Cancelled Pay Statements",
         "description": "Returns a list of the pay run of cancelled payment for the employee.\n\nIn Avanti, a cancelled payment is a complete reversal of all values in the initially processed payment.",
         "operationId": "List Cancelled Pay Statements",
         "parameters": [
@@ -4658,6 +4720,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4710,26 +4792,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -4739,6 +4801,7 @@
         "tags": [
           "Pay Statements"
         ],
+        "summary": "Get PDF Pay Statement",
         "description": "Returns a byte array of the pay statement with a content type of application/pdf for the employee assigned to the current Avanti User.",
         "operationId": "Get PDF Pay Statement",
         "parameters": [
@@ -4770,11 +4833,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -4793,8 +4853,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -4821,6 +4884,7 @@
         "tags": [
           "Pay Statements"
         ],
+        "summary": "Get Pay Statement",
         "operationId": "Get Pay Statement",
         "parameters": [
           {
@@ -4843,6 +4907,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4865,26 +4949,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -4911,6 +4975,7 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Get Personal Information",
         "description": "Returns the personal information for an employee. ",
         "operationId": "Get Personal Information",
         "parameters": [
@@ -4926,6 +4991,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4965,26 +5050,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -4994,6 +5059,7 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Update Personal Information",
         "description": "Provides the ability to update the personal information for the employee. \n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info. ",
         "operationId": "Update Personal Information",
         "requestBody": {
@@ -5016,14 +5082,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5042,8 +5102,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5070,6 +5136,7 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Get Employee Photo",
         "description": "Returns a byte array of the employee's photo. ",
         "operationId": "Get Employee Photo",
         "parameters": [
@@ -5105,6 +5172,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -5145,26 +5232,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -5172,6 +5239,7 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Update Employee Photo",
         "description": "Creates a new photo for the employee or replaces the existing employee photo from a byte array. \n\nWe recommend using photos that square or close to square to avoid scaling issues. ",
         "operationId": "Update Employee Photo",
         "parameters": [
@@ -5220,6 +5288,7 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Delete Employee Photo",
         "description": "Deletes the employee's photo. ",
         "operationId": "Delete Employee Photo",
         "parameters": [
@@ -5246,6 +5315,7 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Get Employee Figures",
         "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
         "operationId": "Get Employee Figures",
         "parameters": [
@@ -5286,6 +5356,7 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Update Employee Figures",
         "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
         "operationId": "Update Employee Figures",
         "requestBody": {
@@ -5324,8 +5395,29 @@
         "tags": [
           "Personal Info"
         ],
+        "summary": "Personal Info Setup",
         "operationId": "Personal Info Setup",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -5348,26 +5440,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5394,6 +5466,7 @@
         "tags": [
           "Position Rate"
         ],
+        "summary": "Get Position Rate Description",
         "operationId": "Get Position Rate Description",
         "parameters": [
           {
@@ -5407,6 +5480,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -5429,26 +5522,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5475,6 +5548,7 @@
         "tags": [
           "Position Rate"
         ],
+        "summary": "List Position Rates",
         "operationId": "List Position Rates",
         "parameters": [
           {
@@ -5488,6 +5562,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -5536,26 +5630,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -5565,6 +5639,7 @@
         "tags": [
           "Positions"
         ],
+        "summary": "List Employee Positions",
         "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
         "operationId": "List Employee Positions",
         "parameters": [
@@ -5603,6 +5678,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -5652,26 +5747,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -5681,6 +5756,7 @@
         "tags": [
           "Positions"
         ],
+        "summary": "List Positions",
         "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
         "operationId": "List Positions",
         "parameters": [
@@ -5704,6 +5780,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -5753,26 +5849,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -5782,6 +5858,7 @@
         "tags": [
           "Preferences"
         ],
+        "summary": "Get User Preference",
         "operationId": "Get User Preference",
         "parameters": [
           {
@@ -5800,11 +5877,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5823,8 +5897,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5849,6 +5926,7 @@
         "tags": [
           "Preferences"
         ],
+        "summary": "Update User Preference",
         "operationId": "Update User Preference",
         "parameters": [
           {
@@ -5889,14 +5967,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5915,8 +5987,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -5943,8 +6021,29 @@
         "tags": [
           "Rate Grids"
         ],
+        "summary": "List of Rate Grids",
         "operationId": "List of Rate Grids",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -5993,26 +6092,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -6022,6 +6101,7 @@
         "tags": [
           "Reporter"
         ],
+        "summary": "Get Report Data",
         "description": "This will return the contents of the specified report based.\n\nUsing this endpoint, the information returned can be filtered based on  date range and employee range. If you need the report to filtered by additional options, please use the Get Report Data With Options endpoint.  \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
         "operationId": "Get Report Data",
         "parameters": [
@@ -6082,6 +6162,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -6109,26 +6209,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -6138,6 +6218,7 @@
         "tags": [
           "Reporter"
         ],
+        "summary": "Get Report Data With Options",
         "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
         "operationId": "Get Report Data With Options",
         "requestBody": {
@@ -6160,6 +6241,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -6190,7 +6291,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/ScheduleTemplates": {
+      "get": {
+        "tags": [
+          "Schedule Templates"
+        ],
+        "summary": "List Schedule Templates",
+        "description": "Returns a list of the schedule templates. The format of Text in the response depends on the company web setting Lookup.ScheduleTemplates. \n\nIn Avanti, Schedule templates define the commonly used schedule rotations. These rotations can be used to create employee schedules automatically by rolling schedules forward or on demand by adding the schedule template for a specific day.",
+        "operationId": "List Schedule Templates",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -6210,18 +6323,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/ScheduleTemplates": {
-      "get": {
-        "tags": [
-          "Schedule Templates"
-        ],
-        "description": "Returns a list of the schedule templates. The format of Text in the response depends on the company web setting Lookup.ScheduleTemplates. \n\nIn Avanti, Schedule templates define the commonly used schedule rotations. These rotations can be used to create employee schedules automatically by rolling schedules forward or on demand by adding the schedule template for a specific day.",
-        "operationId": "List Schedule Templates",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -6271,26 +6373,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -6300,6 +6382,7 @@
         "tags": [
           "Search"
         ],
+        "summary": "Search",
         "operationId": "Search",
         "parameters": [
           {
@@ -6348,9 +6431,30 @@
         "tags": [
           "Shift Codes"
         ],
+        "summary": "List Shift Codes",
         "description": "Returns a list of the shift codes. \n\nIn Avanti, shift codes are used in Schedules and Time Cards to apply default from/to times, break rules and premium rules.",
         "operationId": "List Shift Codes",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -6400,7 +6504,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/TaskIDs": {
+      "get": {
+        "tags": [
+          "Task IDs"
+        ],
+        "summary": "List Task IDs",
+        "description": "Returns a list of the defined tasks.\n\nIn Avanti, Task Ids are used throughout time entry. These are for tracking purposes and are defined to suit your organizations needs.",
+        "operationId": "List Task IDs",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -6420,18 +6536,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/TaskIDs": {
-      "get": {
-        "tags": [
-          "Task IDs"
-        ],
-        "description": "Returns a list of the defined tasks.\n\nIn Avanti, Task Ids are used throughout time entry. These are for tracking purposes and are defined to suit your organizations needs.",
-        "operationId": "List Task IDs",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -6481,26 +6586,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -6510,7 +6595,8 @@
         "tags": [
           "Time Data"
         ],
-        "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti. \n\nIf the time is unapproved, overtime, premiums and breaks will be applied to the worked time. If the time is approved, these rules will not impact the worked time.",
+        "summary": "Add Time Data Entries",
+        "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.",
         "operationId": "Add Time Data Entries",
         "requestBody": {
           "content": {
@@ -6532,6 +6618,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -6591,26 +6697,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -6620,6 +6706,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "List Time Entries",
         "operationId": "List Time Entries",
         "parameters": [
           {
@@ -6706,6 +6793,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -6754,26 +6861,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -6783,6 +6870,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "List Time Entry Templates",
         "operationId": "List Time Entry Templates",
         "parameters": [
           {
@@ -6840,6 +6928,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Get Time Worked",
         "operationId": "Get Time Worked",
         "parameters": [
           {
@@ -6902,6 +6991,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "List Available Shifts",
         "operationId": "List Available Shifts",
         "parameters": [
           {
@@ -6975,6 +7065,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Cancel Pooled Entries",
         "operationId": "Cancel Pooled Entries",
         "requestBody": {
           "content": {
@@ -7045,6 +7136,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Cancel Pickup Requests",
         "operationId": "Cancel Pickup Requests",
         "requestBody": {
           "content": {
@@ -7115,6 +7207,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Create a Pickup Request",
         "operationId": "Create a Pickup Request",
         "requestBody": {
           "content": {
@@ -7167,6 +7260,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "List Pickup Requests",
         "operationId": "List Pickup Requests",
         "parameters": [
           {
@@ -7247,6 +7341,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "List Exchange Offers",
         "operationId": "List Exchange Offers",
         "parameters": [
           {
@@ -7296,6 +7391,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "List Employee Acceptance",
         "operationId": "List Employee Acceptance",
         "requestBody": {
           "content": {
@@ -7363,6 +7459,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Get Pool Entry",
         "operationId": "Get Pool Entry",
         "parameters": [
           {
@@ -7417,6 +7514,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Get Pickup Entry",
         "operationId": "Get Pickup Entry",
         "parameters": [
           {
@@ -7479,6 +7577,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Get Pooled Schedule",
         "operationId": "Get Pooled Schedule",
         "parameters": [
           {
@@ -7506,6 +7605,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -7545,26 +7664,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -7574,6 +7673,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "List Pool Requests",
         "operationId": "List Pool Requests",
         "parameters": [
           {
@@ -7627,6 +7727,26 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -7675,26 +7795,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -7704,6 +7804,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Post a Schedule",
         "operationId": "Post a Schedule",
         "requestBody": {
           "content": {
@@ -7725,14 +7826,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -7751,8 +7846,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -7779,6 +7880,7 @@
         "tags": [
           "Time Management"
         ],
+        "summary": "Create a Comment",
         "operationId": "Create a Comment",
         "requestBody": {
           "content": {
@@ -7811,9 +7913,30 @@
         "tags": [
           "Union Codes"
         ],
+        "summary": "List Union Codes",
         "description": "Returns a list of the Union Codes defined. The format of Text in the response depends on the company web setting Lookup.Unions. \n\nIn Avanti, Union Codes identify the union affiliations and are used to determine union dues.",
         "operationId": "List Union Codes",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -7863,7 +7986,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/VacationEarningCodes": {
+      "get": {
+        "tags": [
+          "Vacation Earning Codes"
+        ],
+        "summary": "List Vacation Earning Codes",
+        "description": "Returns a list of the earning codes setup for paying vacation each period or to pay out accrued. The format of Text in the response depends on the company web setting Lookup.VacationEarningCodes. \n\nIn Avanti, vacation earning codes must have either Vacation or Other Vacation selected for the Earning Type.",
+        "operationId": "List Vacation Earning Codes",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -7883,18 +8018,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/VacationEarningCodes": {
-      "get": {
-        "tags": [
-          "Vacation Earning Codes"
-        ],
-        "description": "Returns a list of the earning codes setup for paying vacation each period or to pay out accrued. The format of Text in the response depends on the company web setting Lookup.VacationEarningCodes. \n\nIn Avanti, vacation earning codes must have either Vacation or Other Vacation selected for the Earning Type.",
-        "operationId": "List Vacation Earning Codes",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -7944,7 +8068,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/VacationGroups": {
+      "get": {
+        "tags": [
+          "Vacation Groups"
+        ],
+        "summary": "List Vacation Groups",
+        "description": "Returns a list of the defined vacation group. The format of Text in the response depends on the company web setting Lookup.VacationGroups. \n\nIn Avanti, vacation groups determine the vacation entitlement calculation for each employee assigned to the group.",
+        "operationId": "List Vacation Groups",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -7964,18 +8100,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/VacationGroups": {
-      "get": {
-        "tags": [
-          "Vacation Groups"
-        ],
-        "description": "Returns a list of the defined vacation group. The format of Text in the response depends on the company web setting Lookup.VacationGroups. \n\nIn Avanti, vacation groups determine the vacation entitlement calculation for each employee assigned to the group.",
-        "operationId": "List Vacation Groups",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8025,7 +8150,28 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/VacationGroup/{vacationGroup}": {
+      "get": {
+        "tags": [
+          "Vacation Groups"
+        ],
+        "summary": "Get Vacation Group",
+        "operationId": "Get Vacation Group",
+        "parameters": [
+          {
+            "name": "vacationGroup",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -8045,27 +8191,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/VacationGroup/{vacationGroup}": {
-      "get": {
-        "tags": [
-          "Vacation Groups"
-        ],
-        "operationId": "Get Vacation Group",
-        "parameters": [
-          {
-            "name": "vacationGroup",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8105,7 +8231,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/VacationOptions": {
+      "get": {
+        "tags": [
+          "Vacation Options"
+        ],
+        "summary": "List Vacation Options",
+        "description": "Returns a list of the vacation options. The Text will always be the description of the option.\n\nIn Avanti, the Vacation Option indicates what will happen with the calculated vacation for an employee.",
+        "operationId": "List Vacation Options",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -8125,18 +8263,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/VacationOptions": {
-      "get": {
-        "tags": [
-          "Vacation Options"
-        ],
-        "description": "Returns a list of the vacation options. The Text will always be the description of the option.\n\nIn Avanti, the Vacation Option indicates what will happen with the calculated vacation for an employee.",
-        "operationId": "List Vacation Options",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8186,7 +8313,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/WCBGroups": {
+      "get": {
+        "tags": [
+          "WCB Groups"
+        ],
+        "summary": "List WCB Groups",
+        "description": "Returns a list of the Workers Compensation Groups. \n\nIn Avanti, these maintain all WCB rates and maximums for payroll processing.",
+        "operationId": "List WCB Groups",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -8206,18 +8345,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/WCBGroups": {
-      "get": {
-        "tags": [
-          "WCB Groups"
-        ],
-        "description": "Returns a list of the Workers Compensation Groups. \n\nIn Avanti, these maintain all WCB rates and maximums for payroll processing.",
-        "operationId": "List WCB Groups",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8267,7 +8395,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/WebPunch": {
+      "get": {
+        "tags": [
+          "Web Punch"
+        ],
+        "summary": "Get Last Check-in",
+        "description": "Returns the most recent punch of the employee attached to the user.",
+        "operationId": "Get Last Check-in",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -8287,18 +8427,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/WebPunch": {
-      "get": {
-        "tags": [
-          "Web Punch"
-        ],
-        "description": "Returns the most recent punch of the employee attached to the user.",
-        "operationId": "Get Last Check-in",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8339,26 +8468,6 @@
                 }
               }
             }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       },
@@ -8366,6 +8475,7 @@
         "tags": [
           "Web Punch"
         ],
+        "summary": "Create a Check-in",
         "description": "Creates a punch for the employee. \n\nThe time of the punch is the current time on the SQL Server, adjusted by the time zone specified on Web Punch Employee Setup on the Desktop Application. If there is no setup for the employee, the time will be adjusted by the Province of Employment on the Tax Factors tab of the Employee Profile.\n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup. \n\nIf company web setting MobileSettings.WebPunchSettings.RequireLocationServices is true, longitude and latitude must be included.",
         "operationId": "Create a Check-in",
         "requestBody": {
@@ -8388,6 +8498,26 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8448,7 +8578,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/WebPunch/Allowed": {
+      "get": {
+        "tags": [
+          "Web Punch"
+        ],
+        "summary": "Is Check-in Allowed",
+        "description": "Returns true if the employee can punch and false if the employee cannot. \n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup.",
+        "operationId": "Is Check-in Allowed",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -8468,18 +8610,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/WebPunch/Allowed": {
-      "get": {
-        "tags": [
-          "Web Punch"
-        ],
-        "description": "Returns true if the employee can punch and false if the employee cannot. \n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup.",
-        "operationId": "Is Check-in Allowed",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8520,7 +8651,18 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/WhatsNew/Web": {
+      "get": {
+        "tags": [
+          "Whats New"
+        ],
+        "summary": "What's New page for web",
+        "operationId": "What's New page for web",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -8540,17 +8682,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/WhatsNew/Web": {
-      "get": {
-        "tags": [
-          "Whats New"
-        ],
-        "operationId": "What's New page for web",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8590,7 +8722,19 @@
                 }
               }
             }
-          },
+          }
+        }
+      }
+    },
+    "/v1/WorkGroups": {
+      "get": {
+        "tags": [
+          "Work Groups"
+        ],
+        "summary": "List Work Groups",
+        "description": "Returns a list of the defined employee work groups. The format of Text in the response depends on the company web setting Lookup.WorkGroups.\n\nIn Avanti, Work Groups are used to determine which employees enter time using Time and Attendance. These group employees based on common rules and shift(s). Each Work Group has a Holiday Rule, Punch Rule and Overtime Rule and one or more Shifts.",
+        "operationId": "List Work Groups",
+        "responses": {
           "default": {
             "description": "Error",
             "content": {
@@ -8610,18 +8754,7 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/WorkGroups": {
-      "get": {
-        "tags": [
-          "Work Groups"
-        ],
-        "description": "Returns a list of the defined employee work groups. The format of Text in the response depends on the company web setting Lookup.WorkGroups.\n\nIn Avanti, Work Groups are used to determine which employees enter time using Time and Attendance. These group employees based on common rules and shift(s). Each Work Group has a Holiday Rule, Punch Rule and Overtime Rule and one or more Shifts.",
-        "operationId": "List Work Groups",
-        "responses": {
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -8654,26 +8787,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -18226,7 +18339,7 @@
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the shift worked. If left blank, overtime rules, premium rules, and break rules will not apply to the time worked.",
+            "description": "The ID of the shift worked. If left blank, premium rules and break rules will not apply to the time worked.\n\nMust be a valid shift ID. 'Get Shift Codes' will return a list of all the valid shifts.",
             "nullable": true
           },
           "wcbOverrideCode": {
@@ -18234,7 +18347,7 @@
             "minLength": 3,
             "pattern": "[0-9]*",
             "type": "string",
-            "description": "The ID of the WCB Group. If left blank, the time will apply to the WCB group selected on the employee's profile.",
+            "description": "The ID of the WCB Group. If left blank, the time will apply to the WCB group selected on the employee's profile.\n\nMust be a valid WCB group. 'List WCB Groups' will return a list of all the valid groups.",
             "nullable": true
           },
           "vacationOverrideCode": {
@@ -18242,14 +18355,14 @@
             "minLength": 2,
             "pattern": "[0-9]*",
             "type": "string",
-            "description": "The ID of the vacation group. If left blank, the time will apply to the vacation group selected on the employee's profile.",
+            "description": "The ID of the vacation group. If left blank, the time will apply to the vacation group selected on the employee's profile.\n\nMust be a valid vacation group. 'List Vacation Groups' will return a list of all the valid groups.",
             "nullable": true
           },
           "unionOverrideCode": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the union group. If left blank, the time will apply to the union selected on the employee's profile.",
+            "description": "The ID of the union code. If left blank, the time will apply to the union selected on the employee's profile.\n\nMust be a valid union code. 'List Union Codes' will return a list of all the valid codes.",
             "nullable": true
           },
           "units": {
@@ -18263,7 +18376,7 @@
                 "$ref": "#/components/schemas/UnitOfMeasure"
               }
             ],
-            "description": "The unit of measure for the time worked. Must be one of the following letters.\n  H – Hour \n  D – Day \n  W – Week \n  M – Month \n  Y – Year\n  P – Period \n  U – Unit\n  A – Amount"
+            "description": "The unit of measure for the time worked. Must be one of the following letters (h,d,w,y,p,a,u).\n\nH is the time in hours. D is the time in days. W is the time in weeks. Y is the time in years. P is the time in periods. U is the time in units. A is an amount."
           },
           "taskId": {
             "maxLength": 9,
@@ -18277,34 +18390,18 @@
             "description": "The dollar rate of pay for the time worked. This will be used with the units to determine the gross earnings for the time worked.\n\nIf blank, the rate of pay will be determined within Avanti.",
             "format": "double"
           },
-          "gridCode": {
-            "maxLength": 12,
-            "minLength": 0,
-            "type": "string",
-            "description": "This property is not used at this time.",
-            "nullable": true
-          },
-          "gridPercent": {
-            "type": "number",
-            "description": "This property is not used at this time.",
-            "format": "double"
-          },
-          "rateLevel": {
-            "type": "integer",
-            "description": "This property is not used at this time.",
-            "format": "int32"
-          },
           "recordSourceId": {
             "type": "integer",
-            "description": "A unique identifier for the time which prevents duplicate time from being accidently created in Avanti. If this identifier is found within Avanti or in API body, the time will not import. \n\nFor example, this could be the identifier from the time capturing system.",
+            "description": "A unique identifier for the time which prevents duplicate time from being accidently created in Avanti. If a duplicate recordSourceID is found within Avanti or in API body, the time will not import. \n\nFor example, this could be the identifier from the time capturing system.",
             "format": "int32"
           },
           "glType": {
-            "maxLength": 1,
-            "minLength": 0,
-            "type": "string",
-            "description": "The GL option for the time worked. This is required. \n     b = the GL from the Employment Data tab of the employee's profile. \n     m = the GL from the earning code on the employee's profile. \n     a = GL account specified in parameter glAccount. \n     g = GL account specified in parameter glGroup.",
-            "nullable": true
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GlOption"
+              }
+            ],
+            "description": "The letter abbreviation for the GL option of the time worked. This is required. \n\nGL options: B is the GL from the Employment Data tab of the employee's profile. M is the GL from the earning code on the employee's profile. A is the GL account specified in parameter glAccount. G is the GL account specified in parameter glGroup."
           },
           "glAccount": {
             "maxLength": 60,
@@ -18320,18 +18417,18 @@
             "description": "The GL group for the worked time. This is required when parameter glType is 'g'.\n\nMust be a valid GL group. 'List GL Groups' will return the valid GL Groups.",
             "nullable": true
           },
-          "benefitGroup": {
+          "glBenefitGroup": {
             "maxLength": 4,
             "minLength": 0,
             "pattern": "[0-9]*",
             "type": "string",
-            "description": "The GL benefit group for the worked time. This is required when parameter glType is 'a'.\n\nMust be a valid GL benefit group. 'List GL Benefit Groups' will return the valid GL Benefit Groups.",
             "nullable": true
           },
           "comments": {
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
+            "description": "Enter comments for the worked time. Comments can be up to 1024 characters.",
             "nullable": true
           }
         },
@@ -18365,11 +18462,12 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "The unique identifier for the Time in Avanti.",
             "format": "int32"
           },
           "isApproved": {
             "type": "boolean",
-            "description": "Whether the entry is approved. If this is blank, the time is unapproved. \n     True = Approved\n     False = unapproved\nEntries that are approved will NOT have overtime, premium, or break rules applied to the time."
+            "description": "Whether the entry is approved. True is Approved. False is unapproved."
           },
           "empNo": {
             "maxLength": 9,
@@ -18407,7 +18505,7 @@
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the shift worked. If blank, overtime rules, premium rules, and break rules will not apply to the time worked.",
+            "description": "The ID of the shift worked. If blank, premium rules and break rules will not apply to the time worked.",
             "nullable": true
           },
           "wcbOverrideCode": {
@@ -18444,7 +18542,7 @@
                 "$ref": "#/components/schemas/UnitOfMeasure"
               }
             ],
-            "description": "The unit of measure for the time worked. Returns one of the following letters.\n  H – Hour \n  D – Day \n  W – Week \n  M – Month \n  Y – Year\n  P – Period \n  U – Unit\n  A – Amount"
+            "description": "The unit of measure for the time worked. Returns one of the following letters (h,d,w,y,p,a,u).\n\nH is the time in hours. D is the time in days. W is the time in weeks. Y is the time in years. P is the time in periods. U is the time in units. A is an amount."
           },
           "taskId": {
             "maxLength": 9,
@@ -18458,38 +18556,24 @@
             "description": "The dollar rate of pay for the time worked. This will be used with the units to determine the gross earnings for the time worked.\n\nIf blank, the rate of pay will be determined within Avanti.",
             "format": "double"
           },
-          "gridCode": {
-            "maxLength": 12,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "gridPercent": {
-            "type": "number",
-            "description": "This property is not used at this time.",
-            "format": "double"
-          },
-          "rateLevel": {
-            "type": "integer",
-            "description": "This property is not used at this time.",
-            "format": "int32"
-          },
           "recordSourceId": {
             "type": "integer",
             "description": "A unique identifier for the time. This prevents duplicate time from being created in Avanti.",
             "format": "int32"
           },
           "glType": {
-            "maxLength": 1,
-            "minLength": 0,
-            "type": "string",
-            "description": "The GL option for the time worked. \n     b = the GL from the Employment Data tab of the employee's profile. \n     m = the GL from the earning code on the employee's profile. \n     a = GL account specified in parameter glAccount. \n     g = GL account specified in parameter glGroup.",
-            "nullable": true
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GlOption"
+              }
+            ],
+            "description": "The GL option for the time worked. \n\nB is the GL from the Employment Data tab of the employee's profile. \nM is the GL from the earning code on the employee's profile. \nA is the GL account specified in parameter glAccount. \nG is the GL account specified in parameter glGroup."
           },
           "glAccount": {
             "maxLength": 60,
             "minLength": 0,
             "type": "string",
+            "description": "This determines the GL account for the worked time when parameter glType is 'a'.",
             "nullable": true
           },
           "glGroup": {
@@ -18499,19 +18583,18 @@
             "description": "This determines the GL of the time worked when parameter glType is 'g'.",
             "nullable": true
           },
-          "benefitGroup": {
+          "glBenefitGroup": {
             "maxLength": 4,
             "minLength": 0,
             "pattern": "[0-9]*",
             "type": "string",
-            "description": "This determines the GL Benefit Group of the time worked when parameter glType is 'a'.",
             "nullable": true
           },
           "comments": {
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
-            "description": "Enter comments for the worked time. Comments can be up to 1024 characters.",
+            "description": "The comments for the worked time.",
             "nullable": true
           }
         },
@@ -18534,7 +18617,7 @@
             },
             "nullable": true
           },
-          "timeDataValidationErrors": {
+          "errors": {
             "type": "object",
             "additionalProperties": {
               "type": "array",
@@ -20985,7 +21068,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ]
 }
