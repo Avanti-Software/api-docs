@@ -16,7 +16,7 @@
     }
   ],
   "paths": {
-    "/AttendanceCodes": {
+    "/v1/AttendanceCodes": {
       "get": {
         "tags": [
           "Attendance Codes"
@@ -94,7 +94,8 @@
               }
             }
           }
-        }
+        },
+        "summary": "Get Attendance Codes"
       },
       "parameters": []
     },
