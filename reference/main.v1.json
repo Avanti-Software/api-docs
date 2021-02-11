@@ -16,7 +16,7 @@
     }
   ],
   "paths": {
-    "/v1/AttendanceCodes": {
+    "/AttendanceCodes": {
       "get": {
         "tags": [
           "Attendance Codes"
@@ -95,7 +95,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     },
     "/v1/BankTransits": {
       "get": {
