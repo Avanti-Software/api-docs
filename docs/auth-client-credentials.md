@@ -2,7 +2,7 @@
 
 Valid Client Credentials, a Client ID and Secret, are required to request an access token. To generate Client Credentials:
 
-1. Login to your Avanti Self-Service Portal with a Class A (Administrator) Avanti User.
+1. Login to your Avanti Self-Service Portal with a Class A (Administrator) Avanti User with the **ADMIN** user group.
 
 2. Manually navigate to the API Settings page:
 
