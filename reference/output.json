@@ -16,58 +16,11 @@
     }
   ],
   "paths": {
-    "/Info": {
-      "get": {
-        "summary": "Get API Info",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/AttendanceCodes": {
       "get": {
+        "tags": [
+          "Attendance Codes"
+        ],
         "summary": "Get Attendance Codes",
         "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
         "responses": {
@@ -144,8 +97,90 @@
         }
       }
     },
+    "/v1/BankTransits": {
+      "get": {
+        "tags": [
+          "Bank Transit"
+        ],
+        "summary": "List Bank Transits",
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BankTransit"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BankTransit"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BankTransit"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/Banks": {
       "get": {
+        "tags": [
+          "Banks"
+        ],
         "summary": "List Banks",
         "description": "Returns a list of banks and their financial institution numbers. The format of Text in the response depends on the company web setting Lookup.Banks.",
         "responses": {
@@ -222,84 +257,11 @@
         }
       }
     },
-    "/v1/BankTransits": {
-      "get": {
-        "summary": "List Bank Transits",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BankTransit"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BankTransit"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BankTransit"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/BenefitGroups": {
       "get": {
+        "tags": [
+          "Benefit Groups"
+        ],
         "summary": "List Benefit Groups",
         "description": "Returns a list of Benefit Groups used in Benefits Administration. The format of Text in the response depends on the company web setting Lookup.BenefitGroups.\n\nIn Avanti, Benefit Groups are the different groupings of employee benefit coverage and the applicable benefit codes for each group.",
         "responses": {
@@ -378,6 +340,9 @@
     },
     "/v1/Codes": {
       "post": {
+        "tags": [
+          "Codes"
+        ],
         "summary": "Get Codes",
         "description": "Returns a list of the codes used throughout Avanti. The Code Setup endpoint can provide the name for the available codes. \n\nThe sorting and filters shouldn't be sent unless they are being used.",
         "requestBody": {
@@ -483,38 +448,11 @@
         }
       }
     },
-    "/v1/Codes/{type}": {
-      "delete": {
-        "summary": "Delete Codes",
-        "parameters": [
-          {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "codes",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/v1/Codes/{type}/{code}": {
       "put": {
+        "tags": [
+          "Codes"
+        ],
         "summary": "Save Code",
         "parameters": [
           {
@@ -577,8 +515,44 @@
         }
       }
     },
+    "/v1/Codes/{type}": {
+      "delete": {
+        "tags": [
+          "Codes"
+        ],
+        "summary": "Delete Codes",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codes",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/v1/Codes/Setup/{module}": {
       "get": {
+        "tags": [
+          "Codes"
+        ],
         "summary": "Codes Setup",
         "description": "Returns the setup for the codes used throughout Avanti. \n\nThere are several types of codes: \n- Payroll (PY)\n- Hub (AT)\n- People Management (HR)\n- Workflow Management (PM)\n- Talent Acquisition (TR)",
         "parameters": [
@@ -656,85 +630,11 @@
         }
       }
     },
-    "/v1/DefaultGroup/{defaultGroupCode}": {
-      "get": {
-        "summary": "Get Default Group Values",
-        "parameters": [
-          {
-            "name": "defaultGroupCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DefaultGroup"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DefaultGroup"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DefaultGroup"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/DefaultGroups": {
       "get": {
+        "tags": [
+          "Default Groups"
+        ],
         "summary": "List Default Groups",
         "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group.",
         "responses": {
@@ -811,57 +711,22 @@
         }
       }
     },
-    "/v1/Dependents": {
-      "put": {
-        "summary": "Create a Dependent",
-        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Dependent"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Dependent"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Dependent"
-              }
+    "/v1/DefaultGroup/{defaultGroupCode}": {
+      "get": {
+        "tags": [
+          "Default Groups"
+        ],
+        "summary": "Get Default Group Values",
+        "parameters": [
+          {
+            "name": "defaultGroupCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "post": {
-        "summary": "Update a Dependent",
-        "description": "Update an existing dependent for an employee. ",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Dependent"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Dependent"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Dependent"
-              }
-            }
-          }
-        },
+        ],
         "responses": {
           "default": {
             "description": "Error",
@@ -884,10 +749,24 @@
             }
           },
           "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultGroup"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultGroup"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultGroup"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -910,38 +789,13 @@
             }
           }
         }
-      },
-      "delete": {
-        "summary": "Delete a Dependent",
-        "description": "Deletes the employee's dependent.",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "dependentNo",
-            "in": "query",
-            "description": "The number for the dependent. Each dependent for an employee will have a unique dependent number.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
       }
     },
     "/v1/Dependents/{empNo}": {
       "get": {
+        "tags": [
+          "Dependents"
+        ],
         "summary": "List Dependents",
         "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
         "parameters": [
@@ -1028,8 +882,149 @@
         }
       }
     },
+    "/v1/Dependents": {
+      "put": {
+        "tags": [
+          "Dependents"
+        ],
+        "summary": "Create a Dependent",
+        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Dependent"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Dependent"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Dependent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Dependents"
+        ],
+        "summary": "Update a Dependent",
+        "description": "Update an existing dependent for an employee. ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Dependent"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Dependent"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Dependent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Dependents"
+        ],
+        "summary": "Delete a Dependent",
+        "description": "Deletes the employee's dependent.",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dependentNo",
+            "in": "query",
+            "description": "The number for the dependent. Each dependent for an employee will have a unique dependent number.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/v1/Dependents/Setup/{empNo}": {
       "get": {
+        "tags": [
+          "Dependents"
+        ],
         "summary": "Dependents Setup",
         "description": "Returns the dependents setup data.",
         "parameters": [
@@ -1052,6 +1047,9 @@
     },
     "/v1/EmergencyContacts": {
       "get": {
+        "tags": [
+          "Emergency Contacts"
+        ],
         "summary": "List Emergency Contacts",
         "description": "Returns a list of the employee's emergency contacts. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "parameters": [
@@ -1137,6 +1135,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Emergency Contacts"
+        ],
         "summary": "Create Emergency Contact",
         "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "requestBody": {
@@ -1185,6 +1186,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Emergency Contacts"
+        ],
         "summary": "Update Emergency Contact",
         "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "requestBody": {
@@ -1256,6 +1260,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Emergency Contacts"
+        ],
         "summary": "Delete Emergency Contact",
         "description": "Deletes the employee's emergency contact.",
         "parameters": [
@@ -1285,6 +1292,9 @@
     },
     "/v1/EmergencyContacts/Setup": {
       "get": {
+        "tags": [
+          "Emergency Contacts"
+        ],
         "summary": "Emergency Contacts Setup",
         "description": "Returns the emergency contacts setup data.",
         "parameters": [
@@ -1324,6 +1334,9 @@
     },
     "/v1/EmployeeAddress": {
       "post": {
+        "tags": [
+          "Employee Address"
+        ],
         "summary": "Update Employee Address",
         "description": "Updates the home address of an employee. ",
         "requestBody": {
@@ -1354,6 +1367,9 @@
     },
     "/v1/EmployeeBasicInfo": {
       "post": {
+        "tags": [
+          "Employee Basic Info"
+        ],
         "summary": "Update Employee Basic Info",
         "description": "Returns the basic information for the employee, such as full name, birth date, language and SIN information.",
         "requestBody": {
@@ -1427,6 +1443,9 @@
     },
     "/v1/EmployeeBasicInfo/Photo/{empNo}": {
       "post": {
+        "tags": [
+          "Employee Basic Info"
+        ],
         "summary": "Updates Employee Photo",
         "parameters": [
           {
@@ -1510,6 +1529,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Employee Basic Info"
+        ],
         "summary": "Deletes Employee Photo",
         "parameters": [
           {
@@ -1531,6 +1553,9 @@
     },
     "/v1/EmployeeBenefitGroup/{empNo}": {
       "get": {
+        "tags": [
+          "Employee Benefit Group"
+        ],
         "summary": "Get Employee Benefit Information",
         "parameters": [
           {
@@ -1609,6 +1634,9 @@
     },
     "/v1/EmployeeDefaultsGroup/{empNo}": {
       "get": {
+        "tags": [
+          "Employee Defaults Group"
+        ],
         "summary": "Get Employee Defaults Group",
         "parameters": [
           {
@@ -1687,6 +1715,9 @@
     },
     "/v1/EmployeeEarningCodes/{empNo}": {
       "get": {
+        "tags": [
+          "Employee Earning Codes"
+        ],
         "summary": "Get Employee Earning Codes",
         "description": "This returns a list of all the earning codes for the employee. The format of Text in the response depends on the company web setting Lookup.EarnDeductCode.",
         "parameters": [
@@ -1776,6 +1807,9 @@
     },
     "/v1/EmployeeEmails/{empNo}": {
       "put": {
+        "tags": [
+          "Employee Emails"
+        ],
         "summary": "Update Employee Email",
         "parameters": [
           {
@@ -1823,164 +1857,11 @@
         }
       }
     },
-    "/v1/EmployeeGLInfo/{empno}": {
-      "get": {
-        "summary": "Get Employee GL Infomation",
-        "parameters": [
-          {
-            "name": "empno",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GlInfo"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GlInfo"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GlInfo"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/EmployeeJobData/{empNo}": {
-      "get": {
-        "summary": "Get Employee Job Data",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/JobData"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JobData"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JobData"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/EmployeeJobInfo/{empNo}": {
       "get": {
+        "tags": [
+          "Employee Job Info"
+        ],
         "summary": "Get Job Information",
         "parameters": [
           {
@@ -2059,6 +1940,9 @@
     },
     "/v1/EmployeePayInfo/{empNo}": {
       "get": {
+        "tags": [
+          "Employee Pay Info"
+        ],
         "summary": "Get Employee Pay Info",
         "parameters": [
           {
@@ -2137,6 +2021,9 @@
     },
     "/v1/EmployeePhoneNumber/{empNo}": {
       "post": {
+        "tags": [
+          "Employee Phone Number"
+        ],
         "summary": "Update Employee Phone Number",
         "parameters": [
           {
@@ -2175,6 +2062,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Employee Phone Number"
+        ],
         "summary": "Delete Employee Phone Number",
         "parameters": [
           {
@@ -2213,8 +2103,173 @@
         }
       }
     },
+    "/v1/EmployeeVacationInfo/{empNo}": {
+      "get": {
+        "tags": [
+          "Employee Vacation Info"
+        ],
+        "summary": "Get Employee Vacation Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeVacationInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeVacationInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeVacationInfo"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeeGLInfo/{empno}": {
+      "get": {
+        "tags": [
+          "EmployeeGL Info"
+        ],
+        "summary": "Get Employee GL Infomation",
+        "parameters": [
+          {
+            "name": "empno",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlInfo"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/Employees": {
       "post": {
+        "tags": [
+          "Employees"
+        ],
         "summary": "List Employees",
         "requestBody": {
           "content": {
@@ -2319,86 +2374,11 @@
         }
       }
     },
-    "/v1/Employees/Details/{empNo}": {
-      "get": {
-        "summary": "Get Employee Details",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TextValuePair"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TextValuePair"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TextValuePair"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Employees/Photo/{empNo}": {
       "get": {
+        "tags": [
+          "Employees"
+        ],
         "summary": "Get Employee Raw Photo",
         "parameters": [
           {
@@ -2476,9 +2456,12 @@
         }
       }
     },
-    "/v1/EmployeeVacationInfo/{empNo}": {
+    "/v1/Employees/Details/{empNo}": {
       "get": {
-        "summary": "Get Employee Vacation Info",
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Get Employee Details",
         "parameters": [
           {
             "name": "empNo",
@@ -2516,17 +2499,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/EmployeeVacationInfo"
+                  "$ref": "#/components/schemas/TextValuePair"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/EmployeeVacationInfo"
+                  "$ref": "#/components/schemas/TextValuePair"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/EmployeeVacationInfo"
+                  "$ref": "#/components/schemas/TextValuePair"
                 }
               }
             }
@@ -2556,6 +2539,9 @@
     },
     "/v1/EmploymentHistory": {
       "post": {
+        "tags": [
+          "Employment History"
+        ],
         "summary": "Add Employment History",
         "requestBody": {
           "content": {
@@ -2628,6 +2614,9 @@
     },
     "/v1/EmploymentStatus": {
       "get": {
+        "tags": [
+          "Employment Status"
+        ],
         "summary": "List Employment Statuses",
         "description": "Returns a list of the defined Employment Status codes. The format of Text in the response depends on the company web setting Lookup.EmploymentStatus.\n\nIn Avanti, these are used to manage and classify employees. For example, an employment status code may be used to indicate that an employee is on leave.",
         "responses": {
@@ -2704,8 +2693,170 @@
         }
       }
     },
+    "/v1/GLBenefitGroups": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "List GL Benefit Groups",
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/GLGroups": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "List GL Groups",
+        "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/GLAccounts": {
       "get": {
+        "tags": [
+          "GLs"
+        ],
         "summary": "List GL Accounts",
         "parameters": [
           {
@@ -2837,8 +2988,81 @@
         }
       }
     },
+    "/v1/GLSetup": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Get GL Setup",
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlSetup"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlSetup"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlSetup"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/GLAccounts/Description": {
       "get": {
+        "tags": [
+          "GLs"
+        ],
         "summary": "Get GL Full Account Description",
         "parameters": [
           {
@@ -2916,228 +3140,11 @@
         }
       }
     },
-    "/v1/GLBenefitGroups": {
-      "get": {
-        "summary": "List GL Benefit Groups",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/GLGroups": {
-      "get": {
-        "summary": "List GL Groups",
-        "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/GLSetup": {
-      "get": {
-        "summary": "Get GL Setup",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GlSetup"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GlSetup"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GlSetup"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/GridCodes": {
       "get": {
+        "tags": [
+          "Grid Codes"
+        ],
         "summary": "List Grid Codes",
         "description": "Returns a list of the Rate Grid Codes. The format of Text in the response depends on the company web setting Lookup.GridCodes.\n\nRate Grids are defined rate structures that can be applied to employees based on position or earnings, such a shift premiums and travel rates. Additionally, future rates can be defined for each rate grid.",
         "responses": {
@@ -3213,8 +3220,145 @@
         }
       }
     },
+    "/Info": {
+      "get": {
+        "tags": [
+          "Info"
+        ],
+        "summary": "Get API Info",
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeeJobData/{empNo}": {
+      "get": {
+        "tags": [
+          "Job Data"
+        ],
+        "summary": "Get Employee Job Data",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobData"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobData"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobData"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/JobStatus": {
       "get": {
+        "tags": [
+          "Job Status"
+        ],
         "summary": "List Job Statuses",
         "description": "Returns a list of Job Status. The format of Text in the response depends on the company web setting Lookup.JobStatus.\n\nThese are used to classify employees on their job status, such as Casual vs Contract workers.",
         "responses": {
@@ -3293,6 +3437,9 @@
     },
     "/v1/Locations": {
       "get": {
+        "tags": [
+          "Locations"
+        ],
         "summary": "List Locations",
         "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
         "responses": {
@@ -3368,8 +3515,41 @@
         }
       }
     },
+    "/v1/NewExperienceSetup": {
+      "get": {
+        "tags": [
+          "New Experience"
+        ],
+        "summary": "New Experience Setup",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewExperienceSetup"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewExperienceSetup"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewExperienceSetup"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/NewExperience": {
       "post": {
+        "tags": [
+          "New Experience"
+        ],
         "summary": "Add New Experience",
         "requestBody": {
           "content": {
@@ -3440,35 +3620,11 @@
         }
       }
     },
-    "/v1/NewExperienceSetup": {
-      "get": {
-        "summary": "New Experience Setup",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/NewExperienceSetup"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NewExperienceSetup"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NewExperienceSetup"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/NewHire": {
       "post": {
+        "tags": [
+          "New Hire"
+        ],
         "summary": "Add New Hire",
         "requestBody": {
           "content": {
@@ -3573,8 +3729,41 @@
         }
       }
     },
+    "/v1/NewHire/Setup": {
+      "get": {
+        "tags": [
+          "New Hire"
+        ],
+        "summary": "New Hire Setup",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewHireSetupResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewHireSetupResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewHireSetupResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/NewHire/DefaultGroup": {
       "get": {
+        "tags": [
+          "New Hire"
+        ],
         "summary": "Get Default Group Values and Setup",
         "parameters": [
           {
@@ -3609,26 +3798,162 @@
         }
       }
     },
-    "/v1/NewHire/Setup": {
+    "/v1/NotificationSettings": {
       "get": {
-        "summary": "New Hire Setup",
+        "tags": [
+          "Notification Settings"
+        ],
+        "summary": "List Notification Settings",
+        "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/NewHireSetupResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetNotificationTypeSettings"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NewHireSetupResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetNotificationTypeSettings"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NewHireSetupResponse"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetNotificationTypeSettings"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Notification Settings"
+        ],
+        "summary": "Update Notification Settings",
+        "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -3638,6 +3963,9 @@
     },
     "/v1/Notification/{id}": {
       "get": {
+        "tags": [
+          "Notifications"
+        ],
         "summary": "Get a Notification",
         "description": "Returns the details of the notification for the employee attached to the Avanti User.",
         "parameters": [
@@ -3718,6 +4046,9 @@
     },
     "/v1/Notifications": {
       "get": {
+        "tags": [
+          "Notifications"
+        ],
         "summary": "List Notifications",
         "description": "Returns a list of notifications for the employee attached to the Avanti User. \n\nIf no request parameters are sent, the 20 most recent notifications are returned.",
         "parameters": [
@@ -3852,6 +4183,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Notifications"
+        ],
         "summary": "Mark Notifications as Read",
         "requestBody": {
           "content": {
@@ -3924,6 +4258,9 @@
     },
     "/v1/Notifications/MarkAllRead": {
       "post": {
+        "tags": [
+          "Notifications"
+        ],
         "summary": "Mark all Notifications as Read",
         "requestBody": {
           "content": {
@@ -3951,8 +4288,84 @@
         }
       }
     },
+    "/v1/Notifications/Unread": {
+      "get": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Get Unread Notification Count",
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/Notifications/NotPushed": {
       "get": {
+        "tags": [
+          "Notifications"
+        ],
         "summary": "List Unpushed Notifications",
         "responses": {
           "default": {
@@ -4029,6 +4442,9 @@
     },
     "/v1/Notifications/RegisterChannel": {
       "put": {
+        "tags": [
+          "Notifications"
+        ],
         "summary": "Register Push Notification Channel",
         "requestBody": {
           "content": {
@@ -4056,235 +4472,11 @@
         }
       }
     },
-    "/v1/Notifications/Unread": {
-      "get": {
-        "summary": "Get Unread Notification Count",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/NotificationSettings": {
-      "get": {
-        "summary": "List Notification Settings",
-        "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetNotificationTypeSettings"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetNotificationTypeSettings"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetNotificationTypeSettings"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "Update Notification Settings",
-        "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/PayCodes": {
       "get": {
+        "tags": [
+          "Pay Codes"
+        ],
         "summary": "List Pay Codes",
         "description": "Returns a list of the pay codes. The format of Text in the response depends on the company web setting Lookup.PayCode.\n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time.",
         "responses": {
@@ -4361,68 +4553,11 @@
         }
       }
     },
-    "/v1/PayGroup/{payGroup}": {
-      "get": {
-        "summary": "Get Pay Group",
-        "parameters": [
-          {
-            "name": "payGroup",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/PayGroups": {
       "get": {
+        "tags": [
+          "Pay Groups"
+        ],
         "summary": "List Pay Groups",
         "description": "Returns a list of pay groups. The format of Text in the response depends on the company web setting Lookup.PayGroups.\n\nIn Avanti, pay groups determine many of the pay and tax calculations factors, such as EI rates, CPP rates, the CRA business number, Quebec Employer ID, etc. They are assigned to employees that are paid at the same time and share the same pay period factors.",
         "responses": {
@@ -4499,8 +4634,74 @@
         }
       }
     },
+    "/v1/PayGroup/{payGroup}": {
+      "get": {
+        "tags": [
+          "Pay Groups"
+        ],
+        "summary": "Get Pay Group",
+        "parameters": [
+          {
+            "name": "payGroup",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/PayStatements": {
       "get": {
+        "tags": [
+          "Pay Statements"
+        ],
         "summary": "List Pay Statements",
         "description": "Returns a list of pay statements, with the pay totals,  for the employee assigned to the user.",
         "parameters": [
@@ -4643,6 +4844,9 @@
     },
     "/v1/PayStatements/Cancelled/{empNo}": {
       "get": {
+        "tags": [
+          "Pay Statements"
+        ],
         "summary": "List Cancelled Pay Statements",
         "description": "Returns a list of the pay run of cancelled payment for the employee.\n\nIn Avanti, a cancelled payment is a complete reversal of all values in the initially processed payment.",
         "parameters": [
@@ -4753,6 +4957,9 @@
     },
     "/v1/PayStatements/PDF": {
       "get": {
+        "tags": [
+          "Pay Statements"
+        ],
         "summary": "Get PDF Pay Statement",
         "description": "Returns a byte array of the pay statement with a content type of application/pdf for the employee assigned to the current Avanti User.",
         "parameters": [
@@ -4831,6 +5038,9 @@
     },
     "/v1/PayStatements/Statement": {
       "get": {
+        "tags": [
+          "Pay Statements"
+        ],
         "summary": "Get Pay Statement",
         "parameters": [
           {
@@ -4915,81 +5125,11 @@
         }
       }
     },
-    "/v1/PersonalInfo": {
-      "post": {
-        "summary": "Update Personal Information",
-        "description": "Provides the ability to update the personal information for the employee. \n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info. ",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/PersonalInfo/{empNo}": {
       "get": {
+        "tags": [
+          "Personal Info"
+        ],
         "summary": "Get Personal Information",
         "description": "Returns the personal information for an employee. ",
         "parameters": [
@@ -5067,71 +5207,76 @@
         }
       }
     },
-    "/v1/PersonalInfo/EmployeeFigures": {
-      "get": {
-        "summary": "Get Employee Figures",
-        "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeFigures"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeFigures"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeFigures"
-                }
-              }
-            }
-          }
-        }
-      },
+    "/v1/PersonalInfo": {
       "post": {
-        "summary": "Update Employee Figures",
-        "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
+        "tags": [
+          "Personal Info"
+        ],
+        "summary": "Update Personal Information",
+        "description": "Provides the ability to update the personal information for the employee. \n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info. ",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
+                "$ref": "#/components/schemas/Employee"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
+                "$ref": "#/components/schemas/Employee"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
+                "$ref": "#/components/schemas/Employee"
               }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "Success",
+          "default": {
+            "description": "Error",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
               "application/json": {
-                "example": "{\n  \"empNo\": \"000001005\",\n  \"dedFig\": [\n    {\n      \"text\": 1,\n      \"value\": 1852.35\n    }\n  ],\n  \"otherText\": [\n    {\n      \"text\": 15,\n      \"value\": \"Finance\"\n    }\n  ]\n}"
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
               }
             }
           }
@@ -5140,6 +5285,9 @@
     },
     "/v1/PersonalInfo/Photo/{empNo}": {
       "get": {
+        "tags": [
+          "Personal Info"
+        ],
         "summary": "Get Employee Photo",
         "description": "Returns a byte array of the employee's photo. ",
         "parameters": [
@@ -5236,6 +5384,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Personal Info"
+        ],
         "summary": "Update Employee Photo",
         "description": "Creates a new photo for the employee or replaces the existing employee photo from a byte array. \n\nWe recommend using photos that square or close to square to avoid scaling issues. ",
         "parameters": [
@@ -5280,6 +5431,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Personal Info"
+        ],
         "summary": "Delete Employee Photo",
         "description": "Deletes the employee's photo. ",
         "parameters": [
@@ -5300,8 +5454,88 @@
         }
       }
     },
+    "/v1/PersonalInfo/EmployeeFigures": {
+      "get": {
+        "tags": [
+          "Personal Info"
+        ],
+        "summary": "Get Employee Figures",
+        "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeFigures"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeFigures"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeFigures"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Personal Info"
+        ],
+        "summary": "Update Employee Figures",
+        "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeFigures"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeFigures"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeFigures"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": "{\n  \"empNo\": \"000001005\",\n  \"dedFig\": [\n    {\n      \"text\": 1,\n      \"value\": 1852.35\n    }\n  ],\n  \"otherText\": [\n    {\n      \"text\": 15,\n      \"value\": \"Finance\"\n    }\n  ]\n}"
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/PersonalInfo/Setup": {
       "get": {
+        "tags": [
+          "Personal Info"
+        ],
         "summary": "Personal Info Setup",
         "responses": {
           "default": {
@@ -5367,14 +5601,17 @@
         }
       }
     },
-    "/v1/Position/{positionCode}": {
+    "/v1/PositionRateDescription": {
       "get": {
-        "summary": "Get Position Details",
+        "tags": [
+          "Position Rate"
+        ],
+        "summary": "Get Position Rate Description",
         "parameters": [
           {
-            "name": "positionCode",
-            "in": "path",
-            "required": true,
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
             }
@@ -5406,17 +5643,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PositionDetails"
+                  "type": "string"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PositionDetails"
+                  "type": "string"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PositionDetails"
+                  "type": "string"
                 }
               }
             }
@@ -5446,6 +5683,9 @@
     },
     "/v1/PositionRate/PositionRatesData": {
       "get": {
+        "tags": [
+          "Position Rate"
+        ],
         "summary": "List Position Rates",
         "parameters": [
           {
@@ -5530,85 +5770,11 @@
         }
       }
     },
-    "/v1/PositionRateDescription": {
-      "get": {
-        "summary": "Get Position Rate Description",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Positions/{empNo}": {
       "get": {
+        "tags": [
+          "Positions"
+        ],
         "summary": "List Employee Positions",
         "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
         "parameters": [
@@ -5721,6 +5887,9 @@
     },
     "/v1/Positions/AllPositions": {
       "get": {
+        "tags": [
+          "Positions"
+        ],
         "summary": "List Positions",
         "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
         "parameters": [
@@ -5817,8 +5986,91 @@
         }
       }
     },
+    "/v1/Position/{positionCode}": {
+      "get": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "Get Position Details",
+        "parameters": [
+          {
+            "name": "positionCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/Preferences": {
       "get": {
+        "tags": [
+          "Preferences"
+        ],
         "summary": "Get User Preference",
         "parameters": [
           {
@@ -5883,6 +6135,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Preferences"
+        ],
         "summary": "Update User Preference",
         "parameters": [
           {
@@ -5965,6 +6220,9 @@
     },
     "/v1/RateGrids": {
       "get": {
+        "tags": [
+          "Rate Grids"
+        ],
         "summary": "List of Rate Grids",
         "responses": {
           "default": {
@@ -6039,86 +6297,11 @@
         }
       }
     },
-    "/v1/Reporter": {
-      "post": {
-        "summary": "Get Report Data With Options",
-        "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "example": "[\n    {\n        \"employeeNo\": \"000000011\",\n        \"payGroup\": \"001\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"1992-03-06T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000012\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"1990-02-28T00:00:00\",\n        \"terminationDate\": \"2019-08-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000013\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"2000-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000014\",\n        \"payGroup\": \"999\",\n        \"position\": \"9003\",\n        \"initialHireDate\": \"1990-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000015\",\n        \"payGroup\": \"003\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"2015-01-27T00:00:00\"\n    }\n]"
-              }
-            }
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Reporter/{id}": {
       "get": {
+        "tags": [
+          "Reporter"
+        ],
         "summary": "Get Report Data",
         "description": "This will return the contents of the specified report based.\n\nUsing this endpoint, the information returned can be filtered based on  date range and employee range. If you need the report to filtered by additional options, please use the Get Report Data With Options endpoint.  \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
         "parameters": [
@@ -6227,8 +6410,92 @@
         }
       }
     },
+    "/v1/Reporter": {
+      "post": {
+        "tags": [
+          "Reporter"
+        ],
+        "summary": "Get Report Data With Options",
+        "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": "[\n    {\n        \"employeeNo\": \"000000011\",\n        \"payGroup\": \"001\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"1992-03-06T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000012\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"1990-02-28T00:00:00\",\n        \"terminationDate\": \"2019-08-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000013\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"2000-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000014\",\n        \"payGroup\": \"999\",\n        \"position\": \"9003\",\n        \"initialHireDate\": \"1990-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000015\",\n        \"payGroup\": \"003\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"2015-01-27T00:00:00\"\n    }\n]"
+              }
+            }
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/ScheduleTemplates": {
       "get": {
+        "tags": [
+          "Schedule Templates"
+        ],
         "summary": "List Schedule Templates",
         "description": "Returns a list of the schedule templates. The format of Text in the response depends on the company web setting Lookup.ScheduleTemplates. \n\nIn Avanti, Schedule templates define the commonly used schedule rotations. These rotations can be used to create employee schedules automatically by rolling schedules forward or on demand by adding the schedule template for a specific day.",
         "responses": {
@@ -6307,6 +6574,9 @@
     },
     "/v1/Search": {
       "get": {
+        "tags": [
+          "Search"
+        ],
         "summary": "Search",
         "description": "This returns a list of the menus that contain the text from the request in the:\n- Menu Description\n-  Menu URL\n- Program name",
         "parameters": [
@@ -6354,6 +6624,9 @@
     },
     "/v1/ShiftCodes": {
       "get": {
+        "tags": [
+          "Shift Codes"
+        ],
         "summary": "List Shift Codes",
         "description": "Returns a list of the shift codes. \n\nIn Avanti, shift codes are used in Schedules and Time Cards to apply default from/to times, break rules and premium rules.",
         "responses": {
@@ -6432,6 +6705,9 @@
     },
     "/v1/TaskIDs": {
       "get": {
+        "tags": [
+          "Task IDs"
+        ],
         "summary": "List Task IDs",
         "description": "Returns a list of the defined tasks.\n\nIn Avanti, Task Ids are used throughout time entry. These are for tracking purposes and are defined to suit your organizations needs.",
         "responses": {
@@ -6510,6 +6786,9 @@
     },
     "/v1/TimeDataImport": {
       "post": {
+        "tags": [
+          "Time Data"
+        ],
         "summary": "Add Time Data Entries",
         "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.",
         "requestBody": {
@@ -6617,6 +6896,9 @@
     },
     "/v1/TimeManagement/{viewId}/{templateId}/{empNo}": {
       "get": {
+        "tags": [
+          "Time Management"
+        ],
         "summary": "List Time Entries",
         "parameters": [
           {
@@ -6771,8 +7053,129 @@
         }
       }
     },
+    "/v1/TimeManagement/Templates": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Time Entry Templates",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimeEntryTemplate"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimeEntryTemplate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimeEntryTemplate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/TimeWorked": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Time Worked",
+        "parameters": [
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "currentDateTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWorkedHours"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWorkedHours"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWorkedHours"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/TimeManagement/AvailableShifts": {
       "get": {
+        "tags": [
+          "Time Management"
+        ],
         "summary": "List Available Shifts",
         "parameters": [
           {
@@ -6840,75 +7243,11 @@
         }
       }
     },
-    "/v1/TimeManagement/CancelPickups": {
-      "post": {
-        "summary": "Cancel Pickup Requests",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Result"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Result"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Result"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/TimeManagement/CancelPools": {
       "post": {
+        "tags": [
+          "Time Management"
+        ],
         "summary": "Cancel Pooled Entries",
         "requestBody": {
           "content": {
@@ -6974,37 +7313,261 @@
         }
       }
     },
-    "/v1/TimeManagement/Comment": {
+    "/v1/TimeManagement/CancelPickups": {
       "post": {
-        "summary": "Create a Comment",
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Cancel Pickup Requests",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PoolComment"
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PoolComment"
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PoolComment"
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Result"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Result"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Result"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/Pickup": {
+      "post": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Create a Pickup Request",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PickupRequests": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Pickup Requests",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "description": "The number of entries returned.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "expiryDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "requestType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/PoolRequestType"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pool"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pool"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pool"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/ExchangeOffers": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Exchange Offers",
+        "parameters": [
+          {
+            "name": "poolId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PoolOfferInfo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PoolOfferInfo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PoolOfferInfo"
+                  }
+                }
+              }
+            }
           }
         }
       }
     },
     "/v1/TimeManagement/EmployeeAcceptance": {
       "post": {
+        "tags": [
+          "Time Management"
+        ],
         "summary": "List Employee Acceptance",
         "requestBody": {
           "content": {
@@ -7067,16 +7630,33 @@
         }
       }
     },
-    "/v1/TimeManagement/ExchangeOffers": {
+    "/v1/TimeManagement/PoolEntryDetails": {
       "get": {
-        "summary": "List Exchange Offers",
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pool Entry",
         "parameters": [
           {
-            "name": "poolId",
+            "name": "scheduleEntryId",
             "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -7086,26 +7666,79 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PoolOfferInfo"
-                  }
+                  "$ref": "#/components/schemas/Pool"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PoolOfferInfo"
-                  }
+                  "$ref": "#/components/schemas/Pool"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PoolOfferInfo"
-                  }
+                  "$ref": "#/components/schemas/Pool"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PickupEntryDetails": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pickup Entry",
+        "parameters": [
+          {
+            "name": "pickupEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "poolEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pickup"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pickup"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pickup"
                 }
               }
             }
@@ -7115,6 +7748,9 @@
     },
     "/v1/TimeManagement/GetDetailsForPooledSchedule": {
       "get": {
+        "tags": [
+          "Time Management"
+        ],
         "summary": "Get Pooled Schedule",
         "parameters": [
           {
@@ -7205,192 +7841,11 @@
         }
       }
     },
-    "/v1/TimeManagement/Pickup": {
-      "post": {
-        "summary": "Create a Pickup Request",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PickupRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PickupRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PickupRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PickupEntryDetails": {
-      "get": {
-        "summary": "Get Pickup Entry",
-        "parameters": [
-          {
-            "name": "pickupEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "poolEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Pickup"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Pickup"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Pickup"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PickupRequests": {
-      "get": {
-        "summary": "List Pickup Requests",
-        "parameters": [
-          {
-            "name": "take",
-            "in": "query",
-            "description": "The number of entries returned.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "expiryDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "requestType",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/PoolRequestType"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pool"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pool"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pool"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/TimeManagement/PooledRequests": {
       "get": {
+        "tags": [
+          "Time Management"
+        ],
         "summary": "List Pool Requests",
         "parameters": [
           {
@@ -7514,59 +7969,11 @@
         }
       }
     },
-    "/v1/TimeManagement/PoolEntryDetails": {
-      "get": {
-        "summary": "Get Pool Entry",
-        "parameters": [
-          {
-            "name": "scheduleEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Pool"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Pool"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Pool"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/TimeManagement/PostSchedules": {
       "post": {
+        "tags": [
+          "Time Management"
+        ],
         "summary": "Post a Schedule",
         "requestBody": {
           "content": {
@@ -7637,120 +8044,43 @@
         }
       }
     },
-    "/v1/TimeManagement/Templates": {
-      "get": {
-        "summary": "List Time Entry Templates",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
+    "/v1/TimeManagement/Comment": {
+      "post": {
+        "tags": [
+          "Time Management"
         ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TimeEntryTemplate"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TimeEntryTemplate"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TimeEntryTemplate"
-                  }
-                }
+        "summary": "Create a Comment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
               }
             }
           }
-        }
-      }
-    },
-    "/v1/TimeManagement/TimeWorked": {
-      "get": {
-        "summary": "Get Time Worked",
-        "parameters": [
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "refresh",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          },
-          {
-            "name": "currentDateTime",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        ],
+        },
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWorkedHours"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWorkedHours"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWorkedHours"
-                }
-              }
-            }
+            "description": "Success"
           }
         }
       }
     },
     "/v1/UnionCodes": {
       "get": {
+        "tags": [
+          "Union Codes"
+        ],
         "summary": "List Union Codes",
         "description": "Returns a list of the Union Codes defined. The format of Text in the response depends on the company web setting Lookup.Unions. \n\nIn Avanti, Union Codes identify the union affiliations and are used to determine union dues.",
         "responses": {
@@ -7829,6 +8159,9 @@
     },
     "/v1/VacationEarningCodes": {
       "get": {
+        "tags": [
+          "Vacation Earning Codes"
+        ],
         "summary": "List Vacation Earning Codes",
         "description": "Returns a list of the earning codes setup for paying vacation each period or to pay out accrued. The format of Text in the response depends on the company web setting Lookup.VacationEarningCodes. \n\nIn Avanti, vacation earning codes must have either Vacation or Other Vacation selected for the Earning Type.",
         "responses": {
@@ -7905,85 +8238,11 @@
         }
       }
     },
-    "/v1/VacationGroup/{vacationGroup}": {
-      "get": {
-        "summary": "Get Vacation Group",
-        "parameters": [
-          {
-            "name": "vacationGroup",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/VacationGroup"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VacationGroup"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VacationGroup"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/VacationGroups": {
       "get": {
+        "tags": [
+          "Vacation Groups"
+        ],
         "summary": "List Vacation Groups",
         "description": "Returns a list of the defined vacation group. The format of Text in the response depends on the company web setting Lookup.VacationGroups. \n\nIn Avanti, vacation groups determine the vacation entitlement calculation for each employee assigned to the group.",
         "responses": {
@@ -8060,8 +8319,91 @@
         }
       }
     },
+    "/v1/VacationGroup/{vacationGroup}": {
+      "get": {
+        "tags": [
+          "Vacation Groups"
+        ],
+        "summary": "Get Vacation Group",
+        "parameters": [
+          {
+            "name": "vacationGroup",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VacationGroup"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VacationGroup"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VacationGroup"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/VacationOptions": {
       "get": {
+        "tags": [
+          "Vacation Options"
+        ],
         "summary": "List Vacation Options",
         "description": "Returns a list of the vacation options. The Text will always be the description of the option.\n\nIn Avanti, the Vacation Option indicates what will happen with the calculated vacation for an employee.",
         "responses": {
@@ -8140,6 +8482,9 @@
     },
     "/v1/WCBGroups": {
       "get": {
+        "tags": [
+          "WCB Groups"
+        ],
         "summary": "List WCB Groups",
         "description": "Returns a list of the Workers Compensation Groups. \n\nIn Avanti, these maintain all WCB rates and maximums for payroll processing.",
         "responses": {
@@ -8218,6 +8563,9 @@
     },
     "/v1/WebPunch": {
       "get": {
+        "tags": [
+          "Web Punch"
+        ],
         "summary": "Get Last Check-in",
         "description": "Returns the most recent punch of the employee attached to the user.",
         "responses": {
@@ -8285,6 +8633,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Web Punch"
+        ],
         "summary": "Create a Check-in",
         "description": "Creates a punch for the employee. \n\nThe time of the punch is the current time on the SQL Server, adjusted by the time zone specified on Web Punch Employee Setup on the Desktop Application. If there is no setup for the employee, the time will be adjusted by the Province of Employment on the Tax Factors tab of the Employee Profile.\n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup. \n\nIf company web setting MobileSettings.WebPunchSettings.RequireLocationServices is true, longitude and latitude must be included.",
         "requestBody": {
@@ -8393,6 +8744,9 @@
     },
     "/v1/WebPunch/Allowed": {
       "get": {
+        "tags": [
+          "Web Punch"
+        ],
         "summary": "Is Check-in Allowed",
         "description": "Returns true if the employee can punch and false if the employee cannot. \n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup.",
         "responses": {
@@ -8462,6 +8816,9 @@
     },
     "/v1/WhatsNew/Web": {
       "get": {
+        "tags": [
+          "Whats New"
+        ],
         "summary": "What's New page for web",
         "responses": {
           "default": {
@@ -8529,6 +8886,9 @@
     },
     "/v1/WorkGroups": {
       "get": {
+        "tags": [
+          "Work Groups"
+        ],
         "summary": "List Work Groups",
         "description": "Returns a list of the defined employee work groups. The format of Text in the response depends on the company web setting Lookup.WorkGroups.\n\nIn Avanti, Work Groups are used to determine which employees enter time using Time and Attendance. These group employees based on common rules and shift(s). Each Work Group has a Holiday Rule, Punch Rule and Overtime Rule and one or more Shifts.",
         "responses": {

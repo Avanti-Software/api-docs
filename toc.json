@@ -63,13 +63,13 @@
     },
     {
       "type": "item",
-      "title": "Avanti API",
-      "uri": "reference/main.v1.json"
+      "title": "Avanti API Test",
+      "uri": "reference/output.json"
     },
     {
       "type": "item",
-      "title": "Avanti API Test",
-      "uri": "reference/output.json"
+      "title": "Avanti API",
+      "uri": "reference/main.v1.json"
     }
   ]
 }
