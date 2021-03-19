@@ -2,6 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Avanti API Reference",
+    "description": "Avanti API testing...",
     "termsOfService": "https://myavanti.ca/avtesting-api",
     "contact": {
       "name": "Avanti Support",
@@ -23,6 +24,7 @@
         ],
         "summary": "Get Attendance Codes",
         "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
+        "operationId": "Get-Attendance-Codes",
         "responses": {
           "default": {
             "description": "Error",
@@ -103,6 +105,7 @@
           "Bank Transit"
         ],
         "summary": "List Bank Transits",
+        "operationId": "List-Bank-Transits",
         "responses": {
           "default": {
             "description": "Error",
@@ -183,6 +186,7 @@
         ],
         "summary": "List Banks",
         "description": "Returns a list of banks and their financial institution numbers. The format of Text in the response depends on the company web setting Lookup.Banks.",
+        "operationId": "List-Banks",
         "responses": {
           "default": {
             "description": "Error",
@@ -264,6 +268,7 @@
         ],
         "summary": "List Benefit Groups",
         "description": "Returns a list of Benefit Groups used in Benefits Administration. The format of Text in the response depends on the company web setting Lookup.BenefitGroups.\n\nIn Avanti, Benefit Groups are the different groupings of employee benefit coverage and the applicable benefit codes for each group.",
+        "operationId": "List-Benefit-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -303,7 +308,7 @@
                     "$ref": "#/components/schemas/TextValuePair"
                   }
                 },
-                "example": "[\n  {\n    \"text\": \"01 - All Single Benefits\",\n    \"value\": \"01\"\n  },\n  {\n    \"text\": \"02 - All Family Benefits\",\n    \"value\": \"02\"\n  },\n  {\n    \"text\": \"03 - Only Mandatory Benefits\",\n    \"value\": \"03\"\n  },\n  {\n    \"text\": \"04 - No Benefits\",\n    \"value\": \"04\"\n  }\n]"
+                "examples": ["[\n  {\n    \"text\": \"01 - All Single Benefits\",\n    \"value\": \"01\"\n  },\n  {\n    \"text\": \"02 - All Family Benefits\",\n    \"value\": \"02\"\n  },\n  {\n    \"text\": \"03 - Only Mandatory Benefits\",\n    \"value\": \"03\"\n  },\n  {\n    \"text\": \"04 - No Benefits\",\n    \"value\": \"04\"\n  }\n]"]
               },
               "text/json": {
                 "schema": {
@@ -345,6 +350,7 @@
         ],
         "summary": "Get Codes",
         "description": "Returns a list of the codes used throughout Avanti. The Code Setup endpoint can provide the name for the available codes. \n\nThe sorting and filters shouldn't be sent unless they are being used.",
+        "operationId": "Get-Codes",
         "requestBody": {
           "content": {
             "application/json": {
@@ -454,6 +460,7 @@
           "Codes"
         ],
         "summary": "Save Code",
+        "operationId": "Save-Code",
         "parameters": [
           {
             "name": "type",
@@ -521,6 +528,7 @@
           "Codes"
         ],
         "summary": "Delete Codes",
+        "operationId": "Delete-Codes",
         "parameters": [
           {
             "name": "type",
@@ -555,6 +563,7 @@
         ],
         "summary": "Codes Setup",
         "description": "Returns the setup for the codes used throughout Avanti. \n\nThere are several types of codes: \n- Payroll (PY)\n- Hub (AT)\n- People Management (HR)\n- Workflow Management (PM)\n- Talent Acquisition (TR)",
+        "operationId": "Codes-Setup",
         "parameters": [
           {
             "name": "module",
@@ -637,6 +646,7 @@
         ],
         "summary": "List Default Groups",
         "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group.",
+        "operationId": "List-Default-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -717,6 +727,7 @@
           "Default Groups"
         ],
         "summary": "Get Default Group Values",
+        "operationId": "Get-Default-Group-Values",
         "parameters": [
           {
             "name": "defaultGroupCode",
@@ -798,6 +809,7 @@
         ],
         "summary": "List Dependents",
         "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
+        "operationId": "List-Dependents",
         "parameters": [
           {
             "name": "empNo",
@@ -889,6 +901,7 @@
         ],
         "summary": "Create a Dependent",
         "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
+        "operationId": "Create-a-Dependent",
         "requestBody": {
           "content": {
             "application/json": {
@@ -920,6 +933,7 @@
         ],
         "summary": "Update a Dependent",
         "description": "Update an existing dependent for an employee. ",
+        "operationId": "Update-a-Dependent",
         "requestBody": {
           "content": {
             "application/json": {
@@ -994,6 +1008,7 @@
         ],
         "summary": "Delete a Dependent",
         "description": "Deletes the employee's dependent.",
+        "operationId": "Delete-a-Dependent",
         "parameters": [
           {
             "name": "empNo",
@@ -1027,6 +1042,7 @@
         ],
         "summary": "Dependents Setup",
         "description": "Returns the dependents setup data.",
+        "operationId": "Dependents-Setup",
         "parameters": [
           {
             "name": "empNo",
@@ -1052,6 +1068,7 @@
         ],
         "summary": "List Emergency Contacts",
         "description": "Returns a list of the employee's emergency contacts. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "operationId": "List-Emergency-Contacts",
         "parameters": [
           {
             "name": "empNo",
@@ -1140,6 +1157,7 @@
         ],
         "summary": "Create Emergency Contact",
         "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "operationId": "Create-Emergency-Contact",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1191,6 +1209,7 @@
         ],
         "summary": "Update Emergency Contact",
         "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "operationId": "Update-Emergency-Contact",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1265,6 +1284,7 @@
         ],
         "summary": "Delete Emergency Contact",
         "description": "Deletes the employee's emergency contact.",
+        "operationId": "Delete-Emergency-Contact",
         "parameters": [
           {
             "name": "empNo",
@@ -1297,6 +1317,7 @@
         ],
         "summary": "Emergency Contacts Setup",
         "description": "Returns the emergency contacts setup data.",
+        "operationId": "Emergency-Contacts-Setup",
         "parameters": [
           {
             "name": "empNo",
@@ -1339,6 +1360,7 @@
         ],
         "summary": "Update Employee Address",
         "description": "Updates the home address of an employee. ",
+        "operationId": "Update-Employee-Address",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1372,6 +1394,7 @@
         ],
         "summary": "Update Employee Basic Info",
         "description": "Returns the basic information for the employee, such as full name, birth date, language and SIN information.",
+        "operationId": "Update-Employee-Basic-Info",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1447,6 +1470,7 @@
           "Employee Basic Info"
         ],
         "summary": "Updates Employee Photo",
+        "operationId": "Updates-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
@@ -1533,6 +1557,7 @@
           "Employee Basic Info"
         ],
         "summary": "Deletes Employee Photo",
+        "operationId": "Deletes-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
@@ -1557,6 +1582,7 @@
           "Employee Benefit Group"
         ],
         "summary": "Get Employee Benefit Information",
+        "operationId": "Get-Employee-Benefit-Information",
         "parameters": [
           {
             "name": "empNo",
@@ -1638,6 +1664,7 @@
           "Employee Defaults Group"
         ],
         "summary": "Get Employee Defaults Group",
+        "operationId": "Get-Employee-Defaults-Group",
         "parameters": [
           {
             "name": "empNo",
@@ -1720,6 +1747,7 @@
         ],
         "summary": "Get Employee Earning Codes",
         "description": "This returns a list of all the earning codes for the employee. The format of Text in the response depends on the company web setting Lookup.EarnDeductCode.",
+        "operationId": "Get-Employee-Earning-Codes",
         "parameters": [
           {
             "name": "empNo",
@@ -1811,6 +1839,7 @@
           "Employee Emails"
         ],
         "summary": "Update Employee Email",
+        "operationId": "Update-Employee-Email",
         "parameters": [
           {
             "name": "empNo",
@@ -1863,6 +1892,7 @@
           "Employee Job Info"
         ],
         "summary": "Get Job Information",
+        "operationId": "Get-Job-Information",
         "parameters": [
           {
             "name": "empNo",
@@ -1944,6 +1974,7 @@
           "Employee Pay Info"
         ],
         "summary": "Get Employee Pay Info",
+        "operationId": "Get-Employee-Pay-Info",
         "parameters": [
           {
             "name": "empNo",
@@ -2025,6 +2056,7 @@
           "Employee Phone Number"
         ],
         "summary": "Update Employee Phone Number",
+        "operationId": "Update-Employee-Phone-Number",
         "parameters": [
           {
             "name": "empNo",
@@ -2066,6 +2098,7 @@
           "Employee Phone Number"
         ],
         "summary": "Delete Employee Phone Number",
+        "operationId": "Delete-Employee-Phone-Number",
         "parameters": [
           {
             "name": "empNo",
@@ -2109,6 +2142,7 @@
           "Employee Vacation Info"
         ],
         "summary": "Get Employee Vacation Info",
+        "operationId": "Get-Employee-Vacation-Info",
         "parameters": [
           {
             "name": "empNo",
@@ -2190,6 +2224,7 @@
           "EmployeeGL Info"
         ],
         "summary": "Get Employee GL Infomation",
+        "operationId": "Get-Employee-GL-Infomation",
         "parameters": [
           {
             "name": "empno",
@@ -2271,6 +2306,7 @@
           "Employees"
         ],
         "summary": "List Employees",
+        "operationId": "List-Employees",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2380,6 +2416,7 @@
           "Employees"
         ],
         "summary": "Get Employee Raw Photo",
+        "operationId": "Get-Employee-Raw-Photo",
         "parameters": [
           {
             "name": "empNo",
@@ -2462,6 +2499,7 @@
           "Employees"
         ],
         "summary": "Get Employee Details",
+        "operationId": "Get-Employee-Details",
         "parameters": [
           {
             "name": "empNo",
@@ -2543,6 +2581,7 @@
           "Employment History"
         ],
         "summary": "Add Employment History",
+        "operationId": "Add-Employment-History",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2619,6 +2658,7 @@
         ],
         "summary": "List Employment Statuses",
         "description": "Returns a list of the defined Employment Status codes. The format of Text in the response depends on the company web setting Lookup.EmploymentStatus.\n\nIn Avanti, these are used to manage and classify employees. For example, an employment status code may be used to indicate that an employee is on leave.",
+        "operationId": "List-Employment-Statuses",
         "responses": {
           "default": {
             "description": "Error",
@@ -2699,6 +2739,7 @@
           "GLs"
         ],
         "summary": "List GL Benefit Groups",
+        "operationId": "List-GL-Benefit-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -2779,6 +2820,7 @@
         ],
         "summary": "List GL Groups",
         "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
+        "operationId": "List-GL-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -2858,6 +2900,7 @@
           "GLs"
         ],
         "summary": "List GL Accounts",
+        "operationId": "List-GL-Accounts",
         "parameters": [
           {
             "name": "segmentNo",
@@ -2994,6 +3037,7 @@
           "GLs"
         ],
         "summary": "Get GL Setup",
+        "operationId": "Get-GL-Setup",
         "responses": {
           "default": {
             "description": "Error",
@@ -3064,6 +3108,7 @@
           "GLs"
         ],
         "summary": "Get GL Full Account Description",
+        "operationId": "Get-GL-Full-Account-Description",
         "parameters": [
           {
             "name": "accountValues",
@@ -3147,6 +3192,7 @@
         ],
         "summary": "List Grid Codes",
         "description": "Returns a list of the Rate Grid Codes. The format of Text in the response depends on the company web setting Lookup.GridCodes.\n\nRate Grids are defined rate structures that can be applied to employees based on position or earnings, such a shift premiums and travel rates. Additionally, future rates can be defined for each rate grid.",
+        "operationId": "List-Grid-Codes",
         "responses": {
           "default": {
             "description": "Error",
@@ -3226,6 +3272,7 @@
           "Info"
         ],
         "summary": "Get API Info",
+        "operationId": "Get-API-Info",
         "responses": {
           "default": {
             "description": "Error",
@@ -3279,6 +3326,7 @@
           "Job Data"
         ],
         "summary": "Get Employee Job Data",
+        "operationId": "Get-Employee-Job-Data",
         "parameters": [
           {
             "name": "empNo",
@@ -3361,6 +3409,7 @@
         ],
         "summary": "List Job Statuses",
         "description": "Returns a list of Job Status. The format of Text in the response depends on the company web setting Lookup.JobStatus.\n\nThese are used to classify employees on their job status, such as Casual vs Contract workers.",
+        "operationId": "List-Job-Statuses",
         "responses": {
           "default": {
             "description": "Error",
@@ -3442,6 +3491,7 @@
         ],
         "summary": "List Locations",
         "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
+        "operationId": "List-Locations",
         "responses": {
           "default": {
             "description": "Error",
@@ -3521,6 +3571,7 @@
           "New Experience"
         ],
         "summary": "New Experience Setup",
+        "operationId": "New-Experience-Setup",
         "responses": {
           "200": {
             "description": "Success",
@@ -3551,6 +3602,7 @@
           "New Experience"
         ],
         "summary": "Add New Experience",
+        "operationId": "Add-New-Experience",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3626,6 +3678,7 @@
           "New Hire"
         ],
         "summary": "Add New Hire",
+        "operationId": "Add-New-Hire",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3735,6 +3788,7 @@
           "New Hire"
         ],
         "summary": "New Hire Setup",
+        "operationId": "New-Hire-Setup",
         "responses": {
           "200": {
             "description": "Success",
@@ -3765,6 +3819,7 @@
           "New Hire"
         ],
         "summary": "Get Default Group Values and Setup",
+        "operationId": "Get-Default-Group-Values-and-Setup",
         "parameters": [
           {
             "name": "defaultGroupCode",
@@ -3805,6 +3860,7 @@
         ],
         "summary": "List Notification Settings",
         "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
+        "operationId": "List-Notification-Settings",
         "responses": {
           "default": {
             "description": "Error",
@@ -3883,6 +3939,7 @@
         ],
         "summary": "Update Notification Settings",
         "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
+        "operationId": "Update-Notification-Settings",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3968,6 +4025,7 @@
         ],
         "summary": "Get a Notification",
         "description": "Returns the details of the notification for the employee attached to the Avanti User.",
+        "operationId": "Get-a-Notification",
         "parameters": [
           {
             "name": "id",
@@ -4051,6 +4109,7 @@
         ],
         "summary": "List Notifications",
         "description": "Returns a list of notifications for the employee attached to the Avanti User. \n\nIf no request parameters are sent, the 20 most recent notifications are returned.",
+        "operationId": "List-Notifications",
         "parameters": [
           {
             "name": "types",
@@ -4187,6 +4246,7 @@
           "Notifications"
         ],
         "summary": "Mark Notifications as Read",
+        "operationId": "Mark-Notifications-as-Read",
         "requestBody": {
           "content": {
             "application/json": {
@@ -4262,6 +4322,7 @@
           "Notifications"
         ],
         "summary": "Mark all Notifications as Read",
+        "operationId": "Mark-all-Notifications-as-Read",
         "requestBody": {
           "content": {
             "application/json": {
@@ -4294,6 +4355,7 @@
           "Notifications"
         ],
         "summary": "Get Unread Notification Count",
+        "operationId": "Get-Unread-Notification-Count",
         "responses": {
           "default": {
             "description": "Error",
@@ -4367,6 +4429,7 @@
           "Notifications"
         ],
         "summary": "List Unpushed Notifications",
+        "operationId": "List-Unpushed-Notifications",
         "responses": {
           "default": {
             "description": "Error",
@@ -4446,6 +4509,7 @@
           "Notifications"
         ],
         "summary": "Register Push Notification Channel",
+        "operationId": "Register-Push-Notification-Channel",
         "requestBody": {
           "content": {
             "application/json": {
@@ -4479,6 +4543,7 @@
         ],
         "summary": "List Pay Codes",
         "description": "Returns a list of the pay codes. The format of Text in the response depends on the company web setting Lookup.PayCode.\n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time.",
+        "operationId": "List-Pay-Codes",
         "responses": {
           "default": {
             "description": "Error",
@@ -4560,6 +4625,7 @@
         ],
         "summary": "List Pay Groups",
         "description": "Returns a list of pay groups. The format of Text in the response depends on the company web setting Lookup.PayGroups.\n\nIn Avanti, pay groups determine many of the pay and tax calculations factors, such as EI rates, CPP rates, the CRA business number, Quebec Employer ID, etc. They are assigned to employees that are paid at the same time and share the same pay period factors.",
+        "operationId": "List-Pay-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -4640,6 +4706,7 @@
           "Pay Groups"
         ],
         "summary": "Get Pay Group",
+        "operationId": "Get-Pay-Group",
         "parameters": [
           {
             "name": "payGroup",
@@ -4704,6 +4771,7 @@
         ],
         "summary": "List Pay Statements",
         "description": "Returns a list of pay statements, with the pay totals,  for the employee assigned to the user.",
+        "operationId": "List-Pay-Statements",
         "parameters": [
           {
             "name": "take",
@@ -4849,6 +4917,7 @@
         ],
         "summary": "List Cancelled Pay Statements",
         "description": "Returns a list of the pay run of cancelled payment for the employee.\n\nIn Avanti, a cancelled payment is a complete reversal of all values in the initially processed payment.",
+        "operationId": "List-Cancelled-Pay-Statements",
         "parameters": [
           {
             "name": "minRun",
@@ -4962,6 +5031,7 @@
         ],
         "summary": "Get PDF Pay Statement",
         "description": "Returns a byte array of the pay statement with a content type of application/pdf for the employee assigned to the current Avanti User.",
+        "operationId": "Get-PDF-Pay-Statement",
         "parameters": [
           {
             "name": "runNumber",
@@ -5042,6 +5112,7 @@
           "Pay Statements"
         ],
         "summary": "Get Pay Statement",
+        "operationId": "Get-Pay-Statement",
         "parameters": [
           {
             "name": "runNumber",
@@ -5132,6 +5203,7 @@
         ],
         "summary": "Get Personal Information",
         "description": "Returns the personal information for an employee. ",
+        "operationId": "Get-Personal-Information",
         "parameters": [
           {
             "name": "empNo",
@@ -5214,6 +5286,7 @@
         ],
         "summary": "Update Personal Information",
         "description": "Provides the ability to update the personal information for the employee. \n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info. ",
+        "operationId": "Update-Personal-Information",
         "requestBody": {
           "content": {
             "application/json": {
@@ -5290,6 +5363,7 @@
         ],
         "summary": "Get Employee Photo",
         "description": "Returns a byte array of the employee's photo. ",
+        "operationId": "Get-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
@@ -5389,6 +5463,7 @@
         ],
         "summary": "Update Employee Photo",
         "description": "Creates a new photo for the employee or replaces the existing employee photo from a byte array. \n\nWe recommend using photos that square or close to square to avoid scaling issues. ",
+        "operationId": "Update-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
@@ -5436,6 +5511,7 @@
         ],
         "summary": "Delete Employee Photo",
         "description": "Deletes the employee's photo. ",
+        "operationId": "Delete-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
@@ -5461,6 +5537,7 @@
         ],
         "summary": "Get Employee Figures",
         "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
+        "operationId": "Get-Employee-Figures",
         "parameters": [
           {
             "name": "empNo",
@@ -5500,6 +5577,7 @@
         ],
         "summary": "Update Employee Figures",
         "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
+        "operationId": "Update-Employee-Figures",
         "requestBody": {
           "content": {
             "application/json": {
@@ -5537,6 +5615,7 @@
           "Personal Info"
         ],
         "summary": "Personal Info Setup",
+        "operationId": "Personal-Info-Setup",
         "responses": {
           "default": {
             "description": "Error",
@@ -5607,6 +5686,7 @@
           "Position Rate"
         ],
         "summary": "Get Position Rate Description",
+        "operationId": "Get-Position-Rate-Description",
         "parameters": [
           {
             "name": "empNo",
@@ -5687,6 +5767,7 @@
           "Position Rate"
         ],
         "summary": "List Position Rates",
+        "operationId": "List-Position-Rates",
         "parameters": [
           {
             "name": "empNo",
@@ -5777,6 +5858,7 @@
         ],
         "summary": "List Employee Positions",
         "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
+        "operationId": "List-Employee-Positions",
         "parameters": [
           {
             "name": "empNo",
@@ -5892,6 +5974,7 @@
         ],
         "summary": "List Positions",
         "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
+        "operationId": "List-Positions",
         "parameters": [
           {
             "name": "includeInactive",
@@ -5992,6 +6075,7 @@
           "Positions"
         ],
         "summary": "Get Position Details",
+        "operationId": "Get-Position-Details",
         "parameters": [
           {
             "name": "positionCode",
@@ -6072,6 +6156,7 @@
           "Preferences"
         ],
         "summary": "Get User Preference",
+        "operationId": "Get-User-Preference",
         "parameters": [
           {
             "name": "key",
@@ -6139,6 +6224,7 @@
           "Preferences"
         ],
         "summary": "Update User Preference",
+        "operationId": "Update-User-Preference",
         "parameters": [
           {
             "name": "key",
@@ -6224,6 +6310,7 @@
           "Rate Grids"
         ],
         "summary": "List of Rate Grids",
+        "operationId": "List-of-Rate-Grids",
         "responses": {
           "default": {
             "description": "Error",
@@ -6304,6 +6391,7 @@
         ],
         "summary": "Get Report Data",
         "description": "This will return the contents of the specified report based.\n\nUsing this endpoint, the information returned can be filtered based on  date range and employee range. If you need the report to filtered by additional options, please use the Get Report Data With Options endpoint.  \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
+        "operationId": "Get-Report-Data",
         "parameters": [
           {
             "name": "id",
@@ -6417,6 +6505,7 @@
         ],
         "summary": "Get Report Data With Options",
         "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
+        "operationId": "Get-Report-Data-With-Options",
         "requestBody": {
           "content": {
             "application/json": {
@@ -6498,6 +6587,7 @@
         ],
         "summary": "List Schedule Templates",
         "description": "Returns a list of the schedule templates. The format of Text in the response depends on the company web setting Lookup.ScheduleTemplates. \n\nIn Avanti, Schedule templates define the commonly used schedule rotations. These rotations can be used to create employee schedules automatically by rolling schedules forward or on demand by adding the schedule template for a specific day.",
+        "operationId": "List-Schedule-Templates",
         "responses": {
           "default": {
             "description": "Error",
@@ -6579,6 +6669,7 @@
         ],
         "summary": "Search",
         "description": "This returns a list of the menus that contain the text from the request in the:\n- Menu Description\n-  Menu URL\n- Program name",
+        "operationId": "Search",
         "parameters": [
           {
             "name": "search",
@@ -6629,6 +6720,7 @@
         ],
         "summary": "List Shift Codes",
         "description": "Returns a list of the shift codes. \n\nIn Avanti, shift codes are used in Schedules and Time Cards to apply default from/to times, break rules and premium rules.",
+        "operationId": "List-Shift-Codes",
         "responses": {
           "default": {
             "description": "Error",
@@ -6710,6 +6802,7 @@
         ],
         "summary": "List Task IDs",
         "description": "Returns a list of the defined tasks.\n\nIn Avanti, Task Ids are used throughout time entry. These are for tracking purposes and are defined to suit your organizations needs.",
+        "operationId": "List-Task-IDs",
         "responses": {
           "default": {
             "description": "Error",
@@ -6791,6 +6884,7 @@
         ],
         "summary": "Add Time Data Entries",
         "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.",
+        "operationId": "Add-Time-Data-Entries",
         "requestBody": {
           "content": {
             "application/json": {
@@ -6900,6 +6994,7 @@
           "Time Management"
         ],
         "summary": "List Time Entries",
+        "operationId": "List-Time-Entries",
         "parameters": [
           {
             "name": "viewId",
@@ -7059,6 +7154,7 @@
           "Time Management"
         ],
         "summary": "List Time Entry Templates",
+        "operationId": "List-Time-Entry-Templates",
         "parameters": [
           {
             "name": "empNo",
@@ -7115,6 +7211,7 @@
           "Time Management"
         ],
         "summary": "Get Time Worked",
+        "operationId": "Get-Time-Worked",
         "parameters": [
           {
             "name": "templateId",
@@ -7177,6 +7274,7 @@
           "Time Management"
         ],
         "summary": "List Available Shifts",
+        "operationId": "List-Available-Shifts",
         "parameters": [
           {
             "name": "take",
@@ -7249,6 +7347,7 @@
           "Time Management"
         ],
         "summary": "Cancel Pooled Entries",
+        "operationId": "Cancel-Pooled-Entries",
         "requestBody": {
           "content": {
             "application/json": {
@@ -7319,6 +7418,7 @@
           "Time Management"
         ],
         "summary": "Cancel Pickup Requests",
+        "operationId": "Cancel-Pickup-Requests",
         "requestBody": {
           "content": {
             "application/json": {
@@ -7389,6 +7489,7 @@
           "Time Management"
         ],
         "summary": "Create a Pickup Request",
+        "operationId": "Create-a-Pickup-Request",
         "requestBody": {
           "content": {
             "application/json": {
@@ -7441,6 +7542,7 @@
           "Time Management"
         ],
         "summary": "List Pickup Requests",
+        "operationId": "List-Pickup-Requests",
         "parameters": [
           {
             "name": "take",
@@ -7520,6 +7622,7 @@
           "Time Management"
         ],
         "summary": "List Exchange Offers",
+        "operationId": "List-Exchange-Offers",
         "parameters": [
           {
             "name": "poolId",
@@ -7569,6 +7672,7 @@
           "Time Management"
         ],
         "summary": "List Employee Acceptance",
+        "operationId": "List-Employee-Acceptance",
         "requestBody": {
           "content": {
             "application/json": {
@@ -7636,6 +7740,7 @@
           "Time Management"
         ],
         "summary": "Get Pool Entry",
+        "operationId": "Get-Pool-Entry",
         "parameters": [
           {
             "name": "scheduleEntryId",
@@ -7690,6 +7795,7 @@
           "Time Management"
         ],
         "summary": "Get Pickup Entry",
+        "operationId": "Get-Pickup-Entry",
         "parameters": [
           {
             "name": "pickupEntryId",
@@ -7752,6 +7858,7 @@
           "Time Management"
         ],
         "summary": "Get Pooled Schedule",
+        "operationId": "Get-Pooled-Schedule",
         "parameters": [
           {
             "name": "entryId",
@@ -7847,6 +7954,7 @@
           "Time Management"
         ],
         "summary": "List Pool Requests",
+        "operationId": "List-Pool-Requests",
         "parameters": [
           {
             "name": "postType",
@@ -7975,6 +8083,7 @@
           "Time Management"
         ],
         "summary": "Post a Schedule",
+        "operationId": "Post-a-Schedule",
         "requestBody": {
           "content": {
             "application/json": {
@@ -8050,6 +8159,7 @@
           "Time Management"
         ],
         "summary": "Create a Comment",
+        "operationId": "Create-a-Comment",
         "requestBody": {
           "content": {
             "application/json": {
@@ -8083,6 +8193,7 @@
         ],
         "summary": "List Union Codes",
         "description": "Returns a list of the Union Codes defined. The format of Text in the response depends on the company web setting Lookup.Unions. \n\nIn Avanti, Union Codes identify the union affiliations and are used to determine union dues.",
+        "operationId": "List-Union-Codes",
         "responses": {
           "default": {
             "description": "Error",
@@ -8164,6 +8275,7 @@
         ],
         "summary": "List Vacation Earning Codes",
         "description": "Returns a list of the earning codes setup for paying vacation each period or to pay out accrued. The format of Text in the response depends on the company web setting Lookup.VacationEarningCodes. \n\nIn Avanti, vacation earning codes must have either Vacation or Other Vacation selected for the Earning Type.",
+        "operationId": "List-Vacation-Earning-Codes",
         "responses": {
           "default": {
             "description": "Error",
@@ -8245,6 +8357,7 @@
         ],
         "summary": "List Vacation Groups",
         "description": "Returns a list of the defined vacation group. The format of Text in the response depends on the company web setting Lookup.VacationGroups. \n\nIn Avanti, vacation groups determine the vacation entitlement calculation for each employee assigned to the group.",
+        "operationId": "List-Vacation-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -8325,6 +8438,7 @@
           "Vacation Groups"
         ],
         "summary": "Get Vacation Group",
+        "operationId": "Get-Vacation-Group",
         "parameters": [
           {
             "name": "vacationGroup",
@@ -8406,6 +8520,7 @@
         ],
         "summary": "List Vacation Options",
         "description": "Returns a list of the vacation options. The Text will always be the description of the option.\n\nIn Avanti, the Vacation Option indicates what will happen with the calculated vacation for an employee.",
+        "operationId": "List-Vacation-Options",
         "responses": {
           "default": {
             "description": "Error",
@@ -8487,6 +8602,7 @@
         ],
         "summary": "List WCB Groups",
         "description": "Returns a list of the Workers Compensation Groups. \n\nIn Avanti, these maintain all WCB rates and maximums for payroll processing.",
+        "operationId": "List-WCB-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -8568,6 +8684,7 @@
         ],
         "summary": "Get Last Check-in",
         "description": "Returns the most recent punch of the employee attached to the user.",
+        "operationId": "Get-Last-Check-in",
         "responses": {
           "default": {
             "description": "Error",
@@ -8638,6 +8755,7 @@
         ],
         "summary": "Create a Check-in",
         "description": "Creates a punch for the employee. \n\nThe time of the punch is the current time on the SQL Server, adjusted by the time zone specified on Web Punch Employee Setup on the Desktop Application. If there is no setup for the employee, the time will be adjusted by the Province of Employment on the Tax Factors tab of the Employee Profile.\n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup. \n\nIf company web setting MobileSettings.WebPunchSettings.RequireLocationServices is true, longitude and latitude must be included.",
+        "operationId": "Create-a-Check-in",
         "requestBody": {
           "content": {
             "application/json": {
@@ -8749,6 +8867,7 @@
         ],
         "summary": "Is Check-in Allowed",
         "description": "Returns true if the employee can punch and false if the employee cannot. \n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup.",
+        "operationId": "Is-Check-in-Allowed",
         "responses": {
           "default": {
             "description": "Error",
@@ -8820,6 +8939,7 @@
           "Whats New"
         ],
         "summary": "What's New page for web",
+        "operationId": "What's-New-page-for-web",
         "responses": {
           "default": {
             "description": "Error",
@@ -8891,6 +9011,7 @@
         ],
         "summary": "List Work Groups",
         "description": "Returns a list of the defined employee work groups. The format of Text in the response depends on the company web setting Lookup.WorkGroups.\n\nIn Avanti, Work Groups are used to determine which employees enter time using Time and Attendance. These group employees based on common rules and shift(s). Each Work Group has a Holiday Rule, Punch Rule and Overtime Rule and one or more Shifts.",
+        "operationId": "List-Work-Groups",
         "responses": {
           "default": {
             "description": "Error",
@@ -20857,6 +20978,12 @@
   "security": [
     {
       "Bearer": [ ]
+    }
+  ],
+  "tags": [
+    {
+      "name": "Tag Name",
+      "description": "Tag Description"
     }
   ]
 }
