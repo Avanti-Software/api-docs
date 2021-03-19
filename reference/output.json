@@ -18,9 +18,6 @@
   "paths": {
     "/Info": {
       "get": {
-        "tags": [
-          "Info"
-        ],
         "summary": "Get API Info",
         "responses": {
           "default": {
@@ -71,9 +68,6 @@
     },
     "/v1/AttendanceCodes": {
       "get": {
-        "tags": [
-          "Attendance Codes"
-        ],
         "summary": "Get Attendance Codes",
         "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
         "responses": {
@@ -152,9 +146,6 @@
     },
     "/v1/Banks": {
       "get": {
-        "tags": [
-          "Banks"
-        ],
         "summary": "List Banks",
         "description": "Returns a list of banks and their financial institution numbers. The format of Text in the response depends on the company web setting Lookup.Banks.",
         "responses": {
@@ -233,9 +224,6 @@
     },
     "/v1/BankTransits": {
       "get": {
-        "tags": [
-          "Bank Transit"
-        ],
         "summary": "List Bank Transits",
         "responses": {
           "default": {
@@ -312,9 +300,6 @@
     },
     "/v1/BenefitGroups": {
       "get": {
-        "tags": [
-          "Benefit Groups"
-        ],
         "summary": "List Benefit Groups",
         "description": "Returns a list of Benefit Groups used in Benefits Administration. The format of Text in the response depends on the company web setting Lookup.BenefitGroups.\n\nIn Avanti, Benefit Groups are the different groupings of employee benefit coverage and the applicable benefit codes for each group.",
         "responses": {
@@ -393,9 +378,6 @@
     },
     "/v1/Codes": {
       "post": {
-        "tags": [
-          "Codes"
-        ],
         "summary": "Get Codes",
         "description": "Returns a list of the codes used throughout Avanti. The Code Setup endpoint can provide the name for the available codes. \n\nThe sorting and filters shouldn't be sent unless they are being used.",
         "requestBody": {
@@ -503,9 +485,6 @@
     },
     "/v1/Codes/{type}": {
       "delete": {
-        "tags": [
-          "Codes"
-        ],
         "summary": "Delete Codes",
         "parameters": [
           {
@@ -536,9 +515,6 @@
     },
     "/v1/Codes/{type}/{code}": {
       "put": {
-        "tags": [
-          "Codes"
-        ],
         "summary": "Save Code",
         "parameters": [
           {
@@ -603,9 +579,6 @@
     },
     "/v1/Codes/Setup/{module}": {
       "get": {
-        "tags": [
-          "Codes"
-        ],
         "summary": "Codes Setup",
         "description": "Returns the setup for the codes used throughout Avanti. \n\nThere are several types of codes: \n- Payroll (PY)\n- Hub (AT)\n- People Management (HR)\n- Workflow Management (PM)\n- Talent Acquisition (TR)",
         "parameters": [
@@ -685,9 +658,6 @@
     },
     "/v1/DefaultGroup/{defaultGroupCode}": {
       "get": {
-        "tags": [
-          "Default Groups"
-        ],
         "summary": "Get Default Group Values",
         "parameters": [
           {
@@ -765,9 +735,6 @@
     },
     "/v1/DefaultGroups": {
       "get": {
-        "tags": [
-          "Default Groups"
-        ],
         "summary": "List Default Groups",
         "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group.",
         "responses": {
@@ -846,9 +813,6 @@
     },
     "/v1/Dependents": {
       "put": {
-        "tags": [
-          "Dependents"
-        ],
         "summary": "Create a Dependent",
         "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
         "requestBody": {
@@ -877,9 +841,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Dependents"
-        ],
         "summary": "Update a Dependent",
         "description": "Update an existing dependent for an employee. ",
         "requestBody": {
@@ -951,9 +912,6 @@
         }
       },
       "delete": {
-        "tags": [
-          "Dependents"
-        ],
         "summary": "Delete a Dependent",
         "description": "Deletes the employee's dependent.",
         "parameters": [
@@ -984,9 +942,6 @@
     },
     "/v1/Dependents/{empNo}": {
       "get": {
-        "tags": [
-          "Dependents"
-        ],
         "summary": "List Dependents",
         "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
         "parameters": [
@@ -1075,9 +1030,6 @@
     },
     "/v1/Dependents/Setup/{empNo}": {
       "get": {
-        "tags": [
-          "Dependents"
-        ],
         "summary": "Dependents Setup",
         "description": "Returns the dependents setup data.",
         "parameters": [
@@ -1100,9 +1052,6 @@
     },
     "/v1/EmergencyContacts": {
       "get": {
-        "tags": [
-          "Emergency Contacts"
-        ],
         "summary": "List Emergency Contacts",
         "description": "Returns a list of the employee's emergency contacts. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "parameters": [
@@ -1188,9 +1137,6 @@
         }
       },
       "put": {
-        "tags": [
-          "Emergency Contacts"
-        ],
         "summary": "Create Emergency Contact",
         "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "requestBody": {
@@ -1239,9 +1185,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Emergency Contacts"
-        ],
         "summary": "Update Emergency Contact",
         "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "requestBody": {
@@ -1313,9 +1256,6 @@
         }
       },
       "delete": {
-        "tags": [
-          "Emergency Contacts"
-        ],
         "summary": "Delete Emergency Contact",
         "description": "Deletes the employee's emergency contact.",
         "parameters": [
@@ -1345,9 +1285,6 @@
     },
     "/v1/EmergencyContacts/Setup": {
       "get": {
-        "tags": [
-          "Emergency Contacts"
-        ],
         "summary": "Emergency Contacts Setup",
         "description": "Returns the emergency contacts setup data.",
         "parameters": [
@@ -1387,9 +1324,6 @@
     },
     "/v1/EmployeeAddress": {
       "post": {
-        "tags": [
-          "Employee Address"
-        ],
         "summary": "Update Employee Address",
         "description": "Updates the home address of an employee. ",
         "requestBody": {
@@ -1420,9 +1354,6 @@
     },
     "/v1/EmployeeBasicInfo": {
       "post": {
-        "tags": [
-          "Employee Basic Info"
-        ],
         "summary": "Update Employee Basic Info",
         "description": "Returns the basic information for the employee, such as full name, birth date, language and SIN information.",
         "requestBody": {
@@ -1496,9 +1427,6 @@
     },
     "/v1/EmployeeBasicInfo/Photo/{empNo}": {
       "post": {
-        "tags": [
-          "Employee Basic Info"
-        ],
         "summary": "Updates Employee Photo",
         "parameters": [
           {
@@ -1582,9 +1510,6 @@
         }
       },
       "delete": {
-        "tags": [
-          "Employee Basic Info"
-        ],
         "summary": "Deletes Employee Photo",
         "parameters": [
           {
@@ -1606,9 +1531,6 @@
     },
     "/v1/EmployeeBenefitGroup/{empNo}": {
       "get": {
-        "tags": [
-          "Employee Benefit Group"
-        ],
         "summary": "Get Employee Benefit Information",
         "parameters": [
           {
@@ -1687,9 +1609,6 @@
     },
     "/v1/EmployeeDefaultsGroup/{empNo}": {
       "get": {
-        "tags": [
-          "Employee Defaults Group"
-        ],
         "summary": "Get Employee Defaults Group",
         "parameters": [
           {
@@ -1768,9 +1687,6 @@
     },
     "/v1/EmployeeEarningCodes/{empNo}": {
       "get": {
-        "tags": [
-          "Employee Earning Codes"
-        ],
         "summary": "Get Employee Earning Codes",
         "description": "This returns a list of all the earning codes for the employee. The format of Text in the response depends on the company web setting Lookup.EarnDeductCode.",
         "parameters": [
@@ -1860,9 +1776,6 @@
     },
     "/v1/EmployeeEmails/{empNo}": {
       "put": {
-        "tags": [
-          "Employee Emails"
-        ],
         "summary": "Update Employee Email",
         "parameters": [
           {
@@ -1912,9 +1825,6 @@
     },
     "/v1/EmployeeGLInfo/{empno}": {
       "get": {
-        "tags": [
-          "EmployeeGL Info"
-        ],
         "summary": "Get Employee GL Infomation",
         "parameters": [
           {
@@ -1993,9 +1903,6 @@
     },
     "/v1/EmployeeJobData/{empNo}": {
       "get": {
-        "tags": [
-          "Job Data"
-        ],
         "summary": "Get Employee Job Data",
         "parameters": [
           {
@@ -2074,9 +1981,6 @@
     },
     "/v1/EmployeeJobInfo/{empNo}": {
       "get": {
-        "tags": [
-          "Employee Job Info"
-        ],
         "summary": "Get Job Information",
         "parameters": [
           {
@@ -2155,9 +2059,6 @@
     },
     "/v1/EmployeePayInfo/{empNo}": {
       "get": {
-        "tags": [
-          "Employee Pay Info"
-        ],
         "summary": "Get Employee Pay Info",
         "parameters": [
           {
@@ -2236,9 +2137,6 @@
     },
     "/v1/EmployeePhoneNumber/{empNo}": {
       "post": {
-        "tags": [
-          "Employee Phone Number"
-        ],
         "summary": "Update Employee Phone Number",
         "parameters": [
           {
@@ -2277,9 +2175,6 @@
         }
       },
       "delete": {
-        "tags": [
-          "Employee Phone Number"
-        ],
         "summary": "Delete Employee Phone Number",
         "parameters": [
           {
@@ -2320,9 +2215,6 @@
     },
     "/v1/Employees": {
       "post": {
-        "tags": [
-          "Employees"
-        ],
         "summary": "List Employees",
         "requestBody": {
           "content": {
@@ -2429,9 +2321,6 @@
     },
     "/v1/Employees/Details/{empNo}": {
       "get": {
-        "tags": [
-          "Employees"
-        ],
         "summary": "Get Employee Details",
         "parameters": [
           {
@@ -2510,9 +2399,6 @@
     },
     "/v1/Employees/Photo/{empNo}": {
       "get": {
-        "tags": [
-          "Employees"
-        ],
         "summary": "Get Employee Raw Photo",
         "parameters": [
           {
@@ -2592,9 +2478,6 @@
     },
     "/v1/EmployeeVacationInfo/{empNo}": {
       "get": {
-        "tags": [
-          "Employee Vacation Info"
-        ],
         "summary": "Get Employee Vacation Info",
         "parameters": [
           {
@@ -2673,9 +2556,6 @@
     },
     "/v1/EmploymentHistory": {
       "post": {
-        "tags": [
-          "Employment History"
-        ],
         "summary": "Add Employment History",
         "requestBody": {
           "content": {
@@ -2748,9 +2628,6 @@
     },
     "/v1/EmploymentStatus": {
       "get": {
-        "tags": [
-          "Employment Status"
-        ],
         "summary": "List Employment Statuses",
         "description": "Returns a list of the defined Employment Status codes. The format of Text in the response depends on the company web setting Lookup.EmploymentStatus.\n\nIn Avanti, these are used to manage and classify employees. For example, an employment status code may be used to indicate that an employee is on leave.",
         "responses": {
@@ -2829,9 +2706,6 @@
     },
     "/v1/GLAccounts": {
       "get": {
-        "tags": [
-          "GLs"
-        ],
         "summary": "List GL Accounts",
         "parameters": [
           {
@@ -2965,9 +2839,6 @@
     },
     "/v1/GLAccounts/Description": {
       "get": {
-        "tags": [
-          "GLs"
-        ],
         "summary": "Get GL Full Account Description",
         "parameters": [
           {
@@ -3047,9 +2918,6 @@
     },
     "/v1/GLBenefitGroups": {
       "get": {
-        "tags": [
-          "GLs"
-        ],
         "summary": "List GL Benefit Groups",
         "responses": {
           "default": {
@@ -3126,9 +2994,6 @@
     },
     "/v1/GLGroups": {
       "get": {
-        "tags": [
-          "GLs"
-        ],
         "summary": "List GL Groups",
         "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
         "responses": {
@@ -3206,9 +3071,6 @@
     },
     "/v1/GLSetup": {
       "get": {
-        "tags": [
-          "GLs"
-        ],
         "summary": "Get GL Setup",
         "responses": {
           "default": {
@@ -3276,9 +3138,6 @@
     },
     "/v1/GridCodes": {
       "get": {
-        "tags": [
-          "Grid Codes"
-        ],
         "summary": "List Grid Codes",
         "description": "Returns a list of the Rate Grid Codes. The format of Text in the response depends on the company web setting Lookup.GridCodes.\n\nRate Grids are defined rate structures that can be applied to employees based on position or earnings, such a shift premiums and travel rates. Additionally, future rates can be defined for each rate grid.",
         "responses": {
@@ -3356,9 +3215,6 @@
     },
     "/v1/JobStatus": {
       "get": {
-        "tags": [
-          "Job Status"
-        ],
         "summary": "List Job Statuses",
         "description": "Returns a list of Job Status. The format of Text in the response depends on the company web setting Lookup.JobStatus.\n\nThese are used to classify employees on their job status, such as Casual vs Contract workers.",
         "responses": {
@@ -3437,9 +3293,6 @@
     },
     "/v1/Locations": {
       "get": {
-        "tags": [
-          "Locations"
-        ],
         "summary": "List Locations",
         "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
         "responses": {
@@ -3517,9 +3370,6 @@
     },
     "/v1/NewExperience": {
       "post": {
-        "tags": [
-          "New Experience"
-        ],
         "summary": "Add New Experience",
         "requestBody": {
           "content": {
@@ -3592,9 +3442,6 @@
     },
     "/v1/NewExperienceSetup": {
       "get": {
-        "tags": [
-          "New Experience"
-        ],
         "summary": "New Experience Setup",
         "responses": {
           "200": {
@@ -3622,9 +3469,6 @@
     },
     "/v1/NewHire": {
       "post": {
-        "tags": [
-          "New Hire"
-        ],
         "summary": "Add New Hire",
         "requestBody": {
           "content": {
@@ -3731,9 +3575,6 @@
     },
     "/v1/NewHire/DefaultGroup": {
       "get": {
-        "tags": [
-          "New Hire"
-        ],
         "summary": "Get Default Group Values and Setup",
         "parameters": [
           {
@@ -3770,9 +3611,6 @@
     },
     "/v1/NewHire/Setup": {
       "get": {
-        "tags": [
-          "New Hire"
-        ],
         "summary": "New Hire Setup",
         "responses": {
           "200": {
@@ -3800,9 +3638,6 @@
     },
     "/v1/Notification/{id}": {
       "get": {
-        "tags": [
-          "Notifications"
-        ],
         "summary": "Get a Notification",
         "description": "Returns the details of the notification for the employee attached to the Avanti User.",
         "parameters": [
@@ -3883,9 +3718,6 @@
     },
     "/v1/Notifications": {
       "get": {
-        "tags": [
-          "Notifications"
-        ],
         "summary": "List Notifications",
         "description": "Returns a list of notifications for the employee attached to the Avanti User. \n\nIf no request parameters are sent, the 20 most recent notifications are returned.",
         "parameters": [
@@ -4020,9 +3852,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Notifications"
-        ],
         "summary": "Mark Notifications as Read",
         "requestBody": {
           "content": {
@@ -4095,9 +3924,6 @@
     },
     "/v1/Notifications/MarkAllRead": {
       "post": {
-        "tags": [
-          "Notifications"
-        ],
         "summary": "Mark all Notifications as Read",
         "requestBody": {
           "content": {
@@ -4127,9 +3953,6 @@
     },
     "/v1/Notifications/NotPushed": {
       "get": {
-        "tags": [
-          "Notifications"
-        ],
         "summary": "List Unpushed Notifications",
         "responses": {
           "default": {
@@ -4206,9 +4029,6 @@
     },
     "/v1/Notifications/RegisterChannel": {
       "put": {
-        "tags": [
-          "Notifications"
-        ],
         "summary": "Register Push Notification Channel",
         "requestBody": {
           "content": {
@@ -4238,9 +4058,6 @@
     },
     "/v1/Notifications/Unread": {
       "get": {
-        "tags": [
-          "Notifications"
-        ],
         "summary": "Get Unread Notification Count",
         "responses": {
           "default": {
@@ -4311,9 +4128,6 @@
     },
     "/v1/NotificationSettings": {
       "get": {
-        "tags": [
-          "Notification Settings"
-        ],
         "summary": "List Notification Settings",
         "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
         "responses": {
@@ -4389,9 +4203,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Notification Settings"
-        ],
         "summary": "Update Notification Settings",
         "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
         "requestBody": {
@@ -4474,9 +4285,6 @@
     },
     "/v1/PayCodes": {
       "get": {
-        "tags": [
-          "Pay Codes"
-        ],
         "summary": "List Pay Codes",
         "description": "Returns a list of the pay codes. The format of Text in the response depends on the company web setting Lookup.PayCode.\n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time.",
         "responses": {
@@ -4555,9 +4363,6 @@
     },
     "/v1/PayGroup/{payGroup}": {
       "get": {
-        "tags": [
-          "Pay Groups"
-        ],
         "summary": "Get Pay Group",
         "parameters": [
           {
@@ -4618,9 +4423,6 @@
     },
     "/v1/PayGroups": {
       "get": {
-        "tags": [
-          "Pay Groups"
-        ],
         "summary": "List Pay Groups",
         "description": "Returns a list of pay groups. The format of Text in the response depends on the company web setting Lookup.PayGroups.\n\nIn Avanti, pay groups determine many of the pay and tax calculations factors, such as EI rates, CPP rates, the CRA business number, Quebec Employer ID, etc. They are assigned to employees that are paid at the same time and share the same pay period factors.",
         "responses": {
@@ -4699,9 +4501,6 @@
     },
     "/v1/PayStatements": {
       "get": {
-        "tags": [
-          "Pay Statements"
-        ],
         "summary": "List Pay Statements",
         "description": "Returns a list of pay statements, with the pay totals,  for the employee assigned to the user.",
         "parameters": [
@@ -4844,9 +4643,6 @@
     },
     "/v1/PayStatements/Cancelled/{empNo}": {
       "get": {
-        "tags": [
-          "Pay Statements"
-        ],
         "summary": "List Cancelled Pay Statements",
         "description": "Returns a list of the pay run of cancelled payment for the employee.\n\nIn Avanti, a cancelled payment is a complete reversal of all values in the initially processed payment.",
         "parameters": [
@@ -4957,9 +4753,6 @@
     },
     "/v1/PayStatements/PDF": {
       "get": {
-        "tags": [
-          "Pay Statements"
-        ],
         "summary": "Get PDF Pay Statement",
         "description": "Returns a byte array of the pay statement with a content type of application/pdf for the employee assigned to the current Avanti User.",
         "parameters": [
@@ -5038,9 +4831,6 @@
     },
     "/v1/PayStatements/Statement": {
       "get": {
-        "tags": [
-          "Pay Statements"
-        ],
         "summary": "Get Pay Statement",
         "parameters": [
           {
@@ -5127,9 +4917,6 @@
     },
     "/v1/PersonalInfo": {
       "post": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Update Personal Information",
         "description": "Provides the ability to update the personal information for the employee. \n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info. ",
         "requestBody": {
@@ -5203,9 +4990,6 @@
     },
     "/v1/PersonalInfo/{empNo}": {
       "get": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Get Personal Information",
         "description": "Returns the personal information for an employee. ",
         "parameters": [
@@ -5285,9 +5069,6 @@
     },
     "/v1/PersonalInfo/EmployeeFigures": {
       "get": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Get Employee Figures",
         "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
         "parameters": [
@@ -5324,9 +5105,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Update Employee Figures",
         "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
         "requestBody": {
@@ -5362,9 +5140,6 @@
     },
     "/v1/PersonalInfo/Photo/{empNo}": {
       "get": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Get Employee Photo",
         "description": "Returns a byte array of the employee's photo. ",
         "parameters": [
@@ -5461,9 +5236,6 @@
         }
       },
       "put": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Update Employee Photo",
         "description": "Creates a new photo for the employee or replaces the existing employee photo from a byte array. \n\nWe recommend using photos that square or close to square to avoid scaling issues. ",
         "parameters": [
@@ -5508,9 +5280,6 @@
         }
       },
       "delete": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Delete Employee Photo",
         "description": "Deletes the employee's photo. ",
         "parameters": [
@@ -5533,9 +5302,6 @@
     },
     "/v1/PersonalInfo/Setup": {
       "get": {
-        "tags": [
-          "Personal Info"
-        ],
         "summary": "Personal Info Setup",
         "responses": {
           "default": {
@@ -5603,9 +5369,6 @@
     },
     "/v1/Position/{positionCode}": {
       "get": {
-        "tags": [
-          "Positions"
-        ],
         "summary": "Get Position Details",
         "parameters": [
           {
@@ -5683,9 +5446,6 @@
     },
     "/v1/PositionRate/PositionRatesData": {
       "get": {
-        "tags": [
-          "Position Rate"
-        ],
         "summary": "List Position Rates",
         "parameters": [
           {
@@ -5772,9 +5532,6 @@
     },
     "/v1/PositionRateDescription": {
       "get": {
-        "tags": [
-          "Position Rate"
-        ],
         "summary": "Get Position Rate Description",
         "parameters": [
           {
@@ -5852,9 +5609,6 @@
     },
     "/v1/Positions/{empNo}": {
       "get": {
-        "tags": [
-          "Positions"
-        ],
         "summary": "List Employee Positions",
         "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
         "parameters": [
@@ -5967,9 +5721,6 @@
     },
     "/v1/Positions/AllPositions": {
       "get": {
-        "tags": [
-          "Positions"
-        ],
         "summary": "List Positions",
         "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
         "parameters": [
@@ -6068,9 +5819,6 @@
     },
     "/v1/Preferences": {
       "get": {
-        "tags": [
-          "Preferences"
-        ],
         "summary": "Get User Preference",
         "parameters": [
           {
@@ -6135,9 +5883,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Preferences"
-        ],
         "summary": "Update User Preference",
         "parameters": [
           {
@@ -6220,9 +5965,6 @@
     },
     "/v1/RateGrids": {
       "get": {
-        "tags": [
-          "Rate Grids"
-        ],
         "summary": "List of Rate Grids",
         "responses": {
           "default": {
@@ -6299,9 +6041,6 @@
     },
     "/v1/Reporter": {
       "post": {
-        "tags": [
-          "Reporter"
-        ],
         "summary": "Get Report Data With Options",
         "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
         "requestBody": {
@@ -6380,9 +6119,6 @@
     },
     "/v1/Reporter/{id}": {
       "get": {
-        "tags": [
-          "Reporter"
-        ],
         "summary": "Get Report Data",
         "description": "This will return the contents of the specified report based.\n\nUsing this endpoint, the information returned can be filtered based on  date range and employee range. If you need the report to filtered by additional options, please use the Get Report Data With Options endpoint.  \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
         "parameters": [
@@ -6493,9 +6229,6 @@
     },
     "/v1/ScheduleTemplates": {
       "get": {
-        "tags": [
-          "Schedule Templates"
-        ],
         "summary": "List Schedule Templates",
         "description": "Returns a list of the schedule templates. The format of Text in the response depends on the company web setting Lookup.ScheduleTemplates. \n\nIn Avanti, Schedule templates define the commonly used schedule rotations. These rotations can be used to create employee schedules automatically by rolling schedules forward or on demand by adding the schedule template for a specific day.",
         "responses": {
@@ -6574,9 +6307,6 @@
     },
     "/v1/Search": {
       "get": {
-        "tags": [
-          "Search"
-        ],
         "summary": "Search",
         "description": "This returns a list of the menus that contain the text from the request in the:\n- Menu Description\n-  Menu URL\n- Program name",
         "parameters": [
@@ -6624,9 +6354,6 @@
     },
     "/v1/ShiftCodes": {
       "get": {
-        "tags": [
-          "Shift Codes"
-        ],
         "summary": "List Shift Codes",
         "description": "Returns a list of the shift codes. \n\nIn Avanti, shift codes are used in Schedules and Time Cards to apply default from/to times, break rules and premium rules.",
         "responses": {
@@ -6705,9 +6432,6 @@
     },
     "/v1/TaskIDs": {
       "get": {
-        "tags": [
-          "Task IDs"
-        ],
         "summary": "List Task IDs",
         "description": "Returns a list of the defined tasks.\n\nIn Avanti, Task Ids are used throughout time entry. These are for tracking purposes and are defined to suit your organizations needs.",
         "responses": {
@@ -6786,9 +6510,6 @@
     },
     "/v1/TimeDataImport": {
       "post": {
-        "tags": [
-          "Time Data"
-        ],
         "summary": "Add Time Data Entries",
         "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.",
         "requestBody": {
@@ -6896,9 +6617,6 @@
     },
     "/v1/TimeManagement/{viewId}/{templateId}/{empNo}": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "List Time Entries",
         "parameters": [
           {
@@ -7055,9 +6773,6 @@
     },
     "/v1/TimeManagement/AvailableShifts": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "List Available Shifts",
         "parameters": [
           {
@@ -7127,9 +6842,6 @@
     },
     "/v1/TimeManagement/CancelPickups": {
       "post": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Cancel Pickup Requests",
         "requestBody": {
           "content": {
@@ -7197,9 +6909,6 @@
     },
     "/v1/TimeManagement/CancelPools": {
       "post": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Cancel Pooled Entries",
         "requestBody": {
           "content": {
@@ -7267,9 +6976,6 @@
     },
     "/v1/TimeManagement/Comment": {
       "post": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Create a Comment",
         "requestBody": {
           "content": {
@@ -7299,9 +7005,6 @@
     },
     "/v1/TimeManagement/EmployeeAcceptance": {
       "post": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "List Employee Acceptance",
         "requestBody": {
           "content": {
@@ -7366,9 +7069,6 @@
     },
     "/v1/TimeManagement/ExchangeOffers": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "List Exchange Offers",
         "parameters": [
           {
@@ -7415,9 +7115,6 @@
     },
     "/v1/TimeManagement/GetDetailsForPooledSchedule": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Get Pooled Schedule",
         "parameters": [
           {
@@ -7510,9 +7207,6 @@
     },
     "/v1/TimeManagement/Pickup": {
       "post": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Create a Pickup Request",
         "requestBody": {
           "content": {
@@ -7562,9 +7256,6 @@
     },
     "/v1/TimeManagement/PickupEntryDetails": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Get Pickup Entry",
         "parameters": [
           {
@@ -7624,9 +7315,6 @@
     },
     "/v1/TimeManagement/PickupRequests": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "List Pickup Requests",
         "parameters": [
           {
@@ -7703,9 +7391,6 @@
     },
     "/v1/TimeManagement/PooledRequests": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "List Pool Requests",
         "parameters": [
           {
@@ -7831,9 +7516,6 @@
     },
     "/v1/TimeManagement/PoolEntryDetails": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Get Pool Entry",
         "parameters": [
           {
@@ -7885,9 +7567,6 @@
     },
     "/v1/TimeManagement/PostSchedules": {
       "post": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Post a Schedule",
         "requestBody": {
           "content": {
@@ -7960,9 +7639,6 @@
     },
     "/v1/TimeManagement/Templates": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "List Time Entry Templates",
         "parameters": [
           {
@@ -8016,9 +7692,6 @@
     },
     "/v1/TimeManagement/TimeWorked": {
       "get": {
-        "tags": [
-          "Time Management"
-        ],
         "summary": "Get Time Worked",
         "parameters": [
           {
@@ -8078,9 +7751,6 @@
     },
     "/v1/UnionCodes": {
       "get": {
-        "tags": [
-          "Union Codes"
-        ],
         "summary": "List Union Codes",
         "description": "Returns a list of the Union Codes defined. The format of Text in the response depends on the company web setting Lookup.Unions. \n\nIn Avanti, Union Codes identify the union affiliations and are used to determine union dues.",
         "responses": {
@@ -8159,9 +7829,6 @@
     },
     "/v1/VacationEarningCodes": {
       "get": {
-        "tags": [
-          "Vacation Earning Codes"
-        ],
         "summary": "List Vacation Earning Codes",
         "description": "Returns a list of the earning codes setup for paying vacation each period or to pay out accrued. The format of Text in the response depends on the company web setting Lookup.VacationEarningCodes. \n\nIn Avanti, vacation earning codes must have either Vacation or Other Vacation selected for the Earning Type.",
         "responses": {
@@ -8240,9 +7907,6 @@
     },
     "/v1/VacationGroup/{vacationGroup}": {
       "get": {
-        "tags": [
-          "Vacation Groups"
-        ],
         "summary": "Get Vacation Group",
         "parameters": [
           {
@@ -8320,9 +7984,6 @@
     },
     "/v1/VacationGroups": {
       "get": {
-        "tags": [
-          "Vacation Groups"
-        ],
         "summary": "List Vacation Groups",
         "description": "Returns a list of the defined vacation group. The format of Text in the response depends on the company web setting Lookup.VacationGroups. \n\nIn Avanti, vacation groups determine the vacation entitlement calculation for each employee assigned to the group.",
         "responses": {
@@ -8401,9 +8062,6 @@
     },
     "/v1/VacationOptions": {
       "get": {
-        "tags": [
-          "Vacation Options"
-        ],
         "summary": "List Vacation Options",
         "description": "Returns a list of the vacation options. The Text will always be the description of the option.\n\nIn Avanti, the Vacation Option indicates what will happen with the calculated vacation for an employee.",
         "responses": {
@@ -8482,9 +8140,6 @@
     },
     "/v1/WCBGroups": {
       "get": {
-        "tags": [
-          "WCB Groups"
-        ],
         "summary": "List WCB Groups",
         "description": "Returns a list of the Workers Compensation Groups. \n\nIn Avanti, these maintain all WCB rates and maximums for payroll processing.",
         "responses": {
@@ -8563,9 +8218,6 @@
     },
     "/v1/WebPunch": {
       "get": {
-        "tags": [
-          "Web Punch"
-        ],
         "summary": "Get Last Check-in",
         "description": "Returns the most recent punch of the employee attached to the user.",
         "responses": {
@@ -8633,9 +8285,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Web Punch"
-        ],
         "summary": "Create a Check-in",
         "description": "Creates a punch for the employee. \n\nThe time of the punch is the current time on the SQL Server, adjusted by the time zone specified on Web Punch Employee Setup on the Desktop Application. If there is no setup for the employee, the time will be adjusted by the Province of Employment on the Tax Factors tab of the Employee Profile.\n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup. \n\nIf company web setting MobileSettings.WebPunchSettings.RequireLocationServices is true, longitude and latitude must be included.",
         "requestBody": {
@@ -8744,9 +8393,6 @@
     },
     "/v1/WebPunch/Allowed": {
       "get": {
-        "tags": [
-          "Web Punch"
-        ],
         "summary": "Is Check-in Allowed",
         "description": "Returns true if the employee can punch and false if the employee cannot. \n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup.",
         "responses": {
@@ -8816,9 +8462,6 @@
     },
     "/v1/WhatsNew/Web": {
       "get": {
-        "tags": [
-          "Whats New"
-        ],
         "summary": "What's New page for web",
         "responses": {
           "default": {
@@ -8886,9 +8529,6 @@
     },
     "/v1/WorkGroups": {
       "get": {
-        "tags": [
-          "Work Groups"
-        ],
         "summary": "List Work Groups",
         "description": "Returns a list of the defined employee work groups. The format of Text in the response depends on the company web setting Lookup.WorkGroups.\n\nIn Avanti, Work Groups are used to determine which employees enter time using Time and Attendance. These group employees based on common rules and shift(s). Each Work Group has a Holiday Rule, Punch Rule and Overtime Rule and one or more Shifts.",
         "responses": {
