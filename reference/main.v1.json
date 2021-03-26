@@ -36,8 +36,17 @@
                     "$ref": "#/components/schemas/TextValuePair"
                   }
                 },
+                "examples": {}
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                },
                 "examples": {
-                  "example": {
+                  "Example": {
                     "value": [
                       {
                         "text": "ADMIN - Administration",
@@ -72,14 +81,6 @@
                         "value": "TRAIN"
                       }
                     ]
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
                   }
                 }
               },
