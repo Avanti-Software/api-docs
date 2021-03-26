@@ -21,7 +21,6 @@ Enter the full API endpoint with the prefix /api into function, then set the sub
 
 ![Insert subfunction access rule example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fget-personalinfo-subfunction-rule.png?alt=media&token=8069dd34-216a-44b4-a377-6f31b80f7710)
 
-**IMPORTANT: Prior to version 1.0.3, the version number must be formatted as v1.0 not v1.**
 
 We recommend copying endpoints directly from this documentation to avoid mistakes when creating the subfunction access. Endpoints should include the version and any path parameters. Rule matching is exact, so if two endpoints only differ by path parameters, you will need to create two subfunction access rules.
 
