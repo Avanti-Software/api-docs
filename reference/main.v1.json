@@ -30,7 +30,44 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"ADMIN - Administration\",\n    \"value\": \"ADMIN\"\n  },\n  {\n    \"text\": \"BRVE - Bereavement Leave\",\n    \"value\": \"BRVE\"\n  },\n  {\n    \"text\": \"JURY - Jury Duty\",\n    \"value\": \"JURY\"\n  },\n  {\n    \"text\": \"LATE - Late Time\",\n    \"value\": \"LATE\"\n  },\n  {\n    \"text\": \"ORNT - Orientation Session\",\n    \"value\": \"ORNT\"\n  },\n  {\n    \"text\": \"PERS - Personal Time Off\",\n    \"value\": \"PERS\"\n  },\n  {\n    \"text\": \"READF - Reading Files\",\n    \"value\": \"READF\"\n  },\n  {\n    \"text\": \"TRAIN - Training Course\",\n    \"value\": \"TRAIN\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "ADMIN - Administration",
+                        "value": "ADMIN"
+                      },
+                      {
+                        "text": "BRVE - Bereavement Leave",
+                        "value": "BRVE"
+                      },
+                      {
+                        "text": "JURY - Jury Duty",
+                        "value": "JURY"
+                      },
+                      {
+                        "text": "LATE - Late Time",
+                        "value": "LATE"
+                      },
+                      {
+                        "text": "ORNT - Orientation Session",
+                        "value": "ORNT"
+                      },
+                      {
+                        "text": "PERS - Personal Time Off",
+                        "value": "PERS"
+                      },
+                      {
+                        "text": "READF - Reading Files",
+                        "value": "READF"
+                      },
+                      {
+                        "text": "TRAIN - Training Course",
+                        "value": "TRAIN"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -48,7 +85,9 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {
+                "examples": {}
+              }
             }
           }
         }
@@ -67,7 +106,24 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"001 - Bank of Montreal\",\n    \"value\": \"001\"\n  },\n  {\n    \"text\": \"002 - The Bank of Nova Scotia\",\n    \"value\": \"002\"\n  },\n  {\n    \"text\": \"003 - Royal Bank of Canada\",\n    \"value\": \"003\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "001 - Bank of Montreal",
+                        "value": "001"
+                      },
+                      {
+                        "text": "002 - The Bank of Nova Scotia",
+                        "value": "002"
+                      },
+                      {
+                        "text": "003 - Royal Bank of Canada",
+                        "value": "003"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -87,7 +143,28 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"01 - All Single Benefits\",\n    \"value\": \"01\"\n  },\n  {\n    \"text\": \"02 - All Family Benefits\",\n    \"value\": \"02\"\n  },\n  {\n    \"text\": \"03 - Only Mandatory Benefits\",\n    \"value\": \"03\"\n  },\n  {\n    \"text\": \"04 - No Benefits\",\n    \"value\": \"04\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "01 - All Single Benefits",
+                        "value": "01"
+                      },
+                      {
+                        "text": "02 - All Family Benefits",
+                        "value": "02"
+                      },
+                      {
+                        "text": "03 - Only Mandatory Benefits",
+                        "value": "03"
+                      },
+                      {
+                        "text": "04 - No Benefits",
+                        "value": "04"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -125,7 +202,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -176,6 +253,12 @@
           }
         },
         "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          },
           "409": {
             "description": "Conflict",
             "content": {
@@ -194,12 +277,6 @@
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
-            }
-          },
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
             }
           }
         }
@@ -236,7 +313,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -265,7 +342,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -304,7 +381,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -344,7 +421,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -359,7 +436,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -378,7 +455,32 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"01 - Bi-weekly\",\n    \"value\": \"01\"\n  },\n  {\n    \"text\": \"02 - Semi-Monthly\",\n    \"value\": \"02\"\n  },\n  {\n    \"text\": \"03 - Monthly\",\n    \"value\": \"03\"\n  },\n  {\n    \"text\": \"05 - Bi-weekly hrly\",\n    \"value\": \"05\"\n  },\n  {\n    \"text\": \"99 - Volunteers\",\n    \"value\": \"99\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "01 - Bi-weekly",
+                        "value": "01"
+                      },
+                      {
+                        "text": "02 - Semi-Monthly",
+                        "value": "02"
+                      },
+                      {
+                        "text": "03 - Monthly",
+                        "value": "03"
+                      },
+                      {
+                        "text": "05 - Bi-weekly hrly",
+                        "value": "05"
+                      },
+                      {
+                        "text": "99 - Volunteers",
+                        "value": "99"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -406,7 +508,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -435,7 +537,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -472,7 +574,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -507,7 +609,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -542,7 +644,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -571,7 +673,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -599,7 +701,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -634,7 +736,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -669,7 +771,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -703,7 +805,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -732,7 +834,333 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "{\n  \"address\": {\n    \"address1\": \"4027 Phillips Avenue\",\n    \"address2\": \"\",\n    \"city\": \"Burnaby\",\n    \"country\": \"CAN\",\n    \"empNo\": \"000001005\",\n    \"postal\": \"V5A 2Z4\",\n    \"province\": \"BC\"\n  },\n  \"provinces\": [\n    {\n      \"text\": \"Alberta\",\n      \"value\": \"AB\"\n    },\n    {\n      \"text\": \"British Columbia\",\n      \"value\": \"BC\"\n    },\n    {\n      \"text\": \"Manitoba\",\n      \"value\": \"MB\"\n    },\n    {\n      \"text\": \"New Brunswick\",\n      \"value\": \"NB\"\n    },\n    {\n      \"text\": \"Newfoundland\",\n      \"value\": \"NL\"\n    },\n    {\n      \"text\": \"Nova Scotia\",\n      \"value\": \"NS\"\n    },\n    {\n      \"text\": \"Northwest Territories\",\n      \"value\": \"NT\"\n    },\n    {\n      \"text\": \"Nunavut\",\n      \"value\": \"NU\"\n    },\n    {\n      \"text\": \"Ontario\",\n      \"value\": \"ON\"\n    },\n    {\n      \"text\": \"Prince Edward Is.\",\n      \"value\": \"PE\"\n    },\n    {\n      \"text\": \"Quebec\",\n      \"value\": \"QC\"\n    },\n    {\n      \"text\": \"Saskatchewan\",\n      \"value\": \"SK\"\n    },\n    {\n      \"text\": \"Yukon Territories\",\n      \"value\": \"YT\"\n    },\n    {\n      \"text\": \"Outside North America\",\n      \"value\": \"ZZ\"\n    },\n    {\n      \"text\": \"Alabama\",\n      \"value\": \"AL\"\n    },\n    {\n      \"text\": \"Alaska\",\n      \"value\": \"AK\"\n    },\n    {\n      \"text\": \"Arkansas\",\n      \"value\": \"AR\"\n    },\n    {\n      \"text\": \"Arizona\",\n      \"value\": \"AZ\"\n    },\n    {\n      \"text\": \"California\",\n      \"value\": \"CA\"\n    },\n    {\n      \"text\": \"Colorado\",\n      \"value\": \"CO\"\n    },\n    {\n      \"text\": \"Connecticut\",\n      \"value\": \"CT\"\n    },\n    {\n      \"text\": \"District of Columbia\",\n      \"value\": \"DC\"\n    },\n    {\n      \"text\": \"Delaware\",\n      \"value\": \"DE\"\n    },\n    {\n      \"text\": \"Florida\",\n      \"value\": \"FL\"\n    },\n    {\n      \"text\": \"Georgia\",\n      \"value\": \"GA\"\n    },\n    {\n      \"text\": \"Hawaii\",\n      \"value\": \"HI\"\n    },\n    {\n      \"text\": \"Iowa\",\n      \"value\": \"IA\"\n    },\n    {\n      \"text\": \"Idaho\",\n      \"value\": \"ID\"\n    },\n    {\n      \"text\": \"Illinois\",\n      \"value\": \"IL\"\n    },\n    {\n      \"text\": \"Indiana\",\n      \"value\": \"IN\"\n    },\n    {\n      \"text\": \"Kansas\",\n      \"value\": \"KS\"\n    },\n    {\n      \"text\": \"Kentucky\",\n      \"value\": \"KY\"\n    },\n    {\n      \"text\": \"Louisiana\",\n      \"value\": \"LA\"\n    },\n    {\n      \"text\": \"Massachusetts\",\n      \"value\": \"MA\"\n    },\n    {\n      \"text\": \"Maryland\",\n      \"value\": \"MD\"\n    },\n    {\n      \"text\": \"Maine\",\n      \"value\": \"ME\"\n    },\n    {\n      \"text\": \"Michigan\",\n      \"value\": \"MI\"\n    },\n    {\n      \"text\": \"Minnesota\",\n      \"value\": \"MN\"\n    },\n    {\n      \"text\": \"Missouri\",\n      \"value\": \"MO\"\n    },\n    {\n      \"text\": \"Mississippi\",\n      \"value\": \"MS\"\n    },\n    {\n      \"text\": \"Montana\",\n      \"value\": \"MT\"\n    },\n    {\n      \"text\": \"North Carolina\",\n      \"value\": \"NC\"\n    },\n    {\n      \"text\": \"North Dakota\",\n      \"value\": \"ND\"\n    },\n    {\n      \"text\": \"Nebraska\",\n      \"value\": \"NE\"\n    },\n    {\n      \"text\": \"New Hampshire\",\n      \"value\": \"NH\"\n    },\n    {\n      \"text\": \"New Jersey\",\n      \"value\": \"NJ\"\n    },\n    {\n      \"text\": \"New Mexico\",\n      \"value\": \"NM\"\n    },\n    {\n      \"text\": \"Nevada\",\n      \"value\": \"NV\"\n    },\n    {\n      \"text\": \"New York\",\n      \"value\": \"NY\"\n    },\n    {\n      \"text\": \"Ohio\",\n      \"value\": \"OH\"\n    },\n    {\n      \"text\": \"Oklahoma\",\n      \"value\": \"OK\"\n    },\n    {\n      \"text\": \"Oregon\",\n      \"value\": \"OR\"\n    },\n    {\n      \"text\": \"Pennsylvania\",\n      \"value\": \"PA\"\n    },\n    {\n      \"text\": \"Rhode Island\",\n      \"value\": \"RI\"\n    },\n    {\n      \"text\": \"South Carolina\",\n      \"value\": \"SC\"\n    },\n    {\n      \"text\": \"South Dakota\",\n      \"value\": \"SD\"\n    },\n    {\n      \"text\": \"Tennessee\",\n      \"value\": \"TN\"\n    },\n    {\n      \"text\": \"Texas\",\n      \"value\": \"TX\"\n    },\n    {\n      \"text\": \"Utah\",\n      \"value\": \"UT\"\n    },\n    {\n      \"text\": \"Virginia\",\n      \"value\": \"VA\"\n    },\n    {\n      \"text\": \"Vermont\",\n      \"value\": \"VT\"\n    },\n    {\n      \"text\": \"Washington\",\n      \"value\": \"WA\"\n    },\n    {\n      \"text\": \"Wisconsin\",\n      \"value\": \"WI\"\n    },\n    {\n      \"text\": \"West Virginia\",\n      \"value\": \"WV\"\n    },\n    {\n      \"text\": \"Wyoming\",\n      \"value\": \"WY\"\n    }\n  ],\n  \"relationship\": [\n    {\n      \"text\": \"Spouse\",\n      \"value\": \"1\"\n    },\n    {\n      \"text\": \"Child\",\n      \"value\": \"2\"\n    },\n    {\n      \"text\": \"Common-law Spouse\",\n      \"value\": \"3\"\n    },\n    {\n      \"text\": \"Beneficiary\",\n      \"value\": \"4\"\n    },\n    {\n      \"text\": \"Other\",\n      \"value\": \"5\"\n    },\n    {\n      \"text\": \"Sister\",\n      \"value\": \"60\"\n    },\n    {\n      \"text\": \"Brother\",\n      \"value\": \"61\"\n    },\n    {\n      \"text\": \"Mother\",\n      \"value\": \"62\"\n    },\n    {\n      \"text\": \"Father\",\n      \"value\": \"63\"\n    },\n    {\n      \"text\": \"Mother In Law\",\n      \"value\": \"64\"\n    },\n    {\n      \"text\": \"Father In Law\",\n      \"value\": \"65\"\n    },\n    {\n      \"text\": \"Neighbor\",\n      \"value\": \"66\"\n    }\n  ]\n}"
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "address": {
+                        "address1": "4027 Phillips Avenue",
+                        "address2": "",
+                        "city": "Burnaby",
+                        "country": "CAN",
+                        "empNo": "000001005",
+                        "postal": "V5A 2Z4",
+                        "province": "BC"
+                      },
+                      "provinces": [
+                        {
+                          "text": "Alberta",
+                          "value": "AB"
+                        },
+                        {
+                          "text": "British Columbia",
+                          "value": "BC"
+                        },
+                        {
+                          "text": "Manitoba",
+                          "value": "MB"
+                        },
+                        {
+                          "text": "New Brunswick",
+                          "value": "NB"
+                        },
+                        {
+                          "text": "Newfoundland",
+                          "value": "NL"
+                        },
+                        {
+                          "text": "Nova Scotia",
+                          "value": "NS"
+                        },
+                        {
+                          "text": "Northwest Territories",
+                          "value": "NT"
+                        },
+                        {
+                          "text": "Nunavut",
+                          "value": "NU"
+                        },
+                        {
+                          "text": "Ontario",
+                          "value": "ON"
+                        },
+                        {
+                          "text": "Prince Edward Is.",
+                          "value": "PE"
+                        },
+                        {
+                          "text": "Quebec",
+                          "value": "QC"
+                        },
+                        {
+                          "text": "Saskatchewan",
+                          "value": "SK"
+                        },
+                        {
+                          "text": "Yukon Territories",
+                          "value": "YT"
+                        },
+                        {
+                          "text": "Outside North America",
+                          "value": "ZZ"
+                        },
+                        {
+                          "text": "Alabama",
+                          "value": "AL"
+                        },
+                        {
+                          "text": "Alaska",
+                          "value": "AK"
+                        },
+                        {
+                          "text": "Arkansas",
+                          "value": "AR"
+                        },
+                        {
+                          "text": "Arizona",
+                          "value": "AZ"
+                        },
+                        {
+                          "text": "California",
+                          "value": "CA"
+                        },
+                        {
+                          "text": "Colorado",
+                          "value": "CO"
+                        },
+                        {
+                          "text": "Connecticut",
+                          "value": "CT"
+                        },
+                        {
+                          "text": "District of Columbia",
+                          "value": "DC"
+                        },
+                        {
+                          "text": "Delaware",
+                          "value": "DE"
+                        },
+                        {
+                          "text": "Florida",
+                          "value": "FL"
+                        },
+                        {
+                          "text": "Georgia",
+                          "value": "GA"
+                        },
+                        {
+                          "text": "Hawaii",
+                          "value": "HI"
+                        },
+                        {
+                          "text": "Iowa",
+                          "value": "IA"
+                        },
+                        {
+                          "text": "Idaho",
+                          "value": "ID"
+                        },
+                        {
+                          "text": "Illinois",
+                          "value": "IL"
+                        },
+                        {
+                          "text": "Indiana",
+                          "value": "IN"
+                        },
+                        {
+                          "text": "Kansas",
+                          "value": "KS"
+                        },
+                        {
+                          "text": "Kentucky",
+                          "value": "KY"
+                        },
+                        {
+                          "text": "Louisiana",
+                          "value": "LA"
+                        },
+                        {
+                          "text": "Massachusetts",
+                          "value": "MA"
+                        },
+                        {
+                          "text": "Maryland",
+                          "value": "MD"
+                        },
+                        {
+                          "text": "Maine",
+                          "value": "ME"
+                        },
+                        {
+                          "text": "Michigan",
+                          "value": "MI"
+                        },
+                        {
+                          "text": "Minnesota",
+                          "value": "MN"
+                        },
+                        {
+                          "text": "Missouri",
+                          "value": "MO"
+                        },
+                        {
+                          "text": "Mississippi",
+                          "value": "MS"
+                        },
+                        {
+                          "text": "Montana",
+                          "value": "MT"
+                        },
+                        {
+                          "text": "North Carolina",
+                          "value": "NC"
+                        },
+                        {
+                          "text": "North Dakota",
+                          "value": "ND"
+                        },
+                        {
+                          "text": "Nebraska",
+                          "value": "NE"
+                        },
+                        {
+                          "text": "New Hampshire",
+                          "value": "NH"
+                        },
+                        {
+                          "text": "New Jersey",
+                          "value": "NJ"
+                        },
+                        {
+                          "text": "New Mexico",
+                          "value": "NM"
+                        },
+                        {
+                          "text": "Nevada",
+                          "value": "NV"
+                        },
+                        {
+                          "text": "New York",
+                          "value": "NY"
+                        },
+                        {
+                          "text": "Ohio",
+                          "value": "OH"
+                        },
+                        {
+                          "text": "Oklahoma",
+                          "value": "OK"
+                        },
+                        {
+                          "text": "Oregon",
+                          "value": "OR"
+                        },
+                        {
+                          "text": "Pennsylvania",
+                          "value": "PA"
+                        },
+                        {
+                          "text": "Rhode Island",
+                          "value": "RI"
+                        },
+                        {
+                          "text": "South Carolina",
+                          "value": "SC"
+                        },
+                        {
+                          "text": "South Dakota",
+                          "value": "SD"
+                        },
+                        {
+                          "text": "Tennessee",
+                          "value": "TN"
+                        },
+                        {
+                          "text": "Texas",
+                          "value": "TX"
+                        },
+                        {
+                          "text": "Utah",
+                          "value": "UT"
+                        },
+                        {
+                          "text": "Virginia",
+                          "value": "VA"
+                        },
+                        {
+                          "text": "Vermont",
+                          "value": "VT"
+                        },
+                        {
+                          "text": "Washington",
+                          "value": "WA"
+                        },
+                        {
+                          "text": "Wisconsin",
+                          "value": "WI"
+                        },
+                        {
+                          "text": "West Virginia",
+                          "value": "WV"
+                        },
+                        {
+                          "text": "Wyoming",
+                          "value": "WY"
+                        }
+                      ],
+                      "relationship": [
+                        {
+                          "text": "Spouse",
+                          "value": "1"
+                        },
+                        {
+                          "text": "Child",
+                          "value": "2"
+                        },
+                        {
+                          "text": "Common-law Spouse",
+                          "value": "3"
+                        },
+                        {
+                          "text": "Beneficiary",
+                          "value": "4"
+                        },
+                        {
+                          "text": "Other",
+                          "value": "5"
+                        },
+                        {
+                          "text": "Sister",
+                          "value": "60"
+                        },
+                        {
+                          "text": "Brother",
+                          "value": "61"
+                        },
+                        {
+                          "text": "Mother",
+                          "value": "62"
+                        },
+                        {
+                          "text": "Father",
+                          "value": "63"
+                        },
+                        {
+                          "text": "Mother In Law",
+                          "value": "64"
+                        },
+                        {
+                          "text": "Father In Law",
+                          "value": "65"
+                        },
+                        {
+                          "text": "Neighbor",
+                          "value": "66"
+                        }
+                      ]
+                    }
+                  }
+                }
               }
             }
           }
@@ -770,7 +1198,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -807,7 +1235,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -858,7 +1286,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -884,7 +1312,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -935,7 +1363,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -963,7 +1391,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -991,7 +1419,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1021,7 +1449,52 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"Regular Earnings\",\n    \"value\": \"001\"\n  },\n  {\n    \"text\": \"Stat Not Worked\",\n    \"value\": \"010\"\n  },\n  {\n    \"text\": \"Stat Worked\",\n    \"value\": \"011\"\n  },\n  {\n    \"text\": \"Leave of Absence Paid\",\n    \"value\": \"020\"\n  },\n  {\n    \"text\": \"Leave of Absence Not Paid\",\n    \"value\": \"021\"\n  },\n  {\n    \"text\": \"Availability\",\n    \"value\": \"040\"\n  },\n  {\n    \"text\": \"Bonus\",\n    \"value\": \"200\"\n  },\n  {\n    \"text\": \"Expenses\",\n    \"value\": \"210\"\n  },\n  {\n    \"text\": \"Commissions\",\n    \"value\": \"300\"\n  },\n  {\n    \"text\": \"Vacation taken\",\n    \"value\": \"350\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "Regular Earnings",
+                        "value": "001"
+                      },
+                      {
+                        "text": "Stat Not Worked",
+                        "value": "010"
+                      },
+                      {
+                        "text": "Stat Worked",
+                        "value": "011"
+                      },
+                      {
+                        "text": "Leave of Absence Paid",
+                        "value": "020"
+                      },
+                      {
+                        "text": "Leave of Absence Not Paid",
+                        "value": "021"
+                      },
+                      {
+                        "text": "Availability",
+                        "value": "040"
+                      },
+                      {
+                        "text": "Bonus",
+                        "value": "200"
+                      },
+                      {
+                        "text": "Expenses",
+                        "value": "210"
+                      },
+                      {
+                        "text": "Commissions",
+                        "value": "300"
+                      },
+                      {
+                        "text": "Vacation taken",
+                        "value": "350"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -1078,7 +1551,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1106,7 +1579,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1134,7 +1607,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1181,7 +1654,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1226,7 +1699,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1254,7 +1727,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1282,7 +1755,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1318,7 +1791,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1364,7 +1837,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1392,7 +1865,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1428,7 +1901,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1447,7 +1920,60 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"01 - Working\",\n    \"value\": \"01\"\n  },\n  {\n    \"text\": \"02 - Training\",\n    \"value\": \"02\"\n  },\n  {\n    \"text\": \"03 - On Leave\",\n    \"value\": \"03\"\n  },\n  {\n    \"text\": \"04 - Vacation Leave\",\n    \"value\": \"04\"\n  },\n  {\n    \"text\": \"05 - Health/Medical Leave\",\n    \"value\": \"05\"\n  },\n  {\n    \"text\": \"07 - Accident Leave\",\n    \"value\": \"07\"\n  },\n  {\n    \"text\": \"08 - Discipline Leave\",\n    \"value\": \"08\"\n  },\n  {\n    \"text\": \"09 - Sabbatical Leave\",\n    \"value\": \"09\"\n  },\n  {\n    \"text\": \"10 - Maternity\",\n    \"value\": \"10\"\n  },\n  {\n    \"text\": \"11 - Terminated\",\n    \"value\": \"11\"\n  },\n  {\n    \"text\": \"12 - Retired\",\n    \"value\": \"12\"\n  },\n  {\n    \"text\": \"17 - Volunteers\",\n    \"value\": \"17\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "01 - Working",
+                        "value": "01"
+                      },
+                      {
+                        "text": "02 - Training",
+                        "value": "02"
+                      },
+                      {
+                        "text": "03 - On Leave",
+                        "value": "03"
+                      },
+                      {
+                        "text": "04 - Vacation Leave",
+                        "value": "04"
+                      },
+                      {
+                        "text": "05 - Health/Medical Leave",
+                        "value": "05"
+                      },
+                      {
+                        "text": "07 - Accident Leave",
+                        "value": "07"
+                      },
+                      {
+                        "text": "08 - Discipline Leave",
+                        "value": "08"
+                      },
+                      {
+                        "text": "09 - Sabbatical Leave",
+                        "value": "09"
+                      },
+                      {
+                        "text": "10 - Maternity",
+                        "value": "10"
+                      },
+                      {
+                        "text": "11 - Terminated",
+                        "value": "11"
+                      },
+                      {
+                        "text": "12 - Retired",
+                        "value": "12"
+                      },
+                      {
+                        "text": "17 - Volunteers",
+                        "value": "17"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -1465,7 +1991,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1483,7 +2009,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1557,7 +2083,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1574,7 +2100,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1603,7 +2129,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1621,7 +2147,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1638,7 +2164,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1666,7 +2192,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1685,7 +2211,28 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"C - Casual\",\n    \"value\": \"C\"\n  },\n  {\n    \"text\": \"F - Full time\",\n    \"value\": \"F\"\n  },\n  {\n    \"text\": \"P - Part time\",\n    \"value\": \"P\"\n  },\n  {\n    \"text\": \"T - Temporary\",\n    \"value\": \"T\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "C - Casual",
+                        "value": "C"
+                      },
+                      {
+                        "text": "F - Full time",
+                        "value": "F"
+                      },
+                      {
+                        "text": "P - Part time",
+                        "value": "P"
+                      },
+                      {
+                        "text": "T - Temporary",
+                        "value": "T"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -1704,7 +2251,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1721,7 +2268,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1757,7 +2304,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1793,7 +2340,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1810,7 +2357,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1836,7 +2383,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1854,7 +2401,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1898,7 +2445,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1928,7 +2475,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2014,7 +2561,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2048,7 +2595,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2084,7 +2631,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2101,7 +2648,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2118,7 +2665,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2154,7 +2701,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2173,7 +2720,48 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"BREAK - Break Pay\",\n    \"value\": \"BREAK\"\n  },\n  {\n    \"text\": \"BREAKNP - Break Unpaid\",\n    \"value\": \"BREAKNP\"\n  },\n {\n    \"text\": \"OTBANK - Bank Overtime\",\n    \"value\": \"OTBANK\"\n  },\n  {\n    \"text\": \"OTPAYOUT - Pay Overtime\",\n    \"value\": \"OTPAYOUT\"\n  },\n  {\n    \"text\": \"REGULAR - Regular Time\",\n    \"value\": \"REGULAR\"\n  },\n  {\n    \"text\": \"SICK - Sick\",\n    \"value\": \"SICK\"\n  },\n  {\n    \"text\": \"TRAINING - Training Time\",\n    \"value\": \"TRAINING\"\n  },\n  {\n    \"text\": \"TRAVEL - Travel Time\",\n    \"value\": \"TRAVEL\"\n  },\n  {\n    \"text\": \"VACATION - Vacation Time\",\n    \"value\": \"VACATION\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "BREAK - Break Pay",
+                        "value": "BREAK"
+                      },
+                      {
+                        "text": "BREAKNP - Break Unpaid",
+                        "value": "BREAKNP"
+                      },
+                      {
+                        "text": "OTBANK - Bank Overtime",
+                        "value": "OTBANK"
+                      },
+                      {
+                        "text": "OTPAYOUT - Pay Overtime",
+                        "value": "OTPAYOUT"
+                      },
+                      {
+                        "text": "REGULAR - Regular Time",
+                        "value": "REGULAR"
+                      },
+                      {
+                        "text": "SICK - Sick",
+                        "value": "SICK"
+                      },
+                      {
+                        "text": "TRAINING - Training Time",
+                        "value": "TRAINING"
+                      },
+                      {
+                        "text": "TRAVEL - Travel Time",
+                        "value": "TRAVEL"
+                      },
+                      {
+                        "text": "VACATION - Vacation Time",
+                        "value": "VACATION"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -2193,7 +2781,40 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"001 - Part-Time Bi-Weekly\",\n    \"value\": \"001\"\n  },\n  {\n    \"text\": \"002 - Full-Time Bi-Weekly\",\n    \"value\": \"002\"\n  },\n  {\n    \"text\": \"010 - Semi-Monthly\",\n    \"value\": \"010\"\n  },\n  {\n    \"text\": \"011 - Contract Semi-Monthly\",\n    \"value\": \"011\"\n  },\n  {\n    \"text\": \"012 - Quebec Semi-Monthly\",\n    \"value\": \"012\"\n  },\n  {\n    \"text\": \"020 - Executives\",\n    \"value\": \"020\"\n  },\n  {\n    \"text\": \"099 - Volunteers\",\n    \"value\": \"099\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "001 - Part-Time Bi-Weekly",
+                        "value": "001"
+                      },
+                      {
+                        "text": "002 - Full-Time Bi-Weekly",
+                        "value": "002"
+                      },
+                      {
+                        "text": "010 - Semi-Monthly",
+                        "value": "010"
+                      },
+                      {
+                        "text": "011 - Contract Semi-Monthly",
+                        "value": "011"
+                      },
+                      {
+                        "text": "012 - Quebec Semi-Monthly",
+                        "value": "012"
+                      },
+                      {
+                        "text": "020 - Executives",
+                        "value": "020"
+                      },
+                      {
+                        "text": "099 - Volunteers",
+                        "value": "099"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -2221,7 +2842,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2304,7 +2925,25 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"bankNo\": \"01\",\n    \"benefits\": 1998.84,\n    \"chequeDate\": \"2020-08-31T00:00:00\",\n    \"chequeNo\": \"038612\",\n    \"deductions\": 1468.77,\n    \"earnings\": 3744,\n    \"empNo\": \"000001005\",\n    \"keyExtension\": 1,\n    \"netPay\": 2275.23,\n    \"payEndingDate\": \"2020-08-31T00:00:00\",\n    \"runNumber\": 2003\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "bankNo": "01",
+                        "benefits": 1998.84,
+                        "chequeDate": "2020-08-31T00:00:00",
+                        "chequeNo": "038612",
+                        "deductions": 1468.77,
+                        "earnings": 3744,
+                        "empNo": "000001005",
+                        "keyExtension": 1,
+                        "netPay": 2275.23,
+                        "payEndingDate": "2020-08-31T00:00:00",
+                        "runNumber": 2003
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -2353,7 +2992,15 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  2012,\n  1774,\n  1773\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      2012,
+                      1774,
+                      1773
+                    ]
+                  }
+                }
               }
             }
           }
@@ -2399,7 +3046,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2435,7 +3082,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2464,7 +3111,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2501,7 +3148,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2549,7 +3196,15 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "{\n  \"contentLength\": 0,\n  \"contentType\": \"jpg\",\n  \"data\": \"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\"\n}"
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "contentLength": 0,
+                      "contentType": "jpg",
+                      "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABpAGkDASIAAhEBAxEB/8QAHwAAAQMFAQEBAAAAAAAAAAAABwAFCAQGCQoLAQID/8QAQhAAAQQBAwICBQkFBAsAAAAAAgEDBAUGAAcRCBITIQkUFTGyIjVBUVVhdJPRChYycYEjUrHBFzM0QlRyc3eUobT/xAAbAQABBQEBAAAAAAAAAAAAAAAHAwQFBggCCf/EAD0RAAICAQEFAwcLBAEFAAAAAAECAwQRBQAGEhMhFCIxBzIzQVFhgQgjQ1Jyc4KRsbLBQmJxwlOTodHS8P/aAAwDAQACEQMRAD8A26ru7t27awALGWIBKdERR4+EESVERPP6E01+3rn7TmfnH+ulffPNn+Mf+NdNOvMKexPz5vn5vSyfSP8AXP8Ad7h+WxdRV4F7q+avqHsH/gfkNnb29c/acz84/wBdL29c/acz84/1006gR6Rvr52/9Hb07T968xpJuY5FcXUbC9sMAr5QV72ZZzYQ5lhHiT7Zxt8KTHaqsrp9vkFwkWa/HhxQhwIUyzsIEd1xptbVNXv1NM04WbV67MlerXjlYNJK5AUcTOqIoA4nkdljjRWkkZUUsOZXhgjeWXhSONSzMR4AY9QGSegAABJOAATjbIal7cqvCWUxVXyREePlV+r36o7HLpNQCuW2Q+y20TlXLGwbhAifWpyXGh4+/njXN+359Md6TLqTu7i4m775VsNt7auvJCwnYyeG0lNU1R9yN17eTMzWdwbwDb4SVMv8rtAkH3usRmWlCMONvLZtpnT8m0tLORuhkTguSLC2zjP7jOchkOeZOPoNhNQpTnPcqkr7ncS9otGqoq6H0n5Om8ViJJdZ3oraY7IrcilWt6nICQDwF5J9Oj4lPdJj5sZZe47KAxrE+9NRGKwVXlwcFnZIlHUdegkIHgRnBAxkA9B1dHd88HYNW3t3MMZcReFbdzjH2jRfqUDshJF/pp2rt1KW4MW6jcGktXDXgArcmrJxmv1CMWY6pf0Rdcg1PUUPk6OiNvnzY9mNsBxz5p3xiYkCv0co73J9+qc4dcxK8eBFaj9qtusuA22EhglADIBfbADUmXFJsXh7CNAFzgVXhJZvk5Dh7m/Nvi8ATouR6sHhGsr06eps+HhsmN5jnB09MYz0n/x6+QcH2f46dBt2Iyu7sOO+wnDyiEnc64PIr7lTnjlF+hU8l18+3rn7TmfnH+uuWV07+kx67ull2sZ2e6mtzq/HKuSzIawDLb+VuFtw820YkcM8JzU7ulhxpLaKw+7SsVNkDJn6nYRHkB4N0r0U/ptdtev2W1s3upR0uzXVDHgyJsDGa+dIcwPdeBWw0lWlhtvKt5Ui0gXtew3Ln2uA28yxs2Kph23prm/gxbdKYZb5+SHe7dGpNqcdtdb0quGaxZomeOzUiXHz9qjIzMkIGC8lea0kKqzztFGocytHWqdx1iKGvM2AqvwlHY4wqSDGWzjAZUJ6BcnoM9ft65+05n5x/rpe3rn7TmfnH+umnS0Ie0T/APPN/wBR/wD29w/Laa4V+qv5D/71D8tnb29c/acz84/10Yvatl/xsj8xdAfRo00tWbA5eJ5h53hK4+r/AHbdpGhzlEOMYyoOPzHuH5D2bC2++ebP8Y/8a6adO19882f4x/41006dz+nm+9k/e2yaeYv2V/QbfQAThg2Ccm4QgCconJEqCKcqqInKqicqqInvVUTXO+9Mx6TnJOtHexcMxg2YWxOzOY25bS0qxKuWF5KjBIx6fudfz1hrPmTM0YYdnY5TtS2a/GsYfqQJlzIHLWfK6AW6zF3K2r3Ri4y44zksnbbPY+OvNKoutX7+JW7VM40QqhC63ZHGJshVCQ0FUXlE1yW2oM3Kb3FqeB2FZXcXD6CKMhxWw9qSo1fTiD7qiStgk9VF5xRJQTuLtLjhdHfJ10PTbV/eDeC3FFNe0VNPg04yDi7Eb63jZuIp7omMdVYIpccUcclkKRx5FY3lmm4atSMsI7BlaQL05nLMQSMnx4eJyxXwJC5zjZos7WwuJBSrKW9LdVV7fEL+zaH6G2Gk4bZbT6AbEU96ryqqq0kd96K+zJjOGzIjuA6y62vabbjZIQkJJ7uFT3e5U5RUVFVFkjvd0d9TXTtYWUPdrZvM8eg1khxhzKYVY5kWEygAyAJMPMcf9pY+bLyD3tg/OjywFeJEVhxCBIzA426KG2YOCvuICQhX+qKqa1hBagtxrYrWIrMb95ZoZUmRs9ciRGYE9QfHO1Vnqz1JGgs15a0qZDQzRPDIuOnWN1Vh4Y8Nv2cNXXHHS4QnXDcJBTgUJwlMkFPoTlV4T6E8tP41VbOYjvwLmvhvK00Eyvt5BxHWZIAIvOx5StHGkRnzEnmxVwH2kc8EgXs7lr8a2/zLNI81/Dces8terG3pFpV43EkXN7WwmREztJNFBaetSpkFVR24jRZFbEdHwJ8mI87HB+WXT/0f4Vv1g8yze6o9q9mtz6zIbCllbV7y19lixToLTMR+svabKhmPDKjTvWXoUiCuPlLgz4EkXO9h2K46lZ1CpTR5bMmEVlSThjmmaNnyVZ1rpI8anHpJFEYyOJhlTsrW0+3dkWKtHl2VmTjkhgSRUxxCN7DxRyMM+jjYyHB4VOGAh2uNWpoZQhhW4tApuLTWEWxcbAfeRRmXPW0FE81JI6in0kmqjCc1y7bbMcW3CwHIbTEs4wfIKrKcSyalknDtqDIqKczYVVnBkBwrb8SZHbNQNDaeFDjyGnWHHWjyA5x6KDrXwqAzlGKYRQbu44TayoWSbN5vS5GTzA9ypIhVM96gyeUPyV7fUKeURKnAIS8IsDc3rL6mtZlLmmPW2KZ1QzPZeSUt7VS6K4RxWkeYesqidHiyodi0PASvFYbWSy/DkoiopEvFe9peqRSpVtVLilGWaFJYZwUbuOk0WSyAhirRyp3gSp69D1b07U9MdO3U7VXiI5cksEsKs3nKY5GHBICOoaNzjAPgcjqJdBHVXS9avSPsp1G1bYQ7HOcVCNm9QAi2NFuTjEuTi+4VSy2KqgV7OWVFpIpFJe96hk1cg/lPLqYGtY39lv3UfyTpJ6gdo5bquHtZv1EyatEi5Vmn3UwiqRI4Iq8gyF1gV1KQURBV+fIP+IyVdnLXnfvzokW7u9+8GjQIY61LUZeyRk8RSnZVLdNC39RSrYhUscEkZIBOxA0+c2aVaZjlniHGfa65Rz8WUnHq8Nlo0aC+jRqkW/o/x/67SEfr+H87C2++ebP8Y/8AGumnTtffPNn+Mf8AjXTTqRn9PN97J+9tkU8xfsr+g2/aO4DT7DrgI62262bjZJyLgCaEbZIvkomKKKovkqKqLrlPStvTwPrmk7UONE0WFdWz23qsEnCgmNbzHjvYg8JwPELkURERRVFTyVNdVvXPX9JFsq3tP6dqzpYkfwaXczqN2A3fp07FFt4d0ZuDX+RGz5IhiGaO5RHcIeU9YZeFV7hJEP3yfdSWvqm9enFirXNBW8mT0ZtMnaIgeriC6kzDpkqrHwG0JrUJkk0xxjC3o4j7RzmQ/l831+G2068Sk4/58i8rouJ9BtuKSGBj7iA0VUICRRJF4VFTUccy6RelrcKY/Y5n087OX9lKIjk2cvb3GW7R8yXkjds4ldHnmaqqqplJU1Xz551Hvqtxf0hu5+Ywdvum7KNp9jNpXGGJN7vLOv7O33NnOm0361XVuPhislvHBiuk8MZax6TOsCbjzP3tohN2tAGVPo8usmqUJbfpTeoErFUE3xk1N7bVhve80WDb7pTI7rPcq8A6x2kPCECJ5JbKVKKCGOw28VTTZ5UDJDCb806r/T2h6EEqQMfO5TOZFHnqrdNjLduzTzSVl3buanBCxV5php8EDP0z2dNQsQvOg8OaqLE2O47jBMrYfo6OiCutYV7V9OWF011Wyhm1ttRWubUVhXzA5QJUCVTZVBdhSAQiQHYpNGCEqCqIqpqUuMYLjeGoKY8F/HQB7Q9p5tnOT9o8cIg/vVkt32qie4k4JOEVCRU00bTYpmWEbeYxi24O40/dvMaeE7Hu9w7OhqMZm5JIOXIfakO0dGPs6CkWK6xXtI25IffaiBKmypM1594419S3Th1E70ZTXWe1fWdn3TvikajZrp2I4bh1bNcm2zcqY89eBlEW9x2/aOXGkRojle7JkRWfUgfjK0b7wq15016wa97W5Ozx8xVtWpNRtQsqnu8uIRS2AJccSK8MeAfnOW2Rs65MNCuLNDQ4+0SctmqU4tMq2FZwOISTGWGuTD5rsk8gOPmy64O02yIjJSMiMiXkiJVIlX61VVVVX71XWsx6fbD6KDmXTrnUOohRshyOg3Bx28uWGAam20DF5eIy6GNYPAgrKSq/eC1CE493ussSyjiaMNsttzEteh30jW2xBluy3pFcu3HyWC6Mg8N3uYyBzEbttskM4jqWd3uTWo4+iK0njUcIhEyJq2gOdr4Qu9Mq/vFc7IdIl/vzimGYdug3f7qVWSU+AZDOybFkcerMMfjza+dYwYkqH7QGuckOU5v2w1qp4A3dj5mFt3SpQU949Jmp6tTvwzNbgkSDn17CE0bDgSVbUUMjRFlUrJGJEDqoYo3Dmob33bF3drV4bmkXdPmhWnPG8/Z7FdwL9VWMVurLPEkwV2DRyGOQozcIZePGRL9lIgyxoeuazUS9QevenqvbLhexZsWs3glSBReO1TGPOiqSIvKCQc+Sprbw1rhfsw+24Yv0H7lbiOs9k3dfqLyh1l5R4WTj+BYhh+NVxgfHy22sgfy+N5KqC8y8P8SEmtj3Wc/K3bS55Rt6Zo/NS5WqH7dDTqdGUH3iWu4P+NqToyGPTKinxKM/wkkeQf8AZxstGjQX0aNC239H+P8A12l4/X8P52Ft9882f4x/41006dr755s/xj/xrpp1Iz+nm+9k/e2yKeYv2V/QbW9lt8GLYxfZEbPrKUtVNsRjqSgkh2MwbjLCmnKgLzqA2Rp5ihKX0a1WfSfUf+kLeDoE3XyBtqwzOt6zNtcVS6JkElt49kUkr1+kadRFNuoiTsRhyINf3LGiOnKeZAXZclx3aryajYybHrvHpLpMMXVXNrTfAUI2PW45si+AqqIRMGQuiKqiEoIKqiLzrD7uvsfUybzGYG6eGRbWdt/mMLN8Kk2TUk4MHLKaNPh1GVUjzTrUaXIiRbKYUInvWBinJ73IzU5htWCl5Lr1PT7tmywHbkEiAAqJnqTVZoGWLiI7nHITOFPVTHx5wm1m0enW1Cjepkwi5JLUdDKOoigninBToT0eIlgo87l8WBgi4Z1I9A2v3a3lvb2lwnazZHEpGY7lZ/kTc6bBoq0BcSBW1lJUtvW+SZRfyW1r8epIQMNTLA2mJdjCV6MMkIdJe6eN9X+zWfb1bO38vIaTarI67Ht0MRyvGAwbcbBRvm3XsZyWTUQsgzDFsgxDIfBkRollQZfLtIE6HMj2tLFbjvPtnyDkLrOJbibd29ZUZZttu3ic/Cdy9v8AJ4r07GMwx2wYejkxOYiyoM+FYQkkPPVF3T2Fdc1Eo/Wa+cw8iFob7FYFt70xbTZVsrsBhVbtthGfZHFyncJyNZ5LkuUZ1Z1raM0rGRZXmV5kFwVLQsigVNBVv1lOw4Uma7DfsJ9hLll+rJuuNFlS1BebWSk/BIh+aExJ7MYzxiNYAvL54kRpCRNwZ4o8TduPes65C9SeguiCSuZI3Uc0wAL2sSZjaU2GPM7OYnWIAw8wDEhN0cc+XPHPlz9X3/01S7O0WW7nSKHE6CKV7mN5bzaeBEcdZiI9KZekuqUmQo+FEiRILRyZkkgJGIjDr3Y4QoBVWrcwHJL3bPccZOO2T9TZsTxy/FbSP2o/DsAVRmsILgmy+3whi5GdbcYeh+KxJacZfNtYGvyS689XaESRPMIuESmBXHPWIt3RIYySvF3eIAt0B2sVjncqTs5jE5ilWAyhjCs7J8y0oTvmMSBeMLhipIUgkbDTbLejb/drrYzToSwbciLd74YjOzfH4nrmFWFJtXm+bbawrCfnOB4RuAd5OyNy+pWae/aiWWV7eYxjF1Kx+zGHciwdY/YYk/T74rbO7TbAwPZ8gMgjb92mFpWGHEsLy3xG9iBVECKvEorOoSL4aKqk8CiPPGs22F7e7R7cdUWY9aGBbS4hi/UnmxZNMsM+hzczm19RkWbxXoea5ji2C2+V2GC4/leVMSp42lnEx5WWjtbh2sh17ltYFIdr2rrcpFxrJq6DkYSLFi1eavIce3B+2YmjYxrI2pzUgXLFmxEJrEtRWS1MEZDbgvIhpbpNW3d0zVNK1LQqlomo8z2YpnaNJFeLlxqpkMziReOQyEARkBQuSSy02LSd5dV0nVtM3ht1FFxIEqywRpJJE0collZliWBDE3LjEYJMoJdmwAEaTHQe1G21wTGOn+ora2pxPA8Gq42M1dXBYgx6sqluFCtmWwjgHipZy5J2sl5/vkvWTk+bIfekz3jXINqIvTTtzd08iyza9hvVwzq9aumiTG3GZzzD0hiTMsXmHRFxhg1isMw1cRHJAlIe7UYVlx6XWsvb3S159evTV2RzIyvYkQgrJbdeKw+R0Z2c5lbJLTcwsS5Y7Q+uLVXUZUpiNYkSJCIgBGJFQKwXh7vQABsf1hs9c7LRo0F9GjVOt/R/j/12jI/X8P52Ft9882f4x/41006dr755s/xj/wAa6adSM/p5vvZP3tsinmL9lf0Gy0Lt64gzdq81aIBNWalJjfcKEoHDlxZSuByi9hoDJJ3jwXapJzwqopR1buX1Z3eKZLTtj3O2dFbQWR+t6TBfaZROfp8Ug4+/StGUQXacxPCIbdeUnwwI5kc9fZhTn3bOariO1WkJwI7EMhPsCSqx/TrtiR0teCqqiKqKK/7wqnCiSeRCqL7lFeUVPoVNe60NsYdrduciGkfZGTV2j8J1tSOxhR0ksR3e5URl9sDR0ORTvVxR7eFQQQy70C05FiWU3mOyKOvsBCnnOPy7WXHWHFGI8AtyIzSufLfcdAVTsFBJF8lFRIjAnaWlFdU6hO/hhxcRx3gQSVx1OCR4493q25IJPndMg4x16EHxz7R7M+/ZaKeyTKvbq4WKJz2Wb0j/AMWumyefu48Lnn7vLz0LNSE6Z6Y7Lcj2ioqrGP0lhOM+PkpImeFVxg5/vE3LlGif3WjXz41D63KsGkanIxwBSsqM/XkiaOMfF3UfHZnqcgi06656YqzAZ+s8bIo+LMB8dshmlpaWgHsJdlo0aC+jRpnb+j/H/rspH6/h/Owtvvnmz/GP/GumnTtffPNn+Mf+NdNOpGf0833sn722RTzF+yv6DZaXu92lpaS262xn74YQ9hed2HhtiNPkTj93TG2Pa2IyHe6wg8IiCLkCY4SI2PPbEfhmvHicJR7QZHtnjuWNnu3gf794VPZSLPYiWFrW3lM4h9zVtTu1trVNyyb5JuZXTXFblMEhR3Y8hkFcn9uPgFZuLjb9HOJI8psvW6iyFsTdrrFsSRtzzRSOK8iqxNYFR8ZglUVB5th1vGflGKX2G279LkMB2DMZI/DNRIok5kS7Rl18rtRuXFc8u1xtVUC5aeFt4HGxNm5u8IuQQgiJ7+mpGZYrEUc8U8KFIkneKVXjkjcskUwYHEzDzeZFkh6Vfh1agaM80kVlYuS5hnevYdVXKT15YmSRZFVcuyNxKylmHAwBzF4jsH6P/ciI1MxF+klq+0DqwW9ystrLaOhpygSaazyKPZRXA8xIHogKiovHKea2tudsR0DbXVU2wyOxfGbHjOvRcdpdxru3yGyeEV8KLDq2bWW+ByHEFoZEtI8FhS8STJYZE3Bw8k2B8d4AfHu7hQuP5covGvBBttF7AAEXzXtFB5X614ROV0WX3soNXKDdHd9bJXHPFaPlBuneFYQhumAQDZPUDORtFx7n6klgOd8t5Hqhgezm1LziufNNkzleo6EisD7MeOzveyamXc20uhq3qSjkT5T1RUSJ7tpIra0nSWHEk2LyC5NkMx+xJElQbR57xDBtttRbGenTjgz2MYe7fWDZtWeWmxNFlwFA41PHExqwIS4JDleNInlyicsyYwqiE2ughsvsZPyObEyfMIL0LGorgSYVbLBxiVfvNkDjBOMEguNUyEne6biCtgiC0yJRjdeSeyIgogiiIKIiIiIiIiInCIiJ5IiJ5IieSJoB7768kpfSK7KX5xbUGRVRI5I3JFRVUBVZJRxSqoURMiRDqJEXreLVYmhXTaknNQcBsShzKCI8GOLmksZG4gHlcsx4lUFixcD3S0tLQ22p2y0aNBfRo0zt/R/j/wBdlI/X8P52Ft9882f4x/41006OMz/aXf5j8A6ptLWLWLE45fhNKPO9jsPq7cRpmOM58UU+HtUH27BfTjGq5UhBNURltfNCdRe5U+hRbTheF96KSjynCp5LzouMf69n/qt/GOr0L3r/ADX/AB1pH5P3ks3b8oi6xrG8rXZqejXK1OPSak5qR25Joe0NLbuRg2uSEBjEFU1pOI8w2sDlkdb+b06hu+1OnpywpLchlma1KnNaJUcIFihb5vjJPFxycxcDh5X9WwBCja8vEfdL60ARBF/qvev/ALTTBnu3dBuFikjFLkDBlf7atsGgbcm1FiCGjNhDVxO1XB7zCQyva3KjuOx3FFDQwk5r7D3r/L/NNbY0LyfbgbswXYNE3R02kmo1HoXn4p7NizSkZHetLbuPYtGFnjjkKCYDmxxy+kjRlD9jeneOexVuS6xbNihZS3UdCkKwWYzhJkjiVIg4BK9UIKMyEFGZTgX3D2mzPba09Qu616TBkPG3VXlcy9Jq7Qe9UaFpwQU480x7VcrpCDJAlVG0fa7H3JK7BdOc8Z0DOdwoJQ2YZszqDGJQ8SpElB8SPZXTPKFEaimrb8SsdT1h58Rcntssteryp1b5/MWLf9wMT/8AuHRve9y/z/yDVe0jyR7uaRra6y8lnUKkcvP0/SbQjMNaaNgVazOAWvpG+GgjeKBRwgWO1dSSHrXlt3l1fQl0aOtW063PE1fUdWqu/OswsqBhVgKhaDyoxWxIkszHLGt2TICgaXWsS3FecJ0XSREIgIflcc8KSEJcr58KvPmnHPuTTY9SGI8sPIaoq/IcTtVU+4x5Tu+5RRPvT36kHpaebzeSXybb2TXreq7qVU1LUGllsapp9mxp95rUpLPcZ6rJBPZLnjZ7UFhJHyZkkBINC03ezeLSkhhq6lIa8AVY606RzwCNBgRASKXSMKOELE8ZUeYVODtGEwNsybcAgMV4ISThU+pfvRU80VOUVPNFVNfOpBXP8bH/ACuf4jpl15ueUfd+DcffbXt16tia9W0uxAtezYCRTvDap1r0aTLGDG0sKWRC8qCNJmjMywwBxCmiN3dRfWtGo6nLGkElmNzJHGSyB4pZIWKFsMFcxl1VixQMELuV4yF9GjS0UNUKWXm8Pd4eHPrznOPcPZtKTS9n4e7x8efXw44ce5s54vdjG3//2Q=="
+                    }
+                  }
+                }
               }
             }
           }
@@ -2597,7 +3252,16 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "{\n  \"contentLength\": 0,\n  \"contentType\": \"jpg\",\n  \"data\": \"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\",\n  \"fileName\": \"Photo.jpg\"\n}"
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "contentLength": 0,
+                      "contentType": "jpg",
+                      "data": "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",
+                      "fileName": "Photo.jpg"
+                    }
+                  }
+                }
               }
             }
           }
@@ -2625,7 +3289,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2653,7 +3317,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2689,7 +3353,25 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "{\n  \"empNo\": \"000001005\",\n  \"dedFig\": [\n    {\n      \"text\": 1,\n      \"value\": 1852.35\n    }\n  ],\n  \"otherText\": [\n    {\n      \"text\": 15,\n      \"value\": \"Finance\"\n    }\n  ]\n}"
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "empNo": "000001005",
+                      "dedFig": [
+                        {
+                          "text": 1,
+                          "value": 1852.35
+                        }
+                      ],
+                      "otherText": [
+                        {
+                          "text": 15,
+                          "value": "Finance"
+                        }
+                      ]
+                    }
+                  }
+                }
               }
             }
           }
@@ -2707,7 +3389,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2734,7 +3416,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2761,7 +3443,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2814,7 +3496,24 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"000020 - Warehouse Worker\",\n    \"value\": \"000020\"\n  },\n  {\n    \"text\": \"000023 - Assembly Line\",\n    \"value\": \"000023\"\n  },\n  {\n    \"text\": \"000025 - Forklift Operator II\",\n    \"value\": \"000025\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "000020 - Warehouse Worker",
+                        "value": "000020"
+                      },
+                      {
+                        "text": "000023 - Assembly Line",
+                        "value": "000023"
+                      },
+                      {
+                        "text": "000025 - Forklift Operator II",
+                        "value": "000025"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -2854,7 +3553,92 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"000003 - Sales\",\n    \"value\": \"000003\"\n  },\n  {\n    \"text\": \"000004 - Admin Assistant\",\n    \"value\": \"000004\"\n  },\n  {\n    \"text\": \"000005 - Marketing\",\n    \"value\": \"000005\"\n  },\n  {\n    \"text\": \"000006 - Accountant\",\n    \"value\": \"000006\"\n  },\n  {\n    \"text\": \"000007 - Payroll Admin\",\n    \"value\": \"000007\"\n  },\n  {\n    \"text\": \"000008 - Compensation Manager\",\n    \"value\": \"000008\"\n  },\n  {\n    \"text\": \"000010 - Sales\",\n    \"value\": \"000010\"\n  },\n  {\n    \"text\": \"000011 - Marketing\",\n    \"value\": \"000011\"\n  },\n  {\n    \"text\": \"000015 - Customer Service\",\n    \"value\": \"000015\"\n  },\n  {\n    \"text\": \"000030 - HR Director\",\n    \"value\": \"000030\"\n  },\n  {\n    \"text\": \"000101 - IT Manager\",\n    \"value\": \"000101\"\n  },\n  {\n    \"text\": \"000102 - IT Systems Analyst\",\n    \"value\": \"000102\"\n  },\n  {\n    \"text\": \"C0200 - Building Science Technologist\",\n    \"value\": \"C0200\"\n  },\n  {\n    \"text\": \"C0304 - Project Manager Site Assessment\",\n    \"value\": \"C0304\"\n  },\n  {\n    \"text\": \"C1000 - Field Manager\",\n    \"value\": \"C1000\"\n  },\n  {\n    \"text\": \"C4287 - Project Coordinator Haz Mat\",\n    \"value\": \"C4287\"\n  },\n  {\n    \"text\": \"C7901 - Senior Technologist OHS\",\n    \"value\": \"C7901\"\n  },\n  {\n    \"text\": \"C7910 - Team Lead Remediation\",\n    \"value\": \"C7910\"\n  },\n  {\n    \"text\": \"C7911 - RemediationTechnologist\",\n    \"value\": \"C7911\"\n  },\n  {\n    \"text\": \"NA - N/A POSITION\",\n    \"value\": \"NA\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "000003 - Sales",
+                        "value": "000003"
+                      },
+                      {
+                        "text": "000004 - Admin Assistant",
+                        "value": "000004"
+                      },
+                      {
+                        "text": "000005 - Marketing",
+                        "value": "000005"
+                      },
+                      {
+                        "text": "000006 - Accountant",
+                        "value": "000006"
+                      },
+                      {
+                        "text": "000007 - Payroll Admin",
+                        "value": "000007"
+                      },
+                      {
+                        "text": "000008 - Compensation Manager",
+                        "value": "000008"
+                      },
+                      {
+                        "text": "000010 - Sales",
+                        "value": "000010"
+                      },
+                      {
+                        "text": "000011 - Marketing",
+                        "value": "000011"
+                      },
+                      {
+                        "text": "000015 - Customer Service",
+                        "value": "000015"
+                      },
+                      {
+                        "text": "000030 - HR Director",
+                        "value": "000030"
+                      },
+                      {
+                        "text": "000101 - IT Manager",
+                        "value": "000101"
+                      },
+                      {
+                        "text": "000102 - IT Systems Analyst",
+                        "value": "000102"
+                      },
+                      {
+                        "text": "C0200 - Building Science Technologist",
+                        "value": "C0200"
+                      },
+                      {
+                        "text": "C0304 - Project Manager Site Assessment",
+                        "value": "C0304"
+                      },
+                      {
+                        "text": "C1000 - Field Manager",
+                        "value": "C1000"
+                      },
+                      {
+                        "text": "C4287 - Project Coordinator Haz Mat",
+                        "value": "C4287"
+                      },
+                      {
+                        "text": "C7901 - Senior Technologist OHS",
+                        "value": "C7901"
+                      },
+                      {
+                        "text": "C7910 - Team Lead Remediation",
+                        "value": "C7910"
+                      },
+                      {
+                        "text": "C7911 - RemediationTechnologist",
+                        "value": "C7911"
+                      },
+                      {
+                        "text": "NA - N/A POSITION",
+                        "value": "NA"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -2882,7 +3666,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2899,7 +3683,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2972,7 +3756,43 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n    {\n        \"employeeNo\": \"000000011\",\n        \"payGroup\": \"001\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"1992-03-06T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000012\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"1990-02-28T00:00:00\",\n        \"terminationDate\": \"2019-08-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000013\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"2000-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000014\",\n        \"payGroup\": \"999\",\n        \"position\": \"9003\",\n        \"initialHireDate\": \"1990-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000015\",\n        \"payGroup\": \"003\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"2015-01-27T00:00:00\"\n    }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "employeeNo": "000000011",
+                        "payGroup": "001",
+                        "position": "3000",
+                        "initialHireDate": "1992-03-06T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000012",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "1990-02-28T00:00:00",
+                        "terminationDate": "2019-08-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000013",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "2000-01-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000014",
+                        "payGroup": "999",
+                        "position": "9003",
+                        "initialHireDate": "1990-01-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000015",
+                        "payGroup": "003",
+                        "position": "3000",
+                        "initialHireDate": "2015-01-27T00:00:00"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3011,7 +3831,43 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n    {\n        \"employeeNo\": \"000000011\",\n        \"payGroup\": \"001\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"1992-03-06T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000012\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"1990-02-28T00:00:00\",\n        \"terminationDate\": \"2019-08-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000013\",\n        \"payGroup\": \"001\",\n        \"position\": \"9001\",\n        \"initialHireDate\": \"2000-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000014\",\n        \"payGroup\": \"999\",\n        \"position\": \"9003\",\n        \"initialHireDate\": \"1990-01-01T00:00:00\"\n    },\n    {\n        \"employeeNo\": \"000000015\",\n        \"payGroup\": \"003\",\n        \"position\": \"3000\",\n        \"initialHireDate\": \"2015-01-27T00:00:00\"\n    }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "employeeNo": "000000011",
+                        "payGroup": "001",
+                        "position": "3000",
+                        "initialHireDate": "1992-03-06T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000012",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "1990-02-28T00:00:00",
+                        "terminationDate": "2019-08-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000013",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "2000-01-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000014",
+                        "payGroup": "999",
+                        "position": "9003",
+                        "initialHireDate": "1990-01-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000015",
+                        "payGroup": "003",
+                        "position": "3000",
+                        "initialHireDate": "2015-01-27T00:00:00"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3031,7 +3887,36 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"00004000 - Days Standard\",\n    \"value\": \"000000003\"\n  },\n  {\n    \"text\": \"00004001 - Days Early / Late\",\n    \"value\": \"00004001\"\n  },\n  {\n    \"text\": \"00004002 - Afternoons Standard\",\n    \"value\": \"00004002\"\n  },\n  {\n    \"text\": \"00004003 - Afternoons Early / Late\",\n    \"value\": \"00004003\"\n  },\n  {\n    \"text\": \"00005001 - Evenings Standard\",\n    \"value\": \"00005001\"\n  },\n  {\n    \"text\": \"00006001 - Evenings Early / Late\",\n    \"value\": \"00006001\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "00004000 - Days Standard",
+                        "value": "000000003"
+                      },
+                      {
+                        "text": "00004001 - Days Early / Late",
+                        "value": "00004001"
+                      },
+                      {
+                        "text": "00004002 - Afternoons Standard",
+                        "value": "00004002"
+                      },
+                      {
+                        "text": "00004003 - Afternoons Early / Late",
+                        "value": "00004003"
+                      },
+                      {
+                        "text": "00005001 - Evenings Standard",
+                        "value": "00005001"
+                      },
+                      {
+                        "text": "00006001 - Evenings Early / Late",
+                        "value": "00006001"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3060,7 +3945,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3079,7 +3964,64 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"000000001 - Sleep Shift\",\n    \"value\": \"000000001\"\n  },\n  {\n    \"text\": \"000000002 - Awake Shift\",\n    \"value\": \"000000002\"\n  },\n  {\n    \"text\": \"10AM-6PM - 10:00 am - 6:00 pm\",\n    \"value\": \"10AM-6PM\"\n  },\n  {\n    \"text\": \"11AM-7PM - 11:00 am - 7:00 pm\",\n    \"value\": \"11AM-7PM\"\n  },\n  {\n    \"text\": \"12PM-8PM - 12:00 pm - 8:00 pm\",\n    \"value\": \"12PM-8PM\"\n  },\n  {\n    \"text\": \"1PM-9PM - 1:00 pm - 9:00 pm\",\n    \"value\": \"1PM-9PM\"\n  },\n  {\n    \"text\": \"2PM-6PM - 2:00 pm - 6:00 pm\",\n    \"value\": \"2PM-6PM\"\n  },\n  {\n    \"text\": \"4PM-10PM - 4:00 pm - 10:00 pm\",\n    \"value\": \"4PM-10PM\"\n  },\n  {\n    \"text\": \"5PM-11PM - 5:00 pm - 11:00 pm\",\n    \"value\": \"5PM-11PM\"\n  },\n  {\n    \"text\": \"6PM-12AM - 6:00 pm - 12:00 am\",\n    \"value\": \"6PM-12AM\"\n  },\n  {\n    \"text\": \"7AM - 3PM - 7:00 am - 3:00 pm\",\n    \"value\": \"7AM - 3PM\"\n  },\n  {\n    \"text\": \"8AM - 4PM - 8:00 am - 4:00 pm\",\n    \"value\": \"8AM - 4PM\"\n  },\n  {\n    \"text\": \"9AM - 5PM - 9:00 am - 5:00 pm\",\n    \"value\": \"9AM - 5PM\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "000000001 - Sleep Shift",
+                        "value": "000000001"
+                      },
+                      {
+                        "text": "000000002 - Awake Shift",
+                        "value": "000000002"
+                      },
+                      {
+                        "text": "10AM-6PM - 10:00 am - 6:00 pm",
+                        "value": "10AM-6PM"
+                      },
+                      {
+                        "text": "11AM-7PM - 11:00 am - 7:00 pm",
+                        "value": "11AM-7PM"
+                      },
+                      {
+                        "text": "12PM-8PM - 12:00 pm - 8:00 pm",
+                        "value": "12PM-8PM"
+                      },
+                      {
+                        "text": "1PM-9PM - 1:00 pm - 9:00 pm",
+                        "value": "1PM-9PM"
+                      },
+                      {
+                        "text": "2PM-6PM - 2:00 pm - 6:00 pm",
+                        "value": "2PM-6PM"
+                      },
+                      {
+                        "text": "4PM-10PM - 4:00 pm - 10:00 pm",
+                        "value": "4PM-10PM"
+                      },
+                      {
+                        "text": "5PM-11PM - 5:00 pm - 11:00 pm",
+                        "value": "5PM-11PM"
+                      },
+                      {
+                        "text": "6PM-12AM - 6:00 pm - 12:00 am",
+                        "value": "6PM-12AM"
+                      },
+                      {
+                        "text": "7AM - 3PM - 7:00 am - 3:00 pm",
+                        "value": "7AM - 3PM"
+                      },
+                      {
+                        "text": "8AM - 4PM - 8:00 am - 4:00 pm",
+                        "value": "8AM - 4PM"
+                      },
+                      {
+                        "text": "9AM - 5PM - 9:00 am - 5:00 pm",
+                        "value": "9AM - 5PM"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3099,7 +4041,24 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"Hamilton Health Sciences\",\n    \"value\": \"0000001\"\n  },\n  {\n    \"text\": \"Calgary Health Region\",\n    \"value\": \"0000002\"\n  },\n  {\n    \"text\": \"BC Government\",\n    \"value\": \"0000004\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "Hamilton Health Sciences",
+                        "value": "0000001"
+                      },
+                      {
+                        "text": "Calgary Health Region",
+                        "value": "0000002"
+                      },
+                      {
+                        "text": "BC Government",
+                        "value": "0000004"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3137,7 +4096,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3234,7 +4193,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3268,7 +4227,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3317,7 +4276,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3367,7 +4326,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3415,7 +4374,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3463,7 +4422,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3499,7 +4458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3556,7 +4515,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3583,7 +4542,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3628,7 +4587,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3669,7 +4628,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3718,7 +4677,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3760,7 +4719,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3826,7 +4785,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3862,7 +4821,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3898,7 +4857,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3917,7 +4876,28 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"01 - General Teamsters\",\n    \"value\": \"01\"\n  },\n  {\n    \"text\": \"02 - Teamsters Alberta (TA)\",\n    \"value\": \"02\"\n  },\n  {\n    \"text\": \"03 - CUPE (CA)\",\n    \"value\": \"03\"\n  },\n  {\n    \"text\": \"999999 - Non Union\",\n    \"value\": \"999999\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "01 - General Teamsters",
+                        "value": "01"
+                      },
+                      {
+                        "text": "02 - Teamsters Alberta (TA)",
+                        "value": "02"
+                      },
+                      {
+                        "text": "03 - CUPE (CA)",
+                        "value": "03"
+                      },
+                      {
+                        "text": "999999 - Non Union",
+                        "value": "999999"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3937,7 +4917,20 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"350 - Vacation taken\",\n    \"value\": \"350\"\n  },\n  {\n    \"text\": \"351 - Vacation Pay Pay Out\",\n    \"value\": \"351\"\n  },\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "350 - Vacation taken",
+                        "value": "350"
+                      },
+                      {
+                        "text": "351 - Vacation Pay Pay Out",
+                        "value": "351"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3957,7 +4950,24 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"01 - Employee Vacation\",\n    \"value\": \"01\"\n  },\n  {\n    \"text\": \"02 - Executive Vacation\",\n    \"value\": \"02\"\n  },\n  {\n    \"text\": \"99 - N/A GROUP\",\n    \"value\": \"99\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "01 - Employee Vacation",
+                        "value": "01"
+                      },
+                      {
+                        "text": "02 - Executive Vacation",
+                        "value": "02"
+                      },
+                      {
+                        "text": "99 - N/A GROUP",
+                        "value": "99"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -3985,7 +4995,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4004,7 +5014,28 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"Not Accrued Or Paid\",\n    \"value\": \"0\"\n  },\n  {\n    \"text\": \"Paid Each Period\",\n    \"value\": \"1\"\n  },\n  {\n    \"text\": \"Accrued\",\n    \"value\": \"2\"\n  },\n  {\n    \"text\": \"Pay Out Accrued\",\n    \"value\": \"3\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "Not Accrued Or Paid",
+                        "value": "0"
+                      },
+                      {
+                        "text": "Paid Each Period",
+                        "value": "1"
+                      },
+                      {
+                        "text": "Accrued",
+                        "value": "2"
+                      },
+                      {
+                        "text": "Pay Out Accrued",
+                        "value": "3"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -4024,7 +5055,24 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"001 - British Columbia\",\n    \"value\": \"001\"\n  },\n  {\n    \"text\": \"002 - Alberta\",\n    \"value\": \"002\"\n  },\n  {\n    \"text\": \"003 - Saskatchewan\",\n    \"value\": \"003\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "001 - British Columbia",
+                        "value": "001"
+                      },
+                      {
+                        "text": "002 - Alberta",
+                        "value": "002"
+                      },
+                      {
+                        "text": "003 - Saskatchewan",
+                        "value": "003"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -4044,7 +5092,15 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "{\n  \"isBreak\": true,\n  \"isInPunch\": true,\n  \"punchDateTime\": \"2020-06-30T07:36:59.64\"\n}"
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "isBreak": true,
+                      "isInPunch": true,
+                      "punchDateTime": "2020-06-30T07:36:59.64"
+                    }
+                  }
+                }
               }
             }
           }
@@ -4081,7 +5137,17 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "{\n  \"empNo\": \"000001005\",\n  \"isInPunch\": true,\n  \"isBreak\": true,\n  \"latitude\": -33.856159,\n  \"longitude\": 151.215256\n}"
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "empNo": "000001005",
+                      "isInPunch": true,
+                      "isBreak": true,
+                      "latitude": -33.856159,
+                      "longitude": 151.215256
+                    }
+                  }
+                }
               }
             }
           }
@@ -4101,7 +5167,11 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "true"
+                "examples": {
+                  "Example": {
+                    "value": true
+                  }
+                }
               }
             }
           }
@@ -4119,7 +5189,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4138,7 +5208,24 @@
             "description": "Ok",
             "content": {
               "application/json": {
-                "example": "[\n  {\n    \"text\": \"00001 - No Manager Approval Required\",\n    \"value\": \"00001\"\n  },\n  {\n    \"text\": \"00002 - Manager Approval Required\",\n    \"value\": \"00002\"\n  },\n  {\n    \"text\": \"00003 - No Rules Work Group\",\n    \"value\": \"00003\"\n  }\n]"
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "00001 - No Manager Approval Required",
+                        "value": "00001"
+                      },
+                      {
+                        "text": "00002 - Manager Approval Required",
+                        "value": "00002"
+                      },
+                      {
+                        "text": "00003 - No Rules Work Group",
+                        "value": "00003"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -5299,7 +6386,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -5349,7 +6436,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true
           },
           "hasErrors": {
@@ -5392,7 +6479,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -5417,7 +6504,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -5437,13 +6524,13 @@
           },
           "relations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -5482,19 +6569,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -5503,7 +6590,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -5514,7 +6601,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -5532,7 +6619,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -5545,7 +6632,7 @@
           },
           "rows": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -9014,7 +10101,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -12736,7 +13823,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "PropertyAttributes": {
         "enum": [
@@ -16036,7 +17123,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ],
   "tags": [
