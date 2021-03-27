@@ -74,25 +74,6 @@
         }
       }
     },
-    "/v1/BankTransits": {
-      "get": {
-        "tags": [
-          "Bank Transit"
-        ],
-        "summary": "List Bank Transits",
-        "operationId": "List-Bank-Transits",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {}
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Banks": {
       "get": {
         "tags": [
@@ -2153,7 +2134,6 @@
         }
       }
     },
-
     "/v1/EmployeeJobData/{empNo}": {
       "get": {
         "tags": [
