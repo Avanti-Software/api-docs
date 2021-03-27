@@ -17,63 +17,6 @@
     }
   ],
   "paths": {
-    "/v1/AttendanceCodes": {
-      "get": {
-        "tags": [
-          "Attendance Codes"
-        ],
-        "summary": "Get Attendance Codes",
-        "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
-        "operationId": "Get-Attendance-Codes",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      {
-                        "text": "ADMIN - Administration",
-                        "value": "ADMIN"
-                      },
-                      {
-                        "text": "BRVE - Bereavement Leave",
-                        "value": "BRVE"
-                      },
-                      {
-                        "text": "JURY - Jury Duty",
-                        "value": "JURY"
-                      },
-                      {
-                        "text": "LATE - Late Time",
-                        "value": "LATE"
-                      },
-                      {
-                        "text": "ORNT - Orientation Session",
-                        "value": "ORNT"
-                      },
-                      {
-                        "text": "PERS - Personal Time Off",
-                        "value": "PERS"
-                      },
-                      {
-                        "text": "READF - Reading Files",
-                        "value": "READF"
-                      },
-                      {
-                        "text": "TRAIN - Training Course",
-                        "value": "TRAIN"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/BankTransits": {
       "get": {
         "tags": [
@@ -2153,7 +2096,6 @@
         }
       }
     },
-
     "/v1/EmployeeJobData/{empNo}": {
       "get": {
         "tags": [
