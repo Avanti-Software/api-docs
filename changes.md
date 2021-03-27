@@ -1,3 +1,8 @@
+# Mar 27, 2021 10:09 PM
+**GitHub Action ID:** 693716965
+## Added
+* Path: /v1/BankTransits
+
 # Mar 27, 2021 9:43 PM
 **GitHub Action ID:** 693680028
 ## Added
