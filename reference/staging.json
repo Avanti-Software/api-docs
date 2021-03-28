@@ -22,7 +22,7 @@
         "tags": [
           "Attendance Codes"
         ],
-        "summary": "Get-Attendance-Codes",
+        "summary": "Get Attendance Codes",
         "description": "Returns a list of Attendance Codes used throughout Time & Attendance. \n\nThese are used to track absences in Avanti. ",
         "operationId": "Get-Attendance-Codes",
         "responses": {
@@ -74,12 +74,31 @@
         }
       }
     },
+    "/v1/BankTransits": {
+      "get": {
+        "tags": [
+          "Bank Transit"
+        ],
+        "summary": "List Bank Transits",
+        "operationId": "List-Bank-Transits",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "examples": {}
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/Banks": {
       "get": {
         "tags": [
           "Banks"
         ],
-        "summary": "List-Banks",
+        "summary": "List Banks",
         "description": "Returns a list of banks and their financial institution numbers. The format of Text in the response depends on the company web setting Lookup.Banks.",
         "operationId": "List-Banks",
         "responses": {
@@ -116,7 +135,7 @@
         "tags": [
           "Benefit Groups"
         ],
-        "summary": "List-Benefit-Groups",
+        "summary": "List Benefit Groups",
         "description": "Returns a list of Benefit Groups used in Benefits Administration. The format of Text in the response depends on the company web setting Lookup.BenefitGroups.\n\nIn Avanti, Benefit Groups are the different groupings of employee benefit coverage and the applicable benefit codes for each group.",
         "operationId": "List-Benefit-Groups",
         "responses": {
@@ -157,7 +176,7 @@
         "tags": [
           "Codes"
         ],
-        "summary": "Get-Codes",
+        "summary": "Get Codes",
         "description": "Returns a list of the codes used throughout Avanti. The Code Setup endpoint can provide the name for the available codes. \n\nThe sorting and filters shouldn't be sent unless they are being used.",
         "operationId": "Get-Codes",
         "requestBody": {
@@ -183,7 +202,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -194,7 +213,7 @@
         "tags": [
           "Codes"
         ],
-        "summary": "Save-Code",
+        "summary": "Save Code",
         "operationId": "Save-Code",
         "parameters": [
           {
@@ -237,7 +256,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           },
           "409": {
@@ -268,7 +287,7 @@
         "tags": [
           "Codes"
         ],
-        "summary": "Delete-Codes",
+        "summary": "Delete Codes",
         "operationId": "Delete-Codes",
         "parameters": [
           {
@@ -294,7 +313,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -305,7 +324,7 @@
         "tags": [
           "Codes"
         ],
-        "summary": "Codes-Setup",
+        "summary": "Codes Setup",
         "description": "Returns the setup for the codes used throughout Avanti. \n\nThere are several types of codes: \n- Payroll (PY)\n- Hub (AT)\n- People Management (HR)\n- Workflow Management (PM)\n- Talent Acquisition (TR)",
         "operationId": "Codes-Setup",
         "parameters": [
@@ -323,7 +342,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -334,7 +353,7 @@
         "tags": [
           "Company Info"
         ],
-        "summary": "Get-Company-Logo",
+        "summary": "Get Company Logo",
         "operationId": "Get-Company-Logo",
         "parameters": [
           {
@@ -362,7 +381,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -373,7 +392,7 @@
         "tags": [
           "Company Info"
         ],
-        "summary": "Update-Company-Logo",
+        "summary": "Update Company Logo",
         "operationId": "Update-Company-Logo",
         "requestBody": {
           "content": {
@@ -391,7 +410,9 @@
                 }
               },
               "encoding": {
-                "logos": { }
+                "logos": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -400,7 +421,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -409,13 +430,13 @@
         "tags": [
           "Company Info"
         ],
-        "summary": "Delete-Company-Logo",
+        "summary": "Delete Company Logo",
         "operationId": "Delete-Company-Logo",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -426,7 +447,7 @@
         "tags": [
           "Default Groups"
         ],
-        "summary": "List-Default-Groups",
+        "summary": "List Default Groups",
         "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group.",
         "operationId": "List-Default-Groups",
         "responses": {
@@ -471,7 +492,7 @@
         "tags": [
           "Default Groups"
         ],
-        "summary": "Get-Default-Group-Values",
+        "summary": "Get Default Group Values",
         "operationId": "Get-Default-Group-Values",
         "parameters": [
           {
@@ -487,7 +508,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -498,7 +519,7 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "List-Dependents",
+        "summary": "List Dependents",
         "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
         "operationId": "List-Dependents",
         "parameters": [
@@ -516,7 +537,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -527,7 +548,7 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Create-a-Dependent",
+        "summary": "Create a Dependent",
         "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
         "operationId": "Create-a-Dependent",
         "requestBody": {
@@ -553,7 +574,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -562,7 +583,7 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Update-a-Dependent",
+        "summary": "Update a Dependent",
         "description": "Update an existing dependent for an employee. ",
         "operationId": "Update-a-Dependent",
         "requestBody": {
@@ -588,7 +609,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -597,7 +618,7 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Delete-a-Dependent",
+        "summary": "Delete a Dependent",
         "description": "Deletes the employee's dependent.",
         "operationId": "Delete-a-Dependent",
         "parameters": [
@@ -623,7 +644,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -634,7 +655,7 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Dependents-Setup",
+        "summary": "Dependents Setup",
         "description": "Returns the dependents setup data.",
         "operationId": "Dependents-Setup",
         "parameters": [
@@ -652,7 +673,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -663,7 +684,7 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "List-Emergency-Contacts",
+        "summary": "List Emergency Contacts",
         "description": "Returns a list of the employee's emergency contacts. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "List-Emergency-Contacts",
         "parameters": [
@@ -680,7 +701,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -689,7 +710,7 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Create-Emergency-Contact",
+        "summary": "Create Emergency Contact",
         "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Create-Emergency-Contact",
         "requestBody": {
@@ -715,7 +736,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -724,7 +745,7 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Update-Emergency-Contact",
+        "summary": "Update Emergency Contact",
         "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Update-Emergency-Contact",
         "requestBody": {
@@ -750,7 +771,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -759,7 +780,7 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Delete-Emergency-Contact",
+        "summary": "Delete Emergency Contact",
         "description": "Deletes the employee's emergency contact.",
         "operationId": "Delete-Emergency-Contact",
         "parameters": [
@@ -784,7 +805,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -795,7 +816,7 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Emergency-Contacts-Setup",
+        "summary": "Emergency Contacts Setup",
         "description": "Returns the emergency contacts setup data.",
         "operationId": "Emergency-Contacts-Setup",
         "parameters": [
@@ -1151,7 +1172,7 @@
         "tags": [
           "Employee Address"
         ],
-        "summary": "Update-Employee-Address",
+        "summary": "Update Employee Address",
         "description": "Updates the home address of an employee. ",
         "operationId": "Update-Employee-Address",
         "requestBody": {
@@ -1177,7 +1198,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1188,7 +1209,7 @@
         "tags": [
           "Employee Basic Info"
         ],
-        "summary": "Update-Employee-Basic-Info",
+        "summary": "Update Employee Basic Info",
         "description": "Returns the basic information for the employee, such as full name, birth date, language and SIN information.",
         "operationId": "Update-Employee-Basic-Info",
         "requestBody": {
@@ -1214,7 +1235,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1225,7 +1246,7 @@
         "tags": [
           "Employee Basic Info"
         ],
-        "summary": "Updates-Employee-Photo",
+        "summary": "Updates Employee Photo",
         "operationId": "Updates-Employee-Photo",
         "parameters": [
           {
@@ -1254,7 +1275,9 @@
                 }
               },
               "encoding": {
-                "files": { }
+                "files": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -1263,7 +1286,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1272,7 +1295,7 @@
         "tags": [
           "Employee Basic Info"
         ],
-        "summary": "Deletes-Employee-Photo",
+        "summary": "Deletes Employee Photo",
         "operationId": "Deletes-Employee-Photo",
         "parameters": [
           {
@@ -1289,7 +1312,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1300,7 +1323,7 @@
         "tags": [
           "Employee Benefit Codes"
         ],
-        "summary": "Update-V34-and-V35-values",
+        "summary": "Update V34 and V35 values",
         "operationId": "Update-V34-and-V35-values",
         "parameters": [
           {
@@ -1340,7 +1363,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1351,7 +1374,7 @@
         "tags": [
           "Employee Benefit Group"
         ],
-        "summary": "Get-Employee-Benefit-Information",
+        "summary": "Get Employee Benefit Information",
         "operationId": "Get-Employee-Benefit-Information",
         "parameters": [
           {
@@ -1368,7 +1391,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1379,7 +1402,7 @@
         "tags": [
           "Employee Defaults Group"
         ],
-        "summary": "Get-Employee-Defaults-Group",
+        "summary": "Get Employee Defaults Group",
         "operationId": "Get-Employee-Defaults-Group",
         "parameters": [
           {
@@ -1396,7 +1419,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1407,7 +1430,7 @@
         "tags": [
           "Employee Earning Codes"
         ],
-        "summary": "Get-Employee-Earning-Codes",
+        "summary": "Get Employee Earning Codes",
         "description": "This returns a list of all the earning codes for the employee. The format of Text in the response depends on the company web setting Lookup.EarnDeductCode.",
         "operationId": "Get-Employee-Earning-Codes",
         "parameters": [
@@ -1483,7 +1506,7 @@
         "tags": [
           "Employee Emails"
         ],
-        "summary": "Update-Employee-Email",
+        "summary": "Update Employee Email",
         "operationId": "Update-Employee-Email",
         "parameters": [
           {
@@ -1528,7 +1551,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1539,7 +1562,7 @@
         "tags": [
           "Employee Job Info"
         ],
-        "summary": "Get-Job-Information",
+        "summary": "Get Job Information",
         "operationId": "Get-Job-Information",
         "parameters": [
           {
@@ -1556,7 +1579,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1567,7 +1590,7 @@
         "tags": [
           "Employee Pay Info"
         ],
-        "summary": "Get-Employee-Pay-Info",
+        "summary": "Get Employee Pay Info",
         "operationId": "Get-Employee-Pay-Info",
         "parameters": [
           {
@@ -1584,7 +1607,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1595,7 +1618,7 @@
         "tags": [
           "Employee Phone Number"
         ],
-        "summary": "Update-Employee-Phone-Number",
+        "summary": "Update Employee Phone Number",
         "operationId": "Update-Employee-Phone-Number",
         "parameters": [
           {
@@ -1631,7 +1654,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1640,7 +1663,7 @@
         "tags": [
           "Employee Phone Number"
         ],
-        "summary": "Delete-Employee-Phone-Number",
+        "summary": "Delete Employee Phone Number",
         "operationId": "Delete-Employee-Phone-Number",
         "parameters": [
           {
@@ -1676,7 +1699,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1687,7 +1710,7 @@
         "tags": [
           "Employee Vacation Info"
         ],
-        "summary": "Get-Employee-Vacation-Info",
+        "summary": "Get Employee Vacation Info",
         "operationId": "Get-Employee-Vacation-Info",
         "parameters": [
           {
@@ -1704,7 +1727,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1715,7 +1738,7 @@
         "tags": [
           "EmployeeGL Info"
         ],
-        "summary": "Get-Employee-GL-Infomation",
+        "summary": "Get Employee GL Infomation",
         "operationId": "Get-Employee-GL-Infomation",
         "parameters": [
           {
@@ -1732,7 +1755,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1743,7 +1766,7 @@
         "tags": [
           "Employees"
         ],
-        "summary": "List-Employees",
+        "summary": "List Employees",
         "operationId": "List-Employees",
         "requestBody": {
           "content": {
@@ -1768,7 +1791,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1779,7 +1802,7 @@
         "tags": [
           "Employees"
         ],
-        "summary": "Get-Employee-Raw-Photo",
+        "summary": "Get Employee Raw Photo",
         "operationId": "Get-Employee-Raw-Photo",
         "parameters": [
           {
@@ -1814,7 +1837,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1825,7 +1848,7 @@
         "tags": [
           "Employees"
         ],
-        "summary": "Get-Employee-Details",
+        "summary": "Get Employee Details",
         "operationId": "Get-Employee-Details",
         "parameters": [
           {
@@ -1842,7 +1865,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1853,7 +1876,7 @@
         "tags": [
           "Employment History"
         ],
-        "summary": "Add-Employment-History",
+        "summary": "Add Employment History",
         "operationId": "Add-Employment-History",
         "requestBody": {
           "content": {
@@ -1878,7 +1901,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1889,7 +1912,7 @@
         "tags": [
           "Employment Status"
         ],
-        "summary": "List-Employment-Statuses",
+        "summary": "List Employment Statuses",
         "description": "Returns a list of the defined Employment Status codes. The format of Text in the response depends on the company web setting Lookup.EmploymentStatus.\n\nIn Avanti, these are used to manage and classify employees. For example, an employment status code may be used to indicate that an employee is on leave.",
         "operationId": "List-Employment-Statuses",
         "responses": {
@@ -1962,13 +1985,13 @@
         "tags": [
           "GLs"
         ],
-        "summary": "List-GL-Benefit-Groups",
+        "summary": "List GL Benefit Groups",
         "operationId": "List-GL-Benefit-Groups",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1979,14 +2002,14 @@
         "tags": [
           "GLs"
         ],
-        "summary": "List-GL-Groups",
+        "summary": "List GL Groups",
         "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
         "operationId": "List-GL-Groups",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -1997,7 +2020,7 @@
         "tags": [
           "GLs"
         ],
-        "summary": "List-GL-Accounts",
+        "summary": "List GL Accounts",
         "operationId": "List-GL-Accounts",
         "parameters": [
           {
@@ -2060,7 +2083,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2071,13 +2094,13 @@
         "tags": [
           "GLs"
         ],
-        "summary": "Get-GL-Setup",
+        "summary": "Get GL Setup",
         "operationId": "Get-GL-Setup",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2088,7 +2111,7 @@
         "tags": [
           "GLs"
         ],
-        "summary": "Get-GL-Full-Account-Description",
+        "summary": "Get GL Full Account Description",
         "operationId": "Get-GL-Full-Account-Description",
         "parameters": [
           {
@@ -2106,7 +2129,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2117,25 +2140,26 @@
         "tags": [
           "Grid Codes"
         ],
-        "summary": "List-Grid-Codes",
+        "summary": "List Grid Codes",
         "description": "Returns a list of the Rate Grid Codes. The format of Text in the response depends on the company web setting Lookup.GridCodes.\n\nRate Grids are defined rate structures that can be applied to employees based on position or earnings, such a shift premiums and travel rates. Additionally, future rates can be defined for each rate grid.",
         "operationId": "List-Grid-Codes",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
       }
     },
+
     "/v1/EmployeeJobData/{empNo}": {
       "get": {
         "tags": [
           "Job Data"
         ],
-        "summary": "Get-Employee-Job-Data",
+        "summary": "Get Employee Job Data",
         "operationId": "Get-Employee-Job-Data",
         "parameters": [
           {
@@ -2152,7 +2176,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2163,7 +2187,7 @@
         "tags": [
           "Job Status"
         ],
-        "summary": "List-Job-Statuses",
+        "summary": "List Job Statuses",
         "description": "Returns a list of Job Status. The format of Text in the response depends on the company web setting Lookup.JobStatus.\n\nThese are used to classify employees on their job status, such as Casual vs Contract workers.",
         "operationId": "List-Job-Statuses",
         "responses": {
@@ -2204,14 +2228,14 @@
         "tags": [
           "Locations"
         ],
-        "summary": "List-Locations",
+        "summary": "List Locations",
         "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
         "operationId": "List-Locations",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2222,13 +2246,13 @@
         "tags": [
           "New Experience"
         ],
-        "summary": "New-Experience-Setup",
+        "summary": "New Experience Setup",
         "operationId": "New-Experience-Setup",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2239,7 +2263,7 @@
         "tags": [
           "New Experience"
         ],
-        "summary": "Add-New-Experience",
+        "summary": "Add New Experience",
         "operationId": "Add-New-Experience",
         "requestBody": {
           "content": {
@@ -2264,7 +2288,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2275,7 +2299,7 @@
         "tags": [
           "New Hire"
         ],
-        "summary": "Add-New-Hire",
+        "summary": "Add New Hire",
         "operationId": "Add-New-Hire",
         "requestBody": {
           "content": {
@@ -2300,7 +2324,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2311,13 +2335,13 @@
         "tags": [
           "New Hire"
         ],
-        "summary": "New-Hire-Setup",
+        "summary": "New Hire Setup",
         "operationId": "New-Hire-Setup",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2328,7 +2352,7 @@
         "tags": [
           "New Hire"
         ],
-        "summary": "Get-Default-Group-Values-and-Setup",
+        "summary": "Get Default Group Values and Setup",
         "operationId": "Get-Default-Group-Values-and-Setup",
         "parameters": [
           {
@@ -2343,7 +2367,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2354,14 +2378,14 @@
         "tags": [
           "Notification Settings"
         ],
-        "summary": "List-Notification-Settings",
+        "summary": "List Notification Settings",
         "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
         "operationId": "List-Notification-Settings",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2370,7 +2394,7 @@
         "tags": [
           "Notification Settings"
         ],
-        "summary": "Update-Notification-Settings",
+        "summary": "Update Notification Settings",
         "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
         "operationId": "Update-Notification-Settings",
         "requestBody": {
@@ -2405,7 +2429,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2416,7 +2440,7 @@
         "tags": [
           "Notifications"
         ],
-        "summary": "Get-a-Notification",
+        "summary": "Get a Notification",
         "description": "Returns the details of the notification for the employee attached to the Avanti User.",
         "operationId": "Get-a-Notification",
         "parameters": [
@@ -2435,7 +2459,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2446,7 +2470,7 @@
         "tags": [
           "Notifications"
         ],
-        "summary": "List-Notifications",
+        "summary": "List Notifications",
         "description": "Returns a list of notifications for the employee attached to the Avanti User. \n\nIf no request parameters are sent, the 20 most recent notifications are returned.",
         "operationId": "List-Notifications",
         "parameters": [
@@ -2521,7 +2545,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2530,7 +2554,7 @@
         "tags": [
           "Notifications"
         ],
-        "summary": "Mark-Notifications-as-Read",
+        "summary": "Mark Notifications as Read",
         "operationId": "Mark-Notifications-as-Read",
         "requestBody": {
           "content": {
@@ -2555,7 +2579,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2566,7 +2590,7 @@
         "tags": [
           "Notifications"
         ],
-        "summary": "Mark-all-Notifications-as-Read",
+        "summary": "Mark all Notifications as Read",
         "operationId": "Mark-all-Notifications-as-Read",
         "requestBody": {
           "content": {
@@ -2591,7 +2615,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2602,13 +2626,13 @@
         "tags": [
           "Notifications"
         ],
-        "summary": "Get-Unread-Notification-Count",
+        "summary": "Get Unread Notification Count",
         "operationId": "Get-Unread-Notification-Count",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2619,13 +2643,13 @@
         "tags": [
           "Notifications"
         ],
-        "summary": "List-Unpushed-Notifications",
+        "summary": "List Unpushed Notifications",
         "operationId": "List-Unpushed-Notifications",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2636,7 +2660,7 @@
         "tags": [
           "Notifications"
         ],
-        "summary": "Register-Push-Notification-Channel",
+        "summary": "Register Push Notification Channel",
         "operationId": "Register-Push-Notification-Channel",
         "requestBody": {
           "content": {
@@ -2661,7 +2685,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2672,7 +2696,7 @@
         "tags": [
           "Pay Codes"
         ],
-        "summary": "List-Pay-Codes",
+        "summary": "List Pay Codes",
         "description": "Returns a list of the pay codes. The format of Text in the response depends on the company web setting Lookup.PayCode.\n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time.",
         "operationId": "List-Pay-Codes",
         "responses": {
@@ -2733,7 +2757,7 @@
         "tags": [
           "Pay Groups"
         ],
-        "summary": "List-Pay-Groups",
+        "summary": "List Pay Groups",
         "description": "Returns a list of pay groups. The format of Text in the response depends on the company web setting Lookup.PayGroups.\n\nIn Avanti, pay groups determine many of the pay and tax calculations factors, such as EI rates, CPP rates, the CRA business number, Quebec Employer ID, etc. They are assigned to employees that are paid at the same time and share the same pay period factors.",
         "operationId": "List-Pay-Groups",
         "responses": {
@@ -2786,7 +2810,7 @@
         "tags": [
           "Pay Groups"
         ],
-        "summary": "Get-Pay-Group",
+        "summary": "Get Pay Group",
         "operationId": "Get-Pay-Group",
         "parameters": [
           {
@@ -2802,7 +2826,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -2813,7 +2837,7 @@
         "tags": [
           "Pay Statements"
         ],
-        "summary": "List-Pay-Statements",
+        "summary": "List Pay Statements",
         "description": "Returns a list of pay statements, with the pay totals,  for the employee assigned to the user.",
         "operationId": "List-Pay-Statements",
         "parameters": [
@@ -2891,14 +2915,14 @@
                       {
                         "bankNo": "01",
                         "benefits": 1998.84,
-                        "chequeDate": "2020-08-31T00:00:00.0000000+00:00",
+                        "chequeDate": "2020-08-31T00:00:00",
                         "chequeNo": "038612",
                         "deductions": 1468.77,
                         "earnings": 3744,
                         "empNo": "000001005",
                         "keyExtension": 1,
                         "netPay": 2275.23,
-                        "payEndingDate": "2020-08-31T00:00:00.0000000+00:00",
+                        "payEndingDate": "2020-08-31T00:00:00",
                         "runNumber": 2003
                       }
                     ]
@@ -2915,7 +2939,7 @@
         "tags": [
           "Pay Statements"
         ],
-        "summary": "List-Cancelled-Pay-Statements",
+        "summary": "List Cancelled Pay Statements",
         "description": "Returns a list of the pay run of cancelled payment for the employee.\n\nIn Avanti, a cancelled payment is a complete reversal of all values in the initially processed payment.",
         "operationId": "List-Cancelled-Pay-Statements",
         "parameters": [
@@ -2972,7 +2996,7 @@
         "tags": [
           "Pay Statements"
         ],
-        "summary": "Get-PDF-Pay-Statement",
+        "summary": "Get PDF Pay Statement",
         "description": "Returns a byte array of the pay statement with a content type of application/pdf for the employee assigned to the current Avanti User.",
         "operationId": "Get-PDF-Pay-Statement",
         "parameters": [
@@ -3006,7 +3030,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3017,7 +3041,7 @@
         "tags": [
           "Pay Statements"
         ],
-        "summary": "Get-Pay-Statement",
+        "summary": "Get Pay Statement",
         "operationId": "Get-Pay-Statement",
         "parameters": [
           {
@@ -3042,7 +3066,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3053,7 +3077,7 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Get-Personal-Information",
+        "summary": "Get Personal Information",
         "description": "Returns the personal information for an employee. ",
         "operationId": "Get-Personal-Information",
         "parameters": [
@@ -3071,7 +3095,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3082,7 +3106,7 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Update-Personal-Information",
+        "summary": "Update Personal Information",
         "description": "Provides the ability to update the personal information for the employee. \n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info. ",
         "operationId": "Update-Personal-Information",
         "requestBody": {
@@ -3108,7 +3132,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3119,7 +3143,7 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Get-Employee-Photo",
+        "summary": "Get Employee Photo",
         "description": "Returns a byte array of the employee's photo. ",
         "operationId": "Get-Employee-Photo",
         "parameters": [
@@ -3174,7 +3198,7 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Update-Employee-Photo",
+        "summary": "Update Employee Photo",
         "description": "Creates a new photo for the employee or replaces the existing employee photo from a byte array. \n\nWe recommend using photos that square or close to square to avoid scaling issues. ",
         "operationId": "Update-Employee-Photo",
         "parameters": [
@@ -3231,7 +3255,7 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Delete-Employee-Photo",
+        "summary": "Delete Employee Photo",
         "description": "Deletes the employee's photo. ",
         "operationId": "Delete-Employee-Photo",
         "parameters": [
@@ -3249,7 +3273,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3260,7 +3284,7 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Get-Employee-Figures",
+        "summary": "Get Employee Figures",
         "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
         "operationId": "Get-Employee-Figures",
         "parameters": [
@@ -3277,7 +3301,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3286,7 +3310,7 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Update-Employee-Figures",
+        "summary": "Update Employee Figures",
         "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
         "operationId": "Update-Employee-Figures",
         "requestBody": {
@@ -3343,13 +3367,13 @@
         "tags": [
           "Personal Info"
         ],
-        "summary": "Personal-Info-Setup",
+        "summary": "Personal Info Setup",
         "operationId": "Personal-Info-Setup",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3360,7 +3384,7 @@
         "tags": [
           "Position Rate"
         ],
-        "summary": "Get-Position-Rate-Description",
+        "summary": "Get Position Rate Description",
         "operationId": "Get-Position-Rate-Description",
         "parameters": [
           {
@@ -3376,7 +3400,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3387,7 +3411,7 @@
         "tags": [
           "Position Rate"
         ],
-        "summary": "List-Position-Rates",
+        "summary": "List Position Rates",
         "operationId": "List-Position-Rates",
         "parameters": [
           {
@@ -3403,7 +3427,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3414,7 +3438,7 @@
         "tags": [
           "Positions"
         ],
-        "summary": "List-Employee-Positions",
+        "summary": "List Employee Positions",
         "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
         "operationId": "List-Employee-Positions",
         "parameters": [
@@ -3485,7 +3509,7 @@
         "tags": [
           "Positions"
         ],
-        "summary": "List-Positions",
+        "summary": "List Positions",
         "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
         "operationId": "List-Positions",
         "parameters": [
@@ -3610,7 +3634,7 @@
         "tags": [
           "Positions"
         ],
-        "summary": "Get-Position-Details",
+        "summary": "Get Position Details",
         "operationId": "Get-Position-Details",
         "parameters": [
           {
@@ -3626,7 +3650,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3637,13 +3661,13 @@
         "tags": [
           "Rate Grids"
         ],
-        "summary": "List-of-Rate-Grids",
+        "summary": "List of Rate Grids",
         "operationId": "List-of-Rate-Grids",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3654,7 +3678,7 @@
         "tags": [
           "Reporter"
         ],
-        "summary": "Get-Report-Data",
+        "summary": "Get Report Data",
         "description": "This will return the contents of the specified report based.\n\nUsing this endpoint, the information returned can be filtered based on  date range and employee range. If you need the report to filtered by additional options, please use the Get Report Data With Options endpoint.  \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
         "operationId": "Get-Report-Data",
         "parameters": [
@@ -3723,32 +3747,32 @@
                         "employeeNo": "000000011",
                         "payGroup": "001",
                         "position": "3000",
-                        "initialHireDate": "1992-03-06T00:00:00.0000000+00:00"
+                        "initialHireDate": "1992-03-06T00:00:00"
                       },
                       {
                         "employeeNo": "000000012",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "1990-02-28T00:00:00.0000000+00:00",
-                        "terminationDate": "2019-08-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "1990-02-28T00:00:00",
+                        "terminationDate": "2019-08-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000013",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "2000-01-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "2000-01-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000014",
                         "payGroup": "999",
                         "position": "9003",
-                        "initialHireDate": "1990-01-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "1990-01-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000015",
                         "payGroup": "003",
                         "position": "3000",
-                        "initialHireDate": "2015-01-27T00:00:00.0000000+00:00"
+                        "initialHireDate": "2015-01-27T00:00:00"
                       }
                     ]
                   }
@@ -3764,7 +3788,7 @@
         "tags": [
           "Reporter"
         ],
-        "summary": "Get-Report-Data-With-Options",
+        "summary": "Get Report Data With Options",
         "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
         "operationId": "Get-Report-Data-With-Options",
         "requestBody": {
@@ -3798,32 +3822,32 @@
                         "employeeNo": "000000011",
                         "payGroup": "001",
                         "position": "3000",
-                        "initialHireDate": "1992-03-06T00:00:00.0000000+00:00"
+                        "initialHireDate": "1992-03-06T00:00:00"
                       },
                       {
                         "employeeNo": "000000012",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "1990-02-28T00:00:00.0000000+00:00",
-                        "terminationDate": "2019-08-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "1990-02-28T00:00:00",
+                        "terminationDate": "2019-08-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000013",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "2000-01-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "2000-01-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000014",
                         "payGroup": "999",
                         "position": "9003",
-                        "initialHireDate": "1990-01-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "1990-01-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000015",
                         "payGroup": "003",
                         "position": "3000",
-                        "initialHireDate": "2015-01-27T00:00:00.0000000+00:00"
+                        "initialHireDate": "2015-01-27T00:00:00"
                       }
                     ]
                   }
@@ -3839,7 +3863,7 @@
         "tags": [
           "Schedule Templates"
         ],
-        "summary": "List-Schedule-Templates",
+        "summary": "List Schedule Templates",
         "description": "Returns a list of the schedule templates. The format of Text in the response depends on the company web setting Lookup.ScheduleTemplates. \n\nIn Avanti, Schedule templates define the commonly used schedule rotations. These rotations can be used to create employee schedules automatically by rolling schedules forward or on demand by adding the schedule template for a specific day.",
         "operationId": "List-Schedule-Templates",
         "responses": {
@@ -3905,7 +3929,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -3916,7 +3940,7 @@
         "tags": [
           "Shift Codes"
         ],
-        "summary": "List-Shift-Codes",
+        "summary": "List Shift Codes",
         "description": "Returns a list of the shift codes. \n\nIn Avanti, shift codes are used in Schedules and Time Cards to apply default from/to times, break rules and premium rules.",
         "operationId": "List-Shift-Codes",
         "responses": {
@@ -3993,7 +4017,7 @@
         "tags": [
           "Task IDs"
         ],
-        "summary": "List-Task-IDs",
+        "summary": "List Task IDs",
         "description": "Returns a list of the defined tasks.\n\nIn Avanti, Task Ids are used throughout time entry. These are for tracking purposes and are defined to suit your organizations needs.",
         "operationId": "List-Task-IDs",
         "responses": {
@@ -4030,7 +4054,7 @@
         "tags": [
           "Time Data"
         ],
-        "summary": "Add-Time-Data-Entries",
+        "summary": "Add Time Data Entries",
         "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.",
         "operationId": "Add-Time-Data-Entries",
         "requestBody": {
@@ -4056,7 +4080,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4067,7 +4091,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "List-Time-Entries",
+        "summary": "List Time Entries",
         "operationId": "List-Time-Entries",
         "parameters": [
           {
@@ -4153,7 +4177,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4164,7 +4188,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "List-Time-Entry-Templates",
+        "summary": "List Time Entry Templates",
         "operationId": "List-Time-Entry-Templates",
         "parameters": [
           {
@@ -4187,7 +4211,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4198,7 +4222,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Get-Time-Worked",
+        "summary": "Get Time Worked",
         "operationId": "Get-Time-Worked",
         "parameters": [
           {
@@ -4236,7 +4260,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4247,7 +4271,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "List-Available-Shifts",
+        "summary": "List Available Shifts",
         "operationId": "List-Available-Shifts",
         "parameters": [
           {
@@ -4286,7 +4310,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4297,7 +4321,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Cancel-Pooled-Entries",
+        "summary": "Cancel Pooled Entries",
         "operationId": "Cancel-Pooled-Entries",
         "requestBody": {
           "content": {
@@ -4334,7 +4358,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4345,7 +4369,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Cancel-Pickup-Requests",
+        "summary": "Cancel Pickup Requests",
         "operationId": "Cancel-Pickup-Requests",
         "requestBody": {
           "content": {
@@ -4382,7 +4406,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4393,7 +4417,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Create-a-Pickup-Request",
+        "summary": "Create a Pickup Request",
         "operationId": "Create-a-Pickup-Request",
         "requestBody": {
           "content": {
@@ -4418,7 +4442,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4429,7 +4453,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "List-Pickup-Requests",
+        "summary": "List Pickup Requests",
         "operationId": "List-Pickup-Requests",
         "parameters": [
           {
@@ -4475,7 +4499,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4486,7 +4510,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "List-Exchange-Offers",
+        "summary": "List Exchange Offers",
         "operationId": "List-Exchange-Offers",
         "parameters": [
           {
@@ -4502,7 +4526,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4513,7 +4537,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "List-Employee-Acceptance",
+        "summary": "List Employee Acceptance",
         "operationId": "List-Employee-Acceptance",
         "requestBody": {
           "content": {
@@ -4547,7 +4571,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4558,7 +4582,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Get-Pool-Entry",
+        "summary": "Get Pool Entry",
         "operationId": "Get-Pool-Entry",
         "parameters": [
           {
@@ -4588,7 +4612,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4599,7 +4623,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Get-Pickup-Entry",
+        "summary": "Get Pickup Entry",
         "operationId": "Get-Pickup-Entry",
         "parameters": [
           {
@@ -4637,7 +4661,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4648,7 +4672,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Get-Pooled-Schedule",
+        "summary": "Get Pooled Schedule",
         "operationId": "Get-Pooled-Schedule",
         "parameters": [
           {
@@ -4679,7 +4703,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4690,7 +4714,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "List-Pool-Requests",
+        "summary": "List Pool Requests",
         "operationId": "List-Pool-Requests",
         "parameters": [
           {
@@ -4745,7 +4769,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4756,7 +4780,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Post-a-Schedule",
+        "summary": "Post a Schedule",
         "operationId": "Post-a-Schedule",
         "requestBody": {
           "content": {
@@ -4781,7 +4805,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4792,7 +4816,7 @@
         "tags": [
           "Time Management"
         ],
-        "summary": "Create-a-Comment",
+        "summary": "Create a Comment",
         "operationId": "Create-a-Comment",
         "requestBody": {
           "content": {
@@ -4817,7 +4841,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4828,7 +4852,7 @@
         "tags": [
           "Union Codes"
         ],
-        "summary": "List-Union-Codes",
+        "summary": "List Union Codes",
         "description": "Returns a list of the Union Codes defined. The format of Text in the response depends on the company web setting Lookup.Unions. \n\nIn Avanti, Union Codes identify the union affiliations and are used to determine union dues.",
         "operationId": "List-Union-Codes",
         "responses": {
@@ -4869,7 +4893,7 @@
         "tags": [
           "Vacation Earning Codes"
         ],
-        "summary": "List-Vacation-Earning-Codes",
+        "summary": "List Vacation Earning Codes",
         "description": "Returns a list of the earning codes setup for paying vacation each period or to pay out accrued. The format of Text in the response depends on the company web setting Lookup.VacationEarningCodes. \n\nIn Avanti, vacation earning codes must have either Vacation or Other Vacation selected for the Earning Type.",
         "operationId": "List-Vacation-Earning-Codes",
         "responses": {
@@ -4902,7 +4926,7 @@
         "tags": [
           "Vacation Groups"
         ],
-        "summary": "List-Vacation-Groups",
+        "summary": "List Vacation Groups",
         "description": "Returns a list of the defined vacation group. The format of Text in the response depends on the company web setting Lookup.VacationGroups. \n\nIn Avanti, vacation groups determine the vacation entitlement calculation for each employee assigned to the group.",
         "operationId": "List-Vacation-Groups",
         "responses": {
@@ -4939,7 +4963,7 @@
         "tags": [
           "Vacation Groups"
         ],
-        "summary": "Get-Vacation-Group",
+        "summary": "Get Vacation Group",
         "operationId": "Get-Vacation-Group",
         "parameters": [
           {
@@ -4955,7 +4979,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -4966,7 +4990,7 @@
         "tags": [
           "Vacation Options"
         ],
-        "summary": "List-Vacation-Options",
+        "summary": "List Vacation Options",
         "description": "Returns a list of the vacation options. The Text will always be the description of the option.\n\nIn Avanti, the Vacation Option indicates what will happen with the calculated vacation for an employee.",
         "operationId": "List-Vacation-Options",
         "responses": {
@@ -5007,7 +5031,7 @@
         "tags": [
           "WCB Groups"
         ],
-        "summary": "List-WCB-Groups",
+        "summary": "List WCB Groups",
         "description": "Returns a list of the Workers Compensation Groups. \n\nIn Avanti, these maintain all WCB rates and maximums for payroll processing.",
         "operationId": "List-WCB-Groups",
         "responses": {
@@ -5044,7 +5068,7 @@
         "tags": [
           "Web Punch"
         ],
-        "summary": "Get-Last-Check-in",
+        "summary": "Get Last Check-in",
         "description": "Returns the most recent punch of the employee attached to the user.",
         "operationId": "Get-Last-Check-in",
         "responses": {
@@ -5057,7 +5081,7 @@
                     "value": {
                       "isBreak": true,
                       "isInPunch": true,
-                      "punchDateTime": "2020-06-30T07:36:59.6400000+00:00"
+                      "punchDateTime": "2020-06-30T07:36:59.64"
                     }
                   }
                 }
@@ -5070,7 +5094,7 @@
         "tags": [
           "Web Punch"
         ],
-        "summary": "Create-a-Check-in",
+        "summary": "Create a Check-in",
         "description": "Creates a punch for the employee. \n\nThe time of the punch is the current time on the SQL Server, adjusted by the time zone specified on Web Punch Employee Setup on the Desktop Application. If there is no setup for the employee, the time will be adjusted by the Province of Employment on the Tax Factors tab of the Employee Profile.\n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup. \n\nIf company web setting MobileSettings.WebPunchSettings.RequireLocationServices is true, longitude and latitude must be included.",
         "operationId": "Create-a-Check-in",
         "requestBody": {
@@ -5119,7 +5143,7 @@
         "tags": [
           "Web Punch"
         ],
-        "summary": "Is-Check-in-Allowed",
+        "summary": "Is Check-in Allowed",
         "description": "Returns true if the employee can punch and false if the employee cannot. \n\nEmployees cannot punch if ‘Allow Web Punch’ is not selected on Time Clock >> Installation & Maintenance >> Employee Web & PC Punch Setup.",
         "operationId": "Is-Check-in-Allowed",
         "responses": {
@@ -5143,13 +5167,13 @@
         "tags": [
           "Whats New"
         ],
-        "summary": "What's-New-page-for-web",
+        "summary": "What's New page for web",
         "operationId": "What's-New-page-for-web",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": null
+              "application/json": {}
             }
           }
         }
@@ -5160,7 +5184,7 @@
         "tags": [
           "Work Groups"
         ],
-        "summary": "List-Work-Groups",
+        "summary": "List Work Groups",
         "description": "Returns a list of the defined employee work groups. The format of Text in the response depends on the company web setting Lookup.WorkGroups.\n\nIn Avanti, Work Groups are used to determine which employees enter time using Time and Attendance. These group employees based on common rules and shift(s). Each Work Group has a Holiday Rule, Punch Rule and Overtime Rule and one or more Shifts.",
         "operationId": "List-Work-Groups",
         "responses": {
@@ -5187,23 +5211,6 @@
                   }
                 }
               }
-            }
-          }
-        }
-      }
-    },
-    "/v1/BankTransits": {
-      "get": {
-        "tags": [
-          "Bank Transit"
-        ],
-        "summary": "List-Bank-Transits",
-        "operationId": "List-Bank-Transits",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": null
             }
           }
         }
@@ -6363,7 +6370,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6413,7 +6420,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true
           },
           "hasErrors": {
@@ -6456,7 +6463,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6481,7 +6488,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6501,13 +6508,13 @@
           },
           "relations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -6546,19 +6553,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6567,7 +6574,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6578,7 +6585,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6596,7 +6603,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6609,7 +6616,7 @@
           },
           "rows": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10078,7 +10085,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -13800,7 +13807,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "PropertyAttributes": {
         "enum": [
@@ -17100,7 +17107,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ],
   "tags": [
@@ -17181,6 +17188,9 @@
     },
     {
       "name": "Grid Codes"
+    },
+    {
+      "name": "Info"
     },
     {
       "name": "Job Data"
