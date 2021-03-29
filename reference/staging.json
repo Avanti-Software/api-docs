@@ -74,6 +74,25 @@
         }
       }
     },
+    "/v1/BankTransits": {
+      "get": {
+        "tags": [
+          "Bank Transit"
+        ],
+        "summary": "List Bank Transits",
+        "operationId": "List-Bank-Transits",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "examples": {}
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/Banks": {
       "get": {
         "tags": [
@@ -111,35 +130,42 @@
         }
       }
     },
-    "/v1/BankTransits": {
-      "get": {
-        "tags": [
-          "Bank Transit"
-        ],
-        "summary": "List Bank Transits",
-        "operationId": "List-Bank-Transits",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
     "/v1/BenefitGroups": {
       "get": {
         "tags": [
           "Benefit Groups"
         ],
         "summary": "List Benefit Groups",
+        "description": "Returns a list of Benefit Groups used in Benefits Administration. The format of Text in the response depends on the company web setting Lookup.BenefitGroups.\n\nIn Avanti, Benefit Groups are the different groupings of employee benefit coverage and the applicable benefit codes for each group.",
         "operationId": "List-Benefit-Groups",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "text": "01 - All Single Benefits",
+                        "value": "01"
+                      },
+                      {
+                        "text": "02 - All Family Benefits",
+                        "value": "02"
+                      },
+                      {
+                        "text": "03 - Only Mandatory Benefits",
+                        "value": "03"
+                      },
+                      {
+                        "text": "04 - No Benefits",
+                        "value": "04"
+                      }
+                    ]
+                  }
+                }
+              }
             }
           }
         }
@@ -176,44 +202,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Codes/{type}": {
-      "delete": {
-        "tags": [
-          "Codes"
-        ],
-        "summary": "Delete Codes",
-        "operationId": "Delete-Codes",
-        "parameters": [
-          {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "codes",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -267,7 +256,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "409": {
@@ -288,6 +277,43 @@
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "/v1/Codes/{type}": {
+      "delete": {
+        "tags": [
+          "Codes"
+        ],
+        "summary": "Delete Codes",
+        "operationId": "Delete-Codes",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codes",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -316,60 +342,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/CompanyInfo/Logo": {
-      "post": {
-        "tags": [
-          "Company Info"
-        ],
-        "summary": "Update Company Logo",
-        "operationId": "Update-Company-Logo",
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "logos": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "binary"
-                    }
-                  }
-                }
-              },
-              "encoding": {
-                "logos": { }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Company Info"
-        ],
-        "summary": "Delete Company Logo",
-        "operationId": "Delete-Company-Logo",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -408,34 +381,62 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
       }
     },
-    "/v1/DefaultGroup/{defaultGroupCode}": {
-      "get": {
+    "/v1/CompanyInfo/Logo": {
+      "post": {
         "tags": [
-          "Default Groups"
+          "Company Info"
         ],
-        "summary": "Get Default Group Values",
-        "operationId": "Get-Default-Group-Values",
-        "parameters": [
-          {
-            "name": "defaultGroupCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "summary": "Update Company Logo",
+        "operationId": "Update-Company-Logo",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "logos": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "logos": {
+                  "style": "form"
+                }
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Company Info"
+        ],
+        "summary": "Delete Company Logo",
+        "operationId": "Delete-Company-Logo",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -486,6 +487,62 @@
         }
       }
     },
+    "/v1/DefaultGroup/{defaultGroupCode}": {
+      "get": {
+        "tags": [
+          "Default Groups"
+        ],
+        "summary": "Get Default Group Values",
+        "operationId": "Get-Default-Group-Values",
+        "parameters": [
+          {
+            "name": "defaultGroupCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/Dependents/{empNo}": {
+      "get": {
+        "tags": [
+          "Dependents"
+        ],
+        "summary": "List Dependents",
+        "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
+        "operationId": "List-Dependents",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
     "/v1/Dependents": {
       "put": {
         "tags": [
@@ -517,7 +574,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -552,7 +609,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -587,36 +644,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Dependents/{empNo}": {
-      "get": {
-        "tags": [
-          "Dependents"
-        ],
-        "summary": "List Dependents",
-        "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
-        "operationId": "List-Dependents",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -645,7 +673,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -673,7 +701,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -708,7 +736,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -743,7 +771,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -777,7 +805,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1170,7 +1198,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1207,7 +1235,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1247,7 +1275,9 @@
                 }
               },
               "encoding": {
-                "files": { }
+                "files": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -1256,7 +1286,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1282,7 +1312,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1333,7 +1363,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1361,7 +1391,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1389,7 +1419,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1521,63 +1551,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/EmployeeGLInfo/{empno}": {
-      "get": {
-        "tags": [
-          "EmployeeGL Info"
-        ],
-        "summary": "Get Employee GL Infomation",
-        "operationId": "Get-Employee-GL-Infomation",
-        "parameters": [
-          {
-            "name": "empno",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/EmployeeJobData/{empNo}": {
-      "get": {
-        "tags": [
-          "Job Data"
-        ],
-        "summary": "Get Employee Job Data",
-        "operationId": "Get-Employee-Job-Data",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1605,7 +1579,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1633,7 +1607,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1680,7 +1654,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1725,7 +1699,63 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeeVacationInfo/{empNo}": {
+      "get": {
+        "tags": [
+          "Employee Vacation Info"
+        ],
+        "summary": "Get Employee Vacation Info",
+        "operationId": "Get-Employee-Vacation-Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeeGLInfo/{empno}": {
+      "get": {
+        "tags": [
+          "EmployeeGL Info"
+        ],
+        "summary": "Get Employee GL Infomation",
+        "operationId": "Get-Employee-GL-Infomation",
+        "parameters": [
+          {
+            "name": "empno",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -1761,35 +1791,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Employees/Details/{empNo}": {
-      "get": {
-        "tags": [
-          "Employees"
-        ],
-        "summary": "Get Employee Details",
-        "operationId": "Get-Employee-Details",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1835,19 +1837,19 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
       }
     },
-    "/v1/EmployeeVacationInfo/{empNo}": {
+    "/v1/Employees/Details/{empNo}": {
       "get": {
         "tags": [
-          "Employee Vacation Info"
+          "Employees"
         ],
-        "summary": "Get Employee Vacation Info",
-        "operationId": "Get-Employee-Vacation-Info",
+        "summary": "Get Employee Details",
+        "operationId": "Get-Employee-Details",
         "parameters": [
           {
             "name": "empNo",
@@ -1863,7 +1865,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1899,7 +1901,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1978,6 +1980,41 @@
         }
       }
     },
+    "/v1/GLBenefitGroups": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "List GL Benefit Groups",
+        "operationId": "List-GL-Benefit-Groups",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/GLGroups": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "List GL Groups",
+        "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
+        "operationId": "List-GL-Groups",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
     "/v1/GLAccounts": {
       "get": {
         "tags": [
@@ -2046,7 +2083,24 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/GLSetup": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Get GL Setup",
+        "operationId": "Get-GL-Setup",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -2075,59 +2129,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/GLBenefitGroups": {
-      "get": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "List GL Benefit Groups",
-        "operationId": "List-GL-Benefit-Groups",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/GLGroups": {
-      "get": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "List GL Groups",
-        "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
-        "operationId": "List-GL-Groups",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/GLSetup": {
-      "get": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Get GL Setup",
-        "operationId": "Get-GL-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2145,7 +2147,36 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+
+    "/v1/EmployeeJobData/{empNo}": {
+      "get": {
+        "tags": [
+          "Job Data"
+        ],
+        "summary": "Get Employee Job Data",
+        "operationId": "Get-Employee-Job-Data",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -2204,24 +2235,24 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
       }
     },
-    "/v1/MyBanks": {
+    "/v1/NewExperienceSetup": {
       "get": {
         "tags": [
-          "Banks"
+          "New Experience"
         ],
-        "summary": "List My Banks",
-        "operationId": "List-My-Banks",
+        "summary": "New Experience Setup",
+        "operationId": "New-Experience-Setup",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2257,24 +2288,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperienceSetup": {
-      "get": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "New Experience Setup",
-        "operationId": "New-Experience-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2310,7 +2324,24 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/NewHire/Setup": {
+      "get": {
+        "tags": [
+          "New Hire"
+        ],
+        "summary": "New Hire Setup",
+        "operationId": "New-Hire-Setup",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -2336,24 +2367,69 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
       }
     },
-    "/v1/NewHire/Setup": {
+    "/v1/NotificationSettings": {
       "get": {
         "tags": [
-          "New Hire"
+          "Notification Settings"
         ],
-        "summary": "New Hire Setup",
-        "operationId": "New-Hire-Setup",
+        "summary": "List Notification Settings",
+        "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
+        "operationId": "List-Notification-Settings",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Notification Settings"
+        ],
+        "summary": "Update Notification Settings",
+        "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
+        "operationId": "Update-Notification-Settings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -2383,7 +2459,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2469,7 +2545,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2503,7 +2579,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2539,7 +2615,24 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/Notifications/Unread": {
+      "get": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Get Unread Notification Count",
+        "operationId": "Get-Unread-Notification-Count",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -2556,7 +2649,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2592,86 +2685,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Notifications/Unread": {
-      "get": {
-        "tags": [
-          "Notifications"
-        ],
-        "summary": "Get Unread Notification Count",
-        "operationId": "Get-Unread-Notification-Count",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/NotificationSettings": {
-      "get": {
-        "tags": [
-          "Notification Settings"
-        ],
-        "summary": "List Notification Settings",
-        "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
-        "operationId": "List-Notification-Settings",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Notification Settings"
-        ],
-        "summary": "Update Notification Settings",
-        "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
-        "operationId": "Update-Notification-Settings",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2738,33 +2752,6 @@
         }
       }
     },
-    "/v1/PayGroup/{payGroup}": {
-      "get": {
-        "tags": [
-          "Pay Groups"
-        ],
-        "summary": "Get Pay Group",
-        "operationId": "Get-Pay-Group",
-        "parameters": [
-          {
-            "name": "payGroup",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
     "/v1/PayGroups": {
       "get": {
         "tags": [
@@ -2813,6 +2800,33 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "/v1/PayGroup/{payGroup}": {
+      "get": {
+        "tags": [
+          "Pay Groups"
+        ],
+        "summary": "Get Pay Group",
+        "operationId": "Get-Pay-Group",
+        "parameters": [
+          {
+            "name": "payGroup",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -2901,14 +2915,14 @@
                       {
                         "bankNo": "01",
                         "benefits": 1998.84,
-                        "chequeDate": "2020-08-31T00:00:00.0000000+00:00",
+                        "chequeDate": "2020-08-31T00:00:00",
                         "chequeNo": "038612",
                         "deductions": 1468.77,
                         "earnings": 3744,
                         "empNo": "000001005",
                         "keyExtension": 1,
                         "netPay": 2275.23,
-                        "payEndingDate": "2020-08-31T00:00:00.0000000+00:00",
+                        "payEndingDate": "2020-08-31T00:00:00",
                         "runNumber": 2003
                       }
                     ]
@@ -3016,7 +3030,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3052,7 +3066,36 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/PersonalInfo/{empNo}": {
+      "get": {
+        "tags": [
+          "Personal Info"
+        ],
+        "summary": "Get Personal Information",
+        "description": "Returns the personal information for an employee. ",
+        "operationId": "Get-Personal-Information",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -3089,119 +3132,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/PersonalInfo/{empNo}": {
-      "get": {
-        "tags": [
-          "Personal Info"
-        ],
-        "summary": "Get Personal Information",
-        "description": "Returns the personal information for an employee. ",
-        "operationId": "Get-Personal-Information",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/PersonalInfo/EmployeeFigures": {
-      "get": {
-        "tags": [
-          "Personal Info"
-        ],
-        "summary": "Get Employee Figures",
-        "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
-        "operationId": "Get-Employee-Figures",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Personal Info"
-        ],
-        "summary": "Update Employee Figures",
-        "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
-        "operationId": "Update-Employee-Figures",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "empNo": "000001005",
-                      "dedFig": [
-                        {
-                          "text": 1,
-                          "value": 1852.35
-                        }
-                      ],
-                      "otherText": [
-                        {
-                          "text": 15,
-                          "value": "Finance"
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
+              "application/json": {}
             }
           }
         }
@@ -3342,7 +3273,90 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/PersonalInfo/EmployeeFigures": {
+      "get": {
+        "tags": [
+          "Personal Info"
+        ],
+        "summary": "Get Employee Figures",
+        "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
+        "operationId": "Get-Employee-Figures",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Personal Info"
+        ],
+        "summary": "Update Employee Figures",
+        "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
+        "operationId": "Update-Employee-Figures",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeFigures"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeFigures"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeFigures"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "empNo": "000001005",
+                      "dedFig": [
+                        {
+                          "text": 1,
+                          "value": 1852.35
+                        }
+                      ],
+                      "otherText": [
+                        {
+                          "text": 15,
+                          "value": "Finance"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -3359,61 +3373,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Position/{positionCode}": {
-      "get": {
-        "tags": [
-          "Positions"
-        ],
-        "summary": "Get Position Details",
-        "operationId": "Get-Position-Details",
-        "parameters": [
-          {
-            "name": "positionCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/PositionRate/PositionRatesData": {
-      "get": {
-        "tags": [
-          "Position Rate"
-        ],
-        "summary": "List Position Rates",
-        "operationId": "List-Position-Rates",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3440,7 +3400,34 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/PositionRate/PositionRatesData": {
+      "get": {
+        "tags": [
+          "Position Rate"
+        ],
+        "summary": "List Position Rates",
+        "operationId": "List-Position-Rates",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -3642,6 +3629,33 @@
         }
       }
     },
+    "/v1/Position/{positionCode}": {
+      "get": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "Get Position Details",
+        "operationId": "Get-Position-Details",
+        "parameters": [
+          {
+            "name": "positionCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
     "/v1/RateGrids": {
       "get": {
         "tags": [
@@ -3653,82 +3667,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Reporter": {
-      "post": {
-        "tags": [
-          "Reporter"
-        ],
-        "summary": "Get Report Data With Options",
-        "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
-        "operationId": "Get-Report-Data-With-Options",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      {
-                        "employeeNo": "000000011",
-                        "payGroup": "001",
-                        "position": "3000",
-                        "initialHireDate": "1992-03-06T00:00:00.0000000+00:00"
-                      },
-                      {
-                        "employeeNo": "000000012",
-                        "payGroup": "001",
-                        "position": "9001",
-                        "initialHireDate": "1990-02-28T00:00:00.0000000+00:00",
-                        "terminationDate": "2019-08-01T00:00:00.0000000+00:00"
-                      },
-                      {
-                        "employeeNo": "000000013",
-                        "payGroup": "001",
-                        "position": "9001",
-                        "initialHireDate": "2000-01-01T00:00:00.0000000+00:00"
-                      },
-                      {
-                        "employeeNo": "000000014",
-                        "payGroup": "999",
-                        "position": "9003",
-                        "initialHireDate": "1990-01-01T00:00:00.0000000+00:00"
-                      },
-                      {
-                        "employeeNo": "000000015",
-                        "payGroup": "003",
-                        "position": "3000",
-                        "initialHireDate": "2015-01-27T00:00:00.0000000+00:00"
-                      }
-                    ]
-                  }
-                }
-              }
+              "application/json": {}
             }
           }
         }
@@ -3808,32 +3747,107 @@
                         "employeeNo": "000000011",
                         "payGroup": "001",
                         "position": "3000",
-                        "initialHireDate": "1992-03-06T00:00:00.0000000+00:00"
+                        "initialHireDate": "1992-03-06T00:00:00"
                       },
                       {
                         "employeeNo": "000000012",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "1990-02-28T00:00:00.0000000+00:00",
-                        "terminationDate": "2019-08-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "1990-02-28T00:00:00",
+                        "terminationDate": "2019-08-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000013",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "2000-01-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "2000-01-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000014",
                         "payGroup": "999",
                         "position": "9003",
-                        "initialHireDate": "1990-01-01T00:00:00.0000000+00:00"
+                        "initialHireDate": "1990-01-01T00:00:00"
                       },
                       {
                         "employeeNo": "000000015",
                         "payGroup": "003",
                         "position": "3000",
-                        "initialHireDate": "2015-01-27T00:00:00.0000000+00:00"
+                        "initialHireDate": "2015-01-27T00:00:00"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/Reporter": {
+      "post": {
+        "tags": [
+          "Reporter"
+        ],
+        "summary": "Get Report Data With Options",
+        "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
+        "operationId": "Get-Report-Data-With-Options",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "employeeNo": "000000011",
+                        "payGroup": "001",
+                        "position": "3000",
+                        "initialHireDate": "1992-03-06T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000012",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "1990-02-28T00:00:00",
+                        "terminationDate": "2019-08-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000013",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "2000-01-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000014",
+                        "payGroup": "999",
+                        "position": "9003",
+                        "initialHireDate": "1990-01-01T00:00:00"
+                      },
+                      {
+                        "employeeNo": "000000015",
+                        "payGroup": "003",
+                        "position": "3000",
+                        "initialHireDate": "2015-01-27T00:00:00"
                       }
                     ]
                   }
@@ -3915,7 +3929,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4066,7 +4080,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4163,7 +4177,90 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/Templates": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Time Entry Templates",
+        "operationId": "List-Time-Entry-Templates",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/TimeWorked": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Time Worked",
+        "operationId": "Get-Time-Worked",
+        "parameters": [
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "currentDateTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -4213,55 +4310,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/CancelPickups": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Cancel Pickup Requests",
-        "operationId": "Cancel-Pickup-Requests",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4309,62 +4358,27 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
       }
     },
-    "/v1/TimeManagement/Comment": {
+    "/v1/TimeManagement/CancelPickups": {
       "post": {
         "tags": [
           "Time Management"
         ],
-        "summary": "Create a Comment",
-        "operationId": "Create-a-Comment",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PoolComment"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PoolComment"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PoolComment"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/EmployeeAcceptance": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "List Employee Acceptance",
-        "operationId": "List-Employee-Acceptance",
+        "summary": "Cancel Pickup Requests",
+        "operationId": "Cancel-Pickup-Requests",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                  "type": "integer",
+                  "format": "int32"
                 }
               }
             },
@@ -4372,7 +4386,8 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                  "type": "integer",
+                  "format": "int32"
                 }
               }
             },
@@ -4380,7 +4395,8 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                  "type": "integer",
+                  "format": "int32"
                 }
               }
             }
@@ -4390,76 +4406,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/ExchangeOffers": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "List Exchange Offers",
-        "operationId": "List-Exchange-Offers",
-        "parameters": [
-          {
-            "name": "poolId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/GetDetailsForPooledSchedule": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Get Pooled Schedule",
-        "operationId": "Get-Pooled-Schedule",
-        "parameters": [
-          {
-            "name": "entryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "scheduleEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "isPool",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4495,56 +4442,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PickupEntryDetails": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Get Pickup Entry",
-        "operationId": "Get-Pickup-Entry",
-        "parameters": [
-          {
-            "name": "pickupEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "poolEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4601,7 +4499,211 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/ExchangeOffers": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Exchange Offers",
+        "operationId": "List-Exchange-Offers",
+        "parameters": [
+          {
+            "name": "poolId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/EmployeeAcceptance": {
+      "post": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Employee Acceptance",
+        "operationId": "List-Employee-Acceptance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PoolEntryDetails": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pool Entry",
+        "operationId": "Get-Pool-Entry",
+        "parameters": [
+          {
+            "name": "scheduleEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PickupEntryDetails": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pickup Entry",
+        "operationId": "Get-Pickup-Entry",
+        "parameters": [
+          {
+            "name": "pickupEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "poolEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/GetDetailsForPooledSchedule": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pooled Schedule",
+        "operationId": "Get-Pooled-Schedule",
+        "parameters": [
+          {
+            "name": "entryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "scheduleEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "isPool",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -4667,48 +4769,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PoolEntryDetails": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Get Pool Entry",
-        "operationId": "Get-Pool-Entry",
-        "parameters": [
-          {
-            "name": "scheduleEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4744,90 +4805,43 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
       }
     },
-    "/v1/TimeManagement/Templates": {
-      "get": {
+    "/v1/TimeManagement/Comment": {
+      "post": {
         "tags": [
           "Time Management"
         ],
-        "summary": "List Time Entry Templates",
-        "operationId": "List-Time-Entry-Templates",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "summary": "Create a Comment",
+        "operationId": "Create-a-Comment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/TimeWorked": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Get Time Worked",
-        "operationId": "Get-Time-Worked",
-        "parameters": [
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "refresh",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          },
-          {
-            "name": "currentDateTime",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4907,33 +4921,6 @@
         }
       }
     },
-    "/v1/VacationGroup/{vacationGroup}": {
-      "get": {
-        "tags": [
-          "Vacation Groups"
-        ],
-        "summary": "Get Vacation Group",
-        "operationId": "Get-Vacation-Group",
-        "parameters": [
-          {
-            "name": "vacationGroup",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
     "/v1/VacationGroups": {
       "get": {
         "tags": [
@@ -4966,6 +4953,33 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "/v1/VacationGroup/{vacationGroup}": {
+      "get": {
+        "tags": [
+          "Vacation Groups"
+        ],
+        "summary": "Get Vacation Group",
+        "operationId": "Get-Vacation-Group",
+        "parameters": [
+          {
+            "name": "vacationGroup",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -5067,7 +5081,7 @@
                     "value": {
                       "isBreak": true,
                       "isInPunch": true,
-                      "punchDateTime": "2020-06-30T07:36:59.6400000+00:00"
+                      "punchDateTime": "2020-06-30T07:36:59.64"
                     }
                   }
                 }
@@ -5159,7 +5173,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -6356,7 +6370,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6406,7 +6420,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true
           },
           "hasErrors": {
@@ -6449,7 +6463,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6474,7 +6488,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6494,13 +6508,13 @@
           },
           "relations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -6539,19 +6553,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6560,7 +6574,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6571,7 +6585,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6589,7 +6603,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6602,7 +6616,7 @@
           },
           "rows": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10071,7 +10085,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -13793,7 +13807,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "PropertyAttributes": {
         "enum": [
@@ -17093,7 +17107,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ],
   "tags": [
@@ -17174,6 +17188,9 @@
     },
     {
       "name": "Grid Codes"
+    },
+    {
+      "name": "Info"
     },
     {
       "name": "Job Data"
