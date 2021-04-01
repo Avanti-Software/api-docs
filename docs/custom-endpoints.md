@@ -1,6 +1,6 @@
 # Custom Endpoints
 
-If none of our standard endpoints provide the required data, you can build custom endpoints using Avanti's reporting tools. Report Designer provides access to most employee-centric information and is available via the [Reporter](/avanti-api/reporter/get-report-data) endpoint.
+If none of our standard endpoints provide the required data, you can build custom endpoints using Avanti's reporting tools. Report Designer provides access to most employee-centric information and is available via the [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) endpoint.
 
 To get started, open Report Definitions in the Avanti Desktop Application and select Insert to create a new report. Give the report a name (also known as the Report ID) and title. Now add the information you want in your endpoint as columns in the report.
 
@@ -14,7 +14,7 @@ Next, select **Web Enabled** on the **System Access** tab. Restrict access to Pr
 
 ![User group permissions example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Freport-print-permissions.png?alt=media&token=222cfc40-bf4b-4bc2-b40c-1ef2ad100e94)
 
-Once you finish creating your report and select OK to save the changes, you can start making requests to the [Reporter](/avanti-api/reporter/get-report-data) endpoint. 
+Once you finish creating your report and select OK to save the changes, you can start making requests to the [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) endpoint. 
 
 When making a request, you will need to provide the Report ID to your custom report. Property names are generated based on column headers and are converted to valid camel-cased property names. For example, a column header **Employee No** would become **employeeNo**. Columns that do not have any data will exclude the property.
 
