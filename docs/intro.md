@@ -2,7 +2,7 @@
 
 The Avanti API allows clients to access and update information in Avanti securely. Use the API to build private services that integrate Avanti with other platforms, create custom reports, display dashboards, and more.
 
-All endpoints in the Avanti API are based on Representational State Transfer (REST) architecture and are accessed via HTTPS. The base URL for all requests is the organization’s Avanti Self-Service Portal address with a **-API** suffix. For example, if your Self-Service Portal is https://myavanti.ca/ABCInc, the base URL for API calls is https://myavanti.ca/ABCInc-api.
+All endpoints in the Avanti API are based on Representational State Transfer (REST) architecture and are accessed via HTTPS. The base URL for all requests is the organization’s Avanti Self-Service Portal address with a **-API** suffix. For example, if your Self-Service Portal is https&#58;//myavanti.ca/ABCInc, the base URL for API calls is https&#58;//myavanti.ca/ABCInc-api.
 
 Avanti is continuously updating our API! We will add new endpoints to the API as we add new features in the Avanti applications. Visit [Updates](/updates) for more information on our new API endpoints and the latest changes.
 

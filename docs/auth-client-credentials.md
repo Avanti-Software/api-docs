@@ -6,7 +6,7 @@ Valid Client Credentials, a Client ID and Secret, are required to request an acc
 
 2. Manually navigate to the API Settings page:
 
-**https://myavanti.ca/{Organization ID}-api/admin/apisettings**
+**https&#58;//myavanti.ca/{Organization ID}-api/admin/apisettings**
 
 You may notice that there is  **-api** after the Organization ID in the URL. This is the base URL that you will use to make API calls, not the URL to your Avanti Self-Service Portal.
 
