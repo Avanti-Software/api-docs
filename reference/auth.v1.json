@@ -1,0 +1,141 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "version": "1.0.0 (Early Access)",
+    "title": "Avanti Authentication API Reference",
+    "description": "Request access tokens to use to make authenticated requests from the Avanti API.",
+    "termsOfService": "https://www.avanti.ca/api-terms-of-use",
+    "contact": {
+      "name": "Avanti Support",
+      "email": "support@avanti.ca",
+      "url": "https://avanti.ca"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://myavanti.ca/avtesting-api"
+    }
+  ],
+  "paths": {
+    "/connect/token": {
+      "post": {
+        "tags": [
+          "Token"
+        ],
+        "description": "Request a new access token.",
+        "operationId": "Access Token",
+        "requestBody": {
+          "description": "Client and user credentials",
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "pet response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TokenRequest": {
+        "required": [
+          "client_id",
+          "client_secret",
+          "grant_type",
+          "username",
+          "password",
+          "company",
+          "device_id"
+        ],
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "default": "ASI123451"
+          },
+          "client_secret": {
+            "type": "string",
+            "default": "79EB83D4-76A2-4819-B0FB-C8AF9EF3314E"
+          },
+          "grant_type": {
+            "type": "string",
+            "default": "password"
+          },
+          "username": {
+            "type": "string",
+            "default": "apiuser"
+          },
+          "password": {
+            "type": "string",
+            "default": "APIUser654321"
+          },
+          "company": {
+            "type": "string",
+            "default": "BIGDEV2_ASI12345_AVA"
+          },
+          "device_id": {
+            "type": "string",
+            "default": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
+          }
+        }
+      },
+      "TokenResponse": {
+        "properties": {
+          "access_token": {
+            "type": "string"
+          },
+          "expires_in": {
+            "type": "string"
+          },
+          "token_type": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "auth_state": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "company": {
+            "type": "string"
+          }
+        }
+      },
+      "Error": {
+        "required": [
+          "code"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
