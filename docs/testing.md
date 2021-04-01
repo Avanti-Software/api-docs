@@ -24,4 +24,4 @@ This token is saved as a **bearer_token** environment variable will apply to all
 
 ![bearer_token variable is applied to authorization header.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fauthorization-header.png?alt=media&token=88caf679-5d3a-42b7-b00e-6481347e8e1e)
 
-Access tokens to **Send a Test Request** are valid for two hours. Once it expires, request a new token. See the [Authentication](/auth/getting-started) section for more details on how authentication works in the Avanti API.
+Access tokens to **Send a Test Request** are valid for two hours. Once it expires, request a new token. See the [Authentication](/docs/auth-getting-started.md) section for more details on how authentication works in the Avanti API.

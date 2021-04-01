@@ -3,8 +3,8 @@
 ## Requesting Access Tokens
 
 An access token must be provided for each authenticated API request. You can request an access token using the [/connect/token](/avanti-auth-api/token/access-token) endpoint. The endpoint requires:
-- [Client Credentials](/auth/client-credentials)
-- [Avanti User Credentials](/auth/users)
+- [Client Credentials](/docs/auth-client-credentials.md)
+- [Avanti User Credentials](/docs/auth-users.md)
 - A unique Device ID
 
 Device IDs differentiate services running on more than one device. We recommend using a prefix that identifies your service, followed by v4 UUID (universally unique identifier). Device IDs can be up to 128 characters long.
