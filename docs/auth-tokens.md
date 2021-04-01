@@ -2,7 +2,7 @@
 
 ## Requesting Access Tokens
 
-An access token must be provided for each authenticated API request. You can request an access token using the [/connect/token](/avanti-auth-api/token/access-token) endpoint. The endpoint requires:
+An access token must be provided for each authenticated API request. You can request an access token using the [/connect/token](reference/auth.v1.json/paths/~1connect~1token/post) endpoint. The endpoint requires:
 - [Client Credentials](/docs/auth-client-credentials.md)
 - [Avanti User Credentials](/docs/auth-users.md)
 - A unique Device ID
