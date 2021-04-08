@@ -397,9 +397,7 @@
             }
           }
         }
-      }
-    },
-    "/v1/CompanyInfo/Logo/{width}/{height}": {
+      },
       "get": {
         "tags": [
           "Company Info"
@@ -409,8 +407,7 @@
         "parameters": [
           {
             "name": "width",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -418,38 +415,10 @@
           },
           {
             "name": "height",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/DefaultGroup/{defaultGroupCode}": {
-      "get": {
-        "tags": [
-          "Default Groups"
-        ],
-        "summary": "Get Default Group Values",
-        "operationId": "Get-Default-Group-Values",
-        "parameters": [
-          {
-            "name": "defaultGroupCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -503,6 +472,33 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "/v1/DefaultGroups/Setup/{defaultGroupCode}": {
+      "get": {
+        "tags": [
+          "Defaults Group"
+        ],
+        "summary": "Get Defaults Group Setup",
+        "operationId": "Get-Defaults-Group-Setup",
+        "parameters": [
+          {
+            "name": "defaultGroupCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": { }
             }
           }
         }
@@ -613,9 +609,7 @@
             }
           }
         }
-      }
-    },
-    "/v1/Dependents/{empNo}": {
+      },
       "get": {
         "tags": [
           "Dependents"
@@ -625,8 +619,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -642,18 +635,17 @@
         }
       }
     },
-    "/v1/Dependents/Setup/{empNo}": {
+    "/v1/Dependents/Setup": {
       "get": {
         "tags": [
           "Dependents"
         ],
-        "summary": "Dependents Setup",
-        "operationId": "Dependents-Setup",
+        "summary": "Get Dependents Setup",
+        "operationId": "Get-Dependents-Setup",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1231,18 +1223,17 @@
         }
       }
     },
-    "/v1/EmployeeBasicInfo/Photo/{empNo}": {
+    "/v1/EmployeeBasicInfo/Photo": {
       "post": {
         "tags": [
           "Employee Basic Info"
         ],
-        "summary": "Updates Employee Photo",
-        "operationId": "Updates-Employee-Photo",
+        "summary": "Update an Employee Photo",
+        "operationId": "Update-an-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1282,13 +1273,12 @@
         "tags": [
           "Employee Basic Info"
         ],
-        "summary": "Deletes Employee Photo",
-        "operationId": "Deletes-Employee-Photo",
+        "summary": "Delete an Employee Photo",
+        "operationId": "Delete-an-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1304,7 +1294,7 @@
         }
       }
     },
-    "/v1/EmployeeBenefitCodeV34V35Values/{empNo}": {
+    "/v1/EmployeeBenefitCodeV34V35Values": {
       "post": {
         "tags": [
           "Employee Benefit Codes"
@@ -1337,8 +1327,7 @@
           },
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1354,18 +1343,17 @@
         }
       }
     },
-    "/v1/EmployeeBenefitGroup/{empNo}": {
+    "/v1/EmployeeBenefitGroup": {
       "get": {
         "tags": [
           "Employee Benefit Group"
         ],
-        "summary": "Get Employee Benefit Information",
-        "operationId": "Get-Employee-Benefit-Information",
+        "summary": "Get Employee Benefit Info",
+        "operationId": "Get-Employee-Benefit-Info",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1381,7 +1369,7 @@
         }
       }
     },
-    "/v1/EmployeeDefaultsGroup/{empNo}": {
+    "/v1/EmployeeDefaultsGroup": {
       "get": {
         "tags": [
           "Employee Defaults Group"
@@ -1391,8 +1379,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1408,18 +1395,17 @@
         }
       }
     },
-    "/v1/EmployeeEarningCodes/{empNo}": {
+    "/v1/EmployeeEarningCodes": {
       "get": {
         "tags": [
           "Employee Earning Codes"
         ],
-        "summary": "Get Employee Earning Codes",
-        "operationId": "Get-Employee-Earning-Codes",
+        "summary": "List Employee Earning Codes",
+        "operationId": "List-Employee-Earning-Codes",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1435,7 +1421,7 @@
         }
       }
     },
-    "/v1/EmployeeEmails/{empNo}": {
+    "/v1/EmployeeEmails": {
       "put": {
         "tags": [
           "Employee Emails"
@@ -1445,8 +1431,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1490,18 +1475,17 @@
         }
       }
     },
-    "/v1/EmployeeGLInfo/{empno}": {
+    "/v1/EmployeeGLInfo": {
       "get": {
         "tags": [
-          "EmployeeGL Info"
+          "Employee GL Info"
         ],
-        "summary": "Get Employee GL Infomation",
-        "operationId": "Get-Employee-GL-Infomation",
+        "summary": "Get Employee GL Info",
+        "operationId": "Get-Employee-GL-Info",
         "parameters": [
           {
             "name": "empno",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1517,18 +1501,17 @@
         }
       }
     },
-    "/v1/EmployeeJobData/{empNo}": {
+    "/v1/EmployeeJobData": {
       "get": {
         "tags": [
-          "Job Data"
+          "Employee Job Data"
         ],
         "summary": "Get Employee Job Data",
         "operationId": "Get-Employee-Job-Data",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1544,18 +1527,17 @@
         }
       }
     },
-    "/v1/EmployeeJobInfo/{empNo}": {
+    "/v1/EmployeeJobInfo": {
       "get": {
         "tags": [
           "Employee Job Info"
         ],
-        "summary": "Get Job Information",
-        "operationId": "Get-Job-Information",
+        "summary": "Get Employee Job Info",
+        "operationId": "Get-Employee-Job-Info",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1571,7 +1553,7 @@
         }
       }
     },
-    "/v1/EmployeePayInfo/{empNo}": {
+    "/v1/EmployeePayInfo": {
       "get": {
         "tags": [
           "Employee Pay Info"
@@ -1581,8 +1563,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1598,7 +1579,7 @@
         }
       }
     },
-    "/v1/EmployeePhoneNumber/{empNo}": {
+    "/v1/EmployeePhoneNumber": {
       "post": {
         "tags": [
           "Employee Phone Number"
@@ -1608,8 +1589,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1652,8 +1632,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1678,6 +1657,108 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": { }
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeePositionRate": {
+      "get": {
+        "tags": [
+          "Employee Position Rates"
+        ],
+        "summary": "List Employee Position Rates",
+        "operationId": "List-Employee-Position-Rates",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": { }
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeePositionRate/Description": {
+      "get": {
+        "tags": [
+          "Employee Position Rates"
+        ],
+        "summary": "Get Employee Position Rate",
+        "operationId": "Get-Employee-Position-Rate",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": { }
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeePositions/{empNo}": {
+      "get": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "List Employee Positions",
+        "operationId": "List-Employee-Positions",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "location",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Ok",
@@ -1724,18 +1805,17 @@
         }
       }
     },
-    "/v1/Employees/Details/{empNo}": {
+    "/v1/Employees/Details": {
       "get": {
         "tags": [
           "Employees"
         ],
-        "summary": "Get Employee Details",
-        "operationId": "Get-Employee-Details",
+        "summary": "Get Employee Info",
+        "operationId": "Get-Employee-Info",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1751,7 +1831,7 @@
         }
       }
     },
-    "/v1/Employees/Photo/{empNo}": {
+    "/v1/Employees/Photo": {
       "get": {
         "tags": [
           "Employees"
@@ -1761,8 +1841,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1794,7 +1873,7 @@
         }
       }
     },
-    "/v1/EmployeeVacationInfo/{empNo}": {
+    "/v1/EmployeeVacationInfo": {
       "get": {
         "tags": [
           "Employee Vacation Info"
@@ -1804,8 +1883,7 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -2198,13 +2276,13 @@
         }
       }
     },
-    "/v1/NewExperienceSetup": {
+    "/v1/NewExperience/Setup": {
       "get": {
         "tags": [
           "New Experience"
         ],
-        "summary": "New Experience Setup",
-        "operationId": "New-Experience-Setup",
+        "summary": "Get New Experience Setup",
+        "operationId": "Get-New-Experience-Setup",
         "responses": {
           "200": {
             "description": "Ok",
@@ -2855,10 +2933,10 @@
         }
       }
     },
-    "/v1/PayStatements/Cancelled/{empNo}": {
+    "/v1/PayStatements/Cancelled": {
       "get": {
         "tags": [
-          "Pay Statements"
+          "Employee Pay Statements"
         ],
         "summary": "List Cancelled Pay Statements",
         "operationId": "List-Cancelled-Pay-Statements",
@@ -2881,8 +2959,7 @@
           },
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -3014,20 +3091,17 @@
             }
           }
         }
-      }
-    },
-    "/v1/PersonalInfo/{empNo}": {
+      },
       "get": {
         "tags": [
-          "Personal Info"
+          "Employee Personal Info"
         ],
-        "summary": "Get Personal Information",
-        "operationId": "Get-Personal-Information",
+        "summary": "Get Employee Personal Info",
+        "operationId": "Get-Employee-Personal-Info",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -3126,18 +3200,17 @@
         }
       }
     },
-    "/v1/PersonalInfo/Photo/{empNo}": {
+    "/v1/PersonalInfo/Photo": {
       "get": {
         "tags": [
-          "Personal Info"
+          "Employee Personal Info"
         ],
         "summary": "Get Employee Photo",
         "operationId": "Get-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -3170,15 +3243,14 @@
       },
       "put": {
         "tags": [
-          "Personal Info"
+          "Employee Personal Info"
         ],
         "summary": "Update Employee Photo",
         "operationId": "Update-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -3214,15 +3286,14 @@
       },
       "delete": {
         "tags": [
-          "Personal Info"
+          "Employee Personal Info"
         ],
         "summary": "Delete Employee Photo",
         "operationId": "Delete-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -3255,7 +3326,7 @@
         }
       }
     },
-    "/v1/Position/{positionCode}": {
+    "/v1/Position": {
       "get": {
         "tags": [
           "Positions"
@@ -3265,33 +3336,6 @@
         "parameters": [
           {
             "name": "positionCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/PositionRate/PositionRatesData": {
-      "get": {
-        "tags": [
-          "Position Rate"
-        ],
-        "summary": "List Position Rates",
-        "operationId": "List-Position-Rates",
-        "parameters": [
-          {
-            "name": "empNo",
             "in": "query",
             "schema": {
               "type": "string"
@@ -3308,83 +3352,7 @@
         }
       }
     },
-    "/v1/PositionRateDescription": {
-      "get": {
-        "tags": [
-          "Position Rate"
-        ],
-        "summary": "Get Position Rate Description",
-        "operationId": "Get-Position-Rate-Description",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Positions/{empNo}": {
-      "get": {
-        "tags": [
-          "Positions"
-        ],
-        "summary": "List Employee Positions",
-        "operationId": "List-Employee-Positions",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "location",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "startDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "endDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Positions/AllPositions": {
+    "/v1/Positions": {
       "get": {
         "tags": [
           "Positions"
@@ -3849,7 +3817,7 @@
         }
       }
     },
-    "/v1/TimeManagement/{viewId}/{templateId}/{empNo}": {
+    "/v1/TimeManagement/{viewId}/{templateId}": {
       "get": {
         "tags": [
           "Time Management"
@@ -3875,8 +3843,7 @@
           },
           {
             "name": "empNo",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -16892,6 +16859,9 @@
       "name": "Default Groups"
     },
     {
+      "name": "Defaults Group"
+    },
+    {
       "name": "Dependents"
     },
     {
@@ -16919,19 +16889,31 @@
       "name": "Employee Emails"
     },
     {
+      "name": "Employee GL Info"
+    },
+    {
+      "name": "Employee Job Data"
+    },
+    {
       "name": "Employee Job Info"
     },
     {
       "name": "Employee Pay Info"
     },
     {
+      "name": "Employee Pay Statements"
+    },
+    {
+      "name": "Employee Personal Info"
+    },
+    {
       "name": "Employee Phone Number"
     },
     {
-      "name": "Employee Vacation Info"
+      "name": "Employee Position Rates"
     },
     {
-      "name": "EmployeeGL Info"
+      "name": "Employee Vacation Info"
     },
     {
       "name": "Employees"
@@ -16947,9 +16929,6 @@
     },
     {
       "name": "Grid Codes"
-    },
-    {
-      "name": "Job Data"
     },
     {
       "name": "Job Status"
@@ -16980,9 +16959,6 @@
     },
     {
       "name": "Personal Info"
-    },
-    {
-      "name": "Position Rate"
     },
     {
       "name": "Positions"
