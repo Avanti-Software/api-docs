@@ -16829,6 +16829,172 @@
           }
         },
         "additionalProperties": false
+      },
+      "PositionUserDefinedLabels": {
+        "type": "object",
+        "properties": {
+          "positionFigName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName10": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName10": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName10": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName10": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
