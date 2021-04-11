@@ -1,3 +1,80 @@
+# Apr 11, 2021 5:25 PM
+**GitHub Action ID:** 738693166
+## Added
+* Path: /v1/CompanyInfo/Logo/{width}/{height}
+* Operation: /v1/CompanyInfo/Logo - Post
+* Path: /v1/DefaultGroup/{defaultGroupCode}
+* Path: /v1/Dependents/{empNo}
+* Path: /v1/Dependents/Setup/{empNo}
+* Operation: /v1/EmployeeAddress - Post
+* Operation: /v1/EmployeeBasicInfo - Post
+* Path: /v1/EmployeeBasicInfo/Photo/{empNo}
+* Path: /v1/EmployeeBenefitCodeV34V35Values/{empNo}
+* Path: /v1/EmployeeBenefitGroup/{empNo}
+* Path: /v1/EmployeeDefaultsGroup/{empNo}
+* Path: /v1/EmployeeEarningCodes/{empNo}
+* Path: /v1/EmployeeEmails/{empNo}
+* Path: /v1/EmployeeJobInfo/{empNo}
+* Path: /v1/EmployeePayInfo/{empNo}
+* Path: /v1/EmployeePhoneNumber/{empNo}
+* Path: /v1/EmployeeVacationInfo/{empNo}
+* Path: /v1/EmployeeGLInfo/{empno}
+* Path: /v1/Employees/Photo/{empNo}
+* Path: /v1/Employees/Details/{empNo}
+* Path: /v1/EmployeeJobData/{empNo}
+* Path: /v1/NewExperienceSetup
+* Operation: /v1/NotificationSettings - Post
+* Path: /v1/PayStatements/Cancelled/{empNo}
+* Path: /v1/PersonalInfo/{empNo}
+* Operation: /v1/PersonalInfo - Post
+* Path: /v1/PersonalInfo/Photo/{empNo}
+* Operation: /v1/PersonalInfo/EmployeeFigures - Post
+* Path: /v1/PositionRateDescription
+* Path: /v1/PositionRate/PositionRatesData
+* Path: /v1/Positions/{empNo}
+* Path: /v1/Positions/AllPositions
+* Path: /v1/Position/{positionCode}
+* Path: /v1/TimeManagement/{viewId}/{templateId}/{empNo}
+* Operation: /v1/TimeManagement/CancelPools - Post
+* Operation: /v1/TimeManagement/CancelPickups - Post
+## Removed
+* Operation: /v1/CompanyInfo/Logo - Get
+* Operation: /v1/CompanyInfo/Logo - Put
+* Path: /v1/DefaultGroups/Setup/{defaultGroupCode}
+* Operation: /v1/Dependents - Get
+* Path: /v1/Dependents/Setup
+* Operation: /v1/EmployeeAddress - Put
+* Operation: /v1/EmployeeBasicInfo - Put
+* Path: /v1/EmployeeBasicInfo/Photo
+* Path: /v1/EmployeeBenefitCodeV34V35Values
+* Path: /v1/EmployeeBenefitGroup
+* Path: /v1/EmployeeDefaultsGroup
+* Path: /v1/EmployeeEarningCodes
+* Path: /v1/EmployeeEmails
+* Path: /v1/EmployeeGLInfo
+* Path: /v1/EmployeeJobData
+* Path: /v1/EmployeeJobInfo
+* Path: /v1/EmployeePayInfo
+* Path: /v1/EmployeePhoneNumber
+* Path: /v1/EmployeePositionRate
+* Path: /v1/EmployeePositionRate/Description
+* Path: /v1/EmployeePositions/{empNo}
+* Path: /v1/Employees/Details
+* Path: /v1/Employees/Photo
+* Path: /v1/EmployeeVacationInfo
+* Path: /v1/NewExperience/Setup
+* Operation: /v1/NotificationSettings - Put
+* Path: /v1/PayStatements/Cancelled
+* Operation: /v1/PersonalInfo - Get
+* Operation: /v1/PersonalInfo - Put
+* Operation: /v1/PersonalInfo/EmployeeFigures - Put
+* Path: /v1/PersonalInfo/Photo
+* Path: /v1/Position
+* Path: /v1/Positions
+* Path: /v1/TimeManagement/{viewId}/{templateId}
+* Operation: /v1/TimeManagement/CancelPickups - Put
+* Operation: /v1/TimeManagement/CancelPools - Put
+
 # Apr 10, 2021 3:29 PM
 **GitHub Action ID:** 736187954
 ## Added
