@@ -33,7 +33,7 @@ Permissions and access work the same as if the user accessed the information wit
 - be an active Regular or Manager User with a secure password. 
 - have User Group and Role Assignments to access the desired employees and information from Avanti. 
 
-For all the details to grant access, go to [Employee Access.](/docs/auth-user.md) Your API developer needs the Avanti Username and password to create the integration. 
+For all the details to grant access, go to [Employee Access.](/docs/auth-users.md) Your API developer needs the Avanti Username and password to create the integration. 
 
 **2. Allow Endpoint Access** <Br>
 Endpoint Access determines what the integration can access. 
