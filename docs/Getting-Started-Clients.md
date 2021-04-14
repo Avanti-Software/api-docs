@@ -1,14 +1,11 @@
 # Getting Started on the API
 
 Before your API developer can get started leveraging Avanti’s API, there are a couple of steps you’ll need to complete. Regardless of whether you’re using an API developer you have on staff or using a third-party, this setup is the same.  
-- Access the API Documentation. 
 - Decide which Avanti Endpoint would work for your integration. 
 - Grant access in Avanti for API. 
 - Provide your API developer or the API third-party with the credentials they need. 
 - Your API/third-party developer creates the integration leveraging Avanti’s endpoints. 
 
-## Access the API Documentation
-Does a third-party API developer need access to the API documentation? Send the developer’s email to your Client Success Manager or Implementation Specialist; they’ll send your third-party API developer an invite to our API documentation.  
 
 ## Find the Avanti Endpoint
 Endpoints determine which information in Avanti is accessed. Our endpoints can: 
@@ -17,6 +14,8 @@ Endpoints determine which information in Avanti is accessed. Our endpoints can:
 
 You can find all the available endpoints in the Avanti API section. You can work with your API developer to identify the endpoint that works for your integration. 
 
+Does a third-party API developer need access to the API documentation? Send the developer’s email to your Client Success Manager or Implementation Specialist; they’ll send your third-party API developer an invite to our API documentation.  
+
 <!-- theme: info -->
 
 > ##### Additional Information 
@@ -24,7 +23,7 @@ If you’re trying to gather employee information from Avanti and can’t find a
 
 If you can’t find the endpoint you’re looking for, please contact your Implementation Specialist or Client Success Manager; they can help guide you through any questions. Unsure who your Client Success Manager is? Avanti Support is happy to help! Contact us at support@avanti.ca.
 
-### Grant Access to the API in Avanti
+## Grant Access to the API in Avanti
 There’s several things you’ll need to set up in Avanti to ensure only the people you want can access your data. 
 
 **1. Allow Employee Access** <Br>
@@ -49,7 +48,8 @@ You’ll also need to identify which Avanti Company Database the integration nee
 
 For all the details to grant access, go to [Client Credentials.](/docs/auth-client-credentials.md) Your API developer needs the API Client Credentials and the Avanti Database to create the integration. 
 
-**4. Provide Information to the API Developer** <br>Wonderful! You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API developer. Here’s what they’ll need to get started: 
+## Provide Information to the API Developer
+Wonderful! You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API developer. Here’s what they’ll need to get started: 
 - The API Documentation.
 - The name of the endpoint.
 - The ID of the Report you created in Avanti, if you’re using a report endpoint. 
@@ -57,4 +57,4 @@ For all the details to grant access, go to [Client Credentials.](/docs/auth-clie
 - API Client Credentials. 
 - Avanti company database name. 
 - Your Avanti Self-Service Portal URL. 
-Now you're API developer will have everything they need to get started [Creating Access Tokens.](/docs/auth-user.md)
+Now you're API developer will have everything they need to get started [Creating Access Tokens.](/docs/auth-tokens.md)
