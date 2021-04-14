@@ -7,6 +7,11 @@
     },
     {
       "type": "item",
+      "title": "Getting Started",
+      "uri": "docs/Getting-Started-Clients.md"
+    },
+    {
+      "type": "item",
       "title": "Error Handling",
       "uri": "docs/error-handling.md"
     },
