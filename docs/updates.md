@@ -1,37 +1,54 @@
 # Updates
 
-## Version 0.9.0 (Early Access) - May 1, 2019
+## Version 1.0 (Early Access)
 
-- New Endpoints:
+- Initial Endpoints:
   - Attendance Codes
-  - Banks
   - Bank Transit
-  - Benefits Groups
+  - Banks
+  - Benefit Groups
+  - Codes
+  - Company Info
   - Default Groups
   - Dependents
   - Emergency Contacts
   - Employee Address
+  - Employee Basic Info
+  - Employee Benefit Codes
+  - Employee Benefit Group
+  - Employee Defaults Group
   - Employee Earning Codes
   - Employee Emails
+  - Employee Job Info
+  - Employee Pay Info
+  - Employee Phone Number
+  - Employee Vacation Info
+  - EmployeeGL Info
+  - Employees
+  - Employment History
   - Employment Status
-  - GL
+  - GLs
   - Grid Codes
+  - Job Data
   - Job Status
   - Locations
+  - New Experience
+  - New Hire
   - Notification Settings
   - Notifications
-  - Bank Transit
   - Pay Codes
   - Pay Groups
   - Pay Statements
   - Personal Info
   - Position Rate
   - Positions
+  - Rate Grids
   - Reporter
   - Schedule Templates
   - Search
   - Shift Codes
   - Task IDs
+  - Time Data
   - Time Management
   - Union Codes
   - Vacation Earning Codes
@@ -39,4 +56,5 @@
   - Vacation Options
   - WCB Groups
   - Web Punch
+  - Whats New
   - Work Groups
