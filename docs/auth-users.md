@@ -62,4 +62,4 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 
 ![Save the Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FSaveAvantiUser.png?alt=media&token=81a67d1e-3fb2-47e9-bc9e-b3da1044fe95)
 
-Nice work! The Avanti User is all set up. The next step is [Allow Access to the Endpoint.](/docs/auth-subfunction.md) for more information.  
+Nice work! The Avanti User is all set up. The next step is [Allow Access to the Endpoint](/docs/auth-subfunction.md) for more information.  
