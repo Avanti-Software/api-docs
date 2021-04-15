@@ -19,11 +19,11 @@ The Avanti User has access based on the assigned User Groups. Their user group m
 The Avanti User must also have user group access to at least one of the Selected User Groups unless the Selected User Group column has an &ast;. If it has a &ast;, all users have access.
 
 <!-- theme: info -->
->If you haven’t already created an Avanti User for the API integration, go to **API Allow Employee Access** for more information. **Marketing Please add the link.** 
+>If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
 
 ## Grant Access to an Endpoint
 
-To grant access to a specific API endpoint, you’ll first need to identify the endpoint from the Avanti API Documentation. **Liz, find the Link **
+To grant access to a specific API endpoint, you’ll first need to identify the endpoint from the Avanti API section of the [API Documentation.](https://avanti.stoplight.io/) 
 
 
 ![Endpoint.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fget-personalinfo-subfunction-rule.png?alt=media&token=8069dd34-216a-44b4-a377-6f31b80f7710)
@@ -63,13 +63,13 @@ For example, I want to use an endpoint to gather dependent information from Avan
 **Step 7:** Select one of the User Groups assigned to your API User, then select the Arrow.  
 
 <!-- theme: info -->
->If you haven’t already created an Avanti User for the API integration, go to API Allow Employee Access for more information. **Marketing Please add the link.**
+>If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
 
 **Step 8:** Select **OK** to save. 
 
 Congratulations! You’re done enabling access to the endpoint. Repeat these steps for every endpoint you’ll use in the integration.
 
-The next step to setup the API is Create the Client Credentials.  **Marketing Please add the link.**
+The next step to setup the API is [Create the Client Credentials.](/docs/auth-client-credentials.md) 
 
 ## Grant Access to All Endpoints
 
@@ -101,37 +101,9 @@ By default, this can be found in System Administration >> System Access Controls
 **Step 6:** Select one of the User Groups assigned to your API User, then select the Arrow.  
 
 <!-- theme: info -->
->If you haven’t already created an Avanti User for the API integration, go to API Allow Employee Access for more information. **Marketing Please add the link.**
+>If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
 
 **Step 7:** Select **OK** to save. 
 
-Congratulations! You’re all done enabling access to all the endpoints. The next step to setup the API is Create the Client Credentials.  **Marketing Please add the link.**
+Congratulations! You’re all done enabling access to all the endpoints. The next step to setup the API is [Create the Client Credentials.](/docs/auth-client-credentials.md) 
 
-
-
-
-
-
-
-
-## Keeping the original 
-
-
-![Insert subfunction access rule example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fget-personalinfo-subfunction-rule.png?alt=media&token=8069dd34-216a-44b4-a377-6f31b80f7710)
-
-
-We recommend copying endpoints directly from this documentation to avoid mistakes when creating the subfunction access. Endpoints should include the version and any path parameters. Rule matching is exact, so if two endpoints only differ by path parameters, you will need to create two subfunction access rules.
-
-![Copy endpoint example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fendpoint-url.png?alt=media&token=770ffe38-5826-43dd-a524-fe7c1fe60ad4)
-
-## Grant Access to All Endpoints
-
-To grant access to all endpoints, insert a subfunction access rule in the Avanti Desktop Application. By default, you can find Subfunction Access in the System Administration >> System Access Controls. 
-
-Enter api/* into function, then set the subfunction access security. 
-
-For increased security, we recommend that you do not use this option and set up subfunction access for each endpoint. 
-
-Note: * cannot be used in the method name of any other endpoint.
-
-![Insert catch all subfunction access rule example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fcatch-all-subfunction-rule.png?alt=media&token=4da92d68-757e-4cbb-983a-6ceed28f61df)
