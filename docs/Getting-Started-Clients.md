@@ -19,7 +19,7 @@ Does a third-party API developer need access to the API documentation? Send the 
 <!-- theme: info -->
 
 > ##### Additional Information 
-If you’re trying to gather employee information from Avanti and can’t find an endpoint for the information, you can create a [Custom Endpoint] (/docs/custom-endpoints.md) using the Reporter Endpoints. <br>The Reporter endpoint gathers information contained in a Report Designer report. All you need to do is create a report in Avanti that collects all the information needed to integrate. 
+If you’re trying to gather employee information from Avanti and can’t find an endpoint for the information, you can create a [Custom Endpoint](/docs/custom-endpoints.md) using the Reporter Endpoints. <br>The Reporter endpoint gathers information contained in a Report Designer report. All you need to do is create a report in Avanti that collects all the information needed to integrate. 
 
 If you still can’t find the endpoint you’re looking for, please contact your Implementation Specialist or Client Success Manager; they can help guide you through any questions. Unsure who your Client Success Manager is? Avanti Support is happy to help! Contact us at support@avanti.ca.
 
