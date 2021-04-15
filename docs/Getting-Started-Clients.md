@@ -14,7 +14,7 @@ Endpoints determine which information in Avanti is accessed. Our endpoints can:
 
 You can find all the available endpoints in the Avanti API section. You can work with your API developer to identify the endpoint that works for your integration. 
 
-Does a third-party API developer need access to the API documentation? Send the developer’s email to your Client Success Manager or Implementation Specialist; they’ll send your third-party API developer an invite to our API documentation.  
+Does a third-party API developer need access to the API documentation? Send the developer’s email to your Implementation Specialist or Success@avanti.ca; they’ll send your third-party API developer an invite to our API documentation.  
 
 <!-- theme: info -->
 
@@ -46,7 +46,7 @@ The API client credentials authorize the use of the API on the Avanti Self-Servi
 
 You’ll also need to identify which Avanti Company Database the integration needs to access. If you’re integrating to multiple companies, you’ll need to identify each and provide them to your API developer. This name is different from the company name you see displayed when you select the company in Avanti. 
 
-For all the details to grant access, go to [Client Credentials.](/docs/auth-client-credentials.md) Your API developer needs the API Client Credentials and the Avanti Database to create the integration. 
+For all the details to grant access and identifying the Avanti Company Database, go to [Client Credentials.](/docs/auth-client-credentials.md) Your API developer needs the API Client Credentials and the Avanti Database to create the integration. 
 
 ## Provide Information to the API Developer
 You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API developer. Here’s what they’ll need to get started: 

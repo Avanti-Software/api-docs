@@ -12,30 +12,10 @@
     },
     {
       "type": "item",
-      "title": "Error Handling",
-      "uri": "docs/error-handling.md"
-    },
-    {
-      "type": "item",
-      "title": "Versioning",
-      "uri": "docs/versioning.md"
-    },
-    {
-      "type": "item",
-      "title": "Custom Endpoints",
-      "uri": "docs/custom-endpoints.md"
-    },
-    {
-      "type": "item",
       "title": "Testing Avanti APIs",
       "uri": "docs/testing.md"
     },
-    {
-      "type": "item",
-      "title": "Updates",
-      "uri": "docs/updates.md"
-    },
-    {
+        {
       "type": "group",
       "title": "Authentication",
       "items": [
@@ -65,6 +45,26 @@
           "uri": "docs/auth-tokens.md"
         }
       ]
+    },
+    {
+      "type": "item",
+      "title": "Custom Endpoints",
+      "uri": "docs/custom-endpoints.md"
+    },
+    {
+      "type": "item",
+      "title": "Versioning",
+      "uri": "docs/versioning.md"
+    },
+    {
+      "type": "item",
+      "title": "Error Handling",
+      "uri": "docs/error-handling.md"
+    },
+    {
+      "type": "item",
+      "title": "Updates",
+      "uri": "docs/updates.md"
     },
     {
       "type": "item",
