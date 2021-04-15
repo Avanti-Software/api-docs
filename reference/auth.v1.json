@@ -57,7 +57,7 @@
             }
           }
         },
-        "summary": "Access Token"
+        "summary": "Get Access Token"
       }
     }
   },
