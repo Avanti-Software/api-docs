@@ -56,7 +56,8 @@
               }
             }
           }
-        }
+        },
+        "summary": "Access Token"
       }
     }
   },
