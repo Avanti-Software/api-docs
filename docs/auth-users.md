@@ -15,7 +15,7 @@ The Avanti User must:
 - have a User Group with access to the company and the required Pay Groups
 - have the role permissions to the required employee positions granted in User Role Assignments
 
-If you need an additional license to create the Avanti User, please contact your Client Success Manager. Unsure who your Client Success Manager is? Avanti Support is happy to help! Contact us at support@avanti.ca.
+If you need an additional license to create the Avanti User, please contact your Client Success Manager at Success@avanti.ca.
 
 ### Create a User in Avanti
 Rather than create a new user, we recommend copying an existing user who already has the correct access to Avanti employees. 

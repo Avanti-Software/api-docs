@@ -72,7 +72,7 @@ While anyone at your organization can register to access Avanti’s API Document
 
 To get access, you’ll need to request access and send your third-party API developer’s email to:
 - Your Implementation Specialist, if you haven’t gone live yet. 
-- Your Client Success Manager, if your already using Avanti to process pay. Unsure who your Client Success Manager is? Avanti Support is happy to help! Contact us at support@avanti.ca.
+- Success@avanti.ca, if you're already using Avanti to process pay.
 
 We’ll send your third-party developer an email to access Avanti’s API Documentation. 
 
