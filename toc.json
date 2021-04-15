@@ -44,20 +44,20 @@
           "title": "Overview",
           "uri": "docs/auth-intro.md"
         },
-        {
+       {
           "type": "item",
-          "title": "Client Credentials",
-          "uri": "docs/auth-client-credentials.md"
-        },
-        {
-          "type": "item",
-          "title": "User Accounts",
+          "title": "Employee Access",
           "uri": "docs/auth-users.md"
         },
         {
           "type": "item",
-          "title": "Subfunction Access",
+          "title": "Endpoint Access",
           "uri": "docs/auth-subfunction.md"
+        },
+        {
+          "type": "item",
+          "title": "Client Credentials",
+          "uri": "docs/auth-client-credentials.md"
         },
         {
           "type": "item",

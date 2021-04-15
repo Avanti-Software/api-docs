@@ -1,4 +1,4 @@
-# Client Credentials
+# Create Client Credentials
 For your API developer to start using Avanti’s API, you’ll need to create the Client Credentials.
 
 <!-- theme: info -->
