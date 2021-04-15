@@ -1,4 +1,4 @@
-# Avanti User
+# Allow Employee Access
 
 You’ll need an Avanti User to access the Avanti API endpoints. This User dictates which employees the API can access. 
 
