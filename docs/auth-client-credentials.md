@@ -4,10 +4,6 @@ For your API developer to start using Avanti’s API, you’ll need to create th
 <!-- theme: info -->
 >Curious about how we authenticate using client credentials? Our API authentication follows the Open ID Connect protocol to authenticate requests using short-lived access tokens.
 
-If you’re an API developer, you’ll need to request some information from your organization’s Avanti Administrator: 
-- The Client Credentials
-- The Avanti Company Database
-
 ## Create the Client Credentials
 **Step 1:** Once you've logged into the Avanti Self-Service Portal, manually navigate to the API Settings page:
 
@@ -70,6 +66,7 @@ By default, this can be found in Administration.
 
 **Step 2:** Copy the **Company Database**. 
 
+![ASSP Company Database Name Location](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fassp-company-db-location.png?alt=media&token=9530f880-2ba5-462c-b17e-cc441bb6784f)
 
 ## Third-Party API Developers
 While anyone at your organization can register to access Avanti’s API Documentation, your third-party API developer will need a special invite to gain access. 

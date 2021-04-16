@@ -10,12 +10,16 @@ Avanti is continuously updating our API! We will add new endpoints to the API as
 
 If none of our existing endpoints meet your needs, you can create endpoints using Avanti’s Reporting tools. The Reporter endpoint can access the contents of any report created in Report Designer. [Custom Endpoints](/docs/custom-endpoints.md) will walk you through setting up the report, and [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) provides details on the endpoints. 
 
+- Version: 1.0.0 (Early Access)
+- Terms of Use: https://www.avanti.ca/api-terms-of-use 
+- Privacy Policy: https://www.avanti.ca/privacy-policy
+
 ## Early Access
 
 The Avanti API is currently in early access. While we will avoid making any breaking changes before version 1.0 is officially released, the endpoints will not be finalized until that time. Want to learn about the latest changes to the API endpoints? Visit [Updates.](/docs/updates.md)
 
 As an early access user, we would love to hear any feedback about your experience using the Avanti API. Please email us at [AppFeedback@avanti.ca](mailto:appfeedback@avanti.ca) to help us improve the Avanti API. 
 
-# Need Support
+## Need Support
 
 Having issues using the Avanti API? Please reach out to [Avanti Support](mailto:support@avanti.ca) if you are a client requiring assistance. Before contacting support, please do your due diligence and review the API documentation in its entirety.
