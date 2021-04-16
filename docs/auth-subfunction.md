@@ -26,27 +26,33 @@ The Avanti User must also have user group access to at least one of the Selected
 To grant access to a specific API endpoint, you’ll first need to identify the endpoint from the Avanti API section of the [API Documentation.](https://avanti.stoplight.io/) 
 
 
-![Endpoint.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fget-personalinfo-subfunction-rule.png?alt=media&token=8069dd34-216a-44b4-a377-6f31b80f7710)
+![Endpoint.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FEndpoint.png?alt=media&token=6e63b44c-d8a8-4329-b4ca-c16fe5f8c7d5)
 
 Once you’ve identified the endpoint, you’ll be able to grant access. We recommend copying and pasting endpoints from the documentation to avoid mistakes when creating the subfunction access. When copying, be sure to exclude any path parameter; path parameters are anything with **/{  }**.  
 
-For example, entering **api/v1/Dependents** in the subfunction access grants access to both these endpoints, which differ by the path parameter /{empNo}:  
-![Both endpoints.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fget-personalinfo-subfunction-rule.png?alt=media&token=8069dd34-216a-44b4-a377-6f31b80f7710)
+For example, entering **api/v1/Dependents** in the subfunction access grants access to both these endpoints, which only differ by the path parameter /{empNo}:  
+
+![Both endpoints.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FEndpointsDependants.png?alt=media&token=ed6e5c9c-4458-4862-a94b-c0bd1dd1043a)
 
 
 **Step 1:** Select **Insert** in Subfunction Access Controls.
 By default, this can be found in System Administration >> System Access Controls on the Avanti Desktop Application.
 
-**Step 2:** Add **api** in **Function**.
+![Insert for endpoint access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
 
-**Step 3:** Add the copied endpoint from the **API Documentation**.
+**Step 2:** Add **api** in **Function**, then add the endpoint copied from the **API Documentation**.
 
 <!-- theme: info -->
 >The copied text should start with the version, such as /v1. If it ends in a parameter, such as /{empNo}, ensure it’s **excluded**. 
 
-**Step 4:** Add a **Description** for the endpoint. 
+![Insert for endpoint access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
 
-**Step 5:** Set your desired Responsibility to **Insert, Modify (edit), View** and **Delete** using the endpoint. 
+**Step 3:** Add a **Description** for the endpoint. 
+
+![Add Description for endpoint access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
+
+
+**Step 4:** Set your desired Responsibility to **Insert, Modify (edit), View** and **Delete** using the endpoint. 
 
 - To allow the API to insert, modify, view, and delete, skip to Step 8. 
 - To prevent the API from having access, replace the &ast; with a - in the Responsibility. 
@@ -58,14 +64,20 @@ For example, I want to use an endpoint to gather dependent information from Avan
 >- For a DELETE endpoint, the API User must have **Delete** responsibilities.
 >- For a POST or PUT endpoint, the API User must have **Modify** and/or **Insert** responsibilities depending on whether you’re updating or creating entries. We recommend granting access to both unless access to one should be restricted.
 
-**Step 6:** Select &ast; in the selected column, then select the Arrow to remove full access. 
+![Adjust Responsibility for endpoint access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
 
-**Step 7:** Select one of the User Groups assigned to your API User, then select the Arrow.  
+**Step 5:** Select &ast; in the selected column, then select the Arrow to remove full access.
+
+![Remove User Group for endpoint access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
+
+
+**Step 6:** Select one of the User Groups assigned to your API User, then select the Arrow. Click **OK** to save. 
 
 <!-- theme: info -->
 >If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
 
-**Step 8:** Select **OK** to save. 
+![Save endpoint access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
+
 
 Congratulations! You’re done enabling access to the endpoint. Repeat these steps for every endpoint you’ll use in the integration.
 
@@ -78,14 +90,17 @@ To grant access to all endpoints, insert a subfunction access rule in the Avanti
 <!-- theme: warning -->
 >For maximum security, we recommend you do not use this option; it allows the API integration access to all your employees' information. Instead, set up subfunction access for every endpoint you’re using for your integrations.
 
-**Step 1:** Select **Insert** in Subfunction Access Controls.
+**Step 1:** Select **Insert** in Subfunction Access Controls, then add **api/&ast; ** in Function. 
 By default, this can be found in System Administration >> System Access Controls on the Avanti Desktop Application.
 
-**Step 2:** Add **api/&ast; ** in Function.
+![Insert for full access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
 
-**Step 3:** Add a **Description** for the endpoint, such as Access to API Endpoints.  
+**Step 2:** Add a **Description** for the endpoint, such as Access to API Endpoints.  
 
-**Step 4:** Set the Responsibility to **Insert, Modify (edit), View** and **Delete** using the endpoint. 
+![Add Description for full access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessDescription.png?alt=media&token=d2a95515-a5cc-4cbe-8b94-34d65237e807)
+
+
+**Step 3:** Set the Responsibility to **Insert, Modify (edit), View** and **Delete** using the endpoint. 
 
 - To allow full access to insert, modify, view, and delete, skip to Step 7. 
 - To prevent the API  from having access, replace the &ast; with a - in the Responsibility. For example, I want to use the API to gather information from Avanti. I could have a &ast; for view and - for Insert, Modify and Delete. This prevents the API from adding, editing or deleting information in Avanti while allowing access to gather information. 
@@ -96,14 +111,18 @@ By default, this can be found in System Administration >> System Access Controls
 >- For a DELETE endpoint, the API User must have **Delete** responsibilities.
 >- For a POST or PUT endpoint, the API User must have **Modify** and/or **Insert** responsibilities depending on whether you’re updating or creating entries. We recommend granting access to both unless access to one should be restricted.
 
-**Step 5:** Select &ast; in the selected column, then select the Arrow to remove full access. 
+![Adjust Responsibility for full access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessResponsibility.png?alt=media&token=deb1c3cc-4e10-49f6-9613-e9b04ee81aa1)
 
-**Step 6:** Select one of the User Groups assigned to your API User, then select the Arrow.  
+**Step 4:** Select &ast; in the selected column, then select the Arrow to remove full access. 
+
+![Remove User Group for full access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
+
+**Step 5:** Select one of the User Groups assigned to your API User, then select the Arrow and click **OK.**
 
 <!-- theme: info -->
 >If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
 
-**Step 7:** Select **OK** to save. 
+![Save endpoint full access. ](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FSubfunction%2FFullAccessOk.png?alt=media&token=e3c9bca4-8ff3-44fb-a879-1a56ce83785a)
 
 Congratulations! You’re all done enabling access to all the endpoints. The next step to setup the API is [Create the Client Credentials.](/docs/auth-client-credentials.md) 
 

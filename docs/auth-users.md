@@ -35,7 +35,7 @@ By default, this can be found in System Administration >> System Access Controls
 >It’s a great idea to name the User ID after your integration, so you can easily remember what this is for in the future. It may take a couple of moments to create the Avanti User. <br>
 Please make a note of the User ID; you’ll need to send it to your API developer. 
 
-![Paste details for an Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FPasteDetails.png?alt=media&token=211ca3b2-0719-4cc0-8992-db07785bc82a)
+![Paste details for an Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FPasteDetails.png?alt=media&token=569690b4-089c-4943-8c12-415542402f23)
 
 **Step 4:** Select the Avanti User you just created, then click **Modify**. 
 
@@ -46,6 +46,7 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 - Select either **Regular** or **Manager Self-Service** for User Class.
 - Add a secure **Password** for the Avanti User, then **Confirm Password**. 
 - Select **Avanti Security** in User Authenticated By, if it’s not already selected. 
+
 <!-- theme: info -->
 >##### Additional Information
 >Please make a note of the User Password; you’ll need to send it to your API developer. 
