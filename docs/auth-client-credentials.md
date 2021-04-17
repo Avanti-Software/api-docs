@@ -61,8 +61,8 @@ Setting a client expiry is especially useful when:
 ## Identify the Avanti Company Database Name
 You’ll need the Company Database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify every company and provide them to your API Developer. This name is different from the company name you see displayed when you select the company in Avanti.
 
-**Step 1:** Open **Administration Settings** and select **System Info**. 
-By default, this can be found in Administration. 
+**Step 1:** Copy the **Company Database** on the System Info Tab in Administration Settings. 
+By default, this can be found in Administration on the Avanti Self-Service Portal. 
 
 **Step 2:** Copy the **Company Database**. 
 
