@@ -21,7 +21,7 @@ You may notice that there is  **-api** after the Organization ID in the URL. Thi
 
 **Step 3:** Select **Generate Client**.
 
-![Generate client button example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fgenerate-client-button.png?alt=media&token=bf7bf936-2354-471d-a3b3-ecec2b1f78e8)
+![Generate client button example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FGenerateClients.png?alt=media&token=883ae45b-b7a4-4047-ac22-519b61f6d642)
 
 **Step 4:** Enter a description in **Client Name**. 
 
@@ -29,6 +29,7 @@ You may notice that there is  **-api** after the Organization ID in the URL. Thi
 >While client names are for display purposes only and can be named anything you want, we recommend a description of the integration. 
 For example, if you’re using the integration to add new employees into Avanti, you could call the client **Hire New Employees**. 
 
+![ClientName.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FClientName.png?alt=media&token=ee4a7b33-3c76-4e64-bdd4-43d53c7318df)
 
 **Step 5:** Select **Client Never Expires** to allow this client access indefinitely. If the client should expire, enter the date the client should no longer have access in **Client Expiry Date**. 
 
@@ -39,34 +40,36 @@ Setting a client expiry is especially useful when:
 - creating a short-term integration.
 - providing the credentials to a third party who only needs access for a limited time.
 
+![Client Expiry.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FClientExpiry.png?alt=media&token=776808de-8fb0-42fc-b14a-046bc8fac5a6)
 
 **Step 6:** Enter the number of minutes before access tokens expire. 
 
 <!-- theme: info -->
 >It is best practice to make your access tokens as short-lived as possible. If you’re unsure how long the client credentials need to be active, contact your API developer. 
 
+![Access Token Lifetime.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FAccessTokenLifetime.png?alt=media&token=d2361089-4943-43e5-b20b-15fc8523b8a4)
 
 **Step 7:** Select **Generate** to create the client. 
 
-![Generate client form example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fgenerate-client-form.png?alt=media&token=01e646a3-b454-4443-9190-3caffa051236)
+![Generate the Client.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FGenerateTheClient.png?alt=media&token=a66b34b4-027b-405e-862a-58c418f346eb)
 
 **Step 8:** Copy the Client ID and the Client Secret and store them in a safe place. You’ll need to send these to your API developer. 
 
-![Generated client example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fclients-table.png?alt=media&token=3430bc59-228f-4d18-a077-95d3848bd3dc)
+![Copy the Client ID and Secret.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FCopyClient.png?alt=media&token=c3a54a89-4547-4c2a-8067-aa12290d8643)
 
 
 **Step 9:** Select **Exit Configuration**. 
+
+![Exit Configuration.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FExitConfig.png?alt=media&token=5073d9c3-e4bc-4e76-858f-a1cf63329d6f)
 
 
 ## Identify the Avanti Company Database Name
 You’ll need the Company Database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify every company and provide them to your API Developer. This name is different from the company name you see displayed when you select the company in Avanti.
 
-**Step 1:** Copy the **Company Database** on the System Info Tab in Administration Settings. 
+**Step 1:** Copy the **Company Database** on the System Info Tab in Administration Settings.
 By default, this can be found in Administration on the Avanti Self-Service Portal. 
 
-**Step 2:** Copy the **Company Database**. 
-
-![ASSP Company Database Name Location](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fassp-company-db-location.png?alt=media&token=9530f880-2ba5-462c-b17e-cc441bb6784f)
+![ASSP Company Database Name Location](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FCompanyDatabaseName.png?alt=media&token=ac4ffec3-14db-4da7-921d-834eb5fe7e75)
 
 ## Third-Party API Developers
 While anyone at your organization can register to access Avanti’s API Documentation, your third-party API developer will need a special invite to gain access. 
