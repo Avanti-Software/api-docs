@@ -1,3 +1,11 @@
+# Apr 19, 2021 5:17 PM
+**GitHub Action ID:** 764374325
+## Removed
+* Path: /v1/NewExperience/AddTermsOfService
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Model: ConsentForm
+* Model: TermsOfService
+
 # Apr 19, 2021 4:29 PM
 **GitHub Action ID:** 764243340
 ## Added
