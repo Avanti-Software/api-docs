@@ -1,7 +1,6 @@
 # Access Tokens
 If you’re an API developer, you’ll need to request some information from your organization’s Avanti Administrator if you don't already have it: 
 - The name of the endpoint.
-- The ID of the Report you created in Avanti, if you’re using a report endpoint.
 - The Avanti Username and Password.
 - API Client Credentials.
 - Avanti company database name.
