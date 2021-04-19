@@ -87,12 +87,12 @@
           "client_secret": {
             "type": "string",
             "default": "79EB83D4-76A2-4819-B0FB-C8AF9EF3314E",
-            "description": "The secret for the API Client Credentials. "
+            "description": "The Client Secret for the API Client Credentials. "
           },
           "grant_type": {
             "type": "string",
             "default": "password",
-            "description": "Grant type for Access Tokens is always password."
+            "description": "This is always Password."
           },
           "username": {
             "type": "string",
@@ -102,17 +102,17 @@
           "password": {
             "type": "string",
             "default": "APIUser654321",
-            "description": "The password for the Avanit User. "
+            "description": "The Password for the Avanit User. "
           },
           "company": {
             "type": "string",
             "default": "BIGDEV2_ASI12345_AVA",
-            "description": "Avanti company database name. "
+            "description": "Avanti Company Database Name. "
           },
           "device_id": {
             "type": "string",
             "default": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676",
-            "description": "A unique identifier for the device running the \nservice. Device IDs can be up to 128 characters long."
+            "description": "A unique identifier for the device running the \nservice. Device IDs can be up to 128 characters long.\n\nWe recommend using a prefix that identifies your service, followed by v4 UUID (universally unique identifier)."
           }
         },
         "required": [
