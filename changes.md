@@ -1,3 +1,10 @@
+# Apr 19, 2021 10:22 PM
+**GitHub Action ID:** 765142220
+## Added
+* Operation: /v1/NewExperience/UpdateTermsOfService - Put
+## Removed
+* Operation: /v1/NewExperience/UpdateTermsOfService - Post
+
 # Apr 19, 2021 10:19 PM
 **GitHub Action ID:** 765135358
 ## Added

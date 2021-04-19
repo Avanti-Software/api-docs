@@ -2299,7 +2299,7 @@
       }
     },
     "/v1/NewExperience/UpdateTermsOfService": {
-      "post": {
+      "put": {
         "tags": [
           "New Experience"
         ],
