@@ -1,3 +1,58 @@
+# Apr 19, 2021 10:22 PM
+**GitHub Action ID:** 765142220
+## Added
+* Operation: /v1/NewExperience/UpdateTermsOfService - Put
+## Removed
+* Operation: /v1/NewExperience/UpdateTermsOfService - Post
+
+# Apr 19, 2021 10:19 PM
+**GitHub Action ID:** 765135358
+## Added
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Path: /v1/NewExperience/AddTermsOfService
+* Model: ConsentForm
+* Model: TermsOfService
+
+# Apr 19, 2021 8:46 PM
+**GitHub Action ID:** 764913901
+## Removed
+* Path: /v1/NewExperience/AddTermsOfService
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Model: ConsentForm
+* Model: TermsOfService
+
+# Apr 19, 2021 7:25 PM
+**GitHub Action ID:** 764713948
+## Added
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Path: /v1/NewExperience/AddTermsOfService
+* Model: ConsentForm
+* Model: TermsOfService
+
+# Apr 19, 2021 5:17 PM
+**GitHub Action ID:** 764374325
+## Removed
+* Path: /v1/NewExperience/AddTermsOfService
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Model: ConsentForm
+* Model: TermsOfService
+
+# Apr 19, 2021 4:29 PM
+**GitHub Action ID:** 764243340
+## Added
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Path: /v1/NewExperience/AddTermsOfService
+* Model: ConsentForm
+* Model: TermsOfService
+
+# Apr 19, 2021 2:34 PM
+**GitHub Action ID:** 763893116
+## Removed
+* Path: /v1/NewExperience/AddTermsOfService
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Model: ConsentForm
+* Model: TermsOfService
+
 # Apr 16, 2021 7:36 PM
 **GitHub Action ID:** 756707007
 ## Added

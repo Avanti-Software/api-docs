@@ -2299,7 +2299,7 @@
       }
     },
     "/v1/NewExperience/UpdateTermsOfService": {
-      "post": {
+      "put": {
         "tags": [
           "New Experience"
         ],
@@ -17012,6 +17012,10 @@
           "termsOfServiceId": {
             "type": "integer",
             "format": "int32"
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
           },
           "userName": {
             "type": "string",
