@@ -123,7 +123,18 @@
           "password",
           "company",
           "device_id"
-        ]
+        ],
+        "x-examples": {
+          "Example": {
+            "client_id": "ASI123451",
+            "client_secret": "79EB83D4-76A2-4819-B0FB-C8AF9EF3314E",
+            "grant_type": "password",
+            "username": "apiuser",
+            "password": "APIUser654321",
+            "company": "BIGDEV2_ASI12345_AVA",
+            "device_id": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
+          }
+        }
       },
       "TokenResponse": {
         "properties": {
@@ -145,6 +156,16 @@
           },
           "company": {
             "type": "string"
+          }
+        },
+        "x-examples": {
+          "example-1": {
+            "access_token": "string",
+            "expires_in": "string",
+            "token_type": "string",
+            "scope": "string",
+            "auth_state": 0,
+            "company": "string"
           }
         }
       },
