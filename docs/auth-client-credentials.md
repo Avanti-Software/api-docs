@@ -71,15 +71,6 @@ By default, this can be found in Administration on the Avanti Self-Service Porta
 
 ![ASSP Company Database Name Location](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FCompanyDatabaseName.png?alt=media&token=ac4ffec3-14db-4da7-921d-834eb5fe7e75)
 
-## Third-Party API Developers
-While anyone at your organization can register to access Avanti’s API Documentation, your third-party API developer will need a special invite to gain access. 
-
-To get access, you’ll need to request access and send your third-party API developer’s email to:
-- Your Implementation Specialist, if you haven’t gone live yet. 
-- Success@avanti.ca, if you're already using Avanti to process pay.
-
-We’ll send your third-party developer an email to access Avanti’s API Documentation. 
-
 ## Provide Information to the API Developer
 Wonderful! You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API Developer. Here’s what they’ll need to get started:
 - The name of the endpoint. If you’re using a reporter endpoint, they’ll also need the ID of the Report you created in Avanti.
