@@ -10,11 +10,6 @@
       "title": "Getting Started",
       "uri": "docs/Getting-Started-Clients.md"
     },
-    {
-      "type": "item",
-      "title": "Testing Avanti APIs",
-      "uri": "docs/testing.md"
-    },
         {
       "type": "group",
       "title": "Authentication",
