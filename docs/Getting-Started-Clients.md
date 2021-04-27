@@ -14,8 +14,6 @@ Endpoints determine which information in Avanti is accessed. Our endpoints can:
 
 You can find all the available endpoints in the Avanti API section. You can work with your API developer to identify the endpoint that works for your integration. 
 
-Does a third-party API developer need access to the API documentation? Send the developer’s email to your Implementation Specialist or Success@avanti.ca; they’ll send your third-party API developer an invite to our API documentation.  
-
 <!-- theme: info -->
 
 > ##### Additional Information 
