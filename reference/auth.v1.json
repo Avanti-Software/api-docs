@@ -36,11 +36,11 @@
                 "Example": {
                   "value": {
                     "client_id": "ASI123451",
-                    "client_secret": "79EB83D4-76A2-4819-B0FB-C8AF9EF3314E",
+                    "client_secret": "*****",
                     "grant_type": "password",
                     "username": "apiuser",
-                    "password": "APIUser654321",
-                    "company": "BIGDEV2_ASI12345_AVA",
+                    "password": "*****",
+                    "company": "MyCompany",
                     "device_id": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
                   }
                 }
@@ -86,7 +86,7 @@
           },
           "client_secret": {
             "type": "string",
-            "default": "79EB83D4-76A2-4819-B0FB-C8AF9EF3314E",
+            "default": "*****",
             "description": "The Client Secret for the API Client Credentials. "
           },
           "grant_type": {
@@ -101,7 +101,7 @@
           },
           "password": {
             "type": "string",
-            "default": "APIUser654321",
+            "default": "*****",
             "description": "The Password for the Avanit User. "
           },
           "company": {
@@ -127,10 +127,10 @@
         "x-examples": {
           "Example": {
             "client_id": "ASI123451",
-            "client_secret": "79EB83D4-76A2-4819-B0FB-C8AF9EF3314E",
+            "client_secret": "*****",
             "grant_type": "password",
             "username": "apiuser",
-            "password": "APIUser654321",
+            "password": "*****",
             "company": "BIGDEV2_ASI12345_AVA",
             "device_id": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
           }
