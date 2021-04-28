@@ -106,7 +106,7 @@
           },
           "company": {
             "type": "string",
-            "default": "BIGDEV2_ASI12345_AVA",
+            "default": "MyCompany",
             "description": "Avanti Company Database Name. "
           },
           "device_id": {
@@ -131,7 +131,7 @@
             "grant_type": "password",
             "username": "apiuser",
             "password": "*****",
-            "company": "BIGDEV2_ASI12345_AVA",
+            "company": "MyCompany",
             "device_id": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
           }
         }
