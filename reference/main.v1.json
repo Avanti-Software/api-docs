@@ -9,7 +9,7 @@
       "url": "https://avanti.ca",
       "email": "support@avanti.ca"
     },
-    "version": "1.0.0 (Early Access)"
+    "version": "1.0.0"
   },
   "servers": [
     {
@@ -2153,7 +2153,6 @@
         }
       }
     },
-
     "/v1/EmployeeJobData/{empNo}": {
       "get": {
         "tags": [
