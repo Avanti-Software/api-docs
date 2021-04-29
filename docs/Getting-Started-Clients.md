@@ -19,7 +19,7 @@ You can find all the available endpoints in the Avanti API section. You can work
 > ##### Additional Information 
 If you’re trying to gather employee information from Avanti and can’t find an endpoint for the information, you can create a [Custom Endpoint](/docs/custom-endpoints.md) using the Reporter Endpoints. <br>The Reporter endpoint gathers information contained in a Report Designer report. All you need to do is create a report in Avanti that collects all the information needed to integrate. 
 
-If you still can’t find the endpoint you’re looking for, please contact your Implementation Specialist or Client Success Manager; they can help guide you through any questions. Unsure who your Client Success Manager is? Avanti Support is happy to help! Contact us at support@avanti.ca.
+If you still can’t find the endpoint you’re looking for, please contact your Implementation Specialist or Client Success Manager, success@avanti.ca; they can help guide you through any questions. 
 
 ## Grant Access to the API in Avanti
 There’s several things you’ll need to set up in Avanti to ensure only the people you want can access your data. 
@@ -48,11 +48,11 @@ For all the details to grant access and identifying the Avanti Company Database,
 
 ## Provide Information to the API Developer
 You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API developer. Here’s what they’ll need to get started: 
-- The API Documentation.
+- The API Documentation, https://apidocs.avanti.dev/.
 - The name of the endpoint.
 - The ID of the Report you created in Avanti, if you’re using a report endpoint. 
 - The Avanti Username and Password. 
 - API Client Credentials. 
-- Avanti company database name. 
+- Avanti Company Database name. 
 - Your Avanti Self-Service Portal URL. 
 Now you're API developer will have everything they need to get started [Creating Access Tokens.](/docs/auth-tokens.md)

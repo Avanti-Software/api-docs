@@ -6,6 +6,12 @@ All endpoints in the Avanti API are based on Representational State Transfer (RE
 
 For example, if your Self-Service Portal is https&#58;//myavanti.ca/ABCInc, the base URL for API calls is https&#58;//myavanti.ca/ABCInc-api.
 
+##Leveraging Avanti's API
+
+Creating an integration requires a developer familiar with leveraging API endpoints to build your integration. If you don’t have an API developer on staff, you can involve a third-party developer. 
+
+Regardless of whether you’re using an in-house or third-party developer, the process for integrating using an API is identical. You’ll find everything you need to provide your API Developer developer outlined in the [Getting Started](/docs/Getting-Started-Clients.md).
+
 Avanti is continuously updating our API! We will add new endpoints to the API as we add new features in the Avanti applications. Visit [Updates](/docs/updates.md) for more information on our new API endpoints and the latest changes.
 
 If none of our existing endpoints meet your needs, you can create endpoints using Avanti’s Reporting tools. The Reporter endpoint can access the contents of any report created in Report Designer. [Custom Endpoints](/docs/custom-endpoints.md) will walk you through setting up the report, and [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) provides details on the endpoints. 
