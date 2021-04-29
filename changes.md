@@ -1,3 +1,8 @@
+# Apr 29, 2021 6:47 PM
+**GitHub Action ID:** 797096810
+## Added
+* Path: /v1/NewExperience/DeclineTermsOfService
+
 # Apr 19, 2021 10:22 PM
 **GitHub Action ID:** 765142220
 ## Added

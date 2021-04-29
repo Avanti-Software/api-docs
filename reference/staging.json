@@ -106,8 +106,7 @@
                   }
                 }
               }
-            },
-            "headers": {}
+            }
           }
         }
       }
@@ -123,7 +122,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -201,7 +200,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -238,7 +237,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -292,7 +291,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "409": {
@@ -341,7 +340,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -358,7 +357,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -391,7 +390,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -418,7 +417,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -427,7 +426,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -444,7 +443,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -471,7 +470,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -508,7 +507,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -543,7 +542,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -578,7 +577,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -602,7 +601,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -628,7 +627,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -656,7 +655,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -691,7 +690,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -726,7 +725,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -760,7 +759,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1129,6 +1128,14 @@
         ],
         "summary": "Update Employee Address",
         "operationId": "Update-Employee-Address",
+        "parameters": [
+          {
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1152,18 +1159,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "in": "query"
-          }
-        ]
+        }
       }
     },
     "/v1/EmployeeBasicInfo": {
@@ -1196,7 +1195,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1234,7 +1233,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1243,7 +1242,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1267,7 +1266,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1284,36 +1283,36 @@
           {
             "name": "deductCode",
             "in": "query",
+            "description": "A three-digit ID for the deduction code greater than 499.",
             "schema": {
               "type": "string"
-            },
-            "description": "A three-digit ID for the deduction code greater than 499."
+            }
           },
           {
             "name": "V34",
             "in": "query",
+            "description": "The employee's V34 amount. ",
             "schema": {
               "type": "number",
               "format": "double"
-            },
-            "description": "The employee's V34 amount. "
+            }
           },
           {
             "name": "V35",
             "in": "query",
+            "description": "The employee's V35 amount. ",
             "schema": {
               "type": "number",
               "format": "double"
-            },
-            "description": "The employee's V35 amount. "
+            }
           },
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee whose V34/V35 value is being updated. ",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee whose V34/V35 value is being updated. "
+            }
           }
         ],
         "responses": {
@@ -1322,7 +1321,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "Example": {}
+                  "Example": { }
                 }
               }
             }
@@ -1350,7 +1349,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1376,7 +1375,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1402,7 +1401,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1456,7 +1455,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1482,7 +1481,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1508,7 +1507,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1534,7 +1533,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1560,7 +1559,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1605,7 +1604,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1648,7 +1647,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1674,7 +1673,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1700,7 +1699,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1749,7 +1748,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1785,7 +1784,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1811,7 +1810,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1853,7 +1852,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1879,7 +1878,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1915,7 +1914,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2062,7 +2061,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2091,7 +2090,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2108,7 +2107,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2126,7 +2125,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2143,7 +2142,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2161,7 +2160,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2220,7 +2219,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2256,7 +2255,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2292,7 +2291,43 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
+            }
+          }
+        }
+      }
+    },
+    "/v1/NewExperience/DeclineTermsOfService": {
+      "post": {
+        "tags": [
+          "New Experience"
+        ],
+        "summary": "Decline Terms of Service",
+        "operationId": "Decline-Terms-of-Service",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsentForm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsentForm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsentForm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": { }
             }
           }
         }
@@ -2309,7 +2344,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2345,7 +2380,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2381,7 +2416,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2407,7 +2442,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2424,7 +2459,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2454,7 +2489,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2540,7 +2575,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2574,7 +2609,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2610,7 +2645,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2627,7 +2662,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2663,7 +2698,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2680,7 +2715,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2698,7 +2733,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2741,7 +2776,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2829,7 +2864,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3026,7 +3061,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3071,7 +3106,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3107,7 +3142,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3133,7 +3168,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3167,7 +3202,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3195,7 +3230,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3229,7 +3264,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3271,7 +3306,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3314,7 +3349,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3338,7 +3373,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3355,7 +3390,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3381,7 +3416,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3416,7 +3451,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3433,7 +3468,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3695,7 +3730,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3846,7 +3881,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3938,7 +3973,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3988,7 +4023,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4036,7 +4071,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4084,7 +4119,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4120,7 +4155,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4165,7 +4200,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4192,7 +4227,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4234,7 +4269,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4270,7 +4305,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4319,7 +4354,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4376,7 +4411,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4442,7 +4477,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4483,7 +4518,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4519,7 +4554,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4553,7 +4588,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4602,7 +4637,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4703,7 +4738,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4934,7 +4969,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6131,7 +6166,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6181,7 +6216,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -6224,7 +6259,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6249,7 +6284,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6269,13 +6304,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -6314,19 +6349,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6335,7 +6370,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6346,7 +6381,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6364,7 +6399,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6377,7 +6412,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -9846,7 +9881,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -13568,7 +13603,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -17088,7 +17123,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
