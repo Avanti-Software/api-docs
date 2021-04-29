@@ -6,7 +6,7 @@ All endpoints in the Avanti API are based on Representational State Transfer (RE
 
 For example, if your Self-Service Portal is https&#58;//myavanti.ca/ABCInc, the base URL for API calls is https&#58;//myavanti.ca/ABCInc-api.
 
-##Leveraging Avanti's API
+## Leveraging Avanti's API
 
 Creating an integration requires a developer familiar with leveraging API endpoints to build your integration. If you don’t have an API developer on staff, you can involve a third-party developer. 
 
