@@ -482,8 +482,8 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Create a Dependent",
-        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
+        "summary": "Update Dependent",
+        "description": "Update an existing dependent for an employee. \n",
         "operationId": "Create-a-Dependent",
         "requestBody": {
           "content": {
@@ -517,8 +517,8 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Update a Dependent",
-        "description": "Update an existing dependent for an employee. ",
+        "summary": "Add Dependent",
+        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
         "operationId": "Update-a-Dependent",
         "requestBody": {
           "content": {
@@ -667,8 +667,8 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Create Emergency Contact",
-        "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "summary": "Update Emergency Contact",
+        "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Create-Emergency-Contact",
         "requestBody": {
           "content": {
@@ -702,8 +702,8 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Update Emergency Contact",
-        "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "summary": "Add Emergency Contact",
+        "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Update-Emergency-Contact",
         "requestBody": {
           "content": {
