@@ -1,6 +1,6 @@
 # Updates
 
-## Version 1.0 (Early Access)
+## Version 1.0
 
 - Initial Endpoints:
   - Attendance Codes

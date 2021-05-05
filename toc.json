@@ -10,32 +10,7 @@
       "title": "Getting Started",
       "uri": "docs/Getting-Started-Clients.md"
     },
-    {
-      "type": "item",
-      "title": "Error Handling",
-      "uri": "docs/error-handling.md"
-    },
-    {
-      "type": "item",
-      "title": "Versioning",
-      "uri": "docs/versioning.md"
-    },
-    {
-      "type": "item",
-      "title": "Custom Endpoints",
-      "uri": "docs/custom-endpoints.md"
-    },
-    {
-      "type": "item",
-      "title": "Testing Avanti APIs",
-      "uri": "docs/testing.md"
-    },
-    {
-      "type": "item",
-      "title": "Updates",
-      "uri": "docs/updates.md"
-    },
-    {
+        {
       "type": "group",
       "title": "Authentication",
       "items": [
@@ -44,6 +19,16 @@
           "title": "Overview",
           "uri": "docs/auth-intro.md"
         },
+       {
+          "type": "item",
+          "title": "Employee Access",
+          "uri": "docs/auth-users.md"
+        },
+        {
+          "type": "item",
+          "title": "Endpoint Access",
+          "uri": "docs/auth-subfunction.md"
+        },
         {
           "type": "item",
           "title": "Client Credentials",
@@ -51,20 +36,30 @@
         },
         {
           "type": "item",
-          "title": "User Accounts",
-          "uri": "docs/auth-users.md"
-        },
-        {
-          "type": "item",
-          "title": "Subfunction Access",
-          "uri": "docs/auth-subfunction.md"
-        },
-        {
-          "type": "item",
           "title": "Access Tokens",
           "uri": "docs/auth-tokens.md"
         }
       ]
+    },
+    {
+      "type": "item",
+      "title": "Custom Endpoints",
+      "uri": "docs/custom-endpoints.md"
+    },
+    {
+      "type": "item",
+      "title": "Versioning",
+      "uri": "docs/versioning.md"
+    },
+    {
+      "type": "item",
+      "title": "Error Handling",
+      "uri": "docs/error-handling.md"
+    },
+    {
+      "type": "item",
+      "title": "Updates",
+      "uri": "docs/updates.md"
     },
     {
       "type": "item",

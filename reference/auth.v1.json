@@ -22,7 +22,7 @@
         "tags": [
           "Token"
         ],
-        "description": "Request a new access token.",
+        "description": "Request access tokens needed to make authenticated requests from the Avanti API.\n\nAccess tokens are used as bearer tokens and must be included in the **Authorization** header of every authenticated request made by a client. Access tokens are prefixed with the Bearer keyword.\n\n```\nGET /v1/personalinfo\nAuthorization: Bearer {AccessToken}\n```\n\nYou’ll need to request some information from your organization’s Avanti Administrator, if you don't already have it:\n- The name of the endpoint.\n- The Avanti Username and Password.\n- API Client Credentials.\n- Avanti company database name.\n- Your Avanti Self-Service Portal URL.",
         "operationId": "Access Token",
         "requestBody": {
           "description": "Client and user credentials",
@@ -31,6 +31,19 @@
             "application/x-www-form-urlencoded": {
               "schema": {
                 "$ref": "#/components/schemas/TokenRequest"
+              },
+              "examples": {
+                "Example": {
+                  "value": {
+                    "client_id": "ASI123451",
+                    "client_secret": "*****",
+                    "grant_type": "password",
+                    "username": "apiuser",
+                    "password": "*****",
+                    "company": "MyCompany",
+                    "device_id": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
+                  }
+                }
               }
             }
           }
@@ -56,13 +69,52 @@
               }
             }
           }
-        }
+        },
+        "summary": "Get Access Token"
       }
     }
   },
   "components": {
     "schemas": {
       "TokenRequest": {
+        "type": "object",
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "default": "ASI123451",
+            "description": "The Client Id for the API Client Credentials. "
+          },
+          "client_secret": {
+            "type": "string",
+            "default": "*****",
+            "description": "The Client Secret for the API Client Credentials. "
+          },
+          "grant_type": {
+            "type": "string",
+            "default": "password",
+            "description": "This is always Password."
+          },
+          "username": {
+            "type": "string",
+            "default": "apiuser",
+            "description": "The Username of the Avanti User. "
+          },
+          "password": {
+            "type": "string",
+            "default": "*****",
+            "description": "The Password for the Avanit User. "
+          },
+          "company": {
+            "type": "string",
+            "default": "MyCompany",
+            "description": "Avanti Company Database Name. "
+          },
+          "device_id": {
+            "type": "string",
+            "default": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676",
+            "description": "A unique identifier for the device running the \nservice. Device IDs can be up to 128 characters long.\n\nWe recommend using a prefix that identifies your service, followed by v4 UUID (universally unique identifier)."
+          }
+        },
         "required": [
           "client_id",
           "client_secret",
@@ -72,34 +124,15 @@
           "company",
           "device_id"
         ],
-        "properties": {
-          "client_id": {
-            "type": "string",
-            "default": "ASI123451"
-          },
-          "client_secret": {
-            "type": "string",
-            "default": "79EB83D4-76A2-4819-B0FB-C8AF9EF3314E"
-          },
-          "grant_type": {
-            "type": "string",
-            "default": "password"
-          },
-          "username": {
-            "type": "string",
-            "default": "apiuser"
-          },
-          "password": {
-            "type": "string",
-            "default": "APIUser654321"
-          },
-          "company": {
-            "type": "string",
-            "default": "BIGDEV2_ASI12345_AVA"
-          },
-          "device_id": {
-            "type": "string",
-            "default": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
+        "x-examples": {
+          "Example": {
+            "client_id": "ASI123451",
+            "client_secret": "*****",
+            "grant_type": "password",
+            "username": "apiuser",
+            "password": "*****",
+            "company": "MyCompany",
+            "device_id": "AvantiAPIDocs-37a099ba-0987-4324-b21f-b58417a59676"
           }
         }
       },
@@ -123,6 +156,16 @@
           },
           "company": {
             "type": "string"
+          }
+        },
+        "x-examples": {
+          "example-1": {
+            "access_token": "string",
+            "expires_in": "string",
+            "token_type": "string",
+            "scope": "string",
+            "auth_state": 0,
+            "company": "string"
           }
         }
       },
