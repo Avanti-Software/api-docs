@@ -1317,8 +1317,7 @@
             "description": "The employee number of the employee whose V34/V35 value is being updated. ",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {

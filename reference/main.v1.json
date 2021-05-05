@@ -2119,7 +2119,7 @@
         }
       }
     },
-    "/v1/GLGroups": 
+    "/v1/GLGroups": {
      "get": {
         "tags": [
           "GLs"
