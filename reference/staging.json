@@ -1327,7 +1327,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Updates the V34 and V35 values on the employee's Deduction/Benefit Code. These values may calculate the employee's deduction or benefit amount, depending on the code setup. "
       }
     },
     "/v1/EmployeeBenefitGroup": {
