@@ -106,8 +106,7 @@
                   }
                 }
               }
-            },
-            "headers": {}
+            }
           }
         }
       }
@@ -447,7 +446,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group."
       }
     },
     "/v1/DefaultsGroup/Setup/{defaultsGroupCode}": {
@@ -482,8 +482,8 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Create a Dependent",
-        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
+        "summary": "Update Dependent",
+        "description": "Update an existing dependent for an employee. \n",
         "operationId": "Create-a-Dependent",
         "requestBody": {
           "content": {
@@ -517,8 +517,8 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Update a Dependent",
-        "description": "Update an existing dependent for an employee. ",
+        "summary": "Add Dependent",
+        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
         "operationId": "Update-a-Dependent",
         "requestBody": {
           "content": {
@@ -595,7 +595,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -621,7 +622,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -665,8 +667,8 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Create Emergency Contact",
-        "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "summary": "Update Emergency Contact",
+        "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Create-Emergency-Contact",
         "requestBody": {
           "content": {
@@ -700,8 +702,8 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Update Emergency Contact",
-        "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "summary": "Add Emergency Contact",
+        "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Update-Emergency-Contact",
         "requestBody": {
           "content": {
@@ -1129,6 +1131,14 @@
         ],
         "summary": "Update Employee Address",
         "operationId": "Update-Employee-Address",
+        "parameters": [
+          {
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1156,14 +1166,7 @@
             }
           }
         },
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "in": "query"
-          }
-        ]
+        "description": "Updates the home address of an employee."
       }
     },
     "/v1/EmployeeBasicInfo": {
@@ -1199,7 +1202,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Update the basic information for the employee, such as full name, birth date, language and SIN information."
       }
     },
     "/v1/EmployeeBasicInfo/Photo": {
@@ -1284,47 +1288,43 @@
           {
             "name": "deductCode",
             "in": "query",
+            "description": "A three-digit ID for the deduction code greater than 499.",
             "schema": {
               "type": "string"
-            },
-            "description": "A three-digit ID for the deduction code greater than 499."
+            }
           },
           {
             "name": "V34",
             "in": "query",
+            "description": "The employee's V34 amount. ",
             "schema": {
               "type": "number",
               "format": "double"
-            },
-            "description": "The employee's V34 amount. "
+            }
           },
           {
             "name": "V35",
             "in": "query",
+            "description": "The employee's V35 amount. ",
             "schema": {
               "type": "number",
               "format": "double"
-            },
-            "description": "The employee's V35 amount. "
+            }
           },
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee whose V34/V35 value is being updated. ",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee whose V34/V35 value is being updated. "
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {}
-                }
-              }
+              "application/json": {}
             }
           }
         },
@@ -1344,7 +1344,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1370,7 +1371,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1396,7 +1398,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1422,7 +1425,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "requestBody": {
@@ -1476,7 +1480,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1528,7 +1533,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1554,7 +1560,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1580,7 +1587,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "requestBody": {
@@ -1623,7 +1631,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "requestBody": {
@@ -1668,7 +1677,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1694,7 +1704,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1720,7 +1731,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           },
           {
             "name": "location",
@@ -1753,7 +1765,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee."
       }
     },
     "/v1/Employees": {
@@ -1805,7 +1818,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           }
         ],
         "responses": {
@@ -1831,7 +1845,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           },
           {
             "name": "width",
@@ -1873,7 +1888,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -2293,7 +2309,43 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
+            }
+          }
+        }
+      }
+    },
+    "/v1/NewExperience/DeclineTermsOfService": {
+      "post": {
+        "tags": [
+          "New Experience"
+        ],
+        "summary": "Decline Terms of Service",
+        "operationId": "Decline-Terms-of-Service",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsentForm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsentForm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsentForm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": { }
             }
           }
         }
@@ -2346,7 +2398,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2745,7 +2797,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Update whether the employee is receiving notifications for the notification type. The employee is always the employee attached to the user."
       }
     },
     "/v1/PayCodes": {
@@ -3020,7 +3073,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           }
         ],
         "responses": {
@@ -3134,10 +3188,17 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": {},
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
             }
           }
-        }
+        },
+        "description": ""
       },
       "put": {
         "tags": [
@@ -3168,10 +3229,15 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "examples": {
+                  "example-1": {}
+                }
+              }
             }
           }
-        }
+        },
+        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info."
       }
     },
     "/v1/PersonalInfo/EmployeeFigures": {
@@ -3249,7 +3315,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           },
           {
             "name": "width",
@@ -3289,7 +3356,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           }
         ],
         "requestBody": {
@@ -3332,7 +3400,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           }
         ],
         "responses": {
@@ -3385,7 +3454,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": ""
       }
     },
     "/v1/Positions": {
@@ -3402,7 +3472,8 @@
             "schema": {
               "type": "boolean",
               "default": false
-            }
+            },
+            "description": "Determines whether all positions will be returned. If true, active and inactive employees will be included in the response. If false, only active employees will be included in the response.  Default is false."
           },
           {
             "name": "masculine",
@@ -3410,7 +3481,8 @@
             "schema": {
               "type": "boolean",
               "default": false
-            }
+            },
+            "description": "Determines which French position description is returned. If true, the masculine description will be returned. If false, the feminine description will be returned.  By default, this is false.  A French description will only be included when a French access token is provided."
           }
         ],
         "responses": {
@@ -3420,7 +3492,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions."
       }
     },
     "/v1/RateGrids": {
@@ -3882,7 +3955,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           },
           {
             "name": "date",

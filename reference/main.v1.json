@@ -74,25 +74,6 @@
         }
       }
     },
-    "/v1/BankTransits": {
-      "get": {
-        "tags": [
-          "Bank Transit"
-        ],
-        "summary": "List Bank Transits",
-        "operationId": "List-Bank-Transits",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {}
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Banks": {
       "get": {
         "tags": [
@@ -125,6 +106,23 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "/v1/BankTransits": {
+      "get": {
+        "tags": [
+          "Bank Transit"
+        ],
+        "summary": "List Bank Transits",
+        "operationId": "List-Bank-Transits",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -198,6 +196,43 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/Codes/{type}": {
+      "delete": {
+        "tags": [
+          "Codes"
+        ],
+        "summary": "Delete Codes",
+        "operationId": "Delete-Codes",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codes",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Ok",
@@ -282,43 +317,6 @@
         }
       }
     },
-    "/v1/Codes/{type}": {
-      "delete": {
-        "tags": [
-          "Codes"
-        ],
-        "summary": "Delete Codes",
-        "operationId": "Delete-Codes",
-        "parameters": [
-          {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "codes",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/Codes/Setup/{module}": {
       "get": {
         "tags": [
@@ -348,7 +346,22 @@
         }
       }
     },
-    "/v1/CompanyInfo/Logo/{width}/{height}": {
+    "/v1/CompanyInfo/Logo": {
+      "delete": {
+        "tags": [
+          "Company Info"
+        ],
+        "summary": "Delete Company Logo",
+        "operationId": "Delete-Company-Logo",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
       "get": {
         "tags": [
           "Company Info"
@@ -358,9 +371,7 @@
         "parameters": [
           {
             "name": "width",
-            "in": "path",
-            "description": "The width of the picture, in pixels.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -368,9 +379,7 @@
           },
           {
             "name": "height",
-            "in": "path",
-            "description": "The height of the employee's picture, in pixels.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -385,10 +394,8 @@
             }
           }
         }
-      }
-    },
-    "/v1/CompanyInfo/Logo": {
-      "post": {
+      },
+      "put": {
         "tags": [
           "Company Info"
         ],
@@ -410,9 +417,7 @@
                 }
               },
               "encoding": {
-                "logos": {
-                  "style": "form"
-                }
+                "logos": {}
               }
             }
           }
@@ -425,13 +430,15 @@
             }
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/v1/DefaultsGroup": {
+      "get": {
         "tags": [
-          "Company Info"
+          "Defaults Group"
         ],
-        "summary": "Delete Company Logo",
-        "operationId": "Delete-Company-Logo",
+        "summary": "List Defaults Groups",
+        "operationId": "List-Defaults-Groups",
         "responses": {
           "200": {
             "description": "Ok",
@@ -439,94 +446,21 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group."
       }
     },
-    "/v1/DefaultGroups": {
+    "/v1/DefaultsGroup/Setup/{defaultsGroupCode}": {
       "get": {
         "tags": [
-          "Default Groups"
+          "Defaults Group"
         ],
-        "summary": "List Default Groups",
-        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group.",
-        "operationId": "List-Default-Groups",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      {
-                        "text": "01 - Bi-weekly",
-                        "value": "01"
-                      },
-                      {
-                        "text": "02 - Semi-Monthly",
-                        "value": "02"
-                      },
-                      {
-                        "text": "03 - Monthly",
-                        "value": "03"
-                      },
-                      {
-                        "text": "05 - Bi-weekly hrly",
-                        "value": "05"
-                      },
-                      {
-                        "text": "99 - Volunteers",
-                        "value": "99"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/DefaultGroup/{defaultGroupCode}": {
-      "get": {
-        "tags": [
-          "Default Groups"
-        ],
-        "summary": "Get Default Group Values",
-        "operationId": "Get-Default-Group-Values",
+        "summary": "Get Defaults Group Setup",
+        "operationId": "Get-Defaults-Group-Setup",
         "parameters": [
           {
-            "name": "defaultGroupCode",
+            "name": "defaultsGroupCode",
             "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/Dependents/{empNo}": {
-      "get": {
-        "tags": [
-          "Dependents"
-        ],
-        "summary": "List Dependents",
-        "description": "Returns a list of all the employee's dependents. \n\nDependents are part of Benefit Administration in Avanti. Dependents may be covered by the employee's benefits. Additionally, dependents are used to indicate the employee's beneficiaries.",
-        "operationId": "List-Dependents",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "required": true,
             "schema": {
               "type": "string"
@@ -548,8 +482,8 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Create a Dependent",
-        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
+        "summary": "Update Dependent",
+        "description": "Update an existing dependent for an employee. \n",
         "operationId": "Create-a-Dependent",
         "requestBody": {
           "content": {
@@ -583,8 +517,8 @@
         "tags": [
           "Dependents"
         ],
-        "summary": "Update a Dependent",
-        "description": "Update an existing dependent for an employee. ",
+        "summary": "Add Dependent",
+        "description": "Creates a new dependent for an employee. \n\nDependents can be added to employee benefits. Additionally, they can be used to indicate beneficiaries. \n",
         "operationId": "Update-a-Dependent",
         "requestBody": {
           "content": {
@@ -648,25 +582,48 @@
             }
           }
         }
-      }
-    },
-    "/v1/Dependents/Setup/{empNo}": {
+      },
       "get": {
         "tags": [
           "Dependents"
         ],
-        "summary": "Dependents Setup",
-        "description": "Returns the dependents setup data.",
-        "operationId": "Dependents-Setup",
+        "summary": "List Dependents",
+        "operationId": "List-Dependents",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
+          }
+        }
+      }
+    },
+    "/v1/Dependents/Setup": {
+      "get": {
+        "tags": [
+          "Dependents"
+        ],
+        "summary": "Get Dependents Setup",
+        "operationId": "Get-Dependents-Setup",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -710,8 +667,8 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Create Emergency Contact",
-        "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "summary": "Update Emergency Contact",
+        "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Create-Emergency-Contact",
         "requestBody": {
           "content": {
@@ -745,8 +702,8 @@
         "tags": [
           "Emergency Contacts"
         ],
-        "summary": "Update Emergency Contact",
-        "description": "Update an existing emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
+        "summary": "Add Emergency Contact",
+        "description": "Creates a new emergency contact for an employee. \n\nEmergency contacts indicate who should be contacted in case of an emergency, as well as the details to contact them. ",
         "operationId": "Update-Emergency-Contact",
         "requestBody": {
           "content": {
@@ -1168,12 +1125,11 @@
       }
     },
     "/v1/EmployeeAddress": {
-      "post": {
+      "put": {
         "tags": [
           "Employee Address"
         ],
         "summary": "Update Employee Address",
-        "description": "Updates the home address of an employee. ",
         "operationId": "Update-Employee-Address",
         "requestBody": {
           "content": {
@@ -1201,16 +1157,16 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Updates the home address of an employee."
       }
     },
     "/v1/EmployeeBasicInfo": {
-      "post": {
+      "put": {
         "tags": [
           "Employee Basic Info"
         ],
         "summary": "Update Employee Basic Info",
-        "description": "Returns the basic information for the employee, such as full name, birth date, language and SIN information.",
         "operationId": "Update-Employee-Basic-Info",
         "requestBody": {
           "content": {
@@ -1238,22 +1194,21 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Update the basic information for the employee, such as full name, birth date, language and SIN information."
       }
     },
-    "/v1/EmployeeBasicInfo/Photo/{empNo}": {
-      "post": {
+    "/v1/EmployeeBasicInfo/Photo": {
+      "put": {
         "tags": [
           "Employee Basic Info"
         ],
-        "summary": "Updates Employee Photo",
-        "operationId": "Updates-Employee-Photo",
+        "summary": "Update an Employee Photo",
+        "operationId": "Update-an-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1275,9 +1230,7 @@
                 }
               },
               "encoding": {
-                "files": {
-                  "style": "form"
-                }
+                "files": {}
               }
             }
           }
@@ -1295,14 +1248,12 @@
         "tags": [
           "Employee Basic Info"
         ],
-        "summary": "Deletes Employee Photo",
-        "operationId": "Deletes-Employee-Photo",
+        "summary": "Delete an Employee Photo",
+        "operationId": "Delete-an-Employee-Photo",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1318,8 +1269,8 @@
         }
       }
     },
-    "/v1/EmployeeBenefitCodeV34V35Values/{empNo}": {
-      "post": {
+    "/v1/EmployeeBenefitCodeV34V35Values": {
+      "put": {
         "tags": [
           "Employee Benefit Codes"
         ],
@@ -1351,12 +1302,11 @@
           },
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1369,22 +1319,21 @@
         }
       }
     },
-    "/v1/EmployeeBenefitGroup/{empNo}": {
+    "/v1/EmployeeBenefitGroup": {
       "get": {
         "tags": [
           "Employee Benefit Group"
         ],
-        "summary": "Get Employee Benefit Information",
-        "operationId": "Get-Employee-Benefit-Information",
+        "summary": "Get Employee Benefit Info",
+        "operationId": "Get-Employee-Benefit-Info",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1397,7 +1346,7 @@
         }
       }
     },
-    "/v1/EmployeeDefaultsGroup/{empNo}": {
+    "/v1/EmployeeDefaultsGroup": {
       "get": {
         "tags": [
           "Employee Defaults Group"
@@ -1407,12 +1356,11 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1425,83 +1373,34 @@
         }
       }
     },
-    "/v1/EmployeeEarningCodes/{empNo}": {
+    "/v1/EmployeeEarningCodes": {
       "get": {
         "tags": [
           "Employee Earning Codes"
         ],
-        "summary": "Get Employee Earning Codes",
-        "description": "This returns a list of all the earning codes for the employee. The format of Text in the response depends on the company web setting Lookup.EarnDeductCode.",
-        "operationId": "Get-Employee-Earning-Codes",
+        "summary": "List Employee Earning Codes",
+        "operationId": "List-Employee-Earning-Codes",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      {
-                        "text": "Regular Earnings",
-                        "value": "001"
-                      },
-                      {
-                        "text": "Stat Not Worked",
-                        "value": "010"
-                      },
-                      {
-                        "text": "Stat Worked",
-                        "value": "011"
-                      },
-                      {
-                        "text": "Leave of Absence Paid",
-                        "value": "020"
-                      },
-                      {
-                        "text": "Leave of Absence Not Paid",
-                        "value": "021"
-                      },
-                      {
-                        "text": "Availability",
-                        "value": "040"
-                      },
-                      {
-                        "text": "Bonus",
-                        "value": "200"
-                      },
-                      {
-                        "text": "Expenses",
-                        "value": "210"
-                      },
-                      {
-                        "text": "Commissions",
-                        "value": "300"
-                      },
-                      {
-                        "text": "Vacation taken",
-                        "value": "350"
-                      }
-                    ]
-                  }
-                }
-              }
+              "application/json": {}
             }
           }
         }
       }
     },
-    "/v1/EmployeeEmails/{empNo}": {
+    "/v1/EmployeeEmails": {
       "put": {
         "tags": [
           "Employee Emails"
@@ -1511,12 +1410,11 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "requestBody": {
@@ -1557,19 +1455,44 @@
         }
       }
     },
-    "/v1/EmployeeJobInfo/{empNo}": {
+    "/v1/EmployeeGLInfo": {
       "get": {
         "tags": [
-          "Employee Job Info"
+          "Employee GL Info"
         ],
-        "summary": "Get Job Information",
-        "operationId": "Get-Job-Information",
+        "summary": "Get Employee GL Info",
+        "operationId": "Get-Employee-GL-Info",
+        "parameters": [
+          {
+            "name": "empno",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeeJobData": {
+      "get": {
+        "tags": [
+          "Employee Job Data"
+        ],
+        "summary": "Get Employee Job Data",
+        "operationId": "Get-Employee-Job-Data",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -1585,7 +1508,34 @@
         }
       }
     },
-    "/v1/EmployeePayInfo/{empNo}": {
+    "/v1/EmployeeJobInfo": {
+      "get": {
+        "tags": [
+          "Employee Job Info"
+        ],
+        "summary": "Get Employee Job Info",
+        "operationId": "Get-Employee-Job-Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeePayInfo": {
       "get": {
         "tags": [
           "Employee Pay Info"
@@ -1595,12 +1545,11 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1613,8 +1562,8 @@
         }
       }
     },
-    "/v1/EmployeePhoneNumber/{empNo}": {
-      "post": {
+    "/v1/EmployeePhoneNumber": {
+      "put": {
         "tags": [
           "Employee Phone Number"
         ],
@@ -1623,12 +1572,11 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "requestBody": {
@@ -1668,12 +1616,11 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "requestBody": {
@@ -1705,22 +1652,21 @@
         }
       }
     },
-    "/v1/EmployeeVacationInfo/{empNo}": {
+    "/v1/EmployeePositionRate": {
       "get": {
         "tags": [
-          "Employee Vacation Info"
+          "Employee Position Rates"
         ],
-        "summary": "Get Employee Vacation Info",
-        "operationId": "Get-Employee-Vacation-Info",
+        "summary": "List Employee Position Rates",
+        "operationId": "List-Employee-Position-Rates",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1733,22 +1679,21 @@
         }
       }
     },
-    "/v1/EmployeeGLInfo/{empno}": {
+    "/v1/EmployeePositionRate/Description": {
       "get": {
         "tags": [
-          "EmployeeGL Info"
+          "Employee Position Rates"
         ],
-        "summary": "Get Employee GL Infomation",
-        "operationId": "Get-Employee-GL-Infomation",
+        "summary": "Get Employee Position Rate",
+        "operationId": "Get-Employee-Position-Rate",
         "parameters": [
           {
-            "name": "empno",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "name": "empNo",
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1759,6 +1704,57 @@
             }
           }
         }
+      }
+    },
+    "/v1/EmployeePositions": {
+      "get": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "List Employee Positions",
+        "operationId": "List-Employee-Positions",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+          },
+          {
+            "name": "location",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee."
       }
     },
     "/v1/Employees": {
@@ -1797,7 +1793,34 @@
         }
       }
     },
-    "/v1/Employees/Photo/{empNo}": {
+    "/v1/Employees/Details": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Get Employee Info",
+        "operationId": "Get-Employee-Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/Employees/Photo": {
       "get": {
         "tags": [
           "Employees"
@@ -1807,17 +1830,15 @@
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           },
           {
             "name": "width",
             "in": "query",
-            "description": "The width of the picture, in pixels.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1826,7 +1847,6 @@
           {
             "name": "height",
             "in": "query",
-            "description": "The height of the employee's picture, in pixels.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1843,22 +1863,21 @@
         }
       }
     },
-    "/v1/Employees/Details/{empNo}": {
+    "/v1/EmployeeVacationInfo": {
       "get": {
         "tags": [
-          "Employees"
+          "Employee Vacation Info"
         ],
-        "summary": "Get Employee Details",
-        "operationId": "Get-Employee-Details",
+        "summary": "Get Employee Vacation Info",
+        "operationId": "Get-Employee-Vacation-Info",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1980,41 +1999,6 @@
         }
       }
     },
-    "/v1/GLBenefitGroups": {
-      "get": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "List GL Benefit Groups",
-        "operationId": "List-GL-Benefit-Groups",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/GLGroups": {
-      "get": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "List GL Groups",
-        "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
-        "operationId": "List-GL-Groups",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/GLAccounts": {
       "get": {
         "tags": [
@@ -2089,23 +2073,6 @@
         }
       }
     },
-    "/v1/GLSetup": {
-      "get": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Get GL Setup",
-        "operationId": "Get-GL-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/GLAccounts/Description": {
       "get": {
         "tags": [
@@ -2135,14 +2102,13 @@
         }
       }
     },
-    "/v1/GridCodes": {
+    "/v1/GLBenefitGroups": {
       "get": {
         "tags": [
-          "Grid Codes"
+          "GLs"
         ],
-        "summary": "List Grid Codes",
-        "description": "Returns a list of the Rate Grid Codes. The format of Text in the response depends on the company web setting Lookup.GridCodes.\n\nRate Grids are defined rate structures that can be applied to employees based on position or earnings, such a shift premiums and travel rates. Additionally, future rates can be defined for each rate grid.",
-        "operationId": "List-Grid-Codes",
+        "summary": "List GL Benefit Groups",
+        "operationId": "List-GL-Benefit-Groups",
         "responses": {
           "200": {
             "description": "Ok",
@@ -2153,24 +2119,49 @@
         }
       }
     },
-    "/v1/EmployeeJobData/{empNo}": {
-      "get": {
+    "/v1/GLGroups": {
+     "get": {
         "tags": [
-          "Job Data"
+          "GLs"
         ],
-        "summary": "Get Employee Job Data",
-        "operationId": "Get-Employee-Job-Data",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "summary": "List GL Groups",
+        "description": "Returns a list of GL Groups. The format of Text in the response depends on the company web setting Lookup.GlEarnGroups.\n\nIn Avanti, GL Groups provide the ability to expense earning amounts to multiple G/L accounts.",
+        "operationId": "List-GL-Groups",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
+        }
+      }
+    },
+    "/v1/GLSetup": {
+      "get": {
+        "tags": [
+          "GLs"
         ],
+        "summary": "Get GL Setup",
+        "operationId": "Get-GL-Setup",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/GridCodes": {
+      "get": {
+        "tags": [
+          "Grid Codes"
+        ],
+        "summary": "List Grid Codes",
+        "description": "Returns a list of the Rate Grid Codes. The format of Text in the response depends on the company web setting Lookup.GridCodes.\n\nRate Grids are defined rate structures that can be applied to employees based on position or earnings, such a shift premiums and travel rates. Additionally, future rates can be defined for each rate grid.",
+        "operationId": "List-Grid-Codes",
         "responses": {
           "200": {
             "description": "Ok",
@@ -2240,23 +2231,6 @@
         }
       }
     },
-    "/v1/NewExperienceSetup": {
-      "get": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "New Experience Setup",
-        "operationId": "New-Experience-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/NewExperience": {
       "post": {
         "tags": [
@@ -2283,6 +2257,23 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/NewExperience/Setup": {
+      "get": {
+        "tags": [
+          "New Experience"
+        ],
+        "summary": "Get New Experience Setup",
+        "operationId": "Get-New-Experience-Setup",
         "responses": {
           "200": {
             "description": "Ok",
@@ -2329,23 +2320,6 @@
         }
       }
     },
-    "/v1/NewHire/Setup": {
-      "get": {
-        "tags": [
-          "New Hire"
-        ],
-        "summary": "New Hire Setup",
-        "operationId": "New-Hire-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/NewHire/DefaultGroup": {
       "get": {
         "tags": [
@@ -2372,58 +2346,13 @@
         }
       }
     },
-    "/v1/NotificationSettings": {
+    "/v1/NewHire/Setup": {
       "get": {
         "tags": [
-          "Notification Settings"
+          "New Hire"
         ],
-        "summary": "List Notification Settings",
-        "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
-        "operationId": "List-Notification-Settings",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Notification Settings"
-        ],
-        "summary": "Update Notification Settings",
-        "description": "Update whether the employee is receiving notifications for the notification type.\nThe employee is always the employee attached to the user.",
-        "operationId": "Update-Notification-Settings",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotificationSettingState"
-                }
-              }
-            }
-          }
-        },
+        "summary": "New Hire Setup",
+        "operationId": "New-Hire-Setup",
         "responses": {
           "200": {
             "description": "Ok",
@@ -2620,23 +2549,6 @@
         }
       }
     },
-    "/v1/Notifications/Unread": {
-      "get": {
-        "tags": [
-          "Notifications"
-        ],
-        "summary": "Get Unread Notification Count",
-        "operationId": "Get-Unread-Notification-Count",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/Notifications/NotPushed": {
       "get": {
         "tags": [
@@ -2688,6 +2600,85 @@
             }
           }
         }
+      }
+    },
+    "/v1/Notifications/Unread": {
+      "get": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Get Unread Notification Count",
+        "operationId": "Get-Unread-Notification-Count",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/NotificationSettings": {
+      "get": {
+        "tags": [
+          "Notification Settings"
+        ],
+        "summary": "List Notification Settings",
+        "description": "This returns a list of all the notification types and their setup. \n\nThe setup includes whether: \n- This type of notification is used.  \n- Employees will receive these notifications by default. \n- Employees can disable these notifications.",
+        "operationId": "List-Notification-Settings",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Notification Settings"
+        ],
+        "summary": "Update Notification Settings",
+        "operationId": "Update-Notification-Settings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSettingState"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "description": "Update whether the employee is receiving notifications for the notification type. The employee is always the employee attached to the user."
       }
     },
     "/v1/PayCodes": {
@@ -2751,6 +2742,33 @@
         }
       }
     },
+    "/v1/PayGroup/{payGroup}": {
+      "get": {
+        "tags": [
+          "Pay Groups"
+        ],
+        "summary": "Get Pay Group",
+        "operationId": "Get-Pay-Group",
+        "parameters": [
+          {
+            "name": "payGroup",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
     "/v1/PayGroups": {
       "get": {
         "tags": [
@@ -2799,33 +2817,6 @@
                   }
                 }
               }
-            }
-          }
-        }
-      }
-    },
-    "/v1/PayGroup/{payGroup}": {
-      "get": {
-        "tags": [
-          "Pay Groups"
-        ],
-        "summary": "Get Pay Group",
-        "operationId": "Get-Pay-Group",
-        "parameters": [
-          {
-            "name": "payGroup",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
             }
           }
         }
@@ -2914,14 +2905,14 @@
                       {
                         "bankNo": "01",
                         "benefits": 1998.84,
-                        "chequeDate": "2020-08-31T00:00:00",
+                        "chequeDate": "2020-08-31T00:00:00.0000000+00:00",
                         "chequeNo": "038612",
                         "deductions": 1468.77,
                         "earnings": 3744,
                         "empNo": "000001005",
                         "keyExtension": 1,
                         "netPay": 2275.23,
-                        "payEndingDate": "2020-08-31T00:00:00",
+                        "payEndingDate": "2020-08-31T00:00:00.0000000+00:00",
                         "runNumber": 2003
                       }
                     ]
@@ -2933,19 +2924,17 @@
         }
       }
     },
-    "/v1/PayStatements/Cancelled/{empNo}": {
+    "/v1/PayStatements/Cancelled": {
       "get": {
         "tags": [
-          "Pay Statements"
+          "Employee Pay Statements"
         ],
         "summary": "List Cancelled Pay Statements",
-        "description": "Returns a list of the pay run of cancelled payment for the employee.\n\nIn Avanti, a cancelled payment is a complete reversal of all values in the initially processed payment.",
         "operationId": "List-Cancelled-Pay-Statements",
         "parameters": [
           {
             "name": "minRun",
             "in": "query",
-            "description": "Run numbers lower then this will not be included. Maximum is 999999999.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2954,7 +2943,6 @@
           {
             "name": "maxRun",
             "in": "query",
-            "description": "Run numbers higher then this will not be included. Maximum is 999999999.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2962,29 +2950,18 @@
           },
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000000031.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      2012,
-                      1774,
-                      1773
-                    ]
-                  }
-                }
-              }
+              "application/json": {}
             }
           }
         }
@@ -3071,106 +3048,19 @@
         }
       }
     },
-    "/v1/PersonalInfo/{empNo}": {
-      "get": {
-        "tags": [
-          "Personal Info"
-        ],
-        "summary": "Get Personal Information",
-        "description": "Returns the personal information for an employee. ",
-        "operationId": "Get-Personal-Information",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/PersonalInfo": {
-      "post": {
-        "tags": [
-          "Personal Info"
-        ],
-        "summary": "Update Personal Information",
-        "description": "Provides the ability to update the personal information for the employee. \n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info. ",
-        "operationId": "Update-Personal-Information",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/PersonalInfo/Photo/{empNo}": {
       "get": {
         "tags": [
-          "Personal Info"
+          "Employee Personal Info"
         ],
-        "summary": "Get Employee Photo",
-        "description": "Returns a byte array of the employee's photo. ",
-        "operationId": "Get-Employee-Photo",
+        "summary": "Get Employee Personal Info",
+        "operationId": "Get-Employee-Personal-Info",
         "parameters": [
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "width",
-            "in": "query",
-            "description": "The width of the picture, in pixels.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "description": "The height of the employee's picture, in pixels.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -3178,54 +3068,39 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "contentLength": 0,
-                      "contentType": "jpg",
-                      "data": "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"
-                    }
-                  }
+              "application/json": {},
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
                 }
               }
             }
           }
-        }
+        },
+        "description": ""
       },
       "put": {
         "tags": [
-          "Personal Info"
+          "Employee Personal Info"
         ],
-        "summary": "Update Employee Photo",
-        "description": "Creates a new photo for the employee or replaces the existing employee photo from a byte array. \n\nWe recommend using photos that square or close to square to avoid scaling issues. ",
-        "operationId": "Update-Employee-Photo",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "summary": "Update Employee Personal Info",
+        "operationId": "Update-Employee-Personal-Info",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/File"
+                "$ref": "#/components/schemas/Employee"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/File"
+                "$ref": "#/components/schemas/Employee"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/File"
+                "$ref": "#/components/schemas/Employee"
               }
             }
           }
@@ -3236,46 +3111,13 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "Example": {
-                    "value": {
-                      "contentLength": 0,
-                      "contentType": "jpg",
-                      "data": "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",
-                      "fileName": "Photo.jpg"
-                    }
-                  }
+                  "example-1": {}
                 }
               }
             }
           }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Personal Info"
-        ],
-        "summary": "Delete Employee Photo",
-        "description": "Deletes the employee's photo. ",
-        "operationId": "Delete-Employee-Photo",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
+        },
+        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info."
       }
     },
     "/v1/PersonalInfo/EmployeeFigures": {
@@ -3305,12 +3147,11 @@
           }
         }
       },
-      "post": {
+      "put": {
         "tags": [
-          "Personal Info"
+          "Employee Personal Info"
         ],
         "summary": "Update Employee Figures",
-        "description": "Update the Figures, Dates, and Text Fields for the employee. These are defined on the Profile Field Names tab of the Payroll Parameters. \n\nText Fields have a Text Type defined in Payroll Parameters.  If the Text Type is anything other than Text or Required Text, the value should match a valid ID of the selected Text Type.\n\nThe Figures and Text Fields are updated on the Values tab of the Employee Profile. The Dates for the employee are updated on the Dates tab of the Employee Profile.",
         "operationId": "Update-Employee-Figures",
         "requestBody": {
           "content": {
@@ -3335,27 +3176,119 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "empNo": "000001005",
-                      "dedFig": [
-                        {
-                          "text": 1,
-                          "value": 1852.35
-                        }
-                      ],
-                      "otherText": [
-                        {
-                          "text": 15,
-                          "value": "Finance"
-                        }
-                      ]
-                    }
-                  }
-                }
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/PersonalInfo/Photo": {
+      "get": {
+        "tags": [
+          "Employee Personal Info"
+        ],
+        "summary": "Get Employee Photo",
+        "operationId": "Get-Employee-Photo",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+          },
+          {
+            "name": "width",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Employee Personal Info"
+        ],
+        "summary": "Update Employee Photo",
+        "operationId": "Update-Employee-Photo",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/File"
               }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/File"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/File"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Employee Personal Info"
+        ],
+        "summary": "Delete Employee Photo",
+        "operationId": "Delete-Employee-Photo",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
             }
           }
         }
@@ -3378,257 +3311,7 @@
         }
       }
     },
-    "/v1/PositionRateDescription": {
-      "get": {
-        "tags": [
-          "Position Rate"
-        ],
-        "summary": "Get Position Rate Description",
-        "operationId": "Get-Position-Rate-Description",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/PositionRate/PositionRatesData": {
-      "get": {
-        "tags": [
-          "Position Rate"
-        ],
-        "summary": "List Position Rates",
-        "operationId": "List-Position-Rates",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/Positions/{empNo}": {
-      "get": {
-        "tags": [
-          "Positions"
-        ],
-        "summary": "List Employee Positions",
-        "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
-        "operationId": "List-Employee-Positions",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "location",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "startDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "endDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      {
-                        "text": "000020 - Warehouse Worker",
-                        "value": "000020"
-                      },
-                      {
-                        "text": "000023 - Assembly Line",
-                        "value": "000023"
-                      },
-                      {
-                        "text": "000025 - Forklift Operator II",
-                        "value": "000025"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Positions/AllPositions": {
-      "get": {
-        "tags": [
-          "Positions"
-        ],
-        "summary": "List Positions",
-        "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
-        "operationId": "List-Positions",
-        "parameters": [
-          {
-            "name": "includeInactive",
-            "in": "query",
-            "description": "Determines whether all positions will be returned. If true, active and inactive employees will be included in the response. If false, only active employees will be included in the response. \n\nDefault is false.",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          },
-          {
-            "name": "masculine",
-            "in": "query",
-            "description": "Determines which French position description is returned. If true, the masculine description will be returned. If false, the feminine description will be returned. \n\nBy default, this is false.\n\nA French description will only be included when a French access token is provided.",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      {
-                        "text": "000003 - Sales",
-                        "value": "000003"
-                      },
-                      {
-                        "text": "000004 - Admin Assistant",
-                        "value": "000004"
-                      },
-                      {
-                        "text": "000005 - Marketing",
-                        "value": "000005"
-                      },
-                      {
-                        "text": "000006 - Accountant",
-                        "value": "000006"
-                      },
-                      {
-                        "text": "000007 - Payroll Admin",
-                        "value": "000007"
-                      },
-                      {
-                        "text": "000008 - Compensation Manager",
-                        "value": "000008"
-                      },
-                      {
-                        "text": "000010 - Sales",
-                        "value": "000010"
-                      },
-                      {
-                        "text": "000011 - Marketing",
-                        "value": "000011"
-                      },
-                      {
-                        "text": "000015 - Customer Service",
-                        "value": "000015"
-                      },
-                      {
-                        "text": "000030 - HR Director",
-                        "value": "000030"
-                      },
-                      {
-                        "text": "000101 - IT Manager",
-                        "value": "000101"
-                      },
-                      {
-                        "text": "000102 - IT Systems Analyst",
-                        "value": "000102"
-                      },
-                      {
-                        "text": "C0200 - Building Science Technologist",
-                        "value": "C0200"
-                      },
-                      {
-                        "text": "C0304 - Project Manager Site Assessment",
-                        "value": "C0304"
-                      },
-                      {
-                        "text": "C1000 - Field Manager",
-                        "value": "C1000"
-                      },
-                      {
-                        "text": "C4287 - Project Coordinator Haz Mat",
-                        "value": "C4287"
-                      },
-                      {
-                        "text": "C7901 - Senior Technologist OHS",
-                        "value": "C7901"
-                      },
-                      {
-                        "text": "C7910 - Team Lead Remediation",
-                        "value": "C7910"
-                      },
-                      {
-                        "text": "C7911 - RemediationTechnologist",
-                        "value": "C7911"
-                      },
-                      {
-                        "text": "NA - N/A POSITION",
-                        "value": "NA"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Position/{positionCode}": {
+    "/v1/Position": {
       "get": {
         "tags": [
           "Positions"
@@ -3638,8 +3321,7 @@
         "parameters": [
           {
             "name": "positionCode",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -3652,7 +3334,46 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": ""
+      }
+    },
+    "/v1/Positions": {
+      "get": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "List Positions",
+        "operationId": "List-Positions",
+        "parameters": [
+          {
+            "name": "includeInactive",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "description": "Determines whether all positions will be returned. If true, active and inactive employees will be included in the response. If false, only active employees will be included in the response.  Default is false."
+          },
+          {
+            "name": "masculine",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "description": "Determines which French position description is returned. If true, the masculine description will be returned. If false, the feminine description will be returned.  By default, this is false.  A French description will only be included when a French access token is provided."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions."
       }
     },
     "/v1/RateGrids": {
@@ -3667,6 +3388,81 @@
             "description": "Ok",
             "content": {
               "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/Reporter": {
+      "post": {
+        "tags": [
+          "Reporter"
+        ],
+        "summary": "Get Report Data With Options",
+        "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
+        "operationId": "Get-Report-Data-With-Options",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportOptions"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Example": {
+                    "value": [
+                      {
+                        "employeeNo": "000000011",
+                        "payGroup": "001",
+                        "position": "3000",
+                        "initialHireDate": "1992-03-06T00:00:00.0000000+00:00"
+                      },
+                      {
+                        "employeeNo": "000000012",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "1990-02-28T00:00:00.0000000+00:00",
+                        "terminationDate": "2019-08-01T00:00:00.0000000+00:00"
+                      },
+                      {
+                        "employeeNo": "000000013",
+                        "payGroup": "001",
+                        "position": "9001",
+                        "initialHireDate": "2000-01-01T00:00:00.0000000+00:00"
+                      },
+                      {
+                        "employeeNo": "000000014",
+                        "payGroup": "999",
+                        "position": "9003",
+                        "initialHireDate": "1990-01-01T00:00:00.0000000+00:00"
+                      },
+                      {
+                        "employeeNo": "000000015",
+                        "payGroup": "003",
+                        "position": "3000",
+                        "initialHireDate": "2015-01-27T00:00:00.0000000+00:00"
+                      }
+                    ]
+                  }
+                }
+              }
             }
           }
         }
@@ -3746,107 +3542,32 @@
                         "employeeNo": "000000011",
                         "payGroup": "001",
                         "position": "3000",
-                        "initialHireDate": "1992-03-06T00:00:00"
+                        "initialHireDate": "1992-03-06T00:00:00.0000000+00:00"
                       },
                       {
                         "employeeNo": "000000012",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "1990-02-28T00:00:00",
-                        "terminationDate": "2019-08-01T00:00:00"
+                        "initialHireDate": "1990-02-28T00:00:00.0000000+00:00",
+                        "terminationDate": "2019-08-01T00:00:00.0000000+00:00"
                       },
                       {
                         "employeeNo": "000000013",
                         "payGroup": "001",
                         "position": "9001",
-                        "initialHireDate": "2000-01-01T00:00:00"
+                        "initialHireDate": "2000-01-01T00:00:00.0000000+00:00"
                       },
                       {
                         "employeeNo": "000000014",
                         "payGroup": "999",
                         "position": "9003",
-                        "initialHireDate": "1990-01-01T00:00:00"
+                        "initialHireDate": "1990-01-01T00:00:00.0000000+00:00"
                       },
                       {
                         "employeeNo": "000000015",
                         "payGroup": "003",
                         "position": "3000",
-                        "initialHireDate": "2015-01-27T00:00:00"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/Reporter": {
-      "post": {
-        "tags": [
-          "Reporter"
-        ],
-        "summary": "Get Report Data With Options",
-        "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID  WageSample in 'Send a Test Request'. \n\nWant additional information on setting up a report? Go to https://apidocs.avanti.dev/custom-endpoints to learn more. ",
-        "operationId": "Get-Report-Data-With-Options",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReportOptions"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": [
-                      {
-                        "employeeNo": "000000011",
-                        "payGroup": "001",
-                        "position": "3000",
-                        "initialHireDate": "1992-03-06T00:00:00"
-                      },
-                      {
-                        "employeeNo": "000000012",
-                        "payGroup": "001",
-                        "position": "9001",
-                        "initialHireDate": "1990-02-28T00:00:00",
-                        "terminationDate": "2019-08-01T00:00:00"
-                      },
-                      {
-                        "employeeNo": "000000013",
-                        "payGroup": "001",
-                        "position": "9001",
-                        "initialHireDate": "2000-01-01T00:00:00"
-                      },
-                      {
-                        "employeeNo": "000000014",
-                        "payGroup": "999",
-                        "position": "9003",
-                        "initialHireDate": "1990-01-01T00:00:00"
-                      },
-                      {
-                        "employeeNo": "000000015",
-                        "payGroup": "003",
-                        "position": "3000",
-                        "initialHireDate": "2015-01-27T00:00:00"
+                        "initialHireDate": "2015-01-27T00:00:00.0000000+00:00"
                       }
                     ]
                   }
@@ -4085,7 +3806,7 @@
         }
       }
     },
-    "/v1/TimeManagement/{viewId}/{templateId}/{empNo}": {
+    "/v1/TimeManagement/{viewId}/{templateId}": {
       "get": {
         "tags": [
           "Time Management"
@@ -4111,12 +3832,11 @@
           },
           {
             "name": "empNo",
-            "in": "path",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
           },
           {
             "name": "date",
@@ -4137,7 +3857,6 @@
           {
             "name": "id",
             "in": "query",
-            "description": "The ID of the notification you would like to get the data for.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -4146,7 +3865,6 @@
           {
             "name": "take",
             "in": "query",
-            "description": "The number of entries returned.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -4156,7 +3874,6 @@
           {
             "name": "skip",
             "in": "query",
-            "description": "The number of entries to skip.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -4172,6 +3889,587 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/AvailableShifts": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Available Shifts",
+        "operationId": "List-Available-Shifts",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "description": "The number of entries returned.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "expiryDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/CancelPickups": {
+      "put": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Cancel Pickup Requests",
+        "operationId": "Cancel-Pickup-Requests",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/CancelPools": {
+      "put": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Cancel Pooled Entries",
+        "operationId": "Cancel-Pooled-Entries",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/Comment": {
+      "post": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Create a Comment",
+        "operationId": "Create-a-Comment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PoolComment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/EmployeeAcceptance": {
+      "post": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Employee Acceptance",
+        "operationId": "List-Employee-Acceptance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeAcceptance"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/ExchangeOffers": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Exchange Offers",
+        "operationId": "List-Exchange-Offers",
+        "parameters": [
+          {
+            "name": "poolId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/GetDetailsForPooledSchedule": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pooled Schedule",
+        "operationId": "Get-Pooled-Schedule",
+        "parameters": [
+          {
+            "name": "entryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "scheduleEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "isPool",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/Pickup": {
+      "post": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Create a Pickup Request",
+        "operationId": "Create-a-Pickup-Request",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PickupEntryDetails": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pickup Entry",
+        "operationId": "Get-Pickup-Entry",
+        "parameters": [
+          {
+            "name": "pickupEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "poolEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PickupRequests": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Pickup Requests",
+        "operationId": "List-Pickup-Requests",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "description": "The number of entries returned.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "expiryDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "requestType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/PoolRequestType"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PooledRequests": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "List Pool Requests",
+        "operationId": "List-Pool-Requests",
+        "parameters": [
+          {
+            "name": "postType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/PoolRequestType"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "expiryDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "empNo",
+            "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "description": "The number of entries returned.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PoolEntryDetails": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Get Pool Entry",
+        "operationId": "Get-Pool-Entry",
+        "parameters": [
+          {
+            "name": "scheduleEntryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "viewId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "templateId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/PostSchedules": {
+      "post": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Post a Schedule",
+        "operationId": "Post-a-Schedule",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Ok",
@@ -4265,587 +4563,6 @@
         }
       }
     },
-    "/v1/TimeManagement/AvailableShifts": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "List Available Shifts",
-        "operationId": "List-Available-Shifts",
-        "parameters": [
-          {
-            "name": "take",
-            "in": "query",
-            "description": "The number of entries returned.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "expiryDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/CancelPools": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Cancel Pooled Entries",
-        "operationId": "Cancel-Pooled-Entries",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/CancelPickups": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Cancel Pickup Requests",
-        "operationId": "Cancel-Pickup-Requests",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/Pickup": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Create a Pickup Request",
-        "operationId": "Create-a-Pickup-Request",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PickupRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PickupRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PickupRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PickupRequests": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "List Pickup Requests",
-        "operationId": "List-Pickup-Requests",
-        "parameters": [
-          {
-            "name": "take",
-            "in": "query",
-            "description": "The number of entries returned.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "expiryDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "requestType",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/PoolRequestType"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/ExchangeOffers": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "List Exchange Offers",
-        "operationId": "List-Exchange-Offers",
-        "parameters": [
-          {
-            "name": "poolId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/EmployeeAcceptance": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "List Employee Acceptance",
-        "operationId": "List-Employee-Acceptance",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/EmployeeAcceptance"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/EmployeeAcceptance"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/EmployeeAcceptance"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PoolEntryDetails": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Get Pool Entry",
-        "operationId": "Get-Pool-Entry",
-        "parameters": [
-          {
-            "name": "scheduleEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PickupEntryDetails": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Get Pickup Entry",
-        "operationId": "Get-Pickup-Entry",
-        "parameters": [
-          {
-            "name": "pickupEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "poolEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/GetDetailsForPooledSchedule": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Get Pooled Schedule",
-        "operationId": "Get-Pooled-Schedule",
-        "parameters": [
-          {
-            "name": "entryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "scheduleEntryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "isPool",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PooledRequests": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "List Pool Requests",
-        "operationId": "List-Pool-Requests",
-        "parameters": [
-          {
-            "name": "postType",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/PoolRequestType"
-            }
-          },
-          {
-            "name": "viewId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "templateId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "expiryDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "description": "The number of entries returned.",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 20
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/PostSchedules": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Post a Schedule",
-        "operationId": "Post-a-Schedule",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PostRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PostRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PostRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/Comment": {
-      "post": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Create a Comment",
-        "operationId": "Create-a-Comment",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PoolComment"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PoolComment"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PoolComment"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/UnionCodes": {
       "get": {
         "tags": [
@@ -4920,6 +4637,33 @@
         }
       }
     },
+    "/v1/VacationGroup/{vacationGroup}": {
+      "get": {
+        "tags": [
+          "Vacation Groups"
+        ],
+        "summary": "Get Vacation Group",
+        "operationId": "Get-Vacation-Group",
+        "parameters": [
+          {
+            "name": "vacationGroup",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
     "/v1/VacationGroups": {
       "get": {
         "tags": [
@@ -4952,33 +4696,6 @@
                   }
                 }
               }
-            }
-          }
-        }
-      }
-    },
-    "/v1/VacationGroup/{vacationGroup}": {
-      "get": {
-        "tags": [
-          "Vacation Groups"
-        ],
-        "summary": "Get Vacation Group",
-        "operationId": "Get-Vacation-Group",
-        "parameters": [
-          {
-            "name": "vacationGroup",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
             }
           }
         }
@@ -5080,7 +4797,7 @@
                     "value": {
                       "isBreak": true,
                       "isInPunch": true,
-                      "punchDateTime": "2020-06-30T07:36:59.64"
+                      "punchDateTime": "2020-06-30T07:36:59.6400000+00:00"
                     }
                   }
                 }
@@ -17094,6 +16811,172 @@
           }
         },
         "additionalProperties": false
+      },
+      "PositionUserDefinedLabels": {
+        "type": "object",
+        "properties": {
+          "positionFigName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionFigName10": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionDateName10": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTextName10": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName1": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName2": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName3": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName4": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName5": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName6": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName7": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName8": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName9": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionBoolName10": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -17129,7 +17012,7 @@
       "name": "Company Info"
     },
     {
-      "name": "Default Groups"
+      "name": "Defaults Group"
     },
     {
       "name": "Dependents"
@@ -17159,19 +17042,31 @@
       "name": "Employee Emails"
     },
     {
+      "name": "Employee GL Info"
+    },
+    {
+      "name": "Employee Job Data"
+    },
+    {
       "name": "Employee Job Info"
     },
     {
       "name": "Employee Pay Info"
     },
     {
+      "name": "Employee Pay Statements"
+    },
+    {
+      "name": "Employee Personal Info"
+    },
+    {
       "name": "Employee Phone Number"
     },
     {
-      "name": "Employee Vacation Info"
+      "name": "Employee Position Rates"
     },
     {
-      "name": "EmployeeGL Info"
+      "name": "Employee Vacation Info"
     },
     {
       "name": "Employees"
@@ -17187,12 +17082,6 @@
     },
     {
       "name": "Grid Codes"
-    },
-    {
-      "name": "Info"
-    },
-    {
-      "name": "Job Data"
     },
     {
       "name": "Job Status"
@@ -17223,9 +17112,6 @@
     },
     {
       "name": "Personal Info"
-    },
-    {
-      "name": "Position Rate"
     },
     {
       "name": "Positions"

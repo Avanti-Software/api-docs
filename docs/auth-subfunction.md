@@ -54,7 +54,7 @@ By default, this can be found in System Administration >> System Access Controls
 
 **Step 4:** Set your desired Responsibility to **Insert, Modify (edit), View** and **Delete** using the endpoint. 
 
-- To allow the API to insert, modify, view, and delete, skip to Step 8. 
+- To allow the API to insert, modify, view, and delete, skip to Step 6. 
 - To prevent the API from having access, replace the &ast; with a - in the Responsibility. 
 
 For example, I want to use an endpoint to gather dependent information from Avanti. I could have a &ast; for View and a - for Insert, Modify and Delete. This prevents the API from adding, editing, and deleting dependents in Avanti while allowing access to view the dependent information. 
@@ -102,7 +102,7 @@ By default, this can be found in System Administration >> System Access Controls
 
 **Step 3:** Set the Responsibility to **Insert, Modify (edit), View** and **Delete** using the endpoint. 
 
-- To allow full access to insert, modify, view, and delete, skip to Step 7. 
+- To allow full access to insert, modify, view, and delete, select **OK** and you're done granting access.  
 - To prevent the API  from having access, replace the &ast; with a - in the Responsibility. For example, I want to use the API to gather information from Avanti. I could have a &ast; for view and - for Insert, Modify and Delete. This prevents the API from adding, editing or deleting information in Avanti while allowing access to gather information. 
 
 <!-- theme: info -->

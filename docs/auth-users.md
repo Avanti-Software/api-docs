@@ -43,7 +43,7 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 
 **Step 5:** Set the following for the Avanti User: 
 - Select **Active**, if it’s deselected. 
-- Select either **Regular** or **Manager Self-Service** for User Class.
+- Select either **Regular** or **Manager Self-Service** for User Class, .
 - Add a secure **Password** for the Avanti User, then **Confirm Password**. 
 - Select **Avanti Security** in User Authenticated By, if it’s not already selected. 
 
