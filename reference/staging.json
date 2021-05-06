@@ -1131,14 +1131,6 @@
         ],
         "summary": "Update Employee Address",
         "operationId": "Update-Employee-Address",
-        "parameters": [
-          {
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
