@@ -447,7 +447,7 @@
             }
           }
         },
-        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group."
+        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group. "
       }
     },
     "/v1/DefaultsGroup/Setup/{defaultsGroupCode}": {
@@ -1288,7 +1288,7 @@
           {
             "name": "V34",
             "in": "query",
-            "description": "The employee's V34 amount. ",
+            "description": "The employee's V34 amount.  ",
             "schema": {
               "type": "number",
               "format": "double"
