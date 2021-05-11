@@ -4,15 +4,17 @@ If none of our standard endpoints provide the required data, you can build custo
 
 To get started, open Report Definitions in the Avanti Desktop Application and select Insert to create a new report. Give the report a name (also known as the Report ID) and title. Now add the information you want in your endpoint as columns in the report.
 
-![New report example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Freport-new.png?alt=media&token=c602140a-4c88-4f99-b907-82542122f0d0)
+![New report example.](../assets/images/CustomReport.png)
 
 In the example above, we created a new report called **MyEndpoint** and added some employment data sources such as pay group, position, hire date and termination date. 
 
-Next, select **Web Enabled** on the **System Access** tab. Restrict access to Print so only the API user can access the report. 
+Next, select **Web Enabled** on the **System Access** tab. 
 
-![Web enable report example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Freport-web-enabled.png?alt=media&token=6332b17e-9ba4-4cb6-97e3-accf026d79b6)
+![Web enable report example.](../assets/images/CustomWebEnabled.png)
 
-![User group permissions example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Freport-print-permissions.png?alt=media&token=222cfc40-bf4b-4bc2-b40c-1ef2ad100e94)
+Restrict access to **Print** so only the API user can access the report. 
+
+![User group permissions example.](../assets/images/CustomUserGroups.png)
 
 Once you finish creating your report and select OK to save the changes, you can start making requests to the [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) endpoint. 
 
