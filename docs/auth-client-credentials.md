@@ -12,19 +12,19 @@ Avanti 10 must be applied before you can create Client Credentials.
 <!-- theme: info -->
 >You’ll need to login as a Regular Avanti User with an ADMIN user group.  
 
-![System Configuration.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FSystemConfiguration.png?alt=media&token=6b3b4530-18f6-4608-8ca1-1722cf0403d3)
+![System Configuration.](../assets/images/SyConfiguration.png)
 
 **Step 2:** In System, select **API Settings**.
 
-![API Settings.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FAPISettings.png?alt=media&token=b2192e1b-41eb-4b8c-8b2d-fcb6529c5eeb)
+![API Settings.](../assets/images/APISettings.png)
 
 **Step 3:** If this is your first time creating an API Client, you’ll need to read and agree to the [Terms and Conditions.](https://www.avanti.ca/api-terms-of-use)
 
-![Terms and conditions example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2Fterms-conditions.png?alt=media&token=c558e359-8a26-4b55-b161-f8ce30ee45f2)
+![Terms and conditions example.](../assets/images/APITermsOfUse.png)
 
 **Step 4:** Select **Generate Client**.
 
-![Generate client button example.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FGenerateClients.png?alt=media&token=883ae45b-b7a4-4047-ac22-519b61f6d642)
+![Generate client button example.](../assets/images/GenerateClients.png)
 
 **Step 5:** Enter a description in **Client Name**. 
 
@@ -32,7 +32,7 @@ Avanti 10 must be applied before you can create Client Credentials.
 >While client names are for display purposes only and can be named anything you want, we recommend a description of the integration. 
 For example, if you’re using the integration to add new employees into Avanti, you could call the client **Hire New Employees**. 
 
-![ClientName.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FClientName.png?alt=media&token=ee4a7b33-3c76-4e64-bdd4-43d53c7318df)
+![ClientName.](../assets/images/ClientName.png)
 
 **Step 6:** Select **Client Never Expires** to allow this client access indefinitely. If the client should expire, enter the date the client should no longer have access in **Client Expiry Date**. 
 
@@ -43,28 +43,26 @@ Setting a client expiry is especially useful when:
 - creating a short-term integration.
 - providing the credentials to a third party who only needs access for a limited time.
 
-![Client Expiry.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FClientExpiry.png?alt=media&token=776808de-8fb0-42fc-b14a-046bc8fac5a6)
+![Client Expiry.](../assets/images/ClientExpiry.png)
 
 **Step 7:** Enter the number of minutes before access tokens expire. 
 
 <!-- theme: info -->
 >It is best practice to make your access tokens as short-lived as possible. If you’re unsure how long the client credentials need to be active, contact your API developer. 
 
-![Access Token Lifetime.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FAccessTokenLifetime.png?alt=media&token=d2361089-4943-43e5-b20b-15fc8523b8a4)
+![Access Token Lifetime.](../assets/images/AccessTokenLifetime.png)
 
 **Step 8:** Select **Generate** to create the client. 
 
-![Generate the Client.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FGenerateTheClient.png?alt=media&token=a66b34b4-027b-405e-862a-58c418f346eb)
+![Generate the Client.](../assets/images/GenerateTheClient.png)
 
 **Step 9:** Copy the Client ID and the Client Secret and store them in a safe place. You’ll need to send these to your API developer. 
 
-![Copy the Client ID and Secret.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FCopyClient.png?alt=media&token=c3a54a89-4547-4c2a-8067-aa12290d8643)
-
+![Copy the Client ID and Secret.](../assets/images/CopyClient.png)
 
 **Step 10:** Select **Exit Configuration**. 
 
-![Exit Configuration.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FExitConfig.png?alt=media&token=5073d9c3-e4bc-4e76-858f-a1cf63329d6f)
-
+![Exit Configuration.](../assets/images/ExitConfig.png)
 
 ## Identify the Avanti Company Database Name
 You’ll need the Company Database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify every company and provide them to your API Developer. This name is different from the company name you see displayed when you select the company in Avanti.
@@ -72,7 +70,7 @@ You’ll need the Company Database name so the integration knows which Avanti co
 **Step 1:** Copy the **Company Database** on the System Info Tab in Administration Settings. You'll need to send this to your API Developer.
 By default, this can be found in Administration on the Avanti Self-Service Portal. 
 
-![ASSP Company Database Name Location](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FClient%20Credentials%2FCompanyDatabaseName.png?alt=media&token=ac4ffec3-14db-4da7-921d-834eb5fe7e75)
+![ASSP Company Database Name Location](../assets/images/CompanyDatabaseName.png)
 
 ## Provide Information to the API Developer
 Wonderful! You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API Developer. Here’s what they’ll need to get started:

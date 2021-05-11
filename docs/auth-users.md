@@ -23,10 +23,11 @@ Rather than create a new user, we recommend copying an existing user who already
 **Step 1:** Select a user with the correct employee access, right-click and select **Copy** in Avanti Users.
 By default, this can be found in System Administration >> System Access Controls on the Avanti Desktop Application. 
 
-![Copying an Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FCopyingAvantiUsers.png?alt=media&token=5c087096-96c6-4acc-84f4-8c61239f27a3) 
+![Copying an Avanti User.](../assets/images/CopyingAvantiUsers.png)
 
 **Step 2:** Right-click and choose **Paste**. 
-![Paste an Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FPasteanAvantiUser.png?alt=media&token=5703553b-b55a-431a-8702-4910f1f73086)
+
+![Paste an Avanti User.](../assets/images/PasteanAvantiUser.png)
 
 **Step 3:** Add the **User ID**. Keep **User Groups** and **Role Assignments** selected in Paste Details, then click **OK**.  
 
@@ -35,11 +36,11 @@ By default, this can be found in System Administration >> System Access Controls
 >It’s a great idea to name the User ID after your integration, so you can easily remember what this is for in the future. It may take a couple of moments to create the Avanti User. <br>
 Please make a note of the User ID; you’ll need to send it to your API developer. 
 
-![Paste details for an Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FPasteDetails.png?alt=media&token=569690b4-089c-4943-8c12-415542402f23)
+![Paste details for an Avanti User.](../assets/images/PasteDetails.png)
 
 **Step 4:** Select the Avanti User you just created, then click **Modify**. 
 
-![Modify the Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FModifytheAvantiUser.png?alt=media&token=d6c5ac0a-cfea-423a-be67-88cf9fa3607b)
+![Modify the Avanti User.](../assets/images/ModifytheAvantiUser.png)
 
 **Step 5:** Set the following for the Avanti User: 
 - Select **Active**, if it’s deselected. 
@@ -51,8 +52,7 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 >##### Additional Information
 >Please make a note of the User Password; you’ll need to send it to your API developer. 
 
-![Avanti User Settings.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FAvantiUserSettings.png?alt=media&token=6e476e2f-969f-4e1a-8796-cf5073968c8a)
-
+![Avanti User Settings.](../assets/images/AvantiUserSettings.png)
 
 **Step 6:** Make a note of the User Groups in the **Selected Column** then select **OK** to save your changes.  
 
@@ -60,6 +60,6 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 >##### Additional Information
 >You’ll need this information to allow access to the endpoint.
 
-![Save the Avanti User.](https://firebasestorage.googleapis.com/v0/b/avanti-hcm.appspot.com/o/api-docs%2FCreating%20Users%2FSaveAvantiUser.png?alt=media&token=7e7930dd-0df6-4891-95a0-410fffb6ca57)
+![Save the Avanti User.](../assets/images/SaveAvantiUser.png)
 
 Nice work! The Avanti User is all set up. The next you'll need to [Allow Access to the Endpoint](/docs/auth-subfunction.md) for more information.  
