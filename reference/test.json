@@ -2520,6 +2520,30 @@
         }
       }
     },
+    "/v1/InactiveLocations": {
+      "get": {
+        "tags": [
+          "Locations"
+        ],
+        "summary": "List Inactive Locations",
+        "operationId": "List-Inactive-Locations",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/JobStatus": {
       "get": {
         "tags": [

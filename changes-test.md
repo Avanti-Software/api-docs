@@ -1,3 +1,10 @@
+# May 16, 2021 11:13 PM
+**GitHub Run ID:** 847940292
+**GitHub Run Number:** 115
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** df0978081a30b2e31fa66b5d50cf0a69422b7476## Added
+ * Endpoint: GET - /v1/InactiveLocations
+
 # May 16, 2021 9:53 PM
 **GitHub Run ID:** 847817938**GitHub Run Number:** 113**GitHub Commit:** refs/heads/master**GitHub Commit:** 34508560dcd212da31492f1789cfdce140eb79d8
 ## Added
