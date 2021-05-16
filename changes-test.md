@@ -1,3 +1,8 @@
+# May 16, 2021 9:53 PM
+**GitHub Run ID:** 847817938**GitHub Run Number:** 113**GitHub Commit:** refs/heads/master**GitHub Commit:** 34508560dcd212da31492f1789cfdce140eb79d8
+## Added
+ * Endpoint: GET - /v1/ActiveLocations
+
 # Apr 29, 2021 6:47 PM
 **GitHub Action ID:** 797096810
 ## Added
