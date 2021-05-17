@@ -1,3 +1,14 @@
+# May 17, 2021 2:41 PM
+**GitHub Run ID:** 850128260
+**GitHub Run Number:** 1683
+**Reference:** refs/pull/330/merge
+**Commit:** 240ceaf2b5a9ba7637a6603193394b0146bb12b0## Removed
+ * Endpoint: POST - /v1/NewExperience
+ * Endpoint: POST - /v1/NewExperience/AddTermsOfService
+ * Endpoint: POST - /v1/NewExperience/DeclineTermsOfService
+ * Endpoint: GET - /v1/NewExperience/Setup
+ * Endpoint: PUT - /v1/NewExperience/UpdateTermsOfService
+
 # Apr 29, 2021 6:47 PM
 **GitHub Action ID:** 797096810
 ## Added

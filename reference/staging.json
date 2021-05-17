@@ -122,7 +122,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -200,7 +200,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -237,7 +237,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -291,7 +291,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "409": {
@@ -340,7 +340,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -357,7 +357,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -390,7 +390,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -417,7 +417,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -426,7 +426,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -438,16 +438,16 @@
           "Defaults Group"
         ],
         "summary": "List Defaults Groups",
+        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group. ",
         "operationId": "List-Defaults-Groups",
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group. "
+        }
       }
     },
     "/v1/DefaultsGroup/Setup/{defaultsGroupCode}": {
@@ -471,7 +471,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -508,7 +508,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -543,7 +543,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -578,7 +578,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -593,17 +593,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -620,17 +620,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -658,7 +658,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -693,7 +693,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -728,7 +728,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -762,7 +762,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1130,6 +1130,7 @@
           "Employee Address"
         ],
         "summary": "Update Employee Address",
+        "description": "Updates the home address of an employee.",
         "operationId": "Update-Employee-Address",
         "requestBody": {
           "content": {
@@ -1154,11 +1155,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": "Updates the home address of an employee."
+        }
       }
     },
     "/v1/EmployeeBasicInfo": {
@@ -1167,6 +1167,7 @@
           "Employee Basic Info"
         ],
         "summary": "Update Employee Basic Info",
+        "description": "Update the basic information for the employee, such as full name, birth date, language and SIN information.",
         "operationId": "Update-Employee-Basic-Info",
         "requestBody": {
           "content": {
@@ -1191,11 +1192,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": "Update the basic information for the employee, such as full name, birth date, language and SIN information."
+        }
       }
     },
     "/v1/EmployeeBasicInfo/Photo": {
@@ -1230,7 +1230,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1239,7 +1239,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1263,7 +1263,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1275,6 +1275,7 @@
           "Employee Benefit Codes"
         ],
         "summary": "Update V34 and V35 values",
+        "description": "Updates the V34 and V35 values on the employee's Deduction/Benefit Code. These amounts can be included in formulas to calculate employee or employer amount during pay. ",
         "operationId": "Update-V34-and-V35-values",
         "parameters": [
           {
@@ -1316,11 +1317,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": "Updates the V34 and V35 values on the employee's Deduction/Benefit Code. These amounts can be included in formulas to calculate employee or employer amount during pay. "
+        }
       }
     },
     "/v1/EmployeeBenefitGroup": {
@@ -1334,17 +1334,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1361,17 +1361,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1388,17 +1388,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1415,10 +1415,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -1453,7 +1453,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1470,17 +1470,17 @@
           {
             "name": "empno",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1506,7 +1506,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1523,17 +1523,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1550,17 +1550,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1577,10 +1577,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -1606,7 +1606,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1621,10 +1621,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -1650,7 +1650,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1667,17 +1667,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1694,17 +1694,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1716,15 +1716,16 @@
           "Positions"
         ],
         "summary": "List Employee Positions",
+        "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
         "operationId": "List-Employee-Positions",
         "parameters": [
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "location",
@@ -1754,11 +1755,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee."
+        }
       }
     },
     "/v1/Employees": {
@@ -1791,7 +1791,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1808,17 +1808,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1835,10 +1835,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "width",
@@ -1861,7 +1861,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1878,17 +1878,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1924,7 +1924,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2071,7 +2071,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2100,7 +2100,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2117,7 +2117,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2135,7 +2135,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2152,7 +2152,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2170,7 +2170,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2229,168 +2229,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperience": {
-      "post": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "Add New Experience",
-        "operationId": "Add-New-Experience",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewExperienceSetup"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewExperienceSetup"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewExperienceSetup"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperience/AddTermsOfService": {
-      "post": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "Add New Terms of Service Contract",
-        "operationId": "Add-New-Terms-of-Service-Contract",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TermsOfService"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TermsOfService"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/TermsOfService"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperience/DeclineTermsOfService": {
-      "post": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "Decline Terms of Service",
-        "operationId": "Decline-Terms-of-Service",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ConsentForm"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ConsentForm"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ConsentForm"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperience/Setup": {
-      "get": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "Get New Experience Setup",
-        "operationId": "Get-New-Experience-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperience/UpdateTermsOfService": {
-      "put": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "Update Terms of Service Consent",
-        "operationId": "Update-Terms-of-Service-Consent",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ConsentForm"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ConsentForm"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ConsentForm"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2426,7 +2265,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2452,7 +2291,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2469,7 +2308,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2499,7 +2338,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2585,7 +2424,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2619,7 +2458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2655,7 +2494,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2672,7 +2511,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2708,7 +2547,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2725,7 +2564,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2743,7 +2582,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2753,6 +2592,7 @@
           "Notification Settings"
         ],
         "summary": "Update Notification Settings",
+        "description": "Update whether the employee is receiving notifications for the notification type. The employee is always the employee attached to the user.",
         "operationId": "Update-Notification-Settings",
         "requestBody": {
           "content": {
@@ -2786,11 +2626,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": "Update whether the employee is receiving notifications for the notification type. The employee is always the employee attached to the user."
+        }
       }
     },
     "/v1/PayCodes": {
@@ -2875,7 +2714,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3063,17 +2902,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3118,7 +2957,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3154,7 +2993,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3166,6 +3005,7 @@
           "Employee Personal Info"
         ],
         "summary": "Get Employee Personal Info",
+        "description": "",
         "operationId": "Get-Employee-Personal-Info",
         "parameters": [
           {
@@ -3180,23 +3020,22 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {},
+              "application/json": { },
               "application/xml": {
                 "schema": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "object"
                 }
               }
             }
           }
-        },
-        "description": ""
+        }
       },
       "put": {
         "tags": [
           "Employee Personal Info"
         ],
         "summary": "Update Employee Personal Info",
+        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info.",
         "operationId": "Update-Employee-Personal-Info",
         "requestBody": {
           "content": {
@@ -3223,13 +3062,12 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
           }
-        },
-        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info."
+        }
       }
     },
     "/v1/PersonalInfo/EmployeeFigures": {
@@ -3254,7 +3092,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3288,7 +3126,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3305,10 +3143,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "width",
@@ -3331,7 +3169,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3346,10 +3184,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -3375,7 +3213,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3390,17 +3228,17 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3417,7 +3255,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3429,6 +3267,7 @@
           "Positions"
         ],
         "summary": "Get Position Details",
+        "description": "",
         "operationId": "Get-Position-Details",
         "parameters": [
           {
@@ -3443,11 +3282,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": ""
+        }
       }
     },
     "/v1/Positions": {
@@ -3456,36 +3294,36 @@
           "Positions"
         ],
         "summary": "List Positions",
+        "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
         "operationId": "List-Positions",
         "parameters": [
           {
             "name": "includeInactive",
             "in": "query",
+            "description": "Determines whether all positions will be returned. If true, active and inactive employees will be included in the response. If false, only active employees will be included in the response.  Default is false.",
             "schema": {
               "type": "boolean",
               "default": false
-            },
-            "description": "Determines whether all positions will be returned. If true, active and inactive employees will be included in the response. If false, only active employees will be included in the response.  Default is false."
+            }
           },
           {
             "name": "masculine",
             "in": "query",
+            "description": "Determines which French position description is returned. If true, the masculine description will be returned. If false, the feminine description will be returned.  By default, this is false.  A French description will only be included when a French access token is provided.",
             "schema": {
               "type": "boolean",
               "default": false
-            },
-            "description": "Determines which French position description is returned. If true, the masculine description will be returned. If false, the feminine description will be returned.  By default, this is false.  A French description will only be included when a French access token is provided."
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
-        },
-        "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions."
+        }
       }
     },
     "/v1/RateGrids": {
@@ -3499,7 +3337,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3761,7 +3599,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3912,7 +3750,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3945,10 +3783,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "date",
@@ -4005,7 +3843,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4055,7 +3893,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4103,7 +3941,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4151,7 +3989,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4187,7 +4025,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4232,7 +4070,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4259,7 +4097,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4301,7 +4139,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4337,7 +4175,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4386,7 +4224,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4443,7 +4281,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4509,7 +4347,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4550,7 +4388,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4586,7 +4424,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4620,7 +4458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4669,7 +4507,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4770,7 +4608,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5001,7 +4839,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6198,7 +6036,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6248,7 +6086,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -6291,7 +6129,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6316,7 +6154,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6336,13 +6174,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -6381,19 +6219,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6402,7 +6240,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6413,7 +6251,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6431,7 +6269,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6444,7 +6282,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -9913,7 +9751,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -13635,7 +13473,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -17155,7 +16993,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
@@ -17254,9 +17092,6 @@
     },
     {
       "name": "Locations"
-    },
-    {
-      "name": "New Experience"
     },
     {
       "name": "New Hire"
