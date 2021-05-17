@@ -1,3 +1,14 @@
+# May 17, 2021 3:17 PM
+**GitHub Action ID:** 850240150
+## Added
+* Path: /v1/AccessManagement/Setup
+* Path: /v1/NewExperience/Setup
+* Path: /v1/NewExperience
+* Path: /v1/NewExperience/DeclineTermsOfService
+* Path: /v1/NewExperience/UpdateTermsOfService
+* Path: /v1/NewExperience/AddTermsOfService
+* Model: Setup
+
 # May 17, 2021 2:41 PM
 **GitHub Run ID:** 850128260
 **GitHub Run Number:** 1683
