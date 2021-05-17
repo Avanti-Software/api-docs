@@ -1,3 +1,16 @@
+# May 17, 2021 3:52 PM
+**GitHub Run ID:** 850349849
+**GitHub Run Number:** 1685
+**Reference:** refs/heads/master
+**Commit:** a99be408a229994ed61fa3c7362173fef242eaa2## Removed
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: POST - /v1/NewExperience
+ * Endpoint: POST - /v1/NewExperience/AddTermsOfService
+ * Endpoint: POST - /v1/NewExperience/DeclineTermsOfService
+ * Endpoint: GET - /v1/NewExperience/Setup
+ * Endpoint: PUT - /v1/NewExperience/UpdateTermsOfService
+* Model: Setup
+
 # May 17, 2021 3:17 PM
 **GitHub Action ID:** 850240150
 ## Added
