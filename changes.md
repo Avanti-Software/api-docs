@@ -1,3 +1,11 @@
+# May 17, 2021 5:59 PM
+**GitHub Run ID:** 850690808
+**GitHub Run Number:** 1686
+**Reference:** refs/pull/331/merge
+**Commit:** a619ce9a12f4757cf40ff91cb94cf2e147c1fd5e## Added
+ * Endpoint: GET - /v1/AccessManagement/Setup
+* Model: Setup
+
 # May 17, 2021 3:52 PM
 **GitHub Run ID:** 850349849
 **GitHub Run Number:** 1685

@@ -17,6 +17,27 @@
     }
   ],
   "paths": {
+    "/v1/AccessManagement/Setup": {
+      "get": {
+        "tags": [
+          "Access Management"
+        ],
+        "summary": "Get Access Management Setup",
+        "operationId": "Get-Access-Management-Setup",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Setup"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/AttendanceCodes": {
       "get": {
         "tags": [
@@ -16981,6 +17002,26 @@
           }
         },
         "additionalProperties": false
+      },
+      "Setup": {
+        "type": "object",
+        "properties": {
+          "userGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserGroup"
+            },
+            "nullable": true
+          },
+          "roleTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -16997,6 +17038,9 @@
     }
   ],
   "tags": [
+    {
+      "name": "Access Management"
+    },
     {
       "name": "Attendance Codes"
     },
