@@ -1371,64 +1371,6 @@
         }
       }
     },
-    "/v1/EmployeeCompensation/PayStatement": {
-      "get": {
-        "tags": [
-          "Employee Compensation"
-        ],
-        "summary": "Get Employee Pay Statement",
-        "operationId": "Get-Employee-Pay-Statement",
-        "parameters": [
-          {
-            "name": "runNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PayStatementDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/EmployeeDefaultsGroup": {
       "get": {
         "tags": [
@@ -17137,9 +17079,6 @@
     },
     {
       "name": "Employee Benefit Group"
-    },
-    {
-      "name": "Employee Compensation"
     },
     {
       "name": "Employee Defaults Group"
