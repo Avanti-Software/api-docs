@@ -1,3 +1,10 @@
+# Jun 02, 2021 2:18 PM
+**GitHub Run ID:** 899652056
+**GitHub Run Number:** 1726
+**Reference:** refs/pull/339/merge
+**Commit:** a90ae3bad62617733ef5f924f8472c1c5f609657## Added
+ * Endpoint: GET - /v1/EmployeeCompensation/PayStatement
+
 # Jun 01, 2021 8:33 PM
 **GitHub Run ID:** 897288736
 **GitHub Run Number:** 1724
