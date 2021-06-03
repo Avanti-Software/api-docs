@@ -1,3 +1,10 @@
+# Jun 03, 2021 9:00 PM
+**GitHub Run ID:** 904182993
+**GitHub Run Number:** 1734
+**Reference:** refs/heads/master
+**Commit:** fc18a5c1eb1d8cffc24bf6217802402536702823## Added
+ * Endpoint: GET - /v1/EmployeeCompensation/PayStatement
+
 # Jun 02, 2021 3:02 PM
 **GitHub Run ID:** 899800525
 **GitHub Run Number:** 1728
