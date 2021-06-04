@@ -38,39 +38,6 @@
         }
       }
     },
-    "/v1/AddGLSegment": {
-      "post": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Add New GL Account Data",
-        "operationId": "Add-New-GL-Account-Data",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlSegment"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlSegment"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlSegment"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/v1/AttendanceCodes": {
       "get": {
         "tags": [
@@ -4662,39 +4629,6 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/v1/UpdateGLSegment": {
-      "put": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Update GL Account Data",
-        "operationId": "Update-GL-Account-Data",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlSegment"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlSegment"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlSegment"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
           }
         }
       }

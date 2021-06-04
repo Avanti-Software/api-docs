@@ -1,3 +1,11 @@
+# Jun 04, 2021 1:21 PM
+**GitHub Run ID:** 906371127
+**GitHub Run Number:** 1740
+**Reference:** refs/heads/master
+**Commit:** cb7596911a457bb19471c8535229c74f6faa525a## Removed
+ * Endpoint: POST - /v1/AddGLSegment
+ * Endpoint: PUT - /v1/UpdateGLSegment
+
 # Jun 03, 2021 10:50 PM
 **GitHub Run ID:** 904446069
 **GitHub Run Number:** 1739
