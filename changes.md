@@ -1,3 +1,11 @@
+# Jun 07, 2021 6:10 PM
+**GitHub Run ID:** 915799923
+**GitHub Run Number:** 1751
+**Reference:** refs/pull/343/merge
+**Commit:** fc50946d68c598ad197b8f807ab57cd075f961cb## Added
+ * Endpoint: POST - /v1/GLSegment
+ * Endpoint: PUT - /v1/GLSegment
+
 # Jun 07, 2021 4:12 PM
 **GitHub Run ID:** 915490731
 **GitHub Run Number:** 1749
