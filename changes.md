@@ -1,3 +1,10 @@
+# Jun 10, 2021 4:38 PM
+**GitHub Run ID:** 925823291
+**GitHub Run Number:** 1766
+**Reference:** refs/pull/348/merge
+**Commit:** 390312a5b0185e5fde5f928b1bb5c3cd6a403267## Added
+ * Endpoint: DELETE - /v1/GLSegment
+
 # Jun 07, 2021 6:10 PM
 **GitHub Run ID:** 915799923
 **GitHub Run Number:** 1751

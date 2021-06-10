@@ -2282,6 +2282,35 @@
             "description": "Success"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Delete GL Account Data",
+        "operationId": "Delete-GL-Account-Data",
+        "parameters": [
+          {
+            "name": "segmentNo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
     "/v1/GLSetup": {
