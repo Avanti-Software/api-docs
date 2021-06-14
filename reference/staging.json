@@ -143,7 +143,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -221,7 +221,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -258,7 +258,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -312,7 +312,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "409": {
@@ -361,7 +361,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -378,7 +378,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -411,7 +411,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -438,7 +438,7 @@
                 }
               },
               "encoding": {
-                "logos": { }
+                "logos": {}
               }
             }
           }
@@ -447,7 +447,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -465,7 +465,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -492,7 +492,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -529,7 +529,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -564,7 +564,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -599,7 +599,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -624,7 +624,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -651,7 +651,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -679,7 +679,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -714,7 +714,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -749,7 +749,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -783,7 +783,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1176,7 +1176,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1213,7 +1213,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1251,7 +1251,7 @@
                 }
               },
               "encoding": {
-                "files": { }
+                "files": {}
               }
             }
           }
@@ -1260,7 +1260,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1284,7 +1284,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1338,7 +1338,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1365,7 +1365,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1396,16 +1396,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success",
             "content": {
@@ -1418,6 +1408,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1450,7 +1450,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1477,7 +1477,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1532,7 +1532,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1559,7 +1559,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1585,7 +1585,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1612,7 +1612,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1639,7 +1639,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1685,7 +1685,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1729,7 +1729,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1756,7 +1756,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1783,7 +1783,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1834,7 +1834,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1870,7 +1870,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1897,7 +1897,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1940,7 +1940,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1967,7 +1967,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2003,7 +2003,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2150,7 +2150,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2179,7 +2179,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2196,7 +2196,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2214,7 +2214,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2225,7 +2225,7 @@
         "tags": [
           "GLs"
         ],
-        "summary": "Add New GL Account Data",
+        "summary": "Add GL Account",
         "operationId": "Add-New-GL-Account-Data",
         "requestBody": {
           "content": {
@@ -2250,13 +2250,14 @@
           "200": {
             "description": "Success"
           }
-        }
+        },
+        "description": "Add a GL Account. "
       },
       "put": {
         "tags": [
           "GLs"
         ],
-        "summary": "Update GL Account Data",
+        "summary": "Update GL Account",
         "operationId": "Update-GL-Account-Data",
         "requestBody": {
           "content": {
@@ -2281,13 +2282,14 @@
           "200": {
             "description": "Success"
           }
-        }
+        },
+        "description": "Updates the information for a GL account. "
       },
       "delete": {
         "tags": [
           "GLs"
         ],
-        "summary": "Delete GL Account Data",
+        "summary": "Delete GL Account",
         "operationId": "Delete-GL-Account-Data",
         "parameters": [
           {
@@ -2296,21 +2298,24 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "The number of the GL segment with the account your deleting.  "
           },
           {
             "name": "account",
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The GL account. "
           }
         ],
         "responses": {
           "200": {
             "description": "Success"
           }
-        }
+        },
+        "description": "Permanently deletes a GL Account. "
       }
     },
     "/v1/GLSetup": {
@@ -2324,7 +2329,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2342,7 +2347,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2401,7 +2406,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2437,7 +2442,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2463,7 +2468,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2480,7 +2485,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2510,7 +2515,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2596,7 +2601,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2630,7 +2635,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2666,7 +2671,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2683,7 +2688,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2719,7 +2724,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2736,7 +2741,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2754,7 +2759,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2798,7 +2803,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2886,7 +2891,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3084,7 +3089,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3129,7 +3134,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3165,7 +3170,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3192,7 +3197,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { },
+              "application/json": {},
               "application/xml": {
                 "schema": {
                   "type": "object"
@@ -3234,7 +3239,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": { }
+                  "example-1": {}
                 }
               }
             }
@@ -3264,7 +3269,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3298,7 +3303,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3341,7 +3346,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3385,7 +3390,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3410,7 +3415,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3427,7 +3432,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3454,7 +3459,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3492,7 +3497,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3509,7 +3514,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3771,7 +3776,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3922,7 +3927,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4015,7 +4020,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4065,7 +4070,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4113,7 +4118,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4161,7 +4166,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4197,7 +4202,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4242,7 +4247,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4269,7 +4274,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4311,7 +4316,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4347,7 +4352,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4396,7 +4401,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4453,7 +4458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4519,7 +4524,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4560,7 +4565,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4596,7 +4601,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4630,7 +4635,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4679,7 +4684,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4780,7 +4785,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -5011,7 +5016,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -6208,7 +6213,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6258,7 +6263,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true
           },
           "hasErrors": {
@@ -6301,7 +6306,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6326,7 +6331,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6346,13 +6351,13 @@
           },
           "relations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -6391,19 +6396,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6412,7 +6417,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6423,7 +6428,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6441,7 +6446,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6454,7 +6459,7 @@
           },
           "rows": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -9767,21 +9772,27 @@
       },
       "GlSegment": {
         "type": "object",
+        "additionalProperties": false,
+        "description": "",
         "properties": {
           "account": {
             "type": "string",
+            "description": "The GL account. This must match the format of the GL segment.",
             "nullable": true
           },
           "name": {
             "type": "string",
+            "description": "The Short Name of the account, which can be up to 10 characters. ",
             "nullable": true
           },
           "description": {
             "type": "string",
+            "description": "A longer description for the GL account, which can be up to 128 characters\n",
             "nullable": true
           },
           "type": {
             "type": "string",
+            "description": "A one character type for the account used for validation, from A - Z.\n\nIf it's a Major Account, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account",
             "nullable": true
           },
           "mask": {
@@ -9795,25 +9806,27 @@
           "effectiveDate": {
             "type": "string",
             "format": "date-time",
+            "description": "This property is not used. ",
             "nullable": true
           },
           "expiryDate": {
             "type": "string",
             "format": "date-time",
+            "description": "This property is not used. ",
             "nullable": true
           },
           "active": {
             "type": "boolean"
           },
           "useProjectAccount": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Indicates whether the GL account uses Project Accounting. If True, project and phase accounts are used if accounts in full GL string use project accounting."
           },
           "defaultEarnGl": {
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GlSegmentValue": {
         "type": "object",
@@ -9923,7 +9936,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -13645,7 +13658,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "PropertyAttributes": {
         "enum": [
@@ -17185,7 +17198,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ],
   "tags": [
