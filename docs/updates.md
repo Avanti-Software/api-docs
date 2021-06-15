@@ -16,6 +16,7 @@ May 17, 2021
 - Added Endpoints: 
     - Access Management
 
+May 4, 2021
 - Initial Endpoints:
   - Attendance Codes
   - Bank Transit
