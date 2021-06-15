@@ -2,7 +2,7 @@
 
 ## Version 1.0
 
-June 10, 2021 
+June 15, 2021 
 - Added Endpoints: 
     - Add GL Segment
     - Update GL Segment
