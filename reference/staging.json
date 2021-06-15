@@ -9770,64 +9770,6 @@
         "type": "integer",
         "format": "int32"
       },
-      "GlSegment": {
-        "type": "object",
-        "additionalProperties": false,
-        "description": "",
-        "properties": {
-          "account": {
-            "type": "string",
-            "description": "The GL account. This must match the format of the GL segment.",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "description": "The Short Name of the account, which can be up to 10 characters. ",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "A longer description for the GL account, which can be up to 128 characters\n",
-            "nullable": true
-          },
-          "type": {
-            "type": "string",
-            "description": "A one character type for the account used for validation, from A - Z.\n\nIf it's a Major Account, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account",
-            "nullable": true
-          },
-          "mask": {
-            "type": "string",
-            "nullable": true
-          },
-          "validationTypes": {
-            "type": "string",
-            "nullable": true
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date-time",
-            "description": "This property is not used. ",
-            "nullable": true
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "description": "This property is not used. ",
-            "nullable": true
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "useProjectAccount": {
-            "type": "boolean",
-            "description": "Indicates whether the GL account uses Project Accounting. If True, project and phase accounts are used if accounts in full GL string use project accounting."
-          },
-          "defaultEarnGl": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
       "GlSegmentValue": {
         "type": "object",
         "properties": {
