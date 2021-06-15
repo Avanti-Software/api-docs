@@ -17106,13 +17106,13 @@
         "type": "object",
         "additionalProperties": false,
         "x-examples": {
-          "Example": {
+          "Example - Adding or Updating a Major or Other Account ": {
             "value": {
               "segmentNo": 1,
               "account": "2030",
               "description": "EHT Payable",
               "abbreviation": "EHTPay",
-              "type": "s",
+              "type": "A",
               "mask": "2030-####-#####-****-****",
               "validationTypes": "A A",
               "active": true,
