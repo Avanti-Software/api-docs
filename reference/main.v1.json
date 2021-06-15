@@ -17,6 +17,27 @@
     }
   ],
   "paths": {
+    "/v1/AccessManagement/Setup": {
+      "get": {
+        "tags": [
+          "Access Management"
+        ],
+        "summary": "Get Access Management Setup",
+        "operationId": "Get-Access-Management-Setup",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Setup"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/AttendanceCodes": {
       "get": {
         "tags": [
@@ -438,6 +459,7 @@
           "Defaults Group"
         ],
         "summary": "List Defaults Groups",
+        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group. ",
         "operationId": "List-Defaults-Groups",
         "responses": {
           "200": {
@@ -446,8 +468,7 @@
               "application/json": {}
             }
           }
-        },
-        "description": "Returns a list of the Employment Default Groups. The format of Text in the response depends on the company web setting Lookup.DefaultGroups.\n\nIn Avanti, these Default Groups can help quickly setup new employees based on common setup requirements. Default Groups can be set up to add earning and deduction/benefit codes, position, employee values, vacation groups, unions, and more. If a setup change is required, Default Groups can quickly update all employees within a group."
+        }
       }
     },
     "/v1/DefaultsGroup/Setup/{defaultsGroupCode}": {
@@ -593,10 +614,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -620,10 +641,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1130,6 +1151,7 @@
           "Employee Address"
         ],
         "summary": "Update Employee Address",
+        "description": "Updates the home address of an employee.",
         "operationId": "Update-Employee-Address",
         "requestBody": {
           "content": {
@@ -1157,8 +1179,7 @@
               "application/json": {}
             }
           }
-        },
-        "description": "Updates the home address of an employee."
+        }
       }
     },
     "/v1/EmployeeBasicInfo": {
@@ -1167,6 +1188,7 @@
           "Employee Basic Info"
         ],
         "summary": "Update Employee Basic Info",
+        "description": "Update the basic information for the employee, such as full name, birth date, language and SIN information.",
         "operationId": "Update-Employee-Basic-Info",
         "requestBody": {
           "content": {
@@ -1194,8 +1216,7 @@
               "application/json": {}
             }
           }
-        },
-        "description": "Update the basic information for the employee, such as full name, birth date, language and SIN information."
+        }
       }
     },
     "/v1/EmployeeBasicInfo/Photo": {
@@ -1275,11 +1296,13 @@
           "Employee Benefit Codes"
         ],
         "summary": "Update V34 and V35 values",
+        "description": "Updates the V34 and V35 values on the employee's Deduction/Benefit Code. These amounts can be included in formulas to calculate employee or employer amount during pay. ",
         "operationId": "Update-V34-and-V35-values",
         "parameters": [
           {
             "name": "deductCode",
             "in": "query",
+            "description": "A three-digit ID for the deduction code greater than 499.",
             "schema": {
               "type": "string"
             }
@@ -1287,6 +1310,7 @@
           {
             "name": "V34",
             "in": "query",
+            "description": "The employee's V34 amount.  ",
             "schema": {
               "type": "number",
               "format": "double"
@@ -1295,6 +1319,7 @@
           {
             "name": "V35",
             "in": "query",
+            "description": "The employee's V35 amount. ",
             "schema": {
               "type": "number",
               "format": "double"
@@ -1303,10 +1328,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee whose V34/V35 value is being updated. ",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1330,10 +1355,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1341,6 +1366,64 @@
             "description": "Ok",
             "content": {
               "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/EmployeeCompensation/PayStatement": {
+      "get": {
+        "tags": [
+          "Employee Compensation"
+        ],
+        "summary": "Get Employee Pay Statement",
+        "operationId": "Get-Employee-Pay-Statement",
+        "parameters": [
+          {
+            "name": "runNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayStatementDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
             }
           }
         }
@@ -1357,10 +1440,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1384,10 +1467,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1411,10 +1494,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -1466,10 +1549,10 @@
           {
             "name": "empno",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1519,10 +1602,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1546,10 +1629,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1573,10 +1656,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -1617,10 +1700,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -1663,10 +1746,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1690,10 +1773,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1712,15 +1795,16 @@
           "Positions"
         ],
         "summary": "List Employee Positions",
+        "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee.",
         "operationId": "List-Employee-Positions",
         "parameters": [
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "location",
@@ -1753,8 +1837,7 @@
               "application/json": {}
             }
           }
-        },
-        "description": "Returns a list of the employee's primary and secondary positions. The format of Text in the response depends on the company web setting Lookup.Positions.\n\nA position will only be included if it is active on the Employee Profile, with an effective date in the past and a expiry date in the future, if these are entered on the employee."
+        }
       }
     },
     "/v1/Employees": {
@@ -1804,10 +1887,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "responses": {
@@ -1831,10 +1914,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "width",
@@ -1874,10 +1957,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -2120,7 +2203,7 @@
       }
     },
     "/v1/GLGroups": {
-     "get": {
+      "get": {
         "tags": [
           "GLs"
         ],
@@ -2133,6 +2216,80 @@
             "content": {
               "application/json": {}
             }
+          }
+        }
+      }
+    },
+    "/v1/GLSegment": {
+      "post": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Add GL Account",
+        "description": "Create new GL Accounts for Major or Other Segments. This cannot create Project or Phase Accounts.",
+        "operationId": "Add-New-GL-Account-Data",
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "text/json": {},
+            "application/*+json": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Update GL Account",
+        "description": "Update GL Accounts for Major or Other Segments. This cannot update Project or Phase Accounts. ",
+        "operationId": "Update-GL-Account-Data",
+        "requestBody": {
+          "content": {
+            "application/json": {},
+            "text/json": {},
+            "application/*+json": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Delete GL Account",
+        "description": "Permanently delete GL Accounts for Major or Other Segments. This cannot delete Project or Phase Accounts. ",
+        "operationId": "Delete-GL-Account-Data",
+        "parameters": [
+          {
+            "name": "segmentNo",
+            "in": "query",
+            "description": "The number of the GL segment with the account your deleting.  ",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "account",
+            "in": "query",
+            "description": "The GL account. ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -2221,59 +2378,6 @@
         "summary": "List Locations",
         "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
         "operationId": "List-Locations",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperience": {
-      "post": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "Add New Experience",
-        "operationId": "Add-New-Experience",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewExperienceSetup"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewExperienceSetup"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewExperienceSetup"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewExperience/Setup": {
-      "get": {
-        "tags": [
-          "New Experience"
-        ],
-        "summary": "Get New Experience Setup",
-        "operationId": "Get-New-Experience-Setup",
         "responses": {
           "200": {
             "description": "Ok",
@@ -2641,6 +2745,7 @@
           "Notification Settings"
         ],
         "summary": "Update Notification Settings",
+        "description": "Update whether the employee is receiving notifications for the notification type. The employee is always the employee attached to the user.",
         "operationId": "Update-Notification-Settings",
         "requestBody": {
           "content": {
@@ -2677,8 +2782,7 @@
               "application/json": {}
             }
           }
-        },
-        "description": "Update whether the employee is receiving notifications for the notification type. The employee is always the employee attached to the user."
+        }
       }
     },
     "/v1/PayCodes": {
@@ -2951,10 +3055,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "responses": {
@@ -3054,6 +3158,7 @@
           "Employee Personal Info"
         ],
         "summary": "Get Employee Personal Info",
+        "description": "",
         "operationId": "Get-Employee-Personal-Info",
         "parameters": [
           {
@@ -3071,20 +3176,19 @@
               "application/json": {},
               "application/xml": {
                 "schema": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "object"
                 }
               }
             }
           }
-        },
-        "description": ""
+        }
       },
       "put": {
         "tags": [
           "Employee Personal Info"
         ],
         "summary": "Update Employee Personal Info",
+        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info.",
         "operationId": "Update-Employee-Personal-Info",
         "requestBody": {
           "content": {
@@ -3116,8 +3220,7 @@
               }
             }
           }
-        },
-        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info."
+        }
       }
     },
     "/v1/PersonalInfo/EmployeeFigures": {
@@ -3193,10 +3296,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "width",
@@ -3234,10 +3337,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "requestBody": {
@@ -3278,10 +3381,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           }
         ],
         "responses": {
@@ -3317,6 +3420,7 @@
           "Positions"
         ],
         "summary": "Get Position Details",
+        "description": "",
         "operationId": "Get-Position-Details",
         "parameters": [
           {
@@ -3334,8 +3438,7 @@
               "application/json": {}
             }
           }
-        },
-        "description": ""
+        }
       }
     },
     "/v1/Positions": {
@@ -3344,25 +3447,26 @@
           "Positions"
         ],
         "summary": "List Positions",
+        "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions.",
         "operationId": "List-Positions",
         "parameters": [
           {
             "name": "includeInactive",
             "in": "query",
+            "description": "Determines whether all positions will be returned. If true, active and inactive employees will be included in the response. If false, only active employees will be included in the response.  Default is false.",
             "schema": {
               "type": "boolean",
               "default": false
-            },
-            "description": "Determines whether all positions will be returned. If true, active and inactive employees will be included in the response. If false, only active employees will be included in the response.  Default is false."
+            }
           },
           {
             "name": "masculine",
             "in": "query",
+            "description": "Determines which French position description is returned. If true, the masculine description will be returned. If false, the feminine description will be returned.  By default, this is false.  A French description will only be included when a French access token is provided.",
             "schema": {
               "type": "boolean",
               "default": false
-            },
-            "description": "Determines which French position description is returned. If true, the masculine description will be returned. If false, the feminine description will be returned.  By default, this is false.  A French description will only be included when a French access token is provided."
+            }
           }
         ],
         "responses": {
@@ -3372,8 +3476,7 @@
               "application/json": {}
             }
           }
-        },
-        "description": "Returns a list of all the position codes. The format of Text in the response depends on the company web setting Lookup.Positions."
+        }
       }
     },
     "/v1/RateGrids": {
@@ -3833,10 +3936,10 @@
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee. When testing using 'Send a Test Request', you can use employee number 000001005."
+            }
           },
           {
             "name": "date",
@@ -6734,9 +6837,6 @@
           },
           "glSegments": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GlSegment"
-            },
             "nullable": true
           },
           "glAccountName": {
@@ -9642,56 +9742,6 @@
         ],
         "type": "integer",
         "format": "int32"
-      },
-      "GlSegment": {
-        "type": "object",
-        "properties": {
-          "account": {
-            "type": "string",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "mask": {
-            "type": "string",
-            "nullable": true
-          },
-          "validationTypes": {
-            "type": "string",
-            "nullable": true
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "useProjectAccount": {
-            "type": "boolean"
-          },
-          "defaultEarnGl": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
       },
       "GlSegmentValue": {
         "type": "object",
@@ -16977,6 +17027,199 @@
           }
         },
         "additionalProperties": false
+      },
+      "ConsentForm": {
+        "type": "object",
+        "properties": {
+          "termsOfServiceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasRead": {
+            "type": "boolean"
+          },
+          "hasAccepted": {
+            "type": "boolean"
+          },
+          "signature": {
+            "type": "string",
+            "nullable": true
+          },
+          "signatureDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TermsOfService": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Setup": {
+        "type": "object",
+        "properties": {
+          "userGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserGroup"
+            },
+            "nullable": true
+          },
+          "roleTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlSegment": {
+        "type": "object",
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        },
+        "properties": {
+          "segmentNo": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The GL Segment Number for the account. If the Account  is part of your first segment, this will be 1, etc."
+          },
+          "account": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "description": "The GL Account. This must match the format of the GL Segment."
+          },
+          "name": {
+            "type": "string",
+            "description": "The description of phase. \nThis property is not used when adding, updating or deleting Major or Other Accounts.",
+            "nullable": true
+          },
+          "description": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "description": "A longer description for the GL Major or Other Account, which can be up to 128 characters."
+          },
+          "abbreviation": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "description": "The Short Name of the account, which can be up to 10 characters."
+          },
+          "type": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "description": "A one character type for the account used for validation, from A - Z.\n\nIf it's a Major Account, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account",
+            "nullable": true
+          },
+          "mask": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "description": "Enter the GL Account Format, with the account in the correct segment. \nFor additional GL validation, replace other aspects of the account. Accounts must match the replaced aspect to pass validation. "
+          },
+          "validationTypes": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "description": "Validates the other accounts. If you're entering Major, enter the type in the correct location. \n\nTo validate, enter the letter of the type the account must be. For example, if you've got 3 segements and the first and third account must be type A, enter A A in validationType. \n\nLeave blank if no additional validation is needed. ",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean",
+            "description": "Active accounts are required to use the GL segment. Inactive accounts cannot be used for new account validation, and are used for reporting. "
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
+            "nullable": true
+          },
+          "useProjectAccount": {
+            "type": "boolean",
+            "description": "Indicates whether the GL account uses Project Accounting. \nIf True, project and phase accounts are used if all the accounts in full GL string use project accounting."
+          },
+          "statAccount": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "description": "The statistical account for the selected Major GL Account. \nMust be a valid account in Avanti defined as Statistical Account. It'sfor reporting purposes and export into external programs.",
+            "nullable": true
+          },
+          "defaultEarnGl": {
+            "type": "string",
+            "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
+            "nullable": true
+          },
+          "exportValue": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "description": "The value used in the GL Export. ",
+            "nullable": true
+          }
+        },
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ]
       }
     },
     "securitySchemes": {
@@ -16993,6 +17236,9 @@
     }
   ],
   "tags": [
+    {
+      "name": "Access Management"
+    },
     {
       "name": "Attendance Codes"
     },
@@ -17031,6 +17277,9 @@
     },
     {
       "name": "Employee Benefit Group"
+    },
+    {
+      "name": "Employee Compensation"
     },
     {
       "name": "Employee Defaults Group"
@@ -17088,9 +17337,6 @@
     },
     {
       "name": "Locations"
-    },
-    {
-      "name": "New Experience"
     },
     {
       "name": "New Hire"
