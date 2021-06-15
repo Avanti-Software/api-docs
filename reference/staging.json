@@ -2220,7 +2220,7 @@
         }
       }
     },
-   "/v1/GLSegment": {
+    "/v1/GLSegment": {
       "post": {
         "tags": [
           "GLs"
@@ -2230,14 +2230,30 @@
         "operationId": "Add-New-GL-Account-Data",
         "requestBody": {
           "content": {
-            "application/json": {},
+            "application/json": {
+              "schema": {
+                "$ref": "./main.v1.json#/components/schemas/GlSegment"
+              }
+            },
             "text/json": {},
-            "application/*+json": {}
+            "application/*+json": {},
+            "application/xml": {
+              "schema": {
+                "$ref": ""
+              }
+            }
           }
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./main.v1.json#/components/schemas/GlSegment"
+                }
+              }
+            }
           }
         }
       },
@@ -2293,7 +2309,7 @@
           }
         }
       }
-    }, 
+    },
     "/v1/GLSetup": {
       "get": {
         "tags": [
