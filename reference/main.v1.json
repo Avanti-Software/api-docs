@@ -2226,7 +2226,7 @@
           "GLs"
         ],
         "summary": "Add GL Account",
-        "description": "Create new GL Accounts for Major or Other Segments. This cannot create Project or Phase Accounts.",
+        "description": "Create new GL Accounts for Major, Other, or Phase Segments. This cannot create Project Accounts. ",
         "operationId": "Add-New-GL-Account-Data",
         "requestBody": {
           "content": {
@@ -2262,7 +2262,7 @@
           "GLs"
         ],
         "summary": "Update GL Account",
-        "description": "Update GL Accounts for Major or Other Segments. This cannot update Project or Phase Accounts. ",
+        "description": "Update GL Accounts for Major, Other, or Phase Segments. This cannot update Project Accounts. ",
         "operationId": "Update-GL-Account-Data",
         "requestBody": {
           "content": {
@@ -2293,7 +2293,7 @@
           "GLs"
         ],
         "summary": "Delete GL Account",
-        "description": "Permanently delete GL Accounts for Major or Other Segments. This cannot delete Project or Phase Accounts. ",
+        "description": "Permanently delete GL Accounts for Major, Other, or Phase Segments. This cannot delete Project Accounts. ",
         "operationId": "Delete-GL-Account-Data",
         "parameters": [
           {
