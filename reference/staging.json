@@ -2266,14 +2266,25 @@
         "operationId": "Update-GL-Account-Data",
         "requestBody": {
           "content": {
-            "application/json": {},
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlSegment"
+              }
+            },
             "text/json": {},
             "application/*+json": {}
           }
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlSegment"
+                }
+              }
+            }
           }
         }
       },
@@ -2304,7 +2315,7 @@
           }
         ],
         "responses": {
-          "200": {
+          "201": {
             "description": "Success"
           }
         }
