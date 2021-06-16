@@ -2,6 +2,21 @@
 
 ## Version 1.0
 
+June 15, 2021 
+- Added Endpoints: 
+    - Add GL Segment
+    - Update GL Segment
+    - Delete GL Segment
+
+June 3, 2021 
+- Added Endpoints: 
+    - Pay Statement
+
+May 17, 2021 
+- Added Endpoints: 
+    - Access Management
+
+May 4, 2021
 - Initial Endpoints:
   - Attendance Codes
   - Bank Transit
