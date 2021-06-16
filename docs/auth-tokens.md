@@ -21,6 +21,8 @@ Device 1 ID: MyService1-49d62187-582c-4996-b29f-b183d7506aec
 Device 2 ID: MyService2-0dfbfc98-c72b-4717-9c4b-ad461a7971e7
 ```
 
+> **Important:** When requesting an access token the content-type of the request must be **application/x-wwww-form-urlencoded**.
+
 ## Using Access Tokens
 
 Access tokens are used as bearer tokens and must be included in the **Authorization** header of every authenticated request made by a client. Access tokens are prefixed with the Bearer keyword.
