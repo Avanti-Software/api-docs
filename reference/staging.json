@@ -17243,6 +17243,17 @@
             }
           }
         }
+      },
+      "UserClass": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          99
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {
