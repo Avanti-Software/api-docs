@@ -3502,62 +3502,6 @@
         }
       }
     },
-    "/v1/PyTimeData": {
-      "post": {
-        "tags": [
-          "Py Time Data"
-        ],
-        "summary": "Get List of PyTimeData",
-        "operationId": "Get-List-of-PyTimeData",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PyTimeDataRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PyTimeDataRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PyTimeDataRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success"
-          },
-          "201": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/RateGrids": {
       "get": {
         "tags": [
@@ -17310,54 +17254,6 @@
         ],
         "type": "integer",
         "format": "int32"
-      },
-      "PyTimeDataRequest": {
-        "required": [
-          "earnDeductCode",
-          "fromTime",
-          "toTime"
-        ],
-        "type": "object",
-        "properties": {
-          "fromTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "toTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "earnDeductCode": {
-            "maxLength": 3,
-            "minLength": 0,
-            "type": "string"
-          },
-          "employeeNumbers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "payGroups": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "attendanceCodes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "active": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -17499,9 +17395,6 @@
     },
     {
       "name": "Positions"
-    },
-    {
-      "name": "Py Time Data"
     },
     {
       "name": "Rate Grids"
