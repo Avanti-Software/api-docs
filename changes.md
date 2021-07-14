@@ -1,3 +1,14 @@
+# Jul 14, 2021 9:57 PM
+**GitHub Run ID:** 1031844184
+**GitHub Run Number:** 1856
+**Reference:** refs/pull/362/merge
+**Commit:** 5b4995f345d70707c042eb4d52cbd4385aa77a9b## Added
+ * Endpoint: POST - /v1/AttendanceData
+* Model: AttendanceDataRequest
+## Removed
+ * Endpoint: POST - /v1/PyTimeData
+* Model: PyTimeDataRequest
+
 # Jul 13, 2021 11:02 PM
 **GitHub Run ID:** 1028310176
 **GitHub Run Number:** 1855
