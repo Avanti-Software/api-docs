@@ -1,3 +1,10 @@
+# Jul 22, 2021 10:19 PM
+**GitHub Run ID:** 1057795153
+**GitHub Run Number:** 1896
+**Reference:** refs/heads/master
+**Commit:** c5315913cd2862c2e09c535a867c82d12ab944ae## Added
+ * Endpoint: GET - /v1/EmployeeCompensation
+
 # Jul 22, 2021 10:09 PM
 **GitHub Run ID:** 1057766453
 **GitHub Run Number:** 1894
