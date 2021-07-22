@@ -1433,107 +1433,6 @@
         }
       }
     },
-    "/v1/EmployeeCompensation": {
-      "get": {
-        "tags": [
-          "Employee Compensation"
-        ],
-        "summary": "List Employee Pay Statements",
-        "operationId": "List-Employee-Pay-Statements",
-        "parameters": [
-          {
-            "name": "take",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "run",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "sortOrder",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "PayEndingDate"
-            }
-          },
-          {
-            "name": "filter",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "sortDesc",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PayStatement"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/EmployeeCompensation/PayStatement": {
       "get": {
         "tags": [
@@ -10925,6 +10824,12 @@
           "asspClearCacheUrl": {
             "type": "string",
             "nullable": true
+          },
+          "requireTermsOfServiceUpdate": {
+            "type": "boolean"
+          },
+          "termsOfService": {
+            "$ref": "#/components/schemas/TermsOfService"
           }
         },
         "additionalProperties": false
@@ -11393,6 +11298,20 @@
               "$ref": "#/components/schemas/TextValuePair"
             },
             "nullable": true
+          },
+          "lastEmployeeNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeNumberMask": {
+            "type": "string",
+            "nullable": true
+          },
+          "modifySin": {
+            "type": "boolean"
+          },
+          "viewSin": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -13664,6 +13583,9 @@
           },
           "positionBool10": {
             "type": "boolean"
+          },
+          "positionUserDefinedLabels": {
+            "$ref": "#/components/schemas/PositionUserDefinedLabels"
           }
         },
         "additionalProperties": false
@@ -16847,6 +16769,13 @@
           },
           "settings": {
             "$ref": "#/components/schemas/Settings"
+          },
+          "userClass": {
+            "$ref": "#/components/schemas/UserClass"
+          },
+          "serialNo": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17264,6 +17193,31 @@
           "version": {
             "type": "integer",
             "format": "int32"
+          },
+          "hasRead": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "hasAgreed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "signature": {
+            "type": "string",
+            "nullable": true
+          },
+          "signatureDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
