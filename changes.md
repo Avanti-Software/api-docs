@@ -1,3 +1,10 @@
+# Jul 22, 2021 7:49 PM
+**GitHub Run ID:** 1057411678
+**GitHub Run Number:** 1890
+**Reference:** refs/pull/377/merge
+**Commit:** 7a8898eeb4c0f994d45dc479abdb75febe813b36## Added
+ * Endpoint: GET - /v1/EmployeeCompensation
+
 # Jul 14, 2021 9:57 PM
 **GitHub Run ID:** 1031844184
 **GitHub Run Number:** 1856
