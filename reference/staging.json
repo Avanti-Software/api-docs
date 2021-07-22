@@ -100,7 +100,7 @@
         "tags": [
           "Attendance Data"
         ],
-        "summary": "Get List of AttendanceData",
+        "summary": "List of Attendance Data",
         "operationId": "Get-List-of-AttendanceData",
         "requestBody": {
           "content": {
@@ -118,20 +118,16 @@
               "schema": {
                 "$ref": "#/components/schemas/AttendanceDataRequest"
               }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/AttendanceDataRequest"
               }
             }
           },
+          "description": ""
+        },
+        "responses": {
           "200": {
             "description": "Success"
           },
@@ -140,6 +136,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -199,7 +205,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -277,7 +283,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -314,7 +320,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -368,7 +374,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "409": {
@@ -417,7 +423,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -434,7 +440,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -467,7 +473,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -494,7 +500,7 @@
                 }
               },
               "encoding": {
-                "logos": { }
+                "logos": {}
               }
             }
           }
@@ -503,7 +509,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -521,7 +527,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -548,7 +554,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -585,7 +591,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -620,7 +626,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -655,7 +661,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -680,7 +686,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -707,7 +713,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -735,7 +741,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -770,7 +776,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -805,7 +811,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -839,7 +845,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1232,7 +1238,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1269,7 +1275,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1307,7 +1313,7 @@
                 }
               },
               "encoding": {
-                "files": { }
+                "files": {}
               }
             }
           }
@@ -1316,7 +1322,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1340,7 +1346,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1394,7 +1400,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1421,7 +1427,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1506,7 +1512,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1533,7 +1539,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1588,7 +1594,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1615,7 +1621,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1641,7 +1647,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1668,7 +1674,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1695,7 +1701,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1741,7 +1747,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1785,7 +1791,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1812,7 +1818,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1839,7 +1845,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1890,7 +1896,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1926,7 +1932,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1953,7 +1959,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1996,7 +2002,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2023,7 +2029,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2059,7 +2065,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2206,7 +2212,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2235,7 +2241,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2252,7 +2258,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2270,7 +2276,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2384,7 +2390,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2402,7 +2408,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2461,7 +2467,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2497,7 +2503,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2523,7 +2529,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2540,7 +2546,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2570,7 +2576,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2656,7 +2662,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2690,7 +2696,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2726,7 +2732,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2743,7 +2749,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2779,7 +2785,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2796,7 +2802,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2814,7 +2820,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2858,7 +2864,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2946,7 +2952,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3144,7 +3150,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3189,7 +3195,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3225,7 +3231,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3252,7 +3258,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { },
+              "application/json": {},
               "application/xml": {
                 "schema": {
                   "type": "object"
@@ -3294,7 +3300,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": { }
+                  "example-1": {}
                 }
               }
             }
@@ -3324,7 +3330,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3358,7 +3364,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3401,7 +3407,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3445,7 +3451,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3470,7 +3476,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3487,7 +3493,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3514,7 +3520,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3552,7 +3558,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3569,7 +3575,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3831,7 +3837,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3982,7 +3988,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4075,7 +4081,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4125,7 +4131,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4173,7 +4179,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4221,7 +4227,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4257,7 +4263,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4302,7 +4308,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4329,7 +4335,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4371,7 +4377,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4407,7 +4413,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4456,7 +4462,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4513,7 +4519,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4579,7 +4585,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4620,7 +4626,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4656,7 +4662,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4690,7 +4696,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4739,7 +4745,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4840,7 +4846,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -5071,7 +5077,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -6268,7 +6274,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6318,7 +6324,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true
           },
           "hasErrors": {
@@ -6361,7 +6367,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6386,7 +6392,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6406,13 +6412,13 @@
           },
           "relations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -6451,19 +6457,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6472,7 +6478,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6483,7 +6489,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6501,7 +6507,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -6514,7 +6520,7 @@
           },
           "rows": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -9930,7 +9936,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -13652,7 +13658,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "PropertyAttributes": {
         "enum": [
@@ -17312,52 +17318,78 @@
         "format": "int32"
       },
       "AttendanceDataRequest": {
-        "required": [
-          "earnDeductCode",
-          "fromTime",
-          "toTime"
-        ],
         "type": "object",
+        "additionalProperties": false,
+        "x-examples": {
+          "example-1": {
+            "value": {
+              "fromTime": "2019-08-24T14:15:22Z",
+              "toTime": "2019-08-24T14:15:22Z",
+              "earnDeductCode": "str",
+              "employeeNumbers": [
+                "string"
+              ],
+              "payGroups": [
+                "string"
+              ],
+              "attendanceCodes": [
+                "string"
+              ],
+              "active": true
+            }
+          }
+        },
         "properties": {
           "fromTime": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "The From Date and Time in iSO 8601 format. Only entries after this are returned. "
           },
           "toTime": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "The To Date and Time in iSO 8601 format. Only entries before this date are returned. "
           },
           "earnDeductCode": {
             "maxLength": 3,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The three-digit earning, deduction or benefit code. Only entries with code are returned."
           },
           "employeeNumbers": {
             "type": "array",
+            "description": "Entries are only returned for the employees listed. If blank, entries are returned for all employees.",
+            "nullable": true,
             "items": {
               "type": "string"
-            },
-            "nullable": true
+            }
           },
           "payGroups": {
             "type": "array",
+            "description": "The three digit ID of the pay groups. Entries are only returned for employees in the pay groups. ",
+            "nullable": true,
             "items": {
               "type": "string"
-            },
-            "nullable": true
+            }
           },
           "attendanceCodes": {
             "type": "array",
+            "description": "The ID of the attendance codes. Only entries with these attendance codes are returned. ",
+            "nullable": true,
             "items": {
               "type": "string"
-            },
-            "nullable": true
+            }
           },
           "active": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Enter true to return entries for active employees. If blank or false, entries are only returned for inactive employees."
           }
         },
-        "additionalProperties": false
+        "required": [
+          "fromTime",
+          "toTime",
+          "earnDeductCode"
+        ]
       }
     },
     "securitySchemes": {
@@ -17370,7 +17402,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ],
   "tags": [
