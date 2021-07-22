@@ -1,3 +1,10 @@
+# Jul 22, 2021 11:04 PM
+**GitHub Run ID:** 1057892640
+**GitHub Run Number:** 127
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** 08954bbb3da8e99fc8d0452d10c8f9712cfde41b## Added
+* Model: PICKUPREQUEST, Property: comment - Microsoft.OpenApi.Models.OpenApiSchema
+
 # May 16, 2021 11:13 PM
 **GitHub Run ID:** 847940292
 **GitHub Run Number:** 115
