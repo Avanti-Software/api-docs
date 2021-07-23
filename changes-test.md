@@ -1,3 +1,10 @@
+# Jul 23, 2021 3:22 AM
+**GitHub Run ID:** 1058405060
+**GitHub Run Number:** 128
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** bf923a40a1ea31d395a72f7332b74778fc87c820## Added
+* Model: PickupRequest, Property: pickupDate
+
 # Jul 22, 2021 11:04 PM
 **GitHub Run ID:** 1057892640
 **GitHub Run Number:** 127
