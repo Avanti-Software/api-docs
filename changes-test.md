@@ -1,3 +1,32 @@
+# Jul 23, 2021 4:01 AM
+**GitHub Run ID:** 1058474922
+**GitHub Run Number:** 129
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** bcc1145986e1b2878029429b4e6a0bbc6097a8cd## Added
+* Model: PickupRequest, Property: pickupDate
+* Model: PickupRequest, Property: pickupStatus
+
+# Jul 23, 2021 3:24 AM
+**GitHub Run ID:** 1057892640
+**GitHub Run Number:** 127
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** 08954bbb3da8e99fc8d0452d10c8f9712cfde41b## Removed
+* Model: PICKUPREQUEST, Property: pickupDate - Microsoft.OpenApi.Models.OpenApiSchema
+
+# Jul 23, 2021 3:22 AM
+**GitHub Run ID:** 1058405060
+**GitHub Run Number:** 128
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** bf923a40a1ea31d395a72f7332b74778fc87c820## Added
+* Model: PickupRequest, Property: pickupDate
+
+# Jul 22, 2021 11:04 PM
+**GitHub Run ID:** 1057892640
+**GitHub Run Number:** 127
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** 08954bbb3da8e99fc8d0452d10c8f9712cfde41b## Added
+* Model: PICKUPREQUEST, Property: comment - Microsoft.OpenApi.Models.OpenApiSchema
+
 # May 16, 2021 11:13 PM
 **GitHub Run ID:** 847940292
 **GitHub Run Number:** 115

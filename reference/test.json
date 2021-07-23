@@ -13725,6 +13725,18 @@
               "format": "int32"
             },
             "nullable": true
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "pickupDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "pickupStatus": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

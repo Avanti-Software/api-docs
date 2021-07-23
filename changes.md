@@ -1,3 +1,47 @@
+# Jul 22, 2021 10:19 PM
+**GitHub Run ID:** 1057795153
+**GitHub Run Number:** 1896
+**Reference:** refs/heads/master
+**Commit:** c5315913cd2862c2e09c535a867c82d12ab944ae## Added
+ * Endpoint: GET - /v1/EmployeeCompensation
+
+# Jul 22, 2021 10:09 PM
+**GitHub Run ID:** 1057766453
+**GitHub Run Number:** 1894
+**Reference:** refs/pull/378/merge
+**Commit:** 291b833e3d3cafb89b8a0a39ac8ba036576636f0## Added
+* Model: NEWEXPERIENCESETUP, Property: requireTermsOfServiceUpdate - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: NEWEXPERIENCESETUP, Property: termsOfService - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: NEWHIRESETUPRESPONSE, Property: lastEmployeeNumber - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: NEWHIRESETUPRESPONSE, Property: employeeNumberMask - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: NEWHIRESETUPRESPONSE, Property: modifySin - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: NEWHIRESETUPRESPONSE, Property: viewSin - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: POSITIONDETAILS, Property: positionUserDefinedLabels - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: TERMSOFSERVICE, Property: hasRead - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: TERMSOFSERVICE, Property: hasAgreed - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: TERMSOFSERVICE, Property: signature - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: TERMSOFSERVICE, Property: signatureDate - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: TERMSOFSERVICE, Property: userName - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: TERMSOFSERVICE, Property: company - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: USERSETUP, Property: userClass - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: USERSETUP, Property: serialNo - Microsoft.OpenApi.Models.OpenApiSchema
+## Removed
+ * Endpoint: GET - /v1/EmployeeCompensation
+
+# Jul 22, 2021 9:49 PM
+**GitHub Run ID:** 1057728047
+**GitHub Run Number:** 1893
+**Reference:** refs/pull/377/merge
+**Commit:** 865c1922ec59e3cd8e960321a357973fbe87f387## Added
+ * Endpoint: GET - /v1/EmployeeCompensation
+
+# Jul 22, 2021 9:49 PM
+**GitHub Run ID:** 1057726676
+**GitHub Run Number:** 1892
+**Reference:** refs/heads/master
+**Commit:** 382ff8814a45f962ff33f61e58549231432b9210## Removed
+ * Endpoint: GET - /v1/EmployeeCompensation
+
 # Jul 22, 2021 7:49 PM
 **GitHub Run ID:** 1057411678
 **GitHub Run Number:** 1890
