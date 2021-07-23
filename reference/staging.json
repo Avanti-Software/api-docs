@@ -100,7 +100,7 @@
         "tags": [
           "Attendance Data"
         ],
-        "summary": "List of Attendance Data",
+        "summary": "List Payroll Data and Attendance Calendar Entries",
         "operationId": "Get-List-of-AttendanceData",
         "requestBody": {
           "content": {
@@ -154,7 +154,8 @@
               }
             }
           }
-        }
+        },
+        "description": "This endpoint returns a list of payroll data and attendance calendar time entries with a date range with the earning code selected. Additionally, you can restrict the entries returned by employee number, attendance codes and employee number.\n\nThe API User must have role permissions to the employee and have access to the employee's pay group. Go to [Allow Employee Access](/docs/auth-users.md) for more information on setting up the user with the correct employee access. "
       }
     },
     "/v1/Banks": {
@@ -1498,16 +1499,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success",
             "content": {
@@ -1523,6 +1514,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
