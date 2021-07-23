@@ -14471,10 +14471,6 @@
           "test": {
             "type": "integer",
             "format": "int32"
-          },
-          "testString": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
