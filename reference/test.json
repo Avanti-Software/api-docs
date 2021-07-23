@@ -14467,6 +14467,10 @@
           },
           "readFlag": {
             "type": "boolean"
+          },
+          "test": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
