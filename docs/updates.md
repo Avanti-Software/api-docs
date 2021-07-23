@@ -2,6 +2,10 @@
 
 ## Version 1.0
 
+July 23, 2021
+- Added Endpoints: 
+    - List Payroll Data and Attendance Calendar Entries
+
 June 15, 2021 
 - Added Endpoints: 
     - Add GL Segment

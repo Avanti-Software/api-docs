@@ -95,6 +95,76 @@
         }
       }
     },
+    "/v1/AttendanceData": {
+      "post": {
+        "tags": [
+          "Attendance Data"
+        ],
+        "summary": "List Payroll Data and Attendance Calendar Entries",
+        "operationId": "Get-List-of-AttendanceData",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttendanceDataRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttendanceDataRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttendanceDataRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/AttendanceDataRequest"
+              }
+            }
+          },
+          "description": ""
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint returns a list of payroll data and attendance calendar time entries with a date range with the earning code selected. Additionally, you can restrict the entries returned by employee number, attendance codes and employee number.\n\nThe API User must have role permissions to the employee and have access to the employee's pay group. Go to [Allow Employee Access](/docs/auth-users.md) for more information on setting up the user with the correct employee access. "
+      }
+    },
     "/v1/Banks": {
       "get": {
         "tags": [
@@ -1371,6 +1441,107 @@
         }
       }
     },
+    "/v1/EmployeeCompensation": {
+      "get": {
+        "tags": [
+          "Employee Compensation"
+        ],
+        "summary": "List Employee Pay Statements",
+        "operationId": "List-Employee-Pay-Statements",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "run",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "PayEndingDate"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "sortDesc",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PayStatement"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/EmployeeCompensation/PayStatement": {
       "get": {
         "tags": [
@@ -2235,13 +2406,9 @@
                 "$ref": "./main.v1.json#/components/schemas/GlSegment"
               }
             },
-            "text/json": {},
-            "application/*+json": {},
-            "application/xml": {
-              "schema": {
-                "$ref": ""
-              }
-            }
+            "text/json": null,
+            "application/*+json": null,
+            "application/xml": null
           }
         },
         "responses": {
@@ -2271,8 +2438,8 @@
                 "$ref": "#/components/schemas/GlSegment"
               }
             },
-            "text/json": {},
-            "application/*+json": {}
+            "text/json": null,
+            "application/*+json": null
           }
         },
         "responses": {
@@ -10766,6 +10933,12 @@
           "asspClearCacheUrl": {
             "type": "string",
             "nullable": true
+          },
+          "requireTermsOfServiceUpdate": {
+            "type": "boolean"
+          },
+          "termsOfService": {
+            "$ref": "#/components/schemas/TermsOfService"
           }
         },
         "additionalProperties": false
@@ -11234,6 +11407,20 @@
               "$ref": "#/components/schemas/TextValuePair"
             },
             "nullable": true
+          },
+          "lastEmployeeNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeNumberMask": {
+            "type": "string",
+            "nullable": true
+          },
+          "modifySin": {
+            "type": "boolean"
+          },
+          "viewSin": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -13505,6 +13692,9 @@
           },
           "positionBool10": {
             "type": "boolean"
+          },
+          "positionUserDefinedLabels": {
+            "$ref": "#/components/schemas/PositionUserDefinedLabels"
           }
         },
         "additionalProperties": false
@@ -16688,6 +16878,13 @@
           },
           "settings": {
             "$ref": "#/components/schemas/Settings"
+          },
+          "userClass": {
+            "$ref": "#/components/schemas/UserClass"
+          },
+          "serialNo": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17105,6 +17302,31 @@
           "version": {
             "type": "integer",
             "format": "int32"
+          },
+          "hasRead": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "hasAgreed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "signature": {
+            "type": "string",
+            "nullable": true
+          },
+          "signatureDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17130,30 +17352,21 @@
         "additionalProperties": false
       },
       "GlSegment": {
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ],
         "type": "object",
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        },
         "properties": {
           "segmentNo": {
             "type": "integer",
-            "format": "int32",
-            "description": "The GL Segment Number for the account. If the Account  is part of your first segment, this will be 1, etc."
+            "description": "The GL Segment Number for the account. If the Account  is part of your first segment, this will be 1, etc.",
+            "format": "int32"
           },
           "account": {
             "maxLength": 15,
@@ -17200,8 +17413,8 @@
           },
           "effectiveDate": {
             "type": "string",
-            "format": "date-time",
             "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
+            "format": "date-time",
             "nullable": true
           },
           "active": {
@@ -17210,8 +17423,8 @@
           },
           "expiryDate": {
             "type": "string",
-            "format": "date-time",
             "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
+            "format": "date-time",
             "nullable": true
           },
           "useProjectAccount": {
@@ -17238,15 +17451,109 @@
             "nullable": true
           }
         },
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        }
+      },
+      "UserClass": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          99
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "AttendanceDataRequest": {
         "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ]
+          "fromTime",
+          "toTime",
+          "earnDeductCode"
+        ],
+        "type": "object",
+        "properties": {
+          "fromTime": {
+            "type": "string",
+            "description": "The From Date and Time in iSO 8601 format. Only entries after this are returned. ",
+            "format": "date-time"
+          },
+          "toTime": {
+            "type": "string",
+            "description": "The To Date and Time in iSO 8601 format. Only entries before this date are returned. ",
+            "format": "date-time"
+          },
+          "earnDeductCode": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "description": "The three-digit earning, deduction or benefit code. Only entries with code are returned."
+          },
+          "employeeNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Entries are only returned for the employees listed. If blank, entries are returned for all employees.",
+            "nullable": true
+          },
+          "payGroups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The three digit ID of the pay groups. Entries are only returned for employees in the pay groups. ",
+            "nullable": true
+          },
+          "attendanceCodes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The ID of the attendance codes. Only entries with these attendance codes are returned. ",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean",
+            "description": "Enter true to return entries for active employees. If blank or false, entries are only returned for inactive employees."
+          }
+        },
+        "additionalProperties": false,
+        "x-examples": {
+          "example-1": {
+            "value": {
+              "fromTime": "2019-08-24T14:15:22.0000000+00:00",
+              "toTime": "2019-08-24T14:15:22.0000000+00:00",
+              "earnDeductCode": "str",
+              "employeeNumbers": [
+                "string"
+              ],
+              "payGroups": [
+                "string"
+              ],
+              "attendanceCodes": [
+                "string"
+              ],
+              "active": true
+            }
+          }
+        }
       }
     },
     "securitySchemes": {
@@ -17268,6 +17575,9 @@
     },
     {
       "name": "Attendance Codes"
+    },
+    {
+      "name": "Attendance Data"
     },
     {
       "name": "Bank Transit"
