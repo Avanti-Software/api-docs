@@ -13729,10 +13729,6 @@
           "comment": {
             "type": "string",
             "nullable": true
-          },
-          "pickupDate": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false

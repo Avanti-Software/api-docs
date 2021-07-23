@@ -1,3 +1,10 @@
+# Jul 23, 2021 3:24 AM
+**GitHub Run ID:** 1057892640
+**GitHub Run Number:** 127
+**GitHub Commit:** refs/heads/master
+**GitHub Commit:** 08954bbb3da8e99fc8d0452d10c8f9712cfde41b## Removed
+* Model: PICKUPREQUEST, Property: pickupDate - Microsoft.OpenApi.Models.OpenApiSchema
+
 # Jul 23, 2021 3:22 AM
 **GitHub Run ID:** 1058405060
 **GitHub Run Number:** 128
