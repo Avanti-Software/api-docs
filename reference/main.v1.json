@@ -1539,7 +1539,8 @@
               }
             }
           }
-        }
+        },
+        "x-internal": true
       }
     },
     "/v1/EmployeeCompensation/PayStatement": {
@@ -1597,7 +1598,8 @@
               }
             }
           }
-        }
+        },
+        "x-internal": true
       }
     },
     "/v1/EmployeeDefaultsGroup": {
