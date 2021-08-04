@@ -1540,7 +1540,7 @@
             }
           }
         },
-        "x-internal": true
+        "x-internal": false
       }
     },
     "/v1/EmployeeCompensation/PayStatement": {
@@ -1599,7 +1599,7 @@
             }
           }
         },
-        "x-internal": true
+        "x-internal": false
       }
     },
     "/v1/EmployeeDefaultsGroup": {
