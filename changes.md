@@ -1,3 +1,10 @@
+# Aug 05, 2021 8:35 PM
+**GitHub Run ID:** 1102842450
+**GitHub Run Number:** 1929
+**Reference:** refs/pull/387/merge
+**Commit:** 44ae96374042973dcdfeb16dbd49f15c935b9d0d## Removed
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+
 # Aug 05, 2021 7:14 PM
 **GitHub Run ID:** 1102632333
 **GitHub Run Number:** 1925
