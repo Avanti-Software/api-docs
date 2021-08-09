@@ -1,3 +1,12 @@
+# Aug 09, 2021 5:30 PM
+**GitHub Run ID:** 1113734108
+**GitHub Run Number:** 1943
+**Reference:** refs/pull/390/merge
+**Commit:** f551718ae8756175a3649f3cdb21e0d52739a5a3## Added
+* Model: PayStatementsList
+## Removed
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+
 # Aug 06, 2021 8:12 PM
 **GitHub Run ID:** 1106286898
 **GitHub Run Number:** 1941

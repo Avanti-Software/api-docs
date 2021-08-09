@@ -1602,65 +1602,6 @@
         "x-internal": false
       }
     },
-    "/v1/EmployeeCompensation/PDF": {
-      "get": {
-        "tags": [
-          "Employee Compensation"
-        ],
-        "summary": "Get Employee PDF Pay Statement",
-        "operationId": "Get-Employee-PDF-Pay-Statement",
-        "parameters": [
-          {
-            "name": "runNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "requirePassword",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/EmployeeDefaultsGroup": {
       "get": {
         "tags": [
@@ -17615,6 +17556,23 @@
             }
           }
         }
+      },
+      "PayStatementsList": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payStatements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PayStatement"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
