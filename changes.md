@@ -1,3 +1,12 @@
+# Aug 09, 2021 7:08 PM
+**GitHub Run ID:** 1114010649
+**GitHub Run Number:** 1944
+**Reference:** refs/heads/master
+**Commit:** 3cc41eabe6f7228888ecccf50faccf0193465b0c## Added
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+## Removed
+* Model: PayStatementsList
+
 # Aug 09, 2021 5:30 PM
 **GitHub Run ID:** 1113734108
 **GitHub Run Number:** 1943
