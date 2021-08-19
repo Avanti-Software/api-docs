@@ -1,3 +1,18 @@
+# Aug 19, 2021 8:03 PM
+**GitHub Run ID:** 1148307507
+**GitHub Run Number:** 1979
+**Reference:** refs/pull/397/merge
+**Commit:** e49783d0afd53def1a91350d9014077064d47a6d## Added
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: GET - /v1/Codes/Setup/{module}
+ * Endpoint: GET - /v1/DefaultsGroup/Setup/{defaultsGroupCode}
+ * Endpoint: GET - /v1/Dependents/Setup
+ * Endpoint: GET - /v1/EmergencyContacts/Setup
+ * Endpoint: GET - /v1/EmployeeCompensation
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+ * Endpoint: GET - /v1/PersonalInfo/Setup
+ * Endpoint: GET - /v1/NewHire/Setup
+
 # Aug 19, 2021 5:38 PM
 **GitHub Run ID:** 1147896969
 **GitHub Run Number:** 1978
