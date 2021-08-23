@@ -17,27 +17,6 @@
     }
   ],
   "paths": {
-    "/v1/AccessManagement/Setup": {
-      "get": {
-        "tags": [
-          "Access Management"
-        ],
-        "summary": "Get Access Management Setup",
-        "operationId": "Get-Access-Management-Setup",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Setup"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/AttendanceCodes": {
       "get": {
         "tags": [
@@ -408,57 +387,6 @@
         }
       }
     },
-    "/v1/Codes/Setup/{module}": {
-      "get": {
-        "tags": [
-          "Codes"
-        ],
-        "summary": "Get Codes Setup",
-        "operationId": "Get-Codes-Setup",
-        "parameters": [
-          {
-            "name": "module",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetSetup"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/CompanyInfo/Logo": {
       "delete": {
         "tags": [
@@ -558,57 +486,6 @@
             "description": "Ok",
             "content": {
               "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/DefaultsGroup/Setup/{defaultsGroupCode}": {
-      "get": {
-        "tags": [
-          "Defaults Group"
-        ],
-        "summary": "Get Defaults Group Setup",
-        "operationId": "Get-Defaults-Group-Setup",
-        "parameters": [
-          {
-            "name": "defaultsGroupCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DefaultGroup"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
             }
           }
         }
@@ -746,29 +623,6 @@
         }
       }
     },
-    "/v1/Dependents/Setup": {
-      "get": {
-        "tags": [
-          "Dependents"
-        ],
-        "summary": "Get Dependents Setup",
-        "operationId": "Get-Dependents-Setup",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/v1/EmergencyContacts": {
       "get": {
         "tags": [
@@ -896,36 +750,6 @@
             "description": "Ok",
             "content": {
               "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/EmergencyContacts/Setup": {
-      "get": {
-        "tags": [
-          "Emergency Contacts"
-        ],
-        "summary": "Get Emergency Contacts Setup",
-        "operationId": "Get-Emergency-Contacts-Setup",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmergencyContactSetupResponse"
-                }
-              }
             }
           }
         }
@@ -1157,104 +981,6 @@
         }
       }
     },
-    "/v1/EmployeeCompensation": {
-      "get": {
-        "tags": [
-          "Employee Compensation"
-        ],
-        "summary": "List Employee Pay Statements",
-        "operationId": "List-Employee-Pay-Statements",
-        "parameters": [
-          {
-            "name": "take",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "run",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "sortOrder",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "PayEndingDate"
-            }
-          },
-          {
-            "name": "filter",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "sortDesc",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PayStatementsList"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/EmployeeCompensation/PayStatement": {
       "get": {
         "tags": [
@@ -1312,65 +1038,6 @@
           }
         },
         "x-internal": false
-      }
-    },
-    "/v1/EmployeeCompensation/PDF": {
-      "get": {
-        "tags": [
-          "Employee Compensation"
-        ],
-        "summary": "Get Employee PDF Pay Statement",
-        "operationId": "Get-Employee-PDF-Pay-Statement",
-        "parameters": [
-          {
-            "name": "runNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "requirePassword",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
       }
     },
     "/v1/EmployeeDefaultsGroup": {
@@ -2417,27 +2084,6 @@
         }
       }
     },
-    "/v1/NewHire/Setup": {
-      "get": {
-        "tags": [
-          "New Hire"
-        ],
-        "summary": "Get New Hire Setup",
-        "operationId": "Get-New-Hire-Setup",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NewHireSetupResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Notification/{id}": {
       "get": {
         "tags": [
@@ -3363,47 +3009,6 @@
             "description": "Ok",
             "content": {
               "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/PersonalInfo/Setup": {
-      "get": {
-        "tags": [
-          "Employee Personal Info"
-        ],
-        "summary": "Get Personal Info Setup",
-        "operationId": "Get-Personal-Info-Setup",
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PersonalInfoSetupResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
             }
           }
         }
@@ -17388,9 +16993,6 @@
     }
   ],
   "tags": [
-    {
-      "name": "Access Management"
-    },
     {
       "name": "Attendance Codes"
     },
