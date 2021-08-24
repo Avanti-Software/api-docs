@@ -1,3 +1,18 @@
+# Aug 24, 2021 6:30 AM
+**GitHub Run ID:** 1161483403
+**GitHub Run Number:** 1993
+**Reference:** refs/heads/master
+**Commit:** 73bda19acae70a6a50e3147ccee639e10efa2cf5## Removed
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: GET - /v1/Codes/Setup/{module}
+ * Endpoint: GET - /v1/DefaultsGroup/Setup/{defaultsGroupCode}
+ * Endpoint: GET - /v1/Dependents/Setup
+ * Endpoint: GET - /v1/EmergencyContacts/Setup
+ * Endpoint: GET - /v1/EmployeeCompensation
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+ * Endpoint: GET - /v1/NewHire/Setup
+ * Endpoint: GET - /v1/PersonalInfo/Setup
+
 # Aug 23, 2021 9:04 PM
 **GitHub Run ID:** 1160211784
 **GitHub Run Number:** 1990
