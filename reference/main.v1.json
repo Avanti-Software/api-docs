@@ -1845,10 +1845,7 @@
               "schema": {
                 "$ref": "./main.v1.json#/components/schemas/GlSegment"
               }
-            },
-            "text/json": null,
-            "application/*+json": null,
-            "application/xml": null
+            }
           }
         },
         "responses": {
@@ -1877,9 +1874,7 @@
               "schema": {
                 "$ref": "#/components/schemas/GlSegment"
               }
-            },
-            "text/json": null,
-            "application/*+json": null
+            }
           }
         },
         "responses": {
