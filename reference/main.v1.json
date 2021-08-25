@@ -17,27 +17,6 @@
     }
   ],
   "paths": {
-    "/v1/AccessManagement/Setup": {
-      "get": {
-        "tags": [
-          "Access Management"
-        ],
-        "summary": "Get Access Management Setup",
-        "operationId": "Get-Access-Management-Setup",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Setup"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/AttendanceCodes": {
       "get": {
         "tags": [
@@ -101,8 +80,10 @@
           "Attendance Data"
         ],
         "summary": "List Payroll Data and Attendance Calendar Entries",
+        "description": "This endpoint returns a list of payroll data and attendance calendar time entries with a date range with the earning code selected. Additionally, you can restrict the entries returned by employee number, attendance codes and employee number.\n\nThe API User must have role permissions to the employee and have access to the employee's pay group. Go to [Allow Employee Access](/docs/auth-users.md) for more information on setting up the user with the correct employee access. ",
         "operationId": "Get-List-of-AttendanceData",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -124,8 +105,7 @@
                 "$ref": "#/components/schemas/AttendanceDataRequest"
               }
             }
-          },
-          "description": ""
+          }
         },
         "responses": {
           "200": {
@@ -161,8 +141,7 @@
               }
             }
           }
-        },
-        "description": "This endpoint returns a list of payroll data and attendance calendar time entries with a date range with the earning code selected. Additionally, you can restrict the entries returned by employee number, attendance codes and employee number.\n\nThe API User must have role permissions to the employee and have access to the employee's pay group. Go to [Allow Employee Access](/docs/auth-users.md) for more information on setting up the user with the correct employee access. "
+        }
       }
     },
     "/v1/Banks": {
@@ -213,7 +192,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -291,7 +270,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -328,7 +307,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -382,7 +361,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "409": {
@@ -408,35 +387,6 @@
         }
       }
     },
-    "/v1/Codes/Setup/{module}": {
-      "get": {
-        "tags": [
-          "Codes"
-        ],
-        "summary": "Codes Setup",
-        "description": "Returns the setup for the codes used throughout Avanti. \n\nThere are several types of codes: \n- Payroll (PY)\n- Hub (AT)\n- People Management (HR)\n- Workflow Management (PM)\n- Talent Acquisition (TR)",
-        "operationId": "Codes-Setup",
-        "parameters": [
-          {
-            "name": "module",
-            "in": "path",
-            "description": "Returns the setup for this type of code. Use PY for payroll. Use AT for Hub. Use HR for People Management. Use PM for Workflow Management. Use TR for Talent Acquisition.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
     "/v1/CompanyInfo/Logo": {
       "delete": {
         "tags": [
@@ -448,7 +398,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -481,7 +431,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -508,7 +458,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -517,7 +467,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -535,34 +485,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/DefaultsGroup/Setup/{defaultsGroupCode}": {
-      "get": {
-        "tags": [
-          "Defaults Group"
-        ],
-        "summary": "Get Defaults Group Setup",
-        "operationId": "Get-Defaults-Group-Setup",
-        "parameters": [
-          {
-            "name": "defaultsGroupCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -599,7 +522,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -634,7 +557,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -669,7 +592,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -694,34 +617,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/Dependents/Setup": {
-      "get": {
-        "tags": [
-          "Dependents"
-        ],
-        "summary": "Get Dependents Setup",
-        "operationId": "Get-Dependents-Setup",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -749,7 +645,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -784,7 +680,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -819,7 +715,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -853,363 +749,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/EmergencyContacts/Setup": {
-      "get": {
-        "tags": [
-          "Emergency Contacts"
-        ],
-        "summary": "Emergency Contacts Setup",
-        "description": "Returns the emergency contacts setup data.",
-        "operationId": "Emergency-Contacts-Setup",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "Example": {
-                    "value": {
-                      "address": {
-                        "address1": "4027 Phillips Avenue",
-                        "address2": "",
-                        "city": "Burnaby",
-                        "country": "CAN",
-                        "empNo": "000001005",
-                        "postal": "V5A 2Z4",
-                        "province": "BC"
-                      },
-                      "provinces": [
-                        {
-                          "text": "Alberta",
-                          "value": "AB"
-                        },
-                        {
-                          "text": "British Columbia",
-                          "value": "BC"
-                        },
-                        {
-                          "text": "Manitoba",
-                          "value": "MB"
-                        },
-                        {
-                          "text": "New Brunswick",
-                          "value": "NB"
-                        },
-                        {
-                          "text": "Newfoundland",
-                          "value": "NL"
-                        },
-                        {
-                          "text": "Nova Scotia",
-                          "value": "NS"
-                        },
-                        {
-                          "text": "Northwest Territories",
-                          "value": "NT"
-                        },
-                        {
-                          "text": "Nunavut",
-                          "value": "NU"
-                        },
-                        {
-                          "text": "Ontario",
-                          "value": "ON"
-                        },
-                        {
-                          "text": "Prince Edward Is.",
-                          "value": "PE"
-                        },
-                        {
-                          "text": "Quebec",
-                          "value": "QC"
-                        },
-                        {
-                          "text": "Saskatchewan",
-                          "value": "SK"
-                        },
-                        {
-                          "text": "Yukon Territories",
-                          "value": "YT"
-                        },
-                        {
-                          "text": "Outside North America",
-                          "value": "ZZ"
-                        },
-                        {
-                          "text": "Alabama",
-                          "value": "AL"
-                        },
-                        {
-                          "text": "Alaska",
-                          "value": "AK"
-                        },
-                        {
-                          "text": "Arkansas",
-                          "value": "AR"
-                        },
-                        {
-                          "text": "Arizona",
-                          "value": "AZ"
-                        },
-                        {
-                          "text": "California",
-                          "value": "CA"
-                        },
-                        {
-                          "text": "Colorado",
-                          "value": "CO"
-                        },
-                        {
-                          "text": "Connecticut",
-                          "value": "CT"
-                        },
-                        {
-                          "text": "District of Columbia",
-                          "value": "DC"
-                        },
-                        {
-                          "text": "Delaware",
-                          "value": "DE"
-                        },
-                        {
-                          "text": "Florida",
-                          "value": "FL"
-                        },
-                        {
-                          "text": "Georgia",
-                          "value": "GA"
-                        },
-                        {
-                          "text": "Hawaii",
-                          "value": "HI"
-                        },
-                        {
-                          "text": "Iowa",
-                          "value": "IA"
-                        },
-                        {
-                          "text": "Idaho",
-                          "value": "ID"
-                        },
-                        {
-                          "text": "Illinois",
-                          "value": "IL"
-                        },
-                        {
-                          "text": "Indiana",
-                          "value": "IN"
-                        },
-                        {
-                          "text": "Kansas",
-                          "value": "KS"
-                        },
-                        {
-                          "text": "Kentucky",
-                          "value": "KY"
-                        },
-                        {
-                          "text": "Louisiana",
-                          "value": "LA"
-                        },
-                        {
-                          "text": "Massachusetts",
-                          "value": "MA"
-                        },
-                        {
-                          "text": "Maryland",
-                          "value": "MD"
-                        },
-                        {
-                          "text": "Maine",
-                          "value": "ME"
-                        },
-                        {
-                          "text": "Michigan",
-                          "value": "MI"
-                        },
-                        {
-                          "text": "Minnesota",
-                          "value": "MN"
-                        },
-                        {
-                          "text": "Missouri",
-                          "value": "MO"
-                        },
-                        {
-                          "text": "Mississippi",
-                          "value": "MS"
-                        },
-                        {
-                          "text": "Montana",
-                          "value": "MT"
-                        },
-                        {
-                          "text": "North Carolina",
-                          "value": "NC"
-                        },
-                        {
-                          "text": "North Dakota",
-                          "value": "ND"
-                        },
-                        {
-                          "text": "Nebraska",
-                          "value": "NE"
-                        },
-                        {
-                          "text": "New Hampshire",
-                          "value": "NH"
-                        },
-                        {
-                          "text": "New Jersey",
-                          "value": "NJ"
-                        },
-                        {
-                          "text": "New Mexico",
-                          "value": "NM"
-                        },
-                        {
-                          "text": "Nevada",
-                          "value": "NV"
-                        },
-                        {
-                          "text": "New York",
-                          "value": "NY"
-                        },
-                        {
-                          "text": "Ohio",
-                          "value": "OH"
-                        },
-                        {
-                          "text": "Oklahoma",
-                          "value": "OK"
-                        },
-                        {
-                          "text": "Oregon",
-                          "value": "OR"
-                        },
-                        {
-                          "text": "Pennsylvania",
-                          "value": "PA"
-                        },
-                        {
-                          "text": "Rhode Island",
-                          "value": "RI"
-                        },
-                        {
-                          "text": "South Carolina",
-                          "value": "SC"
-                        },
-                        {
-                          "text": "South Dakota",
-                          "value": "SD"
-                        },
-                        {
-                          "text": "Tennessee",
-                          "value": "TN"
-                        },
-                        {
-                          "text": "Texas",
-                          "value": "TX"
-                        },
-                        {
-                          "text": "Utah",
-                          "value": "UT"
-                        },
-                        {
-                          "text": "Virginia",
-                          "value": "VA"
-                        },
-                        {
-                          "text": "Vermont",
-                          "value": "VT"
-                        },
-                        {
-                          "text": "Washington",
-                          "value": "WA"
-                        },
-                        {
-                          "text": "Wisconsin",
-                          "value": "WI"
-                        },
-                        {
-                          "text": "West Virginia",
-                          "value": "WV"
-                        },
-                        {
-                          "text": "Wyoming",
-                          "value": "WY"
-                        }
-                      ],
-                      "relationship": [
-                        {
-                          "text": "Spouse",
-                          "value": "1"
-                        },
-                        {
-                          "text": "Child",
-                          "value": "2"
-                        },
-                        {
-                          "text": "Common-law Spouse",
-                          "value": "3"
-                        },
-                        {
-                          "text": "Beneficiary",
-                          "value": "4"
-                        },
-                        {
-                          "text": "Other",
-                          "value": "5"
-                        },
-                        {
-                          "text": "Sister",
-                          "value": "60"
-                        },
-                        {
-                          "text": "Brother",
-                          "value": "61"
-                        },
-                        {
-                          "text": "Mother",
-                          "value": "62"
-                        },
-                        {
-                          "text": "Father",
-                          "value": "63"
-                        },
-                        {
-                          "text": "Mother In Law",
-                          "value": "64"
-                        },
-                        {
-                          "text": "Father In Law",
-                          "value": "65"
-                        },
-                        {
-                          "text": "Neighbor",
-                          "value": "66"
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
+              "application/json": { }
             }
           }
         }
@@ -1246,7 +786,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1283,7 +823,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1321,7 +861,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1330,7 +870,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1354,7 +894,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1408,7 +948,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1435,112 +975,10 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
-      }
-    },
-    "/v1/EmployeeCompensation": {
-      "get": {
-        "tags": [
-          "Employee Compensation"
-        ],
-        "summary": "List Employee Pay Statements",
-        "operationId": "List-Employee-Pay-Statements",
-        "parameters": [
-          {
-            "name": "take",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "empNo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "run",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "sortOrder",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "PayEndingDate"
-            }
-          },
-          {
-            "name": "filter",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "sortDesc",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PayStatement"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        },
-        "x-internal": false
       }
     },
     "/v1/EmployeeCompensation/PayStatement": {
@@ -1623,7 +1061,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1650,7 +1088,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1705,7 +1143,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1732,7 +1170,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1758,7 +1196,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1785,7 +1223,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1812,7 +1250,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1858,7 +1296,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1902,7 +1340,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1929,7 +1367,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1956,7 +1394,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2007,7 +1445,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2043,7 +1481,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2070,7 +1508,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2113,7 +1551,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2140,7 +1578,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2176,7 +1614,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2323,7 +1761,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2352,7 +1790,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2369,7 +1807,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2387,7 +1825,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2501,7 +1939,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2519,7 +1957,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2578,7 +2016,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2614,7 +2052,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2640,24 +2078,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/NewHire/Setup": {
-      "get": {
-        "tags": [
-          "New Hire"
-        ],
-        "summary": "New Hire Setup",
-        "operationId": "New-Hire-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2687,7 +2108,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2773,7 +2194,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2807,7 +2228,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2843,7 +2264,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2860,7 +2281,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2896,7 +2317,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2913,7 +2334,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2931,7 +2352,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2975,7 +2396,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3063,7 +2484,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3261,7 +2682,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3306,7 +2727,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3342,7 +2763,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3369,7 +2790,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {},
+              "application/json": { },
               "application/xml": {
                 "schema": {
                   "type": "object"
@@ -3411,7 +2832,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -3441,7 +2862,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3475,7 +2896,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3518,7 +2939,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3562,7 +2983,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3587,24 +3008,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/v1/PersonalInfo/Setup": {
-      "get": {
-        "tags": [
-          "Personal Info"
-        ],
-        "summary": "Personal Info Setup",
-        "operationId": "Personal-Info-Setup",
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3631,7 +3035,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3669,7 +3073,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3686,7 +3090,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3948,7 +3352,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4099,7 +3503,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4192,7 +3596,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4242,7 +3646,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4290,7 +3694,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4338,7 +3742,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4374,7 +3778,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4419,7 +3823,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4446,7 +3850,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4488,7 +3892,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4524,7 +3928,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4573,7 +3977,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4630,7 +4034,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4696,7 +4100,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4737,7 +4141,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4773,7 +4177,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4807,7 +4211,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4856,7 +4260,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4957,7 +4361,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5188,7 +4592,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6385,7 +5789,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6435,7 +5839,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -6478,7 +5882,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6503,7 +5907,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6523,13 +5927,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -6568,19 +5972,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6589,7 +5993,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6600,7 +6004,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6618,7 +6022,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -6631,7 +6035,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10047,7 +9451,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -13792,7 +13196,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -17556,6 +16960,34 @@
             }
           }
         }
+      },
+      "PayStatementsList": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payStatements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PayStatement"
+            },
+            "nullable": true
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "nextPaymentDate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -17568,13 +17000,10 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
-    {
-      "name": "Access Management"
-    },
     {
       "name": "Attendance Codes"
     },
