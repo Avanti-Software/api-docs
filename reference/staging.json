@@ -16981,6 +16981,10 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "nextPaymentDate": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
