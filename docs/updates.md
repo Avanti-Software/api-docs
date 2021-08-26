@@ -12,10 +12,6 @@ June 15, 2021
     - Update GL Segment
     - Delete GL Segment
 
-June 3, 2021 
-- Added Endpoints: 
-    - Pay Statement
-
 May 17, 2021 
 - Added Endpoints: 
     - Access Management
