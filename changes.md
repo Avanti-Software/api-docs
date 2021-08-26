@@ -1,3 +1,166 @@
+# Aug 25, 2021 4:26 PM
+**GitHub Run ID:** 1167282129
+**GitHub Run Number:** 2003
+**Reference:** refs/pull/401/merge
+**Commit:** 84b3b27cbb3257b52ce2ed66b764b19d33cd5c12## Added
+* Model: PayStatementsList, Property: nextPaymentDate
+
+# Aug 24, 2021 6:26 PM
+**GitHub Run ID:** 1163718649
+**GitHub Run Number:** 2000
+**Reference:** refs/pull/400/merge
+**Commit:** eab6c33be21635873d295afc984891b2368c4c47## Added
+* Model: PayStatementsList, Property: years
+
+# Aug 24, 2021 5:26 PM
+**GitHub Run ID:** 1163542572
+**GitHub Run Number:** 1999
+**Reference:** refs/heads/master
+**Commit:** 2d7786dc2af519571017653a5a4f46b07d3eb94b## Removed
+* Model: PayStatementsList, Property: years
+
+# Aug 24, 2021 4:30 PM
+**GitHub Run ID:** 1163373112
+**GitHub Run Number:** 1996
+**Reference:** refs/pull/400/merge
+**Commit:** 3a5825e4abbce0526f9054b4ae64f138314b13de## Added
+* Model: PayStatementsList, Property: years
+
+# Aug 24, 2021 6:30 AM
+**GitHub Run ID:** 1161483403
+**GitHub Run Number:** 1993
+**Reference:** refs/heads/master
+**Commit:** 73bda19acae70a6a50e3147ccee639e10efa2cf5## Removed
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: GET - /v1/Codes/Setup/{module}
+ * Endpoint: GET - /v1/DefaultsGroup/Setup/{defaultsGroupCode}
+ * Endpoint: GET - /v1/Dependents/Setup
+ * Endpoint: GET - /v1/EmergencyContacts/Setup
+ * Endpoint: GET - /v1/EmployeeCompensation
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+ * Endpoint: GET - /v1/NewHire/Setup
+ * Endpoint: GET - /v1/PersonalInfo/Setup
+
+# Aug 23, 2021 9:04 PM
+**GitHub Run ID:** 1160211784
+**GitHub Run Number:** 1990
+**Reference:** refs/pull/399/merge
+**Commit:** 31a16d6e567c2bcb6626eb3d322d19f157a6f2d7## Added
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: GET - /v1/Codes/Setup/{module}
+ * Endpoint: GET - /v1/DefaultsGroup/Setup/{defaultsGroupCode}
+ * Endpoint: GET - /v1/Dependents/Setup
+ * Endpoint: GET - /v1/EmergencyContacts/Setup
+ * Endpoint: GET - /v1/EmployeeCompensation
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+ * Endpoint: GET - /v1/PersonalInfo/Setup
+ * Endpoint: GET - /v1/NewHire/Setup
+
+# Aug 23, 2021 2:12 PM
+**GitHub Run ID:** 1158964594
+**GitHub Run Number:** 1989
+**Reference:** refs/pull/396/merge
+**Commit:** 62b213ac8ab97359d44b7864277d941866779b3c## Removed
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: GET - /v1/Codes/Setup/{module}
+ * Endpoint: GET - /v1/DefaultsGroup/Setup/{defaultsGroupCode}
+ * Endpoint: GET - /v1/Dependents/Setup
+ * Endpoint: GET - /v1/EmergencyContacts/Setup
+ * Endpoint: GET - /v1/EmployeeCompensation
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+ * Endpoint: GET - /v1/NewHire/Setup
+ * Endpoint: GET - /v1/PersonalInfo/Setup
+
+# Aug 19, 2021 8:03 PM
+**GitHub Run ID:** 1148307507
+**GitHub Run Number:** 1979
+**Reference:** refs/pull/397/merge
+**Commit:** e49783d0afd53def1a91350d9014077064d47a6d## Added
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: GET - /v1/Codes/Setup/{module}
+ * Endpoint: GET - /v1/DefaultsGroup/Setup/{defaultsGroupCode}
+ * Endpoint: GET - /v1/Dependents/Setup
+ * Endpoint: GET - /v1/EmergencyContacts/Setup
+ * Endpoint: GET - /v1/EmployeeCompensation
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+ * Endpoint: GET - /v1/PersonalInfo/Setup
+ * Endpoint: GET - /v1/NewHire/Setup
+
+# Aug 19, 2021 5:38 PM
+**GitHub Run ID:** 1147896969
+**GitHub Run Number:** 1978
+**Reference:** refs/pull/396/merge
+**Commit:** deead994d6e21e48118c0ef52f0cf0c797d0aa8a## Removed
+ * Endpoint: GET - /v1/AccessManagement/Setup
+ * Endpoint: GET - /v1/Codes/Setup/{module}
+ * Endpoint: GET - /v1/DefaultsGroup/Setup/{defaultsGroupCode}
+ * Endpoint: GET - /v1/Dependents/Setup
+ * Endpoint: GET - /v1/EmergencyContacts/Setup
+ * Endpoint: GET - /v1/EmployeeCompensation
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+ * Endpoint: GET - /v1/NewHire/Setup
+ * Endpoint: GET - /v1/PersonalInfo/Setup
+
+# Aug 10, 2021 4:50 PM
+**GitHub Run ID:** 1117293687
+**GitHub Run Number:** 1947
+**Reference:** refs/pull/390/merge
+**Commit:** 386e1049a5226b7fbc590b6f22a189b35804496d## Added
+* Model: PayStatementsList
+
+# Aug 10, 2021 4:36 PM
+**GitHub Run ID:** 1117250628
+**GitHub Run Number:** 1946
+**Reference:** refs/pull/391/merge
+**Commit:** 4d4b40b9f38796d72cc995fef7928dc021e9c7f0## Removed
+* Model: PayStatementsList
+
+# Aug 09, 2021 9:34 PM
+**GitHub Run ID:** 1114406689
+**GitHub Run Number:** 1945
+**Reference:** refs/pull/390/merge
+**Commit:** c62597df13b883cfa74c9346df060fb7fea1c13e## Added
+* Model: PayStatementsList
+
+# Aug 09, 2021 7:08 PM
+**GitHub Run ID:** 1114010649
+**GitHub Run Number:** 1944
+**Reference:** refs/heads/master
+**Commit:** 3cc41eabe6f7228888ecccf50faccf0193465b0c## Added
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+## Removed
+* Model: PayStatementsList
+
+# Aug 09, 2021 5:30 PM
+**GitHub Run ID:** 1113734108
+**GitHub Run Number:** 1943
+**Reference:** refs/pull/390/merge
+**Commit:** f551718ae8756175a3649f3cdb21e0d52739a5a3## Added
+* Model: PayStatementsList
+## Removed
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+
+# Aug 06, 2021 8:12 PM
+**GitHub Run ID:** 1106286898
+**GitHub Run Number:** 1941
+**Reference:** refs/pull/386/merge
+**Commit:** 64cd640af5582395737e878c4dc7f92a74a9e6c3## Added
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+
+# Aug 05, 2021 8:35 PM
+**GitHub Run ID:** 1102842450
+**GitHub Run Number:** 1929
+**Reference:** refs/pull/387/merge
+**Commit:** 44ae96374042973dcdfeb16dbd49f15c935b9d0d## Removed
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+
+# Aug 05, 2021 7:14 PM
+**GitHub Run ID:** 1102632333
+**GitHub Run Number:** 1925
+**Reference:** refs/pull/386/merge
+**Commit:** 5edab55377be273556dcbaad293595ef7d5f4f4b## Added
+ * Endpoint: GET - /v1/EmployeeCompensation/PDF
+
 # Jul 22, 2021 10:19 PM
 **GitHub Run ID:** 1057795153
 **GitHub Run Number:** 1896
