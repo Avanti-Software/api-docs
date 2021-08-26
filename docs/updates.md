@@ -14,7 +14,7 @@ June 15, 2021
 
 May 17, 2021 
 - Added Endpoints: 
-    - Access Management
+    - Get Access Management Setup
 
 May 4, 2021
 - Initial Endpoints:
