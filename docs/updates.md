@@ -4,17 +4,13 @@
 
 July 23, 2021
 - Added Endpoints: 
-    - List Payroll Data and Attendance Calendar Entries
+    - Add Time Data Entries
 
 June 15, 2021 
 - Added Endpoints: 
     - Add GL Segment
     - Update GL Segment
     - Delete GL Segment
-
-May 17, 2021 
-- Added Endpoints: 
-    - Get Access Management Setup
 
 May 4, 2021
 - Initial Endpoints:
