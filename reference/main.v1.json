@@ -1844,6 +1844,23 @@
             "application/json": {
               "schema": {
                 "$ref": "./main.v1.json#/components/schemas/GlSegment"
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "segmentNo": 1,
+                    "account": "2030",
+                    "description": "EHT Payable",
+                    "abbreviation": "EHTPay",
+                    "type": "A",
+                    "mask": "2030-####-#####-****-****",
+                    "validationTypes": "A A",
+                    "active": true,
+                    "useProjectAccount": true,
+                    "statAccount": "string",
+                    "exportValue": "20300"
+                  }
+                }
               }
             }
           }

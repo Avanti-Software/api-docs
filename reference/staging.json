@@ -1848,21 +1848,17 @@
               "examples": {
                 "example-1": {
                   "value": {
-                    "segmentNo": -2147483648,
-                    "account": "string",
-                    "name": "string",
-                    "description": "string",
-                    "abbreviation": "string",
-                    "type": "s",
-                    "mask": "string",
-                    "validationTypes": "string",
-                    "effectiveDate": "2019-08-24T14:15:22Z",
+                    "segmentNo": 1,
+                    "account": "2030",
+                    "description": "EHT Payable",
+                    "abbreviation": "EHTPay",
+                    "type": "A",
+                    "mask": "2030-####-#####-****-****",
+                    "validationTypes": "A A",
                     "active": true,
-                    "expiryDate": "2019-08-24T14:15:22Z",
                     "useProjectAccount": true,
                     "statAccount": "string",
-                    "defaultEarnGl": "string",
-                    "exportValue": "string"
+                    "exportValue": "20300"
                   }
                 }
               }
