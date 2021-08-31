@@ -13860,6 +13860,9 @@
           },
           "hrSettings": {
             "$ref": "#/components/schemas/HrSettings"
+          },
+          "entitlementsSettings": {
+            "$ref": "#/components/schemas/EntitlementsSettings"
           }
         },
         "additionalProperties": false
@@ -17004,6 +17007,118 @@
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "Entitlement": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "entitlementCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "entitlementCodeDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "carriedFwd": {
+            "type": "number",
+            "format": "double"
+          },
+          "carriedFwdUnit": {
+            "type": "number",
+            "format": "double"
+          },
+          "earnDeductCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "codeType": {
+            "type": "string"
+          },
+          "uom": {
+            "type": "string"
+          },
+          "displayUOM": {
+            "type": "string"
+          },
+          "accrued": {
+            "type": "number",
+            "format": "double"
+          },
+          "accruedUnit": {
+            "type": "number",
+            "format": "double"
+          },
+          "pendingAccrued": {
+            "type": "number",
+            "format": "double"
+          },
+          "pendingAccruedUnit": {
+            "type": "number",
+            "format": "double"
+          },
+          "taken": {
+            "type": "number",
+            "format": "double"
+          },
+          "takenUnit": {
+            "type": "number",
+            "format": "double"
+          },
+          "pendingTaken": {
+            "type": "number",
+            "format": "double"
+          },
+          "pendingTakenUnit": {
+            "type": "number",
+            "format": "double"
+          },
+          "available": {
+            "type": "number",
+            "format": "double"
+          },
+          "availableUnit": {
+            "type": "number",
+            "format": "double"
+          },
+          "availableWithPending": {
+            "type": "number",
+            "format": "double"
+          },
+          "availableUnitWithPending": {
+            "type": "number",
+            "format": "double"
+          },
+          "icon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EntitlementsList": {
+        "type": "object",
+        "properties": {
+          "entitlements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Entitlement"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EntitlementsSettings": {
+        "type": "object",
         "additionalProperties": false
       }
     },
