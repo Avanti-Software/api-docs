@@ -1,3 +1,29 @@
+# Aug 31, 2021 8:04 PM
+**GitHub Run ID:** 1187554258
+**GitHub Run Number:** 2030
+**Reference:** refs/pull/406/merge
+**Commit:** cb538300635f9f3261aa33f873cbf491118b68da## Added
+* Model: Entitlement
+* Model: EntitlementsList
+* Model: EntitlementsSettings
+* Model: Settings, Property: entitlementsSettings
+
+# Aug 31, 2021 7:45 PM
+**GitHub Run ID:** 1187510191
+**GitHub Run Number:** 2029
+**Reference:** refs/pull/404/merge
+**Commit:** bf42e6525bb18bbec379d50ed7d7d238a577f145## Removed
+* Model: Settings, Property: entitlementsSettings
+* Model: EntitlementsSettings
+
+# Aug 31, 2021 4:34 PM
+**GitHub Run ID:** 1186941332
+**GitHub Run Number:** 2028
+**Reference:** refs/pull/406/merge
+**Commit:** 3d4bd626929c6fe072ea3c84a510bee5dae3ea92## Added
+* Model: EntitlementsSettings
+* Model: Settings, Property: entitlementsSettings
+
 # Aug 25, 2021 4:26 PM
 **GitHub Run ID:** 1167282129
 **GitHub Run Number:** 2003
