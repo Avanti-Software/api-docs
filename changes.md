@@ -1,3 +1,13 @@
+# Aug 31, 2021 8:53 PM
+**GitHub Run ID:** 1187697962
+**GitHub Run Number:** 2031
+**Reference:** refs/heads/master
+**Commit:** 2a97a51b1ff07a4540992fe14a1ec11eeba6ea34## Removed
+* Model: Settings, Property: entitlementsSettings
+* Model: Entitlement
+* Model: EntitlementsList
+* Model: EntitlementsSettings
+
 # Aug 31, 2021 8:04 PM
 **GitHub Run ID:** 1187554258
 **GitHub Run Number:** 2030
