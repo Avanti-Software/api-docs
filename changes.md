@@ -1,3 +1,11 @@
+# Aug 31, 2021 4:34 PM
+**GitHub Run ID:** 1186941332
+**GitHub Run Number:** 2028
+**Reference:** refs/pull/406/merge
+**Commit:** 3d4bd626929c6fe072ea3c84a510bee5dae3ea92## Added
+* Model: EntitlementsSettings
+* Model: Settings, Property: entitlementsSettings
+
 # Aug 25, 2021 4:26 PM
 **GitHub Run ID:** 1167282129
 **GitHub Run Number:** 2003
