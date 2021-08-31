@@ -13860,9 +13860,6 @@
           },
           "hrSettings": {
             "$ref": "#/components/schemas/HrSettings"
-          },
-          "entitlementsSettings": {
-            "$ref": "#/components/schemas/EntitlementsSettings"
           }
         },
         "additionalProperties": false
@@ -17007,10 +17004,6 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
-      },
-      "EntitlementsSettings": {
-        "type": "object",
         "additionalProperties": false
       }
     },
