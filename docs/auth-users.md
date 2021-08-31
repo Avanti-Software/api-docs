@@ -62,4 +62,7 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 
 ![Save the Avanti User.](../assets/images/SaveAvantiUser.png)
 
+<!-- theme: warning -->
+>If you're viewing or altering employee information using the API, the user must have pay group and role permissions to the employee.
+
 Nice work! The Avanti User is all set up. The next you'll need to [Allow Access to the Endpoint](/docs/auth-subfunction.md) for more information.  

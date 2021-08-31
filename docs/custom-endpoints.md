@@ -18,6 +18,9 @@ Restrict access to **Print** so only the API user can access the report.
 
 Once you finish creating your report and select OK to save the changes, you can start making requests to the [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) endpoint. 
 
+<!-- theme: warning -->
+>The API User must have pay group and Time Entry role permissions to return the employee's information.
+
 When making a request, you will need to provide the Report ID to your custom report. Property names are generated based on column headers and are converted to valid camel-cased property names. For example, a column header **Employee No** would become **employeeNo**. Columns that do not have any data will exclude the property.
 
 Based on the example above, the endpoint will return data like this:
