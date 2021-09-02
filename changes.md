@@ -1,3 +1,13 @@
+# Sep 02, 2021 10:40 PM
+**GitHub Run ID:** 1195982550
+**GitHub Run Number:** 2043
+**Reference:** refs/pull/409/merge
+**Commit:** 02fc73c5d3f1528c12ac6843a3c9e69b331cbabd## Removed
+* Model: Settings, Property: entitlementsSettings
+* Model: Entitlement
+* Model: EntitlementsList
+* Model: EntitlementsSettings
+
 # Sep 02, 2021 8:27 PM
 **GitHub Run ID:** 1195639387
 **GitHub Run Number:** 2040
