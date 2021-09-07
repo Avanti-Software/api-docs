@@ -1,3 +1,13 @@
+# Sep 07, 2021 3:14 PM
+**GitHub Run ID:** 1209958529
+**GitHub Run Number:** 2045
+**Reference:** refs/heads/master
+**Commit:** 9a4e3434a6c95382b89a73b3eac7ba154f5c5555## Removed
+* Model: Settings, Property: entitlementsSettings
+* Model: Entitlement
+* Model: EntitlementsList
+* Model: EntitlementsSettings
+
 # Sep 07, 2021 2:46 PM
 **GitHub Run ID:** 1209868037
 **GitHub Run Number:** 2044
