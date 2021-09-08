@@ -17104,6 +17104,43 @@
       "EntitlementsSettings": {
         "type": "object",
         "additionalProperties": false
+      },
+      "CompensationCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "colour": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "earningDeductCodePairs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
