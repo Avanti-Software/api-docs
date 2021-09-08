@@ -1,3 +1,11 @@
+# Sep 08, 2021 4:30 PM
+**GitHub Run ID:** 1214128133
+**GitHub Run Number:** 2069
+**Reference:** refs/heads/master
+**Commit:** b484d7fced9c032a18f43c1442defb0419b0b69f## Removed
+ * Endpoint: GET - /v1/EmployeeEntitlements/Dates
+* Model: EntitlementEntry
+
 # Sep 08, 2021 3:57 PM
 **GitHub Run ID:** 1214022978
 **GitHub Run Number:** 2067
