@@ -1,3 +1,13 @@
+# Sep 09, 2021 2:44 PM
+**GitHub Run ID:** 1217754888
+**GitHub Run Number:** 2082
+**Reference:** refs/pull/413/merge
+**Commit:** a225c0b0af2432255a31cfba4e693a532326bd5a## Added
+ * Endpoint: GET - /v1/EmployeeEntitlements/Dates
+* Model: EntitlementEntry
+## Removed
+* Model: CompensationCategory
+
 # Sep 08, 2021 10:38 PM
 **GitHub Run ID:** 1215164184
 **GitHub Run Number:** 2080

@@ -1149,6 +1149,75 @@
         }
       }
     },
+    "/v1/EmployeeEntitlements/Dates": {
+      "get": {
+        "tags": [
+          "Employee Entitlements"
+        ],
+        "summary": "List Entitlement Dates",
+        "operationId": "List-Entitlement-Dates",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EntitlementEntry"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/EmployeeGLInfo": {
       "get": {
         "tags": [
@@ -17105,39 +17174,46 @@
         "type": "object",
         "additionalProperties": false
       },
-      "CompensationCategory": {
+      "EntitlementEntry": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
+          "code": {
             "type": "string",
             "nullable": true
           },
-          "nameFr": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "earningCode": {
             "type": "string",
             "nullable": true
           },
-          "type": {
+          "earningCodeName": {
             "type": "string",
             "nullable": true
           },
-          "colour": {
+          "earningCodeShortName": {
             "type": "string",
             "nullable": true
           },
-          "icon": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "earningDeductCodePairs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
+          "earningCodeNameFr": {
+            "type": "string",
             "nullable": true
+          },
+          "earningCodeShortNameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPending": {
+            "type": "boolean"
+          },
+          "units": {
+            "type": "number",
+            "format": "double"
+          },
+          "uom": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -17210,6 +17286,9 @@
     },
     {
       "name": "Employee Emails"
+    },
+    {
+      "name": "Employee Entitlements"
     },
     {
       "name": "Employee GL Info"
