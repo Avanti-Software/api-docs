@@ -17098,7 +17098,7 @@
             "type": "string",
             "nullable": true
           },
-          "entitlementCodeIsActive": {
+          "isActive": {
             "type": "boolean"
           }
         },
