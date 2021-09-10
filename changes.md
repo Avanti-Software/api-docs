@@ -1,3 +1,11 @@
+# Sep 10, 2021 3:55 PM
+**GitHub Run ID:** 1221875851
+**GitHub Run Number:** 2102
+**Reference:** refs/heads/master
+**Commit:** ba256ae29eb16da697c6aefc5179e169137ccb50## Added
+ * Endpoint: GET - /v1/EmployeeEntitlements/Dates
+* Model: EntitlementEntry
+
 # Sep 10, 2021 3:07 PM
 **GitHub Run ID:** 1221715694
 **GitHub Run Number:** 2101
