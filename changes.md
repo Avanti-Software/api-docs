@@ -1,3 +1,11 @@
+# Sep 10, 2021 2:41 PM
+**GitHub Run ID:** 1221632580
+**GitHub Run Number:** 2100
+**Reference:** refs/pull/415/merge
+**Commit:** 6379f33cd43febc349f64c1383cab818ffd02c98## Added
+* Model: CategoryType
+* Model: CompensationCategory
+
 # Sep 10, 2021 12:42 AM
 **GitHub Run ID:** 1219452992
 **GitHub Run Number:** 2098
