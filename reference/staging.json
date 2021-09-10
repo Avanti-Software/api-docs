@@ -17236,6 +17236,51 @@
           }
         },
         "additionalProperties": false
+      },
+      "CategoryType": {
+        "enum": [
+          66,
+          68,
+          69
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CompensationCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/CategoryType"
+          },
+          "colour": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "earningDeductCodePairs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
