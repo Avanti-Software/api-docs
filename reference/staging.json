@@ -17100,10 +17100,6 @@
           },
           "isActive": {
             "type": "boolean"
-          },
-          "type": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
