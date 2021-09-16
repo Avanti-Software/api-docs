@@ -64,6 +64,6 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 
 <!-- theme: warning -->
 >If you're viewing or altering employee information using the API, the user must have pay group and role permissions to the employee. <br><br>
->Looking for more information on how access to employees works in Avanti? Check out our [Role Assignments](https://help.avanti.ca/en/support/solutions/articles/36000129028-role-assignments) on Avanti's Help center. 
+>Looking for more information on how employee access? Check out our [Role Assignments](https://help.avanti.ca/en/support/solutions/articles/36000129028-role-assignments) on Avanti's Help center. 
 
 Nice work! The Avanti User is all set up. The next you'll need to [Allow Access to the Endpoint](/docs/auth-subfunction.md) for more information.  
