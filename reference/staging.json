@@ -2666,10 +2666,7 @@
                   }
                 }
               }
-            },
-            "text/json": null,
-            "application/*+json": null,
-            "application/xml": null
+            }
           }
         },
         "responses": {
@@ -2698,9 +2695,7 @@
               "schema": {
                 "$ref": "#/components/schemas/GlSegment"
               }
-            },
-            "text/json": null,
-            "application/*+json": null
+            }
           }
         },
         "responses": {
@@ -16026,6 +16021,7 @@
             "nullable": true
           },
           "value": {
+            "type": "string",
             "description": "The ID of the code.",
             "nullable": true
           }
