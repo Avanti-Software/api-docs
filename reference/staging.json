@@ -4533,7 +4533,7 @@
               }
             }
           },
-          "description": "Returns a descrtion.  "
+          "description": "Returns a dynamic object created from the report. For more informmation, go to https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints. "
         },
         "responses": {
           "200": {
@@ -4678,7 +4678,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Ok. ",
+            "description": "Ok. (Returns a dynamic object created from the report. For more informmation, go to https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints)",
             "content": {
               "application/json": {
                 "examples": {
@@ -6463,7 +6463,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK. ",
+            "description": "Returns a confirmation with information added in Avanti. ",
             "content": {
               "application/json": {
                 "schema": {
@@ -6479,6 +6479,16 @@
                       "longitude": 151.215256
                     }
                   }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebPunch"
                 }
               }
             }

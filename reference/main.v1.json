@@ -4532,7 +4532,8 @@
                 "$ref": "#/components/schemas/ReportOptions"
               }
             }
-          }
+          },
+          "description": "Returns a dynamic object created from the report. For more informmation, go to https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints. "
         },
         "responses": {
           "200": {
@@ -4669,7 +4670,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Ok",
+            "description": "Ok. (Returns a dynamic object created from the report. For more informmation, go to https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints)",
             "content": {
               "application/json": {
                 "examples": {
