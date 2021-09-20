@@ -1,3 +1,10 @@
+# Sep 20, 2021 10:32 PM
+**GitHub Run ID:** 1255408124
+**GitHub Run Number:** 2187
+**Reference:** refs/pull/437/merge
+**Commit:** 32787329bde3d49f2bae188e95764cf609134f58## Removed
+* Model: Entitlement, Property: type
+
 # Sep 20, 2021 10:06 PM
 **GitHub Run ID:** 1255327782
 **GitHub Run Number:** 2185
