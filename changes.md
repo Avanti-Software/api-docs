@@ -1,3 +1,11 @@
+# Oct 12, 2021 11:35 PM
+**GitHub Run ID:** 1335256466
+**GitHub Run Number:** 2315
+**Reference:** refs/pull/467/merge
+**Commit:** e1d449af9bdd0fca2fadb8f75913fed212a2dd89## Added
+* Model: EntitlementEntry, Property: fromTime
+* Model: EntitlementEntry, Property: toTime
+
 # Sep 21, 2021 2:12 PM
 **GitHub Run ID:** 1257926133
 **GitHub Run Number:** 2189

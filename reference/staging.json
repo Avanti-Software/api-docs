@@ -19167,6 +19167,16 @@
           },
           "uom": {
             "type": "string"
+          },
+          "fromTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
