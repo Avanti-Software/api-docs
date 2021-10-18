@@ -1,3 +1,12 @@
+# Oct 18, 2021 7:30 PM
+**GitHub Run ID:** 1356164538
+**GitHub Run Number:** 2344
+**Reference:** refs/pull/466/merge
+**Commit:** cac04a5e70542c4263cf381778ba7a601363e164## Added
+* Model: EmployeeEntitlementsSetupResponse
+* Model: EntitlementsSettings, Property: disclaimerText
+* Model: EntitlementsSettings, Property: disclaimerTextFr
+
 # Oct 18, 2021 7:09 PM
 **GitHub Run ID:** 1356084233
 **GitHub Run Number:** 2343
