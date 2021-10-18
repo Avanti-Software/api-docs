@@ -1,3 +1,12 @@
+# Oct 18, 2021 8:48 PM
+**GitHub Run ID:** 1356415455
+**GitHub Run Number:** 2346
+**Reference:** refs/heads/master
+**Commit:** 4d7ad662ceb144be83f60861d10c239fdc04f8fe## Added
+* Model: EmployeeEntitlementsSetupResponse
+* Model: EntitlementsSettings, Property: disclaimerText
+* Model: EntitlementsSettings, Property: disclaimerTextFr
+
 # Oct 18, 2021 8:02 PM
 **GitHub Run ID:** 1356259738
 **GitHub Run Number:** 2345
