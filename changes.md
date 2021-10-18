@@ -1,3 +1,12 @@
+# Oct 18, 2021 8:02 PM
+**GitHub Run ID:** 1356259738
+**GitHub Run Number:** 2345
+**Reference:** refs/pull/475/merge
+**Commit:** 3b84d2ac3d4d58c0b7fc902d1b1cc139fe6bdd42## Removed
+* Model: EntitlementsSettings, Property: disclaimerText
+* Model: EntitlementsSettings, Property: disclaimerTextFr
+* Model: EmployeeEntitlementsSetupResponse
+
 # Oct 18, 2021 7:30 PM
 **GitHub Run ID:** 1356164538
 **GitHub Run Number:** 2344

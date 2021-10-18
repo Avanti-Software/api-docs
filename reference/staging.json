@@ -19125,16 +19125,6 @@
       },
       "EntitlementsSettings": {
         "type": "object",
-        "properties": {
-          "disclaimerText": {
-            "type": "string",
-            "nullable": true
-          },
-          "disclaimerTextFr": {
-            "type": "string",
-            "nullable": true
-          }
-        },
         "additionalProperties": false
       },
       "EntitlementEntry": {
@@ -19232,15 +19222,6 @@
               "$ref": "#/components/schemas/TextValuePair"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmployeeEntitlementsSetupResponse": {
-        "type": "object",
-        "properties": {
-          "settings": {
-            "$ref": "#/components/schemas/EntitlementsSettings"
           }
         },
         "additionalProperties": false
