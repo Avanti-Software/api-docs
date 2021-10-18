@@ -9077,6 +9077,10 @@
           },
           "address": {
             "$ref": "#/components/schemas/EmployeeAddress"
+          },
+          "employeeHomePhone": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
