@@ -75,8 +75,8 @@ By default, this can be found in Administration on the Avanti Self-Service Porta
 ## Provide Information to the API Developer
 Wonderful! You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API Developer. Here’s what they’ll need to get started:
 - The URL for the API documentation https://apidocs.avanti.dev/. 
-- The name of the endpoint. If you’re using a reporter endpoint, they’ll also need the ID of the Report you created in [Custom Endpoints.](/docs/custom-endpoints.md)
-- The Avanti Username and Password created in [Employee Access](/docs/auth-users.md). 
+- The name of the endpoint. If you’re using a reporter endpoint, they’ll also need the ID of the Report you created in [Custom Endpoints.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints)
+- The Avanti Username and Password created in [Employee Access](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzA-employee-access). 
 - The API Client Credentials - the Client ID and the Client Secret. 
 - The Avanti Company Database Name.
 - Your Avanti Self-Service Portal URL.

@@ -12,9 +12,9 @@ Creating an integration requires a developer familiar with leveraging API endpoi
 
 Regardless of whether you’re using an in-house or third-party developer, the process for integrating using an API is identical. You’ll find everything you need to provide your API Developer developer outlined in the [Getting Started](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjk3NDQ0NDY-getting-started).
 
-Avanti is continuously updating our API! We will add new endpoints to the API as we add new features in the Avanti applications. Visit [Updates](/docs/updates.md) for more information on our new API endpoints and the latest changes.
+Avanti is continuously updating our API! We will add new endpoints to the API as we add new features in the Avanti applications. Visit [Updates](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzU-updates) for more information on our new API endpoints and the latest changes.
 
-If none of our existing endpoints meet your needs, you can create endpoints using Avanti’s Reporting tools. The Reporter endpoint can access the contents of any report created in Report Designer. [Custom Endpoints](/docs/custom-endpoints.md) will walk you through setting up the report, and [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) provides details on the endpoints. 
+If none of our existing endpoints meet your needs, you can create endpoints using Avanti’s Reporting tools. The Reporter endpoint can access the contents of any report created in Report Designer. [Custom Endpoints](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints) will walk you through setting up the report, and [Reporter](https://avanti.stoplight.io/docs/avanti-api/b3A6NjA3NTk0OA-get-report-data-with-options) provides details on the endpoints. 
 
 - Version: 1.0.0
 - Terms of Use: https://www.avanti.ca/api-terms-of-use 

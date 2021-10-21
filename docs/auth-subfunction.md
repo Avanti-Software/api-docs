@@ -19,7 +19,7 @@ The Avanti User has access based on the assigned User Groups. Their user group m
 The Avanti User must also have user group access to at least one of the Selected User Groups unless the Selected User Group column has an &ast;. If it has a &ast;, all users have access.
 
 <!-- theme: info -->
->If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
+>If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzA-employee-access) for more information. 
 
 ## Grant Access to an Endpoint
 
@@ -70,7 +70,7 @@ For example, I want to use an endpoint to gather dependent information from Avan
 **Step 6:** Select one of the User Groups assigned to your API User, then select the Arrow. Click **OK** to save. 
 
 <!-- theme: info -->
->If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
+>If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzA-employee-access) for more information. 
 
 ![Save endpoint access. ](../assets/images/EndpointAccessOk.png)
 
@@ -114,9 +114,9 @@ By default, this can be found in System Administration >> System Access Controls
 **Step 5:** Select one of the User Groups assigned to your API User, then select the Arrow and click **OK.**
 
 <!-- theme: info -->
->If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](/docs/auth-users.md) for more information. 
+>If you haven’t already created an Avanti User for the API integration, go to [API Allow Employee Access](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzA-employee-access) for more information. 
 
 ![Save endpoint full access. ](../assets/images/FullAccessOk.png)
 
-Congratulations! You’re all done enabling access to all the endpoints. The next step to setup the API is [Create the Client Credentials.](/docs/auth-client-credentials.md) 
+Congratulations! You’re all done enabling access to all the endpoints. The next step to setup the API is [Create the Client Credentials.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NjY-client-credentials) 
 
