@@ -16,7 +16,7 @@ Restrict access to **Print** so only the API user can access the report.
 
 ![User group permissions example.](../assets/images/CustomUserGroups.png)
 
-Once you finish creating your report and select OK to save the changes, you can start making requests to the [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) endpoint. 
+Once you finish creating your report and select OK to save the changes, you can start making requests to the [Reporter](https://avanti.stoplight.io/docs/avanti-api/b3A6NjA3NTk0Nw-get-report-data) endpoint. 
 
 <!-- theme: info -->
 ><b>Employee Access</b><br>
