@@ -76,7 +76,7 @@ For example, I want to use an endpoint to gather dependent information from Avan
 
 Congratulations! You’re done enabling access to the endpoint. Repeat these steps for every endpoint you’ll use in the integration.
 
-The next step to setup the API is [Create the Client Credentials.](/docs/auth-client-credentials.md) 
+The next step to setup the API is [Create the Client Credentials.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NjY-client-credentials) 
 
 ## Grant Access to All Endpoints
 

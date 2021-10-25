@@ -17,7 +17,7 @@ You can find all the available endpoints in the Avanti API section. You can work
 <!-- theme: info -->
 
 > ##### Additional Information 
-If you’re trying to gather employee information from Avanti and can’t find an endpoint for the information, you can create a [Custom Endpoint](https://avanti.stoplight.io/docs/avanti-api/b3A6NjA3NTk0OA-get-report-data-with-options) using the Reporter Endpoints. <br>The Reporter endpoint gathers information contained in a Report Designer report. All you need to do is create a report in Avanti that collects all the information needed to integrate. 
+If you’re trying to gather employee information from Avanti and can’t find an endpoint for the information, you can create a [Custom Endpoint](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints) using the Reporter Endpoints. <br>The Reporter endpoint gathers information contained in a Report Designer report. All you need to do is create a report in Avanti that collects all the information needed to integrate. 
 
 If you still can’t find the endpoint you’re looking for, please contact your Implementation Specialist or Client Success Manager, success@avanti.ca; they can help guide you through any questions. 
 

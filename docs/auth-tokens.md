@@ -9,7 +9,7 @@ If you’re an API developer, you’ll need to request some information from you
 
 ## Requesting Access Tokens
 
-An access token must be provided for each authenticated API request. You can request an access token using the [/connect/token](/reference/auth.v1.json/paths/~1connect~1token/post) endpoint. The endpoint requires:
+An access token must be provided for each authenticated API request. You can request an access token using the [/connect/token](https://avanti.stoplight.io/docs/avanti-api/b3A6ODk4OTUwNQ-get-access-token) endpoint. The endpoint requires:
 - [Client Credentials](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NjY-client-credentials)
 - [Avanti User Credentials](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzA-employee-access)
 - A unique Device ID
