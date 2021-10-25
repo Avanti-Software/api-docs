@@ -1,6 +1,6 @@
 # Custom Endpoints
 
-If none of our standard endpoints provide the required data, you can build custom endpoints using Avanti's reporting tools. Report Designer provides access to most employee-centric information and is available via the [Reporter](/reference/main.v1.json/paths/~1v1~1Reporter~1%7Bid%7D/get) endpoint.
+If none of our standard endpoints provide the required data, you can build custom endpoints using Avanti's reporting tools. Report Designer provides access to most employee-centric information and is available via the [Reporter](https://avanti.stoplight.io/docs/avanti-api/b3A6NjA3NTk0Nw-get-report-data) endpoint.
 
 To get started, open Report Definitions in the Avanti Desktop Application and select Insert to create a new report. Give the report a name (also known as the Report ID) and title. Now add the information you want in your endpoint as columns in the report.
 

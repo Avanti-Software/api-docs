@@ -10,8 +10,8 @@ If you’re an API developer, you’ll need to request some information from you
 ## Requesting Access Tokens
 
 An access token must be provided for each authenticated API request. You can request an access token using the [/connect/token](/reference/auth.v1.json/paths/~1connect~1token/post) endpoint. The endpoint requires:
-- [Client Credentials](/docs/auth-client-credentials.md)
-- [Avanti User Credentials](/docs/auth-users.md)
+- [Client Credentials](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NjY-client-credentials)
+- [Avanti User Credentials](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzA-employee-access)
 - A unique Device ID
 
 Device IDs differentiate services running on more than one device. We recommend using a prefix that identifies your service, followed by v4 UUID (universally unique identifier). Device IDs can be up to 128 characters long.
