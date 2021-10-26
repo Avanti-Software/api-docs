@@ -19248,60 +19248,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "AttendanceData": {
-        "type": "object",
-        "properties": {
-          "empNo": {
-            "type": "string",
-            "nullable": true
-          },
-          "location": {
-            "type": "string",
-            "nullable": true
-          },
-          "empName": {
-            "type": "string",
-            "nullable": true
-          },
-          "payGroup": {
-            "type": "string",
-            "nullable": true
-          },
-          "attendanceDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "earnDeductCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "unit": {
-            "type": "number",
-            "format": "double"
-          },
-          "dedFig10": {
-            "type": "number",
-            "format": "double"
-          },
-          "entryDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "dayOfWeek": {
-            "type": "string",
-            "nullable": true
-          },
-          "timeDataId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "comments": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
