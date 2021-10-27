@@ -1,3 +1,12 @@
+# Oct 27, 2021 6:15 PM
+**GitHub Run ID:** 1391388470
+**GitHub Run Number:** 2394
+**Reference:** refs/pull/484/merge
+**Commit:** f406110612c607bd0bf4bd9d4c50cd77f464ba96## Added
+ * Endpoint: GET - /v1/GLProjectAccounts
+* Model: GlProjectPhase
+* Model: GlProjectSegment
+
 # Oct 26, 2021 10:12 PM
 **GitHub Run ID:** 1387674047
 **GitHub Run Number:** 2390
