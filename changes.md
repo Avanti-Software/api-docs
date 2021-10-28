@@ -1,3 +1,13 @@
+# Oct 28, 2021 4:26 PM
+**GitHub Run ID:** 1395493007
+**GitHub Run Number:** 2399
+**Reference:** refs/pull/487/merge
+**Commit:** 7d1cd476acaffa0faa3f95f7bfd37343f6bb5c95## Added
+ * Endpoint: Post - /v1/GLProjectSegment
+* Model: GlProjectSegmentBasicSetup
+* Model: GlProjectSegmentRequest
+* Model: GlProjectType
+
 # Oct 28, 2021 4:25 PM
 **GitHub Run ID:** 1395486403
 **GitHub Run Number:** 2398
