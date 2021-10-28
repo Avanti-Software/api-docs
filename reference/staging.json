@@ -2635,6 +2635,92 @@
         }
       }
     },
+    "/v1/GLProjectAccounts": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "List GL Project Accounts",
+        "operationId": "List-GL-Project-Accounts",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlProjectSegment"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/GLProjectSegment": {
+      "delete": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Delete GL Project Account Data",
+        "operationId": "Delete-GL-Project-Account-Data",
+        "parameters": [
+          {
+            "name": "account",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/v1/GLSegment": {
       "post": {
         "tags": [
@@ -19298,6 +19384,53 @@
           },
           "comments": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectPhase": {
+        "type": "object",
+        "properties": {
+          "segmentNo": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "phase": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "abbreviation": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectSegment": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "$ref": "#/components/schemas/GlSegment"
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GlProjectPhase"
+            },
             "nullable": true
           }
         },
