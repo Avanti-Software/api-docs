@@ -2697,30 +2697,6 @@
         }
       }
     },
-    "/v1/GLProjectSegment": {
-      "delete": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Delete GL Project Account Data",
-        "operationId": "Delete-GL-Project-Account-Data",
-        "parameters": [
-          {
-            "name": "account",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/v1/GLSegment": {
       "post": {
         "tags": [

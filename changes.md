@@ -1,3 +1,10 @@
+# Oct 28, 2021 8:48 PM
+**GitHub Run ID:** 1396364622
+**GitHub Run Number:** 2404
+**Reference:** refs/heads/WEB-982
+**Commit:** d74b2cd7e5f872c0d2ad660f9a2e5df5f08be4c0## Removed
+ * Endpoint: DELETE - /v1/GLProjectSegment
+
 # Oct 28, 2021 6:32 PM
 **GitHub Run ID:** 1395922207
 **GitHub Run Number:** 2403
