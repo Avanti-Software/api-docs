@@ -2697,61 +2697,6 @@
         }
       }
     },
-    "/v1/GLProjectSegment": {
-      "delete": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Delete GL Project Account Data",
-        "operationId": "Delete-GL-Project-Account-Data",
-        "parameters": [
-          {
-            "name": "account",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Add New GL Project Account Data",
-        "operationId": "Add-New-GL-Project-Account-Data",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlProjectSegmentRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlProjectSegmentRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlProjectSegmentRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/v1/GLSegment": {
       "post": {
         "tags": [
@@ -19463,72 +19408,6 @@
               "$ref": "#/components/schemas/GlProjectPhase"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlProjectSegmentBasicSetup": {
-        "type": "object",
-        "properties": {
-          "active": {
-            "type": "boolean"
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "glProjectType": {
-            "$ref": "#/components/schemas/GlProjectType"
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlProjectSegmentRequest": {
-        "required": [
-          "basicSetup",
-          "name",
-          "project"
-        ],
-        "type": "object",
-        "properties": {
-          "project": {
-            "maxLength": 15,
-            "minLength": 0,
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "shortName": {
-            "type": "string",
-            "nullable": true
-          },
-          "basicSetup": {
-            "$ref": "#/components/schemas/GlProjectSegmentBasicSetup"
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlProjectType": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "maxLength": 1,
-            "minLength": 0,
-            "type": "string"
           }
         },
         "additionalProperties": false
