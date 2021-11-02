@@ -19504,21 +19504,10 @@
         ],
         "type": "object",
         "properties": {
-          "project": {
-            "maxLength": 15,
-            "minLength": 0,
-            "type": "string"
-          },
           "name": {
             "maxLength": 50,
             "minLength": 0,
             "type": "string"
-          },
-          "shortName": {
-            "maxLength": 10,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
           },
           "basicSetup": {
             "$ref": "#/components/schemas/GlProjectSegmentBasicSetup"
@@ -19528,6 +19517,17 @@
             "items": {
               "$ref": "#/components/schemas/PhaseIdentifier"
             },
+            "nullable": true
+          },
+          "account": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
+          },
+          "abbreviation": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
             "nullable": true
           }
         },

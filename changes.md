@@ -1,3 +1,14 @@
+# Nov 02, 2021 3:44 AM
+**GitHub Run ID:** 1410703741
+**GitHub Run Number:** 2423
+**Reference:** refs/pull/487/merge
+**Commit:** 45d92b2a287eff6cb99fdf807149736d78d9de36## Added
+* Model: GlProjectSegmentRequest, Property: account
+* Model: GlProjectSegmentRequest, Property: abbreviation
+## Removed
+* Model: GlProjectSegmentRequest, Property: project
+* Model: GlProjectSegmentRequest, Property: shortName
+
 # Nov 02, 2021 2:52 AM
 **GitHub Run ID:** 1410583281
 **GitHub Run Number:** 2422
