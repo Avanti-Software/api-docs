@@ -1,3 +1,10 @@
+# Nov 02, 2021 7:36 PM
+**GitHub Run ID:** 1413833669
+**GitHub Run Number:** 2441
+**Reference:** refs/heads/WEB-982
+**Commit:** 6b6281d89262c52470d9b19ff9ea9c92ecb20106## Removed
+ * Endpoint: DELETE - /v1/GLProjectSegment/{account}
+
 # Nov 02, 2021 5:49 PM
 **GitHub Run ID:** 1413470526
 **GitHub Run Number:** 2436
