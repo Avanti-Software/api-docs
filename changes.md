@@ -1,3 +1,10 @@
+# Nov 02, 2021 2:30 PM
+**GitHub Run ID:** 1412691151
+**GitHub Run Number:** 2432
+**Reference:** refs/heads/master
+**Commit:** 6970e1df7734db5b9c22dfbb248c3ca33989564d## Added
+ * Endpoint: DELETE - /v1/GLProjectSegment/{account}
+
 # Nov 02, 2021 2:07 PM
 **GitHub Run ID:** 1412592964
 **GitHub Run Number:** 2431
