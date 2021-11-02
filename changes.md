@@ -1,3 +1,16 @@
+# Nov 02, 2021 2:52 AM
+**GitHub Run ID:** 1410583281
+**GitHub Run Number:** 2422
+**Reference:** refs/pull/487/merge
+**Commit:** 76621141226e04d66744beb64018ad3f099585fc## Added
+ * Endpoint: POST - /v1/GLProjectSegment
+ * Endpoint: DELETE - /v1/GLProjectSegment
+* Model: GlProjectSegmentBasicSetup
+* Model: GlProjectSegmentRequest
+* Model: PhaseIdentifier
+## Removed
+ * Endpoint: DELETE - /v1/GLProjectSegment/{account}
+
 # Nov 01, 2021 9:22 PM
 **GitHub Run ID:** 1409727965
 **GitHub Run Number:** 2421
