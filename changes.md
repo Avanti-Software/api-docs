@@ -1,3 +1,10 @@
+# Nov 02, 2021 2:07 PM
+**GitHub Run ID:** 1412592964
+**GitHub Run Number:** 2431
+**Reference:** refs/pull/488/merge
+**Commit:** ebbacc21ab1c56611d865ddf8803426f2e0d677c## Removed
+ * Endpoint: DELETE - /v1/GLProjectSegment/{account}
+
 # Nov 02, 2021 2:06 PM
 **GitHub Run ID:** 1412589947
 **GitHub Run Number:** 2430
