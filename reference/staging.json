@@ -2695,9 +2695,40 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Add GL Project Account",
+        "operationId": "Add-GL-Project-Account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
-    "/v1/GLProjectSegment/{account}": {
+    "/v1/GLProjectAccounts/{account}": {
       "delete": {
         "tags": [
           "GLs"
@@ -19432,6 +19463,97 @@
               "$ref": "#/components/schemas/GlProjectPhase"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectSegmentBasicSetup": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "validationMask": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectSegmentRequest": {
+        "required": [
+          "account",
+          "basicSetup",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "account": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "abbreviation": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "basicSetup": {
+            "$ref": "#/components/schemas/GlProjectSegmentBasicSetup"
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PhaseIdentifier"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PhaseIdentifier": {
+        "required": [
+          "phase",
+          "segmentNo"
+        ],
+        "type": "object",
+        "properties": {
+          "segmentNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phase": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
           }
         },
         "additionalProperties": false
