@@ -1,3 +1,18 @@
+# Nov 03, 2021 3:44 PM
+**GitHub Run ID:** 1417476680
+**GitHub Run Number:** 2463
+**Reference:** refs/pull/494/merge
+**Commit:** f25b81650a6522d6b262462387ba8893766fa510## Added
+ * Endpoint: DELETE - /v1/GLProjectSegment/{account}
+ * Endpoint: GET - /v1/PayCodesWithDetails
+* Model: PayCode
+## Removed
+ * Endpoint: Post - /v1/GLProjectAccounts
+ * Endpoint: DELETE - /v1/GLProjectAccounts/{account}
+* Model: GlProjectSegmentBasicSetup
+* Model: GlProjectSegmentRequest
+* Model: PhaseIdentifier
+
 # Nov 03, 2021 3:38 AM
 **GitHub Run ID:** 1415150374
 **GitHub Run Number:** 2455

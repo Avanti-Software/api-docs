@@ -2695,40 +2695,9 @@
             }
           }
         }
-      },
-      "post": {
-        "tags": [
-          "GLs"
-        ],
-        "summary": "Add GL Project Account",
-        "operationId": "Add-GL-Project-Account",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlProjectSegmentRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlProjectSegmentRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlProjectSegmentRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
       }
     },
-    "/v1/GLProjectAccounts/{account}": {
+    "/v1/GLProjectSegment/{account}": {
       "delete": {
         "tags": [
           "GLs"
@@ -3706,6 +3675,50 @@
           },
           "default": {
             "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/PayCodesWithDetails": {
+      "get": {
+        "tags": [
+          "Pay Codes"
+        ],
+        "summary": "List all Pay Codes with details",
+        "operationId": "List-all-Pay-Codes-with-details",
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PayCode"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -19467,93 +19480,76 @@
         },
         "additionalProperties": false
       },
-      "GlProjectSegmentBasicSetup": {
+      "PayCode": {
         "type": "object",
         "properties": {
-          "active": {
-            "type": "boolean"
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "type": {
-            "maxLength": 1,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "validationMask": {
-            "maxLength": 60,
-            "minLength": 0,
+          "code": {
             "type": "string",
             "nullable": true
           },
           "description": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlProjectSegmentRequest": {
-        "required": [
-          "account",
-          "basicSetup",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "account": {
-            "maxLength": 15,
-            "minLength": 0,
-            "type": "string"
           },
-          "name": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string"
-          },
-          "abbreviation": {
-            "maxLength": 10,
-            "minLength": 0,
+          "useAttendReason": {
             "type": "string",
             "nullable": true
           },
-          "basicSetup": {
-            "$ref": "#/components/schemas/GlProjectSegmentBasicSetup"
-          },
-          "phases": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PhaseIdentifier"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PhaseIdentifier": {
-        "required": [
-          "phase",
-          "segmentNo"
-        ],
-        "type": "object",
-        "properties": {
-          "segmentNo": {
+          "useShifts": {
             "type": "integer",
             "format": "int32"
           },
-          "phase": {
-            "maxLength": 15,
-            "minLength": 0,
-            "type": "string"
+          "earnCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useUnits": {
+            "type": "boolean"
+          },
+          "defaultUnits": {
+            "type": "number",
+            "format": "double"
+          },
+          "defaultUnitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useOnlyInSchedules": {
+            "type": "boolean"
+          },
+          "excludeFromTotals": {
+            "type": "boolean"
+          },
+          "r": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "g": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "b": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useColor": {
+            "type": "boolean"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "allowOverlappingTimes": {
+            "type": "boolean"
+          },
+          "overlappingFromTime": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "overlappingToTime": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
