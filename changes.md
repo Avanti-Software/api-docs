@@ -1,3 +1,19 @@
+# Nov 04, 2021 4:51 AM
+**GitHub Run ID:** 1419882665
+**GitHub Run Number:** 2469
+**Reference:** refs/pull/498/merge
+**Commit:** 3ddfffa8a90b379d082b5b5efd8191b97cd7eab7## Added
+ * Endpoint: DELETE - /v1/GLProjectSegment/{account}
+* Model: ClockDataRequest, Property: clockIn
+* Model: ClockDataRequest, Property: clockOut
+* Model: GlProjectPhase
+## Removed
+ * Endpoint: Post - /v1/GLProjectAccounts
+ * Endpoint: DELETE - /v1/GLProjectAccounts/{account}
+* Model: GlProjectSegmentBasicSetup
+* Model: GlProjectSegmentRequest
+* Model: PhaseIdentifier
+
 # Nov 03, 2021 11:49 PM
 **GitHub Run ID:** 1419166435
 **GitHub Run Number:** 2468
