@@ -2695,9 +2695,40 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Add GL Project Account",
+        "operationId": "Add-GL-Project-Account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
-    "/v1/GLProjectSegment/{account}": {
+    "/v1/GLProjectAccounts/{account}": {
       "delete": {
         "tags": [
           "GLs"
@@ -7461,16 +7492,6 @@
             "minLength": 0,
             "type": "string",
             "description": "Enter comments for the worked time. Comments can be up to 1024 characters.",
-            "nullable": true
-          },
-          "clockIn": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "clockOut": {
-            "type": "string",
-            "format": "date-time",
             "nullable": true
           }
         },
@@ -19412,33 +19433,93 @@
         },
         "additionalProperties": false
       },
-      "GlProjectPhase": {
+      "GlProjectSegmentBasicSetup": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "validationMask": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectSegmentRequest": {
+        "required": [
+          "account",
+          "basicSetup",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "account": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "abbreviation": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "basicSetup": {
+            "$ref": "#/components/schemas/GlProjectSegmentBasicSetup"
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PhaseIdentifier"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PhaseIdentifier": {
+        "required": [
+          "phase",
+          "segmentNo"
+        ],
         "type": "object",
         "properties": {
           "segmentNo": {
             "type": "integer",
-            "format": "int32",
-            "readOnly": true
+            "format": "int32"
           },
           "phase": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "abbreviation": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
           }
         },
         "additionalProperties": false
