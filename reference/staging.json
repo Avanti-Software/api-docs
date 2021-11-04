@@ -7493,16 +7493,6 @@
             "type": "string",
             "description": "Enter comments for the worked time. Comments can be up to 1024 characters.",
             "nullable": true
-          },
-          "clockIn": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "clockOut": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
           }
         },
         "additionalProperties": false
