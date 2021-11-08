@@ -3717,6 +3717,70 @@
         }
       }
     },
+    "/v1/PayCodesWithDetails": {
+      "get": {
+        "tags": [
+          "Pay Codes"
+        ],
+        "summary": "List all Pay Codes with details",
+        "operationId": "List-all-Pay-Codes-with-details",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PayCode"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/PayGroup/{payGroup}": {
       "get": {
         "tags": [
@@ -19530,6 +19594,80 @@
             "maxLength": 15,
             "minLength": 0,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayCode": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "useAttendReason": {
+            "type": "string",
+            "nullable": true
+          },
+          "useShifts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "earnCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useUnits": {
+            "type": "boolean"
+          },
+          "defaultUnits": {
+            "type": "number",
+            "format": "double"
+          },
+          "defaultUnitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useOnlyInSchedules": {
+            "type": "boolean"
+          },
+          "excludeFromTotals": {
+            "type": "boolean"
+          },
+          "r": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "g": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "b": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useColor": {
+            "type": "boolean"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "allowOverlappingTimes": {
+            "type": "boolean"
+          },
+          "overlappingFromTime": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "overlappingToTime": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
