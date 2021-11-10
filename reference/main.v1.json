@@ -2635,6 +2635,128 @@
         }
       }
     },
+    "/v1/GLProjectAccounts": {
+      "get": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "List GL Project Accounts",
+        "operationId": "List-GL-Project-Accounts",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": "The number of accounts to display."
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": "The number of accounts to skip."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlProjectSegment"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "description": "Returns a list of Project Accounts. "
+      },
+      "post": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Add GL Project Account",
+        "operationId": "Add-GL-Project-Account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GlProjectSegmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "description": "Create new GL Project Accounts. This cannot create GL Accounts for Major, Other, or Phase Segments."
+      }
+    },
+    "/v1/GLProjectAccounts/{account}": {
+      "delete": {
+        "tags": [
+          "GLs"
+        ],
+        "summary": "Delete GL Project Account",
+        "operationId": "Delete-GL-Project-Account",
+        "parameters": [
+          {
+            "name": "account",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "description": "Permanently delete GL Accounts for Project Segments. This cannot delete Major, Other, or Phase Segments."
+      }
+    },
     "/v1/GLSegment": {
       "post": {
         "tags": [
@@ -4516,6 +4638,7 @@
         "description": "This will return the contents of the specified report based on the options selected. \n\nUsing this endpoint, additional report options can be included in the request body to ensure only the information you require is included in the results. If you are only filtering the report result by a date range and employee range, please use the Get Report Data endpoint.   \n\nYou can try the Reporter endpoint by using the ID WageSample in 'Send a Test Request'. \n\n<!-- theme: info -->\n>##### Additional Information\n>The report must be web-enabled, and the API User must have Print access to the report. <br> <br> Want additional information on setting up a report? Go to [Custom Endpoints.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints) to learn more.\n\n<b>Employee Access</b><br>\nThe API User must have pay group and Time Entry role permissions to return an employee's information. Role permissions aren't restricted based on inactive positions; if the user has access to an employee's inactive position, the employee's information is returned. ",
         "operationId": "Get-Report-Data-With-Options",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -4532,14 +4655,20 @@
                 "$ref": "#/components/schemas/ReportOptions"
               }
             }
-          },
-          "description": ""
+          }
         },
         "responses": {
           "200": {
-            "description": "Ok (Returns a dynamic object created from the report. For more informmation, go to https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints. ",
+            "description": "Ok. (Returns a dynamic object created from the report. For more informmation, go to https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NzE-custom-endpoints)",
             "content": {
               "application/json": {
+                "schema": {
+                  "type": "object",
+                  "allOf": [
+                    {},
+                    {}
+                  ]
+                },
                 "examples": {
                   "Example": {
                     "value": [
@@ -6455,7 +6584,7 @@
         },
         "responses": {
           "200": {
-            "description": "Ok",
+            "description": "Returns a confirmation with information added in Avanti. ",
             "content": {
               "application/json": {
                 "schema": {
@@ -6471,6 +6600,16 @@
                       "longitude": 151.215256
                     }
                   }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebPunch"
                 }
               }
             }
@@ -7358,6 +7497,16 @@
             "minLength": 0,
             "type": "string",
             "description": "Enter comments for the worked time. Comments can be up to 1024 characters.",
+            "nullable": true
+          },
+          "clockIn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "clockOut": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           }
         },
@@ -9060,6 +9209,10 @@
           },
           "address": {
             "$ref": "#/components/schemas/EmployeeAddress"
+          },
+          "employeeHomePhone": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -19098,12 +19251,26 @@
           },
           "isActive": {
             "type": "boolean"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
       },
       "EntitlementsSettings": {
         "type": "object",
+        "properties": {
+          "disclaimerText": {
+            "type": "string",
+            "nullable": true
+          },
+          "disclaimerTextFr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       },
       "EntitlementEntry": {
@@ -19146,6 +19313,16 @@
           },
           "uom": {
             "type": "string"
+          },
+          "fromTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -19191,6 +19368,173 @@
               "$ref": "#/components/schemas/TextValuePair"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeEntitlementsSetupResponse": {
+        "type": "object",
+        "properties": {
+          "settings": {
+            "$ref": "#/components/schemas/EntitlementsSettings"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AttendanceData": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "empName": {
+            "type": "string",
+            "nullable": true
+          },
+          "payGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "attendanceDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "earnDeductCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "unit": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig10": {
+            "type": "number",
+            "format": "double"
+          },
+          "entryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeDataId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comments": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectSegment": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "$ref": "#/components/schemas/GlSegment"
+          },
+          "phases": {
+            "type": "array",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectSegmentBasicSetup": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "validationMask": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlProjectSegmentRequest": {
+        "required": [
+          "account",
+          "basicSetup",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "account": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "abbreviation": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "basicSetup": {
+            "$ref": "#/components/schemas/GlProjectSegmentBasicSetup"
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PhaseIdentifier"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PhaseIdentifier": {
+        "required": [
+          "phase",
+          "segmentNo"
+        ],
+        "type": "object",
+        "properties": {
+          "segmentNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phase": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
           }
         },
         "additionalProperties": false

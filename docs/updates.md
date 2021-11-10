@@ -2,6 +2,12 @@
 
 ## Version 1.0
 
+November 4, 2021
+- Added Endpoints: 
+    - List GL Project Accounts
+    - Add GL Project Account
+    - Delete GL Project Account
+
 July 23, 2021
 - Added Endpoints: 
     - Add Time Data Entries
