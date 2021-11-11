@@ -19453,7 +19453,19 @@
             "$ref": "#/components/schemas/GlSegment"
           },
           "phases": {
-            "$ref": "./main.v1.json#/components/schemas/PhaseIdentifier"
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "segmentNo": {
+                  "type": "number"
+                },
+                "phase": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -19506,13 +19518,13 @@
             "maxLength": 50,
             "minLength": 0,
             "type": "string",
-            "description": "The description of Project Account."
+            "description": "The description of Project Account, which can be up to 50 character."
           },
           "abbreviation": {
             "maxLength": 10,
             "minLength": 0,
             "type": "string",
-            "description": "A longer description for the Project Account, which can be up to 128 characters.",
+            "description": "A short name for the project, which can be up to 10 characters.",
             "nullable": true
           },
           "basicSetup": {
@@ -19533,23 +19545,26 @@
         ]
       },
       "PhaseIdentifier": {
-        "required": [
-          "phase",
-          "segmentNo"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "segmentNo": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "The GL Segment Number for the phase. "
           },
           "phase": {
             "maxLength": 15,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The GL Account of the phase. "
           }
         },
-        "additionalProperties": false
+        "required": [
+          "segmentNo",
+          "phase"
+        ],
+        "description": "Sets which phases can be used with the Project."
       }
     },
     "securitySchemes": {
