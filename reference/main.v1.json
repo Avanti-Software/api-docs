@@ -2703,7 +2703,7 @@
         "tags": [
           "GLs"
         ],
-        "summary": "Add GL Project Account",
+        "summary": "Add GL Project Accounts",
         "operationId": "Add-GL-Project-Account",
         "requestBody": {
           "content": {
@@ -2729,7 +2729,7 @@
             "description": "Success"
           }
         },
-        "description": "Create new GL Project Accounts. This cannot create GL Accounts for Major, Other, or Phase Segments."
+        "description": "Create new Accounts for the Project Segment. This cannot create Major, Other, or Phase Segments."
       }
     },
     "/v1/GLProjectAccounts/{account}": {
@@ -2737,7 +2737,7 @@
         "tags": [
           "GLs"
         ],
-        "summary": "Delete GL Project Account",
+        "summary": "Delete GL Project Accounts",
         "operationId": "Delete-GL-Project-Account",
         "parameters": [
           {
@@ -2754,8 +2754,18 @@
             "description": "Success"
           }
         },
-        "description": "Permanently delete GL Accounts for Project Segments. This cannot delete Major, Other, or Phase Segments."
-      }
+        "description": "Permanently delete a GL Account for the Project Segment. This cannot delete Major, Other, or Phase Segments."
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "account",
+          "in": "path",
+          "required": true
+        }
+      ]
     },
     "/v1/GLSegment": {
       "post": {
@@ -18929,20 +18939,29 @@
         "additionalProperties": false
       },
       "GlSegment": {
-        "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ],
         "type": "object",
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        },
         "properties": {
           "segmentNo": {
             "type": "integer",
-            "description": "The GL Segment Number for the account. If the Account  is part of your first segment, this will be 1, etc.",
+            "description": "The GL Segment Number for the account. If the Account  is part of your first segment, this will be 1, etc.\nThis is not used if returning Project Accounts. ",
             "format": "int32"
           },
           "account": {
@@ -19012,7 +19031,7 @@
             "maxLength": 15,
             "minLength": 0,
             "type": "string",
-            "description": "The statistical account for the selected Major GL Account. \nMust be a valid account in Avanti defined as Statistical Account. It'sfor reporting purposes and export into external programs.",
+            "description": "The statistical account for the selected Major GL Account. \nMust be a valid account in Avanti defined as Statistical Account. It's for reporting purposes and export into external programs.\nThis is not used if returning Project Accounts. ",
             "nullable": true
           },
           "defaultEarnGl": {
@@ -19028,24 +19047,15 @@
             "nullable": true
           }
         },
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        }
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ]
       },
       "UserClass": {
         "enum": [
@@ -19437,16 +19447,15 @@
       },
       "GlProjectSegment": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "project": {
             "$ref": "#/components/schemas/GlSegment"
           },
           "phases": {
-            "type": "array",
-            "nullable": true
+            "$ref": "./main.v1.json#/components/schemas/PhaseIdentifier"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GlProjectSegmentBasicSetup": {
         "type": "object",
@@ -19484,27 +19493,26 @@
         "additionalProperties": false
       },
       "GlProjectSegmentRequest": {
-        "required": [
-          "account",
-          "basicSetup",
-          "name"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "account": {
             "maxLength": 15,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The Project Account. This must match the format of the Project Segment."
           },
           "name": {
             "maxLength": 50,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The description of Project Account."
           },
           "abbreviation": {
             "maxLength": 10,
             "minLength": 0,
             "type": "string",
+            "description": "A longer description for the Project Account, which can be up to 128 characters.",
             "nullable": true
           },
           "basicSetup": {
@@ -19512,13 +19520,17 @@
           },
           "phases": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/PhaseIdentifier"
-            },
-            "nullable": true
+            }
           }
         },
-        "additionalProperties": false
+        "required": [
+          "account",
+          "name",
+          "basicSetup"
+        ]
       },
       "PhaseIdentifier": {
         "required": [
