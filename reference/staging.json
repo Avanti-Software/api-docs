@@ -19456,24 +19456,18 @@
             "type": "array",
             "nullable": true,
             "items": {
-              "type": "object",
-              "properties": {
-                "segmentNo": {
-                  "type": "number"
-                },
-                "phase": {
-                  "type": "string"
-                }
-              }
+              "$ref": "#/components/schemas/PhaseIdentifier"
             }
           }
         }
       },
       "GlProjectSegmentBasicSetup": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "active": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Active accounts are required to use the Project. Inactive accounts cannot be used for new account validation, and are used for reporting."
           },
           "effectiveDate": {
             "type": "string",
@@ -19501,8 +19495,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GlProjectSegmentRequest": {
         "type": "object",
