@@ -18958,6 +18958,7 @@
             }
           }
         },
+        "title": "",
         "properties": {
           "segmentNo": {
             "type": "integer",
@@ -18991,7 +18992,7 @@
             "maxLength": 1,
             "minLength": 0,
             "type": "string",
-            "description": "A one character type for the account used for validation, from A - Z.\n\nIf it's a Major Account, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account",
+            "description": "For Other and Phase Accounts, this is a one-character type for the account used for validation, from A - Z.\n\nFor Project Accounts, this is the ID of the Project Type. \n\nFor Major Accounts, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account",
             "nullable": true
           },
           "mask": {
@@ -19456,7 +19457,15 @@
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/PhaseIdentifier"
+              "type": "object",
+              "properties": {
+                "segmentNo": {
+                  "type": "number"
+                },
+                "phase": {
+                  "type": "string"
+                }
+              }
             }
           }
         }
@@ -19467,32 +19476,37 @@
         "properties": {
           "active": {
             "type": "boolean",
-            "description": "Active accounts are required to use the Project. Inactive accounts cannot be used for new account validation, and are used for reporting."
+            "description": "If left blank, defaut is True. The Project Account must be active to use the GL account. Inactive accounts cannot be used for new account validation, and are used for reporting."
           },
           "effectiveDate": {
             "type": "string",
             "format": "date-time",
+            "description": "If specified, the entry date must be on or after the effective date for the account to be used. The effective date is in ISO 8601 format.",
             "nullable": true
           },
           "expiryDate": {
             "type": "string",
             "format": "date-time",
+            "description": "If specified, the entry date must be before or on the expiry date for the account to be used. The effective expiry is in ISO 8601 format.",
             "nullable": true
           },
           "type": {
             "maxLength": 1,
             "minLength": 0,
             "type": "string",
+            "description": "The ID of the Project's Type. ",
             "nullable": true
           },
           "validationMask": {
             "maxLength": 60,
             "minLength": 0,
             "type": "string",
+            "description": "Enter the GL Account Format, with the account in the correct segment. For additional GL validation, replace other aspects of the account. Accounts must match the replaced aspect to pass validation.",
             "nullable": true
           },
           "description": {
             "type": "string",
+            "description": "A longer description of the project.",
             "nullable": true
           }
         }
