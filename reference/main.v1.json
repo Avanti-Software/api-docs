@@ -19457,15 +19457,7 @@
             "type": "array",
             "nullable": true,
             "items": {
-              "type": "object",
-              "properties": {
-                "segmentNo": {
-                  "type": "number"
-                },
-                "phase": {
-                  "type": "string"
-                }
-              }
+              "$ref": "#/components/schemas/PhaseIdentifier"
             }
           }
         }
