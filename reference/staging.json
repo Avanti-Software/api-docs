@@ -446,7 +446,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -500,7 +500,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "409": {
@@ -537,7 +537,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -570,7 +570,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -617,7 +617,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -626,7 +626,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -708,7 +708,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -743,7 +743,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -801,7 +801,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -943,7 +943,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1048,7 +1048,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1085,7 +1085,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1122,7 +1122,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1160,7 +1160,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1169,7 +1169,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1193,7 +1193,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1247,7 +1247,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1517,7 +1517,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1766,7 +1766,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1810,7 +1810,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2157,7 +2157,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -2264,7 +2264,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -2641,25 +2641,26 @@
           "GLs"
         ],
         "summary": "List GL Project Accounts",
+        "description": "Returns a list of Project Accounts. ",
         "operationId": "List-GL-Project-Accounts",
         "parameters": [
           {
             "name": "take",
             "in": "query",
+            "description": "The number of accounts to display.",
             "schema": {
               "type": "integer",
               "format": "int32"
-            },
-            "description": "The number of accounts to display."
+            }
           },
           {
             "name": "skip",
             "in": "query",
+            "description": "The number of accounts to skip.",
             "schema": {
               "type": "integer",
               "format": "int32"
-            },
-            "description": "The number of accounts to skip."
+            }
           }
         ],
         "responses": {
@@ -2696,14 +2697,14 @@
               }
             }
           }
-        },
-        "description": "Returns a list of Project Accounts. "
+        }
       },
       "post": {
         "tags": [
           "GLs"
         ],
         "summary": "Add GL Project Accounts",
+        "description": "Create new Accounts for the Project Segment. This cannot create Major, Other, or Phase Segments.",
         "operationId": "Add-GL-Project-Account",
         "requestBody": {
           "content": {
@@ -2728,8 +2729,7 @@
           "200": {
             "description": "Success"
           }
-        },
-        "description": "Create new Accounts for the Project Segment. This cannot create Major, Other, or Phase Segments."
+        }
       }
     },
     "/v1/GLProjectAccounts/{account}": {
@@ -2738,6 +2738,7 @@
           "GLs"
         ],
         "summary": "Delete GL Project Accounts",
+        "description": "Permanently delete a GL Account for the Project Segment. This cannot delete Major, Other, or Phase Segments.",
         "operationId": "Delete-GL-Project-Account",
         "parameters": [
           {
@@ -2754,17 +2755,16 @@
           "200": {
             "description": "Success"
           }
-        },
-        "description": "Permanently delete a GL Account for the Project Segment. This cannot delete Major, Other, or Phase Segments."
+        }
       },
       "parameters": [
         {
-          "schema": {
-            "type": "string"
-          },
           "name": "account",
           "in": "path",
-          "required": true
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
         }
       ]
     },
@@ -3370,7 +3370,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3429,7 +3429,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3509,7 +3509,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3640,7 +3640,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3733,6 +3733,70 @@
         }
       }
     },
+    "/v1/PayCodesWithDetails": {
+      "get": {
+        "tags": [
+          "Pay Codes"
+        ],
+        "summary": "List all Pay Codes with details",
+        "operationId": "List-all-Pay-Codes-with-details",
+        "parameters": [
+          {
+            "name": "take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PayCode"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/PayGroup/{payGroup}": {
       "get": {
         "tags": [
@@ -3754,7 +3818,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4097,7 +4161,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4270,7 +4334,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -4338,7 +4402,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4449,7 +4513,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4474,7 +4538,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4676,8 +4740,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    {},
-                    {}
+                    { },
+                    { }
                   ]
                 },
                 "examples": {
@@ -5540,7 +5604,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6024,7 +6088,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -7376,8 +7440,15 @@
         "additionalProperties": false
       },
       "ClockDataRequest": {
+        "required": [
+          "empNo",
+          "earningDate",
+          "earningCode",
+          "units",
+          "unitOfMeasure",
+          "recordSourceId"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "empNo": {
             "maxLength": 9,
@@ -7506,25 +7577,18 @@
           },
           "clockIn": {
             "type": "string",
-            "format": "date-time",
             "description": "The time the employee started work. If left blank, Clock In defaults to midnight. ",
+            "format": "date-time",
             "nullable": true
           },
           "clockOut": {
             "type": "string",
-            "format": "date-time",
             "description": "The time the employee finishes work.",
+            "format": "date-time",
             "nullable": true
           }
         },
-        "required": [
-          "empNo",
-          "earningDate",
-          "earningCode",
-          "units",
-          "unitOfMeasure",
-          "recordSourceId"
-        ]
+        "additionalProperties": false
       },
       "CodeDefinition": {
         "type": "object",
@@ -7966,7 +8030,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -8016,7 +8080,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -8059,7 +8123,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -8084,7 +8148,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -8104,13 +8168,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -8149,19 +8213,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -8170,7 +8234,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -8181,7 +8245,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -8199,7 +8263,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -8212,7 +8276,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11515,13 +11579,13 @@
         "additionalProperties": false
       },
       "GlOption": {
-        "type": "string",
         "enum": [
-          65,
-          66,
-          71,
-          77
+          "65",
+          "66",
+          "71",
+          "77"
         ],
+        "type": "string",
         "description": "An A, G, B or M indicating the GL Type. \nA indicates an account. \nG indicates a GL Group. \nB indicates the Basic GL.\nM indicates the GL on the employee's Employment Data."
       },
       "GlSegmentValue": {
@@ -11632,7 +11696,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -15377,7 +15441,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -18944,26 +19008,17 @@
         "additionalProperties": false
       },
       "GlSegment": {
-        "type": "object",
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        },
         "title": "",
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ],
+        "type": "object",
         "properties": {
           "segmentNo": {
             "type": "integer",
@@ -19053,15 +19108,24 @@
             "nullable": true
           }
         },
-        "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ]
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        }
       },
       "UserClass": {
         "enum": [
@@ -19453,23 +19517,22 @@
       },
       "GlProjectSegment": {
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "project": {
             "$ref": "#/components/schemas/GlSegment"
           },
           "phases": {
             "type": "array",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/PhaseIdentifier"
-            }
+            },
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "GlProjectSegmentBasicSetup": {
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "active": {
             "type": "boolean",
@@ -19477,14 +19540,14 @@
           },
           "effectiveDate": {
             "type": "string",
-            "format": "date-time",
             "description": "If specified, the entry date must be on or after the effective date for the account to be used. The effective date is in ISO 8601 format.",
+            "format": "date-time",
             "nullable": true
           },
           "expiryDate": {
             "type": "string",
-            "format": "date-time",
             "description": "If specified, the entry date must be before or on the expiry date for the account to be used. The effective expiry is in ISO 8601 format.",
+            "format": "date-time",
             "nullable": true
           },
           "type": {
@@ -19506,11 +19569,16 @@
             "description": "A longer description of the project.",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "GlProjectSegmentRequest": {
+        "required": [
+          "account",
+          "name",
+          "basicSetup"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "account": {
             "maxLength": 15,
@@ -19536,26 +19604,25 @@
           },
           "phases": {
             "type": "array",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/PhaseIdentifier"
-            }
+            },
+            "nullable": true
           }
         },
-        "required": [
-          "account",
-          "name",
-          "basicSetup"
-        ]
+        "additionalProperties": false
       },
       "PhaseIdentifier": {
+        "required": [
+          "segmentNo",
+          "phase"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "segmentNo": {
             "type": "integer",
-            "format": "int32",
-            "description": "The GL Segment Number for the phase. "
+            "description": "The GL Segment Number for the phase. ",
+            "format": "int32"
           },
           "phase": {
             "maxLength": 15,
@@ -19564,11 +19631,82 @@
             "description": "The GL Account of the phase. "
           }
         },
-        "required": [
-          "segmentNo",
-          "phase"
-        ],
+        "additionalProperties": false,
         "description": "Sets which phases can be used with the Project."
+      },
+      "PayCode": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "useAttendReason": {
+            "type": "string",
+            "nullable": true
+          },
+          "useShifts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "earnCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useUnits": {
+            "type": "boolean"
+          },
+          "defaultUnits": {
+            "type": "number",
+            "format": "double"
+          },
+          "defaultUnitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useOnlyInSchedules": {
+            "type": "boolean"
+          },
+          "excludeFromTotals": {
+            "type": "boolean"
+          },
+          "r": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "g": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "b": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useColor": {
+            "type": "boolean"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "allowOverlappingTimes": {
+            "type": "boolean"
+          },
+          "overlappingFromTime": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "overlappingToTime": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -19581,7 +19719,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
