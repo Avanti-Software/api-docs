@@ -2743,6 +2743,7 @@
           {
             "name": "account",
             "in": "path",
+            "description": "The project account you are deleting.",
             "required": true,
             "schema": {
               "type": "string"
