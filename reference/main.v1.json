@@ -2764,7 +2764,8 @@
           },
           "name": "account",
           "in": "path",
-          "required": true
+          "required": true,
+          "description": "The account number you'd like to delete."
         }
       ]
     },
