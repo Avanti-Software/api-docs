@@ -4242,7 +4242,7 @@
           "Employee Personal Info"
         ],
         "summary": "Update Employee Personal Info",
-        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Post Personal Info.",
+        "description": "Provides the ability to update the personal information for the employee.\n\nBest practice to do a Get Personal Info, update the required values, then do a Put Personal Info.",
         "operationId": "Update-Employee-Personal-Info",
         "requestBody": {
           "content": {
