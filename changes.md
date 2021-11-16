@@ -1,3 +1,11 @@
+# Nov 16, 2021 6:15 PM
+**GitHub Run ID:** 1468186154
+**GitHub Run Number:** 2517
+**Reference:** refs/pull/494/merge
+**Commit:** 5cd29a5656aa8eb0be02cba858f65cd289b613de## Added
+ * Endpoint: GET - /v1/PayCodesWithDetails
+* Model: PayCode
+
 # Nov 16, 2021 2:56 PM
 **GitHub Run ID:** 1467377937
 **GitHub Run Number:** 2513
