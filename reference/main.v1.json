@@ -7449,7 +7449,7 @@
           },
           "units": {
             "type": "number",
-            "description": "The time the employee worked.",
+            "description": "The time the employee worked.\nThis is required if you aren't including a clockIn/clockOut. \nIf blank, this is calculated based on the clockIn/clockOut.",
             "format": "double"
           },
           "unitOfMeasure": {
@@ -7508,13 +7508,13 @@
           "clockIn": {
             "type": "string",
             "format": "date-time",
-            "description": "The time the employee started work. If left blank, Clock In defaults to midnight. ",
+            "description": "This is required if you aren't including Units and unitOfMeasure. \nThe time the employee started work. If left blank, Clock In defaults to midnight. ",
             "nullable": true
           },
           "clockOut": {
             "type": "string",
             "format": "date-time",
-            "description": "The time the employee finishes work.",
+            "description": "The time the employee finishes work.\nThis is required if you aren't including Units and unitOfMeasure. \nIf you are including the units and unitOfMeasure, this defaults based on those. ",
             "nullable": true
           }
         },
@@ -7522,8 +7522,6 @@
           "empNo",
           "earningDate",
           "earningCode",
-          "units",
-          "unitOfMeasure",
           "recordSourceId"
         ]
       },
@@ -17945,7 +17943,8 @@
           "Y"
         ],
         "type": "string",
-        "description": "The unit of measure for the units indicated. \nA is an Amount. \nD is in Days. \nH is in Hours. \nM is in Minutes. \nP is in Periods.\nU is in Units. \nW is in Weeks. \nY is in Years"
+        "description": "The unit of measure for the units indicated. \nA is an Amount. \nD is in Days. \nH is in Hours. \nM is in Minutes. \nP is in Periods.\nU is in Units. \nW is in Weeks. \nY is in Years. \n\nIf your importing time data, this is required if clockIn/clouckOut is blank. If unitOfMeasure this is blank, the is hours. ",
+        "title": ""
       },
       "UserDefinedDates": {
         "type": "object",
