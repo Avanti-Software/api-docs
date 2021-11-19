@@ -1,3 +1,11 @@
+# Nov 19, 2021 10:08 PM
+**GitHub Run ID:** 1482897821
+**GitHub Run Number:** 2564
+**Reference:** refs/pull/516/merge
+**Commit:** 4e325ec213cd75d910a23d0a18fc27c7b6697140## Removed
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+
 # Nov 18, 2021 9:36 PM
 **GitHub Run ID:** 1478435878
 **GitHub Run Number:** 2545
