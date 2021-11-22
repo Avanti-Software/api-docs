@@ -1,3 +1,11 @@
+# Nov 22, 2021 2:16 PM
+**GitHub Run ID:** 1490547592
+**GitHub Run Number:** 2569
+**Reference:** refs/heads/master
+**Commit:** e946cc58dfc837b1e61460a0425390cc5bac455f## Removed
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+
 # Nov 19, 2021 10:35 PM
 **GitHub Run ID:** 1482970784
 **GitHub Run Number:** 2565
