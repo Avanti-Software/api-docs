@@ -4408,6 +4408,36 @@
         }
       }
     },
+    "/v1/PersonalInfo/EmployeeFiguresSetup": {
+      "get": {
+        "tags": [
+          "Employee User Values"
+        ],
+        "summary": "User Defined Values Setup",
+        "operationId": "User-Defined-Values-Setup",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeFigureSetupResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/PersonalInfo/Photo": {
       "get": {
         "tags": [
@@ -19707,6 +19737,110 @@
           }
         },
         "additionalProperties": false
+      },
+      "EmployeeFigureSetupResponse": {
+        "type": "object",
+        "properties": {
+          "disabledDedFiguresForEmployees": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherTextsForEmployees": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherDatesForEmployees": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledDedFiguresForManagers": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherTextsForManagers": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherDatesForManagers": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledDedFiguresForManagerSelf": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherTextsForManagerSelf": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherDatesForManagerSelf": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "textFieldData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringTextValuePairListKeyValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringTextValuePairListKeyValuePair": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -19800,6 +19934,9 @@
     },
     {
       "name": "Employee Position Rates"
+    },
+    {
+      "name": "Employee User Values"
     },
     {
       "name": "Employee Vacation Info"

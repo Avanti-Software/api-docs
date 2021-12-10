@@ -1,3 +1,12 @@
+# Dec 10, 2021 5:15 PM
+**GitHub Run ID:** 1564410938
+**GitHub Run Number:** 2668
+**Reference:** refs/pull/538/merge
+**Commit:** 8ee17ebc75de37b2b4e264a75b5078a648ea0a0f## Added
+ * Endpoint: GET - /v1/PersonalInfo/EmployeeFiguresSetup
+* Model: EmployeeFigureSetupResponse
+* Model: StringTextValuePairListKeyValuePair
+
 # Nov 22, 2021 2:16 PM
 **GitHub Run ID:** 1490547592
 **GitHub Run Number:** 2569
