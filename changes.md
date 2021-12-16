@@ -1,3 +1,12 @@
+# Dec 16, 2021 4:07 PM
+**GitHub Run ID:** 1588302936
+**GitHub Run Number:** 2687
+**Reference:** refs/pull/540/merge
+**Commit:** cb4c74ba2140318298e451ba524070fddc5256b7## Added
+* Model: EmployeeFigureSetupResponse, Property: textFieldLabels
+* Model: EmployeeFigureSetupResponse, Property: dateFieldLabels
+* Model: EmployeeFigureSetupResponse, Property: figureFieldLabels
+
 # Dec 15, 2021 8:37 PM
 **GitHub Run ID:** 1584543234
 **GitHub Run Number:** 2681
