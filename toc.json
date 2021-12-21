@@ -7,8 +7,8 @@
     },
     {
       "type": "item",
-      "title": "Getting Started",
-      "uri": "docs/Getting-Started-Clients.md"
+      "title": "Getting started",
+      "uri": "docs/getting-started.md"
     },
         {
       "type": "group",
@@ -21,29 +21,29 @@
         },
        {
           "type": "item",
-          "title": "Employee Access",
+          "title": "Employee access",
           "uri": "docs/auth-users.md"
         },
         {
           "type": "item",
-          "title": "Endpoint Access",
+          "title": "Endpoint access",
           "uri": "docs/auth-subfunction.md"
         },
         {
           "type": "item",
-          "title": "Client Credentials",
+          "title": "Client credentials",
           "uri": "docs/auth-client-credentials.md"
         },
         {
           "type": "item",
-          "title": "Access Tokens",
+          "title": "Access tokens",
           "uri": "docs/auth-tokens.md"
         }
       ]
     },
     {
       "type": "item",
-      "title": "Custom Endpoints",
+      "title": "Custom endpoints",
       "uri": "docs/custom-endpoints.md"
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "type": "item",
-      "title": "Error Handling",
+      "title": "Error handling",
       "uri": "docs/error-handling.md"
     },
     {
