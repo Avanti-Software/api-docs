@@ -1,3 +1,11 @@
+# Dec 22, 2021 9:36 PM
+**GitHub Run ID:** 1613125461
+**GitHub Run Number:** 2704
+**Reference:** refs/pull/546/merge
+**Commit:** 02739fe3d5cf37e3c10cb00bf355c7a9f8442ee5## Added
+* Model: Employee, Property: menuItemPermissions
+* Model: MenuItemRoleAssignmentPermission
+
 # Dec 16, 2021 4:07 PM
 **GitHub Run ID:** 1588302936
 **GitHub Run Number:** 2687
