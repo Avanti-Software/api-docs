@@ -10040,10 +10040,10 @@
             "description": "The value for accumulator A30 from the previous pay period. This is used in formulas that include the variable P30.",
             "format": "double"
           },
-          "menuItemPermissions": {
+          "roleAssignmentPermissions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MenuItemRoleAssignmentPermission"
+              "$ref": "#/components/schemas/RoleAssignmentPermission"
             },
             "nullable": true
           }
@@ -19870,16 +19870,16 @@
         },
         "additionalProperties": false
       },
-      "MenuItemRoleAssignmentPermission": {
+      "RoleAssignmentPermission": {
         "type": "object",
         "properties": {
-          "programName": {
-            "type": "string",
-            "nullable": true
-          },
           "roleId": {
             "type": "string",
             "nullable": true
+          },
+          "roleType": {
+            "type": "integer",
+            "format": "int32"
           },
           "startDate": {
             "type": "string",
