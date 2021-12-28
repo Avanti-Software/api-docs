@@ -1,3 +1,11 @@
+# Dec 28, 2021 6:14 PM
+**GitHub Run ID:** 1631407921
+**GitHub Run Number:** 2713
+**Reference:** refs/pull/548/merge
+**Commit:** 9412bcefccf4c810cc9a925427dfa42a1e67debd## Removed
+* Model: Employee, Property: roleAssignmentPermissions
+* Model: RoleAssignmentPermission
+
 # Dec 23, 2021 8:52 PM
 **GitHub Run ID:** 1617024129
 **GitHub Run Number:** 2710
