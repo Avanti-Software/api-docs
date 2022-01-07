@@ -19862,29 +19862,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "EmployeeContactInfo": {
-        "type": "object",
-        "properties": {
-          "address": {
-            "$ref": "#/components/schemas/EmployeeAddress"
-          },
-          "phoneNumbers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PhoneNumber"
-            },
-            "nullable": true
-          },
-          "emails": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EmployeeEmail"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
