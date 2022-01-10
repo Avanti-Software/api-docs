@@ -10039,13 +10039,6 @@
             "type": "number",
             "description": "The value for accumulator A30 from the previous pay period. This is used in formulas that include the variable P30.",
             "format": "double"
-          },
-          "roleAssignmentPermissions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RoleAssignmentPermission"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -19866,50 +19859,6 @@
             },
             "nullable": true,
             "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RoleAssignmentPermission": {
-        "type": "object",
-        "properties": {
-          "roleId": {
-            "type": "string",
-            "nullable": true
-          },
-          "roleType": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "startDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "approvalLevel": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "insertData": {
-            "type": "boolean"
-          },
-          "modifyData": {
-            "type": "boolean"
-          },
-          "viewData": {
-            "type": "boolean"
-          },
-          "deleteData": {
-            "type": "boolean"
-          },
-          "viewAmounts": {
-            "type": "boolean"
-          },
-          "createTime": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
