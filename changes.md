@@ -1,3 +1,11 @@
+# Jan 10, 2022 7:57 PM
+**GitHub Run ID:** 1679188403
+**GitHub Run Number:** 2745
+**Reference:** refs/heads/master
+**Commit:** 018ce92a246e98192e1eea51bfc87b7e0771830b## Removed
+* Model: Employee, Property: roleAssignmentPermissions
+* Model: RoleAssignmentPermission
+
 # Jan 10, 2022 7:27 PM
 **GitHub Run ID:** 1679078774
 **GitHub Run Number:** 2744
