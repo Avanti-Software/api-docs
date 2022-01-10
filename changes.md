@@ -1,3 +1,19 @@
+# Jan 10, 2022 7:12 PM
+**GitHub Run ID:** 1679013756
+**GitHub Run Number:** 2743
+**Reference:** refs/pull/555/merge
+**Commit:** 8bdf3fdee4cbba984281da78e4fa8ba26051d56d## Added
+ * Endpoint: GET - /worktech/v1/Import
+ * Endpoint: POST - /worktech/v1/Import
+ * Endpoint: PUT - /worktech/v1/Import/{id}
+ * Endpoint: DELETE - /worktech/v1/Import/{id}
+ * Endpoint: GET - /worktech/v1/Export
+ * Endpoint: POST - /worktech/v1/Export
+ * Endpoint: PUT - /worktech/v1/Export/{id}
+ * Endpoint: DELETE - /worktech/v1/Export/{id}
+* Model: WorkTechExport
+* Model: WorkTechImport
+
 # Jan 10, 2022 6:44 PM
 **GitHub Run ID:** 1678902295
 **GitHub Run Number:** 2740
