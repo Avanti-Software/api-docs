@@ -1,3 +1,11 @@
+# Jan 10, 2022 6:35 PM
+**GitHub Run ID:** 1678875469
+**GitHub Run Number:** 2739
+**Reference:** refs/pull/546/merge
+**Commit:** 0cddce661115e0cdbf7d99959dcc2ca5b480a8cb## Added
+* Model: Employee, Property: roleAssignmentPermissions
+* Model: RoleAssignmentPermission
+
 # Jan 10, 2022 6:24 PM
 **GitHub Run ID:** 1678359577
 **GitHub Run Number:** 2736
