@@ -1,3 +1,10 @@
+# Jan 12, 2022 8:25 PM
+**GitHub Run ID:** 1689540343
+**GitHub Run Number:** 2793
+**Reference:** refs/pull/560/merge
+**Commit:** 3f3356b32ad19e73642f459d5e21d07cc70e8f89## Removed
+* Model: EmployeeContactInfo
+
 # Jan 12, 2022 3:31 PM
 **GitHub Run ID:** 1688321886
 **GitHub Run Number:** 2792
