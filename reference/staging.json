@@ -10298,27 +10298,6 @@
               "$ref": "#/components/schemas/OtherText"
             },
             "nullable": true
-          },
-          "textFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "dateFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "figureFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -19931,6 +19910,29 @@
           },
           "createTime": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeContactInfo": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/EmployeeAddress"
+          },
+          "phoneNumbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PhoneNumber"
+            },
+            "nullable": true
+          },
+          "emails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeEmail"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
