@@ -1,3 +1,14 @@
+# Jan 13, 2022 10:37 PM
+**GitHub Run ID:** 1695139680
+**GitHub Run Number:** 2809
+**Reference:** refs/pull/561/merge
+**Commit:** 55da50879801cf4f8910a9796de780760671894a## Added
+* Model: EmployeeFigures, Property: textFieldLabels
+* Model: EmployeeFigures, Property: dateFieldLabels
+* Model: EmployeeFigures, Property: figureFieldLabels
+## Removed
+* Model: EmployeeContactInfo
+
 # Jan 13, 2022 8:06 PM
 **GitHub Run ID:** 1694590953
 **GitHub Run Number:** 2802
