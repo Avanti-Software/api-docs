@@ -85,7 +85,7 @@ To grant access to all endpoints, insert a subfunction access rule in the Avanti
 <!-- theme: warning -->
 >For maximum security, we recommend you do not use this option; it allows the API integration access to all your employees' information. Instead, set up subfunction access for every endpoint you’re using for your integrations.
 
-**Step 1:** Select **Insert** in Subfunction Access Controls, then add **api/&ast; ** in Function. 
+**Step 1:** Select **Insert** in Subfunction Access Controls, then add api/* in Function. 
 By default, this can be found in System Administration >> System Access Controls on the Avanti Desktop Application.
 
 ![Insert for full access. ](../assets/images/FullAccessFunction.png)
