@@ -1,3 +1,10 @@
+# Jan 24, 2022 3:00 PM
+**GitHub Run ID:** 1740492600
+**GitHub Run Number:** 24
+**Reference:** refs/pull/2/merge
+**Commit:** dac12c709eb0f83dda67ff86cd022740627cf176## Removed
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+
 # Jan 20, 2022 10:43 PM
 **GitHub Run ID:** 1725914337
 **GitHub Run Number:** 2851

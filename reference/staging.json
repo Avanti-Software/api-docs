@@ -17998,9 +17998,6 @@
           },
           "poolingEnabled": {
             "type": "boolean"
-          },
-          "allowPostingAsExchange": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
