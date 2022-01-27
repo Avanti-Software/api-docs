@@ -1,3 +1,11 @@
+# Jan 27, 2022 5:04 PM
+**GitHub Run ID:** 1757429269
+**GitHub Run Number:** 2894
+**Reference:** refs/pull/575/merge
+**Commit:** 74e9accdc99e78208ad2c4f8d20b0f77136aec8d## Added
+ * Endpoint: GET - /v1/worktech/import/search
+ * Endpoint: GET - /v1/worktech/export/search
+
 # Jan 24, 2022 9:37 PM
 **GitHub Run ID:** 1742266872
 **GitHub Run Number:** 2856
