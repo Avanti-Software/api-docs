@@ -1,3 +1,11 @@
+# Jan 28, 2022 4:57 PM
+**GitHub Run ID:** 1762634578
+**GitHub Run Number:** 2905
+**Reference:** refs/pull/579/merge
+**Commit:** a733ca237ae1800bb3ed027e3061f31e990e556a## Removed
+ * Endpoint: GET - /v1/WorkTech/Export/Search
+ * Endpoint: GET - /v1/WorkTech/Import/Search
+
 # Jan 28, 2022 4:22 PM
 **GitHub Run ID:** 1762483213
 **GitHub Run Number:** 2904
