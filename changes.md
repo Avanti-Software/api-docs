@@ -1,3 +1,12 @@
+# Feb 03, 2022 7:33 PM
+**GitHub Run ID:** 1791370740
+**GitHub Run Number:** 2921
+**Reference:** refs/heads/master
+**Commit:** 124da2dc0cab5dc23656f21b7b23c78f1df889dd## Added
+ * Endpoint: GET - /v1/WorkTech/Import/Search
+ * Endpoint: GET - /v1/WorkTech/Export/Search
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+
 # Feb 02, 2022 11:05 PM
 **GitHub Run ID:** 1786629850
 **GitHub Run Number:** 25
