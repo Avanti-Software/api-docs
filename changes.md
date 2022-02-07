@@ -1,3 +1,27 @@
+# Feb 07, 2022 6:56 AM
+**GitHub Run ID:** 1804981234
+**GitHub Run Number:** 2923
+**Reference:** refs/pull/583/merge
+**Commit:** 0c0ef6569373c2ce113c800c293e7715197c2a6a## Added
+ * Endpoint: GET - /v1/WorkTech/Import/Search
+ * Endpoint: GET - /v1/WorkTech/Export/Search
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: POST - /v1/WorkTech/EmpEntlExport
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: PUT - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: DELETE - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: POST - /v1/WorkTech/EmpPosExport
+ * Endpoint: GET - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: POST - /v1/WorkTech/EmpExport
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+* Model: WorkTechEmpEntlExport
+* Model: WorkTechEmpExport
+* Model: WorkTechEmpPosExport
+
 # Feb 03, 2022 8:33 PM
 **GitHub Run ID:** 1791616957
 **GitHub Run Number:** 27
