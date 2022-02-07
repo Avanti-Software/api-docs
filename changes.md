@@ -1,3 +1,12 @@
+# Feb 07, 2022 3:35 PM
+**GitHub Run ID:** 1807280832
+**GitHub Run Number:** 2924
+**Reference:** refs/pull/584/merge
+**Commit:** 4974f0caa7e4d832899fe2547a0d3570c9891404## Added
+ * Endpoint: GET - /v1/WorkTech/Import/Search
+ * Endpoint: GET - /v1/WorkTech/Export/Search
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+
 # Feb 07, 2022 2:39 PM
 **GitHub Run ID:** 1803800163
 **GitHub Run Number:** 51
