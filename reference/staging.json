@@ -18222,9 +18222,6 @@
           },
           "poolingEnabled": {
             "type": "boolean"
-          },
-          "allowPostingAsExchange": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -20811,7 +20808,7 @@
             },
             "nullable": true
           },
-          "email": {
+          "emails": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/EmployeeEmail"
