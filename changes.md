@@ -1,3 +1,13 @@
+# Feb 08, 2022 7:13 PM
+**GitHub Run ID:** 1814181206
+**GitHub Run Number:** 2931
+**Reference:** refs/pull/584/merge
+**Commit:** c72caaa86b6d1897bf18b4de6020fc293e1d9a93## Added
+* Model: EmployeeContactInfo, Property: email
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+## Removed
+* Model: EmployeeContactInfo, Property: emails
+
 # Feb 08, 2022 6:40 PM
 **GitHub Run ID:** 1814051159
 **GitHub Run Number:** 78
