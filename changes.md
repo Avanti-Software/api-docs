@@ -1,3 +1,12 @@
+# Feb 08, 2022 5:03 AM
+**GitHub Run ID:** 1810432952
+**GitHub Run Number:** 2926
+**Reference:** refs/pull/583/merge
+**Commit:** 7994e823b83b1ada7b670e5c70fdfad7f91a26f1## Added
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpExport/Search
+
 # Feb 07, 2022 9:31 PM
 **GitHub Run ID:** 1808932044
 **GitHub Run Number:** 2925
