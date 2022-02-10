@@ -1,3 +1,16 @@
+# Feb 10, 2022 2:00 AM
+**GitHub Run ID:** 1821452740
+**GitHub Run Number:** 2943
+**Reference:** refs/pull/588/merge
+**Commit:** 775caadf288ab9dbcf4e84d7d06d6600a758d0bd## Added
+ * Endpoint: GET - /v1/ChangeLog
+ * Endpoint: POST - /v1/ChangeLog
+ * Endpoint: GET - /v1/ChangeLog/{logIndex}
+ * Endpoint: GET - /v1/ChangeLog/Search
+ * Endpoint: PUT - /v1/ChangeLog/{id}
+ * Endpoint: DELETE - /v1/ChangeLog/{id}
+* Model: ChangeLog
+
 # Feb 08, 2022 7:13 PM
 **GitHub Run ID:** 1814181206
 **GitHub Run Number:** 2931
