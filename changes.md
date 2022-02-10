@@ -1,3 +1,41 @@
+# Feb 10, 2022 6:18 PM
+**GitHub Run ID:** 1825399478
+**GitHub Run Number:** 90
+**Reference:** refs/pull/17/merge
+**Commit:** 74f79feee6a22958e59b186b64cbfddff9774b49## Added
+* Model: EmployeeContactInfo, Property: emails
+## Removed
+ * Endpoint: GET - /v1/ChangeLog
+ * Endpoint: POST - /v1/ChangeLog
+ * Endpoint: PUT - /v1/ChangeLog/{id}
+ * Endpoint: DELETE - /v1/ChangeLog/{id}
+ * Endpoint: GET - /v1/ChangeLog/{logIndex}
+ * Endpoint: GET - /v1/ChangeLog/Search
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport
+ * Endpoint: POST - /v1/WorkTech/EmpEntlExport
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpExport
+ * Endpoint: POST - /v1/WorkTech/EmpExport
+ * Endpoint: GET - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport
+ * Endpoint: POST - /v1/WorkTech/EmpPosExport
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: PUT - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: DELETE - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/Search
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+* Model: EmployeeContactInfo, Property: email
+* Model: ChangeLog
+* Model: WorkTechEmpEntlExport
+* Model: WorkTechEmpExport
+* Model: WorkTechEmpPosExport
+
 # Feb 10, 2022 6:10 PM
 **GitHub Run ID:** 1825347448
 **GitHub Run Number:** 2946
