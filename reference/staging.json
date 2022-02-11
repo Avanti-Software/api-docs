@@ -11694,16 +11694,6 @@
           "relationship": {
             "type": "string",
             "description": "The employee's relationship to the emergency contact. Must be a valid relationship code. 'Get Emergency Setup' will return the valid relationship codes."
-          },
-          "mobilePhone": {
-            "maxLength": 30,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "primaryPhone": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
