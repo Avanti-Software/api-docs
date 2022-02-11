@@ -1,3 +1,16 @@
+# Feb 11, 2022 7:36 PM
+**GitHub Run ID:** 1831152034
+**GitHub Run Number:** 2960
+**Reference:** refs/pull/591/merge
+**Commit:** 59d091c55036a37a2e7bb3f76d9ffc11a0fc0303## Added
+ * Endpoint: POST - /v1/PayrollDataImport
+* Model: ImportPayrollDataResult
+* Model: PayrollData
+* Model: PayrollDataImport
+## Removed
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+
 # Feb 11, 2022 6:15 PM
 **GitHub Run ID:** 1830826065
 **GitHub Run Number:** 2959
