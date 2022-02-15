@@ -1,4 +1,43 @@
 # Feb 15, 2022 5:08 PM
+**GitHub Run ID:** 1848315556
+**GitHub Run Number:** 101
+**Reference:** refs/heads/master
+**Commit:** e853757b5ca5d7fd1240a33212ed422758ac8d9c## Added
+* Model: EmployeeContactInfo
+## Removed
+ * Endpoint: GET - /v1/ChangeLog
+ * Endpoint: POST - /v1/ChangeLog
+ * Endpoint: PUT - /v1/ChangeLog/{id}
+ * Endpoint: DELETE - /v1/ChangeLog/{id}
+ * Endpoint: GET - /v1/ChangeLog/{logIndex}
+ * Endpoint: GET - /v1/ChangeLog/Search
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport
+ * Endpoint: POST - /v1/WorkTech/EmpEntlExport
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpExport
+ * Endpoint: POST - /v1/WorkTech/EmpExport
+ * Endpoint: GET - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport
+ * Endpoint: POST - /v1/WorkTech/EmpPosExport
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: PUT - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: DELETE - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/Search
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+* Model: ChangeLog
+* Model: WorkTechEmpEntlExport
+* Model: WorkTechEmpExport
+* Model: WorkTechEmpPosExport
+
+# Feb 15, 2022 5:08 PM
 **GitHub Run ID:** 1848310934
 **GitHub Run Number:** 2981
 **Reference:** refs/heads/master
