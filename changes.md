@@ -1,3 +1,25 @@
+# Feb 15, 2022 9:36 PM
+**GitHub Run ID:** 1849503107
+**GitHub Run Number:** 111
+**Reference:** refs/pull/11/merge
+**Commit:** 7a7a39799ace02de94137b59103f08ad318171ca## Added
+* Model: EmployeeContactInfo
+## Removed
+ * Endpoint: GET - /v1/ChangeLog
+ * Endpoint: POST - /v1/ChangeLog
+ * Endpoint: PUT - /v1/ChangeLog/{id}
+ * Endpoint: DELETE - /v1/ChangeLog/{id}
+ * Endpoint: GET - /v1/ChangeLog/{logIndex}
+ * Endpoint: GET - /v1/ChangeLog/Search
+ * Endpoint: POST - /v1/PayrollDataImport
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+* Model: ChangeLog
+* Model: ImportPayrollDataResult
+* Model: PayrollData
+* Model: PayrollDataImport
+
 # Feb 15, 2022 9:00 PM
 **GitHub Run ID:** 1849354658
 **GitHub Run Number:** 2992
