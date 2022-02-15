@@ -1,3 +1,21 @@
+# Feb 15, 2022 10:54 PM
+**GitHub Run ID:** 1849813191
+**GitHub Run Number:** 2993
+**Reference:** refs/pull/596/merge
+**Commit:** 129f313b8775e38a6ccbe80de6d6905c30aeecd4## Added
+ * Endpoint: GET - /v1/ChangeLog
+ * Endpoint: POST - /v1/ChangeLog
+ * Endpoint: GET - /v1/ChangeLog/{logIndex}
+ * Endpoint: GET - /v1/ChangeLog/Search
+ * Endpoint: PUT - /v1/ChangeLog/{id}
+ * Endpoint: DELETE - /v1/ChangeLog/{id}
+* Model: ChangeLog
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+## Removed
+* Model: EmployeeContactInfo
+
 # Feb 15, 2022 9:36 PM
 **GitHub Run ID:** 1849503107
 **GitHub Run Number:** 111
