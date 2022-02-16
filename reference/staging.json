@@ -344,6 +344,380 @@
         }
       }
     },
+    "/v1/ChangeLog": {
+      "get": {
+        "tags": [
+          "Change Log"
+        ],
+        "summary": "Lists employee changes log",
+        "operationId": "Lists-employee-changes-log",
+        "parameters": [
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "LogIndex"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Change Log"
+        ],
+        "summary": "Add a change log",
+        "operationId": "Add-a-change-log",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeLog"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeLog"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeLog"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/ChangeLog/{id}": {
+      "put": {
+        "tags": [
+          "Change Log"
+        ],
+        "summary": "Update change log",
+        "operationId": "Update-change-log",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeLog"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeLog"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeLog"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Change Log"
+        ],
+        "summary": "Delete a change log",
+        "operationId": "Delete-a-change-log",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ChangeLog/{logIndex}": {
+      "get": {
+        "tags": [
+          "Change Log"
+        ],
+        "summary": "Get change log item by LogIndex",
+        "operationId": "Get-change-log-item-by-LogIndex",
+        "parameters": [
+          {
+            "name": "LogIndex",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ChangeLog/Search": {
+      "get": {
+        "tags": [
+          "Change Log"
+        ],
+        "summary": "Search change logs",
+        "operationId": "Search-change-logs",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "maxLength": 32,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "EmployeeNo",
+            "in": "query",
+            "schema": {
+              "maxLength": 9,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "FileName",
+            "in": "query",
+            "schema": {
+              "maxLength": 128,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "ColumnName",
+            "in": "query",
+            "schema": {
+              "maxLength": 128,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "LogIndex"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/v1/Codes": {
       "post": {
         "tags": [
@@ -3923,6 +4297,76 @@
         }
       }
     },
+    "/v1/PayrollDataImport": {
+      "post": {
+        "tags": [
+          "Payroll Data"
+        ],
+        "summary": "Add Payroll Data",
+        "operationId": "Add-Payroll-Data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollDataImport"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollDataImport"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollDataImport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImportPayrollDataResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImportPayrollDataResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/PayStatements": {
       "get": {
         "tags": [
@@ -6889,6 +7333,1151 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpEntlExport": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "List WorkTech EmpEntlExports",
+        "operationId": "List-WorkTech-EmpEntlExports",
+        "parameters": [
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "EmpNo"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Add WorkTech EmpEntlExport",
+        "operationId": "Add-WorkTech-EmpEntlExport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpEntlExport"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpEntlExport"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpEntlExport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpEntlExport/{empNo}": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Get WorkTech EmpEntlExport by Empno",
+        "operationId": "Get-WorkTech-EmpEntlExport-by-Empno",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Update WorkTech EmpEntlExport",
+        "operationId": "Update-WorkTech-EmpEntlExport",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpEntlExport"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpEntlExport"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpEntlExport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Delete WorkTech EmpEntlExport",
+        "operationId": "Delete-WorkTech-EmpEntlExport",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpEntlExport/Search": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Search WorkTech EmpEntlExports",
+        "operationId": "Search-WorkTech-EmpEntlExports",
+        "parameters": [
+          {
+            "name": "EmpNo",
+            "in": "query",
+            "schema": {
+              "maxLength": 9,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "EarnDeductCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "LeaveAccrUnit",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "LeaveTaknUnit",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "EmpNo"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpExport": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "List WorkTech EmpExports",
+        "operationId": "List-WorkTech-EmpExports",
+        "parameters": [
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "EmpNo"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Add WorkTech EmpExport",
+        "operationId": "Add-WorkTech-EmpExport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpExport"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpExport"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpExport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpExport/{empNo}": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Get WorkTech EmpExport by Empno",
+        "operationId": "Get-WorkTech-EmpExport-by-Empno",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Update WorkTech EmpExport",
+        "operationId": "Update-WorkTech-EmpExport",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpExport"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpExport"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpExport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Delete WorkTech EmpExport",
+        "operationId": "Delete-WorkTech-EmpExport",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpExport/Search": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Search WorkTech EmpExports",
+        "operationId": "Search-WorkTech-EmpExports",
+        "parameters": [
+          {
+            "name": "EmpNo",
+            "in": "query",
+            "schema": {
+              "maxLength": 9,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Surname",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GivenName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Address1",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "City",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Province",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Country",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneType1",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneNumber1",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneType2",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneNumber2",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneType3",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneNumber3",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneType4",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneNumber4",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartBirthDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EndBirthDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "StartLastHireDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EndLastHireDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Active",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Class",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PayGrp",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HoursPerDay",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "HoursPerPeriod",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "Locn",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "JobStatus",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EmployStatus",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UnionCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "EmpNo"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpPosExport": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "List WorkTech EmpPosExports",
+        "operationId": "List-WorkTech-EmpPosExports",
+        "parameters": [
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "EmpNo"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Add WorkTech EmpPosExport",
+        "operationId": "Add-WorkTech-EmpPosExport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpPosExport"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpPosExport"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpPosExport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpPosExport/{empNo}/{position}": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Get WorkTech EmpPosExport by Empno",
+        "operationId": "Get-WorkTech-EmpPosExport-by-Empno",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "position",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Update WorkTech EmpPosExport",
+        "operationId": "Update-WorkTech-EmpPosExport",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "position",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpPosExport"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpPosExport"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechEmpPosExport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Delete WorkTech EmpPosExport",
+        "operationId": "Delete-WorkTech-EmpPosExport",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "position",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/EmpPosExport/Search": {
+      "get": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Search WorkTech EmpPosExports",
+        "operationId": "Search-WorkTech-EmpPosExports",
+        "parameters": [
+          {
+            "name": "EmpNo",
+            "in": "query",
+            "schema": {
+              "maxLength": 9,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Position",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Active",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "StartEffectiveDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EndEffectiveDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "StartExpiryDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EndExpiryDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "PrimaryPosition",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "EmpNo"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -10154,6 +11743,16 @@
           "relationship": {
             "type": "string",
             "description": "The employee's relationship to the emergency contact. Must be a valid relationship code. 'Get Emergency Setup' will return the valid relationship codes."
+          },
+          "mobilePhone": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "primaryPhone": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -18222,6 +19821,9 @@
           },
           "poolingEnabled": {
             "type": "boolean"
+          },
+          "allowPostingAsExchange": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -20986,25 +22588,525 @@
         },
         "additionalProperties": false
       },
-      "EmployeeContactInfo": {
+      "ChangeLog": {
+        "required": [
+          "description",
+          "employeeNo",
+          "fileName",
+          "logDate",
+          "logIndex",
+          "logtime",
+          "userId"
+        ],
         "type": "object",
         "properties": {
-          "address": {
-            "$ref": "#/components/schemas/EmployeeAddress"
+          "logIndex": {
+            "type": "integer",
+            "format": "int32"
           },
-          "phoneNumbers": {
+          "userId": {
+            "maxLength": 32,
+            "minLength": 0,
+            "type": "string"
+          },
+          "logDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logtime": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string"
+          },
+          "fileName": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string"
+          },
+          "employeeNo": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 7,
+            "minLength": 0,
+            "type": "string"
+          },
+          "changeFrom": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "changeTo": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "columnName": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "changeReason": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "changeComment": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "valueChangeFrom": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "valueChangeTo": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "extensionColumnName": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "extensionDescription": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ImportPayrollDataResult": {
+        "type": "object",
+        "properties": {
+          "importedPayrollData": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PhoneNumber"
+              "$ref": "#/components/schemas/PayrollData"
             },
             "nullable": true
           },
-          "emails": {
+          "invalidPayrollData": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/EmployeeEmail"
+              "$ref": "#/components/schemas/PayrollData"
             },
             "nullable": true
+          },
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayrollData": {
+        "required": [
+          "earnDeductCode",
+          "empNo",
+          "entryDate",
+          "unitOfMeasure",
+          "units"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "empNo": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "entryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "earnDeductCode": {
+            "maxLength": 3,
+            "minLength": 0,
+            "pattern": "[0-9]*",
+            "type": "string"
+          },
+          "positionCode": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "units": {
+            "type": "number",
+            "format": "double"
+          },
+          "unitOfMeasure": {
+            "$ref": "#/components/schemas/UnitOfMeasure"
+          },
+          "dollarRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "earningAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "benefitAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "deductionAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "glType": {
+            "$ref": "#/components/schemas/GlOption"
+          },
+          "glGroup": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "glAccount": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "glBenefitGroup": {
+            "maxLength": 4,
+            "minLength": 0,
+            "pattern": "[0-9]*",
+            "type": "string",
+            "nullable": true
+          },
+          "wcbOverrideCode": {
+            "maxLength": 3,
+            "minLength": 3,
+            "pattern": "[0-9]*",
+            "type": "string",
+            "nullable": true
+          },
+          "attendanceCode": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "attendanceReason": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "taskId": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayrollDataImport": {
+        "required": [
+          "payrollData"
+        ],
+        "type": "object",
+        "properties": {
+          "batchDescription": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "batchCompleted": {
+            "type": "boolean"
+          },
+          "payrollData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PayrollData"
+            }
+          },
+          "stopImportOnAnyError": {
+            "type": "boolean"
+          },
+          "importToStagingTable": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WorkTechEmpEntlExport": {
+        "required": [
+          "earnDeductCode",
+          "empNo",
+          "leaveAccrUnit",
+          "leaveTaknUnit"
+        ],
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "earnDeductCode": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string"
+          },
+          "leaveAccrUnit": {
+            "maximum": 99999999999.99,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "leaveTaknUnit": {
+            "maximum": 99999999999.99,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WorkTechEmpExport": {
+        "required": [
+          "birthDate",
+          "empNo",
+          "givenName",
+          "lastHireDate",
+          "surname"
+        ],
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "surname": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string"
+          },
+          "givenName": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string"
+          },
+          "initial": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "province": {
+            "maxLength": 2,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "postal": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType1": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber1": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType2": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber2": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType3": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber3": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType4": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber4": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastHireDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "class": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payGrp": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "hoursPerDay": {
+            "maximum": 999999.999,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "hoursPerPeriod": {
+            "maximum": 999999.999,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "locn": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatus": {
+            "maxLength": 2,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "employStatus": {
+            "maxLength": 2,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "unionCode": {
+            "maxLength": 6,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WorkTechEmpPosExport": {
+        "required": [
+          "active",
+          "empNo",
+          "position",
+          "positionDesc",
+          "primaryPosition"
+        ],
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "position": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string"
+          },
+          "positionDesc": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "primaryPosition": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -21038,6 +23140,9 @@
     },
     {
       "name": "Benefit Groups"
+    },
+    {
+      "name": "Change Log"
     },
     {
       "name": "Codes"
@@ -21146,6 +23251,9 @@
     },
     {
       "name": "Pay Statements"
+    },
+    {
+      "name": "Payroll Data"
     },
     {
       "name": "Personal Info"
