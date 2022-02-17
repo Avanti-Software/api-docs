@@ -1,3 +1,13 @@
+# Feb 17, 2022 8:17 PM
+**GitHub Run ID:** 1860825915
+**GitHub Run Number:** 3004
+**Reference:** refs/pull/598/merge
+**Commit:** a899872cd37b3de4416ad260fcc4fd246d27543e## Added
+* Model: PayrollData, Property: locationCode
+* Model: Position, Property: effectiveDate
+* Model: Position, Property: expiryDate
+* Model: Position, Property: active
+
 # Feb 17, 2022 8:04 PM
 **GitHub Run ID:** 1860768550
 **GitHub Run Number:** 3003
