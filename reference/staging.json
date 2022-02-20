@@ -17586,6 +17586,19 @@
           "reportsToEmployee": {
             "type": "string",
             "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -22822,6 +22835,10 @@
           "taskId": {
             "maxLength": 9,
             "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
             "type": "string",
             "nullable": true
           }
