@@ -1,3 +1,13 @@
+# Feb 23, 2022 5:10 AM
+**GitHub Run ID:** 1885512219
+**GitHub Run Number:** 3052
+**Reference:** refs/heads/master
+**Commit:** 4c9ada2b83974995975d04275667310cc654da21## Added
+* Model: PayrollData, Property: locationCode
+* Model: Position, Property: effectiveDate
+* Model: Position, Property: expiryDate
+* Model: Position, Property: active
+
 # Feb 22, 2022 9:27 PM
 **GitHub Run ID:** 1884024215
 **GitHub Run Number:** 3051
