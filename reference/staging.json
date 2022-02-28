@@ -4793,7 +4793,7 @@
           "Personal Info"
         ],
         "summary": "Get User Defined Profile Fields",
-        "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. Figures are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
+        "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. User Definied Profile Fields are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
         "operationId": "Get-Employee-Figures",
         "parameters": [
           {
