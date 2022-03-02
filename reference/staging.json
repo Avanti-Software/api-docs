@@ -22873,7 +22873,7 @@
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
-            "description": "An alphanumeric description for the payroll batch, which can be up to 1024 characters. This is required when importToStagingTable is False. \nThis isn't used if importToStagingTable is True.... ",
+            "description": "An alphanumeric description for the payroll batch, which can be up to 1024 characters. This is required when importToStagingTable is False. \nThis isn't used if importToStagingTable is True..... ",
             "nullable": true
           },
           "batchCompleted": {
