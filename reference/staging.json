@@ -22741,7 +22741,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "This is used to map error messages to invalid entries. When doing a post request, leave this blank. Leave this blank when ",
+            "description": "Gets returned to map error messages to invalid entries. When doing a post request, leave this blank. Leave this blank when making the Post. ",
             "nullable": true
           },
           "empNo": {
