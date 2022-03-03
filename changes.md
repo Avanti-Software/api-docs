@@ -1,3 +1,11 @@
+# Mar 03, 2022 12:26 AM
+**GitHub Run ID:** 1925363507
+**GitHub Run Number:** 3136
+**Reference:** refs/heads/master
+**Commit:** 6cbb7defb2c03887e379a678d0efb37586d596e0## Removed
+* Model: Notification, Property: subjectFr
+* Model: Notification, Property: contentFr
+
 # Mar 02, 2022 10:47 PM
 **GitHub Run ID:** 1925014300
 **GitHub Run Number:** 3135

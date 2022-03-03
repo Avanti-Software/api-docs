@@ -15667,14 +15667,6 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
-          },
-          "subjectFr": {
-            "type": "string",
-            "nullable": true
-          },
-          "contentFr": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
