@@ -1,3 +1,11 @@
+# Mar 04, 2022 8:38 PM
+**GitHub Run ID:** 1935754078
+**GitHub Run Number:** 3144
+**Reference:** refs/pull/617/merge
+**Commit:** 952a672c8a5e0850a81772dd97deb4921f1d875f## Added
+* Model: Notification, Property: subjectFr
+* Model: Notification, Property: contentFr
+
 # Mar 03, 2022 12:26 AM
 **GitHub Run ID:** 1925363507
 **GitHub Run Number:** 3136
