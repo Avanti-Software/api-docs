@@ -1,3 +1,51 @@
+# Mar 07, 2022 6:03 PM
+**GitHub Run ID:** 1947083778
+**GitHub Run Number:** 3146
+**Reference:** refs/pull/619/merge
+**Commit:** c98dcf94b084a7e5bb87559dfe68eca6a10f09eb## Added
+ * Endpoint: GET - /v1/ChangeLog
+ * Endpoint: POST - /v1/ChangeLog
+ * Endpoint: GET - /v1/ChangeLog/{logIndex}
+ * Endpoint: GET - /v1/ChangeLog/Search
+ * Endpoint: PUT - /v1/ChangeLog/{id}
+ * Endpoint: DELETE - /v1/ChangeLog/{id}
+ * Endpoint: POST - /v1/PayrollDataImport
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport
+ * Endpoint: POST - /v1/WorkTech/EmpEntlExport
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport
+ * Endpoint: POST - /v1/WorkTech/EmpPosExport
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: PUT - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: DELETE - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpExport
+ * Endpoint: POST - /v1/WorkTech/EmpExport
+ * Endpoint: GET - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpExport/Search
+* Model: ChangeLog
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+* Model: ImportPayrollDataResult
+* Model: Notification, Property: subjectFr
+* Model: Notification, Property: contentFr
+* Model: PayrollData
+* Model: PayrollDataImport
+* Model: Position, Property: effectiveDate
+* Model: Position, Property: expiryDate
+* Model: Position, Property: active
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+* Model: WorkTechEmpEntlExport
+* Model: WorkTechEmpExport
+* Model: WorkTechEmpPosExport
+## Removed
+* Model: EmployeeContactInfo
+
 # Mar 04, 2022 10:03 PM
 **GitHub Run ID:** 1936052830
 **GitHub Run Number:** 136
