@@ -1,3 +1,13 @@
+# Mar 09, 2022 4:14 PM
+**GitHub Run ID:** 1958336513
+**GitHub Run Number:** 3170
+**Reference:** refs/pull/626/merge
+**Commit:** e747d97800d36f9b0a9395b4645ee6f619d3af77## Added
+* Model: Employee, Property: employeeNameFormat
+* Model: Employee, Property: fullName
+* Model: MailSettings
+* Model: Settings, Property: mailSettings
+
 # Mar 07, 2022 6:03 PM
 **GitHub Run ID:** 1947083778
 **GitHub Run Number:** 3146
