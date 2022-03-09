@@ -4365,7 +4365,7 @@
             }
           }
         },
-        "description": "Create payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEverytime this endpoint is used a new payroll batch is created, unless you import to a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry."
+        "description": "This endpoint will be available starting February 17, 2021. \n\nCreate payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry."
       }
     },
     "/v1/PayStatements": {
@@ -22760,7 +22760,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "Gets returned to map error messages to invalid entries. \n\nWhen doing a post request, leave this blank. Leave this blank when making the Post.",
+            "description": "This gets included in the response. You can use this to map error messages to invalid entries. \n\nWhen making a post request, leave this blank.",
             "nullable": true
           },
           "empNo": {
@@ -22785,7 +22785,7 @@
             "maxLength": 12,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the position worked. If the position is left blank, the employees primary position will be used if required for rates.\n\nIf ‘Only allow defined Employee Positions in time data entry’ is selected on the Time Data Entry tab of Payroll Parameters, the position must be on the employee’s profile.",
+            "description": "The ID of the position worked. If the position is left blank, the employee's primary position will be used if required for rates.\n\nIf ‘Only allow defined Employee Positions in time data entry’ is selected on the Time Data Entry tab in Payroll Parameters, the position must be on the employee’s profile.",
             "nullable": true
           },
           "units": {
