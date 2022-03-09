@@ -20562,7 +20562,7 @@
           "Y"
         ],
         "type": "string",
-        "description": "The unit of measure for the units indicated. \nA is an Amount. \nD is in Days. \nH is in Hours. \nM is in Minutes. \nP is in Periods.\nU is in Units. \nW is in Weeks. \nY is in Years. \n\nIf your importing time data, this is required if clockIn/clouckOut is blank. If unitOfMeasure this is blank, the is hours. "
+        "description": "The unit of measure for the units indicated. \nA is an Amount. \nD is in Days. \nH is in Hours. \nM is in Minutes. \nP is in Periods.\nU is in Units. \nW is in Weeks. \nY is in Years. \n\nIf you're importing time data, this is required if clockIn/clouckOut is blank. If unitOfMeasure this is blank, the is hours. "
       },
       "UserDefinedDates": {
         "type": "object",
@@ -22799,7 +22799,7 @@
           "dollarRate": {
             "type": "number",
             "format": "double",
-            "description": "The dollar rate of pay. This will only be used for earnings, if earnDeductCode is 001 to 499.\n\nIf blank, the rate of pay will be determined within Avanti."
+            "description": "The dollar rate of pay. This will only be used for earnings if earnDeductCode is 001 to 499.\n\nIf left blank, the rate of pay will be determined within Avanti."
           },
           "earningAmount": {
             "type": "number",
@@ -22830,7 +22830,7 @@
             "maxLength": 60,
             "minLength": 0,
             "type": "string",
-            "description": "The GL account for the worked time. This is required when parameter glType is 'a'.\nMust be a valid account. 'List GL Accounts' will return the valid accounts for each segment. A combination of segments can be used to create the valid account.",
+            "description": "The GL account for the worked time. This is required when parameter glType is 'a'.\nMust be a valid account. 'List GL Accounts' returns the valid accounts for each segment. A combination of segments can be used to create a valid account.",
             "nullable": true
           },
           "glBenefitGroup": {
@@ -22860,7 +22860,7 @@
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
-            "description": "Up to 1024 alphanumeric characters that will populate the comments on the payroll data entry. ",
+            "description": "Up to 1024 alphanumeric characters that will populate the payroll data entry comments. ",
             "nullable": true
           },
           "taskId": {
