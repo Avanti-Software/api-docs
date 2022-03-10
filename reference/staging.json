@@ -820,7 +820,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -874,7 +874,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "409": {
@@ -911,7 +911,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -944,7 +944,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -991,7 +991,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -1000,7 +1000,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1082,7 +1082,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1117,7 +1117,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -1175,7 +1175,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1317,7 +1317,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1422,7 +1422,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1459,7 +1459,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1496,7 +1496,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1534,7 +1534,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1543,7 +1543,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1567,7 +1567,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1621,7 +1621,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1891,7 +1891,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2140,7 +2140,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2184,7 +2184,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2531,7 +2531,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -2638,7 +2638,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3744,7 +3744,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3803,7 +3803,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3883,7 +3883,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4014,7 +4014,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4192,7 +4192,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4303,6 +4303,7 @@
           "Payroll Data"
         ],
         "summary": "Add Payroll Data Entries",
+        "description": "This endpoint will be available starting February 17, 2021. \n\nCreate payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry.",
         "operationId": "Add-Payroll-Data",
         "requestBody": {
           "content": {
@@ -4364,8 +4365,7 @@
               }
             }
           }
-        },
-        "description": "This endpoint will be available starting February 17, 2021. \n\nCreate payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry."
+        }
       }
     },
     "/v1/PayStatements": {
@@ -4606,7 +4606,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4779,7 +4779,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -4847,7 +4847,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4988,7 +4988,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5013,7 +5013,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5215,8 +5215,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    {},
-                    {}
+                    { },
+                    { }
                   ]
                 },
                 "examples": {
@@ -6079,7 +6079,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6563,7 +6563,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -10510,7 +10510,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10560,7 +10560,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -10603,7 +10603,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10628,7 +10628,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10648,13 +10648,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -10693,19 +10693,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10714,7 +10714,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10725,7 +10725,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10743,7 +10743,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10756,7 +10756,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -12506,15 +12506,6 @@
               "$ref": "#/components/schemas/RoleAssignmentPermission"
             },
             "nullable": true
-          },
-          "employeeNameFormat": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fullName": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -14223,7 +14214,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -17989,7 +17980,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -18639,9 +18630,6 @@
           },
           "entitlementsSettings": {
             "$ref": "#/components/schemas/EntitlementsSettings"
-          },
-          "mailSettings": {
-            "$ref": "#/components/schemas/MailSettings"
           }
         },
         "additionalProperties": false
@@ -22755,8 +22743,14 @@
         "additionalProperties": false
       },
       "PayrollData": {
+        "required": [
+          "empNo",
+          "entryDate",
+          "earnDeductCode",
+          "units",
+          "unitOfMeasure"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "id": {
             "type": "string",
@@ -22771,8 +22765,8 @@
           },
           "entryDate": {
             "type": "string",
-            "format": "date-time",
-            "description": "The date of the payroll data entry in ISO 8601 format."
+            "description": "The date of the payroll data entry in ISO 8601 format.",
+            "format": "date-time"
           },
           "earnDeductCode": {
             "maxLength": 3,
@@ -22790,31 +22784,31 @@
           },
           "units": {
             "type": "number",
-            "format": "double",
-            "description": "The units for the payroll data entry."
+            "description": "The units for the payroll data entry.",
+            "format": "double"
           },
           "unitOfMeasure": {
             "$ref": "#/components/schemas/UnitOfMeasure"
           },
           "dollarRate": {
             "type": "number",
-            "format": "double",
-            "description": "The dollar rate of pay. This will only be used for earnings if earnDeductCode is 001 to 499.\n\nIf left blank, the rate of pay will be determined within Avanti."
+            "description": "The dollar rate of pay. This will only be used for earnings if earnDeductCode is 001 to 499.\n\nIf left blank, the rate of pay will be determined within Avanti.",
+            "format": "double"
           },
           "earningAmount": {
             "type": "number",
-            "format": "double",
-            "description": "Enter the earning amount for the entry. If you're using dollarRate, this must match the total for the units by dollarRate.\nThis is only used if the earnDeductCode is between 001-499."
+            "description": "Enter the earning amount for the entry. If you're using dollarRate, this must match the total for the units by dollarRate.\nThis is only used if the earnDeductCode is between 001-499.",
+            "format": "double"
           },
           "benefitAmount": {
             "type": "number",
-            "format": "double",
-            "description": "The total benefit amount for the entry. This is only used if the earnDeductCode is between 500-999."
+            "description": "The total benefit amount for the entry. This is only used if the earnDeductCode is between 500-999.",
+            "format": "double"
           },
           "deductionAmount": {
             "type": "number",
-            "format": "double",
-            "description": "The total deduction amount for the entry. This is only used if the earnDeductCode is between 500-999."
+            "description": "The total deduction amount for the entry. This is only used if the earnDeductCode is between 500-999.",
+            "format": "double"
           },
           "glType": {
             "$ref": "#/components/schemas/GlOption"
@@ -22876,17 +22870,13 @@
             "nullable": true
           }
         },
-        "required": [
-          "empNo",
-          "entryDate",
-          "earnDeductCode",
-          "units",
-          "unitOfMeasure"
-        ]
+        "additionalProperties": false
       },
       "PayrollDataImport": {
+        "required": [
+          "payrollData"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "batchDescription": {
             "maxLength": 1024,
@@ -22914,9 +22904,7 @@
             "description": "If True, payroll data will import into a staging table. If False, a new batch is created each time the endpoint is used. Default is False."
           }
         },
-        "required": [
-          "payrollData"
-        ]
+        "additionalProperties": false
       },
       "WorkTechEmpEntlExport": {
         "required": [
@@ -23170,33 +23158,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "MailSettings": {
-        "type": "object",
-        "properties": {
-          "mailServer": {
-            "type": "string",
-            "nullable": true
-          },
-          "mailAccountName": {
-            "type": "string",
-            "nullable": true
-          },
-          "enableEmailCopyOfMessages": {
-            "type": "boolean"
-          },
-          "zipDirectory": {
-            "type": "string",
-            "nullable": true
-          },
-          "enableEmail": {
-            "type": "boolean"
-          },
-          "disableEmailStatementEncryption": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -23209,7 +23170,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
