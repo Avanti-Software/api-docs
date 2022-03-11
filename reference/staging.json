@@ -12506,6 +12506,15 @@
               "$ref": "#/components/schemas/RoleAssignmentPermission"
             },
             "nullable": true
+          },
+          "employeeNameFormat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -18630,6 +18639,9 @@
           },
           "entitlementsSettings": {
             "$ref": "#/components/schemas/EntitlementsSettings"
+          },
+          "mailSettings": {
+            "$ref": "#/components/schemas/MailSettings"
           }
         },
         "additionalProperties": false
@@ -23154,6 +23166,33 @@
             "nullable": true
           },
           "primaryPosition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MailSettings": {
+        "type": "object",
+        "properties": {
+          "mailServer": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailAccountName": {
+            "type": "string",
+            "nullable": true
+          },
+          "enableEmailCopyOfMessages": {
+            "type": "boolean"
+          },
+          "zipDirectory": {
+            "type": "string",
+            "nullable": true
+          },
+          "enableEmail": {
+            "type": "boolean"
+          },
+          "disableEmailStatementEncryption": {
             "type": "boolean"
           }
         },
