@@ -19793,6 +19793,13 @@
           "isDateField": {
             "type": "boolean",
             "readOnly": true
+          },
+          "validation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntryTemplateFieldValidation"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -23194,6 +23201,189 @@
           },
           "disableEmailStatementEncryption": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryTemplateFieldValidation": {
+        "type": "object",
+        "properties": {
+          "validation": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationMessageFr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryUpdateResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "prompts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "errorPrompts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "promptHeading": {
+            "type": "string",
+            "nullable": true
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntryUpdateResult"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryUpdateResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "added": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "successes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "failures": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeEntryViewModel": {
+            "$ref": "#/components/schemas/TimeEntryViewModel"
+          },
+          "isNew": {
+            "type": "boolean"
+          },
+          "validation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntryValidationError"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryValidationError": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryViewModel": {
+        "type": "object",
+        "properties": {
+          "viewId": {
+            "type": "string",
+            "nullable": true
+          },
+          "templateId": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeEntry": {
+            "$ref": "#/components/schemas/TimeEntry"
+          },
+          "timeEntries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntry"
+            },
+            "nullable": true
+          },
+          "entryIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowApprove": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowReject": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowUnreject": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowWithdraw": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowUnapprove": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowCancel": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowUncancel": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowDelete": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "readOnly": {
+            "type": "boolean",
+            "readOnly": true
           }
         },
         "additionalProperties": false
