@@ -1434,7 +1434,7 @@
           "Employee Address"
         ],
         "summary": "Update Employee Address",
-        "description": "Updates the home address of an employee...",
+        "description": "Updates the home address of an employee.",
         "operationId": "Update-Employee-Address",
         "requestBody": {
           "content": {
