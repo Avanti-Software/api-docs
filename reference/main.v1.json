@@ -3991,7 +3991,7 @@
             }
           }
         },
-        "description": "Create payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry."
+        "description": "Create payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry.\n\nThe API User must have user group access to the employee's pay group to import entries for an employee. "
       }
     },
     "/v1/PayStatements": {
