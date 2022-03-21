@@ -9260,12 +9260,8 @@
         "format": "int32"
       },
       "EmergencyContact": {
-        "required": [
-          "givenName",
-          "relationship",
-          "surname"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "empNo": {
             "type": "string",
@@ -9370,14 +9366,20 @@
             "maxLength": 30,
             "minLength": 0,
             "type": "string",
+            "description": "The emergency contact's cell phone number.",
             "nullable": true
           },
           "primaryPhone": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "The phone number that will be used to contact the contact in case of an emergency.\nHome = 0\nMobile = 1\nWork = 2"
           }
         },
-        "additionalProperties": false
+        "required": [
+          "givenName",
+          "surname",
+          "relationship"
+        ]
       },
       "EmergencyContactSetupResponse": {
         "type": "object",
