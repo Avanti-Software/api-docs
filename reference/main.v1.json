@@ -9372,7 +9372,7 @@
           "primaryPhone": {
             "type": "integer",
             "format": "int32",
-            "description": "The phone number that will be used to contact the contact in case of an emergency.\nHome = 0\nMobile = 1\nWork = 2"
+            "description": "The phone number that will be used first in case of an emergency.\nHome = 0\nMobile = 1\nWork = 2"
           }
         },
         "required": [
