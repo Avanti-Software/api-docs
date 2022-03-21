@@ -2,6 +2,10 @@
 
 ## Version 1.0
 
+March 17, 2022
+- Added Endpoint: 
+    - Add Payroll Data Entries
+
 November 4, 2021
 - Added Endpoints: 
     - List GL Project Accounts
