@@ -396,11 +396,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -409,8 +406,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -491,11 +491,8 @@
           }
         },
         "responses": {
-          "204": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -504,8 +501,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -534,14 +534,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "204": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -550,8 +544,14 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -582,11 +582,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -595,8 +592,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -820,7 +820,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -874,7 +874,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "409": {
@@ -911,7 +911,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -944,7 +944,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -991,7 +991,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -1000,7 +1000,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1082,7 +1082,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1117,7 +1117,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -1175,7 +1175,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1317,7 +1317,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1422,7 +1422,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1459,7 +1459,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1496,7 +1496,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1534,7 +1534,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1543,7 +1543,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1567,7 +1567,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1621,7 +1621,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1891,7 +1891,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2140,7 +2140,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2184,7 +2184,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2531,7 +2531,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -2638,7 +2638,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3744,7 +3744,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3803,7 +3803,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3883,7 +3883,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4014,7 +4014,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4192,7 +4192,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4302,8 +4302,7 @@
         "tags": [
           "Payroll Data"
         ],
-        "summary": "Add Payroll Data Entries",
-        "description": "Create payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry.\n\nThe API User must have user group access to the employee's pay group to import entries for an employee. ",
+        "summary": "Add Payroll Data",
         "operationId": "Add-Payroll-Data",
         "requestBody": {
           "content": {
@@ -4325,6 +4324,16 @@
           }
         },
         "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "200": {
             "description": "Success",
             "content": {
@@ -4347,16 +4356,6 @@
           },
           "400": {
             "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -4606,7 +4605,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4779,7 +4778,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -4847,7 +4846,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4988,7 +4987,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5013,7 +5012,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5215,8 +5214,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    {},
-                    {}
+                    { },
+                    { }
                   ]
                 },
                 "examples": {
@@ -6079,7 +6078,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6563,7 +6562,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -7390,11 +7389,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -7403,8 +7399,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -7465,11 +7464,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -7478,8 +7474,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -7696,11 +7695,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -7709,8 +7705,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -7771,11 +7770,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -7784,8 +7780,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -8175,11 +8174,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -8188,8 +8184,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -8258,11 +8257,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -8271,8 +8267,11 @@
               }
             }
           },
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -10510,7 +10509,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10560,7 +10559,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -10603,7 +10602,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10628,7 +10627,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10648,13 +10647,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -10693,19 +10692,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10714,7 +10713,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10725,7 +10724,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10743,7 +10742,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10756,7 +10755,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -14225,7 +14224,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -17991,7 +17990,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -22756,49 +22755,70 @@
         },
         "additionalProperties": false
       },
+      "MailSettings": {
+        "type": "object",
+        "properties": {
+          "mailServer": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailAccountName": {
+            "type": "string",
+            "nullable": true
+          },
+          "enableEmailCopyOfMessages": {
+            "type": "boolean"
+          },
+          "zipDirectory": {
+            "type": "string",
+            "nullable": true
+          },
+          "enableEmail": {
+            "type": "boolean"
+          },
+          "disableEmailStatementEncryption": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "PayrollData": {
         "required": [
+          "earnDeductCode",
           "empNo",
           "entryDate",
-          "earnDeductCode",
-          "units",
-          "unitOfMeasure"
+          "unitOfMeasure",
+          "units"
         ],
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
-            "description": "This gets included in the response. You can use this to map error messages to invalid entries. \n\nWhen making a post request, leave this blank.",
             "nullable": true
           },
           "empNo": {
             "maxLength": 9,
             "minLength": 0,
-            "type": "string",
-            "description": "The employee number assigned to the employee."
+            "type": "string"
           },
           "entryDate": {
             "type": "string",
-            "description": "The date of the payroll data entry in ISO 8601 format.",
             "format": "date-time"
           },
           "earnDeductCode": {
             "maxLength": 3,
             "minLength": 0,
             "pattern": "[0-9]*",
-            "type": "string",
-            "description": "The three-digit earning or deduction code for the entry. Earning Codes are from 001 to 499. Deduction Codes are from 500 to 999."
+            "type": "string"
           },
           "positionCode": {
             "maxLength": 12,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the position worked. If the position is left blank, the employee's primary position will be used if required for rates.\n\nIf ‘Only allow defined Employee Positions in time data entry’ is selected on the Time Data Entry tab in Payroll Parameters, the position must be on the employee’s profile.",
             "nullable": true
           },
           "units": {
             "type": "number",
-            "description": "The units for the payroll data entry.",
             "format": "double"
           },
           "unitOfMeasure": {
@@ -22806,22 +22826,18 @@
           },
           "dollarRate": {
             "type": "number",
-            "description": "The dollar rate of pay. This will only be used for earnings if earnDeductCode is 001 to 499.\n\nIf left blank, the rate of pay will be determined within Avanti.",
             "format": "double"
           },
           "earningAmount": {
             "type": "number",
-            "description": "Enter the earning amount for the entry. If you're using dollarRate, this must match the total for the units by dollarRate.\nThis is only used if the earnDeductCode is between 001-499.",
             "format": "double"
           },
           "benefitAmount": {
             "type": "number",
-            "description": "The total benefit amount for the entry. This is only used if the earnDeductCode is between 500-999.",
             "format": "double"
           },
           "deductionAmount": {
             "type": "number",
-            "description": "The total deduction amount for the entry. This is only used if the earnDeductCode is between 500-999.",
             "format": "double"
           },
           "glType": {
@@ -22831,14 +22847,12 @@
             "maxLength": 4,
             "minLength": 0,
             "type": "string",
-            "description": "The GL group for the worked time. This is required when parameter glType is 'g'.\nMust be a valid GL group. 'List GL Groups' will return the valid GL Groups.",
             "nullable": true
           },
           "glAccount": {
             "maxLength": 60,
             "minLength": 0,
             "type": "string",
-            "description": "The GL account for the worked time. This is required when parameter glType is 'a'.\nMust be a valid account. 'List GL Accounts' returns the valid accounts for each segment. A combination of segments can be used to create a valid account.",
             "nullable": true
           },
           "glBenefitGroup": {
@@ -22846,7 +22860,6 @@
             "minLength": 0,
             "pattern": "[0-9]*",
             "type": "string",
-            "description": "The GL group for the worked time. This is required when parameter glType is 'g'.\nMust be a valid GL group. 'List GL Groups' will return the valid GL Groups.",
             "nullable": true
           },
           "wcbOverrideCode": {
@@ -22854,33 +22867,28 @@
             "minLength": 3,
             "pattern": "[0-9]*",
             "type": "string",
-            "description": "The ID of the WCB Group. If left blank, the time will apply to the WCB group selected on the employee's profile.\nMust be a valid WCB group. 'List WCB Groups' will return a list of all the valid groups.",
             "nullable": true
           },
           "attendanceCode": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "\"The attendance code for the worked time.\n\nMust be a valid attendance code. 'Get Attendance Codes' will return the valid codes.",
             "nullable": true
           },
           "attendanceReason": {
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
-            "description": "Up to 1024 alphanumeric characters that will populate the payroll data entry comments. ",
             "nullable": true
           },
           "taskId": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the task for the time worked.\n\nFor a list of tasks set up in the company, use the 'Get TaskIds' endpoint.",
             "nullable": true
           },
           "locationCode": {
             "type": "string",
-            "description": "The location code for the worked time.\n\nMust be a valid location code. 'List Locations' will return the valid codes.",
             "nullable": true
           }
         },
@@ -22896,12 +22904,10 @@
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
-            "description": "An alphanumeric description for the payroll batch, which can be up to 1024 characters. This is required when importToStagingTable is False. \\nThis isn't used if importToStagingTable is True. ",
             "nullable": true
           },
           "batchCompleted": {
-            "type": "boolean",
-            "description": "Enter true if the batch is complete. Default is false. \n\nThis isn't used when importToStagingTable is True."
+            "type": "boolean"
           },
           "payrollData": {
             "type": "array",
@@ -22910,12 +22916,10 @@
             }
           },
           "stopImportOnAnyError": {
-            "type": "boolean",
-            "description": "If True, no entries will import if one of the entries is invalid. Default is False."
+            "type": "boolean"
           },
           "importToStagingTable": {
-            "type": "boolean",
-            "description": "If True, payroll data will import into a staging table. If False, a new batch is created each time the endpoint is used. Default is False."
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -23172,33 +23176,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "MailSettings": {
-        "type": "object",
-        "properties": {
-          "mailServer": {
-            "type": "string",
-            "nullable": true
-          },
-          "mailAccountName": {
-            "type": "string",
-            "nullable": true
-          },
-          "enableEmailCopyOfMessages": {
-            "type": "boolean"
-          },
-          "zipDirectory": {
-            "type": "string",
-            "nullable": true
-          },
-          "enableEmail": {
-            "type": "boolean"
-          },
-          "disableEmailStatementEncryption": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -23211,7 +23188,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
