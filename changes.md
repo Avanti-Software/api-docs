@@ -1,3 +1,62 @@
+# Mar 24, 2022 1:27 PM
+**GitHub Run ID:** 2034505796
+**GitHub Run Number:** 3263
+**Reference:** refs/heads/master
+**Commit:** a5790c1e0289df9c20916f0ba558d0a9dfc53bbf## Added
+ * Endpoint: GET - /v1/ChangeLog
+ * Endpoint: POST - /v1/ChangeLog
+ * Endpoint: GET - /v1/ChangeLog/{logIndex}
+ * Endpoint: GET - /v1/ChangeLog/Search
+ * Endpoint: PUT - /v1/ChangeLog/{id}
+ * Endpoint: DELETE - /v1/ChangeLog/{id}
+ * Endpoint: GET - /v1/EmployeeBenefits
+ * Endpoint: POST - /v1/PayrollDataImport
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport
+ * Endpoint: POST - /v1/WorkTech/EmpEntlExport
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpEntlExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpEntlExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport
+ * Endpoint: POST - /v1/WorkTech/EmpPosExport
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: PUT - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: DELETE - /v1/WorkTech/EmpPosExport/{empNo}/{position}
+ * Endpoint: GET - /v1/WorkTech/EmpPosExport/Search
+ * Endpoint: GET - /v1/WorkTech/EmpExport
+ * Endpoint: POST - /v1/WorkTech/EmpExport
+ * Endpoint: GET - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: PUT - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: DELETE - /v1/WorkTech/EmpExport/{empNo}
+ * Endpoint: GET - /v1/WorkTech/EmpExport/Search
+* Model: Beneficiary
+* Model: BenefitsSettings
+* Model: ChangeLog
+* Model: EmergencyContact, Property: mobilePhone
+* Model: EmergencyContact, Property: primaryPhone
+* Model: Employee, Property: employeeNameFormat
+* Model: Employee, Property: fullName
+* Model: EmployeeBenefitDetails
+* Model: ImportPayrollDataResult
+* Model: MailSettings
+* Model: Notification, Property: subjectFr
+* Model: Notification, Property: contentFr
+* Model: PayrollData
+* Model: PayrollDataImport
+* Model: Position, Property: effectiveDate
+* Model: Position, Property: expiryDate
+* Model: Position, Property: active
+* Model: Settings, Property: mailSettings
+* Model: Settings, Property: benefitsSettings
+* Model: TimeManagementSettings, Property: allowPostingAsExchange
+* Model: WorkTechEmpEntlExport
+* Model: WorkTechEmpExport
+* Model: WorkTechEmpPosExport
+## Removed
+ * Endpoint: GET - /v1/CompanyInfo/LoginLogo
+ * Endpoint: PUT - /v1/CompanyInfo/LoginLogo
+* Model: EmployeeContactInfo
+
 # Mar 23, 2022 11:15 PM
 **GitHub Run ID:** 2031249414
 **GitHub Run Number:** 151
