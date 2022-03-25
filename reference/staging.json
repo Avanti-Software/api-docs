@@ -2547,6 +2547,69 @@
         }
       }
     },
+    "/v1/Employees/List": {
+      "put": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "List Employees Summary",
+        "operationId": "List-Employees-Summary",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeListRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeListRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeListRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TextValuePair"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/Employees/Photo": {
       "get": {
         "tags": [
@@ -23372,6 +23435,40 @@
           },
           "primaryPosition": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeListRequest": {
+        "type": "object",
+        "properties": {
+          "skip": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "take": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empNoReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "search": {
+            "type": "string",
+            "nullable": true
+          },
+          "active": {
+            "$ref": "#/components/schemas/ActiveStatus"
+          },
+          "sortOrder": {
+            "$ref": "#/components/schemas/EmployeeSortOrder"
+          },
+          "sortDirection": {
+            "$ref": "#/components/schemas/SortDirection"
+          },
+          "takeOption": {
+            "$ref": "#/components/schemas/TakeOption"
           }
         },
         "additionalProperties": false
