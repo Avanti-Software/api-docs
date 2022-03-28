@@ -2548,7 +2548,7 @@
       }
     },
     "/v1/Employees/List": {
-      "put": {
+      "get": {
         "tags": [
           "Employees"
         ],
