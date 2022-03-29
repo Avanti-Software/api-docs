@@ -19911,6 +19911,13 @@
           "isDateField": {
             "type": "boolean",
             "readOnly": true
+          },
+          "validation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntryTemplateFieldValidation"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -23469,6 +23476,979 @@
           },
           "takeOption": {
             "$ref": "#/components/schemas/TakeOption"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanySettings": {
+        "type": "object",
+        "properties": {
+          "lookupSettings": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LookupSettings"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanySettingsLazy": {
+        "type": "object",
+        "properties": {
+          "isValueCreated": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "value": {
+            "$ref": "#/components/schemas/CompanySettings"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ILogRepository": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ILogRepositoryLazy": {
+        "type": "object",
+        "properties": {
+          "isValueCreated": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "value": {
+            "$ref": "#/components/schemas/ILogRepository"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ITranslationRepository": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "License": {
+        "type": "object",
+        "properties": {
+          "usersClassA": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "usersClassB": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "usersClassC": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "usersClassD": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "usersClassX": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogService": {
+        "type": "object",
+        "properties": {
+          "logRepository": {
+            "$ref": "#/components/schemas/ILogRepositoryLazy"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LookupSettings": {
+        "type": "object",
+        "properties": {
+          "display": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Permission": {
+        "required": [
+          "respDelete",
+          "respInsert",
+          "respModify",
+          "respView",
+          "roleType",
+          "userGroups"
+        ],
+        "type": "object",
+        "properties": {
+          "programName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "respInsert": {
+            "type": "string"
+          },
+          "respModify": {
+            "type": "string"
+          },
+          "respView": {
+            "type": "string"
+          },
+          "respDelete": {
+            "type": "string"
+          },
+          "responsibility": {
+            "type": "string",
+            "nullable": true
+          },
+          "userGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "userGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserGroup"
+            }
+          },
+          "roleType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProgramParameter": {
+        "type": "object",
+        "properties": {
+          "payRateMask": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "roleType": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "processId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowBlankUserPasswords": {
+            "type": "boolean"
+          },
+          "allowBlankCompanyPasswords": {
+            "type": "boolean"
+          },
+          "forcePasswordEntry": {
+            "type": "boolean"
+          },
+          "userAuthenticationMode": {
+            "$ref": "#/components/schemas/UserAuthenticationMode"
+          },
+          "currentUserAuthenticationMode": {
+            "$ref": "#/components/schemas/UserAuthenticationMode"
+          },
+          "defaultFolder": {
+            "type": "string",
+            "nullable": true
+          },
+          "menuId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sqlScriptsDirectory": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "loginServicePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "eventType": {
+            "type": "string",
+            "nullable": true
+          },
+          "useControlDatabase": {
+            "type": "boolean"
+          },
+          "userGroups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "userGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "userClass": {
+            "$ref": "#/components/schemas/UserClass"
+          },
+          "sessionStartTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sessionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "commandLineParameters": {
+            "type": "string",
+            "nullable": true
+          },
+          "customParameter": {
+            "nullable": true
+          },
+          "scriptFilesPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "textFilesPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "parameterFile": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportsHeaderSqlServerConnectionString": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "applicationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sqlServerConnectionString": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "sqlServerControlDatabaseConnectionString": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "windowsIntegratedSecurity": {
+            "type": "boolean"
+          },
+          "showProgramTab": {
+            "type": "boolean"
+          },
+          "programName": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "sqlServerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sqlServerDatabaseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "enlistInDistributedTransaction": {
+            "type": "boolean"
+          },
+          "companyDisplayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isProduction": {
+            "type": "boolean"
+          },
+          "sqlServerUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sqlServerUserPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "avantiSqlWorkingDirectory": {
+            "type": "string",
+            "nullable": true
+          },
+          "avantiSqlDataDirectory": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "helpSystem": {
+            "type": "string",
+            "nullable": true
+          },
+          "helpId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "errorLogFile": {
+            "type": "string",
+            "nullable": true
+          },
+          "dllDirectory": {
+            "type": "string",
+            "nullable": true
+          },
+          "inputFile": {
+            "type": "string",
+            "nullable": true
+          },
+          "outputFile": {
+            "type": "string",
+            "nullable": true
+          },
+          "programOption1": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "programOption2": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "option1": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "option2": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "sourceCompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationCompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "saveBackup": {
+            "type": "boolean"
+          },
+          "enableSqlServerModify": {
+            "type": "boolean"
+          },
+          "formBottomMargin": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sqlServerControlDatabaseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "productCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "sqlServerVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "systemDsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "avantiUser": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeGivenName": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeSurname": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeInitial": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeePreferredName": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoRevision": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "avantiUserDomain": {
+            "type": "string",
+            "nullable": true
+          },
+          "domainList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "reportNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reporterReportId": {
+            "type": "string",
+            "nullable": true
+          },
+          "coverPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "landscapeReportNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userRespLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "maxSqlConnectionPoolSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "programRespLevel": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dateFormat": {
+            "type": "string",
+            "nullable": true
+          },
+          "userGroupMembership": {
+            "type": "string",
+            "nullable": true
+          },
+          "licensee": {
+            "type": "string",
+            "nullable": true
+          },
+          "stationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "menuTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "isTestCompany": {
+            "type": "boolean"
+          },
+          "formTitle": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "mainMenuTitle": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "softwareDirectory": {
+            "type": "string",
+            "nullable": true
+          },
+          "avantiUserEmpNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "license": {
+            "$ref": "#/components/schemas/License"
+          },
+          "allowInsert": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowModify": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowView": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowDelete": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "programRespLevelInsert": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "programRespLevelModify": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "programRespLevelView": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "programRespLevelDelete": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeNameFormat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enableViewAccessLogging": {
+            "type": "boolean"
+          },
+          "language": {
+            "$ref": "#/components/schemas/Language"
+          },
+          "isFrench": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isEnglish": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "group1": {
+            "type": "string",
+            "nullable": true
+          },
+          "group2": {
+            "type": "string",
+            "nullable": true
+          },
+          "group3": {
+            "type": "string",
+            "nullable": true
+          },
+          "group4": {
+            "type": "string",
+            "nullable": true
+          },
+          "group5": {
+            "type": "string",
+            "nullable": true
+          },
+          "group6": {
+            "type": "string",
+            "nullable": true
+          },
+          "group7": {
+            "type": "string",
+            "nullable": true
+          },
+          "group8": {
+            "type": "string",
+            "nullable": true
+          },
+          "group9": {
+            "type": "string",
+            "nullable": true
+          },
+          "group10": {
+            "type": "string",
+            "nullable": true
+          },
+          "autoResize": {
+            "type": "boolean"
+          },
+          "asyUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "asyUserPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "asyCompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "asyCompanyPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "windowHeight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "windowWidth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amPmTimeFormat": {
+            "type": "boolean"
+          },
+          "defaultMenuId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastMenuView": {
+            "type": "string",
+            "nullable": true
+          },
+          "startProgramShortcut": {
+            "type": "boolean"
+          },
+          "timeFormat": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "timeFormatWithSeconds": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dateAndTimeFormat": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastLoginTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "automaticExitOnSuccess": {
+            "type": "boolean"
+          },
+          "employeeNoToSelect": {
+            "type": "string",
+            "nullable": true
+          },
+          "tabControlId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "deviceId": {
+            "type": "string",
+            "nullable": true
+          },
+          "menu": {
+            "$ref": "#/components/schemas/UserMenu"
+          },
+          "adminMenu": {
+            "$ref": "#/components/schemas/UserMenu"
+          },
+          "permissions": {
+            "$ref": "#/components/schemas/Permission"
+          },
+          "clientIsAvanti": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isWeb": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isEmployee": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryTemplateFieldValidation": {
+        "type": "object",
+        "properties": {
+          "validation": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationMessageFr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryUpdateResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "prompts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "errorPrompts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "promptHeading": {
+            "type": "string",
+            "nullable": true
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntryUpdateResult"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryUpdateResult": {
+        "type": "object",
+        "properties": {
+          "startParam": {
+            "$ref": "#/components/schemas/ProgramParameter"
+          },
+          "logService": {
+            "$ref": "#/components/schemas/LogService"
+          },
+          "translationService": {
+            "$ref": "#/components/schemas/TranslationServiceLazy"
+          },
+          "companySettingsDependency": {
+            "$ref": "#/components/schemas/CompanySettingsLazy"
+          },
+          "loggerDependency": {
+            "$ref": "#/components/schemas/TimeEntryUpdateResultILoggerLazy"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "added": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "successes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "failures": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeEntryViewModel": {
+            "$ref": "#/components/schemas/TimeEntryViewModel"
+          },
+          "isNew": {
+            "type": "boolean"
+          },
+          "validation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntryValidationError"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryUpdateResultILogger": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "TimeEntryUpdateResultILoggerLazy": {
+        "type": "object",
+        "properties": {
+          "isValueCreated": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "value": {
+            "$ref": "#/components/schemas/TimeEntryUpdateResultILogger"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryValidationError": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeEntryViewModel": {
+        "type": "object",
+        "properties": {
+          "viewId": {
+            "type": "string",
+            "nullable": true
+          },
+          "templateId": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeEntry": {
+            "$ref": "#/components/schemas/TimeEntry"
+          },
+          "timeEntries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeEntry"
+            },
+            "nullable": true
+          },
+          "entryIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowApprove": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowReject": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowUnreject": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowWithdraw": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowUnapprove": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowCancel": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowUncancel": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "allowDelete": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "readOnly": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TranslationService": {
+        "type": "object",
+        "properties": {
+          "translationRepository": {
+            "$ref": "#/components/schemas/ITranslationRepository"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TranslationServiceLazy": {
+        "type": "object",
+        "properties": {
+          "isValueCreated": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "value": {
+            "$ref": "#/components/schemas/TranslationService"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAuthenticationMode": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "UserMenu": {
+        "type": "object",
+        "properties": {
+          "menuItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MenuItem"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
