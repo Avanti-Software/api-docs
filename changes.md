@@ -1,3 +1,20 @@
+# Mar 31, 2022 1:19 PM
+**GitHub Run ID:** 2071235785
+**GitHub Run Number:** 3325
+**Reference:** refs/heads/master
+**Commit:** 66777f328a504bcba5cabb52bf7aa03ce68c8170## Added
+ * Endpoint: GET - /v1/PersonalInfo/EmployeeAdditionalInfo
+ * Endpoint: PUT - /v1/PersonalInfo/EmployeeAdditionalInfo
+ * Endpoint: GET - /v1/PersonalInfo/EmployeeAdditionalInfoSetup
+* Model: EmployeeAdditionalInfo
+* Model: EmployeeAdditionalInfoSetupResponse
+## Removed
+ * Endpoint: GET - /v1/PersonalInfo/EmployeeFigures
+ * Endpoint: PUT - /v1/PersonalInfo/EmployeeFigures
+ * Endpoint: GET - /v1/PersonalInfo/EmployeeFiguresSetup
+* Model: EmployeeFigures
+* Model: EmployeeFigureSetupResponse
+
 # Mar 29, 2022 4:05 PM
 **GitHub Run ID:** 2059657847
 **GitHub Run Number:** 3311

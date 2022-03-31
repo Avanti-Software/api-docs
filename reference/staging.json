@@ -4902,79 +4902,13 @@
         }
       }
     },
-    "/v1/PersonalInfo/EmployeeFigures": {
+    "/v1/PersonalInfo/EmployeeAdditionalInfo": {
       "get": {
         "tags": [
-          "Personal Info"
+          "Employee Additional Information"
         ],
-        "summary": "Get User Defined Profile Fields",
-        "description": "Returns a list of the Figures, Dates, and Text Fields for the employee. User Definied Profile Fields are defined on the Profile Field Names tab of the Payroll Parameters. \n\nThe Figures and Text Fields for the employee are on the Values tab of the Employee Profile. The Dates for the employee are on the Dates tab of the Employee Profile.",
-        "operationId": "Get-Employee-Figures",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeFigures"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Employee Personal Info"
-        ],
-        "summary": "Update Employee Figures",
-        "operationId": "Update-Employee-Figures",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeFigures"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": { }
-            }
-          }
-        }
-      }
-    },
-    "/v1/PersonalInfo/EmployeeFiguresSetup": {
-      "get": {
-        "tags": [
-          "Employee User Values"
-        ],
-        "summary": "User Defined Profile Fields Setup",
-        "operationId": "User-Defined-Values-Setup",
+        "summary": "List Employee Additional Information",
+        "operationId": "List-Employee-Additional-Information",
         "parameters": [
           {
             "name": "empNo",
@@ -4990,7 +4924,59 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/EmployeeFigureSetupResponse"
+                  "$ref": "#/components/schemas/EmployeeAdditionalInfo"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Employee Additional Information"
+        ],
+        "summary": "Update Additional Information",
+        "operationId": "Update-Additional-Information",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeAdditionalInfo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeAdditionalInfo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeAdditionalInfo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/v1/PersonalInfo/EmployeeAdditionalInfoSetup": {
+      "get": {
+        "tags": [
+          "Employee Additional Information"
+        ],
+        "summary": "Additional Inforamtion Setup",
+        "operationId": "Additional-Inforamtion-Setup",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeAdditionalInfoSetupResponse"
                 }
               }
             }
@@ -12850,59 +12836,6 @@
           },
           "isPrimary": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmployeeFigures": {
-        "type": "object",
-        "properties": {
-          "empNo": {
-            "type": "string",
-            "description": "The employee number of the employee. When not provided the employee number assigned to the current user will be used if available.",
-            "nullable": true
-          },
-          "dedFig": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DeductionFigure"
-            },
-            "nullable": true
-          },
-          "otherDate": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OtherDate"
-            },
-            "nullable": true
-          },
-          "otherText": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OtherText"
-            },
-            "nullable": true
-          },
-          "textFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "dateFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "figureFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -22387,112 +22320,6 @@
         },
         "additionalProperties": false
       },
-      "EmployeeFigureSetupResponse": {
-        "type": "object",
-        "properties": {
-          "disabledDedFiguresForEmployees": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledOtherTextsForEmployees": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledOtherDatesForEmployees": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledDedFiguresForManagers": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledOtherTextsForManagers": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledOtherDatesForManagers": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledDedFiguresForManagerSelf": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledOtherTextsForManagerSelf": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "disabledOtherDatesForManagerSelf": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "textFieldData": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/StringTextValuePairListKeyValuePair"
-            },
-            "nullable": true
-          },
-          "textFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "dateFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "figureFieldLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "StringTextValuePairListKeyValuePair": {
         "type": "object",
         "properties": {
@@ -24452,6 +24279,164 @@
           }
         },
         "additionalProperties": false
+      },
+      "EmployeeAdditionalInfo": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "dedFig": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeductionFigure"
+            },
+            "nullable": true
+          },
+          "otherDate": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OtherDate"
+            },
+            "nullable": true
+          },
+          "otherText": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OtherText"
+            },
+            "nullable": true
+          },
+          "textFieldLabels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "dateFieldLabels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "figureFieldLabels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeAdditionalInfoSetupResponse": {
+        "type": "object",
+        "properties": {
+          "disabledDedFiguresForEmployees": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherTextsForEmployees": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherDatesForEmployees": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledDedFiguresForManagers": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherTextsForManagers": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherDatesForManagers": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledDedFiguresForManagerSelf": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherTextsForManagerSelf": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "disabledOtherDatesForManagerSelf": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "textFieldData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringTextValuePairListKeyValuePair"
+            },
+            "nullable": true
+          },
+          "textFieldLabels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "dateFieldLabels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "figureFieldLabels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -24500,6 +24485,9 @@
     },
     {
       "name": "Emergency Contacts"
+    },
+    {
+      "name": "Employee Additional Information"
     },
     {
       "name": "Employee Address"
@@ -24553,9 +24541,6 @@
       "name": "Employee Position Rates"
     },
     {
-      "name": "Employee User Values"
-    },
-    {
       "name": "Employee Vacation Info"
     },
     {
@@ -24599,9 +24584,6 @@
     },
     {
       "name": "Payroll Data"
-    },
-    {
-      "name": "Personal Info"
     },
     {
       "name": "Positions"
