@@ -1,3 +1,13 @@
+# Apr 01, 2022 3:13 PM
+**GitHub Run ID:** 2078101713
+**GitHub Run Number:** 3339
+**Reference:** refs/heads/master
+**Commit:** 5c274b6a0f80ecf173d27fc1d836922ee4f171ff## Added
+ * Endpoint: POST - /v1/ScheduleDataImport
+* Model: Dependent, Property: mobilePhone
+* Model: Dependent, Property: primaryPhone
+* Model: ScheduleEntryRequest
+
 # Mar 31, 2022 1:19 PM
 **GitHub Run ID:** 2071235785
 **GitHub Run Number:** 3325

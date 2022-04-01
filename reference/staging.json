@@ -5516,6 +5516,84 @@
         }
       }
     },
+    "/v1/ScheduleDataImport": {
+      "post": {
+        "tags": [
+          "Schedule Import"
+        ],
+        "summary": "Import Schedule Entries",
+        "operationId": "Import-Schedule-Entries",
+        "parameters": [
+          {
+            "name": "replaceExisting",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "maxItems": 1000,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ScheduleEntryRequest"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "maxItems": 1000,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ScheduleEntryRequest"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "maxItems": 1000,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ScheduleEntryRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/ScheduleTemplates": {
       "get": {
         "tags": [
@@ -11716,6 +11794,16 @@
             "type": "string",
             "description": "The dependents employee number, if the dependent is also an employee. This will only be used if the parameter isEmployee is true.",
             "nullable": true
+          },
+          "mobilePhone": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "primaryPhone": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -24437,6 +24525,103 @@
           }
         },
         "additionalProperties": false
+      },
+      "ScheduleEntryRequest": {
+        "required": [
+          "employeeNumber",
+          "payCode",
+          "scheduleDate"
+        ],
+        "type": "object",
+        "properties": {
+          "employeeNumber": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "scheduleDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "payCode": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "fromTime": {
+            "maximum": 1440,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "toTime": {
+            "maximum": 1440,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "amount": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unitOfMeasure": {
+            "type": "string",
+            "nullable": true
+          },
+          "shiftId": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "positionCode": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "payPrimaryPosition": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "attendanceCode": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "comment": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "taskId": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "referenceNumber": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -24593,6 +24778,9 @@
     },
     {
       "name": "Reporter"
+    },
+    {
+      "name": "Schedule Import"
     },
     {
       "name": "Schedule Templates"
