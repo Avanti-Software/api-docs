@@ -15819,6 +15819,10 @@
           "contentFr": {
             "type": "string",
             "nullable": true
+          },
+          "excerptFr": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
