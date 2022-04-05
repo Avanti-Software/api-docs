@@ -17191,6 +17191,9 @@
           },
           "pdfSharingEnabled": {
             "type": "boolean"
+          },
+          "disableEmailStatementEncryption": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

@@ -1,3 +1,10 @@
+# Apr 05, 2022 1:09 PM
+**GitHub Run ID:** 2096302130
+**GitHub Run Number:** 3358
+**Reference:** refs/heads/master
+**Commit:** b381f16643821b5771426215fca0b52b14934211## Added
+* Model: PayStatementsSettings, Property: disableEmailStatementEncryption
+
 # Apr 04, 2022 5:07 PM
 **GitHub Run ID:** 2091337038
 **GitHub Run Number:** 3353
