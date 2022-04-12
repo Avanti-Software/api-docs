@@ -396,8 +396,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -406,11 +409,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -491,8 +491,11 @@
           }
         },
         "responses": {
-          "default": {
-            "description": "Error",
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -501,11 +504,8 @@
               }
             }
           },
-          "204": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -534,16 +534,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success"
           },
@@ -552,6 +542,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -582,8 +582,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -592,11 +595,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -820,7 +820,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -874,7 +874,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "409": {
@@ -911,7 +911,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -944,7 +944,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -991,7 +991,7 @@
                 }
               },
               "encoding": {
-                "logos": { }
+                "logos": {}
               }
             }
           }
@@ -1000,7 +1000,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1082,7 +1082,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1117,7 +1117,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -1175,7 +1175,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1317,7 +1317,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1422,7 +1422,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1459,7 +1459,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1496,7 +1496,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1534,7 +1534,7 @@
                 }
               },
               "encoding": {
-                "files": { }
+                "files": {}
               }
             }
           }
@@ -1543,7 +1543,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1567,7 +1567,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1621,7 +1621,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1695,16 +1695,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success",
             "content": {
@@ -1720,6 +1710,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1944,7 +1944,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2193,7 +2193,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2237,7 +2237,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2574,16 +2574,6 @@
           }
         },
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success",
             "content": {
@@ -2599,6 +2589,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -2647,7 +2647,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -2754,7 +2754,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -3130,8 +3130,8 @@
         "tags": [
           "GLs"
         ],
-        "summary": "List GL Project Accounts",
-        "description": "Returns a list of Project Accounts. ",
+        "summary": "List GL Project and Phases",
+        "description": "Returns a list of the Project and Phase Accounts. ",
         "operationId": "List-GL-Project-Accounts",
         "parameters": [
           {
@@ -3860,7 +3860,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -3919,7 +3919,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3999,7 +3999,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4130,7 +4130,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4308,7 +4308,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -4440,16 +4440,6 @@
           }
         },
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success",
             "content": {
@@ -4472,6 +4462,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -4721,7 +4721,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -4894,7 +4894,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": { }
+                  "example-1": {}
                 }
               }
             }
@@ -5089,7 +5089,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -5114,7 +5114,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -5316,8 +5316,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    { },
-                    { }
+                    {},
+                    {}
                   ]
                 },
                 "examples": {
@@ -5521,7 +5521,7 @@
         "tags": [
           "Schedule Import"
         ],
-        "summary": "Import Schedule Entries",
+        "summary": "Add Schedules",
         "operationId": "Import-Schedule-Entries",
         "parameters": [
           {
@@ -5530,7 +5530,8 @@
             "schema": {
               "type": "boolean",
               "default": false
-            }
+            },
+            "description": "If true, schedules with a duplicate reference number replaces the original schedules. Otherwise, entries with duplicates won't be added.  "
           }
         ],
         "requestBody": {
@@ -5565,16 +5566,6 @@
           }
         },
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success"
           },
@@ -5590,8 +5581,19 @@
                 }
               }
             }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
-        }
+        },
+        "description": "Create schedules for your employees. This incorporates schedules prepared by other systems into your Avanti time.\n\nThe API User must have user group access to the employee's pay group to create schedules for an employee."
       }
     },
     "/v1/ScheduleTemplates": {
@@ -6258,7 +6260,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -6742,7 +6744,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -7569,8 +7571,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -7579,11 +7584,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -7644,8 +7646,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -7654,11 +7659,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -7875,8 +7877,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -7885,11 +7890,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -7950,8 +7952,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -7960,11 +7965,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -8354,8 +8356,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -8364,11 +8369,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -8437,8 +8439,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Error",
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -8447,11 +8452,8 @@
               }
             }
           },
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -10689,7 +10691,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10739,7 +10741,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true
           },
           "hasErrors": {
@@ -10782,7 +10784,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10807,7 +10809,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10827,13 +10829,13 @@
           },
           "relations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -10872,19 +10874,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10893,7 +10895,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10904,7 +10906,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10922,7 +10924,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10935,7 +10937,7 @@
           },
           "rows": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -14359,7 +14361,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -18132,7 +18134,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {},
+        "title": ""
       },
       "PropertyAttributes": {
         "enum": [
@@ -24534,32 +24537,32 @@
         "additionalProperties": false
       },
       "ScheduleEntryRequest": {
-        "required": [
-          "employeeNumber",
-          "payCode",
-          "scheduleDate"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "employeeNumber": {
             "maxLength": 9,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The employee number assigned to the employee."
           },
           "scheduleDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "The date the employee is scheduled worked in ISO 8601 format."
           },
           "payCode": {
             "maxLength": 9,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The ID of the schedule's pay code. "
           },
           "fromTime": {
             "maximum": 1440,
             "minimum": 0,
             "type": "integer",
             "format": "int32",
+            "description": "The time the employee started work in ISO 8601 format. \nThis is required it the pay code's entry type is From To Times. ",
             "nullable": true
           },
           "toTime": {
@@ -24567,6 +24570,7 @@
             "minimum": 0,
             "type": "integer",
             "format": "int32",
+            "description": "The time the employee ends work in ISO 8601 format. \nThis is required if you aren't including Amount and unitOfMeasure. ",
             "nullable": true
           },
           "amount": {
@@ -24574,50 +24578,59 @@
             "minimum": 0,
             "type": "number",
             "format": "double",
+            "description": "The amount of time the employee is schedule for. This corresponds to the unitOfMeasure. \nThis is required it the pay code's entry type is Units and Unit Code. ",
             "nullable": true
           },
           "unitOfMeasure": {
             "type": "string",
+            "description": "The unit of measure for the units indicated. D is in Days. H is in Hours. U is in Units. \nThis is required it the pay code's entry type is Units and Unit Code. ",
             "nullable": true
           },
           "shiftId": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
+            "description": "The ID of the shift worked. If left blank, premium rules and break rules will not apply to the time worked.\n\nMust be a valid shift ID. 'Get Shift Codes' will return a list of all the valid shifts.",
             "nullable": true
           },
           "locationCode": {
             "maxLength": 4,
             "minLength": 0,
             "type": "string",
+            "description": "he location code for the worked time.\n\nMust be a valid location code. 'List Locations' will return the valid codes.",
             "nullable": true
           },
           "positionCode": {
             "maxLength": 12,
             "minLength": 0,
             "type": "string",
+            "description": "The ID of the position the employee is scheduled to work. If the position is left blank, the employees primary position will be used if required for rates.\n\nIf ‘Only allow defined Employee Positions in time data entry’ is selected on the Time Data Entry tab of Payroll Parameters, the position must be on the employee’s profile",
             "nullable": true
           },
           "payPrimaryPosition": {
             "type": "boolean",
+            "description": "If true, the employee will be paid the rate of their primary position, regardless of the position on the schedule. ",
             "nullable": true
           },
           "attendanceCode": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
+            "description": "The attendance code for the scheduled time.\n\nMust be a valid attendance code. 'Get Attendance Codes' will return the valid codes.",
             "nullable": true
           },
           "comment": {
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
+            "description": "Up to 1024 alphanumeric characters that will populate the schedule entry comments",
             "nullable": true
           },
           "taskId": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
+            "description": "The ID of the task for the time worked.\n\nFor a list of tasks set up in the company, use the 'Get Task Ids' endpoint.",
             "nullable": true
           },
           "referenceNumber": {
@@ -24625,10 +24638,15 @@
             "minimum": 0,
             "type": "integer",
             "format": "int32",
+            "description": "If provided it must be unique imported. If a reference number is provided and ‘Replace Duplicate Reference Number’, the values will replace the previously imported values.\nThis ensures that same item is not accidentally added  twice.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "required": [
+          "employeeNumber",
+          "scheduleDate",
+          "payCode"
+        ]
       }
     },
     "securitySchemes": {
@@ -24641,7 +24659,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ],
   "tags": [
