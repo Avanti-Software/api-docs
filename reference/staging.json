@@ -4238,7 +4238,8 @@
               "type": "integer",
               "format": "int32",
               "default": 0
-            }
+            },
+            "description": "The number of entries returned."
           },
           {
             "name": "skip",
@@ -4247,7 +4248,8 @@
               "type": "integer",
               "format": "int32",
               "default": 0
-            }
+            },
+            "description": "The number of entries to skip."
           }
         ],
         "responses": {
@@ -4284,7 +4286,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Returns a list of the pay codes with their setup details. \n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time."
       }
     },
     "/v1/PayGroup/{payGroup}": {
@@ -22346,13 +22349,16 @@
       },
       "PayCode": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "code": {
             "type": "string",
+            "description": "Returns the Pay Code's ID. ",
             "nullable": true
           },
           "description": {
             "type": "string",
+            "description": "Returns the Pay Code's Description.",
             "nullable": true
           },
           "useAttendReason": {
@@ -22365,58 +22371,71 @@
           },
           "earnCode": {
             "type": "string",
+            "description": "The three-digit earning or deduction code for the entry. Earning Codes are from 001 to 499. ",
             "nullable": true
           },
           "useUnits": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Returns True if the pay code uses units and units of measure. Returns False if the pay code uses from/to times. "
           },
           "defaultUnits": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": "The default number of units when the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. "
           },
           "defaultUnitCode": {
             "type": "string",
+            "description": "The default number of unit of measure when the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. ",
             "nullable": true
           },
           "useOnlyInSchedules": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Returns True if the Pay Code is only used in Schedules, false if it's used elsewhere in Time & Attendance. "
           },
           "excludeFromTotals": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Returns True if entries are excluded from schedule totals. Returns False if entries are included in schedule totals. "
           },
           "r": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "Returns the r value used to create the rgb color. Only used if useColor is true. "
           },
           "g": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "Returns the g value used to create the rgb color. Only used if useColor is true. "
           },
           "b": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "Returns the B value used to create the rgb color. Only used if useColor is true. "
           },
           "useColor": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Displays True if a colour displays on cells with an entry with the pay code. Displays the colour from the rgb value. "
           },
           "active": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Returns True if the Pay Code is active, false if it's inactive. "
           },
           "allowOverlappingTimes": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Returns True if entries can overlap with other schedules entries. Returns Fase if schedule entries cannot overlap."
           },
           "overlappingFromTime": {
             "type": "integer",
             "format": "int32",
+            "description": "Sets the overlapping from time the pay code is units and units.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
             "nullable": true
           },
           "overlappingToTime": {
             "type": "integer",
             "format": "int32",
+            "description": "Sets the overlapping to time the pay code is units and units.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "StringTextValuePairListKeyValuePair": {
         "type": "object",
