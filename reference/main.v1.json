@@ -5593,7 +5593,7 @@
             }
           }
         },
-        "description": "Incorporate schedules prepared by other systems into your Avanti time with the Add Schedules endpoint. \n\nThe API User must have user group access to the pay group and scheduling role permission for the employee to add schedules. \n\nIf there are any errors, no schedule entries are added. "
+        "description": "Incorporate schedules prepared by other systems into your Avanti time with the Add Schedules endpoint. \n\nThe API User must have user group access to the pay group and Time Entry role permission for the employee to add schedules. \n\nIf there are any errors, no schedule entries are added. "
       }
     },
     "/v1/ScheduleTemplates": {
