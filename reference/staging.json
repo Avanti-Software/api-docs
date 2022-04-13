@@ -5593,7 +5593,7 @@
             }
           }
         },
-        "description": "Incorporate schedules prepared by other systems into your Avanti time by with the Add Schedules endpoint. \n\nThe API User must have user group access to the employee's pay group to create schedules for an employee. If there are any errors, no schedule entries are added. "
+        "description": "Incorporate schedules prepared by other systems into your Avanti time with the Add Schedules endpoint. \n\nThe API User must have user group access to the pay group and scheduling role permission for the employee to add schedules. \n\nIf there are any errors, no schedule entries are added. "
       }
     },
     "/v1/ScheduleTemplates": {
@@ -24571,14 +24571,14 @@
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the schedule's pay code. "
+            "description": "The pay code for the scheduled time.\nIt must be a valid pay code. 'List Pay Codes' will return the valid codes."
           },
           "fromTime": {
             "maximum": 1440,
             "minimum": 0,
             "type": "integer",
             "format": "int32",
-            "description": "The time the employee started work, in minutes since midnight. \nIf the pay code's entry type is From To Times, this is required. ",
+            "description": "The time the employee is scheduled to start work, in minutes since midnight. \nIf the pay code's entry type is From To Times, this is required. ",
             "nullable": true
           },
           "toTime": {
@@ -24586,7 +24586,7 @@
             "minimum": 0,
             "type": "integer",
             "format": "int32",
-            "description": "The time the employee ends work, in minutes since midnight. \nIf you don't including amount and unitOfMeasure, this is required. ",
+            "description": "The time the employee is scheduled to end work, in minutes since midnight. \nIf you don't including amount and unitOfMeasure, this is required. ",
             "nullable": true
           },
           "amount": {
@@ -24606,14 +24606,14 @@
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the shift worked. If left blank, premium rules and break rules will not apply to the time worked.\n\nMust be a valid shift ID. 'Get Shift Codes' will return a list of all the valid shifts.",
+            "description": "The ID of the scheduled shift. If left blank, premium rules and break rules will not apply to the time worked.\n\nMust be a valid shift ID. 'Get Shift Codes' will return a list of all the valid shifts.",
             "nullable": true
           },
           "locationCode": {
             "maxLength": 4,
             "minLength": 0,
             "type": "string",
-            "description": "The location code for the worked time.\n\nIt must be a valid location code. 'List Locations' will return the valid codes.",
+            "description": "The location code for the scheduled time.\n\nIt must be a valid location code. 'List Locations' will return the valid codes.",
             "nullable": true
           },
           "positionCode": {
@@ -24646,7 +24646,7 @@
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the task for the time worked.\n\nFor a list of tasks set up in the company, use the 'Get Task Ids' endpoint.",
+            "description": "The ID of the task for the schedule.\n\nFor a list of tasks set up in the company, use the 'Get Task Ids' endpoint.",
             "nullable": true
           },
           "referenceNumber": {
