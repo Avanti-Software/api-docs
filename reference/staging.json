@@ -5534,7 +5534,7 @@
               "type": "boolean",
               "default": false
             },
-            "description": "If true, schedules with a duplicate reference number replaces the original schedules. Otherwise, entries with duplicates won't be added.  "
+            "description": "If true, schedules with a duplicate reference number replaces the original schedules. Otherwise, entries with duplicates won't be added. If left blank, this is false.   "
           }
         ],
         "requestBody": {
@@ -5569,9 +5569,6 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
-          },
           "201": {
             "description": "Success"
           },
@@ -5596,7 +5593,7 @@
             }
           }
         },
-        "description": "Create schedules for your employees. This incorporates schedules prepared by other systems into your Avanti time.\n\nThe API User must have user group access to the employee's pay group to create schedules for an employee."
+        "description": "Create schedules for your employees. This incorporates schedules prepared by other systems into your Avanti time.\n\nThe API User must have user group access to the employee's pay group to create schedules for an employee. If there's any errors, no schedule entries are imported. "
       }
     },
     "/v1/ScheduleTemplates": {
@@ -24628,7 +24625,7 @@
           },
           "payPrimaryPosition": {
             "type": "boolean",
-            "description": "If true, the employee will be paid the rate of their primary position, regardless of the position on the schedule. ",
+            "description": "If true, the employee will be paid the rate of their primary position, regardless of the position on the schedule. \nIf left blank, this is false. ",
             "nullable": true
           },
           "attendanceCode": {
