@@ -22360,11 +22360,13 @@
           },
           "useAttendReason": {
             "type": "string",
+            "description": "Returns Y if the pay code uses attendance codes. Returns N if the pay code doesn't. \nOnly applicable if the pay code has an earning code. ",
             "nullable": true
           },
           "useShifts": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "Returns whether shifts are used, optional or required for the pay code. \nReturns 0 if a shifts code isn't allowed. \nReturns 1 if a shifts code is  optional.\nReturns 2 if a shift code is required. "
           },
           "earnCode": {
             "type": "string",
@@ -22378,11 +22380,11 @@
           "defaultUnits": {
             "type": "number",
             "format": "double",
-            "description": "The default number of units when the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. "
+            "description": "The default number of units if the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. "
           },
           "defaultUnitCode": {
             "type": "string",
-            "description": "The default number of unit of measure when the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. ",
+            "description": "The default unit of measure if the pay code is selected when inserting an entry. Only applicable if useUnits is True. \nH is hours.\nD is days. \nU is units.",
             "nullable": true
           },
           "useOnlyInSchedules": {
@@ -22410,7 +22412,7 @@
           },
           "useColor": {
             "type": "boolean",
-            "description": "Displays True if a colour displays on cells with an entry with the pay code. Displays the colour from the rgb value. "
+            "description": "Returns True if a color displays on cells with an entry with the pay code. Uses the rgb color."
           },
           "active": {
             "type": "boolean",
@@ -22423,13 +22425,13 @@
           "overlappingFromTime": {
             "type": "integer",
             "format": "int32",
-            "description": "Sets the overlapping from time the pay code is units and units.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
+            "description": "Sets the overlapping from time.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
             "nullable": true
           },
           "overlappingToTime": {
             "type": "integer",
             "format": "int32",
-            "description": "Sets the overlapping to time the pay code is units and units.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
+            "description": "Returns the overlapping to time.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
             "nullable": true
           }
         }
