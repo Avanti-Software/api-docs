@@ -24448,109 +24448,111 @@
       },
       "EmployeeAdditionalInfoSetupResponse": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "disabledDedFiguresForEmployees": {
             "type": "array",
+            "description": "t",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledOtherTextsForEmployees": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledOtherDatesForEmployees": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledDedFiguresForManagers": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledOtherTextsForManagers": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledOtherDatesForManagers": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledDedFiguresForManagerSelf": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledOtherTextsForManagerSelf": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "disabledOtherDatesForManagerSelf": {
             "type": "array",
+            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "textFieldData": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/StringTextValuePairListKeyValuePair"
-            },
-            "nullable": true
+            }
           },
           "textFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           },
           "dateFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           },
           "figureFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           }
         },
-        "additionalProperties": false
+        "description": ""
       },
       "ScheduleEntryRequest": {
         "type": "object",
