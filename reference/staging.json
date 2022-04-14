@@ -4483,7 +4483,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Create payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry.\n\nThe API User must have user group access to the employee's pay group to import entries for an employee. \n\n"
       }
     },
     "/v1/PayStatements": {
@@ -21719,16 +21720,25 @@
       },
       "GlSegment": {
         "title": "",
-        "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ],
         "type": "object",
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        },
         "properties": {
           "segmentNo": {
             "type": "integer",
@@ -21739,7 +21749,7 @@
             "maxLength": 15,
             "minLength": 0,
             "type": "string",
-            "description": "The GL Account. This must match the format of the GL Segment."
+            "description": "The GL sccount. This must match the format of the GL Segment."
           },
           "name": {
             "type": "string",
@@ -21756,7 +21766,7 @@
             "maxLength": 10,
             "minLength": 0,
             "type": "string",
-            "description": "The Short Name of the account, which can be up to 10 characters."
+            "description": "The short name of the account, which can be up to 10 characters."
           },
           "type": {
             "maxLength": 1,
@@ -21769,7 +21779,7 @@
             "maxLength": 60,
             "minLength": 0,
             "type": "string",
-            "description": "Enter the GL Account Format, with the account in the correct segment. \nFor additional GL validation, replace other aspects of the account. Accounts must match the replaced aspect to pass validation. "
+            "description": "Enter the GL sccount format, with the account in the correct segment. \nFor additional GL validation, replace other aspects of the account. Accounts must match the replaced aspect to pass validation. "
           },
           "validationTypes": {
             "maxLength": 15,
@@ -21818,24 +21828,15 @@
             "nullable": true
           }
         },
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        }
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ]
       },
       "UserClass": {
         "enum": [
@@ -22243,10 +22244,11 @@
       },
       "GlProjectSegmentBasicSetup": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "active": {
             "type": "boolean",
-            "description": "If left blank, defaut is True. The Project Account must be active to use the GL account. Inactive accounts cannot be used for new account validation, and are used for reporting."
+            "description": "If left blank, defaut is True. The project account must be active to use the GL account. Inactive accounts cannot be used for new account validation, and are used for reporting."
           },
           "effectiveDate": {
             "type": "string",
@@ -22264,14 +22266,14 @@
             "maxLength": 1,
             "minLength": 0,
             "type": "string",
-            "description": "The ID of the Project's Type. ",
+            "description": "The ID of the project's type. ",
             "nullable": true
           },
           "validationMask": {
             "maxLength": 60,
             "minLength": 0,
             "type": "string",
-            "description": "Enter the GL Account Format, with the account in the correct segment. For additional GL validation, replace other aspects of the account. Accounts must match the replaced aspect to pass validation.",
+            "description": "Enter the GL account format, with the account in the correct segment. For additional GL validation, replace other aspects of the account. Accounts must match the replaced aspect to pass validation.",
             "nullable": true
           },
           "description": {
@@ -22279,28 +22281,23 @@
             "description": "A longer description of the project.",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GlProjectSegmentRequest": {
-        "required": [
-          "account",
-          "name",
-          "basicSetup"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "account": {
             "maxLength": 15,
             "minLength": 0,
             "type": "string",
-            "description": "The Project Account. This must match the format of the Project Segment."
+            "description": "The project account. This must match the format of the project segment."
           },
           "name": {
             "maxLength": 50,
             "minLength": 0,
             "type": "string",
-            "description": "The description of Project Account, which can be up to 50 character."
+            "description": "The description of project account, which can be up to 50 characters."
           },
           "abbreviation": {
             "maxLength": 10,
@@ -22314,35 +22311,39 @@
           },
           "phases": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/PhaseIdentifier"
-            },
-            "nullable": true
+            }
           }
         },
-        "additionalProperties": false
+        "required": [
+          "account",
+          "name",
+          "basicSetup"
+        ]
       },
       "PhaseIdentifier": {
-        "required": [
-          "segmentNo",
-          "phase"
-        ],
         "type": "object",
+        "additionalProperties": false,
+        "description": "Sets which phases can be used with the Project.",
         "properties": {
           "segmentNo": {
             "type": "integer",
-            "description": "The GL Segment Number for the phase. ",
+            "description": "The GL segment number for the phase. ",
             "format": "int32"
           },
           "phase": {
             "maxLength": 15,
             "minLength": 0,
             "type": "string",
-            "description": "The GL Account of the phase. "
+            "description": "The phase's GL account. "
           }
         },
-        "additionalProperties": false,
-        "description": "Sets which phases can be used with the Project."
+        "required": [
+          "segmentNo",
+          "phase"
+        ]
       },
       "PayCode": {
         "type": "object",
@@ -22350,21 +22351,23 @@
         "properties": {
           "code": {
             "type": "string",
-            "description": "Returns the Pay Code's ID. ",
+            "description": "Returns the pay code's ID. ",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Returns the Pay Code's Description.",
+            "description": "Returns the pay code's description.",
             "nullable": true
           },
           "useAttendReason": {
             "type": "string",
+            "description": "Returns Y if the pay code uses attendance codes. Returns N if the pay code doesn't. \nOnly applicable if the pay code has an earning code. ",
             "nullable": true
           },
           "useShifts": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "Returns whether shifts are used, optional or required for the pay code. \nReturns 0 if a shifts code isn't allowed. \nReturns 1 if a shifts code is  optional.\nReturns 2 if a shift code is required. "
           },
           "earnCode": {
             "type": "string",
@@ -22378,16 +22381,16 @@
           "defaultUnits": {
             "type": "number",
             "format": "double",
-            "description": "The default number of units when the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. "
+            "description": "The default number of units if the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. "
           },
           "defaultUnitCode": {
             "type": "string",
-            "description": "The default number of unit of measure when the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. ",
+            "description": "The default unit of measure if the pay code is selected when inserting an entry. Only applicable if useUnits is True. \nH is hours.\nD is days. \nU is units.",
             "nullable": true
           },
           "useOnlyInSchedules": {
             "type": "boolean",
-            "description": "Returns True if the Pay Code is only used in Schedules, false if it's used elsewhere in Time & Attendance. "
+            "description": "Returns True if the pay code is only used in Schedules, false if it's used elsewhere in Time & Attendance. "
           },
           "excludeFromTotals": {
             "type": "boolean",
@@ -22410,11 +22413,11 @@
           },
           "useColor": {
             "type": "boolean",
-            "description": "Displays True if a colour displays on cells with an entry with the pay code. Displays the colour from the rgb value. "
+            "description": "Returns True if a color displays on cells with an entry with the pay code. Uses the rgb color."
           },
           "active": {
             "type": "boolean",
-            "description": "Returns True if the Pay Code is active, false if it's inactive. "
+            "description": "Returns True if the pay code is active, false if it's inactive. "
           },
           "allowOverlappingTimes": {
             "type": "boolean",
@@ -22423,13 +22426,13 @@
           "overlappingFromTime": {
             "type": "integer",
             "format": "int32",
-            "description": "Sets the overlapping from time the pay code is units and units.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
+            "description": "Sets the overlapping from time.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
             "nullable": true
           },
           "overlappingToTime": {
             "type": "integer",
             "format": "int32",
-            "description": "Sets the overlapping to time the pay code is units and units.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
+            "description": "Returns the overlapping to time.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
             "nullable": true
           }
         }
@@ -22993,62 +22996,66 @@
         "additionalProperties": false
       },
       "PayrollData": {
-        "required": [
-          "earnDeductCode",
-          "empNo",
-          "entryDate",
-          "unitOfMeasure",
-          "units"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "id": {
             "type": "string",
+            "description": "This gets included in the response. You can use this to map error messages to invalid entries. \n\nWhen making a post request, leave this blank.",
             "nullable": true
           },
           "empNo": {
             "maxLength": 9,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The employee number assigned to the employee."
           },
           "entryDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "description": "The date of the payroll data entry in ISO 8601 format."
           },
           "earnDeductCode": {
             "maxLength": 3,
             "minLength": 0,
             "pattern": "[0-9]*",
-            "type": "string"
+            "type": "string",
+            "description": "The three-digit earning or deduction code for the entry. Earning Codes are from 001 to 499. Deduction Codes are from 500 to 999."
           },
           "positionCode": {
             "maxLength": 12,
             "minLength": 0,
             "type": "string",
+            "description": "The ID of the position worked. If the position is left blank, the employee's primary position will be used if required for rates.\n\nIf ‘Only allow defined Employee Positions in time data entry’ is selected on the Time Data Entry tab in Payroll Parameters, the position must be on the employee’s profile.",
             "nullable": true
           },
           "units": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": "The units for the payroll data entry."
           },
           "unitOfMeasure": {
             "$ref": "#/components/schemas/UnitOfMeasure"
           },
           "dollarRate": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": "The dollar rate of pay. This will only be used for earnings if earnDeductCode is 001 to 499.\n\nIf left blank, the rate of pay will be determined within Avanti."
           },
           "earningAmount": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": "Enter the earning amount for the entry. If you're using dollarRate, this must match the total for the units by dollarRate.\n\nThis is only used if the earnDeductCode is between 001-499."
           },
           "benefitAmount": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": "The total benefit amount for the entry. This is only used if the earnDeductCode is between 500-999."
           },
           "deductionAmount": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": "The total deduction amount for the entry. This is only used if the earnDeductCode is between 500-999."
           },
           "glType": {
             "$ref": "#/components/schemas/GlOption"
@@ -23057,12 +23064,14 @@
             "maxLength": 4,
             "minLength": 0,
             "type": "string",
+            "description": "The GL group for the worked time. This is required when parameter glType is 'g'.\n\nMust be a valid GL group. 'List GL Groups' will return the valid GL Groups.",
             "nullable": true
           },
           "glAccount": {
             "maxLength": 60,
             "minLength": 0,
             "type": "string",
+            "description": "\"The GL account for the worked time. This is required when parameter glType is 'a'.\n\nMust be a valid account. 'List GL Accounts' will return the valid accounts for each segment. A combination of segments can be used to create the valid account.",
             "nullable": true
           },
           "glBenefitGroup": {
@@ -23070,6 +23079,7 @@
             "minLength": 0,
             "pattern": "[0-9]*",
             "type": "string",
+            "description": "The GL group for the worked time. This is required when parameter glType is 'g'.\n\nMust be a valid GL group. 'List GL Groups' will return the valid GL Groups.",
             "nullable": true
           },
           "wcbOverrideCode": {
@@ -23077,47 +23087,58 @@
             "minLength": 3,
             "pattern": "[0-9]*",
             "type": "string",
+            "description": "The ID of the WCB Group. If left blank, the time will apply to the WCB group selected on the employee's profile.\n\nMust be a valid WCB group. 'List WCB Groups' will return a list of all the valid groups.",
             "nullable": true
           },
           "attendanceCode": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
+            "description": "The attendance code for the worked time.\n\nMust be a valid attendance code. 'Get Attendance Codes' will return the valid codes.",
             "nullable": true
           },
           "attendanceReason": {
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
+            "description": "Up to 1024 alphanumeric characters that will populate the comments on the payroll data entry.",
             "nullable": true
           },
           "taskId": {
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
+            "description": "The ID of the task for the time worked.\n\nFor a list of tasks set up in the company, use the 'Get TaskIds' endpoint.",
             "nullable": true
           },
           "locationCode": {
             "type": "string",
+            "description": "The location code for the worked time.\n\nMust be a valid location code. 'List Locations' will return the valid codes.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "required": [
+          "empNo",
+          "entryDate",
+          "earnDeductCode",
+          "units",
+          "unitOfMeasure"
+        ]
       },
       "PayrollDataImport": {
-        "required": [
-          "payrollData"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "batchDescription": {
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
+            "description": "An alphanumeric description for the payroll batch, which can be up to 1024 characters. This is required when importToStagingTable is False.\n\nThis isn't used if importToStagingTable is True.",
             "nullable": true
           },
           "batchCompleted": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Enter True if the batch is complete. Default is False. This isn't used when importToStagingTable is True."
           },
           "payrollData": {
             "type": "array",
@@ -23126,13 +23147,17 @@
             }
           },
           "stopImportOnAnyError": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "If True, no entries will import if one of the entries is invalid. Default is False."
           },
           "importToStagingTable": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "If True, payroll data will import into a staging table. If False, a new batch is created each time the endpoint is used. Default is False."
           }
         },
-        "additionalProperties": false
+        "required": [
+          "payrollData"
+        ]
       },
       "WorkTechEmpEntlExport": {
         "required": [
