@@ -4948,6 +4948,49 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EmployeeAdditionalInfo"
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "empNo": "string",
+                    "dedFig": [
+                      {
+                        "text": 0,
+                        "value": 0
+                      }
+                    ],
+                    "otherDate": [
+                      {
+                        "text": 0,
+                        "value": "2019-08-24T14:15:22Z"
+                      }
+                    ],
+                    "otherText": [
+                      {
+                        "text": 0,
+                        "value": "string"
+                      }
+                    ],
+                    "textFieldLabels": [
+                      {
+                        "text": "string",
+                        "value": "string"
+                      }
+                    ],
+                    "dateFieldLabels": [
+                      {
+                        "text": "string",
+                        "value": "string"
+                      }
+                    ],
+                    "figureFieldLabels": [
+                      {
+                        "text": "string",
+                        "value": "string"
+                      }
+                    ]
+                  }
+                }
               }
             },
             "text/json": {
@@ -4966,7 +5009,8 @@
           "200": {
             "description": "Success"
           }
-        }
+        },
+        "description": "Update the employee's information that's unique to your company’s setup.\n\nYou can only update the information included on the Avanti Self-Service Portal. "
       }
     },
     "/v1/PersonalInfo/EmployeeAdditionalInfoSetup": {
@@ -24433,6 +24477,7 @@
           },
           "dedFig": {
             "type": "array",
+            "description": "The text portion corresponds to the figureFieldLabels and the value is the employees information for the figure field. ",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/DeductionFigure"
@@ -24440,6 +24485,7 @@
           },
           "otherDate": {
             "type": "array",
+            "description": "The text portion corresponds to the dateFieldLabels and the value is the employees information for the date field. ",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherDate"
@@ -24447,6 +24493,7 @@
           },
           "otherText": {
             "type": "array",
+            "description": "The text portion corresponds to the textFieldLabels and the value is the employees information for the text field. ",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherText"
@@ -24454,6 +24501,7 @@
           },
           "textFieldLabels": {
             "type": "array",
+            "description": "Returns the display label with the associated value.\n\nThe value only returns the numeric portion, so the if the text field is T19, this returns 19.",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
@@ -24461,6 +24509,7 @@
           },
           "dateFieldLabels": {
             "type": "array",
+            "description": "Returns the date label with the value of the the date field. The value only returns the numeric portion, so the if the date is M15, this returns 15.",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
@@ -24468,6 +24517,7 @@
           },
           "figureFieldLabels": {
             "type": "array",
+            "description": "Returns the figure label with the value of the the figure field. The value only returns the numeric portion, so the if the figure ID is M30, 30 returns.",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
