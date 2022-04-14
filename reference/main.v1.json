@@ -22356,7 +22356,7 @@
           },
           "description": {
             "type": "string",
-            "description": "Returns the pay code's Description.",
+            "description": "Returns the pay code's description.",
             "nullable": true
           },
           "useAttendReason": {
@@ -23138,7 +23138,7 @@
           },
           "batchCompleted": {
             "type": "boolean",
-            "description": "Enter True if the batch is complete. Default is false. This isn't used when importToStagingTable is True."
+            "description": "Enter True if the batch is complete. Default is False. This isn't used when importToStagingTable is True."
           },
           "payrollData": {
             "type": "array",
