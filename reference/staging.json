@@ -4919,7 +4919,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number assigned to the employee."
           }
         ],
         "responses": {
@@ -4933,7 +4934,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Returns an employee's information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on Payroll Parameters's Profile Field Names tab. Only information included on the Avanti Self-Service Portal are returned. "
       },
       "put": {
         "tags": [
@@ -4985,7 +4987,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Returns the setup information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on the Profile Field Names tab in Payroll Parameters. Only information included on the Avanti Self-Service Portal are returned. "
       }
     },
     "/v1/PersonalInfo/Photo": {
@@ -24421,55 +24424,56 @@
       },
       "EmployeeAdditionalInfo": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "empNo": {
             "type": "string",
+            "description": "The employee number assigned to the employee.",
             "nullable": true
           },
           "dedFig": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/DeductionFigure"
-            },
-            "nullable": true
+            }
           },
           "otherDate": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherDate"
-            },
-            "nullable": true
+            }
           },
           "otherText": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherText"
-            },
-            "nullable": true
+            }
           },
           "textFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           },
           "dateFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           },
           "figureFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           }
-        },
-        "additionalProperties": false
+        }
       },
       "EmployeeAdditionalInfoSetupResponse": {
         "type": "object",
@@ -24559,6 +24563,7 @@
           },
           "textFieldData": {
             "type": "array",
+            "description": "The key indicates is the text field ID. The text returns the description that appears in the dropdown, the value is the the ID. ",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/StringTextValuePairListKeyValuePair"

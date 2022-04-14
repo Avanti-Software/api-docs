@@ -4919,7 +4919,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number assigned to the employee."
           }
         ],
         "responses": {
@@ -4933,7 +4934,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Returns an employee's information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on Payroll Parameters's Profile Field Names tab. Only information included on the Avanti Self-Service Portal are returned. "
       },
       "put": {
         "tags": [
@@ -4985,7 +4987,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Returns the setup information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on the Profile Field Names tab in Payroll Parameters. Only information included on the Avanti Self-Service Portal are returned. "
       }
     },
     "/v1/PersonalInfo/Photo": {
@@ -24421,55 +24424,56 @@
       },
       "EmployeeAdditionalInfo": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "empNo": {
             "type": "string",
+            "description": "The employee number assigned to the employee.",
             "nullable": true
           },
           "dedFig": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/DeductionFigure"
-            },
-            "nullable": true
+            }
           },
           "otherDate": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherDate"
-            },
-            "nullable": true
+            }
           },
           "otherText": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherText"
-            },
-            "nullable": true
+            }
           },
           "textFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           },
           "dateFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           },
           "figureFieldLabels": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
+            }
           }
-        },
-        "additionalProperties": false
+        }
       },
       "EmployeeAdditionalInfoSetupResponse": {
         "type": "object",
@@ -24478,6 +24482,7 @@
         "properties": {
           "disabledDedFiguresForEmployees": {
             "type": "array",
+            "description": "Returns the figures that employees can't update. \n\nThis only returns the numeric portion, so the if the figure is M30, this returns 30. ",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24486,6 +24491,7 @@
           },
           "disabledOtherTextsForEmployees": {
             "type": "array",
+            "description": "Returns the other text information that employees can't update. \n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24494,6 +24500,7 @@
           },
           "disabledOtherDatesForEmployees": {
             "type": "array",
+            "description": "Returns the dates that employees can't update. \n\nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24502,6 +24509,7 @@
           },
           "disabledDedFiguresForManagers": {
             "type": "array",
+            "description": "Returns the figures that managers can't update for other employees. \nThis only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24510,6 +24518,7 @@
           },
           "disabledOtherTextsForManagers": {
             "type": "array",
+            "description": "Returns the other text information that managers can't update for other employees.\n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24518,6 +24527,7 @@
           },
           "disabledOtherDatesForManagers": {
             "type": "array",
+            "description": "Returns the dates that managers can't update for other employees. \nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24526,6 +24536,7 @@
           },
           "disabledDedFiguresForManagerSelf": {
             "type": "array",
+            "description": "Returns the figures that managers can't update for their employee. \nThis only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24534,6 +24545,7 @@
           },
           "disabledOtherTextsForManagerSelf": {
             "type": "array",
+            "description": "Returns the other text information that managers can't update for their employee.\n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24542,6 +24554,7 @@
           },
           "disabledOtherDatesForManagerSelf": {
             "type": "array",
+            "description": "Returns the dates that managers can't update for their employee. \n\nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
             "nullable": true,
             "items": {
               "type": "integer",
@@ -24550,6 +24563,7 @@
           },
           "textFieldData": {
             "type": "array",
+            "description": "The key indicates is the text field ID. The text returns the description that appears in the dropdown, the value is the the ID. ",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/StringTextValuePairListKeyValuePair"
@@ -24557,6 +24571,7 @@
           },
           "textFieldLabels": {
             "type": "array",
+            "description": "Returns the display label with the associated value. \n\nThe value only returns the numeric portion, so the if the text field is T19, this returns 19.",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
@@ -24564,6 +24579,7 @@
           },
           "dateFieldLabels": {
             "type": "array",
+            "description": "Returns the date label with the value of the the date field. \nThe value only returns the numeric portion, so the if the date is M15, this returns 15.",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
@@ -24571,6 +24587,7 @@
           },
           "figureFieldLabels": {
             "type": "array",
+            "description": "Returns the figure label with the value of the the figure field. \nThe value only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
             "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
