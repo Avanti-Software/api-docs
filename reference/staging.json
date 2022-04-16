@@ -1691,7 +1691,8 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
           }
         ],
         "responses": {
@@ -1728,7 +1729,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Returns all the most important details of your employee's benefits. \n\nName Format   \n\nThe employees, dependents and beneficiaries' names are all formatted based on the user's name format. These formats are returned as: \n\n  0 is the last name, then the first name\n\n  1 is the first name, then the last name\n\n  2 is the last name, then the preferred name\n\n  3 is the preferred name, then the last name\n\n  4 is the last name, then the first name's initial\n\n  5 is the first name's initial, then the last name\n\n  6 is the last name, then the preferred name's initial \n  \n  7 is the preferred name's initial, then the last name\n\n  8 is the preferred name, then the last name's initial\n\n  9 is the first name, and then the last name's initial\n      \n      "
       }
     },
     "/v1/EmployeeCompensation/PayStatement": {
@@ -22692,42 +22694,49 @@
         "additionalProperties": false
       },
       "Beneficiary": {
-        "required": [
-          "givenName",
-          "surname"
-        ],
         "type": "object",
+        "additionalProperties": false,
+        "title": "",
         "properties": {
           "code": {
             "type": "string",
+            "description": "The Deduction/Benefit codes for the beneficiary.",
             "nullable": true
           },
           "givenName": {
             "maxLength": 30,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The first name of the employee's beneficiary."
           },
           "surname": {
             "maxLength": 30,
             "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "description": "The last name of the employee's beneficiary."
           },
           "initial": {
             "maxLength": 1,
             "minLength": 0,
             "type": "string",
+            "description": "The middle name initial of the employee's beneficiary.",
             "nullable": true
           },
           "percentage": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "description": "The percentage amount that the beneficiary is entitled to."
           },
           "revocable": {
             "type": "string",
+            "description": "Returns Y if the beneficiary is revocable. Returns N if the beneficiary is irrevocable.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "required": [
+          "givenName",
+          "surname"
+        ]
       },
       "BenefitsSettings": {
         "type": "object",
@@ -22837,17 +22846,21 @@
       },
       "EmployeeBenefitDetails": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "code": {
             "type": "string",
+            "description": "Returns the three-digit code for the benefit code.",
             "nullable": true
           },
           "codeDescription": {
             "type": "string",
+            "description": "Returns the benefit's English description.",
             "nullable": true
           },
           "codeDescriptionFr": {
             "type": "string",
+            "description": "Returns the benefit's French description.",
             "nullable": true
           },
           "type": {
@@ -22861,82 +22874,94 @@
           "expiryDate": {
             "type": "string",
             "format": "date",
+            "description": "The date the benefit ends in ISO 8601 format.",
             "nullable": true
           },
           "expiryDateString": {
             "type": "string",
+            "description": "This property is not used at this time.",
             "nullable": true
           },
           "coverageOverride": {
             "type": "string",
+            "description": "Returns Y if the coverage amount is different for the employee than the benefit code. ",
             "nullable": true
           },
           "waived": {
             "type": "string",
+            "description": "Returns Y if the employee declined the benefit, N if the benefit if they opted in for the benefit. ",
             "nullable": true
           },
           "certificate": {
             "type": "string",
+            "description": "The certificate number that is assigned to the employee by the benefit provider. ",
             "nullable": true
           },
           "coverageEffectiveDate": {
             "type": "string",
             "format": "date",
+            "description": "The date the benefit begins in ISO 8601 format.",
             "nullable": true
           },
           "coverageEffectiveDateString": {
             "type": "string",
+            "description": "This property is not used at this time.",
             "nullable": true
           },
           "dependents": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/Dependent"
             },
-            "nullable": true,
             "readOnly": true
           },
           "dependentsFormatted": {
             "type": "array",
+            "description": "The format of the dependant's name. The options are in the description above. ",
+            "nullable": true,
             "items": {
               "type": "string"
             },
-            "nullable": true,
             "readOnly": true
           },
           "beneficiaries": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/Beneficiary"
             },
-            "nullable": true,
             "readOnly": true
           },
           "beneficiariesFormatted": {
             "type": "array",
+            "description": "The format of the beneficiaries' name. The options are in the description above. ",
+            "nullable": true,
             "items": {
               "type": "string"
             },
-            "nullable": true,
             "readOnly": true
           },
           "nameFormat": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "The format of the employees's name. The options are in the description above. "
           },
           "displayPercentages": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Returns true/false based on company web setting BenefitsSettings.DisplayPercentages. \n\nThis setting determines whether administrators want to display the beneficiaries' percentage in the Avanti Self-Service Portal. "
           },
           "daysBeforeEffective": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "Returns a number based on company web setting BenefitsSettings.BenefitsSettings.DisplayDaysBeforeEffective. \n\nThis setting determines when the benefit starts displaying on the Avanti Self-Service Portal, based on the days before the benefit's effective date. \n\nFor example, if this is seven, the benefit displays on the Avanti Self-Service Portal a week before the effective date."
           },
           "daysAfterExpiry": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "Returns a number based on company web setting BenefitsSettings.BenefitsSettings.DisplayDaysAfterExpiry. \n\nThis setting determines when the benefit stops displaying on the Avanti Self-Service Portal, based on the number of days after the benefits' expiry date. \n\nFor example, if this is 14, the benefit displays on the Avanti Self-Service Portal for two weeks after the expiry date. "
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ImportPayrollDataResult": {
         "type": "object",
