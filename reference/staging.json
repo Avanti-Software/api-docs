@@ -5020,7 +5020,7 @@
         "tags": [
           "Employee Additional Information"
         ],
-        "summary": "Additional Inforamtion Setup",
+        "summary": "Additional Information Setup",
         "operationId": "Additional-Inforamtion-Setup",
         "responses": {
           "200": {
