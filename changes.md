@@ -3571,8 +3571,7 @@
 * Model: NEWHIRESETUPRESPONSE, Property: modifySin - Microsoft.OpenApi.Models.OpenApiSchema
 * Model: NEWHIRESETUPRESPONSE, Property: viewSin - Microsoft.OpenApi.Models.OpenApiSchema
 * Model: POSITIONDETAILS, Property: positionUserDefinedLabels - Microsoft.OpenApi.Models.OpenApiSchema
-* Model: TERMSOFSERVICE, Property: hasRead - Microsoft.OpenApi.Models.OpenApiSchema
-* Model: TERMSOFSERVICE, Property: hasAgreed - Microsoft.OpenApi.Models.OpenApiSchema
+* Model: TERMSOFSERVICE, Prope soft.OpenApi.Models.OpenApiSchema
 * Model: TERMSOFSERVICE, Property: signature - Microsoft.OpenApi.Models.OpenApiSchema
 * Model: TERMSOFSERVICE, Property: signatureDate - Microsoft.OpenApi.Models.OpenApiSchema
 * Model: TERMSOFSERVICE, Property: userName - Microsoft.OpenApi.Models.OpenApiSchema
