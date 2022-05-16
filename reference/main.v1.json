@@ -2759,7 +2759,7 @@
           "GLs"
         ],
         "summary": "List GL Project and Phases",
-        "description": "Returns a list of the Project and Phase Accounts. ",
+        "description": "Returns a list of the Project and Phase Accounts. \n\n**GL Project Filter**\n\nProjects returned are filtered based on the account and name when using a filter. \n- Returns projects with the filter value at the beginning of the account. \n- Returns projects with the filter value anywhere in the name. ",
         "operationId": "List-GL-Project-Accounts",
         "parameters": [
           {
@@ -2779,6 +2779,38 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "name": "active",
+            "description": "If True, only active project accounts are returned; if False, inactive accounts are returned. If blank, active and inactive accounts are returned."
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "filter",
+            "description": "Filters projects based on the account number and description. Returns all projects like the value entered."
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "mask",
+            "description": "If provided, only project accounts matching the mask provided are returned."
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "type",
+            "description": "If provided, only project accounts with a matching type are returned."
           }
         ],
         "responses": {
