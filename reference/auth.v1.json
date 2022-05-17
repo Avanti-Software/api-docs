@@ -25,7 +25,7 @@
         "description": "Request access tokens needed to make authenticated requests from the Avanti API.\n\nAccess tokens are used as bearer tokens and must be included in the **Authorization** header of every authenticated request made by a client. Access tokens are prefixed with the Bearer keyword.\n\n```\nGET /v1/personalinfo\nAuthorization: Bearer {AccessToken}\n```\n\nYou’ll need to request some information from your organization’s Avanti Administrator, if you don't already have it:\n- The name of the endpoint.\n- The Avanti Username and Password.\n- API Client Credentials.\n- Avanti company database name.\n- Your Avanti Self-Service Portal URL.",
         "operationId": "Access Token",
         "requestBody": {
-          "description": "Client and user credentials\n\n> **Important:** The content-type of the request for this endpoint is **application/x-wwww-form-urlencoded**",
+          "description": "Client and user credentials\n\n> **Important:** The content-type of the request for this endpoint is **application/x-www-form-urlencoded**",
           "required": true,
           "content": {
             "application/x-www-form-urlencoded": {
