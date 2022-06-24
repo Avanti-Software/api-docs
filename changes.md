@@ -1,3 +1,36 @@
+# Jun 24, 2022 2:46 PM
+**GitHub Run ID:** 2556361892
+**GitHub Run Number:** 3721
+**Reference:** refs/heads/master
+**Commit:** 6122d41a1155854be22d2a51b2ecf2e73356642d## Added
+ * Endpoint: GET - /v1/DataConnector/{slugId}
+ * Endpoint: PUT - /v1/WorkTech/Import/{id}/Status
+ * Endpoint: PUT - /v1/WorkTech/Export/{id}/Status
+* Model: Color
+* Model: DependentsSettings
+* Model: EmergencyContactSettings
+* Model: EmergencyContactSetupResponse, Property: isReadOnly
+* Model: EmergencyContactSetupResponse, Property: settings
+* Model: EmployeeAdditionalInfo, Property: otherTextDisplay
+* Model: EmployeePersonalInfo
+* Model: GlSegment, Property: types
+* Model: PersonalInfoSettings, Property: hiddenFields
+* Model: PersonalInfoSettings, Property: disabledFieldsForEmployees
+* Model: PersonalInfoSettings, Property: disabledFieldsForManagers
+* Model: PersonalInfoSettings, Property: disabledFieldsForManager
+* Model: PoolComment, Property: isCurrentUserComment
+* Model: Posting
+* Model: ScheduleEntry
+* Model: ScheduleEntryConflictCode
+* Model: Settings, Property: emergencyContactSettings
+* Model: Settings, Property: dependentsSettings
+* Model: ShiftConflictLevel
+* Model: WorkTechExportStatus
+* Model: WorkTechImportStatus
+## Removed
+ * Endpoint: GET - /v1/Employees/List
+* Model: EmployeeListRequest
+
 # Apr 05, 2022 1:09 PM
 **GitHub Run ID:** 2096302130
 **GitHub Run Number:** 3358

@@ -718,7 +718,7 @@
         }
       }
     },
-      "/v1/CompanyInfo/Logo": {
+    "/v1/CompanyInfo/Logo": {
       "delete": {
         "tags": [
           "Company Info"
@@ -729,7 +729,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -762,7 +762,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -809,7 +809,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -818,7 +818,80 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
+            }
+          }
+        }
+      }
+    },
+    "/v1/DataConnector/{slugId}": {
+      "get": {
+        "tags": [
+          "Data Connector"
+        ],
+        "summary": "Get Data Connector",
+        "operationId": "Get-Data-Connector",
+        "parameters": [
+          {
+            "name": "slugId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
             }
           }
         }
@@ -900,7 +973,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -935,7 +1008,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -993,7 +1066,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1135,7 +1208,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1240,7 +1313,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1277,7 +1350,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1314,7 +1387,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1352,7 +1425,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1361,7 +1434,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1385,7 +1458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1439,7 +1512,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1502,15 +1575,16 @@
           "Employee Benefits"
         ],
         "summary": "List Employee Benefits",
+        "description": "Returns all the most important details of your employee's benefits. \n\nName Format   \n\nThe employees, dependents and beneficiaries' names are all formatted based on the user's name format. These formats are returned as: \n\n  0 is the last name, then the first name\n\n  1 is the first name, then the last name\n\n  2 is the last name, then the preferred name\n\n  3 is the preferred name, then the last name\n\n  4 is the last name, then the first name's initial\n\n  5 is the first name's initial, then the last name\n\n  6 is the last name, then the preferred name's initial \n  \n  7 is the preferred name's initial, then the last name\n\n  8 is the preferred name, then the last name's initial\n\n  9 is the first name, and then the last name's initial\n      \n      ",
         "operationId": "List-Employee-Benefits",
         "parameters": [
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005."
+            }
           }
         ],
         "responses": {
@@ -1547,8 +1621,7 @@
               }
             }
           }
-        },
-        "description": "Returns all the most important details of your employee's benefits. \n\nName Format   \n\nThe employees, dependents and beneficiaries' names are all formatted based on the user's name format. These formats are returned as: \n\n  0 is the last name, then the first name\n\n  1 is the first name, then the last name\n\n  2 is the last name, then the preferred name\n\n  3 is the preferred name, then the last name\n\n  4 is the last name, then the first name's initial\n\n  5 is the first name's initial, then the last name\n\n  6 is the last name, then the preferred name's initial \n  \n  7 is the preferred name's initial, then the last name\n\n  8 is the preferred name, then the last name's initial\n\n  9 is the first name, and then the last name's initial\n      \n      "
+        }
       }
     },
     "/v1/EmployeeCompensation/PayStatement": {
@@ -1764,7 +1837,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2013,7 +2086,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2057,7 +2130,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2367,69 +2440,6 @@
         }
       }
     },
-    "/v1/Employees/List": {
-      "get": {
-        "tags": [
-          "Employees"
-        ],
-        "summary": "List Employees Summary",
-        "operationId": "List-Employees-Summary",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeListRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeListRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeListRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TextValuePair"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Employees/Photo": {
       "get": {
         "tags": [
@@ -2467,7 +2477,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -2574,7 +2584,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -2973,36 +2983,36 @@
             }
           },
           {
-            "schema": {
-              "type": "string"
-            },
-            "in": "query",
             "name": "filter",
-            "description": "Filters projects based on the account number and description. Returns all projects like the value entered. "
-          },
-          {
+            "in": "query",
+            "description": "Filters projects based on the account number and description. Returns all projects like the value entered. ",
             "schema": {
               "type": "string"
-            },
-            "in": "query",
+            }
+          },
+          {
             "name": "type",
-            "description": "If provided, only project accounts with a matching type are returned."
-          },
-          {
+            "in": "query",
+            "description": "If provided, only project accounts with a matching type are returned.",
             "schema": {
               "type": "string"
-            },
-            "in": "query",
-            "name": "mask",
-            "description": "If provided, only project accounts matching the mask provided are returned."
+            }
           },
           {
+            "name": "mask",
+            "in": "query",
+            "description": "If provided, only project accounts matching the mask provided are returned.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "active",
+            "in": "query",
+            "description": "If True, only active project accounts are returned; if False, inactive accounts are returned. If blank, active and inactive accounts are returned.",
             "schema": {
               "type": "boolean"
-            },
-            "in": "query",
-            "name": "active",
-            "description": "If True, only active project accounts are returned; if False, inactive accounts are returned. If blank, active and inactive accounts are returned."
+            }
           }
         ],
         "responses": {
@@ -3712,7 +3722,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3771,7 +3781,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3851,7 +3861,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3982,7 +3992,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4081,27 +4091,28 @@
           "Pay Codes"
         ],
         "summary": "List Pay Code Details",
+        "description": "Returns a list of the pay codes with their setup details. \n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time.",
         "operationId": "List-all-Pay-Codes-with-details",
         "parameters": [
           {
             "name": "take",
             "in": "query",
+            "description": "The number of entries returned.",
             "schema": {
               "type": "integer",
               "format": "int32",
               "default": 0
-            },
-            "description": "The number of entries returned."
+            }
           },
           {
             "name": "skip",
             "in": "query",
+            "description": "The number of entries to skip.",
             "schema": {
               "type": "integer",
               "format": "int32",
               "default": 0
-            },
-            "description": "The number of entries to skip."
+            }
           }
         ],
         "responses": {
@@ -4138,8 +4149,7 @@
               }
             }
           }
-        },
-        "description": "Returns a list of the pay codes with their setup details. \n\nIn Avanti, pay codes are used throughout Time and Attendance to determine the earning code for the time, whether the entry is from/to times or units/units of measure. and whether punches are used for the time."
+        }
       }
     },
     "/v1/PayGroup/{payGroup}": {
@@ -4163,7 +4173,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4274,6 +4284,7 @@
           "Payroll Data"
         ],
         "summary": "Add Payroll Data",
+        "description": "Create payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry.\n\nThe API User must have user group access to the employee's pay group to import entries for an employee. \n\n",
         "operationId": "Add-Payroll-Data",
         "requestBody": {
           "content": {
@@ -4335,8 +4346,7 @@
               }
             }
           }
-        },
-        "description": "Create payroll time for your employees. This incorporates payroll data prepared by other systems into your Avanti pay.\n\nEvery time this endpoint is used, a new payroll batch is created unless you import it into a staging table. If you import to a staging table, all entries will get created into a batch when import from a table is selected in Payroll Data Entry.\n\nThe API User must have user group access to the employee's pay group to import entries for an employee. \n\n"
+        }
       }
     },
     "/v1/PayStatements": {
@@ -4577,7 +4587,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4750,7 +4760,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -4764,15 +4774,16 @@
           "Employee Additional Information"
         ],
         "summary": "List Employee Additional Information",
+        "description": "Returns an employee's information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on Payroll Parameters's Profile Field Names tab. Only information included on the Avanti Self-Service Portal are returned. ",
         "operationId": "List-Employee-Additional-Information",
         "parameters": [
           {
             "name": "empNo",
             "in": "query",
+            "description": "The employee number assigned to the employee.",
             "schema": {
               "type": "string"
-            },
-            "description": "The employee number assigned to the employee."
+            }
           }
         ],
         "responses": {
@@ -4786,14 +4797,14 @@
               }
             }
           }
-        },
-        "description": "Returns an employee's information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on Payroll Parameters's Profile Field Names tab. Only information included on the Avanti Self-Service Portal are returned. "
+        }
       },
       "put": {
         "tags": [
           "Employee Additional Information"
         ],
         "summary": "Update Additional Information",
+        "description": "Update the employee's information that's unique to your company’s setup.\n\nYou can only update the information included on the Avanti Self-Service Portal. ",
         "operationId": "Update-Additional-Information",
         "requestBody": {
           "content": {
@@ -4814,7 +4825,7 @@
                     "otherDate": [
                       {
                         "text": 0,
-                        "value": "2019-08-24T14:15:22Z"
+                        "value": "2019-08-24T14:15:22.0000000+00:00"
                       }
                     ],
                     "otherText": [
@@ -4861,8 +4872,7 @@
           "200": {
             "description": "Success"
           }
-        },
-        "description": "Update the employee's information that's unique to your company’s setup.\n\nYou can only update the information included on the Avanti Self-Service Portal. "
+        }
       }
     },
     "/v1/PersonalInfo/EmployeeAdditionalInfoSetup": {
@@ -4871,6 +4881,7 @@
           "Employee Additional Information"
         ],
         "summary": "Additional Information Setup",
+        "description": "Returns the setup information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on the Profile Field Names tab in Payroll Parameters. Only information included on the Avanti Self-Service Portal are returned. ",
         "operationId": "Additional-Inforamtion-Setup",
         "responses": {
           "200": {
@@ -4883,8 +4894,7 @@
               }
             }
           }
-        },
-        "description": "Returns the setup information for the employee information unique to your company’s setup.\n\nGets the additional fields set up for figures, dates, and text information on the Profile Field Names tab in Payroll Parameters. Only information included on the Avanti Self-Service Portal are returned. "
+        }
       }
     },
     "/v1/PersonalInfo/Photo": {
@@ -4992,7 +5002,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5017,7 +5027,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5219,8 +5229,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    {},
-                    {}
+                    { },
+                    { }
                   ]
                 },
                 "examples": {
@@ -5425,16 +5435,17 @@
           "Schedule Import"
         ],
         "summary": "Add Schedules",
+        "description": "Incorporate schedules prepared by other systems into your Avanti time with the Add Schedules endpoint. \n\nThe API User must have user group access to the pay group and time entry role permission for the employee to add schedules. \n\nIf there are any errors, no schedule entries are added. ",
         "operationId": "Import-Schedule-Entries",
         "parameters": [
           {
             "name": "replaceExisting",
             "in": "query",
+            "description": "If true, schedules with a duplicate reference number replaces the original schedules. Otherwise, entries with duplicates won't be added. If left blank, this is false.   ",
             "schema": {
               "type": "boolean",
               "default": false
-            },
-            "description": "If true, schedules with a duplicate reference number replaces the original schedules. Otherwise, entries with duplicates won't be added. If left blank, this is false.   "
+            }
           }
         ],
         "requestBody": {
@@ -5492,8 +5503,7 @@
               }
             }
           }
-        },
-        "description": "Incorporate schedules prepared by other systems into your Avanti time with the Add Schedules endpoint. \n\nThe API User must have user group access to the pay group and time entry role permission for the employee to add schedules. \n\nIf there are any errors, no schedule entries are added. "
+        }
       }
     },
     "/v1/ScheduleTemplates": {
@@ -6160,7 +6170,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6644,7 +6654,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -8882,6 +8892,70 @@
         }
       }
     },
+    "/v1/WorkTech/Export/{id}/Status": {
+      "put": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Update WorkTech export status",
+        "operationId": "Update-WorkTech-export-status",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechExportStatus"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechExportStatus"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechExportStatus"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/WorkTech/Export/Search": {
       "get": {
         "tags": [
@@ -9256,6 +9330,70 @@
           },
           "default": {
             "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/WorkTech/Import/{id}/Status": {
+      "put": {
+        "tags": [
+          "Work Tech"
+        ],
+        "summary": "Update WorkTech import status",
+        "operationId": "Update-WorkTech-import-status",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechImportStatus"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechImportStatus"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkTechImportStatus"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -10591,7 +10729,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10641,7 +10779,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -10684,7 +10822,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10709,7 +10847,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10729,13 +10867,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -10774,19 +10912,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10795,7 +10933,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10806,7 +10944,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10824,7 +10962,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10837,7 +10975,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11872,6 +12010,12 @@
           "employeeHomePhone": {
             "type": "string",
             "nullable": true
+          },
+          "isReadOnly": {
+            "type": "boolean"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/EmergencyContactSettings"
           }
         },
         "additionalProperties": false
@@ -14261,7 +14405,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -17246,6 +17390,25 @@
           },
           "modifySin": {
             "type": "boolean"
+          },
+          "hiddenFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "disabledFieldsForEmployees": {
+            "type": "string",
+            "nullable": true
+          },
+          "disabledFieldsForManagers": {
+            "type": "string",
+            "nullable": true
+          },
+          "disabledFieldsForManager": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17537,6 +17700,9 @@
             "nullable": true
           },
           "isPrivate": {
+            "type": "boolean"
+          },
+          "isCurrentUserComment": {
             "type": "boolean"
           }
         },
@@ -18009,6 +18175,7 @@
         "additionalProperties": false
       },
       "ProblemDetails": {
+        "title": "",
         "type": "object",
         "properties": {
           "type": {
@@ -18034,8 +18201,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {},
-        "title": ""
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -18691,6 +18857,12 @@
           },
           "benefitsSettings": {
             "$ref": "#/components/schemas/BenefitsSettings"
+          },
+          "emergencyContactSettings": {
+            "$ref": "#/components/schemas/EmergencyContactSettings"
+          },
+          "dependentsSettings": {
+            "$ref": "#/components/schemas/DependentsSettings"
           }
         },
         "additionalProperties": false
@@ -21619,25 +21791,16 @@
       },
       "GlSegment": {
         "title": "",
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ],
         "type": "object",
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        },
         "properties": {
           "segmentNo": {
             "type": "integer",
@@ -21725,17 +21888,30 @@
             "type": "string",
             "description": "The value used in the GL Export. ",
             "nullable": true
+          },
+          "types": {
+            "type": "string",
+            "nullable": true
           }
         },
-        "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ]
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        }
       },
       "UserClass": {
         "enum": [
@@ -22143,7 +22319,6 @@
       },
       "GlProjectSegmentBasicSetup": {
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "active": {
             "type": "boolean",
@@ -22180,11 +22355,16 @@
             "description": "A longer description of the project.",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "GlProjectSegmentRequest": {
+        "required": [
+          "account",
+          "name",
+          "basicSetup"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "account": {
             "maxLength": 15,
@@ -22210,22 +22390,20 @@
           },
           "phases": {
             "type": "array",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/PhaseIdentifier"
-            }
+            },
+            "nullable": true
           }
         },
-        "required": [
-          "account",
-          "name",
-          "basicSetup"
-        ]
+        "additionalProperties": false
       },
       "PhaseIdentifier": {
+        "required": [
+          "segmentNo",
+          "phase"
+        ],
         "type": "object",
-        "additionalProperties": false,
-        "description": "Sets which phases can be used with the Project.",
         "properties": {
           "segmentNo": {
             "type": "integer",
@@ -22239,14 +22417,11 @@
             "description": "The phase's GL account. "
           }
         },
-        "required": [
-          "segmentNo",
-          "phase"
-        ]
+        "additionalProperties": false,
+        "description": "Sets which phases can be used with the Project."
       },
       "PayCode": {
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "code": {
             "type": "string",
@@ -22265,8 +22440,8 @@
           },
           "useShifts": {
             "type": "integer",
-            "format": "int32",
-            "description": "Returns whether shifts are used, optional or required for the pay code. \nReturns 0 if a shifts code isn't allowed. \nReturns 1 if a shifts code is  optional.\nReturns 2 if a shift code is required. "
+            "description": "Returns whether shifts are used, optional or required for the pay code. \nReturns 0 if a shifts code isn't allowed. \nReturns 1 if a shifts code is  optional.\nReturns 2 if a shift code is required. ",
+            "format": "int32"
           },
           "earnCode": {
             "type": "string",
@@ -22279,8 +22454,8 @@
           },
           "defaultUnits": {
             "type": "number",
-            "format": "double",
-            "description": "The default number of units if the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. "
+            "description": "The default number of units if the pay code is selected when inserting an entry. \nOnly applicable if useUnits is True. ",
+            "format": "double"
           },
           "defaultUnitCode": {
             "type": "string",
@@ -22297,18 +22472,18 @@
           },
           "r": {
             "type": "integer",
-            "format": "int32",
-            "description": "Returns the r value used to create the rgb color. Only used if useColor is true. "
+            "description": "Returns the r value used to create the rgb color. Only used if useColor is true. ",
+            "format": "int32"
           },
           "g": {
             "type": "integer",
-            "format": "int32",
-            "description": "Returns the g value used to create the rgb color. Only used if useColor is true. "
+            "description": "Returns the g value used to create the rgb color. Only used if useColor is true. ",
+            "format": "int32"
           },
           "b": {
             "type": "integer",
-            "format": "int32",
-            "description": "Returns the B value used to create the rgb color. Only used if useColor is true. "
+            "description": "Returns the B value used to create the rgb color. Only used if useColor is true. ",
+            "format": "int32"
           },
           "useColor": {
             "type": "boolean",
@@ -22324,17 +22499,18 @@
           },
           "overlappingFromTime": {
             "type": "integer",
-            "format": "int32",
             "description": "Sets the overlapping from time.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
+            "format": "int32",
             "nullable": true
           },
           "overlappingToTime": {
             "type": "integer",
-            "format": "int32",
             "description": "Returns the overlapping to time.\nOnly used if useUnits is True and allowOverlappingTimes is false. ",
+            "format": "int32",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "StringTextValuePairListKeyValuePair": {
         "type": "object",
@@ -22591,9 +22767,12 @@
         "additionalProperties": false
       },
       "Beneficiary": {
-        "type": "object",
-        "additionalProperties": false,
         "title": "",
+        "required": [
+          "givenName",
+          "surname"
+        ],
+        "type": "object",
         "properties": {
           "code": {
             "type": "string",
@@ -22621,8 +22800,8 @@
           },
           "percentage": {
             "type": "number",
-            "format": "double",
-            "description": "The percentage amount that the beneficiary is entitled to."
+            "description": "The percentage amount that the beneficiary is entitled to.",
+            "format": "double"
           },
           "revocable": {
             "type": "string",
@@ -22630,10 +22809,7 @@
             "nullable": true
           }
         },
-        "required": [
-          "givenName",
-          "surname"
-        ]
+        "additionalProperties": false
       },
       "BenefitsSettings": {
         "type": "object",
@@ -22743,7 +22919,6 @@
       },
       "EmployeeBenefitDetails": {
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "code": {
             "type": "string",
@@ -22770,8 +22945,8 @@
           },
           "expiryDate": {
             "type": "string",
-            "format": "date",
             "description": "The date the benefit ends in ISO 8601 format.",
+            "format": "date",
             "nullable": true
           },
           "expiryDateString": {
@@ -22796,8 +22971,8 @@
           },
           "coverageEffectiveDate": {
             "type": "string",
-            "format": "date",
             "description": "The date the benefit begins in ISO 8601 format.",
+            "format": "date",
             "nullable": true
           },
           "coverageEffectiveDateString": {
@@ -22807,42 +22982,42 @@
           },
           "dependents": {
             "type": "array",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/Dependent"
             },
+            "nullable": true,
             "readOnly": true
           },
           "dependentsFormatted": {
             "type": "array",
-            "description": "The format of the dependant's name. The options are in the description above. ",
-            "nullable": true,
             "items": {
               "type": "string"
             },
+            "description": "The format of the dependant's name. The options are in the description above. ",
+            "nullable": true,
             "readOnly": true
           },
           "beneficiaries": {
             "type": "array",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/Beneficiary"
             },
+            "nullable": true,
             "readOnly": true
           },
           "beneficiariesFormatted": {
             "type": "array",
-            "description": "The format of the beneficiaries' name. The options are in the description above. ",
-            "nullable": true,
             "items": {
               "type": "string"
             },
+            "description": "The format of the beneficiaries' name. The options are in the description above. ",
+            "nullable": true,
             "readOnly": true
           },
           "nameFormat": {
             "type": "integer",
-            "format": "int32",
-            "description": "The format of the employees's name. The options are in the description above. "
+            "description": "The format of the employees's name. The options are in the description above. ",
+            "format": "int32"
           },
           "displayPercentages": {
             "type": "boolean",
@@ -22850,15 +23025,16 @@
           },
           "daysBeforeEffective": {
             "type": "integer",
-            "format": "int32",
-            "description": "Returns a number based on company web setting BenefitsSettings.BenefitsSettings.DisplayDaysBeforeEffective. \n\nThis setting determines when the benefit starts displaying on the Avanti Self-Service Portal, based on the days before the benefit's effective date. \n\nFor example, if this is seven, the benefit displays on the Avanti Self-Service Portal a week before the effective date."
+            "description": "Returns a number based on company web setting BenefitsSettings.BenefitsSettings.DisplayDaysBeforeEffective. \n\nThis setting determines when the benefit starts displaying on the Avanti Self-Service Portal, based on the days before the benefit's effective date. \n\nFor example, if this is seven, the benefit displays on the Avanti Self-Service Portal a week before the effective date.",
+            "format": "int32"
           },
           "daysAfterExpiry": {
             "type": "integer",
-            "format": "int32",
-            "description": "Returns a number based on company web setting BenefitsSettings.BenefitsSettings.DisplayDaysAfterExpiry. \n\nThis setting determines when the benefit stops displaying on the Avanti Self-Service Portal, based on the number of days after the benefits' expiry date. \n\nFor example, if this is 14, the benefit displays on the Avanti Self-Service Portal for two weeks after the expiry date. "
+            "description": "Returns a number based on company web setting BenefitsSettings.BenefitsSettings.DisplayDaysAfterExpiry. \n\nThis setting determines when the benefit stops displaying on the Avanti Self-Service Portal, based on the number of days after the benefits' expiry date. \n\nFor example, if this is 14, the benefit displays on the Avanti Self-Service Portal for two weeks after the expiry date. ",
+            "format": "int32"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ImportPayrollDataResult": {
         "type": "object",
@@ -22918,8 +23094,14 @@
         "additionalProperties": false
       },
       "PayrollData": {
+        "required": [
+          "empNo",
+          "entryDate",
+          "earnDeductCode",
+          "units",
+          "unitOfMeasure"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "id": {
             "type": "string",
@@ -22934,8 +23116,8 @@
           },
           "entryDate": {
             "type": "string",
-            "format": "date-time",
-            "description": "The date of the payroll data entry in ISO 8601 format."
+            "description": "The date of the payroll data entry in ISO 8601 format.",
+            "format": "date-time"
           },
           "earnDeductCode": {
             "maxLength": 3,
@@ -22953,31 +23135,31 @@
           },
           "units": {
             "type": "number",
-            "format": "double",
-            "description": "The units for the payroll data entry."
+            "description": "The units for the payroll data entry.",
+            "format": "double"
           },
           "unitOfMeasure": {
             "$ref": "#/components/schemas/UnitOfMeasure"
           },
           "dollarRate": {
             "type": "number",
-            "format": "double",
-            "description": "The dollar rate of pay. This will only be used for earnings if earnDeductCode is 001 to 499.\n\nIf left blank, the rate of pay will be determined within Avanti."
+            "description": "The dollar rate of pay. This will only be used for earnings if earnDeductCode is 001 to 499.\n\nIf left blank, the rate of pay will be determined within Avanti.",
+            "format": "double"
           },
           "earningAmount": {
             "type": "number",
-            "format": "double",
-            "description": "Enter the earning amount for the entry. If you're using dollarRate, this must match the total for the units by dollarRate.\n\nThis is only used if the earnDeductCode is between 001-499."
+            "description": "Enter the earning amount for the entry. If you're using dollarRate, this must match the total for the units by dollarRate.\n\nThis is only used if the earnDeductCode is between 001-499.",
+            "format": "double"
           },
           "benefitAmount": {
             "type": "number",
-            "format": "double",
-            "description": "The total benefit amount for the entry. This is only used if the earnDeductCode is between 500-999."
+            "description": "The total benefit amount for the entry. This is only used if the earnDeductCode is between 500-999.",
+            "format": "double"
           },
           "deductionAmount": {
             "type": "number",
-            "format": "double",
-            "description": "The total deduction amount for the entry. This is only used if the earnDeductCode is between 500-999."
+            "description": "The total deduction amount for the entry. This is only used if the earnDeductCode is between 500-999.",
+            "format": "double"
           },
           "glType": {
             "$ref": "#/components/schemas/GlOption"
@@ -23039,17 +23221,13 @@
             "nullable": true
           }
         },
-        "required": [
-          "empNo",
-          "entryDate",
-          "earnDeductCode",
-          "units",
-          "unitOfMeasure"
-        ]
+        "additionalProperties": false
       },
       "PayrollDataImport": {
+        "required": [
+          "payrollData"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "batchDescription": {
             "maxLength": 1024,
@@ -23077,9 +23255,7 @@
             "description": "If True, payroll data will import into a staging table. If False, a new batch is created each time the endpoint is used. Default is False."
           }
         },
-        "required": [
-          "payrollData"
-        ]
+        "additionalProperties": false
       },
       "WorkTechEmpEntlExport": {
         "required": [
@@ -23330,40 +23506,6 @@
           },
           "primaryPosition": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmployeeListRequest": {
-        "type": "object",
-        "properties": {
-          "skip": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "take": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "empNoReference": {
-            "type": "string",
-            "nullable": true
-          },
-          "search": {
-            "type": "string",
-            "nullable": true
-          },
-          "active": {
-            "$ref": "#/components/schemas/ActiveStatus"
-          },
-          "sortOrder": {
-            "$ref": "#/components/schemas/EmployeeSortOrder"
-          },
-          "sortDirection": {
-            "$ref": "#/components/schemas/SortDirection"
-          },
-          "takeOption": {
-            "$ref": "#/components/schemas/TakeOption"
           }
         },
         "additionalProperties": false
@@ -24343,7 +24485,6 @@
       },
       "EmployeeAdditionalInfo": {
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "empNo": {
             "type": "string",
@@ -24352,177 +24493,189 @@
           },
           "dedFig": {
             "type": "array",
-            "description": "The text portion corresponds to the figureFieldLabels and the value is the employees information for the figure field. ",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/DeductionFigure"
-            }
+            },
+            "description": "The text portion corresponds to the figureFieldLabels and the value is the employees information for the figure field. ",
+            "nullable": true
           },
           "otherDate": {
             "type": "array",
-            "description": "The text portion corresponds to the dateFieldLabels and the value is the employees information for the date field. ",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherDate"
-            }
+            },
+            "description": "The text portion corresponds to the dateFieldLabels and the value is the employees information for the date field. ",
+            "nullable": true
           },
           "otherText": {
             "type": "array",
-            "description": "The text portion corresponds to the textFieldLabels and the value is the employees information for the text field. ",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/OtherText"
-            }
+            },
+            "description": "The text portion corresponds to the textFieldLabels and the value is the employees information for the text field. ",
+            "nullable": true
           },
           "textFieldLabels": {
             "type": "array",
-            "description": "Returns the display label with the associated value.\n\nThe value only returns the numeric portion, so the if the text field is T19, this returns 19.",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            }
+            },
+            "description": "Returns the display label with the associated value.\n\nThe value only returns the numeric portion, so the if the text field is T19, this returns 19.",
+            "nullable": true
           },
           "dateFieldLabels": {
             "type": "array",
-            "description": "Returns the date label with the value of the the date field. The value only returns the numeric portion, so the if the date is M15, this returns 15.",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            }
+            },
+            "description": "Returns the date label with the value of the the date field. The value only returns the numeric portion, so the if the date is M15, this returns 15.",
+            "nullable": true
           },
           "figureFieldLabels": {
             "type": "array",
-            "description": "Returns the figure label with the value of the the figure field. The value only returns the numeric portion, so the if the figure ID is M30, 30 returns.",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            }
+            },
+            "description": "Returns the figure label with the value of the the figure field. The value only returns the numeric portion, so the if the figure ID is M30, 30 returns.",
+            "nullable": true
+          },
+          "otherTextDisplay": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OtherText"
+            },
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "EmployeeAdditionalInfoSetupResponse": {
         "type": "object",
-        "additionalProperties": false,
-        "description": "",
         "properties": {
           "disabledDedFiguresForEmployees": {
             "type": "array",
-            "description": "Returns the figures that employees can't update. \n\nThis only returns the numeric portion, so the if the figure is M30, this returns 30. ",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the figures that employees can't update. \n\nThis only returns the numeric portion, so the if the figure is M30, this returns 30. ",
+            "nullable": true
           },
           "disabledOtherTextsForEmployees": {
             "type": "array",
-            "description": "Returns the other text information that employees can't update. \n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the other text information that employees can't update. \n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
+            "nullable": true
           },
           "disabledOtherDatesForEmployees": {
             "type": "array",
-            "description": "Returns the dates that employees can't update. \n\nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the dates that employees can't update. \n\nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
+            "nullable": true
           },
           "disabledDedFiguresForManagers": {
             "type": "array",
-            "description": "Returns the figures that managers can't update for other employees. \nThis only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the figures that managers can't update for other employees. \nThis only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
+            "nullable": true
           },
           "disabledOtherTextsForManagers": {
             "type": "array",
-            "description": "Returns the other text information that managers can't update for other employees.\n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the other text information that managers can't update for other employees.\n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
+            "nullable": true
           },
           "disabledOtherDatesForManagers": {
             "type": "array",
-            "description": "Returns the dates that managers can't update for other employees. \nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the dates that managers can't update for other employees. \nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
+            "nullable": true
           },
           "disabledDedFiguresForManagerSelf": {
             "type": "array",
-            "description": "Returns the figures that managers can't update for their employee. \nThis only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the figures that managers can't update for their employee. \nThis only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
+            "nullable": true
           },
           "disabledOtherTextsForManagerSelf": {
             "type": "array",
-            "description": "Returns the other text information that managers can't update for their employee.\n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the other text information that managers can't update for their employee.\n\nThis only returns the numeric portion, so the if the text field is T19, this returns 19.",
+            "nullable": true
           },
           "disabledOtherDatesForManagerSelf": {
             "type": "array",
-            "description": "Returns the dates that managers can't update for their employee. \n\nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
-            "nullable": true,
             "items": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "description": "Returns the dates that managers can't update for their employee. \n\nThis only returns the numeric portion, so the if the date is M15, this returns 15.",
+            "nullable": true
           },
           "textFieldData": {
             "type": "array",
-            "description": "The key indicates is the text field ID. The text returns the description that appears in the dropdown, the value is the the ID. ",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/StringTextValuePairListKeyValuePair"
-            }
+            },
+            "description": "The key indicates is the text field ID. The text returns the description that appears in the dropdown, the value is the the ID. ",
+            "nullable": true
           },
           "textFieldLabels": {
             "type": "array",
-            "description": "Returns the display label with the associated value. \n\nThe value only returns the numeric portion, so the if the text field is T19, this returns 19.",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            }
+            },
+            "description": "Returns the display label with the associated value. \n\nThe value only returns the numeric portion, so the if the text field is T19, this returns 19.",
+            "nullable": true
           },
           "dateFieldLabels": {
             "type": "array",
-            "description": "Returns the date label with the value of the the date field. \nThe value only returns the numeric portion, so the if the date is M15, this returns 15.",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            }
+            },
+            "description": "Returns the date label with the value of the the date field. \nThe value only returns the numeric portion, so the if the date is M15, this returns 15.",
+            "nullable": true
           },
           "figureFieldLabels": {
             "type": "array",
-            "description": "Returns the figure label with the value of the the figure field. \nThe value only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
-            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
-            }
+            },
+            "description": "Returns the figure label with the value of the the figure field. \nThe value only returns the numeric portion, so the if the figure ID is M30, 30 returns. ",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false,
+        "description": ""
       },
       "ScheduleEntryRequest": {
+        "required": [
+          "employeeNumber",
+          "scheduleDate",
+          "payCode"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "employeeNumber": {
             "maxLength": 9,
@@ -24532,8 +24685,8 @@
           },
           "scheduleDate": {
             "type": "string",
-            "format": "date-time",
-            "description": "The date the employee is scheduled worked in ISO 8601 format."
+            "description": "The date the employee is scheduled worked in ISO 8601 format.",
+            "format": "date-time"
           },
           "payCode": {
             "maxLength": 9,
@@ -24545,24 +24698,24 @@
             "maximum": 1440,
             "minimum": 0,
             "type": "integer",
-            "format": "int32",
             "description": "The time the employee is scheduled to start work, in minutes since midnight. \nIf the pay code's entry type is From To Times, this is required. ",
+            "format": "int32",
             "nullable": true
           },
           "toTime": {
             "maximum": 1440,
             "minimum": 0,
             "type": "integer",
-            "format": "int32",
             "description": "The time the employee is scheduled to end work, in minutes since midnight. \nIf you don't including amount and unitOfMeasure, this is required. ",
+            "format": "int32",
             "nullable": true
           },
           "amount": {
             "maximum": 2147483647,
             "minimum": 0,
             "type": "number",
-            "format": "double",
             "description": "The amount of time the employee is scheduled to work. This corresponds to the unitOfMeasure. \nThis is required if the pay code's entry type is Units and Unit Code. ",
+            "format": "double",
             "nullable": true
           },
           "unitOfMeasure": {
@@ -24621,16 +24774,539 @@
             "maximum": 2147483647,
             "minimum": 0,
             "type": "integer",
-            "format": "int32",
             "description": "This ensures the same schedule is not accidentally added twice.\nIf replaceExisting is True, added schedules with a duplicate reference number won't be added. \nIf replaceExisting is False, added schedules with a duplicate reference number replace the existing schedule. ",
+            "format": "int32",
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "Color": {
+        "type": "object",
+        "properties": {
+          "r": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "g": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "b": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "a": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "isKnownColor": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isEmpty": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNamedColor": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSystemColor": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DependentsSettings": {
+        "type": "object",
+        "properties": {
+          "hiddenFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "showSinOnEmployeeDependents": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmergencyContactSettings": {
+        "type": "object",
+        "properties": {
+          "managerReadOnly": {
+            "type": "boolean"
+          },
+          "managerReadOnlySelf": {
+            "type": "boolean"
+          },
+          "employeeReadOnly": {
+            "type": "boolean"
+          },
+          "hiddenFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePersonalInfo": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoRevision": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "givenName": {
+            "type": "string",
+            "nullable": true
+          },
+          "surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "initial": {
+            "type": "string",
+            "nullable": true
+          },
+          "preferredName": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "province": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "firstLanguage": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "phoneType1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneNumber1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneNumber2": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType3": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneNumber3": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType4": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneNumber4": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailType1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email1": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailType2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email2": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailType3": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email3": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailType4": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email4": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailType5": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email5": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Posting": {
+        "type": "object",
+        "properties": {
+          "poolEntryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "entrySourceType": {
+            "$ref": "#/components/schemas/EntrySourceType"
+          },
+          "poolOption": {
+            "$ref": "#/components/schemas/PoolOption"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "poolUntilDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pickupPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCancelled": {
+            "type": "boolean"
+          },
+          "isApproved": {
+            "type": "boolean"
+          },
+          "approvedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "approvedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "pickupEntryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "approvalLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groupingCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pickupRequestedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "selectedEntries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScheduleEntry"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ScheduleEntry": {
+        "type": "object",
+        "properties": {
+          "entrySourceType": {
+            "$ref": "#/components/schemas/EntrySourceType"
+          },
+          "scheduleEntryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scheduleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scheduleDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fromTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "toTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "units": {
+            "type": "number",
+            "format": "double"
+          },
+          "unitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "payCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useUnits": {
+            "type": "boolean"
+          },
+          "positionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "shiftId": {
+            "type": "string",
+            "nullable": true
+          },
+          "shiftDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasModifiedTimeCard": {
+            "type": "boolean"
+          },
+          "hasApprovedTimeCard": {
+            "type": "boolean"
+          },
+          "isCancelled": {
+            "type": "boolean"
+          },
+          "allowPooling": {
+            "type": "boolean"
+          },
+          "approvedLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "poolPickupRuleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "poolApprovalOption": {
+            "type": "string",
+            "nullable": true
+          },
+          "existingPoolEntryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "existingPoolEntryIsCancelled": {
+            "type": "boolean"
+          },
+          "assignedToEmp": {
+            "type": "boolean"
+          },
+          "showEmpOption": {
+            "type": "boolean"
+          },
+          "conflictCode": {
+            "$ref": "#/components/schemas/ScheduleEntryConflictCode"
+          },
+          "assignmentComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "conflictLevel": {
+            "$ref": "#/components/schemas/ShiftConflictLevel"
+          },
+          "conflictColour": {
+            "$ref": "#/components/schemas/Color"
+          },
+          "customFrom": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "customTo": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "month": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "day": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "year": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ScheduleEntryConflictCode": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ShiftConflictLevel": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "WorkTechExportStatus": {
         "required": [
-          "employeeNumber",
-          "scheduleDate",
-          "payCode"
-        ]
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WorkTechImportStatus": {
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -24643,7 +25319,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
@@ -24666,10 +25342,10 @@
       "name": "Change Log"
     },
     {
-      "name": "Codes"
+      "name": "Company Info"
     },
     {
-      "name": "Company Info"
+      "name": "Data Connector"
     },
     {
       "name": "Defaults Group"
