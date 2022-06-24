@@ -1,3 +1,12 @@
+# Jun 24, 2022 6:04 PM
+**GitHub Run ID:** 2557329594
+**GitHub Run Number:** 3723
+**Reference:** refs/heads/master
+**Commit:** d4185f73c85c18a33dda4b45924101089e1e3043## Removed
+* Model: EmployeePersonalInfo, Property: photoRevision
+* Model: EmployeePersonalInfo, Property: userName
+* Model: EmployeePersonalInfo, Property: preferredName
+
 # Jun 24, 2022 2:46 PM
 **GitHub Run ID:** 2556361892
 **GitHub Run Number:** 3721

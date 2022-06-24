@@ -24873,15 +24873,6 @@
             "type": "string",
             "nullable": true
           },
-          "photoRevision": {
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
-          },
-          "userName": {
-            "type": "string",
-            "nullable": true
-          },
           "givenName": {
             "type": "string",
             "nullable": true
@@ -24891,10 +24882,6 @@
             "nullable": true
           },
           "initial": {
-            "type": "string",
-            "nullable": true
-          },
-          "preferredName": {
             "type": "string",
             "nullable": true
           },
