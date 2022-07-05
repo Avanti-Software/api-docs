@@ -7535,7 +7535,8 @@
           "200": {
             "description": "Success"
           }
-        }
+        },
+        "x-internal": true
       }
     },
     "/v1/WorkTech/EmpEntlExport/{empNo}": {
