@@ -1,3 +1,10 @@
+# Jul 27, 2022 8:25 PM
+**GitHub Run ID:** 2749401861
+**GitHub Run Number:** 3825
+**Reference:** refs/heads/master
+**Commit:** dc0bbdc6194d242d950d8eee35d79ef0e26bc151## Added
+* Model: EmployeeAdditionalInfoSetupResponse, Property: textFieldTypes
+
 # Jun 24, 2022 6:04 PM
 **GitHub Run ID:** 2557329594
 **GitHub Run Number:** 3723
