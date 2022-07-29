@@ -24539,13 +24539,6 @@
             },
             "description": "Returns the figure label with the value of the the figure field. The value only returns the numeric portion, so the if the figure ID is M30, 30 returns.",
             "nullable": true
-          },
-          "otherTextDisplay": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OtherText"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
