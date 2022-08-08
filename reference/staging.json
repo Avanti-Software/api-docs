@@ -25075,6 +25075,30 @@
               "$ref": "#/components/schemas/ScheduleEntry"
             },
             "nullable": true
+          },
+          "currentUserRequestedPickupId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "commentCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scheduleStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "scheduleEnd": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isAllDay": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -25293,6 +25317,25 @@
           "status": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostAction": {
+        "required": [
+          "poolEntryId"
+        ],
+        "type": "object",
+        "properties": {
+          "poolEntryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comment": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
