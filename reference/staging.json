@@ -17410,6 +17410,13 @@
           "disabledFieldsForManager": {
             "type": "string",
             "nullable": true
+          },
+          "fieldDisplayNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -24859,6 +24866,13 @@
             "type": "boolean"
           },
           "hiddenFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "emergencyContactFieldDisplayName": {
             "type": "array",
             "items": {
               "type": "string"

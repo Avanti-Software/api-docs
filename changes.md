@@ -1,3 +1,11 @@
+# Aug 08, 2022 10:50 PM
+**GitHub Run ID:** 2821437356
+**GitHub Run Number:** 3843
+**Reference:** refs/heads/master
+**Commit:** 1ceddcf94751bc56bc68152a367c5eb05a731b3b## Added
+* Model: EmergencyContactSettings, Property: emergencyContactFieldDisplayName
+* Model: PersonalInfoSettings, Property: fieldDisplayNames
+
 # Aug 08, 2022 7:02 PM
 **GitHub Run ID:** 2820249372
 **GitHub Run Number:** 3838
