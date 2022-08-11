@@ -1,3 +1,18 @@
+# Aug 11, 2022 5:16 PM
+**GitHub Run ID:** 2841527699
+**GitHub Run Number:** 3863
+**Reference:** refs/heads/release/v10.6.2
+**Commit:** c4280e4b96008510b360ea569666641aec168099## Removed
+* Model: PersonalInfoSettings, Property: fieldDisplayNames
+* Model: EmergencyContactSettings, Property: emergencyContactFieldDisplayName
+* Model: Posting, Property: currentUserRequestedPickupId
+* Model: Posting, Property: commentCount
+* Model: Posting, Property: scheduleStart
+* Model: Posting, Property: scheduleEnd
+* Model: Posting, Property: isAllDay
+* Model: Posting, Property: title
+* Model: PostAction
+
 # Aug 08, 2022 10:50 PM
 **GitHub Run ID:** 2821437356
 **GitHub Run Number:** 3843
