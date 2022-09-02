@@ -1,3 +1,10 @@
+# Sep 02, 2022 4:11 PM
+**GitHub Run ID:** 2980368778
+**GitHub Run Number:** 3928
+**Reference:** refs/heads/master
+**Commit:** 02b265dcf6d396688e62a73ef479a2d1e399782d## Added
+* Model: EmployeeAdditionalInfo, Property: otherTextDisplay
+
 # Aug 16, 2022 9:34 PM
 **GitHub Run ID:** 2871194629
 **GitHub Run Number:** 3879
