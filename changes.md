@@ -1,3 +1,10 @@
+# Sep 15, 2022 3:10 PM
+**GitHub Run ID:** 3061519540
+**GitHub Run Number:** 3975
+**Reference:** refs/heads/master
+**Commit:** 32da031263000187d1eb2366fd21707490e159d1## Added
+* Model: BulkTimeDataImportModel, Property: stopImportOnAnyError
+
 # Sep 06, 2022 3:15 PM
 **GitHub Run ID:** 3001267355
 **GitHub Run Number:** 3938

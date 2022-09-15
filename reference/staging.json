@@ -9832,6 +9832,9 @@
             "items": {
               "$ref": "#/components/schemas/ClockDataRequest"
             }
+          },
+          "stopImportOnAnyError": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
