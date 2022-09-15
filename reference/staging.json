@@ -25612,6 +25612,30 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "EditPosting": {
+        "type": "object",
+        "properties": {
+          "poolEntryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "poolUntilDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pickupPayCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
