@@ -1,3 +1,13 @@
+# Sep 20, 2022 7:55 PM
+**GitHub Run ID:** 3092988053
+**GitHub Run Number:** 4033
+**Reference:** refs/heads/master
+**Commit:** a32cc3d1a21b111af961dc299e8c59aacf8cb4ac## Added
+* Model: PositionDetails, Property: reportsToPosition
+* Model: PositionDetails, Property: reportsToPositionName
+* Model: PositionDetails, Property: reportsToPositionNameFrF
+* Model: PositionDetails, Property: reportsToPositionNameFrM
+
 # Sep 20, 2022 4:50 PM
 **GitHub Run ID:** 3091866759
 **GitHub Run Number:** 4024

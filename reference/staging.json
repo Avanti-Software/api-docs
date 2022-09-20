@@ -18156,6 +18156,22 @@
           },
           "positionUserDefinedLabels": {
             "$ref": "#/components/schemas/PositionUserDefinedLabels"
+          },
+          "reportsToPosition": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportsToPositionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportsToPositionNameFrF": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportsToPositionNameFrM": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
