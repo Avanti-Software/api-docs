@@ -15603,6 +15603,30 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "generateNextEmpNo": {
+            "type": "boolean"
+          },
+          "dedFig": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeductionFigure"
+            },
+            "nullable": true
+          },
+          "otherDate": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OtherDate"
+            },
+            "nullable": true
+          },
+          "otherText": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OtherText"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
