@@ -25721,6 +25721,70 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "ClientBillingDetail": {
+        "type": "object",
+        "properties": {
+          "employeeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "payGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeStartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "employeeBillingStatus": {
+            "$ref": "#/components/schemas/EmployeeBillingStatus"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClientBillingSummary": {
+        "type": "object",
+        "properties": {
+          "billingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "billingDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoicedEmployees": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "changeInEmployees": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minimumEmployees": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useMinimumEmployees": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeBillingStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {
