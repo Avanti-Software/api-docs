@@ -13291,73 +13291,6 @@
         },
         "additionalProperties": false
       },
-      "EmployeeRequest": {
-        "type": "object",
-        "properties": {
-          "skip": {
-            "type": "integer",
-            "description": "The number of entries to skip.",
-            "format": "int32"
-          },
-          "take": {
-            "type": "integer",
-            "description": "The number of entries to take.",
-            "format": "int32"
-          },
-          "empNoReference": {
-            "type": "string",
-            "nullable": true
-          },
-          "search": {
-            "type": "string",
-            "nullable": true
-          },
-          "total": {
-            "type": "boolean"
-          },
-          "active": {
-            "$ref": "#/components/schemas/ActiveStatus"
-          },
-          "sortOrder": {
-            "$ref": "#/components/schemas/EmployeeSortOrder"
-          },
-          "sortDirection": {
-            "$ref": "#/components/schemas/SortDirection"
-          },
-          "takeOption": {
-            "$ref": "#/components/schemas/TakeOption"
-          },
-          "locations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "employmentStatus": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "positions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "sortDefinitions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SortDefinition"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "EmployeeSortOrder": {
         "enum": [
           0,
@@ -13415,6 +13348,46 @@
           "email": {
             "type": "string",
             "nullable": true
+          },
+          "primaryPositionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "payGroupCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "payGroupDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "employStatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "employStatusDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatusDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "fte": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -25785,6 +25758,135 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "EmployeeFilter": {
+        "type": "object",
+        "properties": {
+          "skip": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "take": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empNoReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "search": {
+            "type": "string",
+            "nullable": true
+          },
+          "total": {
+            "type": "boolean"
+          },
+          "active": {
+            "$ref": "#/components/schemas/ActiveStatus"
+          },
+          "sortOrder": {
+            "$ref": "#/components/schemas/EmployeeSortOrder"
+          },
+          "sortDirection": {
+            "$ref": "#/components/schemas/SortDirection"
+          },
+          "takeOption": {
+            "$ref": "#/components/schemas/TakeOption"
+          },
+          "locations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "employmentStatus": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "positions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "sortDefinitions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SortDefinition"
+            },
+            "nullable": true
+          },
+          "givenName": {
+            "type": "string",
+            "nullable": true
+          },
+          "surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "preferredName": {
+            "type": "string",
+            "nullable": true
+          },
+          "empNoFilter": {
+            "type": "string",
+            "nullable": true
+          },
+          "primaryPositionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "primaryPositionDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "payGroupCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "payGroupDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "employStatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "employStatusDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatusDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "fromFte": {
+            "type": "number",
+            "format": "double"
+          },
+          "toFte": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {

@@ -1,3 +1,22 @@
+# Sep 23, 2022 6:25 PM
+**GitHub Run ID:** 3114763048
+**GitHub Run Number:** 4080
+**Reference:** refs/heads/master
+**Commit:** 5db53f4071c0223e3155c0816f44a47ecf9196c6## Added
+* Model: EmployeeFilter
+* Model: EmployeeSummary, Property: primaryPositionCode
+* Model: EmployeeSummary, Property: payGroupCode
+* Model: EmployeeSummary, Property: payGroupDesc
+* Model: EmployeeSummary, Property: locationCode
+* Model: EmployeeSummary, Property: locationDesc
+* Model: EmployeeSummary, Property: employStatusCode
+* Model: EmployeeSummary, Property: employStatusDesc
+* Model: EmployeeSummary, Property: jobStatusCode
+* Model: EmployeeSummary, Property: jobStatusDesc
+* Model: EmployeeSummary, Property: fte
+## Removed
+* Model: EmployeeRequest
+
 # Sep 22, 2022 10:54 PM
 **GitHub Run ID:** 3109241411
 **GitHub Run Number:** 4070
