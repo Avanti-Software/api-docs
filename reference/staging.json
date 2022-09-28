@@ -2328,21 +2328,9 @@
         "operationId": "List-Employees",
         "requestBody": {
           "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmployeeRequest"
-              }
-            }
+            "application/json": { },
+            "text/json": { },
+            "application/*+json": { }
           }
         },
         "responses": {
@@ -9832,9 +9820,6 @@
             "items": {
               "$ref": "#/components/schemas/ClockDataRequest"
             }
-          },
-          "stopImportOnAnyError": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -13348,46 +13333,6 @@
           "email": {
             "type": "string",
             "nullable": true
-          },
-          "primaryPositionCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "payGroupCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "payGroupDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "locationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "locationDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "employStatusCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "employStatusDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "jobStatusCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "jobStatusDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "fte": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -15576,30 +15521,6 @@
               "type": "string"
             },
             "nullable": true
-          },
-          "generateNextEmpNo": {
-            "type": "boolean"
-          },
-          "dedFig": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DeductionFigure"
-            },
-            "nullable": true
-          },
-          "otherDate": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OtherDate"
-            },
-            "nullable": true
-          },
-          "otherText": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OtherText"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17546,22 +17467,6 @@
               "$ref": "#/components/schemas/ScheduleInfo"
             },
             "nullable": true
-          },
-          "pickupEmployeeName": {
-            "type": "string",
-            "nullable": true
-          },
-          "poolEmpApprovedDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "exchangeSchedules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ScheduleEntry"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -18129,22 +18034,6 @@
           },
           "positionUserDefinedLabels": {
             "$ref": "#/components/schemas/PositionUserDefinedLabels"
-          },
-          "reportsToPosition": {
-            "type": "string",
-            "nullable": true
-          },
-          "reportsToPositionName": {
-            "type": "string",
-            "nullable": true
-          },
-          "reportsToPositionNameFrF": {
-            "type": "string",
-            "nullable": true
-          },
-          "reportsToPositionNameFrM": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -25153,17 +25042,8 @@
             "type": "string",
             "nullable": true
           },
-          "cancelledDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "cancelledBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "type": {
-            "$ref": "#/components/schemas/PostType"
+          "status": {
+            "$ref": "#/components/schemas/PostStatus"
           }
         },
         "additionalProperties": false
@@ -25484,282 +25364,7 @@
         "type": "integer",
         "format": "int32"
       },
-      "PostHistory": {
-        "type": "object",
-        "properties": {
-          "poolEntryId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "entrySourceType": {
-            "$ref": "#/components/schemas/EntrySourceType"
-          },
-          "poolOption": {
-            "$ref": "#/components/schemas/PoolOption"
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "poolUntilDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "pickupPayCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "createdBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "isCancelled": {
-            "type": "boolean"
-          },
-          "cancelledDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "cancelledBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "isApproved": {
-            "type": "boolean"
-          },
-          "approvedDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "approvedBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "pickupEntryId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "approvalLevel": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "groupingCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pickupRequestedCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "currentUserRequestedPickupId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "commentCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "selectedEntries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ScheduleEntry"
-            },
-            "nullable": true
-          },
-          "scheduleStart": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "scheduleEnd": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "isAllDay": {
-            "type": "boolean"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "type": {
-            "$ref": "#/components/schemas/PostType"
-          },
-          "status": {
-            "$ref": "#/components/schemas/PostStatus"
-          },
-          "pickupApprovedDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "newOwnerName": {
-            "type": "string",
-            "nullable": true
-          },
-          "lastActionedDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PostType": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "EditPosting": {
-        "type": "object",
-        "properties": {
-          "poolEntryId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "poolUntilDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "pickupPayCode": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmployeeUserVariables": {
-        "type": "object",
-        "properties": {
-          "empNo": {
-            "type": "string",
-            "nullable": true
-          },
-          "variable": {
-            "type": "string",
-            "nullable": true
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "type": "number",
-            "format": "double"
-          },
-          "active": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmployeeUserVariablesSortOrder": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ClientBillingDetail": {
-        "type": "object",
-        "properties": {
-          "employeeName": {
-            "type": "string",
-            "nullable": true
-          },
-          "empNo": {
-            "type": "string",
-            "nullable": true
-          },
-          "payGroup": {
-            "type": "string",
-            "nullable": true
-          },
-          "employeeStartDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "employeeBillingStatus": {
-            "$ref": "#/components/schemas/EmployeeBillingStatus"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ClientBillingSummary": {
-        "type": "object",
-        "properties": {
-          "billingId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "billingDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "invoicedEmployees": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "changeInEmployees": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minimumEmployees": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "useMinimumEmployees": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmployeeBillingStatus": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "EmployeeFilter": {
+      "EmployeeRequest": {
         "type": "object",
         "properties": {
           "skip": {
@@ -25820,70 +25425,6 @@
               "$ref": "#/components/schemas/SortDefinition"
             },
             "nullable": true
-          },
-          "givenName": {
-            "type": "string",
-            "nullable": true
-          },
-          "surname": {
-            "type": "string",
-            "nullable": true
-          },
-          "preferredName": {
-            "type": "string",
-            "nullable": true
-          },
-          "empNoFilter": {
-            "type": "string",
-            "nullable": true
-          },
-          "primaryPositionCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "primaryPositionDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "payGroupCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "payGroupDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "locationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "locationDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "employStatusCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "employStatusDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "jobStatusCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "jobStatusDesc": {
-            "type": "string",
-            "nullable": true
-          },
-          "fromFte": {
-            "type": "number",
-            "format": "double"
-          },
-          "toFte": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false

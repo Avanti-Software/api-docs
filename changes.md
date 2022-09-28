@@ -1,3 +1,46 @@
+# Sep 28, 2022 6:51 PM
+**GitHub Run ID:** 3146056884
+**GitHub Run Number:** 4100
+**Reference:** refs/heads/release/v10.06.4
+**Commit:** 28b240d4c2470d2517a4cad9ba1eb80dcf1952f6## Added
+* Model: EmployeeRequest
+* Model: Posting, Property: status
+## Removed
+* Model: BulkTimeDataImportModel, Property: stopImportOnAnyError
+* Model: EmployeeSummary, Property: primaryPositionCode
+* Model: EmployeeSummary, Property: payGroupCode
+* Model: EmployeeSummary, Property: payGroupDesc
+* Model: EmployeeSummary, Property: locationCode
+* Model: EmployeeSummary, Property: locationDesc
+* Model: EmployeeSummary, Property: employStatusCode
+* Model: EmployeeSummary, Property: employStatusDesc
+* Model: EmployeeSummary, Property: jobStatusCode
+* Model: EmployeeSummary, Property: jobStatusDesc
+* Model: EmployeeSummary, Property: fte
+* Model: NewHire, Property: generateNextEmpNo
+* Model: NewHire, Property: dedFig
+* Model: NewHire, Property: otherDate
+* Model: NewHire, Property: otherText
+* Model: Pickup, Property: pickupEmployeeName
+* Model: Pickup, Property: poolEmpApprovedDate
+* Model: Pickup, Property: exchangeSchedules
+* Model: PositionDetails, Property: reportsToPosition
+* Model: PositionDetails, Property: reportsToPositionName
+* Model: PositionDetails, Property: reportsToPositionNameFrF
+* Model: PositionDetails, Property: reportsToPositionNameFrM
+* Model: Posting, Property: cancelledDate
+* Model: Posting, Property: cancelledBy
+* Model: Posting, Property: type
+* Model: PostHistory
+* Model: PostType
+* Model: EditPosting
+* Model: EmployeeUserVariables
+* Model: EmployeeUserVariablesSortOrder
+* Model: ClientBillingDetail
+* Model: ClientBillingSummary
+* Model: EmployeeBillingStatus
+* Model: EmployeeFilter
+
 # Sep 23, 2022 6:25 PM
 **GitHub Run ID:** 3114763048
 **GitHub Run Number:** 4080
