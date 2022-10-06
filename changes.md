@@ -1,3 +1,10 @@
+# Oct 06, 2022 8:02 PM
+**GitHub Run ID:** 3200039789
+**GitHub Run Number:** 4128
+**Reference:** refs/heads/master
+**Commit:** a924e615a00beb5e260a560b61a788141e00f4d6## Added
+* Model: CompanySettings, Property: fileSizeLimitInBytes
+
 # Sep 29, 2022 6:38 PM
 **GitHub Run ID:** 3153685264
 **GitHub Run Number:** 4105

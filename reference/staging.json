@@ -23547,6 +23547,10 @@
               "$ref": "#/components/schemas/LookupSettings"
             },
             "nullable": true
+          },
+          "fileSizeLimitInBytes": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
