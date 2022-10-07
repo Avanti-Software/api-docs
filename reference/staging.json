@@ -26135,6 +26135,37 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "EmployeeDocument": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileData": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "documentRevision": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
