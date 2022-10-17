@@ -1,3 +1,31 @@
+# Oct 17, 2022 5:32 PM
+**GitHub Run ID:** 3267217379
+**GitHub Run Number:** 4185
+**Reference:** refs/heads/master
+**Commit:** 0f3040f84b78bc64a6d17f4dfbd1d13844051986## Added
+* Model: EntrySource
+* Model: PoolingEntrySourceType
+* Model: ReassignViewModel
+* Model: ScheduleEntry, Property: poolingEntrySourceType
+* Model: ScheduleEntry, Property: assignedToEmpno
+* Model: ScheduleEntry, Property: assignedDate
+* Model: ScheduleEntry, Property: assignedBy
+* Model: ScheduleEntry, Property: defaultEmpno
+* Model: ScheduleEntry, Property: defaultEmployeeName
+* Model: ScheduleEntry, Property: assignedToScheduleEntryId
+## Removed
+* Model: EntrySourceType
+* Model: Color
+* Model: ScheduleEntry, Property: poolApprovalOption
+* Model: ScheduleEntry, Property: username
+* Model: ScheduleEntry, Property: conflictColour
+* Model: ScheduleEntry, Property: customFrom
+* Model: ScheduleEntry, Property: customTo
+* Model: ScheduleEntry, Property: month
+* Model: ScheduleEntry, Property: day
+* Model: ScheduleEntry, Property: dayOfWeek
+* Model: ScheduleEntry, Property: year
+
 # Oct 14, 2022 5:36 PM
 **GitHub Run ID:** 3251788363
 **GitHub Run Number:** 4164

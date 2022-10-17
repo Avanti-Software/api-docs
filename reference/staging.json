@@ -13556,14 +13556,6 @@
         "type": "integer",
         "format": "int32"
       },
-      "EntrySourceType": {
-        "enum": [
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
       "EventAttributes": {
         "enum": [
           0,
@@ -24821,53 +24813,6 @@
         },
         "additionalProperties": false
       },
-      "Color": {
-        "type": "object",
-        "properties": {
-          "r": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "g": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "b": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "a": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "isKnownColor": {
-            "type": "boolean",
-            "readOnly": true
-          },
-          "isEmpty": {
-            "type": "boolean",
-            "readOnly": true
-          },
-          "isNamedColor": {
-            "type": "boolean",
-            "readOnly": true
-          },
-          "isSystemColor": {
-            "type": "boolean",
-            "readOnly": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
       "DependentsSettings": {
         "type": "object",
         "properties": {
@@ -25257,10 +25202,6 @@
             "type": "string",
             "nullable": true
           },
-          "poolApprovalOption": {
-            "type": "string",
-            "nullable": true
-          },
           "existingPoolEntryId": {
             "type": "integer",
             "format": "int32",
@@ -25282,45 +25223,37 @@
             "type": "string",
             "nullable": true
           },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
           "conflictLevel": {
             "$ref": "#/components/schemas/ShiftConflictLevel"
           },
-          "conflictColour": {
-            "$ref": "#/components/schemas/Color"
+          "poolingEntrySourceType": {
+            "$ref": "#/components/schemas/PoolingEntrySourceType"
           },
-          "customFrom": {
+          "assignedToEmpno": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignedDate": {
             "type": "string",
             "format": "date-time",
-            "readOnly": true
+            "nullable": true
           },
-          "customTo": {
+          "assignedBy": {
             "type": "string",
-            "format": "date-time",
-            "readOnly": true
+            "nullable": true
           },
-          "month": {
+          "defaultEmpno": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
-          "day": {
+          "defaultEmployeeName": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
-          "dayOfWeek": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "year": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
+          "assignedToScheduleEntryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -25745,9 +25678,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "employeeBillingStatus": {
-            "$ref": "#/components/schemas/EmployeeBillingStatus"
-          }
+          "employeeBillingStatus": null
         },
         "additionalProperties": false
       },
@@ -26153,6 +26084,92 @@
           "documentRevision": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EntrySource": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PoolingEntrySourceType": {
+        "enum": [
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ReassignViewModel": {
+        "type": "object",
+        "properties": {
+          "selectedEmployee": {
+            "type": "string",
+            "nullable": true
+          },
+          "declineShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "reAssignedPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "reAssignedPayCodeShiftOption": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reAssignedShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "reAssignedAttendanceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "reAssignedComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignedToPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignedToShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignedToAttendanceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignedToComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "reAssignedCancelled": {
+            "type": "boolean"
+          },
+          "reAssignedDeleted": {
+            "type": "boolean"
+          },
+          "pickupEntryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
