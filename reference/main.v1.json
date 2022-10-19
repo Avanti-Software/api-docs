@@ -5,9 +5,9 @@
     "description": "Avanti API",
     "termsOfService": "https://www.avanti.ca/api-terms-of-use",
     "contact": {
-      "name": "Avanti Support",
+      "name": "Avanti Care",
       "url": "https://avanti.ca",
-      "email": "support@avanti.ca"
+      "email": "care@avanti.ca"
     },
     "version": "1.0.0"
   },
