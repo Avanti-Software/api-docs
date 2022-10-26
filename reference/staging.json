@@ -729,7 +729,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -762,7 +762,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -809,7 +809,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -818,7 +818,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -973,7 +973,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1008,7 +1008,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -1066,7 +1066,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1208,7 +1208,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1313,7 +1313,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1350,7 +1350,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1387,7 +1387,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1425,7 +1425,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1434,7 +1434,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1458,7 +1458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1512,7 +1512,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1837,7 +1837,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2086,7 +2086,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2130,7 +2130,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2465,7 +2465,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -2572,7 +2572,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3710,7 +3710,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3769,7 +3769,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3849,7 +3849,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3980,7 +3980,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4161,7 +4161,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4575,7 +4575,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4748,7 +4748,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -4990,7 +4990,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5015,7 +5015,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5217,8 +5217,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    {},
-                    {}
+                    { },
+                    { }
                   ]
                 },
                 "examples": {
@@ -6158,7 +6158,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6642,7 +6642,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -10721,7 +10721,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10771,7 +10771,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -10814,7 +10814,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10839,7 +10839,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10859,13 +10859,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -10904,19 +10904,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10925,7 +10925,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10936,7 +10936,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10954,7 +10954,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10967,7 +10967,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -14362,7 +14362,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -18188,9 +18188,7 @@
           "showEmployeeInformation": {
             "$ref": "#/components/schemas/ShowEmpOption"
           },
-          "entrySourceType": {
-            "$ref": "#/components/schemas/EntrySourceType"
-          }
+          "entrySourceType": null
         },
         "additionalProperties": false
       },
@@ -18221,7 +18219,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -24998,9 +24996,7 @@
             "format": "int32",
             "nullable": true
           },
-          "entrySourceType": {
-            "$ref": "#/components/schemas/EntrySourceType"
-          },
+          "entrySourceType": null,
           "poolOption": {
             "$ref": "#/components/schemas/PoolOption"
           },
@@ -25108,9 +25104,7 @@
       "ScheduleEntry": {
         "type": "object",
         "properties": {
-          "entrySourceType": {
-            "$ref": "#/components/schemas/EntrySourceType"
-          },
+          "entrySourceType": null,
           "scheduleEntryId": {
             "type": "integer",
             "format": "int32"
@@ -25924,9 +25918,7 @@
             "format": "int32",
             "nullable": true
           },
-          "entrySourceType": {
-            "$ref": "#/components/schemas/EntrySourceType"
-          },
+          "entrySourceType": null,
           "poolOption": {
             "$ref": "#/components/schemas/PoolOption"
           },
@@ -26120,17 +26112,9 @@
             "type": "string",
             "nullable": true
           },
-          "declineShift": {
-            "type": "string",
-            "nullable": true
-          },
           "reAssignedPayCode": {
             "type": "string",
             "nullable": true
-          },
-          "reAssignedPayCodeShiftOption": {
-            "type": "integer",
-            "format": "int32"
           },
           "reAssignedShift": {
             "type": "string",
@@ -26160,11 +26144,81 @@
             "type": "string",
             "nullable": true
           },
-          "reAssignedCancelled": {
-            "type": "boolean"
-          },
           "reAssignedDeleted": {
             "type": "boolean"
+          },
+          "pickupEntryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeViewModel": {
+        "type": "object",
+        "properties": {
+          "exchangedFromEmployee": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromAttendanceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "deleteExchangedFromEntry": {
+            "type": "boolean"
+          },
+          "cancelledExchangedFromAttendance": {
+            "type": "string",
+            "nullable": true
+          },
+          "cancelledExchangedFromComments": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithEmployee": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithAttendanceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "deleteExchangedWithEntry": {
+            "type": "boolean"
+          },
+          "cancelledExchangedWithAttendance": {
+            "type": "string",
+            "nullable": true
+          },
+          "cancelledExchangedWithComments": {
+            "type": "string",
+            "nullable": true
           },
           "pickupEntryId": {
             "type": "integer",
@@ -26185,7 +26239,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
