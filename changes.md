@@ -1,3 +1,69 @@
+# Oct 31, 2022 3:14 PM
+**GitHub Run ID:** 3362338171
+**GitHub Run Number:** 4301
+**Reference:** refs/heads/release/v10.07.0
+**Commit:** 6ec176fdf88ff0fccb607b48e4ea66beb351eae3## Added
+* Model: AvailableEmployee
+* Model: BulkTimeDataImportModel, Property: stopImportOnAnyError
+* Model: ClientBillingDetail
+* Model: ClientBillingSummary
+* Model: CompanySettings, Property: fileSizeLimitInBytes
+* Model: EditPosting
+* Model: EmployeeDocument
+* Model: EmployeeFilter
+* Model: EmployeeSummary, Property: primaryPositionCode
+* Model: EmployeeSummary, Property: payGroupCode
+* Model: EmployeeSummary, Property: payGroupDesc
+* Model: EmployeeSummary, Property: locationCode
+* Model: EmployeeSummary, Property: locationDesc
+* Model: EmployeeSummary, Property: employStatusCode
+* Model: EmployeeSummary, Property: employStatusDesc
+* Model: EmployeeSummary, Property: jobStatusCode
+* Model: EmployeeSummary, Property: jobStatusDesc
+* Model: EmployeeSummary, Property: fte
+* Model: EmployeeUserVariables
+* Model: EmployeeUserVariablesSortOrder
+* Model: EntrySource
+* Model: NewHire, Property: generateNextEmpNo
+* Model: NewHire, Property: dedFig
+* Model: NewHire, Property: otherDate
+* Model: NewHire, Property: otherText
+* Model: Pickup, Property: pickupEmployeeName
+* Model: Pickup, Property: poolEmpApprovedDate
+* Model: Pickup, Property: exchangeSchedules
+* Model: PoolingEntrySourceType
+* Model: PositionDetails, Property: reportsToPosition
+* Model: PositionDetails, Property: reportsToPositionName
+* Model: PositionDetails, Property: reportsToPositionNameFrF
+* Model: PositionDetails, Property: reportsToPositionNameFrM
+* Model: PostHistory
+* Model: Posting, Property: cancelledDate
+* Model: Posting, Property: cancelledBy
+* Model: Posting, Property: type
+* Model: PostType
+* Model: ReassignViewModel
+* Model: ScheduleEntry, Property: poolingEntrySourceType
+* Model: ScheduleEntry, Property: assignedToEmpno
+* Model: ScheduleEntry, Property: assignedDate
+* Model: ScheduleEntry, Property: assignedBy
+* Model: ScheduleEntry, Property: defaultEmpno
+* Model: ScheduleEntry, Property: defaultEmployeeName
+* Model: ScheduleEntry, Property: assignedToScheduleEntryId
+## Removed
+* Model: Posting, Property: status
+* Model: ScheduleEntry, Property: poolApprovalOption
+* Model: ScheduleEntry, Property: username
+* Model: ScheduleEntry, Property: conflictColour
+* Model: ScheduleEntry, Property: customFrom
+* Model: ScheduleEntry, Property: customTo
+* Model: ScheduleEntry, Property: month
+* Model: ScheduleEntry, Property: day
+* Model: ScheduleEntry, Property: dayOfWeek
+* Model: ScheduleEntry, Property: year
+* Model: Color
+* Model: EmployeeRequest
+* Model: EntrySourceType
+
 # Oct 31, 2022 2:54 PM
 **GitHub Run ID:** 3362201296
 **GitHub Run Number:** 4300
