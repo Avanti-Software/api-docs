@@ -26119,17 +26119,9 @@
             "type": "string",
             "nullable": true
           },
-          "declineShift": {
-            "type": "string",
-            "nullable": true
-          },
           "reAssignedPayCode": {
             "type": "string",
             "nullable": true
-          },
-          "reAssignedPayCodeShiftOption": {
-            "type": "integer",
-            "format": "int32"
           },
           "reAssignedShift": {
             "type": "string",
@@ -26159,11 +26151,81 @@
             "type": "string",
             "nullable": true
           },
-          "reAssignedCancelled": {
-            "type": "boolean"
-          },
           "reAssignedDeleted": {
             "type": "boolean"
+          },
+          "pickupEntryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeViewModel": {
+        "type": "object",
+        "properties": {
+          "exchangedFromEmployee": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromAttendanceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedFromComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "deleteExchangedFromEntry": {
+            "type": "boolean"
+          },
+          "cancelledExchangedFromAttendance": {
+            "type": "string",
+            "nullable": true
+          },
+          "cancelledExchangedFromComments": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithEmployee": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithAttendanceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "exchangedWithComment": {
+            "type": "string",
+            "nullable": true
+          },
+          "deleteExchangedWithEntry": {
+            "type": "boolean"
+          },
+          "cancelledExchangedWithAttendance": {
+            "type": "string",
+            "nullable": true
+          },
+          "cancelledExchangedWithComments": {
+            "type": "string",
+            "nullable": true
           },
           "pickupEntryId": {
             "type": "integer",
