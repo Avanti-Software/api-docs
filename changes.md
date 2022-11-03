@@ -1,3 +1,14 @@
+# Nov 03, 2022 7:04 PM
+**GitHub Run ID:** 3388486112
+**GitHub Run Number:** 4315
+**Reference:** refs/heads/release/v10.07.0
+**Commit:** 0c87b6075c4f590021047b1e7d4c92b5df1fa30f## Added
+* Model: ReassignViewModel, Property: declineShift
+* Model: ReassignViewModel, Property: reAssignedPayCodeShiftOption
+* Model: ReassignViewModel, Property: reAssignedCancelled
+## Removed
+* Model: ExchangeViewModel
+
 # Oct 31, 2022 3:22 PM
 **GitHub Run ID:** 3362418789
 **GitHub Run Number:** 4302
