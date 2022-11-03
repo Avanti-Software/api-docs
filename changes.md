@@ -1,3 +1,14 @@
+# Nov 03, 2022 7:31 PM
+**GitHub Run ID:** 3388653317
+**GitHub Run Number:** 4316
+**Reference:** refs/heads/master
+**Commit:** 6d80c8485608e4f09b2e58cc190d3ff3ec56ec17## Added
+* Model: ExchangeViewModel
+## Removed
+* Model: ReassignViewModel, Property: declineShift
+* Model: ReassignViewModel, Property: reAssignedPayCodeShiftOption
+* Model: ReassignViewModel, Property: reAssignedCancelled
+
 # Nov 03, 2022 7:04 PM
 **GitHub Run ID:** 3388486112
 **GitHub Run Number:** 4315
