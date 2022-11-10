@@ -54,5 +54,5 @@ You’re all done setting up everything in Avanti for the API. Now, all you need
 - API Client Credentials. 
 - Avanti Company Database name. 
 - Your Avanti Self-Service Portal URL. 
-Now you're API developer will have everything they need to get started [Creating Access Tokens.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2Njk-access-tokens
+Now your API developer will have everything they need to get started [Creating Access Tokens.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2Njk-access-tokens
 )
