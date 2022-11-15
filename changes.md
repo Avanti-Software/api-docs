@@ -1,3 +1,10 @@
+# Nov 15, 2022 6:07 PM
+**GitHub Run ID:** 3472915047
+**GitHub Run Number:** 4344
+**Reference:** refs/heads/master
+**Commit:** d6dab9d61142c2fca8d3a0aea4c7d9e4a72d8490## Added
+* Model: ScheduleEntry, Property: attendanceCode
+
 # Nov 03, 2022 7:31 PM
 **GitHub Run ID:** 3388653317
 **GitHub Run Number:** 4316
