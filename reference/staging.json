@@ -14479,25 +14479,6 @@
         "type": "integer",
         "format": "int32"
       },
-      "LoginRequest": {
-        "type": "object",
-        "properties": {
-          "username": {
-            "type": "string",
-            "description": "The Avanti User Name that the employee uses to log into ASSP, Avanti Go, and the Avanti Desktop Application, if applicable. Must be a valid Avanti User Name.",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "company": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "LoginResponse": {
         "type": "object",
         "properties": {
