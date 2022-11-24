@@ -21389,6 +21389,10 @@
           "serialNo": {
             "type": "string",
             "nullable": true
+          },
+          "minimumAvantiGoVersion": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

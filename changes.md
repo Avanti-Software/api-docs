@@ -1,3 +1,10 @@
+# Nov 24, 2022 4:14 PM
+**GitHub Run ID:** 3542158324
+**GitHub Run Number:** 4425
+**Reference:** refs/heads/master
+**Commit:** 8b9ccf1d8c4eb6199842690f8f87c797e68d5bf6## Added
+* Model: UserSetup, Property: minimumAvantiGoVersion
+
 # Nov 23, 2022 10:34 PM
 **GitHub Run ID:** 3536108004
 **GitHub Run Number:** 4413
