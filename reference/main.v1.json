@@ -5404,7 +5404,7 @@
           "Time Data"
         ],
         "summary": "Add Time Data Entries",
-        "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.",
+        "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.\n\nImportant Information\nBreak rules don’t apply to added time data entries. ",
         "operationId": "Add-Time-Data-Entries",
         "requestBody": {
           "content": {
@@ -7304,19 +7304,19 @@
         "additionalProperties": false
       },
       "BulkTimeDataImportModel": {
-        "required": [
-          "clockData"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "clockData": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ClockDataRequest"
+              "$ref": "#/components/schemas/ClockData"
             }
           }
         },
-        "additionalProperties": false
+        "required": [
+          "clockData"
+        ]
       },
       "Calendar": {
         "type": "object",
@@ -7469,15 +7469,8 @@
         "format": "int32"
       },
       "ClockData": {
-        "required": [
-          "earningCode",
-          "earningDate",
-          "empNo",
-          "recordSourceId",
-          "unitOfMeasure",
-          "units"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "empNo": {
             "maxLength": 9,
@@ -7518,6 +7511,7 @@
             "maxLength": 9,
             "minLength": 0,
             "type": "string",
+            "description": "The ID of the shift worked. If left blank, premium rules will not apply to the time worked.\n\nMust be a valid shift ID. 'Get Shift Codes' will return a list of all the valid shifts.",
             "nullable": true
           },
           "wcbOverrideCode": {
@@ -7619,7 +7613,15 @@
             "format": "int32"
           }
         },
-        "additionalProperties": false
+        "required": [
+          "empNo",
+          "earningDate",
+          "earningCode",
+          "units",
+          "unitOfMeasure",
+          "recordSourceId"
+        ],
+        "description": ""
       },
       "ClockDataRequest": {
         "required": [
