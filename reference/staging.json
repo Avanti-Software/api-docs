@@ -5843,7 +5843,7 @@
           "Time Data"
         ],
         "summary": "Add Time Data Entries",
-        "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.\n\nImportant Information\nBreak rules don’t apply to added time data entries. ",
+        "description": "Create time data entries for your employees. \n\nThis can be used when you have time data information prepared by other systems that you wish to incorporate into Time and Attendance module in Avanti.\n\nIf some time data entries don't pass validation, a message is returned and the entries won't be imported. All valid entries are created.\n\nImportant Information - Break rules don’t apply to added time data entries. ",
         "operationId": "Add-Time-Data-Entries",
         "requestBody": {
           "content": {
