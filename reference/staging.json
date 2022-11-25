@@ -796,7 +796,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -829,7 +829,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -876,7 +876,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -885,7 +885,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1040,7 +1040,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1075,7 +1075,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -1133,7 +1133,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1275,7 +1275,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1380,7 +1380,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1417,7 +1417,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1454,7 +1454,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1492,7 +1492,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1501,7 +1501,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1525,7 +1525,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1579,7 +1579,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1904,7 +1904,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2153,7 +2153,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2197,7 +2197,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2386,64 +2386,6 @@
         }
       }
     },
-    "/v1/Employees": {
-      "post": {
-        "tags": [
-          "Employees"
-        ],
-        "summary": "List Employees",
-        "operationId": "List-Employees",
-        "requestBody": {
-          "content": {
-            "application/json": null,
-            "text/json": null,
-            "application/*+json": null
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Ok",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetEmployeeSummaries"
-                }
-              }
-            }
-          },
-          "201": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetEmployeeSummaries"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/Employees/Details": {
       "get": {
         "tags": [
@@ -2532,7 +2474,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -2639,7 +2581,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3777,7 +3719,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3836,7 +3778,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3916,7 +3858,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4047,7 +3989,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4228,7 +4170,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4642,7 +4584,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4815,7 +4757,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -5057,7 +4999,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5082,7 +5024,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5284,8 +5226,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    {},
-                    {}
+                    { },
+                    { }
                   ]
                 },
                 "examples": {
@@ -6225,7 +6167,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6709,7 +6651,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -10198,8 +10140,15 @@
         "additionalProperties": false
       },
       "ClockDataRequest": {
+        "required": [
+          "empNo",
+          "earningDate",
+          "earningCode",
+          "units",
+          "unitOfMeasure",
+          "recordSourceId"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "empNo": {
             "maxLength": 9,
@@ -10339,14 +10288,7 @@
             "nullable": true
           }
         },
-        "required": [
-          "empNo",
-          "earningDate",
-          "earningCode",
-          "units",
-          "unitOfMeasure",
-          "recordSourceId"
-        ]
+        "additionalProperties": false
       },
       "CodeDefinition": {
         "type": "object",
@@ -10788,7 +10730,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10838,7 +10780,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -10881,7 +10823,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10906,7 +10848,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10926,13 +10868,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -10971,19 +10913,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10992,7 +10934,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11003,7 +10945,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11021,7 +10963,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11034,7 +10976,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -14429,7 +14371,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -18267,7 +18209,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -26290,6 +26232,44 @@
           }
         },
         "additionalProperties": false
+      },
+      "EmployeeDetail": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "givenName": {
+            "type": "string",
+            "nullable": true
+          },
+          "surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "preferredName": {
+            "type": "string",
+            "nullable": true
+          },
+          "initial": {
+            "type": "string",
+            "nullable": true
+          },
+          "primaryPositionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionNameFr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -26302,7 +26282,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
