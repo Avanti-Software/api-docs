@@ -1,3 +1,20 @@
+# Nov 28, 2022 9:36 PM
+**GitHub Run ID:** 3568803566
+**GitHub Run Number:** 4443
+**Reference:** refs/heads/master
+**Commit:** 707265edd7fe4de0b2b711b272b59280b043f6fa## Added
+ * Endpoint: GET - /v1/ChangeLog/System
+* Model: EmployeeDetail
+* Model: ExchangeViewModel
+* Model: ScheduleEntry, Property: attendanceCode
+* Model: UserSetup, Property: minimumAvantiGoVersion
+## Removed
+ * Endpoint: POST - /v1/Employees
+* Model: ReassignViewModel, Property: declineShift
+* Model: ReassignViewModel, Property: reAssignedPayCodeShiftOption
+* Model: ReassignViewModel, Property: reAssignedCancelled
+* Model: LoginRequest
+
 # Nov 25, 2022 11:01 PM
 **GitHub Run ID:** 3551115808
 **GitHub Run Number:** 4435
