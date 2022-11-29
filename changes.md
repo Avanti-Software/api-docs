@@ -1,3 +1,10 @@
+# Nov 29, 2022 4:47 PM
+**GitHub Run ID:** 3576134129
+**GitHub Run Number:** 4453
+**Reference:** refs/heads/master
+**Commit:** 99742cdf58d9fc0dc8e0d5843bb4b2e45fed60c5## Added
+ * Endpoint: GET - /v1/ChangeLog/AccessControl
+
 # Nov 29, 2022 4:07 PM
 **GitHub Run ID:** 3575780466
 **GitHub Run Number:** 4450
