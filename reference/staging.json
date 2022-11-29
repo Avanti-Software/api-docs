@@ -785,6 +785,73 @@
         }
       }
     },
+    "/v1/ChangeLog/SystemAdministration": {
+      "get": {
+        "tags": [
+          "Change Log"
+        ],
+        "summary": "Lists system administration change logs",
+        "operationId": "Lists-system-administration-change-logs",
+        "parameters": [
+          {
+            "name": "User",
+            "in": "query",
+            "schema": {
+              "maxLength": 32,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Name",
+            "in": "query",
+            "schema": {
+              "maxLength": 128,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/v1/CompanyInfo/Logo": {
       "delete": {
         "tags": [
