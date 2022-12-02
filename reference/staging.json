@@ -17657,6 +17657,10 @@
               "$ref": "#/components/schemas/ScheduleEntry"
             },
             "nullable": true
+          },
+          "approvedBy": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
