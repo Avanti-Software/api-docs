@@ -1,3 +1,12 @@
+# Dec 05, 2022 10:39 PM
+**GitHub Run ID:** 3624562503
+**GitHub Run Number:** 4548
+**Reference:** refs/heads/master
+**Commit:** b8322b704042afe924dd84299c00caf8bf82b219## Removed
+ * Endpoint: GET - /v1/ChangeLog/AccessControl
+ * Endpoint: GET - /v1/ChangeLog/System
+ * Endpoint: GET - /v1/ChangeLog/SystemAdministration
+
 # Dec 02, 2022 5:03 PM
 **GitHub Run ID:** 3603565896
 **GitHub Run Number:** 4524
