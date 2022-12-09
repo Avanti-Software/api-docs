@@ -25028,6 +25028,13 @@
           },
           "type": {
             "$ref": "#/components/schemas/PostType"
+          },
+          "pickupRequestedEmpNos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -26033,6 +26040,13 @@
           "lastActionedDate": {
             "type": "string",
             "format": "date-time",
+            "nullable": true
+          },
+          "pickupRequestedEmpNos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },
