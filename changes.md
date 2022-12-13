@@ -1,3 +1,12 @@
+# Dec 13, 2022 10:36 PM
+**GitHub Run ID:** 3689888803
+**GitHub Run Number:** 4572
+**Reference:** refs/heads/master
+**Commit:** 5f7bac3c1d25f8a40204a09fa6991400adbe87cd## Added
+* Model: EmployeeInfoDetails
+* Model: EmployeeInfoSettings
+* Model: Settings, Property: employeeInfoSettings
+
 # Dec 09, 2022 4:27 PM
 **GitHub Run ID:** 3658998073
 **GitHub Run Number:** 4557
