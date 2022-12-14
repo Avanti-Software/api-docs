@@ -26980,6 +26980,17 @@
       },
       "EmployeeInfoSettings": {
         "type": "object",
+        "properties": {
+          "pictureVisible": {
+            "type": "boolean"
+          },
+          "qualificationsVisible": {
+            "type": "boolean"
+          },
+          "scheduleVisible": {
+            "type": "boolean"
+          }
+        },
         "additionalProperties": false
       }
     },
