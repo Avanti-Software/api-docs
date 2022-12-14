@@ -26992,6 +26992,98 @@
           }
         },
         "additionalProperties": false
+      },
+      "EmployeeQualification": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "qualificationType": {
+            "$ref": "#/components/schemas/QualificationType"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "descriptionFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "detail1": {
+            "type": "string",
+            "nullable": true
+          },
+          "detail2": {
+            "type": "string",
+            "nullable": true
+          },
+          "detail3": {
+            "type": "string",
+            "nullable": true
+          },
+          "detail4": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/QualificationStatus"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "completedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "renewedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "requiredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QualificationStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "QualificationType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {
