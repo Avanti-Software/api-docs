@@ -1,3 +1,10 @@
+# Dec 22, 2022 6:17 PM
+**GitHub Run ID:** 3760079382
+**GitHub Run Number:** 4619
+**Reference:** refs/heads/master
+**Commit:** 8f30316b0a58019449a956ceb52668dcdacc912f## Added
+* Model: WorkTechExport, Property: glAccount
+
 # Dec 16, 2022 3:45 PM
 **GitHub Run ID:** 3714451572
 **GitHub Run Number:** 4600
