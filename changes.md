@@ -1,3 +1,18 @@
+# Jan 04, 2023 8:42 PM
+**GitHub Run ID:** 3841410488
+**GitHub Run Number:** 4629
+**Reference:** refs/heads/release/v10.08.2
+**Commit:** 281a08575f2b5e376bba94ff9bc683cca1351995## Removed
+* Model: Settings, Property: employeeInfoSettings
+* Model: Posting, Property: pickupRequestedEmpNos
+* Model: PostHistory, Property: pickupRequestedEmpNos
+* Model: EmployeeInfoDetails
+* Model: EmployeeInfoSettings
+* Model: EmployeeQualification
+* Model: QualificationStatus
+* Model: QualificationType
+* Model: QualificationRequirement
+
 # Dec 22, 2022 6:17 PM
 **GitHub Run ID:** 3760079382
 **GitHub Run Number:** 4619
