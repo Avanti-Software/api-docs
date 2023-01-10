@@ -25600,6 +25600,11 @@
               "$ref": "#/components/schemas/ScheduleEntry"
             },
             "nullable": true
+          },
+          "photoRevision": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           }
         },
         "additionalProperties": false
