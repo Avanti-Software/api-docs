@@ -67,3 +67,5 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 >Looking for more information on employee access? Check out our [Role Assignments](https://help.avanti.ca/en/support/solutions/articles/36000129028-role-assignments) on Avanti's Help center. 
 
 Nice work! The Avanti User is all set up. The next you'll need to [Allow Access to the Endpoint](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2Njg-endpoint-access) for more information.  
+<!-- theme: info -->
+>If you're adjusthing access and already have set Endpoint Access and created Client Credentials, all you'll need to do is [Reload Settings](https://avanti.stoplight.io/docs/avanti-api/45925478e011d-create-client-credentials#reload-web-settings) for your changes to take effect.  
