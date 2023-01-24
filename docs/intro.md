@@ -22,6 +22,6 @@ If none of our existing endpoints meet your needs, you can create endpoints usin
 
 We would love to hear any feedback about your experience using the Avanti API. Please email us at [AppFeedback@avanti.ca](mailto:appfeedback@avanti.ca) to help us improve our API. 
 
-## Need Support
+## Need Help
 
-Having issues using the Avanti API? Please reach out to [Avanti Support](mailto:support@avanti.ca) if you are a client requiring assistance. Before contacting support, please do your due diligence and review the API documentation in its entirety.
+Having issues using the Avanti API? Please reach out to [Avanti Care](https://help.avanti.ca/support/tickets/new) if you are a client requiring assistance. Before contacting Care, please do your due diligence and review the API documentation in its entirety.
