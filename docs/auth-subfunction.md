@@ -77,7 +77,7 @@ For example, I want to use an endpoint to gather dependent information from Avan
 Congratulations! You’re done enabling access to the endpoint. Repeat these steps for every endpoint you’ll use in the integration.
 
 <!-- theme: info -->
->If you're adjusthing access and already have Client Credentials, all you'll need to do is [Reload Settings](https://avanti.stoplight.io/docs/avanti-api/45925478e011d-create-client-credentials#reload-web-settings) for your changes to take effect.  
+>If you're adjusting endpoint access and already have Client Credentials, all you'll need to do is [Reload Settings](https://avanti.stoplight.io/docs/avanti-api/45925478e011d-create-client-credentials#reload-web-settings) for your changes to take effect.  
 
 The next step to setup the API is [Create the Client Credentials.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NjY-client-credentials) 
 
@@ -122,7 +122,7 @@ By default, this can be found in System Administration >> System Access Controls
 ![Save endpoint full access. ](../assets/images/FullAccessOk.png)
 
 <!-- theme: info -->
->If you're adjusthing access and already have Client Credentials, all you'll need to do is [Reload Settings](https://avanti.stoplight.io/docs/avanti-api/45925478e011d-create-client-credentials#reload-web-settings) for your changes to take effect.  
+>If you're adjusting endpoint access and already have Client Credentials, all you'll need to do is [Reload Settings](https://avanti.stoplight.io/docs/avanti-api/45925478e011d-create-client-credentials#reload-web-settings) for your changes to take effect.  
 
 Congratulations! You’re all done enabling access to all the endpoints. The next step to setup the API is [Create the Client Credentials.](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2NjY-client-credentials) 
 
