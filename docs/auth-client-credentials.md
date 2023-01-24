@@ -5,7 +5,6 @@ For your API developer to start using Avanti’s API, you’ll need to create th
 >Curious about how we authenticate using client credentials? Our API authentication follows the [Open ID Connect](https://openid.net/connect/) Protocol to authenticate requests using short-lived access tokens.
 
 ## Create the Client Credentials
-Avanti 10 must be applied before you can create Client Credentials. 
 
 **Step 1:** Select **System Configuration** in the New Avanti Experience on ASSP. 
 
@@ -63,6 +62,15 @@ Setting a client expiry is especially useful when:
 **Step 10:** Select **Exit Configuration**. 
 
 ![Exit Configuration.](../assets/images/ExitConfig.png)
+
+## Reload Web Settings
+
+**Step 1:** Open **Administration Settings** in the New Avanti Experience on ASSP and select **Reload Settings**. <br>
+By default, this can be found in Administration on the Avanti Self-Service Portal. 
+
+
+![Admin Settings.](../assets/images/ReloadSettings.png)
+
 
 ## Identify the Avanti Company Database Name
 You’ll need the Company Database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify every company and provide them to your API Developer. This name is different from the company name you see displayed when you select the company in Avanti.
