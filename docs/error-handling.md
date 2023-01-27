@@ -10,7 +10,7 @@ HTTP status codes provide the request results; a successful response will return
 | 400    | Bad Request   | Invalid and or missing data.                                                                                    |
 | 401    | Unauthorized  | Invalid credentials or the user does not have access to the data.                                               |
 | 404    | Not Found     | Endpoint is invalid or does not exist.                                                                          |
-| 500    | Server Error  | The request unexpectedly failed. If a request continues to fail with a 500 status code, please contact [Avanti Care](https://help.avanti.ca/support/tickets/new). |
+| 500    | Server Error  | The request unexpectedly failed. If a request continues to fail with a 500 status code, please contact [Client Care](https://help.avanti.ca/support/tickets/new). |
 
 ## Error Responses
 

@@ -24,4 +24,4 @@ We would love to hear any feedback about your experience using the Avanti API. P
 
 ## Need Help
 
-Having issues using the Avanti API? Please reach out to [Avanti Care](https://help.avanti.ca/support/tickets/new) if you are a client requiring assistance. Before contacting Care, please do your due diligence and review the API documentation in its entirety.
+Having issues using the Avanti API? Please reach out to [Client Care](https://help.avanti.ca/support/tickets/new) if you are a client requiring assistance. Before contacting Care, please do your due diligence and review the API documentation in its entirety.
