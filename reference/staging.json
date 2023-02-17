@@ -1734,6 +1734,102 @@
         }
       }
     },
+    "/v1/EmployeeDocuments": {
+      "post": {
+        "tags": [
+          "Employee Documents"
+        ],
+        "summary": "Add Employee Document",
+        "operationId": "Add-Employee-Document",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Description",
+                  "EmpNo",
+                  "FileData"
+                ],
+                "type": "object",
+                "properties": {
+                  "EmpNo": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "TypeId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Summary": {
+                    "type": "string"
+                  },
+                  "FileData": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "DocumentRevision": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "EmpNo": { },
+                "Description": { },
+                "TypeId": { },
+                "Summary": { },
+                "FileData": { },
+                "DocumentRevision": { }
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeDocument"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeDocument"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/EmployeeEarningCodes": {
       "get": {
         "tags": [
@@ -6150,6 +6246,30 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/Result"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/TimeManagement/EmployeeHasPickupRulesOnWorkGroup": {
+      "get": {
+        "tags": [
+          "Time Management"
+        ],
+        "summary": "Check if employee can access pooling page",
+        "operationId": "Check-if-employee-can-access-pooling-page",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimeEntryTemplate"
                   }
                 }
               }
@@ -17469,6 +17589,15 @@
           "approvedBy": {
             "type": "string",
             "nullable": true
+          },
+          "seniorityDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -21974,6 +22103,9 @@
           "nextPaymentDate": {
             "type": "string",
             "nullable": true
+          },
+          "enableEmail": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -25044,6 +25176,9 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "showEmpOption": {
+            "$ref": "#/components/schemas/ShowEmpOption"
           }
         },
         "additionalProperties": false
@@ -25197,6 +25332,18 @@
             "nullable": true
           },
           "attendanceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "payCodeDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionNameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationNameFr": {
             "type": "string",
             "nullable": true
           }
@@ -25624,13 +25771,13 @@
             "type": "string",
             "nullable": true
           },
-          "employeeStartDate": {
-            "type": "string",
-            "format": "date-time"
-          },
           "employeeBillingStatus": {
             "type": "string",
             "nullable": true
+          },
+          "employeeLastHireDate": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -26062,6 +26209,9 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "showEmpOption": {
+            "$ref": "#/components/schemas/ShowEmpOption"
           }
         },
         "additionalProperties": false
@@ -27180,6 +27330,9 @@
     },
     {
       "name": "Employee Defaults Group"
+    },
+    {
+      "name": "Employee Documents"
     },
     {
       "name": "Employee Earning Codes"

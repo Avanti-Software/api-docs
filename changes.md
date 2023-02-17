@@ -1,3 +1,22 @@
+# Feb 17, 2023 5:31 PM
+**GitHub Run ID:** 4205858580
+**GitHub Run Number:** 4911
+**Reference:** refs/heads/AV-150
+**Commit:** 287eeae58ea2cf51f2c375b58c757655b77bce5f## Added
+ * Endpoint: POST - /v1/EmployeeDocuments
+ * Endpoint: GET - /v1/TimeManagement/EmployeeHasPickupRulesOnWorkGroup
+* Model: ClientBillingDetail, Property: employeeLastHireDate
+* Model: PayStatementsList, Property: enableEmail
+* Model: Pickup, Property: seniorityDate
+* Model: Pickup, Property: position
+* Model: PostHistory, Property: showEmpOption
+* Model: Posting, Property: showEmpOption
+* Model: ScheduleEntry, Property: payCodeDescription
+* Model: ScheduleEntry, Property: positionNameFr
+* Model: ScheduleEntry, Property: locationNameFr
+## Removed
+* Model: ClientBillingDetail, Property: employeeStartDate
+
 # Jan 10, 2023 3:52 PM
 **GitHub Run ID:** 3884859527
 **GitHub Run Number:** 4676
