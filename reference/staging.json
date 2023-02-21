@@ -3453,7 +3453,20 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2,
+              "multipleOf": 1
+            },
+            "in": "query",
+            "description": "If 0, returns All Locations; if 1, returns Active Locations. If 2, returns Inactive Locations. If blank, returns All Locations.",
+            "name": "activeStatus"
+          }
+        ]
       }
     },
     "/v1/NewHire": {
