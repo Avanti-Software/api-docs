@@ -729,7 +729,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -762,7 +762,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -809,7 +809,7 @@
                 }
               },
               "encoding": {
-                "logos": { }
+                "logos": {}
               }
             }
           }
@@ -818,7 +818,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -973,7 +973,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1008,7 +1008,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -1066,7 +1066,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1208,7 +1208,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1313,7 +1313,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1350,7 +1350,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1387,7 +1387,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1425,7 +1425,7 @@
                 }
               },
               "encoding": {
-                "files": { }
+                "files": {}
               }
             }
           }
@@ -1434,7 +1434,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1458,7 +1458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1512,7 +1512,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -1776,27 +1776,17 @@
                 }
               },
               "encoding": {
-                "EmpNo": { },
-                "Description": { },
-                "TypeId": { },
-                "Summary": { },
-                "FileData": { },
-                "DocumentRevision": { }
+                "EmpNo": {},
+                "Description": {},
+                "TypeId": {},
+                "Summary": {},
+                "FileData": {},
+                "DocumentRevision": {}
               }
             }
           }
         },
         "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
           "200": {
             "description": "Success",
             "content": {
@@ -1819,6 +1809,16 @@
           },
           "400": {
             "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -1933,7 +1933,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2182,7 +2182,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2226,7 +2226,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -2503,7 +2503,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -2610,7 +2610,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -3748,7 +3748,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -3807,7 +3807,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -3887,7 +3887,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4018,7 +4018,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -4199,7 +4199,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -4613,7 +4613,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "400": {
@@ -4786,7 +4786,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": { }
+                  "example-1": {}
                 }
               }
             }
@@ -5028,7 +5028,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -5053,7 +5053,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -5255,8 +5255,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    { },
-                    { }
+                    {},
+                    {}
                   ]
                 },
                 "examples": {
@@ -6196,7 +6196,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           }
         }
@@ -6704,7 +6704,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": { }
+              "application/json": {}
             }
           },
           "201": {
@@ -10783,7 +10783,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10833,7 +10833,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true
           },
           "hasErrors": {
@@ -10876,7 +10876,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10901,7 +10901,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10921,13 +10921,13 @@
           },
           "relations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -10966,19 +10966,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10987,7 +10987,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -10998,7 +10998,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": { },
+            "additionalProperties": {},
             "nullable": true,
             "readOnly": true
           },
@@ -11016,7 +11016,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -11029,7 +11029,7 @@
           },
           "rows": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           },
@@ -14424,7 +14424,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": { },
+            "items": {},
             "nullable": true,
             "readOnly": true
           }
@@ -18275,7 +18275,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "PropertyAttributes": {
         "enum": [
@@ -21871,17 +21871,25 @@
         "additionalProperties": false
       },
       "GlSegment": {
-        "title": "",
-        "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ],
         "type": "object",
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        },
         "properties": {
           "segmentNo": {
             "type": "integer",
@@ -21915,7 +21923,7 @@
             "maxLength": 1,
             "minLength": 0,
             "type": "string",
-            "description": "For Other and Phase Accounts, this is a one-character type for the account used for validation, from A - Z.\n\nFor Project Accounts, this is the ID of the Project Type. \n\nFor Major Accounts, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account",
+            "description": "For Other and Phase Accounts, this is a one-character type for the account used for validation, from A - Z.\n\nFor Project Accounts, this is the ID of the Project Type. \n\nFor Major Accounts, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account.",
             "nullable": true
           },
           "mask": {
@@ -21975,24 +21983,15 @@
             "nullable": true
           }
         },
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        }
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ]
       },
       "UserClass": {
         "enum": [
@@ -27270,7 +27269,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ],
   "tags": [

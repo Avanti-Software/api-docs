@@ -19294,7 +19294,7 @@
             "maxLength": 1,
             "minLength": 0,
             "type": "string",
-            "description": "For Other and Phase Accounts, this is a one-character type for the account used for validation, from A - Z.\n\nFor Project Accounts, this is the ID of the Project Type. \n\nFor Major Accounts, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account",
+            "description": "For Other and Phase Accounts, this is a one-character type for the account used for validation, from A - Z.\n\nFor Project Accounts, this is the ID of the Project Type. \n\nFor Major Accounts, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account.",
             "nullable": true
           },
           "mask": {
