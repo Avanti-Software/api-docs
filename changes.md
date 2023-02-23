@@ -1,3 +1,14 @@
+# Feb 23, 2023 7:01 PM
+**GitHub Run ID:** 4255887794
+**GitHub Run Number:** 4941
+**Reference:** refs/heads/master
+**Commit:** b9037cf49d0a99c4a193a5575ed250fd3b0eb142## Added
+* Model: ExchangeViewModel, Property: cancelledExchangedFromPayCode
+* Model: ExchangeViewModel, Property: cancelledExchangedWithPayCode
+* Model: ReassignViewModel, Property: reAssignedCancelled
+## Removed
+ * Endpoint: GET - /v1/TimeManagement/EmployeeHasPickupRulesOnWorkGroup
+
 # Feb 17, 2023 5:31 PM
 **GitHub Run ID:** 4205858580
 **GitHub Run Number:** 4911

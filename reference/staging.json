@@ -729,7 +729,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -762,7 +762,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -809,7 +809,7 @@
                 }
               },
               "encoding": {
-                "logos": {}
+                "logos": { }
               }
             }
           }
@@ -818,7 +818,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -973,7 +973,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1008,7 +1008,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -1066,7 +1066,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1208,7 +1208,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1313,7 +1313,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1350,7 +1350,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1387,7 +1387,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1425,7 +1425,7 @@
                 }
               },
               "encoding": {
-                "files": {}
+                "files": { }
               }
             }
           }
@@ -1434,7 +1434,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1458,7 +1458,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1512,7 +1512,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -1740,11 +1740,18 @@
           "Employee Documents"
         ],
         "summary": "Add Employee Document",
+        "description": "Save an employee document in Avanti. \n\nYou can add an employee document with any of the following format types: \n- doc, docx, wps  \n- csv,  odf, xls, xlsx\n- jpg  \n- mp2 \n- m1v, m4v, movavi, mp4, mp4v, mpe, mpeg, mpg, wm, wmv \n- od\n- odt, txt\n\n**Document File Size** \n\nThe maximum file size you can add is 250 MB. If Company Web Setting FileSizeLimitInBytes is less than 250 MB, then the FileSizeLimitInBytes will determine the file size allowed. \n\n**Document Type Access** \n \nTo be able to add a document, the API user needs to have Insert Responsibility and User Group access for the Document Type. ",
         "operationId": "Add-Employee-Document",
         "requestBody": {
+          "description": "",
           "content": {
             "multipart/form-data": {
               "schema": {
+                "required": [
+                  "EmpNo",
+                  "Description",
+                  "FileData"
+                ],
                 "type": "object",
                 "properties": {
                   "EmpNo": {
@@ -1757,8 +1764,8 @@
                   },
                   "TypeId": {
                     "type": "integer",
-                    "format": "int32",
-                    "description": "The ID of the document type. This must be a valid document type, from 1 to 999. "
+                    "description": "The ID of the document type. This must be a valid document type, from 1 to 999. ",
+                    "format": "int32"
                   },
                   "Summary": {
                     "type": "string",
@@ -1766,32 +1773,26 @@
                   },
                   "FileData": {
                     "type": "string",
-                    "format": "binary",
-                    "description": "The binary data for the document.  "
+                    "description": "The binary data for the document.  ",
+                    "format": "binary"
                   },
                   "DocumentRevision": {
                     "type": "integer",
-                    "format": "int32",
-                    "description": "The revision number of the document. If left blank, the revision number is 0.\n\nTypically, you'll include a revision if this is an updated file of an employee document already created for the employee. "
+                    "description": "The revision number of the document. If left blank, the revision number is 0.\n\nTypically, you'll include a revision if this is an updated file of an employee document already created for the employee. ",
+                    "format": "int32"
                   }
-                },
-                "required": [
-                  "EmpNo",
-                  "Description",
-                  "FileData"
-                ]
+                }
               },
               "encoding": {
-                "EmpNo": {},
-                "Description": {},
-                "TypeId": {},
-                "Summary": {},
-                "FileData": {},
-                "DocumentRevision": {}
+                "EmpNo": { },
+                "Description": { },
+                "TypeId": { },
+                "Summary": { },
+                "FileData": { },
+                "DocumentRevision": { }
               }
             }
-          },
-          "description": ""
+          }
         },
         "responses": {
           "200": {
@@ -1834,8 +1835,7 @@
               }
             }
           }
-        },
-        "description": "Save an employee document in Avanti. \n\nYou can add an employee document with any of the following format types: \n- doc, docx, wps  \n- csv,  odf, xls, xlsx\n- jpg  \n- mp2 \n- m1v, m4v, movavi, mp4, mp4v, mpe, mpeg, mpg, wm, wmv \n- od\n- odt, txt\n\n**Document File Size** \n\nThe maximum file size you can add is 250 MB. If Company Web Setting FileSizeLimitInBytes is less than 250 MB, then the FileSizeLimitInBytes will determine the file size allowed. \n\n**Document Type Access** \n \nTo be able to add a document, the API user needs to have Insert Responsibility and User Group access for the Document Type. "
+        }
       }
     },
     "/v1/EmployeeEarningCodes": {
@@ -1941,7 +1941,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2190,7 +2190,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2234,7 +2234,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -2511,7 +2511,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -2618,7 +2618,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3427,6 +3427,19 @@
         "summary": "List Locations",
         "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
         "operationId": "List-Locations",
+        "parameters": [
+          {
+            "name": "activeStatus",
+            "in": "query",
+            "description": "If 0, returns All Locations; if 1, returns Active Locations. If 2, returns Inactive Locations. If blank, returns All Locations.",
+            "schema": {
+              "multipleOf": 1,
+              "maximum": 2,
+              "minimum": 0,
+              "type": "integer"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Ok",
@@ -3461,20 +3474,7 @@
               }
             }
           }
-        },
-        "parameters": [
-          {
-            "schema": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 2,
-              "multipleOf": 1
-            },
-            "in": "query",
-            "description": "If 0, returns All Locations; if 1, returns Active Locations. If 2, returns Inactive Locations. If blank, returns All Locations.",
-            "name": "activeStatus"
-          }
-        ]
+        }
       }
     },
     "/v1/NewHire": {
@@ -3769,7 +3769,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -3828,7 +3828,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -3908,7 +3908,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4039,7 +4039,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -4220,7 +4220,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4634,7 +4634,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "400": {
@@ -4807,7 +4807,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "example-1": {}
+                  "example-1": { }
                 }
               }
             }
@@ -5049,7 +5049,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5074,7 +5074,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -5276,8 +5276,8 @@
                 "schema": {
                   "type": "object",
                   "allOf": [
-                    {},
-                    {}
+                    { },
+                    { }
                   ]
                 },
                 "examples": {
@@ -6217,7 +6217,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           }
         }
@@ -6267,30 +6267,6 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/Result"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/TimeManagement/EmployeeHasPickupRulesOnWorkGroup": {
-      "get": {
-        "tags": [
-          "Time Management"
-        ],
-        "summary": "Check if employee can access pooling page",
-        "operationId": "Check-if-employee-can-access-pooling-page",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TimeEntryTemplate"
                   }
                 }
               }
@@ -6725,7 +6701,7 @@
           "200": {
             "description": "Ok",
             "content": {
-              "application/json": {}
+              "application/json": { }
             }
           },
           "201": {
@@ -10804,7 +10780,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10854,7 +10830,7 @@
           },
           "itemArray": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true
           },
           "hasErrors": {
@@ -10897,7 +10873,7 @@
           },
           "defaultViewManager": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10922,7 +10898,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -10942,13 +10918,13 @@
           },
           "relations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "tables": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -10987,19 +10963,19 @@
           },
           "childRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "columns": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
           "constraints": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11008,7 +10984,7 @@
           },
           "defaultView": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11019,7 +10995,7 @@
           },
           "extendedProperties": {
             "type": "object",
-            "additionalProperties": {},
+            "additionalProperties": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11037,7 +11013,7 @@
           },
           "parentRelations": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -11050,7 +11026,7 @@
           },
           "rows": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           },
@@ -14445,7 +14421,7 @@
         "properties": {
           "components": {
             "type": "array",
-            "items": {},
+            "items": { },
             "nullable": true,
             "readOnly": true
           }
@@ -18296,7 +18272,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "PropertyAttributes": {
         "enum": [
@@ -21892,25 +21868,16 @@
         "additionalProperties": false
       },
       "GlSegment": {
+        "required": [
+          "segmentNo",
+          "account",
+          "description",
+          "abbreviation",
+          "mask",
+          "active",
+          "useProjectAccount"
+        ],
         "type": "object",
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        },
         "properties": {
           "segmentNo": {
             "type": "integer",
@@ -22004,15 +21971,24 @@
             "nullable": true
           }
         },
-        "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ]
+        "additionalProperties": false,
+        "x-examples": {
+          "Example - Adding or Updating a Major or Other Account ": {
+            "value": {
+              "segmentNo": 1,
+              "account": "2030",
+              "description": "EHT Payable",
+              "abbreviation": "EHTPay",
+              "type": "A",
+              "mask": "2030-####-#####-****-****",
+              "validationTypes": "A A",
+              "active": true,
+              "useProjectAccount": true,
+              "statAccount": "string",
+              "exportValue": "20300"
+            }
+          }
+        }
       },
       "UserClass": {
         "enum": [
@@ -25856,8 +25832,12 @@
         "additionalProperties": false
       },
       "EmployeeDocument": {
+        "required": [
+          "empNo",
+          "description",
+          "fileData"
+        ],
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "empNo": {
             "type": "string",
@@ -25869,8 +25849,8 @@
           },
           "typeId": {
             "type": "integer",
-            "format": "int32",
-            "description": "The ID of the document type."
+            "description": "The ID of the document type.",
+            "format": "int32"
           },
           "summary": {
             "type": "string",
@@ -25879,20 +25859,16 @@
           },
           "fileData": {
             "type": "string",
-            "format": "binary",
-            "description": "The document's binary data."
+            "description": "The document's binary data.",
+            "format": "binary"
           },
           "documentRevision": {
             "type": "integer",
-            "format": "int32",
-            "description": "The document's revision number. "
+            "description": "The document's revision number. ",
+            "format": "int32"
           }
         },
-        "required": [
-          "empNo",
-          "description",
-          "fileData"
-        ]
+        "additionalProperties": false
       },
       "EmployeeFilter": {
         "type": "object",
@@ -26297,6 +26273,9 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "reAssignedCancelled": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -26407,6 +26386,14 @@
           "pickupEntryId": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "cancelledExchangedFromPayCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "cancelledExchangedWithPayCode": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -27296,7 +27283,7 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [ ]
     }
   ],
   "tags": [
