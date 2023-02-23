@@ -1745,35 +1745,41 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": [
-                  "Description",
-                  "EmpNo",
-                  "FileData"
-                ],
                 "type": "object",
                 "properties": {
                   "EmpNo": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "The employee number of the employee the document is being added for."
                   },
                   "Description": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "A description of the document, which can be up to 128 characters.  "
                   },
                   "TypeId": {
                     "type": "integer",
-                    "format": "int32"
+                    "format": "int32",
+                    "description": "The ID of the document type. This must be a valid document type, from 1 to 999. "
                   },
                   "Summary": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "A summary of the document, which can be up to 4096 characters.  "
                   },
                   "FileData": {
                     "type": "string",
-                    "format": "binary"
+                    "format": "binary",
+                    "description": "The binary data for the document.  "
                   },
                   "DocumentRevision": {
                     "type": "integer",
-                    "format": "int32"
+                    "format": "int32",
+                    "description": "The revision number of the document. If left blank, the revision number is 0.\n\nTypically, you'll include a revision if this is an updated file of an employee document already created for the employee. "
                   }
-                }
+                },
+                "required": [
+                  "EmpNo",
+                  "Description",
+                  "FileData"
+                ]
               },
               "encoding": {
                 "EmpNo": {},
@@ -1784,7 +1790,8 @@
                 "DocumentRevision": {}
               }
             }
-          }
+          },
+          "description": ""
         },
         "responses": {
           "200": {
@@ -1827,7 +1834,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Save an employee document in Avanti. \n\nYou can add an employee document of up to 250 MB with any of the following format types: \n- doc, docx, wps  \n- csv,  odf, xls, xlsx\n- jpg  \n- mp2 \n- m1v, m4v, movavi, mp4, mp4v, mpe, mpeg, mpg, wm, wmv \n- od\n- odt, txt\n\n **Document Type Access** \n \n To be able to add a document, the API user needs to have Insert Responsibility and User Group access for the Document Type. "
       }
     },
     "/v1/EmployeeEarningCodes": {
@@ -25848,37 +25856,43 @@
         "additionalProperties": false
       },
       "EmployeeDocument": {
-        "required": [
-          "description",
-          "empNo",
-          "fileData"
-        ],
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "empNo": {
-            "type": "string"
+            "type": "string",
+            "description": "The employee number for the employee document was added to. "
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "description": "The description of the employee's document."
           },
           "typeId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "The ID of the document type."
           },
           "summary": {
             "type": "string",
+            "description": "The document's summary. ",
             "nullable": true
           },
           "fileData": {
             "type": "string",
-            "format": "binary"
+            "format": "binary",
+            "description": "The document's binary data."
           },
           "documentRevision": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "description": "The document's revision number. "
           }
         },
-        "additionalProperties": false
+        "required": [
+          "empNo",
+          "description",
+          "fileData"
+        ]
       },
       "EmployeeFilter": {
         "type": "object",
