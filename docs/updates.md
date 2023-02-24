@@ -2,6 +2,10 @@
 
 ## Version 1.0
 
+February 24, 2023
+- Added Endpoint: 
+  - Add Employee Document
+
 March 17, 2022
 - Added Endpoint: 
     - Add Payroll Data Entries
