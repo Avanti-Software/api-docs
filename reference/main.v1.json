@@ -1337,12 +1337,12 @@
                 }
               },
               "encoding": {
-                "EmpNo": { },
-                "Description": { },
-                "TypeId": { },
-                "Summary": { },
-                "FileData": { },
-                "DocumentRevision": { }
+                "EmpNo": {},
+                "Description": {},
+                "TypeId": {},
+                "Summary": {},
+                "FileData": {},
+                "DocumentRevision": {}
               }
             }
           }
@@ -3105,7 +3105,7 @@
         }
       }
     },
-   "/v1/Locations": {
+    "/v1/Locations": {
       "get": {
         "tags": [
           "Locations"
@@ -3117,7 +3117,7 @@
           {
             "name": "activeStatus",
             "in": "query",
-            "description": "If 0, returns All Locations; if 1, returns Active Locations. If 2, returns Inactive Locations. If blank, returns All Locations.",
+            "description": "If 0, returns All Locations. If 1, returns Active Locations. If 2, returns Inactive Locations. If blank, returns All Locations.",
             "schema": {
               "multipleOf": 1,
               "maximum": 2,
@@ -22260,7 +22260,7 @@
           }
         }
       },
-            "EmployeeDocument": {
+      "EmployeeDocument": {
         "required": [
           "empNo",
           "description",
