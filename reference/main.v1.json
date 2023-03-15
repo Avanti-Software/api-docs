@@ -3105,7 +3105,7 @@
         }
       }
     },
-    "/v1/Locations": {
+   "/v1/Locations": {
       "get": {
         "tags": [
           "Locations"
@@ -3113,6 +3113,19 @@
         "summary": "List Locations",
         "description": "Returns a list of the location codes. The format of Text in the response depends on the company web setting Lookup.Location.\n\nLocation codes are used throughout Avanti to identify employee locations, departments, zones, units, etc.",
         "operationId": "List-Locations",
+        "parameters": [
+          {
+            "name": "activeStatus",
+            "in": "query",
+            "description": "If 0, returns All Locations; if 1, returns Active Locations. If 2, returns Inactive Locations. If blank, returns All Locations.",
+            "schema": {
+              "multipleOf": 1,
+              "maximum": 2,
+              "minimum": 0,
+              "type": "integer"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Ok",
