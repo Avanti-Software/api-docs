@@ -27275,6 +27275,16 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "PlayIntegrity": {
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {
