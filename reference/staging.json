@@ -27285,6 +27285,68 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "TaxData": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "td1Fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TD1Field"
+            },
+            "nullable": true
+          },
+          "multipleEmployers": {
+            "type": "boolean"
+          },
+          "taxExempt": {
+            "type": "boolean"
+          },
+          "nonResidentIncomeNotTax": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "fedTaxCert": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TD1Field": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "maxValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "baseValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "value": {
+            "nullable": true
+          },
+          "editable": {
+            "type": "boolean"
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
