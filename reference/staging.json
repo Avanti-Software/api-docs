@@ -27312,6 +27312,13 @@
           },
           "fedTaxCert": {
             "type": "boolean"
+          },
+          "province": {
+            "type": "string",
+            "nullable": true
+          },
+          "provTaxCert": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
