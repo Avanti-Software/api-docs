@@ -4088,7 +4088,7 @@
           "Pay Statements"
         ],
         "summary": "List Pay Statements",
-        "description": "Returns a list of pay statements, with the pay totals,  for the employee assigned to the user.",
+        "description": "Returns a list of pay statements, with the pay totals, for the employee.",
         "operationId": "List-Pay-Statements",
         "parameters": [
           {
@@ -4112,7 +4112,7 @@
           {
             "name": "empNo",
             "in": "query",
-            "description": "The employee number of the employee assigned to the user. When testing using 'Send a Test Request', this must be blank or 000001005.",
+            "description": "The number for the employee you'd like to gather pay statement information for. If blank, information for the employee assigned to the user is returned. ",
             "schema": {
               "type": "string"
             }
