@@ -1,3 +1,11 @@
+# May 19, 2023 10:04 PM
+**GitHub Run ID:** 5028592373
+**GitHub Run Number:** 5198
+**Reference:** refs/heads/master
+**Commit:** acb290550dc2cd1ea05b960c279a75addd8de088## Added
+ * Endpoint: POST - /v1/DecliningBalances
+* Model: DecliningBalancesRequest
+
 # Apr 10, 2023 5:56 PM
 **GitHub Run ID:** 4659790782
 **GitHub Run Number:** 5094
