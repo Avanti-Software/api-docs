@@ -1,3 +1,11 @@
+# Jul 11, 2023 9:10 PM
+**GitHub Run ID:** 5524834807
+**GitHub Run Number:** 5372
+**Reference:** refs/heads/master
+**Commit:** 5349bd86d1c5c0b2d123d754e253591da4a8944e## Added
+* Model: EmployeePersonalInfo, Property: preferredName
+* Model: EmployeePersonalInfo, Property: previousSurname
+
 # May 19, 2023 10:04 PM
 **GitHub Run ID:** 5028592373
 **GitHub Run Number:** 5198
