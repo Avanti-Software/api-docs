@@ -2206,6 +2206,56 @@
         }
       }
     },
+    "/v1/EmployeePaymentMethod/Banks": {
+      "get": {
+        "tags": [
+          "Employee Payment Method"
+        ],
+        "summary": "Get Employee Payment Banks Info",
+        "operationId": "Get-Employee-Payment-Banks-Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeePaymentMethodBanks"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/EmployeePhoneNumber": {
       "put": {
         "tags": [
@@ -27546,6 +27596,182 @@
           }
         },
         "additionalProperties": false
+      },
+      "EmployeePaymentMethodBanks": {
+        "type": "object",
+        "properties": {
+          "bank1Number": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank1Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank1Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank1Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "depositFreq1": {
+            "type": "string"
+          },
+          "depositType1": {
+            "type": "string"
+          },
+          "depositAmt1": {
+            "type": "number",
+            "format": "double"
+          },
+          "bank2Number": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank2Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank2Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank2Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "depositFreq2": {
+            "type": "string"
+          },
+          "depositType2": {
+            "type": "string"
+          },
+          "depositAmt2": {
+            "type": "number",
+            "format": "double"
+          },
+          "bank3Number": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank3Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank3Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank3Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "depositFreq3": {
+            "type": "string"
+          },
+          "depositType3": {
+            "type": "string"
+          },
+          "depositAmt3": {
+            "type": "number",
+            "format": "double"
+          },
+          "bank4Number": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank4Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank4Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank4Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "depositFreq4": {
+            "type": "string"
+          },
+          "depositType4": {
+            "type": "string"
+          },
+          "depositAmt4": {
+            "type": "number",
+            "format": "double"
+          },
+          "bank5Number": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank5Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank5Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank5Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "depositFreq5": {
+            "type": "string"
+          },
+          "depositType5": {
+            "type": "string"
+          },
+          "depositAmt5": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -27645,6 +27871,9 @@
     },
     {
       "name": "Employee Pay Statements"
+    },
+    {
+      "name": "Employee Payment Method"
     },
     {
       "name": "Employee Personal Info"
