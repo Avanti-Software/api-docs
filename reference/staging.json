@@ -27772,6 +27772,773 @@
           }
         },
         "additionalProperties": false
+      },
+      "AccountInfo": {
+        "required": [
+          "confirmPassword",
+          "password",
+          "userName"
+        ],
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string"
+          },
+          "readOnlyUserName": {
+            "type": "boolean"
+          },
+          "password": {
+            "type": "string"
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BankingViewInfo": {
+        "required": [
+          "bank1Account",
+          "bank1Number",
+          "bank1Transit",
+          "bank2Account",
+          "bank2Number",
+          "bank2Transit",
+          "bank3Account",
+          "bank3Number",
+          "bank3Transit",
+          "bank4Account",
+          "bank4Number",
+          "bank4Transit",
+          "bank5Account",
+          "bank5Number",
+          "bank5Transit"
+        ],
+        "type": "object",
+        "properties": {
+          "bank1Number": {
+            "type": "string"
+          },
+          "bank1Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank1Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank1Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank1ChequeFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bank1DocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bank2Selected": {
+            "type": "boolean"
+          },
+          "bank2Number": {
+            "type": "string"
+          },
+          "bank2Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank2Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank2Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank2ChequeFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bank2DocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bank3Selected": {
+            "type": "boolean"
+          },
+          "bank3Number": {
+            "type": "string"
+          },
+          "bank3Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank3Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank3Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank3ChequeFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bank3DocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bank4Selected": {
+            "type": "boolean"
+          },
+          "bank4Number": {
+            "type": "string"
+          },
+          "bank4Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank4Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank4Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank4ChequeFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bank4DocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bank5Selected": {
+            "type": "boolean"
+          },
+          "bank5Number": {
+            "type": "string"
+          },
+          "bank5Transit": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank5Account": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string"
+          },
+          "bank5Type": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bank5ChequeFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bank5DocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bank1ChqFile": {
+            "$ref": "#/components/schemas/SaveFileModel"
+          },
+          "bank2ChqFile": {
+            "$ref": "#/components/schemas/SaveFileModel"
+          },
+          "bank3ChqFile": {
+            "$ref": "#/components/schemas/SaveFileModel"
+          },
+          "bank4ChqFile": {
+            "$ref": "#/components/schemas/SaveFileModel"
+          },
+          "bank5ChqFile": {
+            "$ref": "#/components/schemas/SaveFileModel"
+          },
+          "allowMultipleBankAccounts": {
+            "type": "boolean"
+          },
+          "numberOfBanks": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfCheques": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "onboardingBankMessageText": {
+            "type": "string",
+            "nullable": true
+          },
+          "onboardingBankMessageTextFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileSizeLimit": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileSizeLimitSetOnWebServer": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ContactInfo": {
+        "required": [
+          "address1",
+          "city",
+          "country",
+          "email1",
+          "postal",
+          "province"
+        ],
+        "type": "object",
+        "properties": {
+          "address1": {
+            "maxLength": 30,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string"
+          },
+          "address2": {
+            "maxLength": 30,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "maxLength": 30,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string"
+          },
+          "province": {
+            "maxLength": 2,
+            "minLength": 0,
+            "type": "string"
+          },
+          "country": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string"
+          },
+          "postal": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "phoneType1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber1": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType2": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber2": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType3": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber3": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneType4": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber4": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "emailType1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email1": {
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "format": "email"
+          },
+          "emailType2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email2": {
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "emailType3": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email3": {
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "emailType4": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email4": {
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "emailType5": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email5": {
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "companySettings": {
+            "$ref": "#/components/schemas/CompanySettings"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnboardingInfo": {
+        "type": "object",
+        "properties": {
+          "currentStep": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextStep": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "previousStep": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountInfo": {
+            "$ref": "#/components/schemas/AccountInfo"
+          },
+          "personalInfo": {
+            "$ref": "#/components/schemas/OnboardingPersonalInfo"
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/ContactInfo"
+          },
+          "bankingViewModel": {
+            "$ref": "#/components/schemas/BankingViewInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnboardingMenuStatus": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "OnboardingPersonalInfo": {
+        "required": [
+          "birthDate",
+          "firstLanguage",
+          "gender",
+          "givenName",
+          "marital",
+          "sin",
+          "surname"
+        ],
+        "type": "object",
+        "properties": {
+          "givenName": {
+            "maxLength": 30,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string"
+          },
+          "surname": {
+            "maxLength": 30,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string"
+          },
+          "initial": {
+            "maxLength": 1,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "nullable": true
+          },
+          "preferredName": {
+            "maxLength": 30,
+            "minLength": 0,
+            "pattern": "^[^<>]+$",
+            "type": "string",
+            "nullable": true
+          },
+          "employeeName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "firstLanguage": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "sin": {
+            "maxLength": 9,
+            "minLength": 0,
+            "type": "string"
+          },
+          "sinDocument": {
+            "$ref": "#/components/schemas/SaveFileModel"
+          },
+          "sinFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sinDocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "workPermitDocument": {
+            "$ref": "#/components/schemas/SaveFileModel"
+          },
+          "workPermitFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "workPermitDocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "workPermitDocumentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "workPermitDocumentTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sinExpiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "marital": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string"
+          },
+          "fileSizeLimit": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileSizeLimitSetOnWebServer": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnboardingRequirementOption": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "OnboardingSettings": {
+        "type": "object",
+        "properties": {
+          "welcomeMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "welcomeMessageFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "workPermitDocumentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "passwordPolicy": {
+            "type": "string",
+            "nullable": true
+          },
+          "tempSinDocumentUpload": {
+            "type": "string",
+            "nullable": true
+          },
+          "sinDocumentUpload": {
+            "type": "string",
+            "nullable": true
+          },
+          "workPermitRequired": {
+            "type": "string",
+            "nullable": true
+          },
+          "allowMultipleDocumentTypes": {
+            "type": "string",
+            "nullable": true
+          },
+          "completedMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "completedMessageFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankMessageFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentReviewUserGroups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "showActiveApplicantsAppliedWithoutRequistion": {
+            "type": "boolean"
+          },
+          "numberOfBankAccounts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowMultipleBankAccounts": {
+            "type": "boolean"
+          },
+          "chequeUploadRequired": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnboardingSetup": {
+        "type": "object",
+        "properties": {
+          "steps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OnboardingStep"
+            },
+            "nullable": true
+          },
+          "onboardingSettings": {
+            "$ref": "#/components/schemas/OnboardingSettings"
+          },
+          "emergencyContactSettings": {
+            "$ref": "#/components/schemas/EmergencyContactSettings"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnboardingStep": {
+        "type": "object",
+        "properties": {
+          "onboardingStepId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "frenchDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "stepOrder": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requirementOption": {
+            "$ref": "#/components/schemas/OnboardingRequirementOption"
+          },
+          "completedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "menuStatus": {
+            "$ref": "#/components/schemas/OnboardingMenuStatus"
+          },
+          "stepCompleted": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SaveFileModel": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "filePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentRevision": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "content": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StepInfo": {
+        "type": "object",
+        "properties": {
+          "currentStep": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextStep": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "previousStep": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextStepRequired": {
+            "$ref": "#/components/schemas/OnboardingRequirementOption"
+          },
+          "lastStepStatus": {
+            "$ref": "#/components/schemas/OnboardingMenuStatus"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
