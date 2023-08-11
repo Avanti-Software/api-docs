@@ -23760,29 +23760,100 @@
       "License": {
         "type": "object",
         "properties": {
-          "usersClassA": {
-            "type": "integer",
-            "format": "int32",
+          "sy": {
+            "type": "boolean",
             "readOnly": true
           },
-          "usersClassB": {
-            "type": "integer",
-            "format": "int32",
+          "py": {
+            "type": "boolean",
             "readOnly": true
           },
-          "usersClassC": {
-            "type": "integer",
-            "format": "int32",
+          "pr": {
+            "type": "boolean",
             "readOnly": true
           },
-          "usersClassD": {
-            "type": "integer",
-            "format": "int32",
+          "hr": {
+            "type": "boolean",
             "readOnly": true
           },
-          "usersClassX": {
-            "type": "integer",
-            "format": "int32",
+          "bn": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "tr": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "om": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "at": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "es": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "al": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "tc": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "ww": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "wt": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "cl": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "ep": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "fr": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "em": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "wr": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "gl": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "ar": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "ap": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "si": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "pi": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "rb": {
+            "type": "boolean",
             "readOnly": true
           }
         },
@@ -24098,10 +24169,6 @@
             "nullable": true
           },
           "serialNo": {
-            "type": "string",
-            "nullable": true
-          },
-          "productCode": {
             "type": "string",
             "nullable": true
           },
