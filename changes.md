@@ -1,3 +1,24 @@
+# Aug 14, 2023 9:37 PM
+**GitHub Run ID:** 5860861169
+**GitHub Run Number:** 5570
+**Reference:** refs/heads/release/v23.7.1
+**Commit:** e1f293a480a7f3c9f107884f3f9d77ecb15911c8## Removed
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+* Model: AccountInfo
+* Model: BankingViewInfo
+* Model: ContactInfo
+* Model: EmployeePaymentMethodBanks
+* Model: OnboardingInfo
+* Model: OnboardingMenuStatus
+* Model: OnboardingPersonalInfo
+* Model: OnboardingRequirementOption
+* Model: OnboardingSettings
+* Model: OnboardingSetup
+* Model: OnboardingStep
+* Model: SaveFileModel
+* Model: StepInfo
+* Model: TD1FormDates
+
 # Aug 14, 2023 7:33 PM
 **GitHub Run ID:** 5859791432
 **GitHub Run Number:** 5564
