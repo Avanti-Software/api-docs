@@ -1,3 +1,24 @@
+# Aug 14, 2023 7:33 PM
+**GitHub Run ID:** 5859791432
+**GitHub Run Number:** 5564
+**Reference:** refs/heads/master
+**Commit:** 5ab7e89956ef2bd537a8cca24bc6e19bccb220dd## Added
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+* Model: AccountInfo
+* Model: BankingViewInfo
+* Model: ContactInfo
+* Model: EmployeePaymentMethodBanks
+* Model: OnboardingInfo
+* Model: OnboardingMenuStatus
+* Model: OnboardingPersonalInfo
+* Model: OnboardingRequirementOption
+* Model: OnboardingSettings
+* Model: OnboardingSetup
+* Model: OnboardingStep
+* Model: SaveFileModel
+* Model: StepInfo
+* Model: TD1FormDates
+
 # Aug 11, 2023 9:58 PM
 **GitHub Run ID:** 5837342513
 **GitHub Run Number:** 5545
