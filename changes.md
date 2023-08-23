@@ -1,3 +1,13 @@
+# Aug 23, 2023 4:06 PM
+**GitHub Run ID:** 5953622617
+**GitHub Run Number:** 5679
+**Reference:** refs/heads/master
+**Commit:** 7a1d91537251fc95ae4c27a6f0677c2fa6d14188## Added
+ * Endpoint: GET - /v1/EmployeePaymentMethod/EmployeeDepositInfo
+* Model: DirectDepositSetupResponse
+## Removed
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+
 # Aug 15, 2023 1:00 PM
 **GitHub Run ID:** 5867291209
 **GitHub Run Number:** 5571

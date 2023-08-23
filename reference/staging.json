@@ -2206,7 +2206,7 @@
         }
       }
     },
-    "/v1/EmployeePaymentMethod/Banks": {
+    "/v1/EmployeePaymentMethod/EmployeeDepositInfo": {
       "get": {
         "tags": [
           "Employee Payment Method"
@@ -28602,6 +28602,26 @@
           },
           "provEmployed": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DirectDepositSetupResponse": {
+        "type": "object",
+        "properties": {
+          "banks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "depositFrequency": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
             "nullable": true
           }
         },
