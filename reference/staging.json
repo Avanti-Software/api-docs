@@ -27532,6 +27532,10 @@
           "index": {
             "type": "integer",
             "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -28621,6 +28625,26 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaxFactors": {
+        "type": "object",
+        "properties": {
+          "td1Fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TD1Field"
+            },
+            "nullable": true
+          },
+          "additionalFields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TD1Field"
             },
             "nullable": true
           }
