@@ -8,9 +8,9 @@ To get started, open Report Definitions in the Avanti Desktop Application and se
 
 In the example above, we created a new report called **MyEndpoint** and added some employment data sources such as pay group, position, hire date and termination date. 
 
-Next, select **Web Enabled** on the **System Access** tab. 
+Next, select **Web Enabled** on the **Access Controls** tab. 
 
-![Web enable report example.](../assets/images/CustomWebEnabled.png)
+![Web enable report example.](../assets/images/CustomReportWebEnabled.png)
 
 Restrict access to **Print** so only the API user can access the report. 
 
