@@ -12907,6 +12907,9 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          },
+          "chequeOption": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -27333,6 +27336,9 @@
           "dateName12": {
             "type": "string",
             "nullable": true
+          },
+          "chequeOption": {
+            "type": "string"
           }
         },
         "additionalProperties": false

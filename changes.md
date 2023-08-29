@@ -1,3 +1,11 @@
+# Aug 29, 2023 3:05 PM
+**GitHub Run ID:** 6013983902
+**GitHub Run Number:** 5737
+**Reference:** refs/heads/master
+**Commit:** 4e015edeb89e189a7b8f96e9592c897cc1fbccb1## Added
+* Model: Employee, Property: chequeOption
+* Model: EmployeeInfoDetails, Property: chequeOption
+
 # Aug 25, 2023 7:08 PM
 **GitHub Run ID:** 5979482003
 **GitHub Run Number:** 5726
