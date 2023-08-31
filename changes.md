@@ -1,3 +1,12 @@
+# Aug 31, 2023 8:17 PM
+**GitHub Run ID:** 6041964662
+**GitHub Run Number:** 5816
+**Reference:** refs/heads/master
+**Commit:** 1ac3374061a448339dbf9ec9bbb87a5e73274155## Added
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+## Removed
+ * Endpoint: GET - /v1/EmployeePaymentMethod/EmployeeDepositInfo
+
 # Aug 29, 2023 3:05 PM
 **GitHub Run ID:** 6013983902
 **GitHub Run Number:** 5737

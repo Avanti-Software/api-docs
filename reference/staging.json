@@ -2206,7 +2206,7 @@
         }
       }
     },
-    "/v1/EmployeePaymentMethod/EmployeeDepositInfo": {
+    "/v1/EmployeePaymentMethod/Banks": {
       "get": {
         "tags": [
           "Employee Payment Method"
