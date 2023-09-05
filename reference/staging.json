@@ -28656,6 +28656,70 @@
           }
         },
         "additionalProperties": false
+      },
+      "AbsentEmployee": {
+        "type": "object",
+        "properties": {
+          "photoRevision": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionNameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitsAbsent": {
+            "type": "number",
+            "format": "double"
+          },
+          "unitsAbsentUOM": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasonColor": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasonColorR": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reasonColorG": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reasonColorB": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reasonName": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasonNameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "entitlementType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
