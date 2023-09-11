@@ -28747,6 +28747,24 @@
           }
         },
         "additionalProperties": false
+      },
+      "AllowedNumberOfClientDatabases": {
+        "required": [
+          "numberOfProductionDatabasesAllowed",
+          "numberOfTestDatabasesAllowed"
+        ],
+        "type": "object",
+        "properties": {
+          "numberOfProductionDatabasesAllowed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfTestDatabasesAllowed": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
