@@ -1,3 +1,11 @@
+# Sep 11, 2023 5:34 PM
+**GitHub Run ID:** 6149720559
+**GitHub Run Number:** 5893
+**Reference:** refs/heads/master
+**Commit:** e6d63e55dad421a5374410ef4763d18bd3fbacd1## Added
+* Model: AbsentEmployee, Property: fromTime
+* Model: AbsentEmployee, Property: toTime
+
 # Sep 11, 2023 4:00 PM
 **GitHub Run ID:** 6148771175
 **GitHub Run Number:** 5885

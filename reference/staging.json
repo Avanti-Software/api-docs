@@ -28744,6 +28744,16 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "fromTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
