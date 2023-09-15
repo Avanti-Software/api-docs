@@ -1,3 +1,10 @@
+# Sep 15, 2023 3:53 PM
+**GitHub Run ID:** 6200118979
+**GitHub Run Number:** 5935
+**Reference:** refs/heads/master
+**Commit:** 567c100116d7b2051c2942ed1a2e422d3d0d220c## Removed
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+
 # Sep 15, 2023 3:14 PM
 **GitHub Run ID:** 6199718940
 **GitHub Run Number:** 5933
