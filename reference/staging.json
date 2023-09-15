@@ -2206,6 +2206,56 @@
         }
       }
     },
+    "/v1/EmployeePaymentMethod/Banks": {
+      "get": {
+        "tags": [
+          "Employee Payment Method"
+        ],
+        "summary": "Get Employee Payment Banks Info",
+        "operationId": "Get-Employee-Payment-Banks-Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeePaymentMethodBanks"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/EmployeePhoneNumber": {
       "put": {
         "tags": [
@@ -28824,6 +28874,9 @@
     },
     {
       "name": "Employee Pay Statements"
+    },
+    {
+      "name": "Employee Payment Method"
     },
     {
       "name": "Employee Personal Info"

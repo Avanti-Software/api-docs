@@ -1,3 +1,10 @@
+# Sep 15, 2023 3:14 PM
+**GitHub Run ID:** 6199718940
+**GitHub Run Number:** 5933
+**Reference:** refs/heads/release/v23.9.1
+**Commit:** 5cf8d706d8dabed0d60c3cb1495866a0fef88383## Added
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+
 # Sep 13, 2023 2:04 PM
 **GitHub Run ID:** 6173443993
 **GitHub Run Number:** 5920
