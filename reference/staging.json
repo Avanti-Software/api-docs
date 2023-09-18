@@ -2206,6 +2206,56 @@
         }
       }
     },
+    "/v1/EmployeePaymentMethod/Banks": {
+      "get": {
+        "tags": [
+          "Employee Payment Method"
+        ],
+        "summary": "Get Employee Payment Banks Info",
+        "operationId": "Get-Employee-Payment-Banks-Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeePaymentMethodBanks"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/EmployeePhoneNumber": {
       "put": {
         "tags": [
@@ -28725,63 +28775,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "IContractResolver": {
-        "type": "object",
-        "additionalProperties": false
-      },
-      "OperationType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "UpdateEmployeeJobInfoJsonPatchDocument": {
-        "type": "object",
-        "properties": {
-          "operations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdateEmployeeJobInfoOperation"
-            },
-            "nullable": true
-          },
-          "contractResolver": {
-            "$ref": "#/components/schemas/IContractResolver"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateEmployeeJobInfoOperation": {
-        "type": "object",
-        "properties": {
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true
-          },
-          "op": {
-            "type": "string",
-            "nullable": true
-          },
-          "from": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -28881,6 +28874,9 @@
     },
     {
       "name": "Employee Pay Statements"
+    },
+    {
+      "name": "Employee Payment Method"
     },
     {
       "name": "Employee Personal Info"

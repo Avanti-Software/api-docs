@@ -1,3 +1,15 @@
+# Sep 18, 2023 3:06 PM
+**GitHub Run ID:** 6224297815
+**GitHub Run Number:** 5953
+**Reference:** refs/heads/release/v23.9.1
+**Commit:** d5b58df4b483f62b3b049a25d04543a3af91a3bc## Added
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+## Removed
+* Model: IContractResolver
+* Model: OperationType
+* Model: UpdateEmployeeJobInfoJsonPatchDocument
+* Model: UpdateEmployeeJobInfoOperation
+
 # Sep 18, 2023 2:27 PM
 **GitHub Run ID:** 6223820901
 **GitHub Run Number:** 5950
