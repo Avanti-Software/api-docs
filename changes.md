@@ -1,3 +1,11 @@
+# Sep 20, 2023 2:36 PM
+**GitHub Run ID:** 6250016812
+**GitHub Run Number:** 5986
+**Reference:** refs/heads/master
+**Commit:** a87cd35edc913dad9248641917231381e1e16710## Added
+* Model: OnboardingInfo, Property: emergencyContactInfo
+* Model: OnboardingSetup, Property: emergencyContactSetupResponse
+
 # Sep 19, 2023 10:07 PM
 **GitHub Run ID:** 6241340417
 **GitHub Run Number:** 5977

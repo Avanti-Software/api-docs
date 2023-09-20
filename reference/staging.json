@@ -28184,6 +28184,13 @@
           },
           "bankingViewModel": {
             "$ref": "#/components/schemas/BankingViewInfo"
+          },
+          "emergencyContactInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmergencyContact"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -28426,6 +28433,9 @@
           },
           "onboardingInfo": {
             "$ref": "#/components/schemas/OnboardingInfo"
+          },
+          "emergencyContactSetupResponse": {
+            "nullable": true
           }
         },
         "additionalProperties": false
