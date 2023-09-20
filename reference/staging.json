@@ -22336,6 +22336,10 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

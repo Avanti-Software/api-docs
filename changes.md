@@ -1,3 +1,10 @@
+# Sep 20, 2023 4:01 PM
+**GitHub Run ID:** 6251038332
+**GitHub Run Number:** 5996
+**Reference:** refs/heads/master
+**Commit:** 45a8bad319e0340564d7dc17f353a1f60c864a8d## Added
+* Model: EntitlementEntry, Property: comment
+
 # Sep 20, 2023 2:36 PM
 **GitHub Run ID:** 6250016812
 **GitHub Run Number:** 5986
