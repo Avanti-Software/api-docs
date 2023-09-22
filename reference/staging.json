@@ -28415,6 +28415,22 @@
           },
           "chequeUploadRequired": {
             "type": "boolean"
+          },
+          "phoneType1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneType2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneType3": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneType4": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -28439,6 +28455,27 @@
             "$ref": "#/components/schemas/OnboardingInfo"
           },
           "emergencyContactSetupResponse": {
+            "nullable": true
+          },
+          "provinces": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "countries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "phoneTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
             "nullable": true
           }
         },
