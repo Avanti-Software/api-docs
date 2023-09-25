@@ -27975,9 +27975,6 @@
             "type": "string",
             "format": "email",
             "nullable": true
-          },
-          "companySettings": {
-            "$ref": "#/components/schemas/CompanySettings"
           }
         },
         "additionalProperties": false

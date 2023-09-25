@@ -1,3 +1,10 @@
+# Sep 25, 2023 10:05 PM
+**GitHub Run ID:** 6305303855
+**GitHub Run Number:** 6062
+**Reference:** refs/heads/master
+**Commit:** 65cac4d3b7cd334a3c569b6d722537138fabf4f8## Removed
+* Model: ContactInfo, Property: companySettings
+
 # Sep 22, 2023 6:13 PM
 **GitHub Run ID:** 6277595714
 **GitHub Run Number:** 6043
