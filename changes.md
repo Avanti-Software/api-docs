@@ -1,3 +1,11 @@
+# Sep 26, 2023 3:18 PM
+**GitHub Run ID:** 6314701957
+**GitHub Run Number:** 6071
+**Reference:** refs/heads/master
+**Commit:** f27a010ac44ff3e5977c74bad3f95996b0c9e865## Added
+* Model: OnboardingInfo, Property: personalInfoSettings
+* Model: OnboardingPersonalInfo, Property: isTemporarySin
+
 # Sep 25, 2023 10:05 PM
 **GitHub Run ID:** 6305303855
 **GitHub Run Number:** 6062

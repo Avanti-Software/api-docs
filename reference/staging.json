@@ -28192,6 +28192,9 @@
               "$ref": "#/components/schemas/EmergencyContact"
             },
             "nullable": true
+          },
+          "personalInfoSettings": {
+            "$ref": "#/components/schemas/PersonalInfoSettings"
           }
         },
         "additionalProperties": false
@@ -28329,6 +28332,9 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "isTemporarySin": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
