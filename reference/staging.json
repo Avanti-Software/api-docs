@@ -2206,6 +2206,56 @@
         }
       }
     },
+    "/v1/EmployeePaymentMethod/Banks": {
+      "get": {
+        "tags": [
+          "Employee Payment Method"
+        ],
+        "summary": "Get Employee Payment Banks Info",
+        "operationId": "Get-Employee-Payment-Banks-Info",
+        "parameters": [
+          {
+            "name": "empNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeePaymentMethodBanks"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/EmployeePhoneNumber": {
       "put": {
         "tags": [
@@ -22336,10 +22386,6 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -27975,6 +28021,9 @@
             "type": "string",
             "format": "email",
             "nullable": true
+          },
+          "companySettings": {
+            "$ref": "#/components/schemas/CompanySettings"
           }
         },
         "additionalProperties": false
@@ -28185,16 +28234,6 @@
           },
           "bankingViewModel": {
             "$ref": "#/components/schemas/BankingViewInfo"
-          },
-          "emergencyContactInfo": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EmergencyContact"
-            },
-            "nullable": true
-          },
-          "personalInfoSettings": {
-            "$ref": "#/components/schemas/PersonalInfoSettings"
           }
         },
         "additionalProperties": false
@@ -28332,9 +28371,6 @@
               "type": "string"
             },
             "nullable": true
-          },
-          "isTemporarySin": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -28418,22 +28454,6 @@
           },
           "chequeUploadRequired": {
             "type": "boolean"
-          },
-          "phoneType1": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "phoneType2": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "phoneType3": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "phoneType4": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -28456,30 +28476,6 @@
           },
           "onboardingInfo": {
             "$ref": "#/components/schemas/OnboardingInfo"
-          },
-          "emergencyContactSetupResponse": {
-            "nullable": true
-          },
-          "provinces": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "countries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
-          },
-          "phoneTypes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TextValuePair"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -28779,63 +28775,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "IContractResolver": {
-        "type": "object",
-        "additionalProperties": false
-      },
-      "OperationType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "UpdateEmployeeJobInfoJsonPatchDocument": {
-        "type": "object",
-        "properties": {
-          "operations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdateEmployeeJobInfoOperation"
-            },
-            "nullable": true
-          },
-          "contractResolver": {
-            "$ref": "#/components/schemas/IContractResolver"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateEmployeeJobInfoOperation": {
-        "type": "object",
-        "properties": {
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true
-          },
-          "op": {
-            "type": "string",
-            "nullable": true
-          },
-          "from": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -28935,6 +28874,9 @@
     },
     {
       "name": "Employee Pay Statements"
+    },
+    {
+      "name": "Employee Payment Method"
     },
     {
       "name": "Employee Personal Info"

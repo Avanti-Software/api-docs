@@ -1,3 +1,28 @@
+# Sep 26, 2023 8:28 PM
+**GitHub Run ID:** 6317896495
+**GitHub Run Number:** 6085
+**Reference:** refs/heads/release/v23.9.1
+**Commit:** 95a7284b15af53710bc674996e634f182b6ce948## Added
+ * Endpoint: GET - /v1/EmployeePaymentMethod/Banks
+* Model: ContactInfo, Property: companySettings
+## Removed
+* Model: EntitlementEntry, Property: comment
+* Model: OnboardingInfo, Property: emergencyContactInfo
+* Model: OnboardingInfo, Property: personalInfoSettings
+* Model: OnboardingPersonalInfo, Property: isTemporarySin
+* Model: OnboardingSettings, Property: phoneType1
+* Model: OnboardingSettings, Property: phoneType2
+* Model: OnboardingSettings, Property: phoneType3
+* Model: OnboardingSettings, Property: phoneType4
+* Model: OnboardingSetup, Property: emergencyContactSetupResponse
+* Model: OnboardingSetup, Property: provinces
+* Model: OnboardingSetup, Property: countries
+* Model: OnboardingSetup, Property: phoneTypes
+* Model: IContractResolver
+* Model: OperationType
+* Model: UpdateEmployeeJobInfoJsonPatchDocument
+* Model: UpdateEmployeeJobInfoOperation
+
 # Sep 26, 2023 3:18 PM
 **GitHub Run ID:** 6314701957
 **GitHub Run Number:** 6071
