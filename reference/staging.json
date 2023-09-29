@@ -13907,6 +13907,11 @@
             "type": "string",
             "description": "The filename and extension of the employee's photo.",
             "nullable": true
+          },
+          "revision": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           }
         },
         "additionalProperties": false
