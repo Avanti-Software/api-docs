@@ -28841,6 +28841,31 @@
           }
         },
         "additionalProperties": false
+      },
+      "TerminateEmployee": {
+        "required": [
+          "terminationCode",
+          "terminationDate"
+        ],
+        "type": "object",
+        "properties": {
+          "terminationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "terminationCode": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string"
+          },
+          "terminationComments": {
+            "maxLength": 160,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
