@@ -1,3 +1,12 @@
+# Oct 12, 2023 8:11 PM
+**GitHub Run ID:** 6500352726
+**GitHub Run Number:** 6214
+**Reference:** refs/heads/master
+**Commit:** ffe76922a2116aab8407c29b813518cd6e1adc4f## Added
+ * Endpoint: PATCH - /v1/EmployeeGLInfo/{empNo}
+* Model: GlInfoPatchRequestJsonPatchDocument
+* Model: GlInfoPatchRequestOperation
+
 # Oct 06, 2023 1:30 PM
 **GitHub Run ID:** 6432215188
 **GitHub Run Number:** 6172
