@@ -2054,50 +2054,6 @@
         }
       }
     },
-    "/v1/EmployeeGLInfo/{empNo}": {
-      "patch": {
-        "tags": [
-          "Employee GL Info"
-        ],
-        "summary": "Update Employee GL Info",
-        "operationId": "Update-Employee-GL-Info",
-        "parameters": [
-          {
-            "name": "empNo",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "maxLength": 9,
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlInfoPatchRequestJsonPatchDocument"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlInfoPatchRequestJsonPatchDocument"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlInfoPatchRequestJsonPatchDocument"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/v1/EmployeeJobData": {
       "get": {
         "tags": [
@@ -28906,46 +28862,6 @@
             "maxLength": 160,
             "minLength": 0,
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlInfoPatchRequestJsonPatchDocument": {
-        "type": "object",
-        "properties": {
-          "operations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GlInfoPatchRequestOperation"
-            },
-            "nullable": true
-          },
-          "contractResolver": {
-            "$ref": "#/components/schemas/IContractResolver"
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlInfoPatchRequestOperation": {
-        "type": "object",
-        "properties": {
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true
-          },
-          "op": {
-            "type": "string",
-            "nullable": true
-          },
-          "from": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
             "nullable": true
           }
         },

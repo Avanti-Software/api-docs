@@ -1,3 +1,12 @@
+# Oct 13, 2023 3:43 PM
+**GitHub Run ID:** 6510220350
+**GitHub Run Number:** 6226
+**Reference:** refs/heads/release/v23.10.1
+**Commit:** 4918012cb5e6895c845f60e11bb31fa3f564dca6## Removed
+ * Endpoint: PATCH - /v1/EmployeeGLInfo/{empNo}
+* Model: GlInfoPatchRequestJsonPatchDocument
+* Model: GlInfoPatchRequestOperation
+
 # Oct 12, 2023 8:11 PM
 **GitHub Run ID:** 6500352726
 **GitHub Run Number:** 6214
