@@ -4839,7 +4839,7 @@
           "Employee Personal Info"
         ],
         "summary": "Update Employee Personal Info",
-        "description": "Update the employee's personal information in Avanti.\n\nThe best practice is to do a Get Personal Info, update the required values, then do a Put Personal Info. You can adjust the following information for the employee. \n\n- Given Name, Surname, Initial\n- Address Line 1, Address Line 2, City, Prov, Country, Postal Code\n- Birth Date, First Language, Gender, Email\n- Phone Type 1, Phone Number 1, Phone Type 2, Phone Number 2, Phone Type 3, Phone Number 3, Phone Type 4, Phone Number 4\n- Modified Date, Modified Time\n\nAll updates will log in the employee change log. \n",
+        "description": "Update the employee's personal information in Avanti.\n\nThe best practice is to do a Get Personal Info, update the required values, then do a Put Personal Info. You can adjust the following information for the employee. \n\n- Given Name, Surname, Initial, Preferred Name, Previous Surname\n- Address Line 1, Address Line 2, City, Prov, Country, Postal Code\n- Birth Date, First Language, Gender, Email\n- Phone Type 1, Phone Number 1, Phone Type 2, Phone Number 2, Phone Type 3, Phone Number 3, Phone Type 4, Phone Number 4\n- Modified Date, Modified Time\n\nAll updates will log in the employee change log. \n",
         "operationId": "Update-Employee-Personal-Info",
         "requestBody": {
           "content": {
