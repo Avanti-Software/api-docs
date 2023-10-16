@@ -1,3 +1,11 @@
+# Oct 16, 2023 5:16 PM
+**GitHub Run ID:** 6536907940
+**GitHub Run Number:** 6235
+**Reference:** refs/heads/master
+**Commit:** 98762c5cc06eededb85657ad11c209df52af273c## Added
+* Model: GlInfoPatchRequestJsonPatchDocument
+* Model: GlInfoPatchRequestOperation
+
 # Oct 13, 2023 8:45 PM
 **GitHub Run ID:** 6512876885
 **GitHub Run Number:** 6233
