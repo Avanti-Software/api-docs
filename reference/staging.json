@@ -21476,6 +21476,10 @@
           "minimumAvantiGoVersion": {
             "type": "string",
             "nullable": true
+          },
+          "province": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -1,3 +1,10 @@
+# Oct 20, 2023 6:48 PM
+**GitHub Run ID:** 6591493225
+**GitHub Run Number:** 6248
+**Reference:** refs/heads/master
+**Commit:** 24f15b5fef9396395ffef1f2997b9cb581c3d2ca## Added
+* Model: UserSetup, Property: province
+
 # Oct 18, 2023 7:00 PM
 **GitHub Run ID:** 6565301817
 **GitHub Run Number:** 6241
