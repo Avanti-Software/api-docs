@@ -1,6 +1,6 @@
 # Introduction to Avanti API
 
-Our API allows Avanti SaaS clients to access and update information in Avanti securely. Use the API to build private services that integrate Avanti with other platforms, create custom reports, display dashboards, and more.
+Our API allows our clients to access and update information in Avanti securely. Use the API to build private services that integrate Avanti with other platforms, create custom reports, display dashboards, and more.
 
 All endpoints in the Avanti API are based on Representational State Transfer (REST) architecture and are accessed via HTTPS. The base URL for all requests is the organization’s Avanti Self-Service Portal address with a **-API** suffix. 
 

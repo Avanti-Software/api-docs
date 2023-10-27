@@ -8,6 +8,10 @@ To get started, open Report Definitions in the Avanti Desktop Application and se
 
 In the example above, we created a new report called **MyEndpoint** and added some employment data sources such as pay group, position, hire date and termination date. 
 
+<!-- theme: warning -->
+><b>Report Columns</b><br>
+>Each column in the report must have a unique column header. If there's a duplicate column header, only the first column is included in the response.    
+
 Next, select **Web Enabled** on the **Access Controls** tab. 
 
 ![Web enable report example.](../assets/images/CustomReportWebEnabled.png)
