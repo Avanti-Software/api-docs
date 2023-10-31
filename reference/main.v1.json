@@ -9555,6 +9555,7 @@
       },
       "Employee": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "photoRevision": {
             "type": "integer",
@@ -9705,7 +9706,7 @@
           },
           "emailType1": {
             "type": "integer",
-            "description": "The email type of the email1. \n        0 = Primary\n        1 = Pay Statement\n        2 = Alert\n        3 = Home\n        4 = Work\n        5 = Tax Slips",
+            "description": "The email type of the email1.  0 is Primary, 1 is Work, 2 is Home, 3 is Pay Statements, 4 is Alerts, and 5 is Tax Slips. ",
             "format": "int32"
           },
           "email1": {
@@ -9715,16 +9716,17 @@
           },
           "emailType2": {
             "type": "integer",
-            "description": "The email type of the email2. \n        0 = Primary\n        1 = Pay Statement\n        2 = Alert\n        3 = Home\n        4 = Work\n        5 = Tax Slips",
+            "description": "The email type of the email2.  0 is Primary, 1 is Work, 2 is Home, 3 is Pay Statements, 4 is Alerts, and 5 is Tax Slips. ",
             "format": "int32"
           },
           "email2": {
             "type": "string",
+            "description": "The employee's email address for emailType2.",
             "nullable": true
           },
           "emailType3": {
             "type": "integer",
-            "description": "The email type of the email3. \n        0 = Primary\n        1 = Pay Statement\n        2 = Alert\n        3 = Home\n        4 = Work\n        5 = Tax Slips",
+            "description": "The email type of the email3.  0 is Primary, 1 is Work, 2 is Home, 3 is Pay Statements, 4 is Alerts, and 5 is Tax Slips. ",
             "format": "int32"
           },
           "email3": {
@@ -9734,7 +9736,7 @@
           },
           "emailType4": {
             "type": "integer",
-            "description": "The email type of the email4. \n        0 = Primary\n        1 = Pay Statement\n        2 = Alert\n        3 = Home\n        4 = Work\n        5 = Tax Slips",
+            "description": "The email type of the email4.  0 is Primary, 1 is Work, 2 is Home, 3 is Pay Statements, 4 is Alerts, and 5 is Tax Slips. ",
             "format": "int32"
           },
           "email4": {
@@ -9744,7 +9746,7 @@
           },
           "emailType5": {
             "type": "integer",
-            "description": "The email type of the email5. \n        0 = Primary\n        1 = Pay Statement\n        2 = Alert\n        3 = Home\n        4 = Work\n        5 = Tax Slips",
+            "description": "The email type of the email5.  0 is Primary, 1 is Work, 2 is Home, 3 is Pay Statements, 4 is Alerts, and 5 is Tax Slips. ",
             "format": "int32"
           },
           "email5": {
@@ -10270,10 +10272,10 @@
           },
           "roleAssignmentPermissions": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/RoleAssignmentPermission"
-            },
-            "nullable": true
+            }
           },
           "employeeNameFormat": {
             "type": "integer",
@@ -10284,8 +10286,7 @@
             "nullable": true,
             "readOnly": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "EmployeeAcceptance": {
         "type": "object",
