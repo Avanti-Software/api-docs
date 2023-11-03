@@ -4675,7 +4675,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Add or replace your employees' photos on the Employee Profile and throughout ASSP.\nFiles larger than 25MB will be compressed to the allowed size. "
       },
       "delete": {
         "tags": [
