@@ -4910,7 +4910,7 @@
           "Employee Additional Information"
         ],
         "summary": "Update Additional Information",
-        "description": "Update the employee's information that's unique to your company’s setup.\n\nYou can only update the information included on the Avanti Self-Service Portal. The API user must have access to view and edit the field. ",
+        "description": "Update the employee’s information that’s unique to your company’s setup.\n\nYou can only update the information included on the Avanti Self-Service Portal. The API user must have access to view and edit the field in the Additional Information on the New Avanti Experience. ",
         "operationId": "Update-Additional-Information",
         "requestBody": {
           "content": {
