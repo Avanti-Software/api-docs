@@ -28955,6 +28955,22 @@
           }
         },
         "additionalProperties": false
+      },
+      "PayDates": {
+        "type": "object",
+        "properties": {
+          "payEndingDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "chequeDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
