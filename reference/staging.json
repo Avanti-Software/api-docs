@@ -28971,6 +28971,34 @@
           }
         },
         "additionalProperties": false
+      },
+      "FutureDatedRate": {
+        "required": [
+          "effectiveDate",
+          "rate",
+          "uom"
+        ],
+        "type": "object",
+        "properties": {
+          "earningCode": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "uom": {
+            "$ref": "#/components/schemas/UnitOfMeasure"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
