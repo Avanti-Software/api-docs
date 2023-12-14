@@ -1,3 +1,10 @@
+# Dec 14, 2023 11:26 PM
+**GitHub Run ID:** 7215700018
+**GitHub Run Number:** 6519
+**Reference:** refs/heads/master
+**Commit:** 22edc4230021b4ac4885bc30a0acc292fa7e2bd5## Added
+* Model: EmployeePersonalInfo, Property: marital
+
 # Nov 30, 2023 9:17 PM
 **GitHub Run ID:** 7052278041
 **GitHub Run Number:** 6465

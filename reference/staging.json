@@ -25212,6 +25212,9 @@
           "previousSurname": {
             "type": "string",
             "nullable": true
+          },
+          "marital": {
+            "type": "string"
           }
         },
         "additionalProperties": false
