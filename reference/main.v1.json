@@ -6824,7 +6824,7 @@
           "Web Punch"
         ],
         "summary": "Get Last Check-in",
-        "description": "Returns the most recent punch of the employee attached to the user.",
+        "description": "Returns the most recent punch of the employee attached to the user unless the last punch was for a break. If the previous punch was a break, it returns all punches for the shift, including the last check-in. ",
         "operationId": "Get-Last-Check-in",
         "responses": {
           "200": {
