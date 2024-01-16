@@ -1,3 +1,17 @@
+# Jan 16, 2024 7:42 PM
+**GitHub Run ID:** 7546624455
+**GitHub Run Number:** 6581
+**Reference:** refs/heads/master
+**Commit:** 77c7aa85b8ecb3660d1e9e3d34d0bf17656109dd## Added
+* Model: PayStatementBenefit, Property: abbrevFr
+* Model: PayStatementBenefit, Property: descFr
+* Model: PayStatementDeduction, Property: abbrevFr
+* Model: PayStatementDeduction, Property: descFr
+* Model: PayStatementEarning, Property: abbrevFr
+* Model: PayStatementEarning, Property: descFr
+* Model: PayStatementTimeEntry, Property: earnDeductAbbrevFr
+* Model: PayStatementTimeEntry, Property: earnDeductDescFr
+
 # Jan 08, 2024 2:28 PM
 **GitHub Run ID:** 7448700297
 **GitHub Run Number:** 6551

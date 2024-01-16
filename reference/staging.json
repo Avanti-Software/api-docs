@@ -16567,6 +16567,14 @@
           },
           "isTaxable": {
             "type": "boolean"
+          },
+          "abbrevFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "descFr": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -16609,6 +16617,14 @@
           },
           "ytdOnly": {
             "type": "boolean"
+          },
+          "abbrevFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "descFr": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17104,6 +17120,14 @@
           "recordCount": {
             "type": "integer",
             "format": "int32"
+          },
+          "abbrevFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "descFr": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17416,6 +17440,14 @@
             "nullable": true
           },
           "positionDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "earnDeductAbbrevFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "earnDeductDescFr": {
             "type": "string",
             "nullable": true
           }
