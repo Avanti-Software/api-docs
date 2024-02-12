@@ -1,3 +1,12 @@
+# Feb 12, 2024 6:40 PM
+**GitHub Run ID:** 7876323207
+**GitHub Run Number:** 6658
+**Reference:** refs/heads/release/v24.2.1
+**Commit:** c47cd262e0cc6b60e3d042b32920ae19f15fceeb## Removed
+* Model: Geofence
+* Model: GeofenceCriteria
+* Model: GeofenceCriteriaFilters
+
 # Feb 08, 2024 6:37 PM
 **GitHub Run ID:** 7834240485
 **GitHub Run Number:** 6649
