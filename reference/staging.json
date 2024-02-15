@@ -29117,6 +29117,52 @@
           }
         },
         "additionalProperties": false
+      },
+      "TaxSlip": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "taxYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "form": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
+          },
+          "province": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "group": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "continuationNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "incomeSource": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
