@@ -1,3 +1,17 @@
+# Feb 20, 2024 4:36 PM
+**GitHub Run ID:** 7976742162
+**GitHub Run Number:** 6721
+**Reference:** refs/heads/master
+**Commit:** 4df2c9964cf9faa80551873c11a0950a40a92d90## Added
+* Model: Settings, Property: taxSlipsSettings
+* Model: TaxSlipsSettings
+## Removed
+* Model: Settings, Property: mailSettings
+* Model: Settings, Property: benefitsSettings
+* Model: Settings, Property: employeeInfoSettings
+* Model: BenefitsSettings
+* Model: MailSettings
+
 # Feb 15, 2024 10:03 PM
 **GitHub Run ID:** 7922786177
 **GitHub Run Number:** 6716

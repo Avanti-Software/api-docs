@@ -19032,20 +19032,14 @@
           "entitlementsSettings": {
             "$ref": "#/components/schemas/EntitlementsSettings"
           },
-          "mailSettings": {
-            "$ref": "#/components/schemas/MailSettings"
-          },
-          "benefitsSettings": {
-            "$ref": "#/components/schemas/BenefitsSettings"
-          },
           "emergencyContactSettings": {
             "$ref": "#/components/schemas/EmergencyContactSettings"
           },
           "dependentsSettings": {
             "$ref": "#/components/schemas/DependentsSettings"
           },
-          "employeeInfoSettings": {
-            "$ref": "#/components/schemas/EmployeeInfoSettings"
+          "taxSlipsSettings": {
+            "$ref": "#/components/schemas/TaxSlipsSettings"
           }
         },
         "additionalProperties": false
@@ -23014,10 +23008,6 @@
         },
         "additionalProperties": false
       },
-      "BenefitsSettings": {
-        "type": "object",
-        "additionalProperties": false
-      },
       "ChangeLog": {
         "required": [
           "description",
@@ -23265,33 +23255,6 @@
               }
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MailSettings": {
-        "type": "object",
-        "properties": {
-          "mailServer": {
-            "type": "string",
-            "nullable": true
-          },
-          "mailAccountName": {
-            "type": "string",
-            "nullable": true
-          },
-          "enableEmailCopyOfMessages": {
-            "type": "boolean"
-          },
-          "zipDirectory": {
-            "type": "string",
-            "nullable": true
-          },
-          "enableEmail": {
-            "type": "boolean"
-          },
-          "disableEmailStatementEncryption": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -29159,6 +29122,35 @@
           },
           "incomeSource": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaxSlipsSettings": {
+        "type": "object",
+        "properties": {
+          "requirePdfPasswordProtection": {
+            "type": "boolean"
+          },
+          "usePdfPasswordProtection": {
+            "type": "boolean"
+          },
+          "enableEmail": {
+            "type": "boolean"
+          },
+          "warningMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "viewOption": {
+            "$ref": "#/components/schemas/DocumentViewOption"
+          },
+          "columnDisplay": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },
