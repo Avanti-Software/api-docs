@@ -1,3 +1,10 @@
+# Feb 20, 2024 7:48 PM
+**GitHub Run ID:** 7979068905
+**GitHub Run Number:** 6729
+**Reference:** refs/heads/master
+**Commit:** bfcc9503730629df397762830db3ed11096e33e3## Added
+* Model: GeofenceCriteriaFilters, Property: allPositions
+
 # Feb 20, 2024 4:36 PM
 **GitHub Run ID:** 7976742162
 **GitHub Run Number:** 6721

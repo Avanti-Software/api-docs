@@ -29077,6 +29077,13 @@
               "$ref": "#/components/schemas/TextValuePair"
             },
             "nullable": true
+          },
+          "allPositions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
