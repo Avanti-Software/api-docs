@@ -1,3 +1,13 @@
+# Feb 22, 2024 5:15 PM
+**GitHub Run ID:** 8008302696
+**GitHub Run Number:** 6759
+**Reference:** refs/heads/master
+**Commit:** 2605c71d99adff3668e0559b0c56bc8bb8fa557e## Removed
+* Model: TaxSlip, Property: version
+* Model: TaxSlip, Property: group
+* Model: TaxSlip, Property: continuationNumber
+* Model: TaxSlip, Property: incomeSource
+
 # Feb 20, 2024 7:48 PM
 **GitHub Run ID:** 7979068905
 **GitHub Run Number:** 6729

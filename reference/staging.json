@@ -29114,22 +29114,6 @@
           "type": {
             "type": "string",
             "nullable": true
-          },
-          "version": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "group": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "continuationNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "incomeSource": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
