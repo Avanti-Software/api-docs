@@ -1,3 +1,16 @@
+# Feb 26, 2024 5:24 PM
+**GitHub Run ID:** 8052953111
+**GitHub Run Number:** 6772
+**Reference:** refs/heads/master
+**Commit:** eeb9fa2f4a955cf389eaafde2689c7cd1b33c10f## Added
+* Model: Settings, Property: taxStatementsSettings
+* Model: TaxStatement
+* Model: TaxStatementsSettings
+## Removed
+* Model: Settings, Property: taxSlipsSettings
+* Model: TaxSlip
+* Model: TaxSlipsSettings
+
 # Feb 22, 2024 5:15 PM
 **GitHub Run ID:** 8008302696
 **GitHub Run Number:** 6759

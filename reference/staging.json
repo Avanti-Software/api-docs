@@ -19038,8 +19038,8 @@
           "dependentsSettings": {
             "$ref": "#/components/schemas/DependentsSettings"
           },
-          "taxSlipsSettings": {
-            "$ref": "#/components/schemas/TaxSlipsSettings"
+          "taxStatementsSettings": {
+            "$ref": "#/components/schemas/TaxStatementsSettings"
           }
         },
         "additionalProperties": false
@@ -29088,7 +29088,7 @@
         },
         "additionalProperties": false
       },
-      "TaxSlip": {
+      "TaxStatement": {
         "type": "object",
         "properties": {
           "id": {
@@ -29118,7 +29118,7 @@
         },
         "additionalProperties": false
       },
-      "TaxSlipsSettings": {
+      "TaxStatementsSettings": {
         "type": "object",
         "properties": {
           "requirePdfPasswordProtection": {
