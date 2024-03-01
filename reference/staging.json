@@ -1790,110 +1790,6 @@
         }
       }
     },
-    "/v1/EmployeeDocuments": {
-      "post": {
-        "tags": [
-          "Employee Documents"
-        ],
-        "summary": "Add Employee Document",
-        "description": "Save an employee document in Avanti. \n\nYou can add an employee document with any of the following format types: \n- doc, docx, wps  \n- csv,  odf, xls, xlsx\n- jpg  \n- mp2 \n- m1v, m4v, movavi, mp4, mp4v, mpe, mpeg, mpg, wm, wmv \n- od\n- odt, txt\n- pdf\n\n**Document File Size** \n\nThe maximum file size you can add is 250 MB. If Company Web Setting FileSizeLimitInBytes is less than 250 MB, then the FileSizeLimitInBytes will determine the file size allowed. \n\n**Document Type Access** \n \nTo be able to add a document, the API user needs to have Insert Responsibility and User Group access for the Document Type. ",
-        "operationId": "Add-Employee-Document",
-        "requestBody": {
-          "description": "",
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "required": [
-                  "EmpNo",
-                  "Description",
-                  "FileData"
-                ],
-                "type": "object",
-                "properties": {
-                  "EmpNo": {
-                    "type": "string",
-                    "description": "The employee number of the employee the document is being added for."
-                  },
-                  "Description": {
-                    "type": "string",
-                    "description": "A description of the document, which can be up to 128 characters.  "
-                  },
-                  "TypeId": {
-                    "type": "integer",
-                    "description": "The ID of the document type. This must be a valid document type, from 1 to 999. ",
-                    "format": "int32"
-                  },
-                  "Summary": {
-                    "type": "string",
-                    "description": "A summary of the document, which can be up to 4096 characters.  "
-                  },
-                  "FileData": {
-                    "type": "string",
-                    "description": "The file or text of the employee's document. ",
-                    "format": "binary"
-                  },
-                  "DocumentRevision": {
-                    "type": "integer",
-                    "description": "The revision number of the document. If left blank, the revision number is 0.\n\nTypically, you'll include a revision if this is an updated file of an employee document already created for the employee. ",
-                    "format": "int32"
-                  }
-                }
-              },
-              "encoding": {
-                "EmpNo": { },
-                "Description": { },
-                "TypeId": { },
-                "Summary": { },
-                "FileData": { },
-                "DocumentRevision": { }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeDocument"
-                }
-              }
-            }
-          },
-          "201": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeDocument"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/EmployeeEarningCodes": {
       "get": {
         "tags": [
@@ -19040,6 +18936,9 @@
           },
           "taxStatementsSettings": {
             "$ref": "#/components/schemas/TaxStatementsSettings"
+          },
+          "employeeDocumentSettings": {
+            "$ref": "#/components/schemas/EmployeeDocumentSettings"
           }
         },
         "additionalProperties": false
@@ -26024,6 +25923,19 @@
             "type": "integer",
             "description": "The document's revision number. ",
             "format": "int32"
+          },
+          "documentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowModify": {
+            "type": "boolean"
+          },
+          "allowInsert": {
+            "type": "boolean"
+          },
+          "allowDelete": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -29146,6 +29058,118 @@
           }
         },
         "additionalProperties": false
+      },
+      "Document": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "documentRevision": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModifiedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "allowInsert": {
+            "type": "boolean"
+          },
+          "allowModify": {
+            "type": "boolean"
+          },
+          "allowDelete": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentType": {
+        "type": "object",
+        "properties": {
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "descriptionFr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeDocumentSettings": {
+        "type": "object",
+        "properties": {
+          "viewOption": {
+            "$ref": "#/components/schemas/DocumentViewOption"
+          },
+          "columnDisplay": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "documentUpload": {
+            "type": "boolean"
+          },
+          "viewDocumentTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentType"
+            },
+            "nullable": true
+          },
+          "uploadDocumentTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentType"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -29221,9 +29245,6 @@
     },
     {
       "name": "Employee Defaults Group"
-    },
-    {
-      "name": "Employee Documents"
     },
     {
       "name": "Employee Earning Codes"

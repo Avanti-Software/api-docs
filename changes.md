@@ -1,3 +1,19 @@
+# Mar 01, 2024 3:40 PM
+**GitHub Run ID:** 8113376521
+**GitHub Run Number:** 6858
+**Reference:** refs/heads/master
+**Commit:** 4b5a35b8321ccb6cfe9141fc889a693d10d906f8## Added
+* Model: Document
+* Model: DocumentType
+* Model: EmployeeDocument, Property: documentId
+* Model: EmployeeDocument, Property: allowModify
+* Model: EmployeeDocument, Property: allowInsert
+* Model: EmployeeDocument, Property: allowDelete
+* Model: EmployeeDocumentSettings
+* Model: Settings, Property: employeeDocumentSettings
+## Removed
+ * Endpoint: POST - /v1/EmployeeDocuments
+
 # Feb 26, 2024 5:24 PM
 **GitHub Run ID:** 8052953111
 **GitHub Run Number:** 6772
