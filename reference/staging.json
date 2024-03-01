@@ -28944,6 +28944,9 @@
           "longitude": {
             "type": "number",
             "format": "double"
+          },
+          "hasFullPositionsAccess": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

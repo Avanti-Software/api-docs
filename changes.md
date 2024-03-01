@@ -1,3 +1,10 @@
+# Mar 01, 2024 9:57 PM
+**GitHub Run ID:** 8117601075
+**GitHub Run Number:** 6865
+**Reference:** refs/heads/master
+**Commit:** f42c6b201c5a500ffd60745fcfad27422f5d41e6## Added
+* Model: Geofence, Property: hasFullPositionsAccess
+
 # Mar 01, 2024 3:40 PM
 **GitHub Run ID:** 8113376521
 **GitHub Run Number:** 6858
