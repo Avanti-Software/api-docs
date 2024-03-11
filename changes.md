@@ -1,3 +1,22 @@
+# Mar 11, 2024 10:13 PM
+**GitHub Run ID:** 8240337151
+**GitHub Run Number:** 6942
+**Reference:** refs/heads/release/v24.3.1
+**Commit:** 43536fe388258e1c5550367587052fa00a808c03## Added
+ * Endpoint: POST - /v1/EmployeeDocuments
+## Removed
+* Model: Settings, Property: employeeDocumentSettings
+* Model: TimeEntryTemplate, Property: viewId
+* Model: EmployeeDocument, Property: documentId
+* Model: EmployeeDocument, Property: allowModify
+* Model: EmployeeDocument, Property: allowInsert
+* Model: EmployeeDocument, Property: allowDelete
+* Model: Geofence, Property: hasFullPositionsAccess
+* Model: Geofence, Property: employeeMeetsCriteria
+* Model: Document
+* Model: DocumentType
+* Model: EmployeeDocumentSettings
+
 # Mar 11, 2024 6:49 PM
 **GitHub Run ID:** 8238113940
 **GitHub Run Number:** 6937
