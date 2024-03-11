@@ -20022,6 +20022,10 @@
             },
             "nullable": true,
             "readOnly": true
+          },
+          "viewId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
