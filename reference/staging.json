@@ -28947,6 +28947,9 @@
           },
           "hasFullPositionsAccess": {
             "type": "boolean"
+          },
+          "employeeMeetsCriteria": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -29119,6 +29122,11 @@
           },
           "allowDelete": {
             "type": "boolean"
+          },
+          "content": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
           }
         },
         "additionalProperties": false
