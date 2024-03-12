@@ -17,15 +17,12 @@ For your API developer to start using Avanti’s API, you’ll need to create th
 
 ![API Settings.](../assets/images/APISettings.png)
 
-**Step 3:** If this is your first time creating an API Client, you’ll need to read and agree to the [Terms and Conditions.](https://www.avanti.ca/api-terms-of-use)
 
-![Terms and conditions example.](../assets/images/APITermsOfUse.png)
-
-**Step 4:** Select **Generate Client**.
+**Step 3:** Select **Generate Client**.
 
 ![Generate client button example.](../assets/images/GenerateClients.png)
 
-**Step 5:** Enter a description in **Client Name**. 
+**Step 4:** Enter a description in **Client Name**. 
 
 <!-- theme: info -->
 >While client names are for display purposes only and can be named anything you want, we recommend a description of the integration. 
@@ -33,7 +30,7 @@ For example, if you’re using the integration to add new employees into Avanti,
 
 ![ClientName.](../assets/images/ClientName.png)
 
-**Step 6:** Select **Client Never Expires** to allow this client access indefinitely. If the client should expire, enter the date the client should no longer have access in **Client Expiry Date**. 
+**Step 5:** Select **Client Never Expires** to allow this client access indefinitely. If the client should expire, enter the date the client should no longer have access in **Client Expiry Date**. 
 
 <!-- theme: info -->
 >Be cautious with clients that don’t expire; you're essentially granting lifetime access to this endpoint to anyone with these credentials. 
@@ -44,22 +41,22 @@ Setting a client expiry is especially useful when:
 
 ![Client Expiry.](../assets/images/ClientExpiry.png)
 
-**Step 7:** Enter the number of minutes before access tokens expire. 
+**Step 6:** Enter the number of minutes before access tokens expire. 
 
 <!-- theme: info -->
 >It is best practice to make your access tokens as short-lived as possible. If you’re unsure how long the client credentials need to be active, contact your API developer. 
 
 ![Access Token Lifetime.](../assets/images/AccessTokenLifetime.png)
 
-**Step 8:** Select **Generate** to create the client. 
+**Step 7:** Select **Generate** to create the client. 
 
 ![Generate the Client.](../assets/images/GenerateTheClient.png)
 
-**Step 9:** Copy the Client ID and the Client Secret and store them in a safe place. You’ll need to send these to your API developer. 
+**Step 8:** Copy the Client ID and the Client Secret and store them in a safe place. You’ll need to send these to your API developer. 
 
 ![Copy the Client ID and Secret.](../assets/images/CopyClient.png)
 
-**Step 10:** Select **Exit Configuration**. 
+**Step 9:** Select **Exit Configuration**. 
 
 ![Exit Configuration.](../assets/images/ExitConfig.png)
 
