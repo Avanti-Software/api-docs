@@ -1790,102 +1790,6 @@
         }
       }
     },
-    "/v1/EmployeeDocuments": {
-      "post": {
-        "tags": [
-          "Employee Documents"
-        ],
-        "summary": "Add Employee Document",
-        "operationId": "Add-Employee-Document",
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "required": [
-                  "Description",
-                  "EmpNo",
-                  "FileData"
-                ],
-                "type": "object",
-                "properties": {
-                  "EmpNo": {
-                    "type": "string"
-                  },
-                  "Description": {
-                    "type": "string"
-                  },
-                  "TypeId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "Summary": {
-                    "type": "string"
-                  },
-                  "FileData": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "DocumentRevision": {
-                    "type": "integer",
-                    "format": "int32"
-                  }
-                }
-              },
-              "encoding": {
-                "EmpNo": { },
-                "Description": { },
-                "TypeId": { },
-                "Summary": { },
-                "FileData": { },
-                "DocumentRevision": { }
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeDocument"
-                }
-              }
-            }
-          },
-          "201": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmployeeDocument"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/EmployeeEarningCodes": {
       "get": {
         "tags": [
@@ -19032,6 +18936,9 @@
           },
           "taxStatementsSettings": {
             "$ref": "#/components/schemas/TaxStatementsSettings"
+          },
+          "employeeDocumentSettings": {
+            "$ref": "#/components/schemas/EmployeeDocumentSettings"
           }
         },
         "additionalProperties": false
@@ -20115,6 +20022,10 @@
             },
             "nullable": true,
             "readOnly": true
+          },
+          "viewId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -26016,6 +25927,19 @@
             "type": "integer",
             "description": "The document's revision number. ",
             "format": "int32"
+          },
+          "documentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowModify": {
+            "type": "boolean"
+          },
+          "allowInsert": {
+            "type": "boolean"
+          },
+          "allowDelete": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -29024,6 +28948,12 @@
           "longitude": {
             "type": "number",
             "format": "double"
+          },
+          "hasFullPositionsAccess": {
+            "type": "boolean"
+          },
+          "employeeMeetsCriteria": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -29138,6 +29068,123 @@
           }
         },
         "additionalProperties": false
+      },
+      "Document": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "documentRevision": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModifiedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "allowInsert": {
+            "type": "boolean"
+          },
+          "allowModify": {
+            "type": "boolean"
+          },
+          "allowDelete": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentType": {
+        "type": "object",
+        "properties": {
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "descriptionFr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeDocumentSettings": {
+        "type": "object",
+        "properties": {
+          "viewOption": {
+            "$ref": "#/components/schemas/DocumentViewOption"
+          },
+          "columnDisplay": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "documentUpload": {
+            "type": "boolean"
+          },
+          "viewDocumentTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentType"
+            },
+            "nullable": true
+          },
+          "uploadDocumentTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentType"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
@@ -29213,9 +29260,6 @@
     },
     {
       "name": "Employee Defaults Group"
-    },
-    {
-      "name": "Employee Documents"
     },
     {
       "name": "Employee Earning Codes"
