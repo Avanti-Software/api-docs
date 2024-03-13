@@ -28972,6 +28972,10 @@
           "code": {
             "type": "string",
             "nullable": true
+          },
+          "criteriaId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

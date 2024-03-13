@@ -1,3 +1,10 @@
+# Mar 13, 2024 3:35 PM
+**GitHub Run ID:** 8267296228
+**GitHub Run Number:** 6964
+**Reference:** refs/heads/master
+**Commit:** 8d9dea739dce370f40b70158aad53d532ef279f7## Added
+* Model: GeofenceCriteria, Property: criteriaId
+
 # Mar 12, 2024 1:38 PM
 **GitHub Run ID:** 8249706189
 **GitHub Run Number:** 6948
