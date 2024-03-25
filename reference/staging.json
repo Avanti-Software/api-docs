@@ -29135,6 +29135,9 @@
           },
           "allowDelete": {
             "type": "boolean"
+          },
+          "isTemplate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

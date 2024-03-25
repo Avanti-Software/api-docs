@@ -1,3 +1,10 @@
+# Mar 25, 2024 4:55 PM
+**GitHub Run ID:** 8423801343
+**GitHub Run Number:** 7127
+**Reference:** refs/heads/master
+**Commit:** 4b41b45fdb4b0581382aa043ba6c6f8473774009## Added
+* Model: Document, Property: isTemplate
+
 # Mar 13, 2024 3:35 PM
 **GitHub Run ID:** 8267296228
 **GitHub Run Number:** 6964
