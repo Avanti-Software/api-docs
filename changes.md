@@ -1,3 +1,17 @@
+# Apr 03, 2024 7:02 PM
+**GitHub Run ID:** 8544039464
+**GitHub Run Number:** 7292
+**Reference:** refs/heads/master
+**Commit:** 203abba00435085d6bd8f4b60ee44921b8f18065## Added
+* Model: PersonalInfoSetupResponse, Property: dependentsSettings
+* Model: PersonalInfoSetupResponse, Property: dependentsRelationships
+* Model: PersonalInfoSetupResponse, Property: employeeList
+* Model: PersonalInfoSetupResponse, Property: emergencyContactRelationship
+* Model: PersonalInfoSetupResponse, Property: emergencyContactSettings
+* Model: PersonalInfoSetupResponse, Property: isReadOnly
+* Model: PersonalInfoSetupResponse, Property: address
+* Model: PersonalInfoSetupResponse, Property: employeeHomePhone
+
 # Mar 25, 2024 4:55 PM
 **GitHub Run ID:** 8423801343
 **GitHub Run Number:** 7127
