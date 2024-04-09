@@ -17438,6 +17438,9 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "youRemoveCannotEditMessage": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
