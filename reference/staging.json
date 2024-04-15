@@ -17254,6 +17254,14 @@
           },
           "disableEmailStatementEncryption": {
             "type": "boolean"
+          },
+          "compensationPDFEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "compensationPDFEmailFr": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

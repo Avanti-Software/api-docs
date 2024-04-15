@@ -1,3 +1,11 @@
+# Apr 15, 2024 10:32 PM
+**GitHub Run ID:** 8696900572
+**GitHub Run Number:** 7468
+**Reference:** refs/heads/master
+**Commit:** 95b0ce885f6751fc57d539f304e219b81333b5ee## Added
+* Model: PayStatementsSettings, Property: compensationPDFEmail
+* Model: PayStatementsSettings, Property: compensationPDFEmailFr
+
 # Apr 09, 2024 8:50 PM
 **GitHub Run ID:** 8622041920
 **GitHub Run Number:** 7380
