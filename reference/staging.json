@@ -17254,6 +17254,14 @@
           },
           "disableEmailStatementEncryption": {
             "type": "boolean"
+          },
+          "compensationPDFEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "compensationPDFEmailFr": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -17438,6 +17446,9 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "youRemoveCannotEditMessage": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -17468,6 +17479,43 @@
           },
           "settings": {
             "$ref": "#/components/schemas/PersonalInfoSettings"
+          },
+          "dependentsSettings": {
+            "$ref": "#/components/schemas/DependentsSettings"
+          },
+          "dependentsRelationships": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "employeeList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "emergencyContactRelationship": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TextValuePair"
+            },
+            "nullable": true
+          },
+          "emergencyContactSettings": {
+            "$ref": "#/components/schemas/EmergencyContactSettings"
+          },
+          "isReadOnly": {
+            "type": "boolean"
+          },
+          "address": {
+            "$ref": "#/components/schemas/EmployeeAddress"
+          },
+          "employeeHomePhone": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

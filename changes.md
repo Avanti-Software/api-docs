@@ -1,3 +1,20 @@
+# Apr 24, 2024 2:31 PM
+**GitHub Run ID:** 8818210434
+**GitHub Run Number:** 7625
+**Reference:** refs/heads/master
+**Commit:** fe7bc701550cfadefb631dc19c2f44f98859063e## Added
+* Model: PayStatementsSettings, Property: compensationPDFEmail
+* Model: PayStatementsSettings, Property: compensationPDFEmailFr
+* Model: PersonalInfoSettings, Property: youRemoveCannotEditMessage
+* Model: PersonalInfoSetupResponse, Property: dependentsSettings
+* Model: PersonalInfoSetupResponse, Property: dependentsRelationships
+* Model: PersonalInfoSetupResponse, Property: employeeList
+* Model: PersonalInfoSetupResponse, Property: emergencyContactRelationship
+* Model: PersonalInfoSetupResponse, Property: emergencyContactSettings
+* Model: PersonalInfoSetupResponse, Property: isReadOnly
+* Model: PersonalInfoSetupResponse, Property: address
+* Model: PersonalInfoSetupResponse, Property: employeeHomePhone
+
 # Apr 23, 2024 10:57 PM
 **GitHub Run ID:** 8808222077
 **GitHub Run Number:** 7620
