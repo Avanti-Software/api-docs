@@ -29240,6 +29240,50 @@
           }
         },
         "additionalProperties": false
+      },
+      "AvailabilitySummary": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviation": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviationFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "shortDescription": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "descriptionFr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lookupType": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
