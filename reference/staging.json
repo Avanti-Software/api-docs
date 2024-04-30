@@ -29288,6 +29288,32 @@
       "GlBatchSearchSearchOperation": {
         "type": "object",
         "additionalProperties": false
+      },
+      "GlExportRequest": {
+        "required": [
+          "setAsProcessed",
+          "summarizationOption"
+        ],
+        "type": "object",
+        "properties": {
+          "setAsProcessed": {
+            "type": "boolean"
+          },
+          "summarizationOption": {
+            "$ref": "#/components/schemas/SummarizationOption"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SummarizationOption": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {
