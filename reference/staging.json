@@ -29354,6 +29354,10 @@
           }
         },
         "additionalProperties": false
+      },
+      "DataResultEmployeeListModelValueTuple": {
+        "type": "object",
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
