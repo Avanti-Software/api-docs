@@ -21459,6 +21459,10 @@
           "province": {
             "type": "string",
             "nullable": true
+          },
+          "payGroup": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
