@@ -29257,50 +29257,6 @@
         },
         "additionalProperties": false
       },
-      "AvailabilitySummary": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "nameFr": {
-            "type": "string",
-            "nullable": true
-          },
-          "abbreviation": {
-            "type": "string",
-            "nullable": true
-          },
-          "abbreviationFr": {
-            "type": "string",
-            "nullable": true
-          },
-          "shortDescription": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "descriptionFr": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "lookupType": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
       "GlBatchSearchSearchOperation": {
         "type": "object",
         "additionalProperties": false
@@ -29373,6 +29329,94 @@
       },
       "DataResultEmployeeListModelValueTuple": {
         "type": "object",
+        "additionalProperties": false
+      },
+      "StringStringKeyValuePair": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Summary": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviation": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviationFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "additionalInfo": {
+            "$ref": "#/components/schemas/StringStringKeyValuePair"
+          },
+          "shortDescription": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "descriptionFr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lookupType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TemplateFieldType": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "summaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Summary"
+            },
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       }
     },
