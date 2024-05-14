@@ -21929,129 +21929,6 @@
         },
         "additionalProperties": false
       },
-      "GlSegment": {
-        "required": [
-          "segmentNo",
-          "account",
-          "description",
-          "abbreviation",
-          "mask",
-          "active",
-          "useProjectAccount"
-        ],
-        "type": "object",
-        "properties": {
-          "segmentNo": {
-            "type": "integer",
-            "description": "The GL Segment Number for the account. If the Account  is part of your first segment, this will be 1, etc.\nThis is not used if returning Project Accounts. ",
-            "format": "int32"
-          },
-          "account": {
-            "maxLength": 15,
-            "minLength": 0,
-            "type": "string",
-            "description": "The GL sccount. This must match the format of the GL Segment."
-          },
-          "name": {
-            "type": "string",
-            "description": "The description of phase. \nThis property is not used when adding, updating or deleting Major or Other Accounts.",
-            "nullable": true
-          },
-          "description": {
-            "maxLength": 128,
-            "minLength": 0,
-            "type": "string",
-            "description": "A longer description for the GL Major or Other Account, which can be up to 128 characters."
-          },
-          "abbreviation": {
-            "maxLength": 10,
-            "minLength": 0,
-            "type": "string",
-            "description": "The short name of the account, which can be up to 10 characters."
-          },
-          "type": {
-            "maxLength": 1,
-            "minLength": 0,
-            "type": "string",
-            "description": "For Other and Phase Accounts, this is a one-character type for the account used for validation, from A - Z.\n\nFor Project Accounts, this is the ID of the Project Type. \n\nFor Major Accounts, the types are:\nA - Current Asset\nB - Long Term Asset\nC - Current Liability\nD - Long Term Liability \nE - Capital Account\nF - Income Account\nG - Expense Account\nH - Statistical Account.",
-            "nullable": true
-          },
-          "mask": {
-            "maxLength": 60,
-            "minLength": 0,
-            "type": "string",
-            "description": "Enter the GL sccount format, with the account in the correct segment. \nFor additional GL validation, replace other aspects of the account. Accounts must match the replaced aspect to pass validation. "
-          },
-          "validationTypes": {
-            "maxLength": 15,
-            "minLength": 0,
-            "type": "string",
-            "description": "Validates the other accounts. If you're entering Major, enter the type in the correct location. \n\nTo validate, enter the letter of the type the account must be. For example, if you've got 3 segements and the first and third account must be type A, enter A A in validationType. \n\nLeave blank if no additional validation is needed. ",
-            "nullable": true
-          },
-          "effectiveDate": {
-            "type": "string",
-            "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "active": {
-            "type": "boolean",
-            "description": "Active accounts are required to use the GL segment. Inactive accounts cannot be used for new account validation, and are used for reporting. "
-          },
-          "expiryDate": {
-            "type": "string",
-            "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "useProjectAccount": {
-            "type": "boolean",
-            "description": "Indicates whether the GL account uses Project Accounting. \nIf True, project and phase accounts are used if all the accounts in full GL string use project accounting."
-          },
-          "statAccount": {
-            "maxLength": 15,
-            "minLength": 0,
-            "type": "string",
-            "description": "The statistical account for the selected Major GL Account. \nMust be a valid account in Avanti defined as Statistical Account. It's for reporting purposes and export into external programs.\nThis is not used if returning Project Accounts. ",
-            "nullable": true
-          },
-          "defaultEarnGl": {
-            "type": "string",
-            "description": "This property is not used when adding, updating or deleting Major or Other Accounts.",
-            "nullable": true
-          },
-          "exportValue": {
-            "maxLength": 128,
-            "minLength": 0,
-            "type": "string",
-            "description": "The value used in the GL Export. ",
-            "nullable": true
-          },
-          "types": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "x-examples": {
-          "Example - Adding or Updating a Major or Other Account ": {
-            "value": {
-              "segmentNo": 1,
-              "account": "2030",
-              "description": "EHT Payable",
-              "abbreviation": "EHTPay",
-              "type": "A",
-              "mask": "2030-####-#####-****-****",
-              "validationTypes": "A A",
-              "active": true,
-              "useProjectAccount": true,
-              "statAccount": "string",
-              "exportValue": "20300"
-            }
-          }
-        }
-      },
       "UserClass": {
         "enum": [
           0,
@@ -29414,6 +29291,229 @@
             "items": {
               "$ref": "#/components/schemas/Summary"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlSegmentDto": {
+        "type": "object",
+        "properties": {
+          "segmentNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "account": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviation": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "types": {
+            "type": "string",
+            "nullable": true
+          },
+          "mask": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationTypes": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "useProjectAccount": {
+            "type": "boolean"
+          },
+          "statAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "defaultEarnGl": {
+            "type": "string",
+            "nullable": true
+          },
+          "exportValue": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlSegmentRequest": {
+        "required": [
+          "abbreviation",
+          "account",
+          "active",
+          "description",
+          "mask",
+          "segmentNo",
+          "useProjectAccount"
+        ],
+        "type": "object",
+        "properties": {
+          "segmentNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "account": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string"
+          },
+          "abbreviation": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "type": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "types": {
+            "type": "string",
+            "nullable": true
+          },
+          "mask": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string"
+          },
+          "validationTypes": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "useProjectAccount": {
+            "type": "boolean"
+          },
+          "statAccount": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "defaultEarnGl": {
+            "type": "string",
+            "nullable": true
+          },
+          "exportValue": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlSegmentResponse": {
+        "type": "object",
+        "properties": {
+          "segmentNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "account": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviation": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "types": {
+            "type": "string",
+            "nullable": true
+          },
+          "mask": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationTypes": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "useProjectAccount": {
+            "type": "boolean"
+          },
+          "defaultEarnGl": {
+            "type": "string",
             "nullable": true
           }
         },

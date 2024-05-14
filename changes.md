@@ -1,3 +1,14 @@
+# May 14, 2024 2:33 PM
+**GitHub Run ID:** 9081134430
+**GitHub Run Number:** 8012
+**Reference:** refs/heads/master
+**Commit:** e4bb53003a5e5f715182c1aeacc8391cd4a4a8a5## Added
+* Model: GlSegmentDto
+* Model: GlSegmentRequest
+* Model: GlSegmentResponse
+## Removed
+* Model: GlSegment
+
 # May 10, 2024 6:37 PM
 **GitHub Run ID:** 9036525309
 **GitHub Run Number:** 7987
