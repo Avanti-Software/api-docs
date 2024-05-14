@@ -2771,10 +2771,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlSegment"
-                  }
+                  "type": "array"
                 }
               }
             }
@@ -3165,22 +3162,14 @@
         "operationId": "Update-GL-Account-Data",
         "requestBody": {
           "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GlSegment"
-              }
-            }
+            "application/json": { }
           }
         },
         "responses": {
           "200": {
             "description": "Success",
             "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GlSegment"
-                }
-              }
+              "application/json": { }
             }
           }
         }
@@ -22327,9 +22316,7 @@
       "GlProjectSegment": {
         "type": "object",
         "properties": {
-          "project": {
-            "$ref": "#/components/schemas/GlSegment"
-          },
+          "project": null,
           "phases": {
             "type": "array",
             "items": {
@@ -25737,6 +25724,146 @@
           "photoRevision": {
             "type": "integer",
             "format": "int64",
+            "nullable": true
+          },
+          "dedFig1": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig2": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig3": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig4": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig5": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig6": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig7": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig8": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig9": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig10": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig11": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig12": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig13": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig14": {
+            "type": "number",
+            "format": "double"
+          },
+          "dedFig15": {
+            "type": "number",
+            "format": "double"
+          },
+          "otherText1": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText2": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText3": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText4": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText5": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText6": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText7": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText8": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText9": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText10": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText11": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText12": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText13": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText14": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText15": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText16": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText17": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText18": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText19": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherText20": {
+            "type": "string",
             "nullable": true
           }
         },
