@@ -70,12 +70,19 @@ By default, this can be found in Administration on the Avanti Self-Service Porta
 
 
 ## Identify the Avanti Company Database Name
-You’ll need the Company Database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify every company and provide them to your API Developer. This name is different from the company name you see displayed when you select the company in Avanti.
+You’ll need the company database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify each company and provide them to your API Developer. 
 
-**Step 1:** Copy the **Company Database** on the System Info Tab in Administration Settings. You'll need to send this to your API Developer.
-By default, this can be found in Administration on the Avanti Self-Service Portal. 
+<!-- theme: info -->
+>This name differs from the company name you see when selecting the company in Avanti.
 
-![ASSP Company Database Name Location](../assets/images/CompanyDatabaseName.png)
+**Step 1:** Open **Companies** in the Avanti Desktop. By default, this can be found in System Administration >> System Access Controls. 
+
+![Companies in Avanti Desktop](../assets/images/CompanyInDesktop.png)
+
+**Step 2:** Right-click on a Company, select **Export to Excel** or **Export to OneDrive**, and save the file. From there, you can copy the names from the **CompanyName** column.
+
+![Company Database Name](../assets/images/CompanyName-ExportExcel.png)
+
 
 ## Provide Information to the API Developer
 Wonderful! You’re all done setting up everything in Avanti for the API. Now, all you need to do is pass some information onto your API Developer. Here’s what they’ll need to get started:
