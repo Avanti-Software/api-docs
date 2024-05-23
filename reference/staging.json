@@ -3162,7 +3162,7 @@
         "operationId": "Update-GL-Account-Data",
         "requestBody": {
           "content": {
-            "application/json": { }
+            "application/json": null
           }
         },
         "responses": {
@@ -21572,6 +21572,11 @@
             "type": "number",
             "description": "Indicates the longitude of the employee's location when they punched. This is required if company web setting MobileSettings.WebPunchSettings.RequireLocationServices is true. \n\nThis will not be returned when doing a get.",
             "format": "double",
+            "nullable": true
+          },
+          "punchDateTimeUtc": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           }
         },
