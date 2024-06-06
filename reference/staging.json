@@ -19823,6 +19823,13 @@
           "breaks": {
             "type": "string",
             "nullable": true
+          },
+          "timeCardExceptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SelectableSummary"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -28783,6 +28790,66 @@
           "defaultEarnGl": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SelectableSummary": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviation": {
+            "type": "string",
+            "nullable": true
+          },
+          "abbreviationFr": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "additionalInfo": {
+            "$ref": "#/components/schemas/StringStringKeyValuePair"
+          },
+          "shortDescription": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "descriptionFr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lookupType": {
+            "type": "string",
+            "nullable": true
+          },
+          "isSelected": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
