@@ -27624,6 +27624,10 @@
           },
           "emergencyContactSetupResponse": {
             "nullable": true
+          },
+          "employeeHomePhone": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
