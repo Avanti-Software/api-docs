@@ -1,3 +1,36 @@
+# Jun 12, 2024 9:45 PM
+**GitHub Run ID:** 9490103121
+**GitHub Run Number:** 8460
+**Reference:** refs/heads/release/v24.5.2
+**Commit:** 30ee831b5fee328a4ecfe68577d24533d60c946f## Added
+* Model: CompanySettings
+* Model: CompanySettingsLazy
+* Model: ILogRepository
+* Model: ILogRepositoryLazy
+* Model: ITranslationRepository
+* Model: License
+* Model: LogService
+* Model: LookupSettings
+* Model: Permission
+* Model: ProgramParameter
+* Model: TimeEntryUpdateResult, Property: startParam
+* Model: TimeEntryUpdateResult, Property: logService
+* Model: TimeEntryUpdateResult, Property: translationService
+* Model: TimeEntryUpdateResult, Property: companySettingsDependency
+* Model: TimeEntryUpdateResult, Property: loggerDependency
+* Model: TimeEntryUpdateResultILogger
+* Model: TimeEntryUpdateResultILoggerLazy
+* Model: TimeEntryViewModel, Property: timeEntry
+* Model: TranslationService
+* Model: TranslationServiceLazy
+* Model: UserAuthenticationMode
+* Model: UserMenu
+## Removed
+* Model: TimeEntry, Property: timeCardExceptions
+* Model: WebPunch, Property: punchDateTimeUtc
+* Model: OnboardingSetup, Property: employeeHomePhone
+* Model: SelectableSummary
+
 # Jun 12, 2024 6:55 PM
 **GitHub Run ID:** 9488077051
 **GitHub Run Number:** 8453
