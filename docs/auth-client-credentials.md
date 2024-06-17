@@ -70,10 +70,9 @@ By default, this can be found in Administration on the Avanti Self-Service Porta
 
 
 ## Identify the Avanti Company Database Name
-You’ll need the company database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify each company and provide them to your API Developer. 
+You’ll need the company database name so the integration knows which Avanti company to access. If your integration includes multiple companies, you’ll need to identify each company and provide them to your API Developer. This name differs from the company name you see when selecting the company in Avanti.
 
-<!-- theme: info -->
->This name differs from the company name you see when selecting the company in Avanti.
+>If you’ve [already moved to the latest ASSP](https://help.avanti.ca/support/solutions/articles/36000498186-faq#FAQ-Q:HowdoIknowifmycompanyalreadyhasthelatestASSP?), you won’t see Reload Settings; your changes will take effect within 5 minutes.
 
 **Step 1:** Open **Companies** in the Avanti Desktop. By default, this can be found in System Administration >> System Access Controls. 
 
