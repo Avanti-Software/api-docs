@@ -68,4 +68,5 @@ Please make a note of the User ID; you’ll need to send it to your API develope
 
 Nice work! The Avanti User is all set up. The next you'll need to [Allow Access to the Endpoint](https://avanti.stoplight.io/docs/avanti-api/ZG9jOjgxNDM2Njg-endpoint-access) for more information.  
 <!-- theme: info -->
->If you're adjusting employee access and already have set Endpoint Access, all you'll need to do is [Reload Settings](https://avanti.stoplight.io/docs/avanti-api/45925478e011d-create-client-credentials#reload-web-settings) for your changes to take effect.  
+>If you're adjusting employee access and already have set Endpoint Access, all you'll need to do is [Reload Settings](https://avanti.stoplight.io/docs/avanti-api/45925478e011d-create-client-credentials#reload-web-settings) for your changes to take effect. <br><br>
+>If you’ve [already moved to the latest ASSP](https://help.avanti.ca/support/solutions/articles/36000498186-faq#FAQ-Q:HowdoIknowifmycompanyalreadyhasthelatestASSP?), you won’t see Reload Settings; your changes will take effect within 5 minutes..  
