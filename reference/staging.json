@@ -27832,6 +27832,9 @@
               "$ref": "#/components/schemas/TD1Field"
             },
             "nullable": true
+          },
+          "employeeInfo": {
+            "$ref": "#/components/schemas/EmployeeInfo"
           }
         },
         "additionalProperties": false
@@ -28854,6 +28857,33 @@
           },
           "isSelected": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeInfo": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "empName": {
+            "type": "string",
+            "nullable": true
+          },
+          "empAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "empDOB": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "empSIN": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
