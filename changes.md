@@ -1,3 +1,12 @@
+# Jul 02, 2024 5:03 PM
+**GitHub Run ID:** 9765011008
+**GitHub Run Number:** 8647
+**Reference:** refs/heads/master
+**Commit:** 6dd3716aed9a2677433deb5d9709013ea2ec1010## Added
+* Model: CompanySettings
+* Model: LookupSettings
+* Model: Settings, Property: companySettings
+
 # Jul 02, 2024 4:27 PM
 **GitHub Run ID:** 9764555478
 **GitHub Run Number:** 8644

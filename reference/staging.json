@@ -18976,6 +18976,9 @@
           },
           "employeeDocumentSettings": {
             "$ref": "#/components/schemas/EmployeeDocumentSettings"
+          },
+          "companySettings": {
+            "$ref": "#/components/schemas/CompanySettings"
           }
         },
         "additionalProperties": false
@@ -28522,9 +28525,7 @@
             "format": "date-time",
             "nullable": true
           },
-          "additionalInfo": {
-            "$ref": "#/components/schemas/StringStringKeyValuePair"
-          },
+          "additionalInfo": null,
           "shortDescription": {
             "type": "string",
             "nullable": true,
@@ -28819,9 +28820,7 @@
             "format": "date-time",
             "nullable": true
           },
-          "additionalInfo": {
-            "$ref": "#/components/schemas/StringStringKeyValuePair"
-          },
+          "additionalInfo": null,
           "shortDescription": {
             "type": "string",
             "nullable": true,
@@ -28870,6 +28869,62 @@
           "empSIN": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanySettings": {
+        "type": "object",
+        "properties": {
+          "lookupSettings": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LookupSettings"
+            },
+            "nullable": true
+          },
+          "fileSizeLimitInBytes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowedTimeEntryDocumentTypes": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "allowedTimeEntryDocumentTypesCollection": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentType"
+            },
+            "nullable": true
+          },
+          "allowedDocumentExtensionsCollection": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LookupSettings": {
+        "type": "object",
+        "properties": {
+          "display": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
