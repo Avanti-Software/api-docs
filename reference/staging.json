@@ -28490,20 +28490,6 @@
         "type": "object",
         "additionalProperties": false
       },
-      "StringStringKeyValuePair": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "Summary": {
         "type": "object",
         "properties": {
