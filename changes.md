@@ -1,3 +1,10 @@
+# Jul 19, 2024 2:43 PM
+**GitHub Run ID:** 10009815541
+**GitHub Run Number:** 8862
+**Reference:** refs/heads/release/v24.7.1
+**Commit:** b26c6d77af3ea95402f7b9232f5ca9d318955c99## Removed
+* Model: EmployeePaymentMethodBank
+
 # Jul 18, 2024 6:30 PM
 **GitHub Run ID:** 9996696185
 **GitHub Run Number:** 8835

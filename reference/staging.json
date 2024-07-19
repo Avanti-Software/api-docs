@@ -28928,53 +28928,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "EmployeePaymentMethodBank": {
-        "required": [
-          "bankInfoId"
-        ],
-        "type": "object",
-        "properties": {
-          "bankInfoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "bankNumber": {
-            "maxLength": 3,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "bankTransit": {
-            "maxLength": 5,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "bankAccount": {
-            "maxLength": 18,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "bankType": {
-            "maxLength": 10,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "depositFreq": {
-            "type": "string"
-          },
-          "depositType": {
-            "type": "string"
-          },
-          "depositAmt": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
       }
     },
     "securitySchemes": {
