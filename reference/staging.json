@@ -27815,6 +27815,9 @@
               "$ref": "#/components/schemas/TextValuePair"
             },
             "nullable": true
+          },
+          "settings": {
+            "$ref": "#/components/schemas/BankSettings"
           }
         },
         "additionalProperties": false
@@ -28972,6 +28975,26 @@
           "depositAmt": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BankSettings": {
+        "type": "object",
+        "properties": {
+          "allowMultipleBankAccounts": {
+            "type": "boolean"
+          },
+          "chequeUploadRequired": {
+            "type": "boolean"
+          },
+          "numberOfBankAccounts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileSizeLimit": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false

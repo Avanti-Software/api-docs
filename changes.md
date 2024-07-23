@@ -1,3 +1,11 @@
+# Jul 23, 2024 4:04 PM
+**GitHub Run ID:** 10062259702
+**GitHub Run Number:** 8894
+**Reference:** refs/heads/master
+**Commit:** 1c522b508418884334f9a12b043b82274331b442## Added
+* Model: BankSettings
+* Model: DirectDepositSetupResponse, Property: settings
+
 # Jul 19, 2024 8:17 PM
 **GitHub Run ID:** 10013750932
 **GitHub Run Number:** 8870
