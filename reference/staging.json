@@ -18941,48 +18941,6 @@
         "type": "integer",
         "format": "int32"
       },
-      "Settings": {
-        "type": "object",
-        "properties": {
-          "notificationSettings": {
-            "$ref": "#/components/schemas/NotificationSettings"
-          },
-          "payStatementsSettings": {
-            "$ref": "#/components/schemas/PayStatementsSettings"
-          },
-          "personalInfoSettings": {
-            "$ref": "#/components/schemas/PersonalInfoSettings"
-          },
-          "webPunchSettings": {
-            "$ref": "#/components/schemas/WebPunchSettings"
-          },
-          "timeManagementSettings": {
-            "$ref": "#/components/schemas/TimeManagementSettings"
-          },
-          "hrSettings": {
-            "$ref": "#/components/schemas/HrSettings"
-          },
-          "entitlementsSettings": {
-            "$ref": "#/components/schemas/EntitlementsSettings"
-          },
-          "emergencyContactSettings": {
-            "$ref": "#/components/schemas/EmergencyContactSettings"
-          },
-          "dependentsSettings": {
-            "$ref": "#/components/schemas/DependentsSettings"
-          },
-          "taxStatementsSettings": {
-            "$ref": "#/components/schemas/TaxStatementsSettings"
-          },
-          "employeeDocumentSettings": {
-            "$ref": "#/components/schemas/EmployeeDocumentSettings"
-          },
-          "companySettings": {
-            "$ref": "#/components/schemas/CompanySettings"
-          }
-        },
-        "additionalProperties": false
-      },
       "ShowEmpOption": {
         "enum": [
           0,
@@ -28876,45 +28834,6 @@
         },
         "additionalProperties": false
       },
-      "CompanySettings": {
-        "type": "object",
-        "properties": {
-          "lookupSettings": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/LookupSettings"
-            },
-            "nullable": true
-          },
-          "fileSizeLimitInBytes": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "allowedTimeEntryDocumentTypes": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "allowedTimeEntryDocumentTypesCollection": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DocumentType"
-            },
-            "nullable": true
-          },
-          "allowedDocumentExtensionsCollection": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "LookupSettings": {
         "type": "object",
         "properties": {
@@ -28995,6 +28914,87 @@
           "fileSizeLimit": {
             "type": "integer",
             "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SystemSettings": {
+        "type": "object",
+        "properties": {
+          "lookupSettings": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LookupSettings"
+            },
+            "nullable": true
+          },
+          "fileSizeLimitInBytes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowedTimeEntryDocumentTypes": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "allowedTimeEntryDocumentTypesCollection": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentType"
+            },
+            "nullable": true
+          },
+          "allowedDocumentExtensionsCollection": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserSettings": {
+        "type": "object",
+        "properties": {
+          "notificationSettings": {
+            "$ref": "#/components/schemas/NotificationSettings"
+          },
+          "hrSettings": {
+            "$ref": "#/components/schemas/HrSettings"
+          },
+          "dependentsSettings": {
+            "$ref": "#/components/schemas/DependentsSettings"
+          },
+          "emergencyContactSettings": {
+            "$ref": "#/components/schemas/EmergencyContactSettings"
+          },
+          "employeeDocumentSettings": {
+            "$ref": "#/components/schemas/EmployeeDocumentSettings"
+          },
+          "entitlementsSettings": {
+            "$ref": "#/components/schemas/EntitlementsSettings"
+          },
+          "payStatementsSettings": {
+            "$ref": "#/components/schemas/PayStatementsSettings"
+          },
+          "personalInfoSettings": {
+            "$ref": "#/components/schemas/PersonalInfoSettings"
+          },
+          "taxStatementsSettings": {
+            "$ref": "#/components/schemas/TaxStatementsSettings"
+          },
+          "webPunchSettings": {
+            "$ref": "#/components/schemas/WebPunchSettings"
+          },
+          "timeManagementSettings": {
+            "$ref": "#/components/schemas/TimeManagementSettings"
+          },
+          "systemSettings": {
+            "$ref": "#/components/schemas/SystemSettings"
           }
         },
         "additionalProperties": false

@@ -1,3 +1,14 @@
+# Aug 07, 2024 5:10 PM
+**GitHub Run ID:** 10288590554
+**GitHub Run Number:** 9095
+**Reference:** refs/heads/master
+**Commit:** a32616eeb01f2ec1218cfbeedc04fbf9a240c9c9## Added
+* Model: SystemSettings
+* Model: UserSettings
+## Removed
+* Model: Settings
+* Model: CompanySettings
+
 # Jul 23, 2024 4:04 PM
 **GitHub Run ID:** 10062259702
 **GitHub Run Number:** 8894
