@@ -21399,9 +21399,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "settings": {
-            "$ref": "#/components/schemas/Settings"
-          },
+          "settings": null,
           "userClass": {
             "$ref": "#/components/schemas/UserClass"
           },
@@ -28521,6 +28519,11 @@
             "items": {
               "$ref": "#/components/schemas/Summary"
             },
+            "nullable": true
+          },
+          "key": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },
