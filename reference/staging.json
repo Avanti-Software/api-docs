@@ -19791,6 +19791,16 @@
               "$ref": "#/components/schemas/SelectableSummary"
             },
             "nullable": true
+          },
+          "punchInUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "punchOutUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
