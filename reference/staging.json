@@ -19791,16 +19791,6 @@
               "$ref": "#/components/schemas/SelectableSummary"
             },
             "nullable": true
-          },
-          "punchInUtc": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "punchOutUtc": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -29008,46 +28998,6 @@
           },
           "systemSettings": {
             "$ref": "#/components/schemas/SystemSettings"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateEmployeeProfileJsonPatchDocument": {
-        "type": "object",
-        "properties": {
-          "operations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdateEmployeeProfileOperation"
-            },
-            "nullable": true
-          },
-          "contractResolver": {
-            "$ref": "#/components/schemas/IContractResolver"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateEmployeeProfileOperation": {
-        "type": "object",
-        "properties": {
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true
-          },
-          "op": {
-            "type": "string",
-            "nullable": true
-          },
-          "from": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "nullable": true
           }
         },
         "additionalProperties": false

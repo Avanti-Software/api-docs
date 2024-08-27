@@ -1,3 +1,13 @@
+# Aug 27, 2024 2:20 PM
+**GitHub Run ID:** 10579563764
+**GitHub Run Number:** 9353
+**Reference:** refs/heads/release/v24.8.1
+**Commit:** a3058e71e181c8e4478e7e8cd9f31c86e4ced255## Removed
+* Model: TimeEntry, Property: punchInUtc
+* Model: TimeEntry, Property: punchOutUtc
+* Model: UpdateEmployeeProfileJsonPatchDocument
+* Model: UpdateEmployeeProfileOperation
+
 # Aug 22, 2024 5:44 PM
 **GitHub Run ID:** 10512936816
 **GitHub Run Number:** 9285
