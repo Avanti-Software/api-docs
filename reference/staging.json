@@ -29051,6 +29051,23 @@
           }
         },
         "additionalProperties": false
+      },
+      "GlSummary": {
+        "type": "object",
+        "properties": {
+          "summary": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Summary"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
