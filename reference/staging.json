@@ -12754,6 +12754,10 @@
           "pronouns": {
             "type": "string",
             "nullable": true
+          },
+          "employStatus": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -26400,6 +26404,10 @@
             "type": "string"
           },
           "pronouns": {
+            "type": "string",
+            "nullable": true
+          },
+          "employStatus": {
             "type": "string",
             "nullable": true
           }

@@ -1,3 +1,11 @@
+# Aug 29, 2024 3:42 PM
+**GitHub Run ID:** 10618198098
+**GitHub Run Number:** 9405
+**Reference:** refs/heads/master
+**Commit:** 0a249a3638c252159f3523385540082fe2a12140## Added
+* Model: Employee, Property: employStatus
+* Model: EmployeeInfoDetails, Property: employStatus
+
 # Aug 28, 2024 8:06 PM
 **GitHub Run ID:** 10603528351
 **GitHub Run Number:** 9390
