@@ -29076,6 +29076,19 @@
           }
         },
         "additionalProperties": false
+      },
+      "RehireEmployee": {
+        "required": [
+          "lastHireDate"
+        ],
+        "type": "object",
+        "properties": {
+          "lastHireDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
