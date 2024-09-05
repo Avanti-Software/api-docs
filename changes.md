@@ -1,3 +1,12 @@
+# Sep 05, 2024 6:34 PM
+**GitHub Run ID:** 10726079194
+**GitHub Run Number:** 9508
+**Reference:** refs/heads/master
+**Commit:** 52df3dded8121d226f1d74823d924540f6f11562## Added
+* Model: GlSummary, Property: glSegmentResponse
+## Removed
+* Model: GlSummary, Property: summary
+
 # Sep 03, 2024 5:04 PM
 **GitHub Run ID:** 10687302084
 **GitHub Run Number:** 9435

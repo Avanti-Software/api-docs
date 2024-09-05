@@ -29063,16 +29063,16 @@
       "GlSummary": {
         "type": "object",
         "properties": {
-          "summary": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Summary"
-            },
-            "nullable": true
-          },
           "totalCount": {
             "type": "integer",
             "format": "int32"
+          },
+          "glSegmentResponse": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GlSegmentResponse"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
