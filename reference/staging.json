@@ -26577,6 +26577,17 @@
           },
           "provTaxCert": {
             "type": "boolean"
+          },
+          "payrollYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "active": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

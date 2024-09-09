@@ -1,3 +1,12 @@
+# Sep 09, 2024 8:36 PM
+**GitHub Run ID:** 10780769253
+**GitHub Run Number:** 9572
+**Reference:** refs/heads/master
+**Commit:** 5e80d74e5eef133c99e048bd84c2b9d6485b3325## Added
+* Model: TaxData, Property: payrollYear
+* Model: TaxData, Property: effectiveDate
+* Model: TaxData, Property: active
+
 # Sep 05, 2024 6:34 PM
 **GitHub Run ID:** 10726079194
 **GitHub Run Number:** 9508
