@@ -1,3 +1,11 @@
+# Sep 11, 2024 8:44 PM
+**GitHub Run ID:** 10819300697
+**GitHub Run Number:** 9594
+**Reference:** refs/heads/master
+**Commit:** d02400d69354d207d81da006cd22342d259f79c6## Added
+* Model: DocumentSettings
+* Model: UserSettings, Property: documentSettings
+
 # Sep 09, 2024 8:36 PM
 **GitHub Run ID:** 10780769253
 **GitHub Run Number:** 9572

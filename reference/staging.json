@@ -29027,6 +29027,9 @@
           },
           "systemSettings": {
             "$ref": "#/components/schemas/SystemSettings"
+          },
+          "documentSettings": {
+            "$ref": "#/components/schemas/DocumentSettings"
           }
         },
         "additionalProperties": false
@@ -29097,6 +29100,20 @@
           "lastHireDate": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentSettings": {
+        "type": "object",
+        "properties": {
+          "companyDocsDisplay": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeDocsDisplay": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
