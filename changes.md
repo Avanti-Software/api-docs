@@ -1,3 +1,16 @@
+# Sep 16, 2024 2:46 PM
+**GitHub Run ID:** 10886137946
+**GitHub Run Number:** 9619
+**Reference:** refs/heads/master
+**Commit:** 2da55c339a78f9f6d6357f5dc5982c9aa97e5c87## Added
+* Model: TaxData, Property: td1MultiEmployers
+* Model: TaxData, Property: td1TaxExempt
+* Model: TaxData, Property: td1NonResident
+## Removed
+* Model: TaxData, Property: multipleEmployers
+* Model: TaxData, Property: taxExempt
+* Model: TaxData, Property: nonResidentIncomeNotTax
+
 # Sep 11, 2024 8:44 PM
 **GitHub Run ID:** 10819300697
 **GitHub Run Number:** 9594

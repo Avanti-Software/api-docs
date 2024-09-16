@@ -26558,16 +26558,6 @@
             },
             "nullable": true
           },
-          "multipleEmployers": {
-            "type": "boolean"
-          },
-          "taxExempt": {
-            "type": "boolean"
-          },
-          "nonResidentIncomeNotTax": {
-            "type": "boolean",
-            "nullable": true
-          },
           "fedTaxCert": {
             "type": "boolean"
           },
@@ -26588,6 +26578,16 @@
           },
           "active": {
             "type": "boolean"
+          },
+          "td1MultiEmployers": {
+            "type": "boolean"
+          },
+          "td1TaxExempt": {
+            "type": "boolean"
+          },
+          "td1NonResident": {
+            "type": "boolean",
+            "nullable": true
           }
         },
         "additionalProperties": false
