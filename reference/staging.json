@@ -29186,6 +29186,38 @@
           }
         },
         "additionalProperties": false
+      },
+      "EmployeePositionRequest": {
+        "required": [
+          "isActive",
+          "isPrimary",
+          "positionCode"
+        ],
+        "type": "object",
+        "properties": {
+          "positionCode": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isPrimary": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
