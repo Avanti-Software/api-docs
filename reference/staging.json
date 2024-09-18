@@ -5139,6 +5139,37 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "Add Position",
+        "operationId": "Add-Position",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPosition"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPosition"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPosition"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
     "/v1/RateGrids": {
@@ -26579,13 +26610,15 @@
           "active": {
             "type": "boolean"
           },
-          "multipleEmployers": {
-            "type": "boolean"
+          "td1MultiEmployers": {
+            "type": "boolean",
+            "nullable": true
           },
-          "taxExempt": {
-            "type": "boolean"
+          "td1TaxExempt": {
+            "type": "boolean",
+            "nullable": true
           },
-          "nonResidentIncomeNotTax": {
+          "td1NonResident": {
             "type": "boolean",
             "nullable": true
           }
@@ -29027,6 +29060,9 @@
           },
           "systemSettings": {
             "$ref": "#/components/schemas/SystemSettings"
+          },
+          "documentSettings": {
+            "$ref": "#/components/schemas/DocumentSettings"
           }
         },
         "additionalProperties": false
@@ -29097,6 +29133,56 @@
           "lastHireDate": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddPosition": {
+        "required": [
+          "code",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "reportsToPosition": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentSettings": {
+        "type": "object",
+        "properties": {
+          "companyDocsDisplay": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeDocsDisplay": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
