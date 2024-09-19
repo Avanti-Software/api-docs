@@ -26621,6 +26621,10 @@
           "td1NonResident": {
             "type": "boolean",
             "nullable": true
+          },
+          "td1HealthExempt": {
+            "type": "boolean",
+            "nullable": true
           }
         },
         "additionalProperties": false
