@@ -26610,19 +26610,13 @@
           "active": {
             "type": "boolean"
           },
-          "td1MultiEmployers": {
-            "type": "boolean",
-            "nullable": true
+          "multipleEmployers": {
+            "type": "boolean"
           },
-          "td1TaxExempt": {
-            "type": "boolean",
-            "nullable": true
+          "taxExempt": {
+            "type": "boolean"
           },
-          "td1NonResident": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "td1HealthExempt": {
+          "nonResidentIncomeNotTax": {
             "type": "boolean",
             "nullable": true
           }
@@ -29064,9 +29058,6 @@
           },
           "systemSettings": {
             "$ref": "#/components/schemas/SystemSettings"
-          },
-          "documentSettings": {
-            "$ref": "#/components/schemas/DocumentSettings"
           }
         },
         "additionalProperties": false
@@ -29173,52 +29164,6 @@
             "minLength": 0,
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "DocumentSettings": {
-        "type": "object",
-        "properties": {
-          "companyDocsDisplay": {
-            "type": "string",
-            "nullable": true
-          },
-          "employeeDocsDisplay": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmployeePositionRequest": {
-        "required": [
-          "isActive",
-          "isPrimary",
-          "positionCode"
-        ],
-        "type": "object",
-        "properties": {
-          "positionCode": {
-            "maxLength": 12,
-            "minLength": 0,
-            "type": "string"
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "isPrimary": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false

@@ -1,3 +1,20 @@
+# Sep 19, 2024 4:30 PM
+**GitHub Run ID:** 10945002878
+**GitHub Run Number:** 9726
+**Reference:** refs/heads/release/v24.9.1
+**Commit:** 35b37262d8d5a05e14b04722cfaa0fd19c29b5bf## Added
+* Model: TaxData, Property: multipleEmployers
+* Model: TaxData, Property: taxExempt
+* Model: TaxData, Property: nonResidentIncomeNotTax
+## Removed
+* Model: TaxData, Property: td1MultiEmployers
+* Model: TaxData, Property: td1TaxExempt
+* Model: TaxData, Property: td1NonResident
+* Model: TaxData, Property: td1HealthExempt
+* Model: UserSettings, Property: documentSettings
+* Model: DocumentSettings
+* Model: EmployeePositionRequest
+
 # Sep 19, 2024 3:21 PM
 **GitHub Run ID:** 10943871604
 **GitHub Run Number:** 9722
