@@ -26610,13 +26610,19 @@
           "active": {
             "type": "boolean"
           },
-          "multipleEmployers": {
-            "type": "boolean"
+          "td1MultiEmployers": {
+            "type": "boolean",
+            "nullable": true
           },
-          "taxExempt": {
-            "type": "boolean"
+          "td1TaxExempt": {
+            "type": "boolean",
+            "nullable": true
           },
-          "nonResidentIncomeNotTax": {
+          "td1HealthExempt": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "td1NonResident": {
             "type": "boolean",
             "nullable": true
           }
@@ -29058,6 +29064,9 @@
           },
           "systemSettings": {
             "$ref": "#/components/schemas/SystemSettings"
+          },
+          "documentSettings": {
+            "$ref": "#/components/schemas/DocumentSettings"
           }
         },
         "additionalProperties": false
@@ -29196,6 +29205,20 @@
           },
           "isPrimary": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentSettings": {
+        "type": "object",
+        "properties": {
+          "companyDocsDisplay": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeDocsDisplay": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
