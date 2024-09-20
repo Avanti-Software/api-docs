@@ -19836,6 +19836,14 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
+          },
+          "entryLineOneExpression": {
+            "type": "string",
+            "nullable": true
+          },
+          "entryLineTwoExpression": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
