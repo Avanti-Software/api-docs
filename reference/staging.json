@@ -20224,6 +20224,9 @@
           },
           "allowPostingAsExchange": {
             "type": "boolean"
+          },
+          "poolApprovalOption": {
+            "$ref": "#/components/schemas/PoolApprovalOption"
           }
         },
         "additionalProperties": false
@@ -29230,6 +29233,14 @@
           }
         },
         "additionalProperties": false
+      },
+      "PoolApprovalOption": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {
