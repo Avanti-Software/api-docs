@@ -5139,6 +5139,37 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "Add Position",
+        "operationId": "Add-Position",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPosition"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPosition"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPosition"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
     "/v1/RateGrids": {
@@ -29174,6 +29205,42 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "AddPosition": {
+        "required": [
+          "code",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "reportsToPosition": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
