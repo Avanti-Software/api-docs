@@ -1,3 +1,11 @@
+# Oct 18, 2024 4:40 PM
+**GitHub Run ID:** 11407481365
+**GitHub Run Number:** 10142
+**Reference:** refs/heads/release/v24.10.1
+**Commit:** d82a0a3a49a8a0803a725874164ee68fc3a4a56c## Added
+* Model: UpdatePositionJsonPatchDocument
+* Model: UpdatePositionOperation
+
 # Oct 18, 2024 3:54 PM
 **GitHub Run ID:** 11406837160
 **GitHub Run Number:** 10138
