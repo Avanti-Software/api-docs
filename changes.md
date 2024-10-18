@@ -1,3 +1,14 @@
+# Oct 18, 2024 3:54 PM
+**GitHub Run ID:** 11406837160
+**GitHub Run Number:** 10138
+**Reference:** refs/heads/release/v24.10.1
+**Commit:** a9ba9ea35da05d600026b0e2a1602cd8ab668898## Added
+* Model: EmployeePositionRequestAdd
+* Model: EmployeePositionRequestUpdateJsonPatchDocument
+* Model: EmployeePositionRequestUpdateOperation
+## Removed
+* Model: EmployeePositionRequest
+
 # Sep 30, 2024 7:44 PM
 **GitHub Run ID:** 11112962930
 **GitHub Run Number:** 9847

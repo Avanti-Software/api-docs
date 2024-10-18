@@ -29152,38 +29152,6 @@
         },
         "additionalProperties": false
       },
-      "EmployeePositionRequest": {
-        "required": [
-          "isActive",
-          "isPrimary",
-          "positionCode"
-        ],
-        "type": "object",
-        "properties": {
-          "positionCode": {
-            "maxLength": 12,
-            "minLength": 0,
-            "type": "string"
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "isPrimary": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "DocumentSettings": {
         "type": "object",
         "properties": {
@@ -29237,6 +29205,78 @@
             "maxLength": 12,
             "minLength": 0,
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePositionRequestAdd": {
+        "required": [
+          "isActive",
+          "isPrimary",
+          "positionCode"
+        ],
+        "type": "object",
+        "properties": {
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isPrimary": {
+            "type": "boolean"
+          },
+          "positionCode": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePositionRequestUpdateJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeePositionRequestUpdateOperation"
+            },
+            "nullable": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePositionRequestUpdateOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
             "nullable": true
           }
         },
