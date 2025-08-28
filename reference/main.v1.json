@@ -11402,7 +11402,7 @@
           },
           "value": {
             "type": "string",
-            "description": "The value that the data will be compared to in the filter. If valueType is 2, this should be a SQL expression. \n\nSpecial SQL Date Functions. The value must be one of the following tokens:",
+            "description": "The value that the data will be compared to in the filter. If valueType is 2, this should be a SQL expression. \nIt can also be one of the predefined relative date tokens",
             "$ref": "#/components/schemas/FilterToken",
             "nullable": true
           },
