@@ -11403,6 +11403,7 @@
           "value": {
             "type": "string",
             "description": "The value that the data will be compared to in the filter. If valueType is 2, this should be a SQL expression.",
+            "$ref": "#/components/schemas/FilterToken",
             "nullable": true
           },
           "valueType": {
@@ -11448,6 +11449,57 @@
           }
         },
         "additionalProperties": false
+      },
+      "FilterToken":{
+        "type": "string",
+        "description": "Special SQL Date Functions. The value must be one of the following tokens: \n\n@YESTERDAY, @TOMORROW, @CURRENTWEEKTUESDAY, @PREVIOUSWEEKTUESDAY, @NEXTWEEKTUESDAY, \n\n@CURRENTWEEKWEDNESDAY, @PREVIOUSWEEKWEDNESDAY, @CURRENTWEEKTHURSDAY, @NEXTWEEKWEDNESDAY, @NEXTWEEKTHURSDAY, \n\n@PREVIOUSWEEKTHURSDAY, @PREVIOUSWEEKFRIDAY, @CURRENTWEEKFRIDAY, @ENDOFCURRENTWEEK, @NEXTWEEKFRIDAY.",
+        "enum": [
+          "@YESTERDAY",
+          "@TOMORROW",
+          "@CURRENTWEEKTUESDAY",
+          "@PREVIOUSWEEKTUESDAY",
+          "@NEXTWEEKTUESDAY",
+          "@CURRENTWEEKWEDNESDAY",
+          "@PREVIOUSWEEKWEDNESDAY",
+          "@CURRENTWEEKTHURSDAY",
+          "@NEXTWEEKWEDNESDAY",
+          "@NEXTWEEKTHURSDAY",
+          "@PREVIOUSWEEKTHURSDAY",
+          "@PREVIOUSWEEKFRIDAY",
+          "@CURRENTWEEKFRIDAY",
+          "@ENDOFCURRENTWEEK",
+          "@NEXTWEEKFRIDAY",
+          "@ENDOFPREVIOUSWEEK",
+          "@CURRENTWEEKSATURDAY",
+          "@ENDOFNEXTWEEK",
+          "@PREVIOUSWEEKSATURDAY",
+          "@CURRENTWEEKMONDAY",
+          "@NEXTWEEKFSATURDAY",
+          "@CURRENTWEEKSUNDAY",
+          "@STARTOFCURRENTWEEK",
+          "@STARTOFNEXTWEEK",
+          "@NEXTWEEKMONDAY",
+          "@PREVIOUSWEEKMONDAY",
+          "@NEXTWEEKFSUNDAY",
+          "@PREVIOUSWEEKSUNDAY",
+          "@STARTOFPREVIOUSWEEK",
+          "@ENDOFCURRENTMONTH",
+          "@STARTOFCURRENTMONTH",
+          "@ENDOFNEXTMONTH",
+          "@STARTOFNEXTMONTH",
+          "@ENDOFPREVIOUSMONTH",
+          "@STARTOFPREVIOUSMONTH",
+          "@ENDOFCURRENTYEAR",
+          "@STARTOFCURRENTYEAR",
+          "@ENDOFPREVIOUSYEAR",
+          "@STARTOFPREVIOUSYEAR",
+          "@ENDOFNEXTYEAR",
+          "@STARTOFNEXTYEAR",
+          "@FROMDATE",
+          "@TODAY",
+          "@TODATE"
+        ], 
+        "example": "value: @STARTOFPREVIOUSYEAR"
       },
       "GenericParameterAttributes": {
         "enum": [
