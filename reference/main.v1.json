@@ -11402,7 +11402,7 @@
           },
           "value": {
             "type": "string",
-            "description": "The value that the data will be compared to in the filter. If valueType is 3, this should be a SQL expression.",
+            "description": "The value that the data will be compared to in the filter. If valueType is 2, this should be a SQL expression.",
             "nullable": true
           },
           "valueType": {
