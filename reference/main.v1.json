@@ -11372,7 +11372,8 @@
         "properties": {
           "table": {
             "type": "string",
-            "description": "The SQL table that contains the data that the report is being filtered on."
+            "description": "The SQL table that contains the data that the report is being filtered on.",
+            "nullable": true
           },
           "id": {
             "type": "integer",
